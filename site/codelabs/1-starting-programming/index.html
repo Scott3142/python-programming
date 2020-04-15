@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="theme-color" content="#4F7DC9">
   <meta charset="UTF-8">
-  <title>Getting Started with Programming</title>
+  <title>Part 1</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
@@ -23,9 +23,57 @@
   <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
   <google-codelab codelab-gaid="UA-49751789-4"
                   id="1-starting-programming"
-                  title="Getting Started with Programming"
+                  title="Part 1"
                   environment="web"
                   feedback-link="https://github.com/Scott3142/python-programming">
+    
+      <google-codelab-step label="Getting Started with Programming" duration="2">
+        <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>Become familiar with the Atom development environment used in this course.</li>
+<li>How to download and submit programming exercises.</li>
+</ul>
+<p>Modern programming is practically always done in an IDE (integrated development environment). An IDE contains a set of useful tools for the programmer. It does not create the program by itself, but it can give hints about common mistakes in the code, and help the programmer understand the structure of the program.</p>
+<p>The IDE we use on this course is called Atom, and we use it with the atom-python-test plugin.</p>
+<p>To start the course you will need:</p>
+<ol type="1">
+<li>A Github account</li>
+<li>Python installed via Anaconda</li>
+<li>Atom development environment</li>
+</ol>
+<p>You can sign up for Github <a href="https://github.com/" target="_blank">here</a>. Installation instructions for Anaconda and Atom can be found here: <a href="https://scott3142.uk/python-programming/installation" target="_blank">Anaconda and Atom installation guide</a>.</p>
+<p>Once you have created the user account and installed Anaconda and Atom, watch the video below. The video demonstrates what happens when Atom is opened for the first time. We log into Github and do the first programming exercise.</p>
+<p>This is the first programming exercise of this course. In this exercise, you&#39;ll familiarize yourself with the development environment.</p>
+<p>Clone the repo <a href="https://github.com/btec-diploma-unit4-programming-master/sandbox.git" target="_blank">sandbox</a> and open the file <code>sandbox.py</code>. You should see the code below.</p>
+<pre><code>def sandbox():
+  #Write your program here
+
+sandbox()
+</code></pre>
+<p>You should use this sandbox exercise to try out different things later on. When you encounter something new in the material, try it out in the sandbox first, and then solve the exercises on the topic.</p>
+<h2 is-upgraded>Programmers Write Source Code</h2>
+<p>Programming is designing and implementing software. The functionality is implemented based on the wishes and requirements of the users and the customers. Programs are typically implemented (i.e., written or &#34;coded&#34;) in a programming language meant to be written and read by humans.</p>
+<p>There are hundreds of programming languages out there, and this course focuses one of them. The language used in this course is <a href="https://www.python.org/" target="_blank">Python</a>, which is one of the most commonly-used programming languages in the world. Learning Python also makes it easy to pick up other programming languages.</p>
+<p>Programming languages, such as Python, have many commands built-in that a programmer uses when developing software. This makes programming easier as you don&#39;t need to implement everything from scratch. For example, programming languages typically have built-in options available for different menus and views used for making graphical user interfaces. Indeed, a large part of programming is making use of available functions and tools in solving problems – this, however, requires programming experience, which you only gain by programming.</p>
+<p>The &#34;code&#34; you write is called <strong>source code</strong>. Source code consists of statements and expressions, which are read line by line from top to bottom, and from left to right. For example, to print &#34;Hello world&#34;, you can use the pre-defined Python command <code>print()</code>, to which you need to provide the text inside the parentheses that you&#39;d like to be printed:</p>
+<pre><code>print(&#34;Hello World&#34;)
+</code></pre>
+<p>The above statement is pre-built into Python, and it&#39;s used for printing a string. The statement tells the computer to output the string that&#39;s been provided to it, placed between the quotation marks.</p>
+<p>Most of the programs you&#39;ll see in this course require a certain frame around the code to work, the <code>def function():</code> syntax. Don&#39;t worry too much about this for now, it&#39;ll become very familiar over this course. Although you might not be able to make sense of the surrounding frame of code, you could probably guess what the following program does based on the print statement described above.</p>
+<pre><code>def example():
+  print(&#34;Welcome to the course - you will learn to program!&#34;)
+
+example()
+</code></pre>
+<aside class="warning"><p><strong>Note:</strong> It is important to realise at this stage that <em>indentation</em> is critical in Python which is slightly different to other languages. The code snippets below is not the same as the one above and would result in an error.</p>
+</aside>
+<pre><code>def example():
+print(&#34;Welcome to the course - you will learn to program!&#34;) #this indentation is wrong
+example()
+</code></pre>
+
+
+      </google-codelab-step>
     
   </google-codelab>
 
