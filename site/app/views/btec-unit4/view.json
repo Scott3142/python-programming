@@ -1,0 +1,10 @@
+{
+  "title": "BTEC Programming",
+  "description": "A repository of Codelabs for the programming course.",
+  "logoUrl": "den01-logo.png",
+  "tags": ["btec"],
+  "exclude": [
+    ".*-about$",
+    "^lang-.*"
+  ]
+}
