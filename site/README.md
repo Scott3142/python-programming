@@ -167,7 +167,7 @@ $ gulp serve --views-filer='^event-*'
 Note this filter takes a regular expression. By default, all views are built.
 
 
-## Deploymentm (notes to self)
+## Deployment (notes to self)
 
 We will deploy to Github pages here so make sure you have a gh-pages branch of the repo you are deploying to.
 
