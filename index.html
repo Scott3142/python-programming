@@ -56,9 +56,6 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 <paper-header-panel id="main" mode="standard" main>
 <div id="mainToolbar" class="paper-header">
 <div class="site-width layout horizontal">
-<a href="{{baseUrl}}">
-<img src="images/logo.png" class="logo-devs" alt="Codelabs Logo">
-</a>
 <div id="searchbar">
 <paper-input-container no-label-float>
 <paper-icon-button prefix icon="search"></paper-icon-button>
@@ -70,12 +67,14 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 </div>
 <header id="banner" down$="[[_toBoolean(selectedFilter)]]">
 <div class="site-width">
-<h2 class="banner-title">Welcome to Codelabs!</h2>
+<h2 class="banner-title">BTEC Diploma Unit 4: Programming</h2>
 <div class="banner-description" data-filter-selected$="[[_toBoolean(selectedFilter)]]">
 <p class="banner-info">
-Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.
-<br>
-<a href="https://github.com/googlecodelabs/tools">Codelab tools on GitHub</a>
+Welcome to the main page for the BTEC Diploma Unit 4: Programming course being delivered at Bridgend College in the academic year 2020/21.
+<br><br>
+During this course, you will learn the basics of computer programming, along with algorithms and object-oriented programming through the Python programming language. The course includes comprehensive materials and plenty of programming exercises - all of which are tested using automatic testing via Github.
+<br><br>
+This course is adapted from the the University of Helsinki’s free massive open online course (MOOC) on <a href="https://java-programming.mooc.fi/">Java programming.</a>
 </p>
 </div>
 </div>
@@ -89,16 +88,10 @@ Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs w
 <paper-tab>Duration</paper-tab>
 </paper-tabs>
 </div>
-<paper-dropdown-menu label="Choose a course" class="dropdown-filter" no-label-float noink no-animations>
-<paper-listbox id="eventList" slot="dropdown-content" class="dropdown-content"><a href="https://scott3142.uk/python-programming/btec-unit4/" tabindex="-1">
-<paper-item>BTEC Programming</paper-item>
-</a>
-</paper-listbox>
-</paper-dropdown-menu>
 </div>
 <card-sorter id="cards" class="site-width">
-<a href="https://scott3142.uk/python-programming/codelabs/1-starting-programming/index.html?index=..%2F..index" on-tap="navigate" class="codelab-card category-btec-unit4" data-category="btec-unit4" data-title="Getting Started with Programming" data-duration="0" data-updated="2020-04-15T10:52:29+01:00" data-tags="web" data-pin="">
-<div class="description">Getting Started with Programming</div>
+<a href="https://scott3142.uk/python-programming/codelabs/1-starting-programming/index.html?index=..%2F..index" on-tap="navigate" class="codelab-card category-btec-unit4" data-category="btec-unit4" data-title="Part 1" data-duration="0" data-updated="2020-04-15T14:54:09+01:00" data-tags="web" data-pin="">
+<div class="description">Part 1</div>
 <div class="card-duration">
 <span></span>
 <span>Updated Apr 15, 2020</span>
@@ -118,25 +111,33 @@ Loading Codelabs, please wait...
 <div class="link-list">
 <label>Connect</label>
 <ul>
-<li><a href="https://www.example.com/">Example</a></li>
+<li><a href="mailto:smorgan@bridgend.ac.uk">Email</a></li>
+<li><a href="https://twitter.com/Scott3142">Twitter</a></li>
+<li><a href="https://linkedin.com/in/Scott3142">LinkedIn</a></li>
 </ul>
 </div>
 <div class="link-list">
-<label>Programs</label>
+<label>Downloads</label>
 <ul>
-<li><a href="https://www.example.com/">Example</a></li>
+<li><a href="https://atom.io/">Atom editor</a></li>
+<li><a href="https://www.anaconda.com/">Anaconda</a></li>
+<li><a href="https://gitforwindows.org/">Git Bash for Windows</a></li>
 </ul>
 </div>
 <div class="link-list">
-<label>Developer Consoles</label>
+<label>Links</label>
 <ul>
-<li><a href="https://www.example.com/">Example</a></li>
+<li><a href="https://classroom.google.com">Google Classroom</a></li>
+<li><a href="https://github.com">Github</a></li>
+<li><a href="https://den01.co.uk">Den01</a></li>
 </ul>
 </div>
 <div class="link-list">
-<label>Explore</label>
+<label>Further study</label>
 <ul>
-<li><a href="https://www.example.com/">Example</a></li>
+<li><a href="https://www.elementsofai.com/">Elements of AI</a></li>
+<li><a href="https://fullstackopen.com/en/">Full Stack Developer</a></li>
+<li><a href="https://cybersecuritybase.mooc.fi/">Cyber Security</a></li>
 </ul>
 </div>
 </div>
@@ -144,9 +145,7 @@ Loading Codelabs, please wait...
 <div class="footerbar">
 <div class="site-width layout horizontal center justified">
 <span>
-<a href="https://example.com">Terms</a>
-&nbsp; | &nbsp;
-<a href="https://example.com">Privacy</a>
+<a href="https://scott3142.uk">Scott Morgan</a> &nbsp; | &nbsp; 2020
 </span>
 </div>
 </div>

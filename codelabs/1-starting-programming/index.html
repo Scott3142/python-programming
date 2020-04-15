@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="theme-color" content="#4F7DC9">
   <meta charset="UTF-8">
-  <title>Getting Started with Programming</title>
+  <title>Part 1</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
@@ -23,9 +23,188 @@
   <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
   <google-codelab codelab-gaid="UA-49751789-4"
                   id="1-starting-programming"
-                  title="Getting Started with Programming"
+                  title="Part 1"
                   environment="web"
                   feedback-link="https://github.com/Scott3142/python-programming">
+    
+      <google-codelab-step label="Getting Started with Programming" duration="0">
+        <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>Become familiar with the Atom development environment used in this course.</li>
+<li>How to download and submit programming exercises.</li>
+</ul>
+<p>Modern programming is practically always done in an IDE (integrated development environment). An IDE contains a set of useful tools for the programmer. It does not create the program by itself, but it can give hints about common mistakes in the code, and help the programmer understand the structure of the program.</p>
+<p>The IDE we use on this course is called Atom, and we use it with the atom-python-test plugin.</p>
+<p>To start the course you will need:</p>
+<ol type="1">
+<li>A Github account</li>
+<li>Python installed via Anaconda</li>
+<li>Atom development environment</li>
+</ol>
+<p>You can sign up for Github <a href="https://github.com/" target="_blank">here</a>. Installation instructions for Anaconda and Atom can be found here: <a href="https://scott3142.uk/python-programming/installation" target="_blank">Anaconda and Atom installation guide</a>.</p>
+<p>Once you have created the user account and installed Anaconda and Atom, watch the video below. The video demonstrates what happens when Atom is opened for the first time. We log into Github and do the first programming exercise.</p>
+<aside class="special"><p>Video to be added</p>
+</aside>
+<aside class="special"><p><strong>Exercise - Sandbox<br><br></strong> This is the first programming exercise of this course. In this exercise, you&#39;ll familiarize yourself with the development environment. <br><br> 1. Clone the repo <a href="https://github.com/btec-diploma-unit4-programming-2020/sandbox.git" target="_blank">sandbox</a> and open the file <code>sandbox.py</code>. You should see the code below.</p>
+</aside>
+<h3 is-upgraded><a href="https://github.com/btec-diploma-unit4-programming-2020/sandbox/blob/master/sandbox.py" target="_blank">sandbox.py</a></h3>
+<pre><code>def sandbox():
+  #Write your program here
+
+sandbox()
+</code></pre>
+<aside class="special"><p>You should use this sandbox exercise to try out different things later on. When you encounter something new in the material, try it out in the sandbox first, and then solve the exercises on the topic.</p>
+</aside>
+<h2 is-upgraded>Programmers Write Source Code</h2>
+<p>Programming is designing and implementing software. The functionality is implemented based on the wishes and requirements of the users and the customers. Programs are typically implemented (i.e., written or &#34;coded&#34;) in a programming language meant to be written and read by humans.</p>
+<p>There are hundreds of programming languages out there, and this course focuses one of them. The language used in this course is <a href="https://www.python.org/" target="_blank">Python</a>, which is one of the most commonly-used programming languages in the world. Learning Python also makes it easy to pick up other programming languages.</p>
+<p>Programming languages, such as Python, have many commands built-in that a programmer uses when developing software. This makes programming easier as you don&#39;t need to implement everything from scratch. For example, programming languages typically have built-in options available for different menus and views used for making graphical user interfaces. Indeed, a large part of programming is making use of available functions and tools in solving problems – this, however, requires programming experience, which you only gain by programming.</p>
+<p>The &#34;code&#34; you write is called <strong>source code</strong>. Source code consists of statements and expressions, which are read line by line from top to bottom, and from left to right. For example, to print &#34;Hello world&#34;, you can use the pre-defined Python command <code>print()</code>, to which you need to provide the text inside the parentheses that you&#39;d like to be printed:</p>
+<pre><code>print(&#34;Hello World&#34;)
+</code></pre>
+<p>The above statement is pre-built into Python, and it&#39;s used for printing a string. The statement tells the computer to output the string that&#39;s been provided to it, placed between the quotation marks.</p>
+<p>Most of the programs you&#39;ll see in this course require a certain frame around the code to work, the <code>def function():</code> syntax. Don&#39;t worry too much about this for now, it&#39;ll become very familiar over this course. Although you might not be able to make sense of the surrounding frame of code, you could probably guess what the following program does based on the print statement described above.</p>
+<pre><code>def example():
+  print(&#34;Welcome to the course - you will learn to program!&#34;)
+
+example()
+</code></pre>
+<aside class="warning"><p><strong>Note:</strong> It is important to realise at this stage that <em>indentation</em> is critical in Python which is slightly different to other languages. The code snippets below is not the same as the one above and would result in an error.</p>
+</aside>
+<pre><code>def example():
+print(&#34;Welcome to the course - you will learn to program!&#34;) #this indentation is wrong
+example()
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Printing" duration="0">
+        <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>Learn to write a program that prints text.</li>
+<li>Become familiar with executing programs.</li>
+<li>Know what the term &#34;parameter&#34; means.</li>
+</ul>
+<p>The print command <code>print(&#34;Hello world&#34;)</code> prints the text &#34;Hello world&#34;.</p>
+<pre><code>print(&#34;Hello world!&#34;)
+</code></pre>
+<aside class="warning"><p>Hello world!</p>
+</aside>
+<p>In this material, text boxes like the one above demonstrate an output produced by the example code. Accordingly, the above program would produce the print output &#34;Hello World!&#34;. You can try any of these examples in the exercise template named &#34;sandbox&#34;, which you will find in the Github repository you cloned in the first part.</p>
+<p>You can print any text you want with the command, as long as the command `print(&#34;arbitrary text&#34;). The command below will print the text &#34;Hello there!&#34;.</p>
+<pre><code>print(&#34;Hello there!&#34;)
+</code></pre>
+<aside class="warning"><p>Hello there!</p>
+</aside>
+<h2 is-upgraded>Program Boilerplate</h2>
+<p>In Python, our programs will include some boilerplate code to function. This boilerplate, an example of which is shown below, for example tells the computer what your function is called. Below, the name of the function is <code>example</code>.</p>
+<pre><code>def example():
+  print(&#34;Text to be printed&#34;)
+
+example()
+</code></pre>
+<p>Execution of the program starts from the line that says <code>example()</code>. This command <em>invokes</em> the function <code>example</code> and runs it. Commands are executed inside <code>example</code> one line at a time from the top. In the above example, <code>print(&#34;Text to be printed&#34;)</code> is the only command to be executed. Its output is:</p>
+<aside class="warning"><p>Text to be printed</p>
+</aside>
+<p>The examples in the material will not always show the template, but you can assume that your program file always needs one. As such, the examples might be as short as a single line, such as the example below that illustrates the print command.</p>
+<pre><code>print(&#34;Hello world&#34;);
+</code></pre>
+<p>In reality, the above example, when written as a full Python program, looks like so:</p>
+<pre><code>def hello_world():
+  print(&#34;Hello world&#34;)
+
+hello_world()
+</code></pre>
+<p>Here&#39;s the second programming exercise of this course. If you&#39;d like, you can watch this video on how to solve the exercise first:</p>
+<aside class="special"><p>Video to be added.</p>
+</aside>
+<aside class="special"><p><strong>Exercise - Ada Lovelace<br><br></strong> The exercise template has the following boilerplate code:</p>
+</aside>
+<h3 is-upgraded><a href="https://github.com/btec-diploma-unit4-programming-2020/assignment-1-1-ada-lovelace/blob/master/a1_1.py" target="_blank">a1_1.py</a></h3>
+<pre><code>def ada():
+  # Write your program here
+
+ada()
+</code></pre>
+<aside class="special"><p>The line <code># Write your program here</code> is a <em>line comment</em>, and the computer will ignore it when executing the program. Add a new line below the line comment that prints the string &#34;Ada Lovelace&#34; and run the program.<br><br><strong>The output of the program should be:</strong></p>
+</aside>
+<aside class="warning"><p>Ada Lovelace</p>
+</aside>
+<aside class="special"><p>Once you&#39;ve finished the exercise and see that it prints the correct string, return the exercise to Github. After that, you can read more about <a href="https://en.wikipedia.org/wiki/Ada_Lovelace" target="_blank">Ada Lovelace</a>, who was one of the first programmers.</p>
+</aside>
+<p>You can run a program in Atom by the keyboard combination Ctrl+Shift+B, if you have the <code>script</code> package installed as in the first part.</p>
+<p>Even though running the program is straightforward, a lot is happenings behind the scenes. When a program is run, the source code is first compiled into Python bytecode. This compilation process is done by the Python compiler, which itself is a program. Following that, the program gets executed, meaning the commands are executed one-by-one by a Python interpreter that is able to read Java bytecode.</p>
+<h2 is-upgraded>Printing Multiple Lines</h2>
+<p>Programs are constructed command-by-command, where each command is placed on a new line. In the example below, the command <code>print()</code> appears twice, which means that two print commands are being executed in the program.</p>
+<pre><code>def new_example():
+  print(&#34;Hello world!&#34;);
+  print(&#34;... and the universe!&#34;);
+
+new_example()
+</code></pre>
+<p>The program above will print:</p>
+<aside class="warning"><p>Hello world! <br> ... and the universe!</p>
+</aside>
+<p>The programming exercises will be checked by Atom&#39;s tester, who is meticulous. The guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.</p>
+<p>This preciseness with regard to the output is relevant in programming in a more general sense. Missing a single character may cause an error. Novice programmers often enter a comma instead of a dot, or write, for instance <code>prnt</code> instead of <code>print</code>, leave out apostrophes, or forget the semicolon after a command. Any one of these would cause an error and cause the program execution to fail.</p>
+<p>Learning programming is, in fact, a path full of mistakes – and every error message is a chance to learn. Keep a look out for any red signs in the IDE and try to read the test errors!</p>
+<aside class="special"><p><strong>Exercise - Once Upon a Time<br><br></strong> The exercise comes ready with the following template:</p>
+</aside>
+<h3 is-upgraded><a href="https://github.com/btec-diploma-unit4-programming-2020/assignment-1-2-once-upon-a-time/blob/master/a1_2.py" target="_blank">a1_2.py</a></h3>
+<pre><code>def OnceUponATime():
+  # Write your program here
+
+OnceUponATime()
+</code></pre>
+<aside class="special"><p>Modify the program so that it will print the following text. Use three <code>print</code>-commands for printing.</p>
+</aside>
+<aside class="warning"><p>Once upon a time <br> there was <br> a program</p>
+</aside>
+<aside class="special"><p><strong>Exercise - Dinosaur<br><br></strong> The exercise comes ready with the following template:</p>
+</aside>
+<h3 is-upgraded><a href="https://github.com/btec-diploma-unit4-programming-2020/assignment-1-3-dinosaur/blob/master/a1_3.py" target="_blank">a1_3.py</a></h3>
+<pre><code>def dinosaur():
+  # Write your program here
+
+dinosaur()
+</code></pre>
+<aside class="special"><p>Modify the program so that it will print the following text.</p>
+</aside>
+<aside class="warning"><p>Once upon a time <br> there was <br> a dinosaur</p>
+</aside>
+<h2 is-upgraded>Terminology and Code Comments</h2>
+<h3 is-upgraded>Command parameters</h3>
+<p>The information to be printed by the print command, i.e. its <strong>parameters</strong>, are passed to it by placing them inside the parentheses <code>()</code> that follow the command. For example, passing <code>Hi</code> as a parameter to the <code>print</code> command is done like this: <code>print(&#34;Hi&#34;)</code>.</p>
+<h2 is-upgraded>Semicolon Separates Commands</h2>
+<p>Commands can be separated with a semicolon <code>;</code> but this is not necessary or recommended in Python. We could, if we wanted to, write almost everything on a single line. However, that would be difficult to understand.</p>
+<pre><code>print(&#34;Hello &#34;); print(&#34;world&#34;); print(&#34;!\n&#34;);
+</code></pre>
+<aside class="warning"><p>Hello <br> world <br> !</p>
+</aside>
+<p>Although the previous example works, it&#39;s important to be considerate of other programmers (and your future self!) and to use line breaks. That way, anyone reading the program knows that each line does only a single concrete thing. OTher languages (like Java) might require semicolons at the end of lines. We don&#39;t need to do this in Python.</p>
+<h3 is-upgraded>Comments</h3>
+<p>Source code can be commented to clarify it or to add notes. Single-line comments are marked with two slashes <code>#</code>. Everything following them on the same line is interpreted as a comment. Python does not really have a syntax for multi line comments, so to add a multiline comment you could insert a # for each line.</p>
+<p>Below is an example of a program where both are used.</p>
+<pre><code>def comments():
+  #Printing
+  print(&#34;Text to print&#34;);
+  print(&#34;More text to print!&#34;);
+  # Next:
+  # more on printing
+  # more practice
+  # variables
+  # ...
+  #
+  print(&#34;Some other text to print&#34;);
+  # print(&#34;Trying stuff out&#34;)
+
+comments()
+</code></pre>
+<p>The last line of the example shows a particularly handy use-case for comments. Code that has been written does not need to be deleted to try out something else.</p>
+
+
+      </google-codelab-step>
     
   </google-codelab>
 
