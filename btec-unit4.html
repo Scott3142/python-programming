@@ -3,11 +3,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.">
+<meta name="description" content="A repository of Codelabs for the programming course.">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="generator" content="Codelabs">
-<meta name="application-name" content="Codelabs">
-<link rel="canonical" href="https://scott3142.uk/python-programming/">
+<meta name="generator" content="BTEC Programming">
+<meta name="application-name" content="BTEC Programming">
+<link rel="canonical" href="https://scott3142.uk/python-programming/btec-unit4/">
 <link rel="preconnect" href="https://www.google-analytics.com">
 <script>
 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -15,14 +15,14 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
     ga('send', 'pageview');
 </script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
-<title>Codelabs</title>
+<title>BTEC Programming</title>
 <link rel="stylesheet" href="https://scott3142.uk/python-programming/styles/main.css">
 <link rel="import" href="https://scott3142.uk/python-programming/elements/elements.html">
 <style is="custom-style">
 :root{--paper-tabs-selection-bar-color:currentcolor;--paper-input-container-underline:{display:none};--paper-input-container-underline-focus:{display:none};}.dropdown-filter{--paper-input-container:{padding:8px}} </style>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="#455a64">
-<meta name="apple-mobile-web-app-title" content="Codelabs">
+<meta name="apple-mobile-web-app-title" content="BTEC Programming">
 <link rel="apple-touch-icon" sizes="180x180" href="https://scott3142.uk/python-programming/images/favicons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://scott3142.uk/python-programming/images/favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="194x194" href="https://scott3142.uk/python-programming/images/favicons/favicon-194x194.png">
@@ -34,9 +34,9 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 <meta name="msapplication-TileImage" content="https://scott3142.uk/python-programming/images/favicons/mstile-144x144.png">
 <meta name="theme-color" content="#455a64">
 <meta name="og:type" property="og:type" content="website">
-<meta name="og:title" property="og:title" content="Codelabs">
-<meta name="og:description" property="og:description" content="Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.">
-<meta name="og:url" property="og:url" content="https://scott3142.uk/python-programming/">
+<meta name="og:title" property="og:title" content="BTEC Programming">
+<meta name="og:description" property="og:description" content="A repository of Codelabs for the programming course.">
+<meta name="og:url" property="og:url" content="https://scott3142.uk/python-programming/btec-unit4/">
 <meta name="og:site_name" property="og:site_name" content="Codelabs">
 <meta name="og:determiner" property="og:determiner" content="the">
 <meta name="og:locale" property="og:locale" content="en_US">
@@ -47,12 +47,12 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 <meta name="og:image:height" property="og:image:height" content="1200">
 <meta name="og:image:alt" property="og:image:alt" content="Codelabs">
 <meta name="twitter:card" property="twitter:card" content="summary_large_image">
-<meta name="twitter:title" property="twitter:title" content="Codelabs">
-<meta name="twitter:description" property="twitter:description" content="Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.">
+<meta name="twitter:title" property="twitter:title" content="BTEC Programming">
+<meta name="twitter:description" property="twitter:description" content="A repository of Codelabs for the programming course.">
 <meta name="twitter:image" property="twitter:image" content="https://scott3142.uk/python-programming/images/og-image.png">
-<meta name="twitter:url" property="twitter:url" content="https://scott3142.uk/python-programming/">
+<meta name="twitter:url" property="twitter:url" content="https://scott3142.uk/python-programming/btec-unit4/">
 </head>
-<body id="app" is="body-bind" class="loading fullbleed">
+<body id="app" is="body-bind" class="loading fullbleed view">
 <paper-header-panel id="main" mode="standard" main>
 <div id="mainToolbar" class="paper-header">
 <div class="site-width layout horizontal">
@@ -68,15 +68,14 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 </div>
 </div>
 </div>
-<header id="banner" down$="[[_toBoolean(selectedFilter)]]">
+<header id="banner" down>
 <div class="site-width">
-<h2 class="banner-title">Welcome to Codelabs!</h2>
-<div class="banner-description" data-filter-selected$="[[_toBoolean(selectedFilter)]]">
-<p class="banner-info">
-Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.
-<br>
-<a href="https://github.com/googlecodelabs/tools">Codelab tools on GitHub</a>
-</p>
+<div class="banner-description">
+<img id="logo" src="den01-logo.png" alt="Event logo">
+<div class="banner-meta">
+<h3>BTEC Programming</h3>
+<p>A repository of Codelabs for the programming course.</p>
+</div>
 </div>
 </div>
 </header>
@@ -89,25 +88,8 @@ Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs w
 <paper-tab>Duration</paper-tab>
 </paper-tabs>
 </div>
-<paper-dropdown-menu label="Choose a course" class="dropdown-filter" no-label-float noink no-animations>
-<paper-listbox id="eventList" slot="dropdown-content" class="dropdown-content"><a href="https://scott3142.uk/python-programming/btec-unit4/" tabindex="-1">
-<paper-item>BTEC Programming</paper-item>
-</a>
-</paper-listbox>
-</paper-dropdown-menu>
 </div>
 <card-sorter id="cards" class="site-width">
-<a href="https://scott3142.uk/python-programming/codelabs/1-starting-programming/index.html?index=..%2F..index" on-tap="navigate" class="codelab-card category-btec-unit4" data-category="btec-unit4" data-title="Getting Started with Programming" data-duration="0" data-updated="2020-04-15T10:52:29+01:00" data-tags="web" data-pin="">
-<div class="description">Getting Started with Programming</div>
-<div class="card-duration">
-<span></span>
-<span>Updated Apr 15, 2020</span>
-</div>
-<div class="card-footer">
-<div class="category-icon btec-unit4-icon"></div>
-<paper-button class="btec-unit4-bg">Start</paper-button>
-</div>
-</a>
 </card-sorter>
 <div id="loading-placeholder" class="site-width">
 Loading Codelabs, please wait...
