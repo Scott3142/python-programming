@@ -33,18 +33,7 @@ Positive
 : Video to be added
 
 Positive
-: **Exercise - Sandbox** <br><br> This is the first programming exercise of this course. In this exercise, you'll familiarize yourself with the development environment. <br><br> 1. Clone the repo [sandbox](https://github.com/btec-diploma-unit4-programming-2020/sandbox.git) and open the file `sandbox.py`. You should see the code below.
-
-#### [sandbox.py](https://github.com/btec-diploma-unit4-programming-2020/sandbox/blob/master/sandbox.py)
-```
-def sandbox():
-  #Write your program here
-
-sandbox()
-```
-
-Positive
-: You should use this sandbox exercise to try out different things later on. When you encounter something new in the material, try it out in the sandbox first, and then solve the exercises on the topic.
+: **Exercise - Sandbox** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-2020/sandbox.git)
 
 ### Programmers Write Source Code
 
@@ -146,24 +135,7 @@ Positive
 : Video to be added.
 
 Positive
-: **Exercise - Ada Lovelace** <br><br> The exercise template has the following boilerplate code:
-
-#### [a1_1.py](https://github.com/btec-diploma-unit4-programming-2020/assignment-1-1-ada-lovelace/blob/master/a1_1.py)
-```python
-def ada():
-  # Write your program here
-
-ada()
-```
-
-Positive
-: The line `# Write your program here` is a _line comment_, and the computer will ignore it when executing the program. Add a new line below the line comment that prints the string "Ada Lovelace" and run the program.<br><br> **The output of the program should be:**
-
-Negative
-: Ada Lovelace
-
-Positive
-: Once you've finished the exercise and see that it prints the correct string, return the exercise to Github. After that, you can read more about [Ada Lovelace](https://en.wikipedia.org/wiki/Ada_Lovelace), who was one of the first programmers.
+: **Exercise - Ada Lovelace** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-2020/exercise-1-1-ada-lovelace.git)
 
 You can run a program in Atom by the keyboard combination Ctrl+Shift+B, if you have the `script` package installed as in the first part.
 
@@ -193,38 +165,10 @@ This preciseness with regard to the output is relevant in programming in a more 
 Learning programming is, in fact, a path full of mistakes -- and every error message is a chance to learn. Keep a look out for any red signs in the IDE and try to read the test errors!
 
 Positive
-: **Exercise - Once Upon a Time** <br><br> The exercise comes ready with the following template:
-
-#### [a1_2.py](https://github.com/btec-diploma-unit4-programming-2020/assignment-1-2-once-upon-a-time/blob/master/a1_2.py)
-```python
-def OnceUponATime():
-  # Write your program here
-
-OnceUponATime()
-```
+: **Exercise - Once Upon a Time** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-2020/exercise-1-2-once-upon-a-time.git)
 
 Positive
-: Modify the program so that it will print the following text. Use three `print`-commands for printing.
-
-Negative
-: Once upon a time <br> there was <br> a program
-
-Positive
-: **Exercise - Dinosaur** <br><br> The exercise comes ready with the following template:
-
-#### [a1_3.py](https://github.com/btec-diploma-unit4-programming-2020/assignment-1-3-dinosaur/blob/master/a1_3.py)
-```python
-def dinosaur():
-  # Write your program here
-
-dinosaur()
-```
-
-Positive
-: Modify the program so that it will print the following text.
-
-Negative
-: Once upon a time <br> there was <br> a dinosaur
+: **Exercise - Dinosaur**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-2020/exercise-1-3-dinosaur.git)
 
 ### Terminology and Code Comments
 
