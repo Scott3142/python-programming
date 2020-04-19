@@ -4,7 +4,7 @@ id: 1-starting-programming
 categories: btec-unit4
 environments: Web
 status: Draft
-feedback link: https:#github.com/Scott3142/python-programming
+feedback link: https://github.com/Scott3142/python-programming
 analytics account: UA-49751789-4
 
 # Part 1
@@ -25,7 +25,7 @@ To start the course you will need:
 2. Python installed via Anaconda
 3. Atom development environment
 
-You can sign up for Github [here](https:#github.com/). Installation instructions for Anaconda and Atom can be found here: [Anaconda and Atom installation guide](https:#scott3142.uk/python-programming/installation).
+You can sign up for Github [here](https://github.com/). Installation instructions for Anaconda and Atom can be found here: [Anaconda and Atom installation guide](https://scott3142.uk/python-programming/installation).
 
 Once you have created the user account and installed Anaconda and Atom, watch the video below. The video demonstrates what happens when Atom is opened for the first time. We log into Github and do the first programming exercise.
 
@@ -33,13 +33,13 @@ Positive
 : Video to be added
 
 Positive
-: **Exercise - Sandbox** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/sandbox.git)
+: **Exercise - Sandbox** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/sandbox.git)
 
 ### Programmers Write Source Code
 
 Programming is designing and implementing software. The functionality is implemented based on the wishes and requirements of the users and the customers. Programs are typically implemented (i.e., written or "coded") in a programming language meant to be written and read by humans.
 
-There are hundreds of programming languages out there, and this course focuses one of them. The language used in this course is [Python](https:#www.python.org/), which is one of the most commonly-used programming languages in the world. Learning Python also makes it easy to pick up other programming languages.
+There are hundreds of programming languages out there, and this course focuses one of them. The language used in this course is [Python](https://www.python.org/), which is one of the most commonly-used programming languages in the world. Learning Python also makes it easy to pick up other programming languages.
 
 Programming languages, such as Python, have many commands built-in that a programmer uses when developing software. This makes programming easier as you don't need to implement everything from scratch. For example, programming languages typically have built-in options available for different menus and views used for making graphical user interfaces. Indeed, a large part of programming is making use of available functions and tools in solving problems -- this, however, requires programming experience, which you only gain by programming.
 
@@ -135,7 +135,7 @@ Positive
 : Video to be added.
 
 Positive
-: **Exercise - Ada Lovelace** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-1-ada-lovelace.git)
+: **Exercise - Ada Lovelace** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-1-ada-lovelace.git)
 
 You can run a program in Atom by the keyboard combination Ctrl+Shift+B, if you have the `script` package installed as in the first part.
 
@@ -165,10 +165,10 @@ This preciseness with regard to the output is relevant in programming in a more 
 Learning programming is, in fact, a path full of mistakes -- and every error message is a chance to learn. Keep a look out for any red signs in the IDE and try to read the test errors!
 
 Positive
-: **Exercise - Once Upon a Time** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-2-once-upon-a-time.git)
+: **Exercise - Once Upon a Time** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-2-once-upon-a-time.git)
 
 Positive
-: **Exercise - Dinosaur**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-3-dinosaur.git)
+: **Exercise - Dinosaur**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-3-dinosaur.git)
 
 ### Terminology and Code Comments
 
@@ -241,7 +241,7 @@ Negative
 : Write a message: <br> *User inputs message \<Hello World\>* <br> Hello World
 
 Positive
-: **Exercise - Message**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-4-message.git)
+: **Exercise - Message**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-4-message.git)
 
 ### Fundamentals of Strings
 
@@ -316,7 +316,7 @@ Negative
 : My name is Bond, James Bond
 
 Positive
-: **Exercise - Message**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-5-hi-ada.git)
+: **Exercise - Message**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-5-hi-ada.git)
 
 ### Reading Strings
 
@@ -335,7 +335,7 @@ Negative
 : Write a message: <br> *User: \<This will be printed twice\>* <br> This will be printed twice <br> This will be printed twice
 
 Positive
-: **Exercise - Message Three Times**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-6-message-three-times.git)
+: **Exercise - Message Three Times**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-6-message-three-times.git)
 
 ### Input String as a Part of Output
 
@@ -353,7 +353,7 @@ Negative
 : Write a message: <br> *User: \<My message\>* <br> You wrote: My message
 
 Positive
-: **Exercise - Greeting**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-7-greeting.git)
+: **Exercise - Greeting**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-7-greeting.git)
 
 ### Program Execution Waits for Input
 
@@ -379,7 +379,7 @@ Negative
 : Write the first string: <br> *User: \<String number one\>* <br> Write the second string: <br> *User: \<String number two\>* <br> Write the third string: <br> *User: \<String number three\>* <br><br> You wrote: <br> String number one <br> String number two <br> String number three
 
 Positive
-: **Exercise - Greeting**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-8-greeting.git)
+: **Exercise - Conversation**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-8-conversation.git)
 
 In the previous example, we saved the user input to three different string variables. This can be done as long as the variables all have different names (in the example, the names are `first`, `second` and `third`).
 
@@ -419,7 +419,7 @@ Negative
 : Write the first string: <br> *User: \<one\>* <br> Write the second string: <br> *User: \<two\>* <br> Write the third string: <br> *User: three* <br><br> Last string you wrote was three, which <br> was preceded by two. <br> The first string was one. <br> All together: onetwothree
 
 Positive
-: **Exercise - Story**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-9-story.git)
+: **Exercise - Story**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-9-story.git)
 
 ## Variables
 
@@ -457,7 +457,7 @@ Negative
 Note that any variable types that aren't originally declared as strings, must be converted into a string with the `str()` command either before or during printing.
 
 Positive
-: **Exercise - Various Variables**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-10-various-variables.git)
+: **Exercise - Various Variables**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-10-various-variables.git)
 
 ### Changing a Value Assigned to a Variable
 
@@ -473,7 +473,7 @@ print("The value of the variable is " + number)
 Negative
 : The value of the variable is 123 <br> The value of the variable is 42
 
-Let's look at the preceding program's execution step-by-step. When a variable appears in the program for the first time, the computer creates a 'named container' for the variable and assigns it a type. Then, the value on the right side of the equals sign is copied into this named container. You can read more about how Python defines a variable's type [here](https:#www.tutorialspoint.com/python/python_variable_types.htm).
+Let's look at the preceding program's execution step-by-step. When a variable appears in the program for the first time, the computer creates a 'named container' for the variable and assigns it a type. Then, the value on the right side of the equals sign is copied into this named container. You can read more about how Python defines a variable's type [here](https://www.tutorialspoint.com/python/python_variable_types.htm).
 
 Whenever a variable is referenced by its name in a program -- here, we want to print the string "The value of the variable is " followed by the value of the `number` variable -- its value is retrieved from a container that has the corresponding name.
 
@@ -552,13 +552,13 @@ Positive
 s
 Variable naming is limited by certain constraints.
 
-Variable names cannot contain certain special symbols, such as exclamation marks (!). Spaces are also not allowed, since they're used to separate parts of commands. Instead of spaces, the convention in many programming languages is to either use a style known as [camelCase](https:#en.wikipedia.org/wiki/Camel_case "Camel case – Wikipedia") or use underscores to delimit words. **Note!** The first letter of a variable name is always lower-cased:
+Variable names cannot contain certain special symbols, such as exclamation marks (!). Spaces are also not allowed, since they're used to separate parts of commands. Instead of spaces, the convention in many programming languages is to either use a style known as [camelCase](https://en.wikipedia.org/wiki/Camel_case "Camel case – Wikipedia") or use underscores to delimit words. **Note!** The first letter of a variable name is always lower-cased:
 
 ```python
 camelCaseVariable = 7
 ```
 
-Python has community guidelines on how code should be formatted. You can [view the guide here](https:#www.python.org/dev/peps/pep-0008/). We will follow these guidelines as much as practicable in this course.
+Python has community guidelines on how code should be formatted. You can [view the guide here](https://www.python.org/dev/peps/pep-0008/). We will follow these guidelines as much as practicable in this course.
 
 Numbers can be used within a variable name as long as the name does not begin with a number. Also, a name cannot consists of numbers only.
 
@@ -622,7 +622,7 @@ Negative
 Note that we had to convert our variable back to a string in the `print` statement.
 
 Positive
-: **Exercise - Different types of input**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-11-different-inputs.git)
+: **Exercise - Different types of input**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-11-different-inputs.git)
 
 ## Calculating with numbers
 
@@ -670,7 +670,7 @@ print(calculationWithoutParentheses) # prints 13
 ```
 
 Positive
-: **Exercise - Seconds in a day**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-12-seconds-in-a-day.git)
+: **Exercise - Seconds in a day**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-12-seconds-in-a-day.git)
 
 Positive
 : **Expression and Statement** <br><br> An *expression* is a combination of values that is turned into another value through a calculation or evaluation. <br><br> The evaluation of an expression is always performed before its value is assigned to a variable. As such, the calculation "1 + 1 + 3 * 2 + 5" in the example `value = 1 + 1 + 3 * 2 + 5` above is performed before the result is assigned to the variable.
@@ -730,10 +730,10 @@ Negative
 : Four: 4 <br> But! Twenty-two: 22
 
 Positive
-: **Exercise - Sum of two numbers**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-13-sum-of-two-numbers.git)
+: **Exercise - Sum of two numbers**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-13-sum-of-two-numbers.git)
 
 Positive
-: **Exercise - Sum of three numbers**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-14-sum-of-three-numbers.git)
+: **Exercise - Sum of three numbers**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-14-sum-of-three-numbers.git)
 
 Applying this knowledge, we can create an expression consisting of some text and a variable, which is evaluated in connection with the printing:
 
@@ -752,10 +752,10 @@ Negative
 : The value of the variable x is: 10 <br> y is 5 and z is 6
 
 Positive
-: **Exercise - Addition formula**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-15-addition-formula.git)
+: **Exercise - Addition formula**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-15-addition-formula.git)
 
 Positive
-: **Exercise - Multiplication formula**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-16-multiplication-formula.git)
+: **Exercise - Multiplication formula**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-16-multiplication-formula.git)
 
 Once you have completed the previous exercise, try finding out the greatest possible multiplication that you can calculate. The reason behind the phenomenon you'll observe is that the value of an integer value is capped at the maximum of 2^31-1 (i.e. 2147483647). This is because integer variables are represented with 32 bits in the computer's memory.
 
@@ -775,13 +775,13 @@ Positive
 : The next exercises task you with calculating the average of the entered numbers. Let's briefly review the concept of *average*. <br> An average refers to the sum of numbers divided by their count. For instance, the average of the numbers 5 and 3 can be calculated with the formula (5+3)/2. Similarly, the average of the numbers 1, 2, and 4 is produced by the formula (1+2+4)/3. <br> In the context of programming, there are a few things to keep in mind. Firstly, dividing by zero is typically not permitted. This implies that calculating the average of zero numbers is impossible.
 
 Positive
-: **Exercise - Average of two numbers**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-17-average-of-two-numbers.git)
+: **Exercise - Average of two numbers**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-17-average-of-two-numbers.git)
 
 Positive
-: **Exercise - Average of three numbers**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-18-average-of-three-numbers.git)
+: **Exercise - Average of three numbers**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-18-average-of-three-numbers.git)
 
 Positive
-: **Exercise - Simple calculator**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-19-simple-calculator.git)
+: **Exercise - Simple calculator**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-19-simple-calculator.git)
 
 ### Misunderstandings Related to the Value of a Variable
 
@@ -852,7 +852,7 @@ if (number > 10):
 If the expression in the conditional statement evaluates to true, the execution of the program progresses to the block defined by the conditional statement. In the example above, the conditional is "if the number in the variable is greater than 10". On the other hand, if the expression evaluates to false, the execution moves on to the statement after the closing curly bracket of the current conditional statement.
 
 Positive
-: **Exercise - Speeding ticket**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-20-speeding-ticket.git)
+: **Exercise - Speeding ticket**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-20-speeding-ticket.git)
 
 ### Code Indentation and Block Statements
 
@@ -918,10 +918,10 @@ Negative
 : The number was not equal to 0
 
 Positive
-: **Exercise - Orwell**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-21-orwell.git)
+: **Exercise - Orwell**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-21-orwell.git)
 
 Positive
-: **Exercise - Ancient**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-22-ancient.git)
+: **Exercise - Ancient**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-22-ancient.git)
 
 ### Else
 
@@ -944,10 +944,10 @@ Negative
 If an `else` branch has been specified for a conditional statement, the block defined by the else branch is run in the case that the condition of the conditional statement is false. The `else`-command is placed on the same line as the block defined by the `if`-command.
 
 Positive
-: **Exercise - Positivity**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-23-positivity.git)
+: **Exercise - Positivity**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-23-positivity.git)
 
 Positive
-: **Exercise - Adulthood**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-24-adulthood.git)
+: **Exercise - Adulthood**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-24-adulthood.git)
 
 ### More Conditionals: elif
 
@@ -972,7 +972,7 @@ Negative
 Let's read out the example above: 'If the number is one, then print "The number is one", else if the number is two, then print "The given number is two", else if the number is three, then print "The number must be three!". Otherwise, print "Something else!"'
 
 Positive
-: **Exercise - Larger Than or Equal To**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-25-larger-than-equal-to.git)
+: **Exercise - Larger Than or Equal To**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-25-larger-than-equal-to.git)
 
 ### Order of Execution for Comparisons
 
@@ -998,7 +998,7 @@ Negative
 The example above prints the string "The number is greater than zero." even if the condition `number > 2` is true. The comparison stops at the first condition that evaluates to true.
 
 Positive
-: **Exercise - Grades and Points**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-26-grades-and-points.git)
+: **Exercise - Grades and Points**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-26-grades-and-points.git)
 
 ### Conditional Statement Expression and the Boolean Variable
 
@@ -1083,7 +1083,7 @@ else:
 ```
 
 Positive
-: **Exercise - Odd or Even**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-27-odd-or-even.git)
+: **Exercise - Odd or Even**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-27-odd-or-even.git)
 
 ### Conditional Statements and Comparing Strings
 
@@ -1107,10 +1107,10 @@ Negative
 Enter the first string <br> *User: \<same\>* <br> Enter the second string <br> *User: \<different\>* <br> The strings were different!
 
 Positive
-: **Exercise - Password**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-28-password.git)
+: **Exercise - Password**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-28-password.git)
 
 Positive
-: **Exercise - Same**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-29-same.git)
+: **Exercise - Same**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-29-same.git)
 
 ### Logical Operators
 
@@ -1167,7 +1167,7 @@ Negative
 : The number is greater than or equal to 4.
 
 Positive
-: **Exercise - Checking the age**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-30-checking-the-age.git)
+: **Exercise - Checking the age**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-30-checking-the-age.git)
 
 ### Execution Order of Conditional Statements
 
@@ -1254,10 +1254,10 @@ Negative
 : *User: \<15\>* <br> FizzBuzz
 
 Positive
-: **Exercise - Leap year**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-31-leap-year.git)
+: **Exercise - Leap year**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-31-leap-year.git)
 
 Positive
-: **Exercise - Gift tax**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https:#github.com/btec-diploma-unit4-programming-master/exercise-1-32-gift-tax.git
+: **Exercise - Gift tax**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-32-gift-tax.git
 
 ## Programming in our society
 

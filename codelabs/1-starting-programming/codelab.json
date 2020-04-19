@@ -3,11 +3,11 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2020-04-19T13:39:44+01:00",
+  "updated": "2020-04-19T14:40:24+01:00",
   "id": "1-starting-programming",
   "duration": 0,
   "title": "Part 1",
-  "summary": "Welcome to learning programming! The first part of the course focuses on taking the plunge with programming and getting familiar with all the required tools.",
+  "summary": "Welcome to learning programming! Take the plunge and geting familiar with all the required tools.",
   "source": "starting-programming.md",
   "theme": "",
   "status": [
@@ -19,7 +19,7 @@
   "tags": [
     "web"
   ],
-  "feedback": "https:#github.com/Scott3142/python-programming",
+  "feedback": "https://github.com/Scott3142/python-programming",
   "ga": "UA-49751789-4",
   "url": "1-starting-programming"
 }
