@@ -3,7 +3,7 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2020-04-15T14:54:09+01:00",
+  "updated": "2020-04-19T13:39:44+01:00",
   "id": "1-starting-programming",
   "duration": 0,
   "title": "Part 1",
@@ -19,7 +19,7 @@
   "tags": [
     "web"
   ],
-  "feedback": "https://github.com/Scott3142/python-programming",
+  "feedback": "https:#github.com/Scott3142/python-programming",
   "ga": "UA-49751789-4",
   "url": "1-starting-programming"
 }
