@@ -529,7 +529,7 @@ if (numberOfPositives + numberOfNegatives &gt; 0):
 
 while (number &lt; 6):
     print(number)
-    number++
+    number+= 1
 }
 </code></pre>
 <p>The code above can be read &#34;As long as the value of the variable number is less than 6, print the value of the variable number and increase the value of the variable number by one&#34;.</p>
@@ -540,9 +540,9 @@ while (number &lt; 6):
 <pre><code>i = 0
 while (i &lt; 10):
     print(i)
-    i++
+    i+= 1
 </code></pre>
-<p>The above loop can be split into three parts. First we introduce the variable <code>i</code>, used to count the number of times the loop has been executed so far, and set its value to 0: <code>i = 0</code>. This is followed by the definition of the loop – the loop&#39;s condition is <code>i &lt; 10</code> so the loop is executed as long as the value of the variable <code>i</code> is less than 10. The loop body contains the functionality to be executed <code>print(i)</code>, which is followed by increasing the value of the variable <code>i++</code>. The command <code>i++</code> is shorthand for <code>i = i + 1</code>.</p>
+<p>The above loop can be split into three parts. First we introduce the variable <code>i</code>, used to count the number of times the loop has been executed so far, and set its value to 0: <code>i = 0</code>. This is followed by the definition of the loop – the loop&#39;s condition is <code>i &lt; 10</code> so the loop is executed as long as the value of the variable <code>i</code> is less than 10. The loop body contains the functionality to be executed <code>print(i)</code>, which is followed by increasing the value of the variable <code>i+= 1</code>. The command <code>i+= 1</code> is shorthand for <code>i = i + 1</code>.</p>
 <p>The same can be achieved with a <code>for</code> loop like so.</p>
 <pre><code>for i in range(1,10):
     print(i)
@@ -589,7 +589,7 @@ while (number != 2):
 i = 0
 while (True):
     result += 3  # shorthand for result = result + 3
-    i++   # shorthand for i = i + 1
+    i+= 1   # shorthand for i = i + 1
 
     if (i == 4):
         break
@@ -602,7 +602,7 @@ print(result)
 i = 0
 while (i &lt; 4):
     result += 3  # shorthand for result = result + 3
-    i++   # shorthand for i = i + 1
+    i+= 1   # shorthand for i = i + 1
 
 print(result)
 </code></pre>
@@ -640,11 +640,11 @@ while (True):
         break
 
     if (message &lt; 0):
-        invalidNumbers++
+        invalidNumbers+= 1
         continue
 
     sum += message
-    validNumbers++
+    validNumbers+= 1
 </code></pre>
 <p>In the code above, the computation executed after the loop has ended has been implemented inside of the loop. This approach is not recommended as it can easily lead to very complex program structure. If something else – for example, reading more input – is to be done when the loop ends, it could also easily end up being placed inside of the loop. As more and more functionality is needed, the program becomes increasingly harder to read.</p>
 <p>Let&#39;s stick to the following loop structure:</p>
@@ -678,12 +678,12 @@ while (True):
     }
 
     if (message &lt; 0):
-        invalidNumbers++
+        invalidNumbers+= 1
         continue
     }
 
     sum += message
-    validNumbers++
+    validNumbers+= 1
 }
 
 print(&#34;Sum of valid numbers: &#34; + str(sum))
@@ -694,6 +694,451 @@ print(&#34;Invalid numbers: &#34; + str(invalidNumbers))
 </aside>
 <aside class="special"><p><strong>Implementing a program one small part at a time<br><br></strong> In the previous exercise, we used a series of exercises to practice implementing a program one piece at a time. <br><br> When you are writing a program, whether it&#39;s an exercise or a personal project, figure out the types of parts the program needs to function and proceed by implementing them one part at a time. Make sure to test the program right after implementing each part. <br><br> Never try solving the whole problem at once, because that makes running and testing the program in the middle of the problem-solving process difficult. Start with something easy that you know you can do. When one part works, you can move on to the next. <br><br> Some of the exercises are already split into parts. However, it&#39;s often the case in programming that these parts need to be split into even smaller parts. You should almost always run the program after every new line of code. This ensures that the solution is moving in the right direction. <br><br></p>
 </aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Methods &amp; Classes" duration="0">
+        <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>You will be familiar with the concept of a class.</li>
+<li>You are familiar with the concepts of a method parameter, a method&#39;s return value, and a program&#39;s call stack.</li>
+<li>You can create parameterized and non-parameterized methods, and you can create methods that return a value.</li>
+</ul>
+<p>So far, we&#39;ve used various commands: value assignment, calculations, conditional statements, and loops.</p>
+<p>Printing to the screen has been done with the statement <code>print()</code>, and the reading of values with <code>input()</code>. <code>if</code> has been used in conditional statements, and <code>while</code> and <code>for</code> in loops. We notice that printing and reading operations somewhat differ from <code>if</code>, <code>while</code>, and <code>for</code> in that the print and read commands are followed by parentheses, which may include parameters passed to the command. The ones that &#34;end in parentheses&#34; are not actually commands, but methods.</p>
+<p>Technically speaking, <strong>a method</strong> is a named set of statements. It&#39;s a piece of a program that can be called from elsewhere in the code by the name given to the method. For instance <code>print(&#34;I am a parameter given to the method!&#34;)</code> calls a methods that performs printing to the screen. The internal implementation of the method – meaning the set of statements to be executed – is hidden, and the programmer does not need to concern themselves with it when using the method.</p>
+<p>So far all the methods we have used have been ready-made Python methods. Next we will learn to create our own methods.</p>
+<h2 is-upgraded>Custom Methods</h2>
+<p><strong>A method</strong> means a named set consisting of statements that can be called from elsewhere in the program code by its name. Programming languages offer pre-made methods, but programmers can also write their own ones. It would, in fact, be quite exceptional if a program used no methods written by the programmer, because methods help in structuring the program. From this point onward nearly every program on the course will therefore contain custom-created methods.</p>
+<p>We will also introduce the concept of a class here, which will become far clearer as we go through the course. A Class is like an object constructor, or a &#34;blueprint&#34; for creating objects.</p>
+<p>To create a class, use the keyword <code>class</code>:</p>
+<pre><code>class MyClass:
+  x = 5
+</code></pre>
+<p>Now we can use the class named MyClass to create objects. Create an object named p1, and print the value of x:</p>
+<pre><code>class MyClass:
+  x = 5
+
+p1 = MyClass()
+print(p1.x)
+</code></pre>
+<aside class="warning"><p>5</p>
+</aside>
+<p>The examples above are classes and objects in their simplest form, and are not really useful in real life applications.</p>
+<p>To understand the meaning of classes we have to understand the built-in <code>__init__()</code> function.</p>
+<p>All classes have a function called <code>__init__()</code>, which is always executed when the class is being initiated.</p>
+<p>Use the <code>__init__()</code> function to assign values to object properties, or other operations that are necessary to do when the object is being created:</p>
+<p>In the code boilerplate, methods are written outside of the function <code>__init__()</code>, yet inside out the &#34;outermost&#34; class block. They can be located above or below the <code>__init__()</code>.</p>
+<pre><code>class Example:
+    def __init__(self, *args):
+        # program code
+
+    # your own methods here
+</code></pre>
+<p>This can be confusing at first, but the concept of a class, including what the keywords <code>self</code> and <code>*args</code> mean will be clearer later in the course. For now, let&#39;s turn our attention back to methods an observe how to create a new method. We&#39;ll create the method <code>greet</code>.</p>
+<pre><code>def greet():
+    print(&#34;Greetings from the method world!&#34;)
+</code></pre>
+<p>Note the subtle difference between a <em>method</em> and a <em>function</em>. Until now, we have used functions such as</p>
+<pre><code>def add():
+  a = 2
+  b = 3
+  print(a+b)
+
+add()
+</code></pre>
+<p>This can become a method when we insert it into a suitable place.</p>
+<pre><code>class Example:
+    def __init__(self, *args):
+        # program code
+
+    # your own methods here
+    def greet():
+        print(&#34;Greetings from the method world!&#34;)
+</code></pre>
+<p>The definition of the method consists of two parts. The first line of the definition includes the name of the method, i.e. <code>greet</code>.  Beneath the line containing the name of the method is a code block, inside of which is the code of the method – the commands that are executed when the method is called. The only thing our method <code>greet</code> does is write a line of text on the screen.</p>
+<p>Calling a custom method is simple: write the name of the methods followed by a set of parentheses. In the following snippet the main program (main) calls the greet method four times in total.</p>
+<pre><code>class Example:
+    def __init__(self, *args):
+        # program code
+        print(&#34;Let&#39;s try if we can travel to the method world:&#34;)
+        greet()
+
+        print(&#34;Looks like we can, let&#39;s try again:&#34;)
+        greet()
+        greet()
+        greet()
+
+    # your own methods here
+    def greet():
+        print(&#34;Greetings from the method world!&#34;)
+
+def main():
+    myClass = Example()
+
+main()
+</code></pre>
+<p>The execution of the program produces the following output:</p>
+<aside class="warning"><p>Let&#39;s try if we can travel to the method world: <br> Greetings from the method world! <br> Looks like we can, let&#39;s try again: <br> Greetings from the method world! <br> Greetings from the method world! <br> Greetings from the method world! <br></p>
+</aside>
+<p>The order of execution is worth noticing. The execution of the program happens by executing the lines of the main function (<code>main</code>) in order from top to bottom, one at a time. When the encountered statement is a method call, the execution of the program moves inside the method in question. The statements of the method are executed one at a time from top to bottom. After this the execution returns to the place where the method call occured, and then proceeds to the next statement in the program.</p>
+<p>When the program starts, the operating system calls <code>main</code>. The main function is the starting point for the program, since the execution begins from its first line. The execution of a program ends at the end of the main function.</p>
+<aside class="special"><p><strong>Methods vs Functions<br><br></strong> A method in python is somewhat similar to a function, except it is associated with object/classes. Methods in python are very similar to functions except for two major differences. <br><br> 1. The method is implicitly used for an object for which it is called. <br> 2. The method is accessible to data that is contained within the class. <br><br> You can read more <a href="https://www.tutorialspoint.com/difference-between-method-and-function-in-python" target="_blank">here</a>.</p>
+</aside>
+<aside class="special"><p><strong>Exercise - In a hole in the ground<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-20-in-a-hole-in-the-ground.git" target="_blank">Source files on Github</a></p>
+</aside>
+<aside class="special"><p><strong>Exercise - Reprint<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-21-reprint.git" target="_blank">Source files on Github</a></p>
+</aside>
+<p>From here on out, when introducing methods, we will not explicitly mention that they must be located in the correct place. Methods cannot be defined e.g. inside other methods.</p>
+<h2 is-upgraded>On Naming Methods</h2>
+<p>According to the <a href="https://www.python.org/dev/peps/pep-0008/" target="_blank">PEP 8 guidelines</a>, the names of methods use the function naming rules and therefore should be entirely lowercase with words separated by underscores as necessary to improve readability.</p>
+<p>In the code example below the method is poorly named. It begins with an upper-case letter and the words are incorrectly separated. The parentheses after the method name have a space between and indentation in the code block is incorrect.</p>
+<pre><code>def Thismethod_says_woof ( ):  
+  print(&#34;woof&#34;)
+</code></pre>
+<p>In contrast the method below is correctly named: The name is entirely lowercase with words separated by underscores as necessary to improve readability. The parentheses sit next to one another and the contents are correctly indented (the method has its own code block, so the indentation of the code is four characters).</p>
+<pre><code>def this_method_says_woof():
+    print(&#34;woof&#34;)
+</code></pre>
+<h2 is-upgraded>Method Parameters</h2>
+<p><strong>Parameters</strong> are values given to a method that can be used in its execution. The parameters of a method are defined on the uppermost line of the method within the parentheses following its name. The values of the parameters that the method can use are copied from the values given to the method when it is executed.</p>
+<p>In the following example a parameterized method <code>greet</code> is defined. It has a parameter called <code>numOfTimes</code>.</p>
+<pre><code>def greet(numOfTimes):
+    i = 0
+    while (i &lt; numOfTimes):
+        print(&#34;Greetings!&#34;)
+        i+= 1
+</code></pre>
+<p>We will call the method <code>greet</code> with different values. The parameter <code>numOfTimes</code> is assigned the value <code>1</code>on the first call, and <code>3</code>on the second.</p>
+<pre><code>def __init__(self):
+    self.greet(1)
+    print(&#34;&#34;)
+    self.greet(3)
+}
+</code></pre>
+<aside class="warning"><p>Greetings! <br><br> Greetings! <br> Greetings! <br> Greetings!</p>
+</aside>
+<p>Just like when calling the predefined method <code>print</code>, you can pass an expression as a parameter.</p>
+<pre><code>def __init__(self):
+    greet(1 + 2)
+}
+</code></pre>
+<aside class="warning"><p>Greetings! <br> Greetings! <br> Greetings!</p>
+</aside>
+<p>If an expression is used as a parameter for a method, the expression is evaluated prior to the method call. Above, the expression evaluates to <code>3</code> and the final method call is of the form <code>greet(3)</code>.</p>
+<aside class="special"><p><strong>Exercise - From one to parameter<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-22-from-one-to-parameter.git" target="_blank">Source files on Github</a></p>
+</aside>
+<aside class="special"><p><strong>Exercise - From parameter to one<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-23-from-parameter-to-one.git" target="_blank">Source files on Github</a></p>
+</aside>
+<h2 is-upgraded>Multiple Parameters</h2>
+<p>A method can be defined with multiple parameters. When calling such a method, the parameters are passed in the same order.</p>
+<pre><code>def sum(int first, int second):
+    print(&#34;The sum of numbers &#34; + str(first) + &#34; and &#34; + str(second) + &#34; is &#34; + str(first + second))
+}
+</code></pre>
+<pre><code>sum(3, 5)
+
+number1 = 2
+number2 = 4
+
+sum(number1, number2)
+</code></pre>
+<aside class="warning"><p>The sum of numbers 3 and 5 is 8 <br> The sum of numbers 2 and 4 is 6</p>
+</aside>
+<aside class="special"><p><strong>Exercise - Division<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-24-division.git" target="_blank">Source files on Github</a></p>
+</aside>
+<h2 is-upgraded>Parameter Values Are Copied in a Method Call</h2>
+<p>As a method is called <strong>the values of its parameters are copied</strong>. In practice, this means that both the main method and the method to be called can use variables with the same name. However, changing the value of the variables inside the method does not affect the value of the variable in the main method that has the same name. Let&#39;s examine this behavior with the following program.</p>
+<pre><code>class Example:
+    def __init__(self):
+        min = 5
+        max = 10
+
+        self.printNumbers(min, max)
+        print()
+
+        min = 8
+
+        self.printNumbers(min, max)
+
+    def printNumbers(self,min, max):
+        while (min &lt; max):
+            print(min)
+            min += 1
+
+def main():
+    myClass = Example()
+
+main()
+</code></pre>
+<p>The output of the program is:</p>
+<aside class="warning"><p>5 <br> 6 <br> 7 <br> 8 <br> 9 <br><br> 8 <br> 9</p>
+</aside>
+<p>So, method parameters are distinct from the variables (or parameters) of other methods, even if they had the same name. As a variable is passed to a method during a method call, the value of that variable gets copied to be used as the value of the parameter variable declared in the method definition. Variables in two separate methods are independent of one another.</p>
+<p>To further demonstrate this point, let&#39;s consider the following example. We define a variable called <code>number</code> in the main method. That variable is passed as a parameter to the method <code>incrementByThree</code>.</p>
+<pre><code># main program
+def __init__(self):
+    number = 1
+    print(&#34;The value of the variable &#39;number&#39; in the main program: &#34; + number)
+    incrementByThree(number)
+    print(&#34;The value of the variable &#39;number&#39; in the main program: &#34; + number)
+}
+
+# method
+def incrementByThree(self, number):
+    print(&#34;The value of the method parameter &#39;number&#39;: &#34; + number)
+    number = number + 3
+    print(&#34;The value of the method parameter &#39;number&#39;: &#34; + number)
+}
+</code></pre>
+<p>The execution of the program produces the following output.</p>
+<aside class="warning"><p>The value of the variable ‘number&#39; in the main program: 1 <br> The value of the method parameter ‘number&#39;: 1 <br> The value of the method parameter ‘number&#39;: 4 <br> The value of the variable ‘number&#39; in the main program: 1</p>
+</aside>
+<p>When the variable <code>number</code> is incremented inside the method, there&#39;s no issue. This, however, is not reflected in the <code>number</code> variable of the main program. The <code>number</code> variable living in the main program is different from the <code>number</code> variable of the method. The parameter <code>number</code> is copied for the method&#39;s use, i.e., a new variable called <code>number</code> is created for <code>incrementByThree</code> method, to which the value of the variable<code>number</code> in the main program is copied during the method call. The variable <code>number</code> inside the method <code>incrementByThree</code> exists only for the duration of the method&#39;s execution and has no relation to the variable of the same name in the main program.</p>
+<h2 is-upgraded>Methods &amp; Functions Can Return Values</h2>
+<p>To return a value, we use the command <code>return</code> followed by the value to be returned (or the name of the variable whose value is to be returned).</p>
+<pre><code>def alwaysReturnsTen(self):
+    return 10
+</code></pre>
+<p>The method defined above returns a value of <code>10</code> when called. For the return value to be used, it must be stored in a variable. This is done the same way as regular value assignment to a variable, by using an equals sign.</p>
+<pre><code>def __init__(self):
+    number = alwaysReturnsTen()
+
+    print(&#34;the method returned the number &#34; + str(number))
+</code></pre>
+<p>The return value can also be used in any other expression.</p>
+<pre><code>number = 4 * alwaysReturnsTen() + (alwaysReturnsTen() / 2) - 8
+
+print(&#34;the result of the calculation &#34; + str(number))
+</code></pre>
+<aside class="special"><p><strong>Exercise - Numero uno<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-25-numero-uno.git" target="_blank">Source files on Github</a></p>
+</aside>
+<p>When execution inside a method reaches the command <code>return</code>, the execution of that method ends and the value is returned to the calling method. Any lines of source code following the command <code>return</code> are never executed.</p>
+<pre><code>def functioningMethod(self,parameter):
+    if (parameter &gt; 10):
+        return 10
+
+    print(&#34;The number received as parameter is ten or less.&#34;)
+
+    return parameter
+
+    print(&#34;This is never reached.&#34;)
+</code></pre>
+<p>If a method has the form <code>def nameOfMethod()</code> it is possible to return from it – in other words, to stop its execution in that place – with the <code>return</code> command that is not followed by a value. For instance:</p>
+<pre><code>def division(self,numerator, denominator):
+    if (denominator == 0):
+        print(&#34;Can not divide by 0!&#34;)
+        return
+
+    print(&#34;&#34; + str(numerator) + &#34; / &#34; + str(denominator) + &#34; = &#34; + str(1.0 * numerator / denominator))
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Defining Variables Inside Methods" duration="0">
+        <p>Defining variables inside methods is done in the same manner as in the &#34;main program&#34;. The following method calculates the average of the numbers it receives as parameters. Variables <code>sum</code> and <code>avg</code> are used to help in the calculation.</p>
+<pre><code>def average(self,number1, number2, number3):
+    sum = number1 + number2 + number3
+    avg = sum / 3.0
+
+    return avg
+</code></pre>
+<p>Variables defined in a method are only visible inside that method. In the example above, this means that the variables <code>sum</code> and <code>avg</code> defined inside the method <code>average</code> are not visible in the main program. A typical mistake while learning programming is to try and use a method in the following way.</p>
+<pre><code>def __init__(self):
+    first = 3
+    second = 8
+    third = 4
+
+    average(self, first, second, third)
+
+    # trying to use a method&#39;s internal variable, DOES NOT WORK!
+    print(&#34;The average of the numbers: &#34; + str(avg))
+}
+</code></pre>
+<p>In the above example, an attempt is made to use the variable <code>avg</code> that has been defined inside the method <code>average</code> and print its value. However, the variable <code>avg</code> only exists inside the method <code>average</code>, and it cannot be accessed outside of it.</p>
+<p>The following mistakes are also commonplace.</p>
+<pre><code>def __init__(self):
+    first = 3
+    second = 8
+    third = 4
+
+    # trying to use the method name only, DOES NOT WORK!
+    print(&#34;The average of the numbers: &#34; + average)
+}
+</code></pre>
+<p>Above, there is an attempt to use the name of the method <code>average</code> as if it were a variable. However, a method has to be called.</p>
+<p>As well as placing the method result into a helper variable, another way that works is to execute the method call directly inside the print statement:</p>
+<pre><code>def __init__(self):
+    first = 3
+    second = 8
+    third = 4
+
+    # calling the method inside the print statement, DOES WORK!
+    print(&#34;The average of the numbers: &#34; + str(average(self, first, second, third)))
+}
+</code></pre>
+<p>Here, the method call occurs first returning the value 5.0, which is then printed with the help of the print statement.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Calculating the Return Value Inside a Method" duration="0">
+        <p>The return value does not need to be entirely pre-defined - it can also be calculated. The return command that returns a value from the method can also be given an expression that is evaluated before the value is returned.</p>
+<p>In the following example, we&#39;ll define a method sum that adds the values of two variables and returns their sum. The values of the variables to be summed are received as method parameters.</p>
+<pre><code>def sum(first, second):
+    return first + second
+</code></pre>
+<p>When the execution of the method reaches the statement <code>return first + second</code>, the expression <code>first + second</code> is evaluated, and then its value is returned.</p>
+<p>The method is called in the following way. Below, the method is used to add the numbers 2 and 7 together. The value resulting from the method call is placed into the variable <code>sumOfNumbers</code>.</p>
+<pre><code>sumOfNumbers = sum(2, 7)
+# sumOfNumbers is now 9
+</code></pre>
+<p>Let&#39;s expand the previous example so that the numbers are entered by a user.</p>
+<pre><code>def __init__(self):
+    first = int(input(&#34;Enter the first number: &#34;))
+
+    second = int(input(&#34;Enter the second number: &#34;))
+
+    print(&#34;The combined sum of the numbers is: &#34; + str(sum(first, second)))
+}
+
+def sum(self,first, second):
+    return first + second
+}
+</code></pre>
+<p>In the example above, the method&#39;s return value is not stored in a variable but is instead directly used as part of the print operation. The print command&#39;s execution is done by the computer first evaluating the string <code>&#34;The combined sum of the numbers is: &#34;+ sum(first, second)</code>. The computer first looks for the variables <code>first</code> and <code>second</code> and copies their values as the values ​​of the method <code>sum</code>&#39;s parameters. The method then adds the values of the parameters ​​together, after which it returns a value. This value takes the place of the <code>sum</code> method call, whereby the sum is appended to the string <code>&#34;The combined sum of the numbers is: &#34;</code>.</p>
+<p>Since the values passed to a method are copied to its parameters, the names of the parameters and the names of the variables defined on the side of the caller have, in fact, nothing to do with each other. In the previous example, both the variables of the main program and the method parameters were named the same (<code>first</code> and <code>second</code>) &#34;by accident&#34;. The code below will function in precisely the same manner even though the variables are named differently:</p>
+<pre><code>def __init__(self):
+    number1 = int(input(&#34;Enter the first number: &#34;))
+
+    number2 = int(input(&#34;Enter the second number: &#34;))
+
+    print(&#34;The total sum of the numbers is: &#34; + sum(number1, number2))
+}
+
+def sum(self,first,second):
+    return first + second
+}
+</code></pre>
+<p>Now the value of the variable <code>number1</code> is copied as the value of the method parameter <code>first</code>, and the value of the variable <code>number2</code> is copied as the value of the parameter <code>second</code>.</p>
+<aside class="special"><p><strong>Exercise - Summation<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-26-summation.git" target="_blank">Source files on Github</a></p>
+</aside>
+<aside class="special"><p><strong>Exercise - Smallest<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-27-smallest.git" target="_blank">Source files on Github</a></p>
+</aside>
+<aside class="special"><p><strong>Exercise - Greatest<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-28-greatest.git" target="_blank">Source files on Github</a></p>
+</aside>
+<aside class="special"><p><strong>Exercise - Averaging<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-29-averaging.git" target="_blank">Source files on Github</a></p>
+</aside>
+<h2 is-upgraded>Execution of Method Calls and the Call Stack</h2>
+<p>How does the computer remember where to return after the execution of a method?</p>
+<p>The environment that executes Python source code keeps track of the method being executed in the call stack. <strong>The call stack</strong> contains frames, each of which includes information about a specific method&#39;s internal variables and their values. When a method is called, a new frame containing its variables is created in the call stack. When the execution of a method ends, the frame relating to a method is removed from the call stack, which leads to execution resuming at the previous method of the stack.</p>
+<p>When a method is called, the execution of the calling method is left waiting for the execution of the called method to end. This can be visualized with the help of a call stack. The call stack refers to the stack formed by the method calls – the method currently being executed is always on the top of the stack, and when that method has finished executing the execution moves on to the method that is next on the stack. Let&#39;s examine the following program:</p>
+<pre><code>def __init__(self):
+    print(&#34;Hello world!&#34;)
+    printNumber()
+    print(&#34;Bye bye world!&#34;)
+}
+
+def printNumber(self):
+    print(&#34;Number&#34;)
+}
+</code></pre>
+<p>The execution begins from the first line of the  <code>__init__</code> method when the program is run. The command on this line prints the text <code>&#34;Hello world!&#34;</code>. The call stack of the program looks as follows:</p>
+<aside class="warning"><p>__init__</p>
+</aside>
+<p>Once the print command has been executed, we move on to the next command, which calls the method <code>printNumber</code>. Calling this method moves the execution of the program to the beginning of the method <code>printNumber</code>. Meanwhile, the <code>main</code> method will await for the execution of the method <code>printNumber</code> to end. While inside the method <code>printNumber</code>, the call stack looks like this:</p>
+<aside class="warning"><p>printNumber <br> __init__</p>
+</aside>
+<p>Once the method <code>printNumber</code> completes, we return to the method that is immediately below the method <code>printNumber</code> in the call stack – which in this case is the method <code>main</code>. <code>printNumber</code> is removed from the call stack, and the execution continues from the line after the <code>printNumber</code> method call in the <code>main</code> method. The state of the call stack is now the following:</p>
+<aside class="warning"><p>__init__</p>
+</aside>
+<h2 is-upgraded>Call Stack and Method Parameters</h2>
+<p>Let&#39;s examine the call stack in a situation where parameters have been defined for the method.</p>
+<pre><code>def __init__(self):
+    beginning = 1
+    end = 5
+
+    printStars(beginning, end)
+}
+
+def printStars(beginning, end):
+    while (beginning &lt; end):
+        print(&#34;*&#34;)
+        beginning += 1  # same as beginning = beginning + 1
+</code></pre>
+<p>The execution of the program begins on the first line of the <code>main</code> method. The next two lines create the variables <code>beginning</code> and <code>end</code>, and also assign values to them. The state of the program prior to calling the method <code>printStarts</code>:</p>
+<aside class="warning"><p>__init__ <br> * beginning = 1 <br> * end = 5</p>
+</aside>
+<p>When <code>printStars</code> is called, the <code>__init__</code> method enters a waiting state. The method call causes new variables <code>beginning</code> and <code>end</code> to be created for the method <code>printStars</code>, to which the values passed as parameters are assigned to. These values are copied from the variables <code>beginning</code> and <code>end</code> of the <code>__init__</code> method. The state of the program on the first line of the execution of the method <code>printStars</code> is illustrated below.</p>
+<aside class="warning"><p>printStars <br> * beginning = 1 <br> * end = 5 <br> __init__ <br> * beginning = 1 <br> * end = 5</p>
+</aside>
+<p>When the command <code>beginning+= 1</code> is executed within the loop, the value of the variable <code>beginning</code> that belongs to the method currently being executed changes.</p>
+<aside class="warning"><p>printStars <br> * beginning = 2 <br> * end = 5 <br> __init__ <br> * beginning = 1 <br> * end = 5</p>
+</aside>
+<p>As such, the values of the variables in the method <code>__init__</code> remain unchanged. The execution of the method <code>printStars</code> would continue for some time after this. When the execution of that method ends, the execution resumes inside the <code>__init__</code> method.</p>
+<aside class="warning"><p>__init__ <br> * beginning = 1 <br> * end = 5</p>
+</aside>
+<h2 is-upgraded>Call Stack and Returning a Value from a Method</h2>
+<p>Let&#39;s now study an example where the method returns a value. The <code>__init__</code> method of the program calls a separate <code>start</code> method, inside of which two variables are created, the <code>sum</code> method is called, and the the value returned by the <code>sum</code> method is printed.</p>
+<pre><code>def __init__(self):
+    start()
+}
+
+def start(self):
+    first = 5
+    second = 6
+
+    sum = sum(first, second)
+
+    print(&#34;Sum: &#34; + str(sum))
+}
+
+def sum(self,number1, number2):
+    return number1 + number2
+}
+</code></pre>
+<p>At the beginning of the <code>start</code> method&#39;s execution the call stack looks as in the following illustration since it was called from the <code>main</code> method. The method <code>main</code> has no variables of its own in this example:</p>
+<aside class="warning"><p>start <br> __init__</p>
+</aside>
+<p>When the variables <code>first</code> and <code>second</code> have been created in the <code>start</code> method (i.e., the first two rows of that method have been executed), the situation is the following:</p>
+<aside class="warning"><p>start <br> * first = 5 <br> * second = 6 <br> __init__</p>
+</aside>
+<p>The command <code>sum = sum(first, second)</code> creates the variable <code>sum</code> in the method <code>start</code> and calls the method <code>sum</code>. The method <code>start</code> enters a waiting state. Since the parameters <code>number1</code> and <code>number2</code> are defined in the method <code>sum</code>, they are created right at the beginning of the method&#39;s execution, after which the values of the variables given as parameters are copied into them.</p>
+<aside class="warning"><p>sum <br> * number1 = 5 <br> * number2 = 6 <br> start <br> * first = 5 <br> * second = 6 <br> * sum # no value <br> __init__</p>
+</aside>
+<p>The execution of the method <code>sum</code> adds together the values of the variables <code>number1</code> and <code>number2</code>. The command <code>return</code> returns the sum of the numbers to the method that is one beneath it in the call stack - the method <code>start</code> in this case. The returned value is set as the value of the variable <code>sum</code>.</p>
+<aside class="warning"><p>start <br> * first = 5 <br> * second = 6 <br> * sum = 11 <br> __init__</p>
+</aside>
+<p>After that, the print command is executed, and then we return to the <code>__init__</code> method. Once the execution reaches the end of the <code>__init__</code> method, the execution of the program ends.</p>
+<h2 is-upgraded>Method Calling Another Method</h2>
+<p>As we noticed earlier, other methods can be called from within methods. An additional example of this technique is given below. We&#39;ll create the method <code>multiplicationTable</code> that prints the multiplication table of the given number. The multiplication table prints the rows with the help of the <code>printMultiplicationTableRow</code> method.</p>
+<pre><code>def multiplicationTable(max):
+    number = 1
+
+    while (number &lt;= max):
+        printMultiplicationTableRow(number, max)
+        number+= 1
+
+def printMultiplicationTableRow(self, number, coefficient):
+
+    int printable = number
+    while (printable &lt;= number * coefficient):
+        print(&#34;  &#34; + printable)
+        printable += number
+
+    print(&#34;&#34;)
+</code></pre>
+<p>The output of the method call <code>multiplicationTable(3)</code>, for instance, looks like this.</p>
+<aside class="warning"><p>1  2  3 <br> 2  4  6 <br> 3  6  9</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Summary" duration="0">
+        <p>Programs grow in size as we add more functionality to them. When the program size increases, so does the complexity. This results in source code that is more difficult to understand. In this part, we took our first steps towards managing program complexity: loop structures can be used to execute program code time and again and custom methods allow for dividing a program into smaller, more manageable parts.</p>
 
 
       </google-codelab-step>

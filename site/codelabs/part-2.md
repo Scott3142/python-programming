@@ -1204,7 +1204,7 @@ def division(self,numerator, denominator):
     print("" + str(numerator) + " / " + str(denominator) + " = " + str(1.0 * numerator / denominator))
 ```
 
-## Defining Variables Inside Methods
+### Defining Variables Inside Methods
 
 Defining variables inside methods is done in the same manner as in the "main program". The following method calculates the average of the numbers it receives as parameters. Variables `sum` and `avg` are used to help in the calculation.
 
@@ -1262,7 +1262,7 @@ def __init__(self):
 
 Here, the method call occurs first returning the value 5.0, which is then printed with the help of the print statement.
 
-## Calculating the Return Value Inside a Method
+### Calculating the Return Value Inside a Method
 
 The return value does not need to be entirely pre-defined - it can also be calculated. The return command that returns a value from the method can also be given an expression that is evaluated before the value is returned.
 
