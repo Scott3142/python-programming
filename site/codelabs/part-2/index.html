@@ -183,12 +183,8 @@ while (True):
 print(&#34;The sum of the numbers is &#34; + str(sum))
 </code></pre>
 <p>Next off we will get familiar with loops.</p>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="Loops and Infinite Loops" duration="0">
-        <p>A loop consists of a statement that determines whether or not the code within the loop should be repeated, along with a block containing the source code to be repeated. A loop takes the following form.</p>
+<h2 is-upgraded>Loops and Infinite Loops</h2>
+<p>A loop consists of a statement that determines whether or not the code within the loop should be repeated, along with a block containing the source code to be repeated. A loop takes the following form.</p>
 <pre><code>while (_statement_):
     # The content of the block
     # The block can have an unlimited amount of content
@@ -249,12 +245,8 @@ print(&#34;Done, thank you!&#34;)
 </aside>
 <aside class="special"><p><strong>Exercise - Are we there yet?<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-6-are-we-there-yet.git" target="_blank">Source files on Github</a></p>
 </aside>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="Returning to the Start of the Loop" duration="0">
-        <p>When the execution reaches the end of the loop, the execution starts again from the start of the loop. This means that all the commands in the loop have been executed. You can also return to the beginning from other places besides the end with the command <code>continue</code>. When the computer executes the command <code>continue</code>, the execution of the program moves to the beginning of the loop.</p>
+<h2 is-upgraded>Returning to the Start of the Loop</h2>
+<p>When the execution reaches the end of the loop, the execution starts again from the start of the loop. This means that all the commands in the loop have been executed. You can also return to the beginning from other places besides the end with the command <code>continue</code>. When the computer executes the command <code>continue</code>, the execution of the program moves to the beginning of the loop.</p>
 <p>The example below demonstrates the use of the <code>continue</code> command. The program asks the user to input positive numbers. If the user inputs a negative number or a zero, the program prints the message &#34;Invalid number! Try again&#34;, after which the execution returns to the beginning of the loop. In the previous example, the program read inputs of type string from the user. Similar programs with different input types are also possible. In the example below, the user is asked for numbers until they input a zero.</p>
 <pre><code>while (True):
     number = int(input(&#34;Insert positive integers&#34;))
@@ -377,12 +369,8 @@ while (True):
 }
 </code></pre>
 <p>We notice that it&#39;s difficult to define a single, clear task for <code>if-elif-else</code>-block. During the design and implementation of a program, it&#39;s desirable to aim for a situation in which every part of the program has a single, clear task. This theme repeats throughout the course.</p>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="Calculation with Loops" duration="0">
-        <p>Loops are used in computing many different things. For example, programs that process indefinite numbers of user-inputted values make use of loops. These kinds of programs typically print out some sort of statistics about the numbers that were read or other inputs after the end loop.</p>
+<h2 is-upgraded>Calculation with Loops</h2>
+<p>Loops are used in computing many different things. For example, programs that process indefinite numbers of user-inputted values make use of loops. These kinds of programs typically print out some sort of statistics about the numbers that were read or other inputs after the end loop.</p>
 <p>For the program to print out information from the loop execution after the loop, the information must be saved and modified during the loop.</p>
 <p>If the variable used to store the data is introduced within the loop, the variable is only available within that loop and nowhere else.</p>
 <p>Let&#39;s create a program to count and print out the number of ones entered by the user. Let&#39;s first create a non-working version and examine the action of the blocks.</p>
@@ -514,6 +502,198 @@ if (numberOfPositives + numberOfNegatives &gt; 0):
     print(&#34;Percentage of positive numbers: &#34; + percentageOfPositives + &#34;%&#34;)
 }
 </code></pre>
+<aside class="special"><p><strong>Exercise - Number and sum of numbers<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-10-number-and-sum-of-numbers.git" target="_blank">Source files on Github</a></p>
+</aside>
+<aside class="special"><p><strong>Exercise - Average of numbers<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-11-average-of-numbers.git" target="_blank">Source files on Github</a></p>
+</aside>
+<aside class="special"><p><strong>Exercise - Average of positive numbers<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-12-average-of-positive-numbers.git" target="_blank">Source files on Github</a></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="More loops" duration="0">
+        <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>You&#39;re familiar with the condition of the while loop.</li>
+<li>You know how to use the for loop.</li>
+<li>You recognize situations where a while loop should be used and those where a for loop is more appropriate.</li>
+</ul>
+<p>The &#34;while-true&#34; loop we&#39;ve been using is very handy when the program has to repeat a functionality until the user provides certain input.</p>
+<p>Next, we&#39;ll come to know a few other ways to implement loops.</p>
+<h2 is-upgraded>While Loop with a Condition</h2>
+<p>So far we have been using a loop with the boolean <code>True</code> in its parenthesis, meaning the loop continues forever (or until the loop is ended with the <code>break</code> command ).</p>
+<p>Actually, the parenthesis of a loop can contain a conditional expression, or a condition, just like the parenthesis of an <code>if</code> statement. The  <code>True</code> value can be replaced with an expression, which is evaluated as the program is executed. The expression is defined the same way as the condition of a conditional statement.</p>
+<p>The following code prints the numbers 1,2,...,5. When the value of the variable <code>number</code> is more than 5, the <code>while</code>-condition evaluates to false and the execution of the loop ends for good.</p>
+<pre><code>number = 1
+
+while (number &lt; 6):
+    print(number)
+    number++
+}
+</code></pre>
+<p>The code above can be read &#34;As long as the value of the variable number is less than 6, print the value of the variable number and increase the value of the variable number by one&#34;.</p>
+<p>Above, the value of the variable <code>number</code> is increased by one every time the loop body is executed.</p>
+<h2 is-upgraded>For Loop</h2>
+<p>Above, we learned how a <code>while</code> loop with a condition can be used to go through numbers in a certain interval.</p>
+<p>The structure of this kind of loop is the following.</p>
+<pre><code>i = 0
+while (i &lt; 10):
+    print(i)
+    i++
+</code></pre>
+<p>The above loop can be split into three parts. First we introduce the variable <code>i</code>, used to count the number of times the loop has been executed so far, and set its value to 0: <code>i = 0</code>. This is followed by the definition of the loop – the loop&#39;s condition is <code>i &lt; 10</code> so the loop is executed as long as the value of the variable <code>i</code> is less than 10. The loop body contains the functionality to be executed <code>print(i)</code>, which is followed by increasing the value of the variable <code>i++</code>. The command <code>i++</code> is shorthand for <code>i = i + 1</code>.</p>
+<p>The same can be achieved with a <code>for</code> loop like so.</p>
+<pre><code>for i in range(1,10):
+    print(i)
+
+</code></pre>
+<p>A <code>for</code> loop contains three parts:</p>
+<ul>
+<li>introducing the index variable <code>i</code> for counting the number of executions</li>
+<li>the condition of the loop</li>
+<li>the functionality to be executed.</li>
+</ul>
+<pre><code>for target_list &#34;in&#34; expression_list:
+    # Functionality to be executed
+</code></pre>
+<p>We will continue practicing loops in the following exercises. You can use either a <code>while</code> loop with a condition, or a <code>for</code> loop.</p>
+<aside class="special"><p><strong>Exercise - Counting<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-13-counting.git" target="_blank">Source files on Github</a></p>
+</aside>
+<aside class="special"><p><strong>Exercise - Counting to a hundred<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-14-counting-to-hundred.git" target="_blank">Source files on Github</a></p>
+</aside>
+<aside class="special"><p><strong>Exercise - From where to where?<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-15-from-where-to-where.git" target="_blank">Source files on Github</a></p>
+</aside>
+<h2 is-upgraded>On Stopping a Loop Execution</h2>
+<p>A loop does not stop executing immediately when its condition evaluates to true. A loop&#39;s condition is evaluated at the start of a loop, meaning when (1) the loop starts for the first time or (2) the execution of a previous iteration of the loop body has just finished.</p>
+<p>Let&#39;s look at the following loop.</p>
+<pre><code>number = 1
+
+while (number != 2):
+    print(number)
+    number = 2
+    print(number)
+    number = 1
+</code></pre>
+<p>It prints the following:</p>
+<aside class="warning"><p>1 <br> 2 <br> 1 <br> 2 <br> 1 <br> 2 <br> ...</p>
+</aside>
+<p>Even though <code>number</code> equals 2 at one point, the loop runs forever.</p>
+<p><strong>The condition of a loop is evaluated when the execution of a loop starts and when the execution of the loop body has reached the closing curly bracket.</strong> If the condition evaluates to  <code>True</code>, execution continues from the top of the loop body. If the condition evaluates to <code>False</code>, execution continues from the first statement following the loop.</p>
+<h2 is-upgraded>Repeating Functionality</h2>
+<p>One common subproblem type is to &#34;do something a certain amount of times&#34;.</p>
+<p>What&#39;s common to all these programs is repetition. Some functionality is done repeatedly, and a counter variable is used to keep track of the repetitions.</p>
+<p>The following program calculates the product 4*3 somewhat clumsily, i.e., as the sum 3 + 3 + 3 + 3:</p>
+<pre><code>result = 0
+
+i = 0
+while (True):
+    result += 3  # shorthand for result = result + 3
+    i++   # shorthand for i = i + 1
+
+    if (i == 4):
+        break
+
+print(result)
+</code></pre>
+<p>The same functionality can be achieved with the following code.</p>
+<pre><code>result = 0
+
+i = 0
+while (i &lt; 4):
+    result += 3  # shorthand for result = result + 3
+    i++   # shorthand for i = i + 1
+
+print(result)
+</code></pre>
+<p>Or by using a for loop as seen in the following.</p>
+<pre><code>result = 0
+
+for i in range(4):
+    result += 3
+
+print(result)
+</code></pre>
+<aside class="special"><p><strong>Exercise - Sum of a sequence<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-16-sum-of-a-sequence.git" target="_blank">Source files on Github</a></p>
+</aside>
+<aside class="special"><p><strong>Exercise - Sum of a sequence - the sequel<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-17-sum-of-a-sequence-2.git" target="_blank">Source files on Github</a></p>
+</aside>
+<aside class="special"><p><strong>Exercise - Factorial<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-18-factorial.git" target="_blank">Source files on Github</a></p>
+</aside>
+<h2 is-upgraded>On the Structure of Programs Using Loops</h2>
+<p>In the previous examples, we have concentrated on cases where the loop is executed a predetermined number of times. The number of repetitions can be based on user input – in these cases, the for loop is quite handy.</p>
+<p>In programs where the loop body has to be executed until the user gives certain input, the for loop is not too great. In these cases, the while-true loop we practiced earlier works well.</p>
+<p>Let&#39;s take a look at a somewhat more complex program that reads integers from the user. The program handles negative numbers as invalid, and zero stops the loop. When the user enters zero, the program prints the sum of valid numbers, the number of valid numbers and the number of invalid numbers.</p>
+<p>A possible solution is detailed below. However, the style of the example is not ideal.</p>
+<pre><code>print(&#34;Write numbers, negative numbers are invalid: &#34;)
+sum = 0
+validNumbers = 0
+invalidNumbers = 0
+
+while (True):
+    message = int(input())
+
+    if (message == 0):
+        print(&#34;Sum of valid numbers: &#34; + str(sum))
+        print(&#34;Valid numbers: &#34; + str(validNumbers))
+        print(&#34;Invalid numbers: &#34; + str(invalidNumbers))
+        break
+
+    if (message &lt; 0):
+        invalidNumbers++
+        continue
+
+    sum += message
+    validNumbers++
+</code></pre>
+<p>In the code above, the computation executed after the loop has ended has been implemented inside of the loop. This approach is not recommended as it can easily lead to very complex program structure. If something else – for example, reading more input – is to be done when the loop ends, it could also easily end up being placed inside of the loop. As more and more functionality is needed, the program becomes increasingly harder to read.</p>
+<p>Let&#39;s stick to the following loop structure:</p>
+<pre><code># Create variables needed for the loop
+
+while (True):
+    # read input
+
+    # end the loop -- break
+
+    # check for invalid input -- continue
+
+    # handle valid input
+}
+
+# functionality to execute after the loop ends
+</code></pre>
+<p>In other words, the program structure is cleaner if the things to be done after the loop ends are placed outside of it.</p>
+<pre><code>Scanner reader = new Scanner(System.in)
+
+print(&#34;Write numbers, negative numbers are invalid: &#34;)
+sum = 0
+validNumbers = 0
+invalidNumbers = 0
+
+while (True):
+    message = int(input())
+
+    if (message == 0):
+        break
+    }
+
+    if (message &lt; 0):
+        invalidNumbers++
+        continue
+    }
+
+    sum += message
+    validNumbers++
+}
+
+print(&#34;Sum of valid numbers: &#34; + str(sum))
+print(&#34;Valid numbers: &#34; + str(validNumbers))
+print(&#34;Invalid numbers: &#34; + str(invalidNumbers))
+</code></pre>
+<aside class="special"><p><strong>Exercise - Repeating, breaking and remembering<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-19-repeating-breaking-and-remembering.git" target="_blank">Source files on Github</a></p>
+</aside>
+<aside class="special"><p><strong>Implementing a program one small part at a time<br><br></strong> In the previous exercise, we used a series of exercises to practice implementing a program one piece at a time. <br><br> When you are writing a program, whether it&#39;s an exercise or a personal project, figure out the types of parts the program needs to function and proceed by implementing them one part at a time. Make sure to test the program right after implementing each part. <br><br> Never try solving the whole problem at once, because that makes running and testing the program in the middle of the problem-solving process difficult. Start with something easy that you know you can do. When one part works, you can move on to the next. <br><br> Some of the exercises are already split into parts. However, it&#39;s often the case in programming that these parts need to be split into even smaller parts. You should almost always run the program after every new line of code. This ensures that the solution is moving in the right direction. <br><br></p>
+</aside>
 
 
       </google-codelab-step>
