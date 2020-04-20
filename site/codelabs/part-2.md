@@ -115,7 +115,6 @@ elif (value < 0): #
     # and the value IS NOT larger than five
 else:  # otherwise
     # functionality otherwise
-}
 ```
 
 Conditional logic can be combined with other patterns used for problem solving. Let's look into a problem "Read two integers from the user. If the product of the integers is over 100, print `too much`. If the sum is less than 10, print `too little`. Otherwise, print `ok`. The program below combines reading, calculating and conditional functionality.
@@ -219,7 +218,6 @@ The loop execution proceeds line-by-line. The following program outputs _I can p
 ```python
 while (True):
     print("I can program!")
-}
 ```
 
 A program that runs infinitely does not end on its own. In Python, it can usually be shut down by the Ctrl-C command.
@@ -373,14 +371,11 @@ while (True):
     if (number < 0):
         print("Invalid number")
         continue
-    }
 
     if (number == 0):
         break
-    }
 
     print(number * number)
-}
 ```
 
 This program can also be done by combining the if-statements. In that case, the implementations would be the following.
@@ -397,8 +392,6 @@ while (True):
         break
     else:
         print(number * number)
-    }
-}
 ```
 
 Let's examine the previous programs with comments. Before each command, there's a comment that aims to explain what's happening in the program. Below is a program that's written with separate if-statements.
@@ -421,7 +414,6 @@ while (True):
 
     # The task is to print the square of the number
     print(number * number)
-}
 ```
 
 Note that every if-statement has a single, clear task.
@@ -442,8 +434,6 @@ while (True):
         break
     else:
         print(number * number)
-    }
-}
 ```
 
 We notice that it's difficult to define a single, clear task for `if-elif-else`-block. During the design and implementation of a program, it's desirable to aim for a situation in which every part of the program has a single, clear task. This theme repeats throughout the course.
@@ -508,7 +498,6 @@ while (True):
 
     # The task is to print out the total of ones
     print("The total of ones: " + str(ones))
-}
 ```
 
 The example above works, but not in a way we hoped it would. Below the example output of the program
@@ -591,7 +580,7 @@ while (True):
     #     numberOfPositives = numberOfPositives + 1
     # else:
     #     numberOfNegatives = numberOfNegatives + 1
-    # }
+    #
 
 # For printing the number of positive numbers
 print("Positive numbers: " + numberOfPositives)
@@ -604,7 +593,6 @@ if (numberOfPositives + numberOfNegatives > 0):
     # to avoid dividing by zero
     percentageOfPositives = 100.0 * numberOfPositives / (numberOfPositives + numberOfNegatives)
     print("Percentage of positive numbers: " + percentageOfPositives + "%")
-}
 ```
 
 Positive
@@ -641,7 +629,6 @@ number = 1
 while (number < 6):
     print(number)
     number+= 1
-}
 ```
 
 The code above can be read "As long as the value of the variable number is less than 6, print the value of the variable number and increase the value of the variable number by one".
@@ -820,7 +807,6 @@ while (True):
     # check for invalid input -- continue
 
     # handle valid input
-}
 
 # functionality to execute after the loop ends
 ```
@@ -840,16 +826,15 @@ while (True):
 
     if (message == 0):
         break
-    }
+
 
     if (message < 0):
         invalidNumbers+= 1
         continue
-    }
+
 
     sum += message
     validNumbers+= 1
-}
 
 print("Sum of valid numbers: " + str(sum))
 print("Valid numbers: " + str(validNumbers))
@@ -1036,7 +1021,6 @@ def __init__(self):
     self.greet(1)
     print("")
     self.greet(3)
-}
 ```
 
 Negative
@@ -1047,7 +1031,6 @@ Just like when calling the predefined method `print`, you can pass an expression
 ```python
 def __init__(self):
     greet(1 + 2)
-}
 ```
 
 Negative
@@ -1068,7 +1051,6 @@ A method can be defined with multiple parameters. When calling such a method, th
 ```python
 def sum(int first, int second):
     print("The sum of numbers " + str(first) + " and " + str(second) + " is " + str(first + second))
-}
 ```
 
 ```python
@@ -1131,14 +1113,12 @@ def __init__(self):
     print("The value of the variable 'number' in the main program: " + number)
     incrementByThree(number)
     print("The value of the variable 'number' in the main program: " + number)
-}
 
 # method
 def incrementByThree(self, number):
     print("The value of the method parameter 'number': " + number)
     number = number + 3
     print("The value of the method parameter 'number': " + number)
-}
 ```
 
 The execution of the program produces the following output.
@@ -1228,7 +1208,6 @@ def __init__(self):
 
     # trying to use a method's internal variable, DOES NOT WORK!
     print("The average of the numbers: " + str(avg))
-}
 ```
 
 In the above example, an attempt is made to use the variable `avg` that has been defined inside the method `average` and print its value. However, the variable `avg` only exists inside the method `average`, and it cannot be accessed outside of it.
@@ -1243,7 +1222,6 @@ def __init__(self):
 
     # trying to use the method name only, DOES NOT WORK!
     print("The average of the numbers: " + average)
-}
 ```
 Above, there is an attempt to use the name of the method `average` as if it were a variable. However, a method has to be called.
 
@@ -1257,7 +1235,6 @@ def __init__(self):
 
     # calling the method inside the print statement, DOES WORK!
     print("The average of the numbers: " + str(average(self, first, second, third)))
-}
 ```
 
 Here, the method call occurs first returning the value 5.0, which is then printed with the help of the print statement.
@@ -1291,11 +1268,9 @@ def __init__(self):
     second = int(input("Enter the second number: "))
 
     print("The combined sum of the numbers is: " + str(sum(first, second)))
-}
 
 def sum(self,first, second):
     return first + second
-}
 ```
 
 In the example above, the method's return value is not stored in a variable but is instead directly used as part of the print operation. The print command's execution is done by the computer first evaluating the string `"The combined sum of the numbers is: "+ sum(first, second)`. The computer first looks for the variables `first` and `second` and copies their values as the values ​​of the method `sum`'s parameters. The method then adds the values of the parameters ​​together, after which it returns a value. This value takes the place of the `sum` method call, whereby the sum is appended to the string `"The combined sum of the numbers is: "`.
@@ -1309,11 +1284,9 @@ def __init__(self):
     number2 = int(input("Enter the second number: "))
 
     print("The total sum of the numbers is: " + sum(number1, number2))
-}
 
 def sum(self,first,second):
     return first + second
-}
 ```
 
 Now the value of the variable `number1` is copied as the value of the method parameter `first`, and the value of the variable `number2` is copied as the value of the parameter `second`.
@@ -1344,11 +1317,9 @@ def __init__(self):
     print("Hello world!")
     printNumber()
     print("Bye bye world!")
-}
 
 def printNumber(self):
     print("Number")
-}
 ```
 
 The execution begins from the first line of the  `__init__` method when the program is run. The command on this line prints the text `"Hello world!"`. The call stack of the program looks as follows:
@@ -1376,7 +1347,6 @@ def __init__(self):
     end = 5
 
     printStars(beginning, end)
-}
 
 def printStars(beginning, end):
     while (beginning < end):
@@ -1412,7 +1382,6 @@ Let's now study an example where the method returns a value. The `__init__` meth
 ```python
 def __init__(self):
     start()
-}
 
 def start(self):
     first = 5
@@ -1421,11 +1390,9 @@ def start(self):
     sum = sum(first, second)
 
     print("Sum: " + str(sum))
-}
 
 def sum(self,number1, number2):
     return number1 + number2
-}
 ```
 
 At the beginning of the `start` method's execution the call stack looks as in the following illustration since it was called from the `main` method. The method `main` has no variables of its own in this example:
