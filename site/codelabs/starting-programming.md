@@ -1257,7 +1257,7 @@ Positive
 : **Exercise - Leap year**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-31-leap-year.git)
 
 Positive
-: **Exercise - Gift tax**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-32-gift-tax.git
+: **Exercise - Inheritance tax**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-32-inheritance-tax.git
 
 ## Programming in our society
 
@@ -1265,7 +1265,7 @@ When you're just starting to learn programming, it's hard to realize how depende
 
 As services become based on software, their inherent complexity becomes hidden from us. For instance, when you travel by air and check-in using an online form, the sending of the form sets off a series of communication between dozens of different systems. Information about your name, personal information, state of your passport, any possible visas, the state of your flight, and your previous flights are all checked. Your seat reservations pass through a seat-reservation management system, and your airline customer-loyalty status is reviewed. The amount of fuel the airplane needs to for refuelling will also need to be updated, and the list goes on. All of this happens as a result of you clicking the send button on the online form.
 
-Software professionals are the architects of these kinds of digital services. It's the responsibility of those of us who study computer science and engineering to implement these systems in a way that ensures that they function as well as they can for their intended users -- and also for those not familiar with similar systems. At the same time, architects of digital services learn a lot about different business domains and the practicalities of everyday life. For instance, you already know more about gift taxation (the last part of the previous section) than most Finns do - someone has also implemented a gift-tax calculator for the tax service.
+Software professionals are the architects of these kinds of digital services. It's the responsibility of those of us who study computer science and engineering to implement these systems in a way that ensures that they function as well as they can for their intended users -- and also for those not familiar with similar systems. At the same time, architects of digital services learn a lot about different business domains and the practicalities of everyday life. For instance, you already know more about inheritance taxation (the last part of the previous section) than most people do.
 
 The end-users of a given system are seldom aware of those who produced it. For example, few have heard of [Margaret Hamilton](<https://en.wikipedia.org/wiki/Margaret_Hamilton_(scientist\)) who, with her team, wrote the program that took man to the moon.
 
