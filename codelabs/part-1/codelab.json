@@ -3,12 +3,12 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2020-04-20T10:15:48+01:00",
-  "id": "1-starting-programming",
+  "updated": "2020-04-20T10:27:42+01:00",
+  "id": "part-1",
   "duration": 0,
   "title": "Part 1",
   "summary": "Welcome to learning programming! Take the plunge and geting familiar with all the required tools.",
-  "source": "starting-programming.md",
+  "source": "part-1.md",
   "theme": "",
   "status": [
     "draft"
@@ -21,5 +21,5 @@
   ],
   "feedback": "https://github.com/Scott3142/python-programming",
   "ga": "UA-49751789-4",
-  "url": "1-starting-programming"
+  "url": "part-1"
 }
