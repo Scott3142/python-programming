@@ -108,7 +108,6 @@ elif (value &lt; 0): #
     # and the value IS NOT larger than five
 else:  # otherwise
     # functionality otherwise
-}
 </code></pre>
 <p>Conditional logic can be combined with other patterns used for problem solving. Let&#39;s look into a problem &#34;Read two integers from the user. If the product of the integers is over 100, print <code>too much</code>. If the sum is less than 10, print <code>too little</code>. Otherwise, print <code>ok</code>. The program below combines reading, calculating and conditional functionality.</p>
 <pre><code>def product():
@@ -193,7 +192,6 @@ print(&#34;The sum of the numbers is &#34; + str(sum))
 <p>The loop execution proceeds line-by-line. The following program outputs <em>I can program</em> an infinite number of times.</p>
 <pre><code>while (True):
     print(&#34;I can program!&#34;)
-}
 </code></pre>
 <p>A program that runs infinitely does not end on its own. In Python, it can usually be shut down by the Ctrl-C command.</p>
 <h2 is-upgraded>Ending a Loop</h2>
@@ -306,14 +304,11 @@ print(&#34;Done, thank you!&#34;)
     if (number &lt; 0):
         print(&#34;Invalid number&#34;)
         continue
-    }
 
     if (number == 0):
         break
-    }
 
     print(number * number)
-}
 </code></pre>
 <p>This program can also be done by combining the if-statements. In that case, the implementations would be the following.</p>
 <pre><code>Scanner scanner = new Scanner(System.in)
@@ -327,8 +322,6 @@ while (True):
         break
     else:
         print(number * number)
-    }
-}
 </code></pre>
 <p>Let&#39;s examine the previous programs with comments. Before each command, there&#39;s a comment that aims to explain what&#39;s happening in the program. Below is a program that&#39;s written with separate if-statements.</p>
 <pre><code># The task is to repeat the block until the block is exited
@@ -348,7 +341,6 @@ while (True):
 
     # The task is to print the square of the number
     print(number * number)
-}
 </code></pre>
 <p>Note that every if-statement has a single, clear task.</p>
 <p>When we comment on a program containing combined if-statements, the comments take the following form.</p>
@@ -365,8 +357,6 @@ while (True):
         break
     else:
         print(number * number)
-    }
-}
 </code></pre>
 <p>We notice that it&#39;s difficult to define a single, clear task for <code>if-elif-else</code>-block. During the design and implementation of a program, it&#39;s desirable to aim for a situation in which every part of the program has a single, clear task. This theme repeats throughout the course.</p>
 <h2 is-upgraded>Calculation with Loops</h2>
@@ -420,7 +410,6 @@ while (True):
 
     # The task is to print out the total of ones
     print(&#34;The total of ones: &#34; + str(ones))
-}
 </code></pre>
 <p>The example above works, but not in a way we hoped it would. Below the example output of the program</p>
 <aside class="warning"><p>Insert a number (0 exits) <br><em>User: &lt;5&gt;<br></em> The total of ones: 0 <br> Insert a number (0 exits) <br><em>User: &lt;1&gt;<br></em> The total of ones: 1 <br> Insert a number (0 exits) <br><em>User: &lt;1&gt;<br></em> The total of ones: 1 <br> Insert a number (0 exits) <br><em>User: &lt;2&gt;<br></em> The total of ones: 0 <br> Insert a number (0 exits) <br><em>User: &lt;0&gt;</em></p>
@@ -487,7 +476,7 @@ while (True):
     #     numberOfPositives = numberOfPositives + 1
     # else:
     #     numberOfNegatives = numberOfNegatives + 1
-    # }
+    #
 
 # For printing the number of positive numbers
 print(&#34;Positive numbers: &#34; + numberOfPositives)
@@ -500,7 +489,6 @@ if (numberOfPositives + numberOfNegatives &gt; 0):
     # to avoid dividing by zero
     percentageOfPositives = 100.0 * numberOfPositives / (numberOfPositives + numberOfNegatives)
     print(&#34;Percentage of positive numbers: &#34; + percentageOfPositives + &#34;%&#34;)
-}
 </code></pre>
 <aside class="special"><p><strong>Exercise - Number and sum of numbers<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-10-number-and-sum-of-numbers.git" target="_blank">Source files on Github</a></p>
 </aside>
@@ -530,7 +518,6 @@ if (numberOfPositives + numberOfNegatives &gt; 0):
 while (number &lt; 6):
     print(number)
     number+= 1
-}
 </code></pre>
 <p>The code above can be read &#34;As long as the value of the variable number is less than 6, print the value of the variable number and increase the value of the variable number by one&#34;.</p>
 <p>Above, the value of the variable <code>number</code> is increased by one every time the loop body is executed.</p>
@@ -658,7 +645,6 @@ while (True):
     # check for invalid input -- continue
 
     # handle valid input
-}
 
 # functionality to execute after the loop ends
 </code></pre>
@@ -675,16 +661,15 @@ while (True):
 
     if (message == 0):
         break
-    }
+
 
     if (message &lt; 0):
         invalidNumbers+= 1
         continue
-    }
+
 
     sum += message
     validNumbers+= 1
-}
 
 print(&#34;Sum of valid numbers: &#34; + str(sum))
 print(&#34;Valid numbers: &#34; + str(validNumbers))
@@ -815,14 +800,12 @@ main()
     self.greet(1)
     print(&#34;&#34;)
     self.greet(3)
-}
 </code></pre>
 <aside class="warning"><p>Greetings! <br><br> Greetings! <br> Greetings! <br> Greetings!</p>
 </aside>
 <p>Just like when calling the predefined method <code>print</code>, you can pass an expression as a parameter.</p>
 <pre><code>def __init__(self):
     greet(1 + 2)
-}
 </code></pre>
 <aside class="warning"><p>Greetings! <br> Greetings! <br> Greetings!</p>
 </aside>
@@ -835,7 +818,6 @@ main()
 <p>A method can be defined with multiple parameters. When calling such a method, the parameters are passed in the same order.</p>
 <pre><code>def sum(int first, int second):
     print(&#34;The sum of numbers &#34; + str(first) + &#34; and &#34; + str(second) + &#34; is &#34; + str(first + second))
-}
 </code></pre>
 <pre><code>sum(3, 5)
 
@@ -883,14 +865,12 @@ def __init__(self):
     print(&#34;The value of the variable &#39;number&#39; in the main program: &#34; + number)
     incrementByThree(number)
     print(&#34;The value of the variable &#39;number&#39; in the main program: &#34; + number)
-}
 
 # method
 def incrementByThree(self, number):
     print(&#34;The value of the method parameter &#39;number&#39;: &#34; + number)
     number = number + 3
     print(&#34;The value of the method parameter &#39;number&#39;: &#34; + number)
-}
 </code></pre>
 <p>The execution of the program produces the following output.</p>
 <aside class="warning"><p>The value of the variable ‘number&#39; in the main program: 1 <br> The value of the method parameter ‘number&#39;: 1 <br> The value of the method parameter ‘number&#39;: 4 <br> The value of the variable ‘number&#39; in the main program: 1</p>
@@ -951,7 +931,6 @@ print(&#34;the result of the calculation &#34; + str(number))
 
     # trying to use a method&#39;s internal variable, DOES NOT WORK!
     print(&#34;The average of the numbers: &#34; + str(avg))
-}
 </code></pre>
 <p>In the above example, an attempt is made to use the variable <code>avg</code> that has been defined inside the method <code>average</code> and print its value. However, the variable <code>avg</code> only exists inside the method <code>average</code>, and it cannot be accessed outside of it.</p>
 <p>The following mistakes are also commonplace.</p>
@@ -962,7 +941,6 @@ print(&#34;the result of the calculation &#34; + str(number))
 
     # trying to use the method name only, DOES NOT WORK!
     print(&#34;The average of the numbers: &#34; + average)
-}
 </code></pre>
 <p>Above, there is an attempt to use the name of the method <code>average</code> as if it were a variable. However, a method has to be called.</p>
 <p>As well as placing the method result into a helper variable, another way that works is to execute the method call directly inside the print statement:</p>
@@ -973,7 +951,6 @@ print(&#34;the result of the calculation &#34; + str(number))
 
     # calling the method inside the print statement, DOES WORK!
     print(&#34;The average of the numbers: &#34; + str(average(self, first, second, third)))
-}
 </code></pre>
 <p>Here, the method call occurs first returning the value 5.0, which is then printed with the help of the print statement.</p>
 <h2 is-upgraded>Calculating the Return Value Inside a Method</h2>
@@ -994,11 +971,9 @@ print(&#34;the result of the calculation &#34; + str(number))
     second = int(input(&#34;Enter the second number: &#34;))
 
     print(&#34;The combined sum of the numbers is: &#34; + str(sum(first, second)))
-}
 
 def sum(self,first, second):
     return first + second
-}
 </code></pre>
 <p>In the example above, the method&#39;s return value is not stored in a variable but is instead directly used as part of the print operation. The print command&#39;s execution is done by the computer first evaluating the string <code>&#34;The combined sum of the numbers is: &#34;+ sum(first, second)</code>. The computer first looks for the variables <code>first</code> and <code>second</code> and copies their values as the values ​​of the method <code>sum</code>&#39;s parameters. The method then adds the values of the parameters ​​together, after which it returns a value. This value takes the place of the <code>sum</code> method call, whereby the sum is appended to the string <code>&#34;The combined sum of the numbers is: &#34;</code>.</p>
 <p>Since the values passed to a method are copied to its parameters, the names of the parameters and the names of the variables defined on the side of the caller have, in fact, nothing to do with each other. In the previous example, both the variables of the main program and the method parameters were named the same (<code>first</code> and <code>second</code>) &#34;by accident&#34;. The code below will function in precisely the same manner even though the variables are named differently:</p>
@@ -1008,11 +983,9 @@ def sum(self,first, second):
     number2 = int(input(&#34;Enter the second number: &#34;))
 
     print(&#34;The total sum of the numbers is: &#34; + sum(number1, number2))
-}
 
 def sum(self,first,second):
     return first + second
-}
 </code></pre>
 <p>Now the value of the variable <code>number1</code> is copied as the value of the method parameter <code>first</code>, and the value of the variable <code>number2</code> is copied as the value of the parameter <code>second</code>.</p>
 <aside class="special"><p><strong>Exercise - Summation<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-2-26-summation.git" target="_blank">Source files on Github</a></p>
@@ -1031,11 +1004,9 @@ def sum(self,first,second):
     print(&#34;Hello world!&#34;)
     printNumber()
     print(&#34;Bye bye world!&#34;)
-}
 
 def printNumber(self):
     print(&#34;Number&#34;)
-}
 </code></pre>
 <p>The execution begins from the first line of the  <code>__init__</code> method when the program is run. The command on this line prints the text <code>&#34;Hello world!&#34;</code>. The call stack of the program looks as follows:</p>
 <aside class="warning"><p>__init__</p>
@@ -1053,7 +1024,6 @@ def printNumber(self):
     end = 5
 
     printStars(beginning, end)
-}
 
 def printStars(beginning, end):
     while (beginning &lt; end):
@@ -1076,7 +1046,6 @@ def printStars(beginning, end):
 <p>Let&#39;s now study an example where the method returns a value. The <code>__init__</code> method of the program calls a separate <code>start</code> method, inside of which two variables are created, the <code>sum</code> method is called, and the the value returned by the <code>sum</code> method is printed.</p>
 <pre><code>def __init__(self):
     start()
-}
 
 def start(self):
     first = 5
@@ -1085,11 +1054,9 @@ def start(self):
     sum = sum(first, second)
 
     print(&#34;Sum: &#34; + str(sum))
-}
 
 def sum(self,number1, number2):
     return number1 + number2
-}
 </code></pre>
 <p>At the beginning of the <code>start</code> method&#39;s execution the call stack looks as in the following illustration since it was called from the <code>main</code> method. The method <code>main</code> has no variables of its own in this example:</p>
 <aside class="warning"><p>start <br> __init__</p>
