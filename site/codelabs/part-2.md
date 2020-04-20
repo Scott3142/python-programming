@@ -202,7 +202,7 @@ print("The sum of the numbers is " + str(sum))
 
 Next off we will get familiar with loops.
 
-## Loops and Infinite Loops
+### Loops and Infinite Loops
 
 A loop consists of a statement that determines whether or not the code within the loop should be repeated, along with a block containing the source code to be repeated. A loop takes the following form.
 
@@ -293,7 +293,7 @@ Negative
 Positive
 : **Exercise - Are we there yet?** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-6-are-we-there-yet.git)
 
-## Returning to the Start of the Loop
+### Returning to the Start of the Loop
 
 When the execution reaches the end of the loop, the execution starts again from the start of the loop. This means that all the commands in the loop have been executed. You can also return to the beginning from other places besides the end with the command `continue`. When the computer executes the command `continue`, the execution of the program moves to the beginning of the loop.
 
@@ -448,7 +448,7 @@ while (True):
 
 We notice that it's difficult to define a single, clear task for `if-elif-else`-block. During the design and implementation of a program, it's desirable to aim for a situation in which every part of the program has a single, clear task. This theme repeats throughout the course.
 
-## Calculation with Loops
+### Calculation with Loops
 
 Loops are used in computing many different things. For example, programs that process indefinite numbers of user-inputted values make use of loops. These kinds of programs typically print out some sort of statistics about the numbers that were read or other inputs after the end loop.
 
@@ -606,3 +606,258 @@ if (numberOfPositives + numberOfNegatives > 0):
     print("Percentage of positive numbers: " + percentageOfPositives + "%")
 }
 ```
+
+Positive
+: **Exercise - Number and sum of numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-10-number-and-sum-of-numbers.git)
+
+Positive
+: **Exercise - Average of numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-11-average-of-numbers.git)
+
+Positive
+: **Exercise - Average of positive numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-12-average-of-positive-numbers.git)
+
+## More loops
+
+### What you'll learn
+* You're familiar with the condition of the while loop.
+* You know how to use the for loop.
+* You recognize situations where a while loop should be used and those where a for loop is more appropriate.
+
+The "while-true" loop we've been using is very handy when the program has to repeat a functionality until the user provides certain input.
+
+Next, we'll come to know a few other ways to implement loops.
+
+### While Loop with a Condition
+
+So far we have been using a loop with the boolean `True` in its parenthesis, meaning the loop continues forever (or until the loop is ended with the `break` command ).
+
+Actually, the parenthesis of a loop can contain a conditional expression, or a condition, just like the parenthesis of an `if` statement. The  `True` value can be replaced with an expression, which is evaluated as the program is executed. The expression is defined the same way as the condition of a conditional statement.
+
+The following code prints the numbers 1,2,...,5. When the value of the variable `number` is more than 5, the `while`-condition evaluates to false and the execution of the loop ends for good.
+
+```python
+number = 1
+
+while (number < 6):
+    print(number)
+    number++
+}
+```
+
+The code above can be read "As long as the value of the variable number is less than 6, print the value of the variable number and increase the value of the variable number by one".
+
+Above, the value of the variable `number` is increased by one every time the loop body is executed.
+
+### For Loop
+
+Above, we learned how a `while` loop with a condition can be used to go through numbers in a certain interval.
+
+The structure of this kind of loop is the following.
+
+```python
+i = 0
+while (i < 10):
+    print(i)
+    i++
+```
+
+The above loop can be split into three parts. First we introduce the variable `i`, used to count the number of times the loop has been executed so far, and set its value to 0: `i = 0 `. This is followed by the definition of the loop -- the loop's condition is `i < 10` so the loop is executed as long as the value of the variable `i` is less than 10. The loop body contains the functionality to be executed `print(i) `, which is followed by increasing the value of the variable `i++`. The command `i++` is shorthand for `i = i + 1`.
+
+The same can be achieved with a `for` loop like so.
+
+```python
+for i in range(1,10):
+    print(i)
+
+```
+
+A `for` loop contains three parts:
+- introducing the index variable `i` for counting the number of executions
+- the condition of the loop
+- the functionality to be executed.
+
+```python
+for target_list "in" expression_list:
+    # Functionality to be executed
+```
+
+We will continue practicing loops in the following exercises. You can use either a `while` loop with a condition, or a `for` loop.
+
+Positive
+: **Exercise - Counting** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-13-counting.git)
+
+Positive
+: **Exercise - Counting to a hundred** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-14-counting-to-hundred.git)
+
+Positive
+: **Exercise - From where to where?** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-15-from-where-to-where.git)
+
+### On Stopping a Loop Execution
+
+A loop does not stop executing immediately when its condition evaluates to true. A loop's condition is evaluated at the start of a loop, meaning when (1) the loop starts for the first time or (2) the execution of a previous iteration of the loop body has just finished.
+
+Let's look at the following loop.
+
+```python
+number = 1
+
+while (number != 2):
+    print(number)
+    number = 2
+    print(number)
+    number = 1
+```
+
+It prints the following:
+
+Negative
+: 1 <br> 2 <br> 1 <br> 2 <br> 1 <br> 2 <br> ...
+
+Even though `number` equals 2 at one point, the loop runs forever.
+
+**The condition of a loop is evaluated when the execution of a loop starts and when the execution of the loop body has reached the closing curly bracket.** If the condition evaluates to  `True`, execution continues from the top of the loop body. If the condition evaluates to `False`, execution continues from the first statement following the loop.
+
+### Repeating Functionality
+
+One common subproblem type is to "do something a certain amount of times".
+
+What's common to all these programs is repetition. Some functionality is done repeatedly, and a counter variable is used to keep track of the repetitions.
+
+The following program calculates the product 4*3 somewhat clumsily, i.e., as the sum 3 + 3 + 3 + 3:
+
+```python
+result = 0
+
+i = 0
+while (True):
+    result += 3  # shorthand for result = result + 3
+    i++   # shorthand for i = i + 1
+
+    if (i == 4):
+        break
+
+print(result)
+```
+
+The same functionality can be achieved with the following code.
+
+```python
+result = 0
+
+i = 0
+while (i < 4):
+    result += 3  # shorthand for result = result + 3
+    i++   # shorthand for i = i + 1
+
+print(result)
+```
+
+Or by using a for loop as seen in the following.
+
+```python
+result = 0
+
+for i in range(4):
+    result += 3
+
+print(result)
+```
+
+Positive
+: **Exercise - Sum of a sequence** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-16-sum-of-a-sequence.git)
+
+Positive
+: **Exercise - Sum of a sequence - the sequel** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-17-sum-of-a-sequence-2.git)
+
+Positive
+: **Exercise - Factorial** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-18-factorial.git)
+
+### On the Structure of Programs Using Loops
+
+In the previous examples, we have concentrated on cases where the loop is executed a predetermined number of times. The number of repetitions can be based on user input -- in these cases, the for loop is quite handy.
+
+In programs where the loop body has to be executed until the user gives certain input, the for loop is not too great. In these cases, the while-true loop we practiced earlier works well.
+
+Let's take a look at a somewhat more complex program that reads integers from the user. The program handles negative numbers as invalid, and zero stops the loop. When the user enters zero, the program prints the sum of valid numbers, the number of valid numbers and the number of invalid numbers.
+
+A possible solution is detailed below. However, the style of the example is not ideal.
+
+```python
+print("Write numbers, negative numbers are invalid: ")
+sum = 0
+validNumbers = 0
+invalidNumbers = 0
+
+while (True):
+    message = int(input())
+
+    if (message == 0):
+        print("Sum of valid numbers: " + str(sum))
+        print("Valid numbers: " + str(validNumbers))
+        print("Invalid numbers: " + str(invalidNumbers))
+        break
+
+    if (message < 0):
+        invalidNumbers++
+        continue
+
+    sum += message
+    validNumbers++
+```
+
+In the code above, the computation executed after the loop has ended has been implemented inside of the loop. This approach is not recommended as it can easily lead to very complex program structure. If something else -- for example, reading more input -- is to be done when the loop ends, it could also easily end up being placed inside of the loop. As more and more functionality is needed, the program becomes increasingly harder to read.
+
+Let's stick to the following loop structure:
+
+```python
+# Create variables needed for the loop
+
+while (True):
+    # read input
+
+    # end the loop -- break
+
+    # check for invalid input -- continue
+
+    # handle valid input
+}
+
+# functionality to execute after the loop ends
+```
+
+In other words, the program structure is cleaner if the things to be done after the loop ends are placed outside of it.
+
+```python
+Scanner reader = new Scanner(System.in)
+
+print("Write numbers, negative numbers are invalid: ")
+sum = 0
+validNumbers = 0
+invalidNumbers = 0
+
+while (True):
+    message = int(input())
+
+    if (message == 0):
+        break
+    }
+
+    if (message < 0):
+        invalidNumbers++
+        continue
+    }
+
+    sum += message
+    validNumbers++
+}
+
+print("Sum of valid numbers: " + str(sum))
+print("Valid numbers: " + str(validNumbers))
+print("Invalid numbers: " + str(invalidNumbers))
+```
+
+Positive
+: **Exercise - Repeating, breaking and remembering** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-19-repeating-breaking-and-remembering.git)
+
+Positive
+: **Implementing a program one small part at a time** <br><br> In the previous exercise, we used a series of exercises to practice implementing a program one piece at a time. <br><br> When you are writing a program, whether it's an exercise or a personal project, figure out the types of parts the program needs to function and proceed by implementing them one part at a time. Make sure to test the program right after implementing each part. <br><br> Never try solving the whole problem at once, because that makes running and testing the program in the middle of the problem-solving process difficult. Start with something easy that you know you can do. When one part works, you can move on to the next. <br><br> Some of the exercises are already split into parts. However, it's often the case in programming that these parts need to be split into even smaller parts. You should almost always run the program after every new line of code. This ensures that the solution is moving in the right direction. <br><br>
