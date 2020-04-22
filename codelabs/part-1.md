@@ -319,7 +319,7 @@ Negative
 : My name is Bond, James Bond
 
 Positive
-: **Exercise - Message**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-5-hi-ada.git)
+: **Exercise - Hi Ada Lovelace!**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-5-hi-ada.git)
 
 ### Reading Strings
 
