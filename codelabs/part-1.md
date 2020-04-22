@@ -191,7 +191,7 @@ Although the previous example works, it's important to be considerate of other p
 
 #### Comments
 
-Source code can be commented to clarify it or to add notes. Single-line comments are marked with a hash `#`. Everything following them on the same line is interpreted as a comment. Python does not really have a syntax for multi line comments, so to add a multiline comment you could insert a # for each line.
+Source code can be commented to clarify it or to add notes. Single-line comments are marked with a hash `#`. Everything following them on the same line is interpreted as a comment. Python does not really* have a syntax for multi line comments, so to add a multiline comment you could insert a `#` for each line.
 
 Below is an example of a program where both are used.
 
@@ -213,6 +213,9 @@ comments()
 ```
 
 The last line of the example shows a particularly handy use-case for comments. Code that has been written does not need to be deleted to try out something else.
+
+Positive
+: \*there is the concept of a Python *Docstring*, which you will see later in the course. A docstring is a string literal that occurs as the first statement in a module, function, class, or method definition. Such a docstring becomes the `__doc__` special attribute of that object. All modules should normally have docstrings, and all functions and classes exported by a module should also have docstrings. We will revisit these concepts later.
 
 ## Reading input
 

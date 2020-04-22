@@ -144,7 +144,7 @@ new_example()
 </aside>
 <p>Although the previous example works, it&#39;s important to be considerate of other programmers (and your future self!) and to use line breaks. That way, anyone reading the program knows that each line does only a single concrete thing. Other languages (like Java) might require semicolons at the end of lines. We don&#39;t need to do this in Python.</p>
 <h3 is-upgraded>Comments</h3>
-<p>Source code can be commented to clarify it or to add notes. Single-line comments are marked with two slashes <code>#</code>. Everything following them on the same line is interpreted as a comment. Python does not really have a syntax for multi line comments, so to add a multiline comment you could insert a # for each line.</p>
+<p>Source code can be commented to clarify it or to add notes. Single-line comments are marked with a hash <code>#</code>. Everything following them on the same line is interpreted as a comment. Python does not really* have a syntax for multi line comments, so to add a multiline comment you could insert a <code>#</code> for each line.</p>
 <p>Below is an example of a program where both are used.</p>
 <pre><code>def comments():
     #Printing
@@ -162,6 +162,8 @@ new_example()
 comments()
 </code></pre>
 <p>The last line of the example shows a particularly handy use-case for comments. Code that has been written does not need to be deleted to try out something else.</p>
+<aside class="special"><p>*there is the concept of a Python <em>Docstring</em>, which you will see later in the course. A docstring is a string literal that occurs as the first statement in a module, function, class, or method definition. Such a docstring becomes the <code>__doc__</code> special attribute of that object. All modules should normally have docstrings, and all functions and classes exported by a module should also have docstrings. We will revisit these concepts later.</p>
+</aside>
 
 
       </google-codelab-step>
