@@ -14,6 +14,15 @@ If you'd help us making the correction, you can open a pull request with your pr
 
 ## Development environment
 
+*Notes to self:*
+You'll need to install npm and gulp on a first run. **Please use nvm to install node**. 
+
+```bash
+npm install
+npm install --global gulp-cli
+npm install --save-dev gulp
+```
+
 TBC
 
 ## Authors
