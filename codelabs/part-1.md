@@ -468,10 +468,10 @@ A variable exists from the moment of its declaration, and its initial value is p
 
 ```python
 number = 123
-print("The value of the variable is " + number)
+print("The value of the variable is " + str(number))
 
 number = 42
-print("The value of the variable is " + number)
+print("The value of the variable is " + str(number))
 ```
 Negative
 : The value of the variable is 123 <br> The value of the variable is 42
