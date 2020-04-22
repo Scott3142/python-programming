@@ -432,7 +432,7 @@ Positive
 
 We've already familiarized ourselves with strings to a degree while dealing with user inputs. Let's turn our attention to learning about other variable *types* commonly used in Python.
 
-A variable can be thought of as a container in which information of a given type can be stored. Examples of these different types include text (`string`), whole numbers (`int`), floating-point numbers (`double`), and whether something is true or false (`boolean`). A value is assigned to a variable using the equals sign (`=`).
+A variable can be thought of as a container in which information of a given type can be stored. Examples of these different types include text (`string`), whole numbers (`int`), floating-point numbers (`float`), and whether something is true or false (`boolean`). A value is assigned to a variable using the equals sign (`=`).
 
 ```python
 months = 12;
@@ -582,14 +582,14 @@ print("You wrote " + text)
 Negative
 : Write text and press enter <br> *User \<text\>* <br> You wrote text
 
-Other input types, such as integers, doubles, and booleans must be converted to the target variable's type with the help of the `int`, `float` or `bool` methods provided by Python.
+Other input types, such as integers, floats, and booleans must be converted to the target variable's type with the help of the `int`, `float` or `bool` methods provided by Python.
 
 ### The Type of the Variable Informs of Possible Values
 A variable's type can be specificed after reading user input data. For example, a variable containing the string "text" is declared when read with the `input` call, and an integer having the value 42 can be declared using `int(varableName)`.
 
 A variable's type determines the types of values that can be assigned to it. String types hold text, int types whole numbers, float floating-point numbers, and boolean types are either true or false.
 
-As such, the possible values of a given variable type are limited. For example, a string cannot contain an integer, nor can a double contain a boolean value.
+As such, the possible values of a given variable type are limited. For example, a string cannot contain an integer, nor can a float contain a boolean value.
 
 | Type | Example | Accepted values |
 | --------------- | ---------------| --------------- |

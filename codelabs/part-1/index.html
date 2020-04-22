@@ -323,7 +323,7 @@ function()
 <li>Know how to create and use string, integer, floating-point, and boolean variables.</li>
 </ul>
 <p>We&#39;ve already familiarized ourselves with strings to a degree while dealing with user inputs. Let&#39;s turn our attention to learning about other variable <em>types</em> commonly used in Python.</p>
-<p>A variable can be thought of as a container in which information of a given type can be stored. Examples of these different types include text (<code>string</code>), whole numbers (<code>int</code>), floating-point numbers (<code>double</code>), and whether something is true or false (<code>boolean</code>). A value is assigned to a variable using the equals sign (<code>=</code>).</p>
+<p>A variable can be thought of as a container in which information of a given type can be stored. Examples of these different types include text (<code>string</code>), whole numbers (<code>int</code>), floating-point numbers (<code>float</code>), and whether something is true or false (<code>boolean</code>). A value is assigned to a variable using the equals sign (<code>=</code>).</p>
 <pre><code>months = 12;
 </code></pre>
 <p>In the statement above, the value of 12 is assigned to a variable called months. The statement could be read as: &#34;the variable months is assigned the value 12&#34;. Note that type declaration is implicit in Python, and you don&#39;t necessarily have to declare the type in the assignment.</p>
@@ -416,11 +416,11 @@ print(&#34;You wrote &#34; + text)
 </code></pre>
 <aside class="warning"><p>Write text and press enter <br><em>User &lt;text&gt;<br></em> You wrote text</p>
 </aside>
-<p>Other input types, such as integers, doubles, and booleans must be converted to the target variable&#39;s type with the help of the <code>int</code>, <code>float</code> or <code>bool</code> methods provided by Python.</p>
+<p>Other input types, such as integers, floats, and booleans must be converted to the target variable&#39;s type with the help of the <code>int</code>, <code>float</code> or <code>bool</code> methods provided by Python.</p>
 <h2 is-upgraded>The Type of the Variable Informs of Possible Values</h2>
 <p>A variable&#39;s type can be specificed after reading user input data. For example, a variable containing the string &#34;text&#34; is declared when read with the <code>input</code> call, and an integer having the value 42 can be declared using <code>int(varableName)</code>.</p>
 <p>A variable&#39;s type determines the types of values that can be assigned to it. String types hold text, int types whole numbers, float floating-point numbers, and boolean types are either true or false.</p>
-<p>As such, the possible values of a given variable type are limited. For example, a string cannot contain an integer, nor can a double contain a boolean value.</p>
+<p>As such, the possible values of a given variable type are limited. For example, a string cannot contain an integer, nor can a float contain a boolean value.</p>
 <table>
 <tr></tr>
 <tr><td colspan="1" rowspan="1"><p>Whole number, i.e., <code>int</code></p>
