@@ -87,7 +87,7 @@ Negative
 
 In this material, text boxes like the one above demonstrate an output produced by the example code. Accordingly, the above program would produce the print output "Hello World!". You can try any of these examples in the exercise template named "sandbox", which you will find in the Github repository you cloned in the first part.
 
-You can print any text you want with the command, as long as the command `print("arbitrary text"). The command below will print the text "Hello there!".
+You can print any text you want with the command, as long as you use the command `print("arbitrary text")`. The command below will print the text "Hello there!".
 
 ```python
 print("Hello there!")
