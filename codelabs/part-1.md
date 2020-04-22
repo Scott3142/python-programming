@@ -117,7 +117,7 @@ Negative
 The examples in the material will not always show the template, but you can assume that your program file always needs one. As such, the examples might be as short as a single line, such as the example below that illustrates the print command.
 
 ```python
-print("Hello world");
+print("Hello world")
 ```
 
 In reality, the above example, when written as a full Python program, looks like so:
