@@ -1,5 +1,5 @@
 author: Scott Morgan
-summary: Welcome to learning programming! Take the plunge and geting familiar with all the required tools.
+summary: Welcome to learning programming! Take the plunge and getting familiar with all the required tools.
 id: part-1
 categories: btec-unit4
 environments: Web
@@ -61,7 +61,7 @@ example()
 ```
 
 Negative
-: **Note:** It is important to realise at this stage that _indentation_ is critical in Python which is slightly different to other languages. The code snippets below is not the same as the one above and would result in an error.
+: **Note:** It is important to realise at this stage that _indentation_ is critical in Python which is slightly different to other languages. The code snippet below is not the same as the one above and would result in an error.
 
 ```python
 def example():
@@ -87,7 +87,7 @@ Negative
 
 In this material, text boxes like the one above demonstrate an output produced by the example code. Accordingly, the above program would produce the print output "Hello World!". You can try any of these examples in the exercise template named "sandbox", which you will find in the Github repository you cloned in the first part.
 
-You can print any text you want with the command, as long as the command `print("arbitrary text"). The command below will print the text "Hello there!".
+You can print any text you want with the command, as long as you use the command `print("arbitrary text")`. The command below will print the text "Hello there!".
 
 ```python
 print("Hello there!")
@@ -117,7 +117,7 @@ Negative
 The examples in the material will not always show the template, but you can assume that your program file always needs one. As such, the examples might be as short as a single line, such as the example below that illustrates the print command.
 
 ```python
-print("Hello world");
+print("Hello world")
 ```
 
 In reality, the above example, when written as a full Python program, looks like so:
@@ -139,7 +139,7 @@ Positive
 
 You can run a program in Atom by the keyboard combination Ctrl+Shift+B, if you have the `script` package installed as in the first part.
 
-Even though running the program is straightforward, a lot is happenings behind the scenes. When a program is run, the source code is first compiled into Python bytecode. This compilation process is done by the Python compiler, which itself is a program. Following that, the program gets executed, meaning the commands are executed one-by-one by a Python interpreter that is able to read Java bytecode.
+Even though running the program is straightforward, a lot is happenings behind the scenes. When a program is run, the source code is first compiled into Python bytecode. This compilation process is done by the Python compiler, which itself is a program. Following that, the program gets executed, meaning the commands are executed one-by-one by a Python interpreter that is able to read Python bytecode.
 
 ### Printing Multiple Lines
 
@@ -147,8 +147,8 @@ Programs are constructed command-by-command, where each command is placed on a n
 
 ```python
 def new_example():
-    print("Hello world!");
-    print("... and the universe!");
+    print("Hello world!")
+    print("... and the universe!")
 
 new_example()
 ```
@@ -160,7 +160,7 @@ Negative
 
 The programming exercises will be checked by Atom's tester, who is meticulous. The guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.
 
-This preciseness with regard to the output is relevant in programming in a more general sense. Missing a single character may cause an error. Novice programmers often enter a comma instead of a dot, or write, for instance `prnt` instead of `print`, leave out apostrophes, or forget the semicolon after a command. Any one of these would cause an error and cause the program execution to fail.
+This preciseness with regard to the output is relevant in programming in a more general sense. Missing a single character may cause an error. Novice programmers often enter a comma instead of a dot, or write, for instance `prnt` instead of `print`, leave out apostrophes, or forget a bracket after a command. Any one of these would cause an error and cause the program execution to fail.
 
 Learning programming is, in fact, a path full of mistakes -- and every error message is a chance to learn. Keep a look out for any red signs in the IDE and try to read the test errors!
 
@@ -191,28 +191,31 @@ Although the previous example works, it's important to be considerate of other p
 
 #### Comments
 
-Source code can be commented to clarify it or to add notes. Single-line comments are marked with two slashes `#`. Everything following them on the same line is interpreted as a comment. Python does not really have a syntax for multi line comments, so to add a multiline comment you could insert a # for each line.
+Source code can be commented to clarify it or to add notes. Single-line comments are marked with a hash `#`. Everything following them on the same line is interpreted as a comment. Python does not really* have a syntax for multi line comments, so to add a multiline comment you could insert a `#` for each line.
 
 Below is an example of a program where both are used.
 
 ```python
 def comments():
     #Printing
-    print("Text to print");
-    print("More text to print!");
+    print("Text to print")
+    print("More text to print!")
     # Next:
     # more on printing
     # more practice
     # variables
     # ...
     #
-    print("Some other text to print");
+    print("Some other text to print")
     # print("Trying stuff out")
 
 comments()
 ```
 
 The last line of the example shows a particularly handy use-case for comments. Code that has been written does not need to be deleted to try out something else.
+
+Positive
+: \*there is the concept of a Python *Docstring*, which you will see later in the course. A docstring is a string literal that occurs as the first statement in a module, function, class, or method definition. Such a docstring becomes the `__doc__` special attribute of that object. All modules should normally have docstrings, and all functions and classes exported by a module should also have docstrings. We will revisit these concepts later.
 
 ## Reading input
 
@@ -235,7 +238,7 @@ userInput()
 
 More precisely, input is read and holds until the user writes something. When the user writes something and presses enter, the provided string is assigned to the string variable `inputString`. The program is then able to reference the variable message later on — in the example above, the variable message is referenced in the print command.
 
-When the program is run, its output can look like the example below. In this example, the user has written the text "Hello world" — user input is marked with red in the sample examples.
+When the program is run, its output can look like the example below. In this example, the user has written the text "Hello world" — user input is marked in the sample examples.
 
 Negative
 : Write a message: <br> *User inputs message \<Hello World\>* <br> Hello World
@@ -316,7 +319,7 @@ Negative
 : My name is Bond, James Bond
 
 Positive
-: **Exercise - Message**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-5-hi-ada.git)
+: **Exercise - Hi Ada Lovelace!**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-5-hi-ada.git)
 
 ### Reading Strings
 
@@ -416,7 +419,7 @@ function()
 ```
 
 Negative
-: Write the first string: <br> *User: \<one\>* <br> Write the second string: <br> *User: \<two\>* <br> Write the third string: <br> *User: three* <br><br> Last string you wrote was three, which <br> was preceded by two. <br> The first string was one. <br> All together: onetwothree
+: Write the first string: <br> *User: \<one\>* <br> Write the second string: <br> *User: \<two\>* <br> Write the third string: <br> *User: \<three\>* <br><br> Last string you wrote was three, which <br> was preceded by two. <br> The first string was one. <br> All together: onetwothree
 
 Positive
 : **Exercise - Story**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-9-story.git)
@@ -429,10 +432,10 @@ Positive
 
 We've already familiarized ourselves with strings to a degree while dealing with user inputs. Let's turn our attention to learning about other variable *types* commonly used in Python.
 
-A variable can be thought of as a container in which information of a given type can be stored. Examples of these different types include text (`string`), whole numbers (`int`), floating-point numbers (`double`), and whether something is true or false (`boolean`). A value is assigned to a variable using the equals sign (`=`).
+A variable can be thought of as a container in which information of a given type can be stored. Examples of these different types include text (`string`), whole numbers (`int`), floating-point numbers (`float`), and whether something is true or false (`boolean`). A value is assigned to a variable using the equals sign (`=`).
 
 ```python
-months = 12;
+months = 12
 ```
 
 In the statement above, the value of 12 is assigned to a variable called months. The statement could be read as: "the variable months is assigned the value 12". Note that type declaration is implicit in Python, and you don't necessarily have to declare the type in the assignment.
@@ -465,10 +468,10 @@ A variable exists from the moment of its declaration, and its initial value is p
 
 ```python
 number = 123
-print("The value of the variable is " + number)
+print("The value of the variable is " + str(number))
 
 number = 42
-print("The value of the variable is " + number)
+print("The value of the variable is " + str(number))
 ```
 Negative
 : The value of the variable is 123 <br> The value of the variable is 42
@@ -486,7 +489,7 @@ The variable is then referenced again by its name in the program -- we again wan
 If you are used to certain other programming languages such as Java, you may have seen explicit declaration of type, such as:
 
 ```java
-boolean integerAssignmentWillWork = false;
+boolean myBool = false;
 int value = 10;
 ```
 
@@ -579,21 +582,21 @@ print("You wrote " + text)
 Negative
 : Write text and press enter <br> *User \<text\>* <br> You wrote text
 
-Other input types, such as integers, doubles, and booleans must be converted to the target variable's type with the help of the `int`, `float` or `bool` methods provided by Python.
+Other input types, such as integers, floats, and booleans must be converted to the target variable's type with the help of the `int`, `float` or `bool` methods provided by Python.
 
 ### The Type of the Variable Informs of Possible Values
 A variable's type can be specificed after reading user input data. For example, a variable containing the string "text" is declared when read with the `input` call, and an integer having the value 42 can be declared using `int(varableName)`.
 
 A variable's type determines the types of values that can be assigned to it. String types hold text, int types whole numbers, float floating-point numbers, and boolean types are either true or false.
 
-As such, the possible values of a given variable type are limited. For example, a string cannot contain an integer, nor can a double contain a boolean value.
+As such, the possible values of a given variable type are limited. For example, a string cannot contain an integer, nor can a float contain a boolean value.
 
 | Type | Example | Accepted values |
 | --------------- | ---------------| --------------- |
 | Whole number, i.e., `int` | `value = int(4)` | An integer can contain whole numbers whose values lie between -2147483648 and 2147483647. |
 | Floating-point number, i.e., `float` | `value = float(4.2) | Floating-point numbers contain decimal numbers, with the greatest possible value being approximately 2^1023. When a decimal number is represented with a floating-point number, the value can be inaccurate as floating-points are incapable of representing all decimal numbers. |
 | `String` | `value = "Hi!"`| A string can contain text. Strings are enclosed in quotation marks. |
-| True or false value, i.e., `bool`  | `right = bool(True);`| A boolean contains either the value `True` or `False`. (Note the capitalisation.) |
+| True or false value, i.e., `bool`  | `right = bool(True)`| A boolean contains either the value `True` or `False`. (Note the capitalisation.) |
 
 ### Reading Integers
 
@@ -603,7 +606,7 @@ The `int` command converts a string to an integer. It takes the string containin
 valueAsString = "42"
 value = int(valueAsString)
 
-print(value);
+print(value)
 ```
 Negative
 : 42
@@ -613,7 +616,7 @@ When using a the `input` call, the reading of the value is usually inserted dire
 ```python
 def function():
     value = int(input("Write a value "))
-    print("You wrote " + str(value));
+    print("You wrote " + str(value))
 ```
 
 Negative
@@ -647,10 +650,10 @@ print(sum) # prints 6
 You can affect the order of operations by using parentheses. Operations within parentheses are performed before those outside them.
 
 ```python
-calculationWithParentheses = (1 + 1) + 3 * (2 + 5);
+calculationWithParentheses = (1 + 1) + 3 * (2 + 5)
 print(calculationWithParentheses) # prints 23
 
-calculationWithoutParentheses = 1 + 1 + 3 * 2 + 5;
+calculationWithoutParentheses = 1 + 1 + 3 * 2 + 5
 print(calculationWithoutParentheses) # prints 13
 
 ```
@@ -658,7 +661,7 @@ print(calculationWithoutParentheses) # prints 13
 The example above can also be divided into steps.
 
 ```python
-calculationWithParentheses = (1 + 1);
+calculationWithParentheses = (1 + 1)
 print(calculationWithParentheses) # prints 2
 calculationWithParentheses = calculationWithParentheses + 3 * (2 + 5)
 print(calculationWithParentheses) # prints 23
@@ -681,8 +684,8 @@ An expression is evaluated where it occurs in the program's source code. As such
 first = 2
 second = 4
 
-print(first + second); # prints 6
-print(2 + second - first - second); # prints 0
+print(first + second)  # prints 6
+print(2 + second - first - second)  # prints 0
 ```
 
 An expression does not change the value stored in a variable unless the expression's result is assigned to a variable or used as a parameter, for instance, in printing.
@@ -710,8 +713,8 @@ Negative
 : Length 42
 
 ```python
-print("here is an integer --> " + str(2));
-print(str(2) + " <-- here is an integer");
+print("here is an integer --> " + str(2))
+print(str(2) + " <-- here is an integer")
 ```
 
 Negative
@@ -722,8 +725,8 @@ If one of the operands of the operation `+` is a string, the other operand will 
 The precedence introduced earlier also apply here:
 
 ```python
-print("Four: " + str(2 + 2));
-print("But! Twenty-two: " + str(2) + str(2));
+print("Four: " + str(2 + 2))
+print("But! Twenty-two: " + str(2) + str(2))
 ```
 
 Negative
@@ -740,12 +743,12 @@ Applying this knowledge, we can create an expression consisting of some text and
 ```python
 x = 10
 
-print("The value of the variable x is: " + str(x));
+print("The value of the variable x is: " + str(x))
 
-y = 5;
-z = 6;
+y = 5
+z = 6
 
-print("y is " + str(y) + " and z is " + str(z));
+print("y is " + str(y) + " and z is " + str(z))
 ```
 
 Negative

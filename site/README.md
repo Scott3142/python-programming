@@ -173,7 +173,9 @@ We will deploy to Github pages here so make sure you have a gh-pages branch of t
 
 You will need to update the baseUrl in `gulpfile.js` as well as `app/scripts/app.js`. It's unfortunate that it has to be done here but a workaround is TBC.
 
-Fix the repo name in the last few lines of `gulpfile.js` then run `gulp deploy:prod`. There may be a cryptic error about the `.publish` directory - not found a workaround to this yet.
+Fix the repo name in the last few lines of `gulpfile.js` then run `gulp deploy:prod`. 
+
+There may be a cryptic error about the `.publish` directory. Worksround is to checkout `gh-pages`, copy .git folder outside repo, checkout `master`, move `gh-pages` git repo to .publish. Can't figure out a better way yet... 
 
 *NB:* The command `gulp deploy:build` is broken at the moment. Always use `gulp deploy:prod`.
 
