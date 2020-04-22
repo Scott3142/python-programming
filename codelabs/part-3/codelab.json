@@ -4,11 +4,11 @@
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
   "updated": "2020-04-22T15:15:05+01:00",
-  "id": "part-1",
+  "id": "part-3",
   "duration": 0,
-  "title": "Part 1",
-  "summary": "Welcome to learning programming! Take the plunge and geting familiar with all the required tools.",
-  "source": "part-1.md",
+  "title": "Part 3",
+  "summary": "The main themes in the third part of the course are adding information to list and array data structures, and handling information in string form.",
+  "source": "part-3.md",
   "theme": "",
   "status": [
     "draft"
@@ -21,5 +21,5 @@
   ],
   "feedback": "https://github.com/Scott3142/python-programming",
   "ga": "UA-49751789-4",
-  "url": "part-1"
+  "url": "part-3"
 }
