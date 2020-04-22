@@ -9,7 +9,7 @@ analytics account: UA-49751789-4
 
 # Part 3
 
-## Recurring problems and patterns to solve them
+## Discovering errors
 
 ### What you'll learn
 * Know the term perceptual blindness, and can learn to recognize essential (and non-essential) information with practice.
@@ -18,11 +18,9 @@ analytics account: UA-49751789-4
 
 We've so far been practicing the fundamentals of the language, such as variables, conditionals, loops, and methods. Let's now move on to look at some of the factors affecting the understandability of programs, and how errors are found.
 
-## A Programmer Blind to Their Own Code
+### A Programmer Blind to Their Own Code
 
-A programmer often becomes blind to their code. Let's familiarize ourselves with this effect with the aid of the short video below. Count how many times the white-shirted players pass the ball between each other. The video contains instructions in English.
-
-[[embed url=https://www.youtube.com/watch?v=Ahg6qcgoay]]
+A programmer often becomes blind to their code. Let's familiarize ourselves with this effect with the aid of the short video below. Count how many times the white-shirted players pass the ball between each other. [Watch video](https://www.youtube.com/watch?v=Ahg6qcgoay)
 
 There's something else that also happens in the video that may go unnoticed at first. This effect is known as perceptual blindness, and is explained by the fact that as we focus on a specific task, our brains tend to filter out information that is irrelevant to that task. However, we don't always know what information is, in fact, essential and what is not - an example of this being when we study. Concentrating on a specific part of a study exercise can lead to relevant information being filtered out.
 
@@ -59,7 +57,7 @@ Comments have many purposes, and one of them is explaining how the code works to
  ```python
 
 """
- Prints the numbers from ten to one.
+Prints the numbers from ten to one.
 Each number is printed on its own line.
 """
 

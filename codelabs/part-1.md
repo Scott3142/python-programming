@@ -1,5 +1,5 @@
 author: Scott Morgan
-summary: Welcome to learning programming! Take the plunge and geting familiar with all the required tools.
+summary: Welcome to learning programming! Take the plunge and getting familiar with all the required tools.
 id: part-1
 categories: btec-unit4
 environments: Web
