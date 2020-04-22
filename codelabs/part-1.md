@@ -61,7 +61,7 @@ example()
 ```
 
 Negative
-: **Note:** It is important to realise at this stage that _indentation_ is critical in Python which is slightly different to other languages. The code snippets below is not the same as the one above and would result in an error.
+: **Note:** It is important to realise at this stage that _indentation_ is critical in Python which is slightly different to other languages. The code snippet below is not the same as the one above and would result in an error.
 
 ```python
 def example():
