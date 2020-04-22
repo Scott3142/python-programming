@@ -419,7 +419,7 @@ function()
 ```
 
 Negative
-: Write the first string: <br> *User: \<one\>* <br> Write the second string: <br> *User: \<two\>* <br> Write the third string: <br> *User: three* <br><br> Last string you wrote was three, which <br> was preceded by two. <br> The first string was one. <br> All together: onetwothree
+: Write the first string: <br> *User: \<one\>* <br> Write the second string: <br> *User: \<two\>* <br> Write the third string: <br> *User: \<three\>* <br><br> Last string you wrote was three, which <br> was preceded by two. <br> The first string was one. <br> All together: onetwothree
 
 Positive
 : **Exercise - Story**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-9-story.git)
