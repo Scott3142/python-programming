@@ -489,7 +489,7 @@ The variable is then referenced again by its name in the program -- we again wan
 If you are used to certain other programming languages such as Java, you may have seen explicit declaration of type, such as:
 
 ```java
-boolean integerAssignmentWillWork = false;
+boolean myBool = false;
 int value = 10;
 ```
 
