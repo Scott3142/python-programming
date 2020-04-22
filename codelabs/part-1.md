@@ -238,7 +238,7 @@ userInput()
 
 More precisely, input is read and holds until the user writes something. When the user writes something and presses enter, the provided string is assigned to the string variable `inputString`. The program is then able to reference the variable message later on — in the example above, the variable message is referenced in the print command.
 
-When the program is run, its output can look like the example below. In this example, the user has written the text "Hello world" — user input is marked with red in the sample examples.
+When the program is run, its output can look like the example below. In this example, the user has written the text "Hello world" — user input is marked in the sample examples.
 
 Negative
 : Write a message: <br> *User inputs message \<Hello World\>* <br> Hello World
