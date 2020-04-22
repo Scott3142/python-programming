@@ -1,0 +1,163 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Part 3</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid="UA-49751789-4"
+                  id="part-3"
+                  title="Part 3"
+                  environment="web"
+                  feedback-link="https://github.com/Scott3142/python-programming">
+    
+      <google-codelab-step label="Recurring problems and patterns to solve them" duration="0">
+        <h2 class="checklist" is-upgraded>What you&#39;ll learn </h2>
+<ul class="checklist">
+<li>Know the term perceptual blindness, and can learn to recognize essential (and non-essential) information with practice. </li>
+<li>Know ways to comment code, and understand the importance of variable names on readability of your code. </li>
+<li>Know the concept print-debugging, and know how to search for errors in the source code by printing.  We&#39;ve so far been practicing the fundamentals of the language, such as variables, conditionals, loops, and methods. Let&#39;s now move on to look at some of the factors affecting the understandability of programs, and how errors are found.  A Programmer Blind to Their Own Code  A programmer often becomes blind to their code. Let&#39;s familiarize ourselves with this effect with the aid of the short video below. Count how many times the white-shirted players pass the ball between each other. The video contains instructions in English.  [[embed url=https://www.youtube.com/watch?v=Ahg6qcgoay]]  There&#39;s something else that also happens in the video that may go unnoticed at first. This effect is known as perceptual blindness, and is explained by the fact that as we focus on a specific task, our brains tend to filter out information that is irrelevant to that task. However, we don&#39;t always know what information is, in fact, essential and what is not - an example of this being when we study. Concentrating on a specific part of a study exercise can lead to relevant information being filtered out.  Fortunately, applying oneself to a given task lessens the occurrence of perceptual blindness. In other words, practice develops one&#39;s ability to distinguish between relevant and irrelevant information.  One way in which perceptual blindness manifests itself in programming practice is when concentrating on a specific part of a program draws attention away from seemingly correct, yet erroneous parts. For instance, while inspecting the correctness of a program&#39;s output, a programmer may fixate on the print statements, and mistakenly neglect some aspects of the logic.  Likewise, a programmer may focus on the most complicated aspect of a program featuring a loop, when in fact the error lies somewhere else completely. An example of this is the program below, which is used to calculate the average of user-inputted values. It contains an error, and when searching for it, the loop is typically the first target of focus.  &#34;`python values = 0 sum = 0  while (True): value = int(input(&#34;Provide a value, a negative value ends the program&#34;)) if (value &lt; 0): <pre><code>break
+</code></pre>
+ values = values + 1 sum = sum + value  if (sum == 0): print(&#34;The average of the values could not be calculated.&#34;) else: print(&#34;Average of values: &#34; + str(1.0 * sum / values)) &#34;`  Perceptual blindness is something that one cannot be eliminated completely. However, there are ways by which a programmer can lessen its effect - the first one being taking breaks, which requires that work is begun early. Code comments, proper naming of things, and &#34;debugging&#34; prints are additional examples of things that are also helpful.  <h2 is-upgraded>Commenting the Source Code </h2>
+ Comments have many purposes, and one of them is explaining how the code works to oneself when searching for bugs. The execution of a relatively simple program is described below through the use of comments.  &#34;`python  &#34;&#34;&#34; Prints the numbers from ten to one. Each number is printed on its own line. &#34;&#34;&#34;  We create an integer variable named value, assigning the value 10 to it. int value = 10  The loop execution continues until the value of the variable named value is less than or equal to zero. The excution doesn&#39;t stop <em>immediately</em> when the value zero is assigned to the variable, but only when the condition of the loop is evaluated the following time. This always happens after the loop has executed while (value &gt; 0): we print out the value in the variable and a new line print(value) we decrement the value by one value = value - 1 } <br><br><code>Comments have no impact on the execution of the program, i.e., the program works in the same way with the comments as it does without them.<br><br>The comment style displayed above that is intended for learning purposes is, however, too elaborate for real development, where the goal is for the source code to be **self documenting**. This means that the functionality of the program should be evident from the way classes, methods, and variables are named.<br><br>The example can be &#34;commented out&#34; by encapsulating the code into an appropriately named method. Below are two examples of methods that do this - one of the methods is more general in its purpose compared to the other. The more general method assumes, however, that the user knows which of the two parameters is assigned the higher value and which the lower.</code><br><br>python def printValuesFromTenToOne(): value = 10 while (value &gt; 0): <pre><code>print(value)
+value = value - 1
+</code></pre>
+python def printValuesFromLargestToSmallest(start, end): while (start &gt;= end): <pre><code>print(start)
+start = start - 1
+</code></pre>
+&#34;`  <h2 is-upgraded>Searching for Errors with Print Debugging </h2>
+ One required skill in programming is the ability to test and debug when searching for errors. The simplest way to search for errors is to use so-called print debugging, which in practice involves adding messages to certain lines of code. These messages are used to follow the flow of the program&#39;s execution, and can also contain values of variables that live in the program.  Let&#39;s inspect the program already familiar to us from the previous question that was used to calculate the average of non-negative values.  &#34;`python values = 0 sum = 0  while (True): value = int(input(&#34;Provide a value, a negative value ends the program&#34;)) if (value &lt; 0): <pre><code>break
+</code></pre>
+ values = values + 1 sum = sum + value  if (sum == 0): print(&#34;The average of the values could not be calculated.&#34;) else: print(&#34;Average of values: &#34; + str(1.0 * sum / values)) } <br><br><code>Had the program contained an error, print debugging could have been used to unravel its functionality by adding print statements in the appropriate places. The example below contains one possible example of a program containing print-debug statements.</code><br><br>python values = 0 sum = 0  while (True): print(&#34;– values: &#34; + str(values) + &#34;, sum: &#34; + str(sum))  value = int(input(&#34;Provide a value, a negative value ends the program&#34;)) if (value &lt; 0): <pre><code>print(&#34;-- value is negative, exiting loop&#34;)
+break
+</code></pre>
+ values = values + 1 sum = sum + value  print(&#34;– loop exited&#34;) print(&#34;– values: &#34; + str(values) + &#34;, sum: &#34; + str(sum))  if (sum == 0): print(&#34;The average of the values could not be calculated.&#34;) else: print(&#34;Average of values: &#34; + str(1.0 * sum / values)) &#34;`  When a program is executed multiple times with appropriate inputs the hidden error is often found. Coming up with relevant inputs is a skill in its own right. It&#39;s essential to test the so-called corner cases, i.e., circumstances where the program execution could be exceptional. An example scenario would be one where the user does not enter a single acceptable value or enters zeros or very large values.  Lists <h2 class="checklist" is-upgraded>What you&#39;ll learn </h2>
+</li>
+<li>You are familiar with the list structure and know how to use a list in a program. </li>
+<li>You are familiar with the concept of an index, you can add values to a list, and you know how to retrieve information from a list&#39;s indices. </li>
+<li>You know how to iterate over a list with multiple different loop types. </li>
+<li>You know how to check if a value exists in a list, and also know how to remove values from a list. </li>
+<li>You are aware of the list being a reference-type variable, and become familiar with using lists as method parameters.  In programming, we often encounter situations where we want to handle many values. The only method we&#39;ve used so far has been to define a separate variable for storing each value. This is impractical.  <code>python<br>word1 = &#34;Hello&#34;<br>word2 = &#34;world.&#34;<br>word3 = &#34;How&#34;<br>word4 = &#34;are&#34;<br>word5 = &#34;you&#34;<br>word6 = &#34;today?&#34;</code><br>  The solution presented above is useless in effect – consider a situation in which there are thousands of words to store.  Programming languages offer tools to assist in storing a large quantity of values. We will next take a peek at perhaps the single most used tool in Python, the [list]https://docs.python.org/3.8/tutorial/datastructures.html?highlight=lists), which is used for storing many values.  The list tool offers various methods, including ones for adding values to the list, removing values from it, and also for the retrieval of a value from a specific place in the list. The concrete implementations – i.e., how the list is actually programmed – has been abstracted behind the methods, so that a programmer making use of a list doesn&#39;t need to concern themselves with its inner workings.  <h2 is-upgraded>Using and Creating Lists </h2>
+ Creating a new list is done with the command <code>list_name = []</code>, where the values to be stored in the list are included in the square brackets. We create a list for storing strings in the example below.  &#34;`python def main(): create a list my_list = []  the list isn&#39;t used yet &#34;<br><br><code>The type of the my_list variable is</code>list`. The list can hold multiple variable types at each of its indices, in contrast to other programming languages such as Java where all the variables stored in a given list are of the same type.  <h2 is-upgraded>Adding to a List and Retrieving a Value from a Specific Place </h2>
+ The next example demonstrates the addition of a few strings into a list containing strings. Addition is done with the list method <code>add</code>, which takes the value to be added as a parameter. We then print the value at position zero. To retrieve a value from a certain position, you using <code>my_list[2]</code> syntax, where the square brackets are given the place of retrieval as a parameter.  To call a list method you first write the name of the variable describing the list, followed by a dot and the name of the method.  &#34;`python def word_list_example(): create the word list wordList = []  add two values to the word list wordList.append(&#34;First&#34;) wordList.append(&#34;Second&#34;)  retrieve the value from position 0 of the word list, and print it print(wordList[0])  word_list_example() &#34;`  Negative </li>
+</ul>
+<p>First  As can be seen, this method retrieves the first value from the list when it is given the parameter <code>0</code>. This is because <strong>list positions are counted starting from zero</strong>. The first value is found by <code>wordList[0]</code>, the second by <code>wordList[0]</code>, and so on.  &#34;`python def word_list_example(): </p>
+<p>create the word list </p>
+<p>wordList = []  </p>
+<p>add two values to the word list </p>
+<p>wordList.append(&#34;First&#34;) wordList.append(&#34;Second&#34;)  </p>
+<p>retrieve the value from position 1 of the word list, and print it </p>
+<p>print(wordList[1])  word_list_example() &#34;`  Negative </p>
+<p>Second  You can also use negative indexing, which means beginning from the end. For example, -1 refers to the last item, -2 refers to the second last item and so on, as seen below:  &#34;`python def word_list_example(): </p>
+<p>create the word list </p>
+<p>wordList = []  </p>
+<p>add two values to the word list </p>
+<p>wordList.append(&#34;First&#34;) wordList.append(&#34;Second&#34;) wordList.append(&#34;Thirdd&#34;)  </p>
+<p>retrieve the value from the last position of the word list, and print it </p>
+<p>print(wordList[-1])  word_list_example() &#34;`  Negative </p>
+<p>Third  Positive </p>
+<p><strong>Exercise - Third Element<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-3-1-third-element.git" target="_blank">Source files on Github</a>  Positive </p>
+<p><strong>Exercise - Second Plus Third<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-3-2-second-plus-third.git" target="_blank">Source files on Github</a></p>
+<h2 is-upgraded>Retrieving Information from a &#34;Non-Existent&#34; Place </h2>
+<p> If you try to retrieve information from a place that does not exist on the list, the program will print an <code>IndexError</code>. In the example below, two values are added to a list, after which there is an attempt to print the value at place two on the list.  &#34;`python def word_list_example(): </p>
+<p>create the word list </p>
+<p>wordList = []  </p>
+<p>add two values to the word list </p>
+<p>wordList.append(&#34;First&#34;) wordList.append(&#34;Second&#34;)  </p>
+<p>retrieve the value from position 1 of the word list, and print it </p>
+<p>print(wordList[2])  word_list_example() &#34;`  Since the numbering (i.e., <strong>indexing</strong>) of the list elements starts with zero, the program isn&#39;t able to find anything at place two and its execution ends with an error. Below is a description of the error message caused by the program.  <strong>Example output:</strong><img alt="alt text" title="Index error example" src="img/d77bd1f8af5dd236.png">  Positive </p>
+<p><strong>A Place in a List Is Called an Index<br><br></strong> Numbering places, i.e., indexing, always begins with zero. The list&#39;s first value is located at index 0, the second value at index 1, the third value at index 2, and so on. In programs, an index is denoted with a variable called <code>i</code>.  </p>
+<h2 is-upgraded>Iterating Over a List </h2>
+<p> We&#39;ll next be examining methods that can be used to go through the values on a list. Let&#39;s start with a simple example where we print a list containing four values.  <code>python<br>teachers = []<br><br>teachers.append(&#34;Simon&#34;)<br>teachers.append(&#34;Samuel&#34;)<br>teachers.append(&#34;Ann&#34;)<br>teachers.append(&#34;Anna&#34;)<br><br>print(teachers[0])<br>print(teachers[1])<br>print(teachers[2])<br>print(teachers[3])</code><br>  Negative </p>
+<p>Simon <br> Samuel <br> Ann <br> Anna  The example is obviously clumsy. What if there were more values on the list? Or fewer? What if we didn&#39;t know the number of values on the list?  The number of values on a list is provided by the list&#39;s <strong>len</strong> method which returns the number of elements the list contains. The number is an integer, and it can be used as a part of an expression or stored in a variable for later use.  <code>python<br>list = []<br>print(&#34;Number of values on the list: &#34; + str(len(list)))<br><br>list.append(&#34;First&#34;)<br>print(&#34;Number of values on the list: &#34; +str(len(list)))<br><br>values = len(list)<br><br>list.append(&#34;Second&#34;)<br>print(&#34;Number of values on the list: &#34; + str(values))</code><br>  Negative </p>
+<p>Number of values on the list: 0 <br> Number of values on the list: 1 <br> Number of values on the list: 1  Positive </p>
+<p><strong>Exercise - List size<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-3-3-list-size.git" target="_blank">Source files on Github</a></p>
+<h2 is-upgraded>Iterating Over a List Continued </h2>
+<p> Let&#39;s make a new version of the program that prints each index manually. In this intermediate version we use the <code>index</code> variable to keep track of the place that is to be outputted.  &#34;`python teachers = []  teachers.append(&#34;Simon&#34;) teachers.append(&#34;Samuel&#34;) teachers.append(&#34;Ann&#34;) teachers.append(&#34;Anna&#34;)  index = 0  if index &lt; len(teachers): print(teachers[index])  # index = 0 index = index + 1  # index = 1  if index &lt; len(teachers): print(teachers[index])  # index = 1 index = index + 1  # index = 2  if index &lt; len(teachers): print(teachers[index])  # index = 2 index = index + 1  # index = 3  if index &lt; len(teachers): print(teachers[index])  # index = 3 index = index + 1  # index = 4  if index &lt; len(teachers): </p>
+<p>this will not be executed since index = 4 and len(teachers) = 4 </p>
+<p>print(teachers[index]) index = index + 1 <br><br><code>We can see that there&#39;s repetition in the program above.<br><br>We can convert the `if` statements into a `while` loop that is repeated until the condition `index &lt; len(teachers)` no longer holds (i.e., the value of the variable `index` grows too great).</code><br><br>python teachers = []  teachers.append(&#34;Simon&#34;) teachers.append(&#34;Samuel&#34;) teachers.append(&#34;Ann&#34;) teachers.append(&#34;Anna&#34;)  index = 0 </p>
+<p>Repeat for as long as the value of the variable <code>index</code></p>
+<p>is smaller than the size of the teachers list </p>
+<p>while index &lt; len(teachers): print(teachers[index]) index = index + 1 <br><br><code>Now the printing works regardless of the number of elements.<br><br>The for-loop we inspected earlier used to iterate over a known number of elements is extremely handy here. We can convert the loop above to a `for`-loop, after which the program looks like this.</code><br><br>python teachers = []  teachers.append(&#34;Simon&#34;) teachers.append(&#34;Samuel&#34;) teachers.append(&#34;Ann&#34;) teachers.append(&#34;Anna&#34;)  for index in range(len(teachers)):  print(teachers[index]) &#34;`  Negative </p>
+<p>Simon <br> Samuel <br> Ann <br> Anna  Python actually has a &#34;better&#34; way of accessing list items in a for loop which is different to certain other languages. You can use the syntax <code>for item in list</code> to access each item like so:  <code>python<br>teachers = []<br><br>teachers.append(&#34;Simon&#34;)<br>teachers.append(&#34;Samuel&#34;)<br>teachers.append(&#34;Ann&#34;)<br>teachers.append(&#34;Anna&#34;)<br><br>for teacher in teachers:<br> print(teachers)</code><br>  There are certain reasons why you&#39;d use <code>range(len(list))</code> but most of the time we will use the latter of these two options.  Let&#39;s consider using a list to store integers. The functionality is largely the same as in the previous example.  <code>python<br>numbers = []<br><br>numbers.append(1)<br>numbers.append(2)<br>numbers.append(3)<br>numbers.append(4)<br><br>for number in numbers:<br>print(numbers)</code><br>  Negative </p>
+<p>1 <br> 2 <br> 3 <br> 4  Printing the numbers in the list in reverse order would also be straightforward.  <code>python<br>numbers = []<br><br>numbers.append(1)<br>numbers.append(2)<br>numbers.append(3)<br>numbers.append(4)<br><br>index = len(numbers) - 1<br>while index &gt;= 0:<br>number = numbers[index]<br>print(number)<br>index = index - 1</code><br>  Negative </p>
+<p>4 <br> 3 <br> 2 <br> 1  Try and recreate the previous example with the for loop!  Positive </p>
+<p><strong>Notice about the following exercises<br><br></strong> The next exercises are meant for learning to use lists and indices. Even if you could complete the exercises without a list, concentrate on training to use it. The functionality in the exercises is to be implemented after reading the input numbers.  Positive </p>
+<p><strong>Exercise - Last in list<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-3-4-last-in-list.git" target="_blank">Source files on Github</a>  Positive </p>
+<p><strong>Exercise - First and last<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-3-5-first-and-last.git" target="_blank">Source files on Github</a>  Positive </p>
+<p><strong>Exercise - Reember these numbers<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-3-6-remember-these-numbers.git" target="_blank">Source files on Github</a>  Positive </p>
+<p><strong>Exercise - Only these numbers<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-3-7-only-these-numbers.git" target="_blank">Source files on Github</a>  Positive </p>
+<p><strong>Exercise - Greatest in list<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-3-8-greatest-in-list.git" target="_blank">Source files on Github</a>  Positive </p>
+<p><strong>Exercise - Index of<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-3-9-index-of.git" target="_blank">Source files on Github</a>  Positive </p>
+<p><strong>Exercise - Index of smallest<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-3-10-index-of-smallest.git" target="_blank">Source files on Github</a>  Positive </p>
+<p><strong>Exercise - Sum of a list<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-3-11-sum-of-a-list.git" target="_blank">Source files on Github</a>  Positive </p>
+<p><strong>Exercise - Average of a list<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-3-12-average-of-a-list.git" target="_blank">Source files on Github</a></p>
+<h2 is-upgraded>Removing from a List and Checking the Existence of a Value </h2>
+<p> In Python, list&#39;s methods <code>clear()</code>, <code>pop()</code>, and <code>remove()</code> are used to remove items (elements) from a list.  </p>
+<ul>
+<li>Remove all items: clear() </li>
+<li>Remove an item by index and get its value: pop() </li>
+<li>Remove an item by value  <code>python<br>my_list = list(range(10))<br>print(my_list)<br><br>print(my_list.pop(0))<br><br>print(my_list.pop(3))</code><br>  Negative </li>
+</ul>
+<p>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] <br> [1, 2, 3, 4, 5, 6, 7, 8, 9] <br> [1, 2, 3, 5, 6, 7, 8, 9]  Note that the list is edited <em>in place</em>, meaning that the value of <code>my_list</code> is overwritten by <code>pop()</code>.  You can remove the first item from the list where its value is equal to the specified value with <code>remove()</code>.  <code>python<br>my_list = [&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;, &#39;Bob&#39;, &#39;Dave&#39;]<br>print(my_list)<br><br>print(my_list.remove(&#39;Alice&#39;))<br><br>print(my_list.pop(&#39;Bob&#39;))</code><br>  Negative </p>
+<p>[‘Alice&#39;, ‘Bob&#39;, ‘Charlie&#39;, ‘Bob&#39;, ‘Dave&#39;] <br> [‘Bob&#39;, ‘Charlie&#39;, ‘Bob&#39;, ‘Dave&#39;] <br> [‘Charlie&#39;, ‘Bob&#39;, ‘Dave&#39;]  Note that if the list contains more than one matching the specified value, only the first one is deleted.  The list method <strong>in</strong> can be used to check the existence of a value in the list. The method receives the value to be searched as its parameter, and it returns a boolean type value (<code>True</code> or <code>False</code>) that indicates whether or not that value is stored in the list.  &#34;`python list = [&#34;First&#34;,&#34;Second&#34;,&#34;Third&#34;]  print(&#34;Is the first found? &#34; + str(&#34;First&#34; in list))  found = &#34;Second&#34; in list if found:  print(&#34;Second was found&#34;)  </p>
+<p>or more simply </p>
+<p>if &#34;Second&#34; in list:  print(&#34;Second can still be found&#34;) &#34;`  Negative </p>
+<p>Is the first found? true <br> Second was found <br> Second can still be found  Positive </p>
+<p><strong>Exercise - On the list<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-3-13-on-the-list.git" target="_blank">Source files on Github</a></p>
+<h2 is-upgraded>List as a Method Parameter </h2>
+<p> Like other variables, a list can be used as a parameter to a method too. When the method is defined to take a list as a parameter, the type of the parameter is defined as the type of the list and the type of the values contained in that list. Below, the method <code>print</code> prints the values in the list one by one.  &#34;`python def printout(list): for value in list: </p>
+<pre><code> print(value)
+</code></pre>
+<p> my_list = [&#34;One&#34;,&#34;Two&#34;] printout(my_list) &#34;` Negative </p>
+<p>One <br> Two  The chosen parameter in the method definition is not dependent on the list that is passed as parameter in the method call. In the program that calls <code>printout</code>, the name of the list variable is <code>list</code>, but inside the method <code>printout</code> the variable is called <code>my_list</code> – the name of the variable that stores the list could also be <code>printables</code>, for instance.  It&#39;s also possible to define multiple variables for a method. In the example the method receives two parameters: a list of numbers and a threshold value. It then prints all the numbers in the list that are smaller than the second parameter.  &#34;`python def printSmallerThan(numbers, threshold): for number in numbers: </p>
+<pre><code>if (number &lt; threshold):
+     print(number)
+</code></pre>
+<p> list = [1,2,3,2,1] printSmallerThan(list, 3) &#34;`  Negative </p>
+<p>1 <br> 2 <br> 2 <br> 1  Positive </p>
+<p><strong>Exercise - Print in range<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-3-14-print-in-range.git" target="_blank">Source files on Github</a>  As before, a method can also return a value. The methods that return values have the <code>return</code> command. The method below returns the size of the list.  <code>python<br>def size(list):<br>return len(list)</code><br>  You can also define own variables for methods. The method below calculates the average of the numbers in the list. If the list is empty, it returns the number -1.  &#34;`python def average(numbers): if (len(numbers) == 0): </p>
+<pre><code>return -1
+</code></pre>
+<p> sum = 0 for number in numbers: </p>
+<pre><code>sum = sum + number
+</code></pre>
+<p> return sum / len(numbers) } &#34;`  Positive </p>
+<p><strong>Exercise - Sum<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-3-15-sum.git" target="_blank">Source files on Github</a></p>
+<h2 is-upgraded>On Copying the List to a Method Parameter </h2>
+<p> Earlier we have used integers, floating point numbers, etc. as method parameters. When variables such as <code>int</code> are used as method parameters, the value of the variable is copied for the method&#39;s use. The same occurs in the case that the parameter is a list.  Lists, among practically all the variables that can store large amounts of information, are <em>reference-type variables</em>. This means that the value of the variable is a reference that points to the location that contains the information.  When a list (or any reference-type variable) is copied for a method&#39;s use, the method receives the value of the list variable, i.e., a <em>reference</em>. In such a case the <strong>method receives a reference to the real value of a reference-type variable</strong>, and the method is able to modify the value of the original reference type variable, such as a list. In practice, the list that the method receives as a parameter is the same list that is used in the program that calls the method.  Let&#39;s look at this briefly with the following method.  &#34;`python def removeFirst(numbers): if len(numbers) == 0: </p>
+<pre><code>return
+</code></pre>
+<p> numbers.pop(0)  numbers = [3,2,6,-1] print(numbers)  removeFirst(numbers) print(numbers)  removeFirst(numbers) removeFirst(numbers) removeFirst(numbers) print(numbers) &#34;`   Negative </p>
+<p>[3, 2, 6, -1] <br> [2, 6, -1] <br> []  Positive </p>
+<p><strong>Exercise - Remove last<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-3-16-remove-last.git" target="_blank">Source files on Github</a></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

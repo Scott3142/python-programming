@@ -187,7 +187,7 @@ print("Hello "); print("world"); print("!\n");
 Negative
 : Hello <br> world <br> !
 
-Although the previous example works, it's important to be considerate of other programmers (and your future self!) and to use line breaks. That way, anyone reading the program knows that each line does only a single concrete thing. OTher languages (like Java) might require semicolons at the end of lines. We don't need to do this in Python.
+Although the previous example works, it's important to be considerate of other programmers (and your future self!) and to use line breaks. That way, anyone reading the program knows that each line does only a single concrete thing. Other languages (like Java) might require semicolons at the end of lines. We don't need to do this in Python.
 
 #### Comments
 
@@ -1257,7 +1257,7 @@ Positive
 : **Exercise - Leap year**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-31-leap-year.git)
 
 Positive
-: **Exercise - Inheritance tax**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-32-inheritance-tax.git
+: **Exercise - Inheritance tax**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-32-inheritance-tax.git)
 
 ## Programming in our society
 

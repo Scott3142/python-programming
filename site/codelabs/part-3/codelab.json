@@ -3,12 +3,12 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2020-04-22T13:14:28+01:00",
-  "id": "part-2",
+  "updated": "2020-04-22T14:50:22+01:00",
+  "id": "part-3",
   "duration": 0,
-  "title": "Part 2",
-  "summary": "The second part of the material focusses on repetition in programs and how to divide functionality into distinct units.",
-  "source": "part-2.md",
+  "title": "Part 3",
+  "summary": "The main themes in the third part of the course are adding information to list and array data structures, and handling information in string form.",
+  "source": "part-3.md",
   "theme": "",
   "status": [
     "draft"
@@ -21,5 +21,5 @@
   ],
   "feedback": "https://github.com/Scott3142/python-programming",
   "ga": "UA-49751789-4",
-  "url": "part-2"
+  "url": "part-3"
 }
