@@ -160,7 +160,7 @@ Negative
 
 The programming exercises will be checked by Atom's tester, who is meticulous. The guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.
 
-This preciseness with regard to the output is relevant in programming in a more general sense. Missing a single character may cause an error. Novice programmers often enter a comma instead of a dot, or write, for instance `prnt` instead of `print`, leave out apostrophes, or forget the semicolon after a command. Any one of these would cause an error and cause the program execution to fail.
+This preciseness with regard to the output is relevant in programming in a more general sense. Missing a single character may cause an error. Novice programmers often enter a comma instead of a dot, or write, for instance `prnt` instead of `print`, leave out apostrophes, or forget a bracket after a command. Any one of these would cause an error and cause the program execution to fail.
 
 Learning programming is, in fact, a path full of mistakes -- and every error message is a chance to learn. Keep a look out for any red signs in the IDE and try to read the test errors!
 
@@ -191,7 +191,7 @@ Although the previous example works, it's important to be considerate of other p
 
 #### Comments
 
-Source code can be commented to clarify it or to add notes. Single-line comments are marked with two slashes `#`. Everything following them on the same line is interpreted as a comment. Python does not really have a syntax for multi line comments, so to add a multiline comment you could insert a # for each line.
+Source code can be commented to clarify it or to add notes. Single-line comments are marked with a hash `#`. Everything following them on the same line is interpreted as a comment. Python does not really have a syntax for multi line comments, so to add a multiline comment you could insert a # for each line.
 
 Below is an example of a program where both are used.
 
