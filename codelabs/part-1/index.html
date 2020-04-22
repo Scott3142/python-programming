@@ -118,8 +118,8 @@ hello_world()
 <h2 is-upgraded>Printing Multiple Lines</h2>
 <p>Programs are constructed command-by-command, where each command is placed on a new line. In the example below, the command <code>print()</code> appears twice, which means that two print commands are being executed in the program.</p>
 <pre><code>def new_example():
-    print(&#34;Hello world!&#34;);
-    print(&#34;... and the universe!&#34;);
+    print(&#34;Hello world!&#34;)
+    print(&#34;... and the universe!&#34;)
 
 new_example()
 </code></pre>
@@ -148,15 +148,15 @@ new_example()
 <p>Below is an example of a program where both are used.</p>
 <pre><code>def comments():
     #Printing
-    print(&#34;Text to print&#34;);
-    print(&#34;More text to print!&#34;);
+    print(&#34;Text to print&#34;)
+    print(&#34;More text to print!&#34;)
     # Next:
     # more on printing
     # more practice
     # variables
     # ...
     #
-    print(&#34;Some other text to print&#34;);
+    print(&#34;Some other text to print&#34;)
     # print(&#34;Trying stuff out&#34;)
 
 comments()
@@ -324,7 +324,7 @@ function()
 </ul>
 <p>We&#39;ve already familiarized ourselves with strings to a degree while dealing with user inputs. Let&#39;s turn our attention to learning about other variable <em>types</em> commonly used in Python.</p>
 <p>A variable can be thought of as a container in which information of a given type can be stored. Examples of these different types include text (<code>string</code>), whole numbers (<code>int</code>), floating-point numbers (<code>float</code>), and whether something is true or false (<code>boolean</code>). A value is assigned to a variable using the equals sign (<code>=</code>).</p>
-<pre><code>months = 12;
+<pre><code>months = 12
 </code></pre>
 <p>In the statement above, the value of 12 is assigned to a variable called months. The statement could be read as: &#34;the variable months is assigned the value 12&#34;. Note that type declaration is implicit in Python, and you don&#39;t necessarily have to declare the type in the assignment.</p>
 <p>A variable&#39;s value can be joined to a string using the + sign, as seen in the following example.</p>
@@ -436,7 +436,7 @@ print(&#34;You wrote &#34; + text)
 </td><td colspan="1" rowspan="1"><p>A string can contain text. Strings are enclosed in quotation marks.</p>
 </td></tr>
 <tr><td colspan="1" rowspan="1"><p>True or false value, i.e., <code>bool</code></p>
-</td><td colspan="1" rowspan="1"><p><code>right = bool(True);</code></p>
+</td><td colspan="1" rowspan="1"><p><code>right = bool(True)</code></p>
 </td><td colspan="1" rowspan="1"><p>A boolean contains either the value <code>True</code> or <code>False</code>. (Note the capitalisation.)</p>
 </td></tr>
 </table>
@@ -445,14 +445,14 @@ print(&#34;You wrote &#34; + text)
 <pre><code>valueAsString = &#34;42&#34;
 value = int(valueAsString)
 
-print(value);
+print(value)
 </code></pre>
 <aside class="warning"><p>42</p>
 </aside>
 <p>When using a the <code>input</code> call, the reading of the value is usually inserted directly into the type conversion. This happens like so:</p>
 <pre><code>def function():
     value = int(input(&#34;Write a value &#34;))
-    print(&#34;You wrote &#34; + str(value));
+    print(&#34;You wrote &#34; + str(value))
 </code></pre>
 <aside class="warning"><p>Write a value <br><em>User &lt;42&gt;<br></em> You wrote 42</p>
 </aside>
@@ -480,15 +480,15 @@ print(sum) # prints 6
 </code></pre>
 <h2 is-upgraded>Precedence and Parentheses</h2>
 <p>You can affect the order of operations by using parentheses. Operations within parentheses are performed before those outside them.</p>
-<pre><code>calculationWithParentheses = (1 + 1) + 3 * (2 + 5);
+<pre><code>calculationWithParentheses = (1 + 1) + 3 * (2 + 5)
 print(calculationWithParentheses) # prints 23
 
-calculationWithoutParentheses = 1 + 1 + 3 * 2 + 5;
+calculationWithoutParentheses = 1 + 1 + 3 * 2 + 5
 print(calculationWithoutParentheses) # prints 13
 
 </code></pre>
 <p>The example above can also be divided into steps.</p>
-<pre><code>calculationWithParentheses = (1 + 1);
+<pre><code>calculationWithParentheses = (1 + 1)
 print(calculationWithParentheses) # prints 2
 calculationWithParentheses = calculationWithParentheses + 3 * (2 + 5)
 print(calculationWithParentheses) # prints 23
@@ -506,8 +506,8 @@ print(calculationWithoutParentheses) # prints 13
 <pre><code>first = 2
 second = 4
 
-print(first + second); # prints 6
-print(2 + second - first - second); # prints 0
+print(first + second)  # prints 6
+print(2 + second - first - second)  # prints 0
 </code></pre>
 <p>An expression does not change the value stored in a variable unless the expression&#39;s result is assigned to a variable or used as a parameter, for instance, in printing.</p>
 <pre><code>first = 2
@@ -525,15 +525,15 @@ print(&#34;Length &#34; + str(length))
 </code></pre>
 <aside class="warning"><p>Length 42</p>
 </aside>
-<pre><code>print(&#34;here is an integer --&gt; &#34; + str(2));
-print(str(2) + &#34; &lt;-- here is an integer&#34;);
+<pre><code>print(&#34;here is an integer --&gt; &#34; + str(2))
+print(str(2) + &#34; &lt;-- here is an integer&#34;)
 </code></pre>
 <aside class="warning"><p>here is an integer –&gt; 2 <br> 2 &lt;– here is an integer</p>
 </aside>
 <p>If one of the operands of the operation <code>+</code> is a string, the other operand will be changed into a string too during program execution. In the example below, the integer <code>2</code> is turned into the string &#34;2&#34;, and a string has been appended to it.</p>
 <p>The precedence introduced earlier also apply here:</p>
-<pre><code>print(&#34;Four: &#34; + str(2 + 2));
-print(&#34;But! Twenty-two: &#34; + str(2) + str(2));
+<pre><code>print(&#34;Four: &#34; + str(2 + 2))
+print(&#34;But! Twenty-two: &#34; + str(2) + str(2))
 </code></pre>
 <aside class="warning"><p>Four: 4 <br> But! Twenty-two: 22</p>
 </aside>
@@ -544,12 +544,12 @@ print(&#34;But! Twenty-two: &#34; + str(2) + str(2));
 <p>Applying this knowledge, we can create an expression consisting of some text and a variable, which is evaluated in connection with the printing:</p>
 <pre><code>x = 10
 
-print(&#34;The value of the variable x is: &#34; + str(x));
+print(&#34;The value of the variable x is: &#34; + str(x))
 
-y = 5;
-z = 6;
+y = 5
+z = 6
 
-print(&#34;y is &#34; + str(y) + &#34; and z is &#34; + str(z));
+print(&#34;y is &#34; + str(y) + &#34; and z is &#34; + str(z))
 </code></pre>
 <aside class="warning"><p>The value of the variable x is: 10 <br> y is 5 and z is 6</p>
 </aside>

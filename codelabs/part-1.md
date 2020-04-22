@@ -147,8 +147,8 @@ Programs are constructed command-by-command, where each command is placed on a n
 
 ```python
 def new_example():
-    print("Hello world!");
-    print("... and the universe!");
+    print("Hello world!")
+    print("... and the universe!")
 
 new_example()
 ```
@@ -198,15 +198,15 @@ Below is an example of a program where both are used.
 ```python
 def comments():
     #Printing
-    print("Text to print");
-    print("More text to print!");
+    print("Text to print")
+    print("More text to print!")
     # Next:
     # more on printing
     # more practice
     # variables
     # ...
     #
-    print("Some other text to print");
+    print("Some other text to print")
     # print("Trying stuff out")
 
 comments()
@@ -435,7 +435,7 @@ We've already familiarized ourselves with strings to a degree while dealing with
 A variable can be thought of as a container in which information of a given type can be stored. Examples of these different types include text (`string`), whole numbers (`int`), floating-point numbers (`float`), and whether something is true or false (`boolean`). A value is assigned to a variable using the equals sign (`=`).
 
 ```python
-months = 12;
+months = 12
 ```
 
 In the statement above, the value of 12 is assigned to a variable called months. The statement could be read as: "the variable months is assigned the value 12". Note that type declaration is implicit in Python, and you don't necessarily have to declare the type in the assignment.
@@ -596,7 +596,7 @@ As such, the possible values of a given variable type are limited. For example, 
 | Whole number, i.e., `int` | `value = int(4)` | An integer can contain whole numbers whose values lie between -2147483648 and 2147483647. |
 | Floating-point number, i.e., `float` | `value = float(4.2) | Floating-point numbers contain decimal numbers, with the greatest possible value being approximately 2^1023. When a decimal number is represented with a floating-point number, the value can be inaccurate as floating-points are incapable of representing all decimal numbers. |
 | `String` | `value = "Hi!"`| A string can contain text. Strings are enclosed in quotation marks. |
-| True or false value, i.e., `bool`  | `right = bool(True);`| A boolean contains either the value `True` or `False`. (Note the capitalisation.) |
+| True or false value, i.e., `bool`  | `right = bool(True)`| A boolean contains either the value `True` or `False`. (Note the capitalisation.) |
 
 ### Reading Integers
 
@@ -606,7 +606,7 @@ The `int` command converts a string to an integer. It takes the string containin
 valueAsString = "42"
 value = int(valueAsString)
 
-print(value);
+print(value)
 ```
 Negative
 : 42
@@ -616,7 +616,7 @@ When using a the `input` call, the reading of the value is usually inserted dire
 ```python
 def function():
     value = int(input("Write a value "))
-    print("You wrote " + str(value));
+    print("You wrote " + str(value))
 ```
 
 Negative
@@ -650,10 +650,10 @@ print(sum) # prints 6
 You can affect the order of operations by using parentheses. Operations within parentheses are performed before those outside them.
 
 ```python
-calculationWithParentheses = (1 + 1) + 3 * (2 + 5);
+calculationWithParentheses = (1 + 1) + 3 * (2 + 5)
 print(calculationWithParentheses) # prints 23
 
-calculationWithoutParentheses = 1 + 1 + 3 * 2 + 5;
+calculationWithoutParentheses = 1 + 1 + 3 * 2 + 5
 print(calculationWithoutParentheses) # prints 13
 
 ```
@@ -661,7 +661,7 @@ print(calculationWithoutParentheses) # prints 13
 The example above can also be divided into steps.
 
 ```python
-calculationWithParentheses = (1 + 1);
+calculationWithParentheses = (1 + 1)
 print(calculationWithParentheses) # prints 2
 calculationWithParentheses = calculationWithParentheses + 3 * (2 + 5)
 print(calculationWithParentheses) # prints 23
@@ -684,8 +684,8 @@ An expression is evaluated where it occurs in the program's source code. As such
 first = 2
 second = 4
 
-print(first + second); # prints 6
-print(2 + second - first - second); # prints 0
+print(first + second)  # prints 6
+print(2 + second - first - second)  # prints 0
 ```
 
 An expression does not change the value stored in a variable unless the expression's result is assigned to a variable or used as a parameter, for instance, in printing.
@@ -713,8 +713,8 @@ Negative
 : Length 42
 
 ```python
-print("here is an integer --> " + str(2));
-print(str(2) + " <-- here is an integer");
+print("here is an integer --> " + str(2))
+print(str(2) + " <-- here is an integer")
 ```
 
 Negative
@@ -725,8 +725,8 @@ If one of the operands of the operation `+` is a string, the other operand will 
 The precedence introduced earlier also apply here:
 
 ```python
-print("Four: " + str(2 + 2));
-print("But! Twenty-two: " + str(2) + str(2));
+print("Four: " + str(2 + 2))
+print("But! Twenty-two: " + str(2) + str(2))
 ```
 
 Negative
@@ -743,12 +743,12 @@ Applying this knowledge, we can create an expression consisting of some text and
 ```python
 x = 10
 
-print("The value of the variable x is: " + str(x));
+print("The value of the variable x is: " + str(x))
 
-y = 5;
-z = 6;
+y = 5
+z = 6
 
-print("y is " + str(y) + " and z is " + str(z));
+print("y is " + str(y) + " and z is " + str(z))
 ```
 
 Negative
