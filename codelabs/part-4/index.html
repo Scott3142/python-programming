@@ -32,8 +32,192 @@
 <ul class="checklist">
 <li>You&#39;re familiar with the concepts of class, object, constructor, object methods, and object variables. </li>
 <li>You understand that a class defines an object&#39;s methods and that the values of instance (object) variables are object-specific. </li>
-<li>You know how to create classes and objects, and know how to use objects in your programs. </li>
+<li>You know how to create classes and objects, and know how to use objects in your programs.  We&#39;ll now begin our journey in to the world of object-oriented programming. We&#39;ll start with focusing on describing concepts and data using objects. From there on, we&#39;ll learn how to add functionality, i.e., methods to our program.  Object-oriented programming is concerned with isolating concepts of a problem domain into separate entities and then using those entities to solve problems. Concepts related to a problem can only be considered once they&#39;ve been identified. In other words, we can form abstractions from problems that make those problem easier to approach.  Once concepts related to a given problem have been identified, we can also begin to build constructs that represent them them into programs. These constructs, and the individual instances that are formed from them, i.e., objects, are used in solving the problem. The statement &#34;programs are built from small, clear, and cooperative objects&#34; may not make much sense yet. However, it will appear more sensible as we progress through the course, perhaps even self-evident.  Classes and Objects  We&#39;ve already used some of the classes and objects provided by Python. A <strong>class</strong> defines the attributes of objects, i.e., the information related to them (instance variables), and their commands, i.e., their methods. The values of instance (i.e., object) variables define the internal state of an individual object, whereas methods define the functionality it offers.  A <strong>Method</strong> is a piece of source code written inside a class that&#39;s been named and has the ability to be called. A method is always part of some class and is often used to modify the internal state of an object instantiated from a class.  An object is always instantiated by calling a method that created an object.  Positive </li>
 </ul>
+<p><strong>The Relationship Between a Class and an Object<br></strong>&gt;br&gt; A class lays out a blueprint for any objects that are instantiated from it. Let&#39;s draw from an analogy from outside the world of computers. Detached houses are most likely familiar to most, and we can safely assume the existence of drawings somewhere that determine what exactly a detached house is to be like. A class is a blueprint. In other words, it specifies what kinds of objects can be instantiated from it. <br><br> Individual objects, detached houses in this case, are all created based on the same blueprints - they&#39;re instances of the same class. The states of individual objects, i.e., their attributes (such as the wall color, the building material of the roof, the color of its foundations, the doors&#39; materials and color, ...) may all vary, however.  Positive </p>
+<p><strong>Exercise - Your first account<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-4-1-your-first-account.git" target="_blank">Source files on Github</a>  Positive </p>
+<p><strong>Exercise - Your first bank transfer<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-4-2-your-first-bank-transfer.git" target="_blank">Source files on Github</a></p>
+<h2 is-upgraded>Creating Classes </h2>
+<p> A class specifies what the objects instantiated from it are like.  </p>
+<ul>
+<li>The <strong>object&#39;s variables (instance variables)</strong> specify the internal state of the object </li>
+<li>The <strong>object&#39;s methods</strong> specify what the object does  We&#39;ll now familiarize ourselves with creating our own classes and defining the variable that belong to them.  A class is defined to represent some meaningful entity, where a &#34;meaningful entity&#34; often refers to a real-world object or concept. If a computer program had to process personal information, it would perhaps be meaningful to define a separate class <code>Person</code> consisting of methods and attributes related to an individual.  Let&#39;s begin. We&#39;ll assume that we have a project template that has an empty main program:  <code>python<br>class Main:<br><br>def __init__(self):<br>    # some code</code><br>  Let&#39;s create a class named <code>Person</code>. For this class, we create a separate file named <code>Person.py</code>. Our program now consists of two separate files since the main program is also in its own file. The <code>Person.py</code> file initially contains the class definition <strong>class Person</strong> and the block that confines the contents of the class.  <code>python<br>class Person:</code><br><br> A class defines the attributes and behaviours of objects that are created from it. Let&#39;s decide that each person object has a name and an age. It&#39;s natural to represent the name as a string, and the age as an integer. We&#39;ll go ahead and add these to our blueprint:  <code>python<br>class Person:<br>name = &#34;&#34;<br>age = 0</code><br>  We specify above that each object created from the <code>Person</code> class has a <code>name</code> and an <code>age</code>. Variables defined inside a class are called <strong>instance variables</strong>, or object fields or object attributes. Other names also seem to exist.  Instance variables are written on the lines following the class definition <code>class Person:</code>. Many programming languages such as Java has a concept of <strong>encapsulation</strong>, which allows <strong>private</strong> variables to be &#34;hidden&#34; inside the object. In Python, there is no existence of &#34;Private&#34; instance variables so we do not discuss them further here.  We have now defined a blueprint – a class – for the person object. Each new person object has the variables <code>name</code> and <code>age</code>, which are able to hold object-specific values. The &#34;state&#34; of a person consists of the values assigned to their name and age.  Positive </li>
+</ul>
+<p><strong>Exercise - Dog attributes<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-4-3-dog-attributes.git" target="_blank">Source files on Github</a></p>
+<h2 is-upgraded>Defining a Constructor </h2>
+<p> We want to set an initial state for an object that&#39;s created. It&#39;d be convenient to pass values ​​to the variables of that object as it&#39;s being created. For example, when creating a new person object, it&#39;s useful to be able to provide it with a name:  &#34;`python def main(Person): ada = Person(&#34;Ada&#34;) </p>
+<p>... </p>
+<p><code><br><br>This is achieved by defining the method that creates the object, i.e., its constructor. The constructor is defined after the instance variables. In the following example, a constructor is defined for the Person class, which can be used to create a new Person object. The constructor sets the age of the object being created to 0, and the string passed to the constructor as a parameter as its name:</code><br><br>python class Person: name = &#34;&#34; age = 0  def <strong>init</strong>(self,initialName): </p>
+<pre><code>self.age = 0
+self.name = initialName
+</code></pre>
+<p>&#34;<br><br><code>The constructor is provided, as a parameter, to the name of the person object to be created. The parameter is enclosed in parentheses and follows the constructor&#39;s name. The parentheses that contain optional parameters are followed by curly brackets. In between these brackets is the source code that the program executes when the constructor is called (e.g.,</code>Person (&#34;Ada&#34;)<code>).<br><br>Objects are always created using a constructor.<br><br>A few things to note: the constructor contains the expression</code>self.age = 0<code>. This expression sets the instance variable</code>age<code>of the newly created object (i.e., &#34;self&#34; object&#39;s age) to 0. The second expression</code>self.name = initialName<code>likewise assigns the string passed as a parameter to the instance variable</code>name` of the object created.  Positive </p>
+<p><strong>Exercise - Room<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-4-4-room.git" target="_blank">Source files on Github</a>  Positive </p>
+<p><strong>Default Constructor<br><br></strong> If the programmer does not define a constructor for a class, Java automatically creates a default one for it. A default constructor is a constructor that doesn&#39;t do anything apart from creating the object. The object&#39;s variables remain uninitialized (generally, the value of any object references will be <code>null</code>, meaning that they do not point to anything, and the values of primitives will be <code>0</code>) <br><br></p>
+<h2 is-upgraded>Defining Methods For an Object </h2>
+<p> We know how to create an object and initialize its variables. However, an object also needs methods to be able to do anything. As we&#39;ve learned, a <strong>method</strong> is a named section of source code inside a class which can be invoked.  &#34;`python class Person: name = &#34;&#34; age = 0  def <strong>init</strong>(self,initialName): </p>
+<pre><code>self.age = 0
+self.name = initialName
+</code></pre>
+<p> def printPerson(self): </p>
+<pre><code>print(self.name + &#34;, age &#34; + str(self.age) + &#34; years&#34;)
+</code></pre>
+<p><code><br><br>A method is written inside of the class beneath the constructor. The method name is preceded by `def`, just like a function. The only difference between a function and a method is that a method is tied to an object, as we&#39;ve seen.<br><br>The method `printPerson` contains one line of code that makes use of the instance variables `name` and `age`.. Instance variables are referred to with the prefix `this`. All of the object&#39;s variables are visible and available from within the method.<br><br>Let&#39;s create three persons in the main program and request them to print themselves:</code><br><br>python def main(): ada = Person(&#34;Ada&#34;) alan = Person(&#34;Alan&#34;) grace = Person(&#34;Grace&#34;)  ada.printPerson() alan.printPerson() grace.printPerson()  main() &#34;`  Prints:  Negative </p>
+<p>Ada, age 0 years <br> Alan, age 0 years <br> Grace, age 0 years  Positive </p>
+<p><strong>Exercise - Whistle<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-4-5-whistle.git" target="_blank">Source files on Github</a>  Positive </p>
+<p><strong>Exercise - Door<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-4-6-door.git" target="_blank">Source files on Github</a>  Positive </p>
+<p><strong>Exercise - Product<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-4-7-product.git" target="_blank">Source files on Github</a></p>
+<h2 is-upgraded>Changing an Instance Variable&#39;s Value in a Method </h2>
+<p> Let&#39;s add a method to the previously created person class that increments the age of the person by a year.  &#34;`python class Person: def <strong>init</strong>(self,initialName): </p>
+<pre><code>self.age = 0
+self.name = initialName
+</code></pre>
+<p> def printPerson(self): </p>
+<pre><code>print(self.name + &#34;, age &#34; + str(self.age) + &#34; years&#34;)
+</code></pre>
+<p> def growOlder(self): </p>
+<pre><code>self.age = self.age + 1
+</code></pre>
+<p><code><br><br>The method is written inside the `Person` class just as the `printPerson` method was. The method increments the value of the instance variable `age` by one.<br><br>Let&#39;s call the method and see what happens:</code><br><br>python def main(): ada = Person(&#34;Ada&#34;) alan = Person(&#34;Alan&#34;) grace = Person(&#34;Grace&#34;)  ada.printPerson() alan.printPerson() grace.printPerson()  ada.growOlder() alan.growOlder()  ada.printPerson() alan.printPerson()  main() &#34;`  Prints:  Negative </p>
+<p>Ada, age 0 years <br> Alan, age 0 years <br> Grace, age 0 years <br> Ada, age 1 years <br> Alan, age 1 years <br>  That is to say that when the two objects are &#34;born&#34; they&#39;re both zero-years old (<code>self.age = 0</code> is executed in the constructor). The <code>ada</code> object&#39;s <code>growOlder</code> method is called twice. As the print output demonstrates, the age of Ada is 2 years after growing older. Calling the method on an object corresponding to Ada has no impact on the age of the other person object since each object instantiated form a class has its own instance variables.  The method can also contain conditional statements and loops. The growOlder method below limits aging to 30 years.  &#34;`python class Person: def <strong>init</strong>(self,initialName): </p>
+<pre><code>self.age = 0
+self.name = initialName
+</code></pre>
+<p> def printPerson(self): </p>
+<pre><code>print(self.name + &#34;, age &#34; + str(self.age) + &#34; years&#34;)
+</code></pre>
+<p> def growOlder(self): </p>
+<pre><code>if (self.age &lt; 30):
+    self.age = self.age + 1
+</code></pre>
+<p>&#34;`  Positive </p>
+<p><strong>Exercise - Decreasing Counter<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-4-8-decreasing-counter.git" target="_blank">Source files on Github</a>  Positive </p>
+<p><strong>Exercise - Debt<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-4-9-debt.git" target="_blank">Source files on Github</a></p>
+<h2 is-upgraded>Returning a Value From a Method </h2>
+<p> A method can return a value. The methods we&#39;ve created in our objects haven&#39;t so far returned anything. This has been marked by the lac of a <code>return</code> statement in the method body.  &#34;`python class Door: def knock(self): </p>
+<pre><code># ...
+return #something
+</code></pre>
+<p><code><br><br>If we want the method to return a value, we need to insert a `return` keyword. In the following example, the Teacher class has a  method `grade` that always returns a variable (in this case, the value 10):</code><br><br>python class Teacher: def grade(self): </p>
+<pre><code>return 10
+</code></pre>
+<p><code><br><br>The method above returns a variable of value 10 when called. For the return value to be used, it needs to be assigned. This happens the same way as regular variable assignment, i.e., by using the equals sign:</code><br><br>python def main(): teacher = Teacher()  grading = teacher.grade()  print(&#34;The grade received is &#34; + str(grading)) &#34;`  Negative </p>
+<p>The grade received is 10  The return value could also be used to form part of an expression.   <code>python<br>def main():<br>first = Teacher()<br>second = Teacher()<br>third = Teacher()<br><br>average = (first.grade() + second.grade() + third.grade()) / 3.0<br><br>print(&#34;Grading average &#34; + str(average))</code><br>  Negative </p>
+<p>Grading average 10.0  Let&#39;s continue with the Person class and add a <code>returnAge</code> method that returns the person&#39;s age.  &#34;`python class Person: def <strong>init</strong>(self,initialName): </p>
+<pre><code>self.age = 0
+self.name = initialName
+</code></pre>
+<p> def printPerson(self): </p>
+<pre><code>print(self.name + &#34;, age &#34; + str(self.age) + &#34; years&#34;)
+</code></pre>
+<p> def growOlder(self): </p>
+<pre><code>self.age = self.age + 1
+</code></pre>
+<p>the added method </p>
+<p>def returnAge(self): </p>
+<pre><code>return self.age
+</code></pre>
+<p><code><br><br>Let&#39;s illustrate how the method works:</code><br><br>python def main(): grace = Person(&#34;Grace&#34;) alan = Person(&#34;Alan&#34;)  grace.growOlder() grace.growOlder()  alan.growOlder()  print(&#34;Grace&#39;s age: &#34; + str(grace.returnAge())) print(&#34;Alan&#39;s age: &#34; + str(alan.returnAge())) combined = grace.returnAge() + alan.returnAge()  print(&#34;Grace&#39;s and Alan&#39;s combined age &#34; + str(combined) + &#34; years&#34;) &#34;`  Negative </p>
+<p>Grace&#39;s age 2 <br> Alan&#39;s age 1 <br><br> Grace&#39;s and Alan&#39;s combined age 3 years  Positive </p>
+<p><strong>Exercise - Song<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-4-10-song.git" target="_blank">Source files on Github</a>  Positive </p>
+<p><strong>Exercise - Film<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-4-11-film.git" target="_blank">Source files on Github</a>  As we came to notice, methods can contain source code in the same way as other parts of our program. Methods can have conditionals or loops, and other methods can also be called from them.  Let&#39;s now write a method for the person that determines if the person is of legal age. The method returns a boolean - either <code>True</code> or <code>False</code>:  &#34;`python class Person:  def isOfLegalAge(self): </p>
+<pre><code>if (self.age &lt; 18):
+    return False
+</code></pre>
+<pre><code>return True
+</code></pre>
+<p>The method could have been written more succintly in the following way: </p>
+<p>def isOfLegalAge(): </p>
+<p>return self.age &gt;= 18 </p>
+<p><code><br><br>And let&#39;s test it out:</code><br><br>python def main(): grace = Person(&#34;Grace&#34;) alan = Person(&#34;Alan&#34;)  i = 0 while (i &lt; 30): </p>
+<pre><code>grace.growOlder()
+i = i + 1
+</code></pre>
+<p> alan.growOlder()  if (alan.isOfLegalAge()): </p>
+<pre><code>print(&#34;of legal age: &#34;)
+alan.printPerson()
+</code></pre>
+<p>else: </p>
+<pre><code>print(&#34;underage: &#34;)
+alan.printPerson()
+</code></pre>
+<p> if (grace.isOfLegalAge()): </p>
+<pre><code>print(&#34;of legal age: &#34;)
+grace.printPerson()
+</code></pre>
+<p>else: </p>
+<pre><code>print(&#34;underage: &#34;)
+grace.printPerson()
+</code></pre>
+<p>&#34;` Negative </p>
+<p>underage: Alan, age 1 years <br> of legal age: Grace, age 30 years  Let&#39;s fine-tune the solution a bit more. In its current form, a person can only be &#34;printed&#34; in a way that includes both the name and the age. Situations exist, however, where we may only want to know the name of an object. Let&#39;s write a separate method for this use case:  &#34;`python class Person: </p>
+<p>... </p>
+<p> def getName(self): </p>
+<pre><code>return self.name
+</code></pre>
+<p><code><br><br>The `getName` method returns the instance variable `name` to the caller. The name of this method is somewhat strange. It is the usual convention to name a method that returns an instance variable exactly this way, i.e., `getVariableName`. Such methods are often referred to as &#34;getters&#34;.<br><br>Let&#39;s mould the main program to use the new &#34;getter&#34; method:</code><br><br>python def main(): grace = Person(&#34;Grace&#34;) alan = Person(&#34;Alan&#34;)  i = 0 while (i &lt; 30): </p>
+<pre><code>grace.growOlder()
+i = i + 1
+</code></pre>
+<p> alan.growOlder()  if (alan.isOfLegalAge()): </p>
+<pre><code> print(alan.getName() + &#34; is of legal age&#34;)
+</code></pre>
+<p>else: </p>
+<pre><code> print(alan.getName() + &#34; is underage&#34;)
+</code></pre>
+<p> if (grace.isOfLegalAge()): </p>
+<pre><code> print(grace.getName() + &#34; is of legal age&#34;)
+</code></pre>
+<p>else: </p>
+<pre><code> print(grace.getName() + &#34; is underage &#34;)
+</code></pre>
+<p>&#34;`  The print output is starting to turn out quit neat:  Negative </p>
+<p>Alan is underage <br> Grace is of legal age  Positive </p>
+<p><strong>Exercise - Gauge<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-4-12-gauge.git" target="_blank">Source files on Github</a></p>
+<h2 is-upgraded>A string representation of an object and the toString-method </h2>
+<p> We are guilty of programming in a somewhat poor style by creating a method for printing the object, i.e., the <code>printPerson</code> method. A preferred way is to define a method for the object that returns a &#34;string representation&#34; of the object. We can call the method returning the string representation <code>toString</code>. Let&#39;s define this method for the person in the following example:  &#34;`python class Person: </p>
+<p>... </p>
+<p> def toString(self): </p>
+<pre><code>return self.name + &#34;, age &#34; + str(self.age) + &#34; years&#34;
+</code></pre>
+<p><code><br><br>The `toString` functions as `printPerson` does. However, it doesn&#39;t itself print anything but instead returns a string representation, which the calling method can execute for printing as needed.</code><br><br>python def main(String[] args): Person grace = new Person(&#34;Grace&#34;) Person alan = new Person(&#34;Alan&#34;)  int i = 0 while (i &lt; 30): </p>
+<pre><code>grace.growOlder()
+i = i + 1
+</code></pre>
+<p>}  alan.growOlder()  print(grace.toString()) print(alan.toString()) } &#34;`  Positive </p>
+<p><strong>Exercise - Agent<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-4-13-agent.git" target="_blank">Source files on Github</a></p>
+<h2 is-upgraded>Method parameters </h2>
+<p> Let&#39;s continue with the <code>Person</code> class once more. We&#39;ve decided that we want to calculate people&#39;s body mass indexes. To do this, we write methods for the person to set both the height and the weight, and also a method to calculate the body mass index. The new and changed parts of the Person object are as follows:  &#34;`python class Person:  def Person(self,initialName): </p>
+<pre><code>self.age = 0
+self.weight = 0
+self.height = 0
+self.name = initialName
+</code></pre>
+<p> def setHeight(self,newHeight): </p>
+<pre><code>self.height = newHeight
+</code></pre>
+<p> def setWeight(self,newWeight): </p>
+<pre><code>self.weight = newWeight
+</code></pre>
+<p> def bodyMassIndex(self): </p>
+<pre><code>heigthPerHundred = self.height / 100.0
+return self.weight / (heigthPerHundred * heigthPerHundred)
+</code></pre>
+<p>... </p>
+<p><code><br><br>The instance variables `height` and `weight` were added to the person. Values for these can be set using the `setHeight` and `setWeight` methods. Java&#39;s standard naming convention is used once again, that is, if the method&#39;s only purpose is to set a value to an instance variable, then it&#39;s named as `setVariableName`. Value-setting methods are often called &#34;setters&#34;. The new methods are put to use in the following case:</code><br><br>python def main(): grace = Person(&#34;Grace&#34;) ada = Person(&#34;Ada&#34;)  grace.setHeight(180) grace.setWeight(86)  ada.setHeight(175) ada.setWeight(64)  print(grace.getName() + &#34;, body mass index is &#34; + str(grace.bodyMassIndex())) print(ada.getName() + &#34;, body mass index is &#34; + str(ada.bodyMassIndex())) } &#34;`  Prints:  Negative </p>
+<p>Grace, body mass index is 26.54320987654321 <br> Ada, body mass index is 20.897959183673468  </p>
+<h2 is-upgraded>A parameter and instance variable having the same name! </h2>
+<p> In the preceding example, the <code>setHeight</code> method sets the value of the parameter <code>newHeight</code> to the instance variable <code>height</code>:  <code>python<br>def setHeight(self,newHeight):<br>self.height = newHeight</code><br>  The parameter&#39;s name could also be the same as the instance variable&#39;s, so the following would also work:  <code>python<br>def setHeight(self,height):<br>self.height = height</code><br>  In this case, <code>height</code> in the method refers specifically to a parameter named <em>height</em> and <code>self.height</code> to an instance variable of the same name. For example, the following example would not work as the code does not refer to the instance variable <em>height</em> at all. What the code does in effect is set the <code>height</code> variable received as a parameter to the value it already contains:  &#34;`python def setHeight(self,height): </p>
+<p>DON&#39;T DO THIS!!! </p>
+<p>height = height <br><br>python def setHeight(self,height): </p>
+<p>DO THIS INSTEAD!!! </p>
+<p>self.height = height &#34;`  Positive </p>
+<p><strong>Exercise - Multiplier<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-4-14-mutiplier.git" target="_blank">Source files on Github</a></p>
+<h2 is-upgraded>Calling an internal method </h2>
+<p> The object may also call its methods. For example, if we wanted the string representation returned by toString to also tell of a person&#39;s body mass index, the object&#39;s own <code>bodyMassIndex</code> method should be called in the <code>toString</code> method:  <code>python<br>def toString():<br>return self.name + &#34;, age &#34; + str(self.age) + &#34; years, my body mass index is &#34; + str(self.bodyMassIndex())<br>}</code><br>  So, when an object calls an internal method, the name of the method and this prefix suffice.  Positive </p>
+<p><strong>Exercise - Statistics<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-4-15-statistics.git" target="_blank">Source files on Github</a>  Positive </p>
+<p><strong>Exercise - Payment Card<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-4-16-payment-card.git" target="_blank">Source files on Github</a>  Positive </p>
+<p><strong>Rounding errors<br><br></strong> You probably noticed that some of the figures have rounding errors. In the previous exercise, for example, Grace&#39;s balance of 30.7 may be printed as <code>30.700000000000003</code>. This is because floating-point numbers, such as <code>double</code>, are actually stored in binary form. That is, in zeros and ones using only a limited number of numbers. <br><br> As the number of floating-point numbers is infinite – (in case you&#39;re wondering &#34;how infinite?&#34;, think how many floating-point or decimal values fit between the numbers 5 and 6 for instance). All of the floating-point numbers simply cannot be represented by a finite number of zeros and ones. Thus, the computer must place a limit on the accuracy of stored numbers. <br><br> Normally, account balances, for instance, are saved as integers such that, say, the value 1 represents one cent. </p>
 
 
       </google-codelab-step>
