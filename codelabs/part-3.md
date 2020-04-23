@@ -829,7 +829,7 @@ else:
 ```
 
 Negative
-: *User: \<sebastian,2\>** <br> *User: \<lucas,2\>* <br> *User: \<lily,2\>* <br> Average age: 1.66...
+: *User: \<sebastian,2\>** <br> *User: \<lucas,2\>* <br> *User: \<lily,1\>* <br> Average age: 1.66...
 
 Positive
 : **Exercise - Age of the Oldest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-23-age-of-oldest.git)
@@ -840,7 +840,7 @@ Positive
 In the next exercise you'll be asked for the length of the names. You can find out the length of a string exactly as for a list, with the `len()`-method:
 
 ```python
-word = "equisterian"
+word = "nonagenarian"
 length = len(word)
 print("The length of the word " + word + " is " + str(length))
 ```
