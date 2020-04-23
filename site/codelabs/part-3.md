@@ -714,7 +714,7 @@ Positive
 Positive
 : **Exercise - Login** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-19-login.git)
 
-## Splitting a string
+### Splitting a string
 
 You can split a string to multiple pieces with the `split`-method of the string class. The method takes as a parameter a string denoting the place around which the string should be split. The `split` method returns al ist of the resulting sub-parts. In the example below, the string has been split around a space.
 
@@ -805,7 +805,7 @@ print("Sum of the ages is " + str(sum))
 ```
 
 Negative
-: *User: \<sebastian,2\>** <br> *User: \<lucas,2\>* <br> *User: \<lily,2\>* <br> Sum of the ages is 5
+: *User: \<sebastian,2\>* <br> *User: \<lucas,2\>* <br> *User: \<lily,2\>* <br> Sum of the ages is 5
 
 We can write a program to compute the average of the ages in the same way:
 
@@ -829,7 +829,7 @@ else:
 ```
 
 Negative
-: *User: \<sebastian,2\>** <br> *User: \<lucas,2\>* <br> *User: \<lily,1\>* <br> Average age: 1.66...
+: *User: \<sebastian,2\>* <br> *User: \<lucas,2\>* <br> *User: \<lily,1\>* <br> Average age: 1.66...
 
 Positive
 : **Exercise - Age of the Oldest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-23-age-of-oldest.git)
@@ -850,3 +850,7 @@ Negative
 
 Positive
 : **Exercise - Personal details** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-25-personal-details.git)
+
+## Summary
+
+Very often programs handle data. This data must be stored somewhere for the duration of program execution — creating a new variable for each piece of data would be very labour intensive and make the code hard to understand. In this part we have taken the first steps towards effective data management: by using lists and arrays we can store almost unlimited amounts of data for the duration of program execution. We have also practiced string handling and splitting strings into smaller substrings.

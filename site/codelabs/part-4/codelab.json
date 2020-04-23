@@ -3,12 +3,12 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2020-04-23T15:16:46+01:00",
-  "id": "part-3",
+  "updated": "2020-04-23T16:30:11+01:00",
+  "id": "part-4",
   "duration": 0,
-  "title": "Part 3",
-  "summary": "The main themes in the third part of the course are adding information to list and array data structures, and handling information in string form.",
-  "source": "part-3.md",
+  "title": "Part 4",
+  "summary": "The main theme of the fourth part is object-oriented programming. You will learn to read data from files and to represent and handle information with the help of objects.",
+  "source": "part-4.md",
   "theme": "",
   "status": [
     "draft"
@@ -21,5 +21,5 @@
   ],
   "feedback": "https://github.com/Scott3142/python-programming",
   "ga": "UA-49751789-4",
-  "url": "part-3"
+  "url": "part-4"
 }
