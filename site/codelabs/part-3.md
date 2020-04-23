@@ -651,3 +651,202 @@ Negative
 
 Positive
 : **Exercise - Remove last** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-16-remove-last.git)
+
+Positive
+: **NumPy Arrays** <br><br> We've gotten familiar with the list, which has a lot of functionality to make the life of a programmer easier. Perhaps the most important is about adding elements. From the point of view of the programmer, the size of the list is unlimited. In reality there are no magic tricks in the list -- they have been programmed like any other programs or tools offered by the programming language. When you create a list, a limited space is reserved in the memory of the computer. When the list runs out of space, a larger space is reserved and the data from the previous space is copied to the new one. <br><br> Even though the list is simple to use, sometimes we need an alternative way of storing data, the NumPy array. The main benefits of using NumPy arrays is, in general, smaller memory consumption and better runtime behaviour. We will not dive any deeper into NumPy arrays in this course, but you should be aware of their existence and, in particular their applicability to data science and scientific computing. <br><br> You can read more [here](https://numpy.org/doc/stable/reference/generated/numpy.array.html?highlight=array#numpy.array).
+
+## Working with strings
+
+### What you'll learn
+* Revising reading, printing and comparing strings
+* Knowing how to split a string into several pieces
+
+Let's first revise what we already know about strings and see how to split them. Below we create a string variable `magicWord`, that contains value `"abracadabra"`.
+
+```python
+magicWord = "abracadabra"
+```
+
+Passing a string as a parameter to a print command (or, for that matter, any method that takes a string parameter) happens in the familiar way:
+
+```python
+magicWord = "abracadabra"
+print(magicWord)
+```
+
+Negative
+: abracadabra
+
+### Reading and Printing strings
+
+You can read a string using the input-method offered by Python. The program below reads the name of the user and prints it:
+
+```python
+# reading a line from the user and assigning it to the name variable
+name = input("What's your name?")
+
+print(name)
+```
+
+Negative
+: What's your name? <br> *User: \<Vicky\>* <br> Vicky
+
+Strings can also be concatenated. If you place a `+`-operator between two strings, you get a new string that's a combination of those two strings. Be mindful of any white spaces in your variables!
+
+```python
+greeting = "Hi "
+name = "Lily"
+goodbye = " and see you later!"
+
+phrase = greeting + name + goodbye
+
+print(phrase)
+```
+Negative
+: Hi Lily and see you later!
+
+Positive
+: **Exercise - Print thrice** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-17-print-thrice.git)
+
+Positive
+: **Exercise - Is it true** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-18-is-it-true.git)
+
+Positive
+: **Exercise - Login** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-19-login.git)
+
+## Splitting a string
+
+You can split a string to multiple pieces with the `split`-method of the string class. The method takes as a parameter a string denoting the place around which the string should be split. The `split` method returns al ist of the resulting sub-parts. In the example below, the string has been split around a space.
+
+```python
+text = "first second third fourth"
+pieces = text.split(" ")
+print(pieces[0])
+print(pieces[1])
+print(pieces[2])
+print(pieces[3])
+
+print()
+
+for piece in pieces:
+    print(piece)
+```
+
+Negative
+: first <br> second <br> third <br> fourth <br><br> first <br> second <br> third <br> fourth <br>
+
+Positive
+: **Exercise - Line by line** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-20-line-by-line.git)
+
+Positive
+: **Exercise - AV Club** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-21-av-club.git)
+
+### Data of Fixed Format
+
+Splitting strings is used particularly when the data is of a fixed format. This refers to data that adheres to some predefined format. An example of this of this is the comma-separated values (`csv`) format, where commas are used to separate values. Below you'll find an example of data in csv form containing names and ages. The first column contains names and the second one ages. The columns are separated by a comma.
+
+Negative
+: sebastian,2 <br> lucas,2 <br> lily,1
+
+Let's assume the user enters the data above row by row, ending with an empty line.
+
+A program to print the names and ages looks like the following:
+
+```python
+while (True):
+    textinput = input()
+    if (textinput == ""):
+        break
+
+    pieces = textinput.split(",")
+    print("Name: " + pieces[0] + ", age: " + pieces[1])
+```
+
+Negative
+: *User: \<sebastian,2\>* <br> Name: sebastian, age: 2 <br> *User: \<lucas,2\>* <br> Name: lucas, age: 2 <br> *User: \<lily,1\>* <br>  Name: lily, age: 1
+
+Positive
+: **Exercise - First Words** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-22-first-words.git)
+
+In the exercises above, we actually implemented a very simple decrypting method for secret messages. One variant of these hidden messages consists of the first character of each line. Let's continue along the same theme! You can get a character at a specified index of a string very similarly to how you access the index of a list, with the `[]` notation.
+
+```python
+text = "Hello world!"
+character = text[0]
+print(character)
+```
+
+Negative
+: H
+
+### Using Diverse Text
+
+We've printed strings in the examples above. Some of the data contained in a fixed-format string can be numerical. In the previous data we used that contained names and ages, the ages were integers.
+
+Negative
+: sebastian,2 <br> lucas,2 <br> lily,1
+
+Splitting a string always produces a list of strings. If the text is of fixed format, we can assume the data in a specific index to always be of the a specific type -- e.g., in the example above, age at index 1 is an integer.
+
+The program below computes the sum of ages in this fixed format data. In order to compute the sum, the age must first be converted to a number (the familiar command `int()`.
+
+```python
+sum = 0
+
+while (True):
+    textinput = input()
+    if (textinput == ""):
+        break
+
+    parts = textinput.split(",")
+    sum = sum + int(parts[1])
+
+print("Sum of the ages is " + str(sum))
+```
+
+Negative
+: *User: \<sebastian,2\>** <br> *User: \<lucas,2\>* <br> *User: \<lily,2\>* <br> Sum of the ages is 5
+
+We can write a program to compute the average of the ages in the same way:
+
+```python
+sum = 0
+count = 0
+
+while (True):
+    textinput = input()
+    if (textinput == ""):
+        break
+
+    parts = textinput.split(",")
+    sum = sum + int(parts[1])
+    count += 1
+
+if (count > 0):
+    print("Age average: " + str(1.0 * sum / count))
+else:
+    print("No input.")
+```
+
+Negative
+: *User: \<sebastian,2\>** <br> *User: \<lucas,2\>* <br> *User: \<lily,1\>* <br> Average age: 1.66...
+
+Positive
+: **Exercise - Age of the Oldest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-23-age-of-oldest.git)
+
+Positive
+: **Exercise - Name of the Oldest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-24-name-of-oldest.git)
+
+In the next exercise you'll be asked for the length of the names. You can find out the length of a string exactly as for a list, with the `len()`-method:
+
+```python
+word = "nonagenarian"
+length = len(word)
+print("The length of the word " + word + " is " + str(length))
+```
+
+Negative
+: The length of the word equisterian is 11
+
+Positive
+: **Exercise - Personal details** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-25-personal-details.git)
