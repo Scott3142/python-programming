@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2020-04-23T15:20:23+01:00",
+  "id": "part-4",
+  "duration": 0,
+  "title": "Part 4",
+  "summary": "The main theme of the fourth part is object-oriented programming. You will learn to read data from files and to represent and handle information with the help of objects.",
+  "source": "part-4.md",
+  "theme": "",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "btec-unit4"
+  ],
+  "tags": [
+    "web"
+  ],
+  "feedback": "https://github.com/Scott3142/python-programming",
+  "ga": "UA-49751789-4",
+  "url": "part-4"
+}
