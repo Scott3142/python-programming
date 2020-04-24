@@ -35,6 +35,1008 @@
 <li>To realize that the use of objects can make a program more understandable.</li>
 </ul>
 <p>So, what&#39;s object-oriented programming all about?</p>
+<p>Let&#39;s step back for a moment and inspect how a clock works. The clock has three hands: hours, minutes and seconds. The second-hand grows once every second, the minute hand every sixty seconds, and the hour hand every sixty minutes. When the value of the second hand is 60, its value is set to zero, and the value of the minute hand grows by one. When the minute hand&#39;s value is 60, its value is set to zero, and the hour hand&#39;s value grows by one. When the hour hand&#39;s value is 24, it&#39;s set to zero.</p>
+<p>The time is always printed in the form <code>hours: minutes: seconds</code>, where two digits are used to represent the hour (e.g., 01 or 12) as well as the minutes and seconds.</p>
+<p>The clock has been implemented below using integer variables (the printing could be in a separate method, but that has not been done here).</p>
+<pre><code>hours = 0
+minutes = 0
+seconds = 0
+
+while (True):
+    # 1. Printing the time
+    if (hours &lt; 10):
+        print(&#34;0&#34;)
+    print(hours)
+
+    print(&#34;:&#34;)
+
+    if (minutes &lt; 10):
+        print(&#34;0&#34;)
+    print(minutes)
+
+    print(&#34;:&#34;)
+
+    if (seconds &lt; 10):
+        print(&#34;0&#34;)
+    print(seconds)
+    print()
+
+    # 2. The second hand&#39;s progress
+    seconds = seconds + 1
+
+    # 3. The other hand&#39;s progress when necessary
+    if (seconds &gt; 59):
+        minutes = minutes + 1
+        seconds = 0
+
+        if (minutes &gt; 59):
+            hours = hours + 1
+            minutes = 0
+
+            if (hours &gt; 23):
+                hours = 0
+</code></pre>
+<p>As we can see by reading the example above, how a clock consisting of three variables works is not clear to someone reading the code. By looking at the code, it&#39;s difficult to &#34;see&#34; what&#39;s going on. A famous <a href="https://en.wikipedia.org/wiki/Kent_Beck" target="_blank">programmer</a> once remarked <em>&#34;Any fool can write code that a computer can understand. Good Programmers write code that humans can understand&#34;</em>.</p>
+<p>Our aim is to make the program more understandable.</p>
+<p>Since a clock hand is a clear concept in its own right, a good way to improve the program&#39;s clarity would be to turn it into a class. Let&#39;s create a <code>ClockHand</code> class that describes a clock hand, which contains information about its value, upper limit (i.e., the point at which the value of the hand returns to zero), and provides methods for advancing the hand, viewing its value, and also printing the value in string form.</p>
+<pre><code>class ClockHand:
+
+    def __init__(self,limit):
+        self.limit = limit
+        self.value = 0
+
+    def advance(self):
+        self.value = self.value + 1
+
+        if (self.value &gt;= self.limit):
+            self.value = 0
+
+    def getValue(self):
+        return self.value
+
+    def __str__(self):
+        if (self.value &lt; 10):
+            return &#34;0&#34; + self.value
+
+        return &#34;&#34; + self.value
+</code></pre>
+<p>Once we&#39;ve created the ClockHand class, our clock has become clearer. It&#39;s now straightforward to print the clock, i.e., the clock hand, and the hand&#39;s progression is hidden away in the ClockHand class. Since the the hand returns to the beginning automatically with the help of the upper-limit variable defined by the ClockHand class, the way the hands work together is slightly different than in the implementation that used integers. That one looked at whether the value of the integer that represented the clock hand exceeded the upper limit, after which its value was set to zero and the value of the integer representing the next clock hand was incremented. Using clock-hand objects, the minute hand advances when the second hand&#39;s value is zero, and the hour hand advances when the minute hand&#39;s value is zero.</p>
+<pre><code>hours = ClockHand(24)
+minutes = ClockHand(60)
+seconds = ClockHand(60)
+
+while (True):
+    # 1. Printing the time
+    print(str(hours) + &#34;:&#34; + str(minutes) + &#34;:&#34; + str(seconds))
+
+    # 2. Advancing the second hand
+    seconds.advance()
+
+    # 3. Advancing the other hands when required
+    if (seconds.getValue() == 0):
+        minutes.advance()
+
+        if (minutes.getValue() == 0):
+            hours.advance()
+</code></pre>
+<p><strong>Object-oriented programming is primarily about isolating concepts into their own entities or, in other words, creating abstractions</strong>. Despite the previous example, one might deem it pointless to create an object containing only a number since the same could be done directly with variables. However, that is not always the case.</p>
+<p>Separating a concept into its own class is a good idea for many reasons. Firstly, certain details (such as the rotation of a hand) can be hidden inside the class (i.e., <strong>abstracted</strong>). Instead of typing an if-statement and an assignment operation, it&#39;s enough for the one using the clock hand to call a clearly-named method <code>advance()</code>. The resulting clock hand may be used as a building block for other programs as well - the class could be named <code>CounterLimitedFromTop</code>, for instance. That is, a class created from a distinct concept can serve multiple purposes. Another massive advantage is that since the details of the implementation of the clock hand are not visible to its user, they can be changed if desired.</p>
+<p>We realized that the clock contains three hands, i.e., it consists of three concepts. The clock is a concept in and of itself. As such, we can create a class for it too. Next, we create a class called &#34;Clock&#34; that hides the hands inside of it.</p>
+<pre><code>class Clock:
+
+    def __init__(self):
+        self.hours = ClockHand(24)
+        self.minutes = ClockHand(60)
+        self.seconds = ClockHand(60)
+
+    def advance(self):
+        self.seconds.advance()
+        print(self.seconds.getValue())
+
+        if (self.seconds.getValue() == 0):
+            self.minutes.advance()
+
+            if (self.minutes.getValue() == 0):
+                self.hours.advance()
+
+    def __str__(self):
+        return str(self.hours) + &#34;:&#34; + str(self.minutes) + &#34;:&#34; + str(self.seconds)
+</code></pre>
+<p>The way the program functions has become increasingly clearer. When you compare our program below to the original one that was made up of integers, you&#39;ll find that the program&#39;s readability is superior.</p>
+<pre><code>clock = Clock()
+
+while (True):
+    print(clock)
+    clock.advance()
+</code></pre>
+<p>The clock we implemented above is an object whose functionality is based on &#34;simpler&#34; objects, i.e., its hands. This is precisely the <strong>great idea behind ​​object-oriented programming: a program is built from small and distinct objects that work together</strong></p>
+<aside class="special"><p><strong>Exercise - One Minute<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-5-1-one-minute.git" target="_blank">Source files on Github</a></p>
+</aside>
+<p>Next, let&#39;s review topic terminology.</p>
+<h2 is-upgraded>Object</h2>
+<p>An <strong>Object</strong> refers to an independent entity that contains both data (instance variables) and behaviour (methods). Objects may come in lots of different forms: some may describe problem-domain concepts, others are used to coordinate the interaction that happens between objects. Objects interact with one another through method calls – these method calls are used to both request information from objects and give instructions to them.</p>
+<p>Generally, each object has clearly defined boundaries and behaviours and is only aware of the objects that it needs to perform its task. In other words, the object hides its internal operations, providing access to its functionality through clearly defined methods. Moreover, the object is independent of any other object that it doesn&#39;t require to accomplish its task.</p>
+<p>In the previous section, we dealt with objects that represented people whose structure was defined in a &#34;Person&#34; class. It&#39;s a good idea to remind ourselves of what a class does: a <strong>class</strong> contains the blueprint needed to create objects, and also defines the objects&#39; variables and methods. An object is created on the basis of the class constructor.</p>
+<p>Our person objects had a name, age, weight and height property, along with a few methods. If we were to think about the structure of our person object some more, we could surely come up with more variables related to a person, such as a personal ID number, telephone number, address and eye color.</p>
+<p>In reality, we can relate all kinds of different information and things to a person. However, when building an application that deals with people, the <strong>functionality and features related to a person are gathered based on the application&#39;s use case</strong>. For example, an application focused on personal health and well-being would probably keep track of the variables mentioned earlier, such as age, weight, and height, and also provide the ability to calculate a body mass index and a maximum heart rate. On the other hand, an application focused on communication could store people&#39;s email addresses and phone numbers, but would have no need for information such as weight or height.</p>
+<p><strong>The state of an object</strong> is the value of its internal variables at any given point in time.</p>
+<p>In the Python programming language, a Person object that keeps track of name, age, weight, and height, and provides the ability to calculate body mass index and maximum heart rate would look like the following. Below, the height and weight are expressed as floats - the unit of length is one meter.</p>
+<pre><code>class Person:
+    def __init__(self,name,age,weight,height):
+        self.age = age
+        self.name = name
+        self.weight = weight
+        self.height = height
+
+    def bodyMassIndex(self):
+        return self.weight / (self.height * self.height)
+
+    def maximumHeartRate(self):
+        return 206.3 - (0.711 * self.age)
+
+    def __str__(self):
+        return self.name + &#34;, BMI: &#34; + str(self.bodyMassIndex()) + &#34;, maximum heart rate: &#34; + str(self.maximumHeartRate())
+</code></pre>
+<p>Determining the maximum heart rate and body mass index of a given person is straightforward using the Person class described above.</p>
+<pre><code>name = input(&#34;What&#39;s your name?&#34;)
+age = int(input(&#34;What&#39;s your age?&#34;))
+weight = float(input(&#34;What&#39;s your weight?&#34;))
+height = float(input(&#34;What&#39;s your height?&#34;))
+
+person = Person(name, age, weight, height)
+print(person)
+</code></pre>
+<aside class="warning"><p>What&#39;s your name? <br><em>User: &lt;Ada Lovelace&gt;<br></em> What&#39;s your age? <br><em>User: &lt;51&gt;<br></em> What&#39;s your weight? <br><em>User: &lt;80&gt;<br></em> What&#39;s your height? <br><em>User: &lt;1.70&gt;<br></em> Ada Lovelace, BMI: 27.68166089965398, maximum heart rate: 170.03900000000002</p>
+</aside>
+<h2 is-upgraded>Class</h2>
+<p>A class defines the types of objects that can be created from it. It contains instance variables describing the object&#39;s data, a constructor or constructors used to create it, and methods that define its behaviour. A rectangle class is detailed below which defines the functionality of a rectangle.</p>
+<pre><code># class
+class Rectangle:
+
+    # constructor
+    def __init__(self,width,height):
+        self.width = width
+        self.height = height
+
+    # methods
+    def widen(self):
+        self.width = self.width + 1
+
+    def narrow(self):
+        if (self.width &gt; 0):
+            self.width = self.width - 1
+
+    def surfaceArea(self):
+        return self.width * self.height
+
+    def __str__(self):
+        return &#34;(&#34; + str(self.width) + &#34;, &#34; + str(self.height) + &#34;)&#34;
+</code></pre>
+<p>Some of the methods defined above do not return a value, while others do. The class above also defines the <code>__str__</code> method, which returns the string used to print the object.</p>
+<p>Objects are created from the class through constructors much like variable declarations. Below, we&#39;ll create two rectangles and print information related to them.</p>
+<pre><code>first = Rectangle(40, 80)
+rectangle = Rectangle(10, 10)
+print(first)
+print(rectangle)
+
+first.narrow()
+print(first)
+print(first.surfaceArea())
+</code></pre>
+<aside class="warning"><p>(40, 80) <br> (10, 10) <br> (39, 80) <br> 3920</p>
+</aside>
+<aside class="special"><p><strong>Exercise - Book<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-5-2-book.git" target="_blank">Source files on Github</a></p>
+</aside>
+<aside class="special"><p><strong>Exercise - Cube<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-5-3-cube.git" target="_blank">Source files on Github</a></p>
+</aside>
+<aside class="special"><p><strong>Exercise - FitByte<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-5-4-FitByte.git" target="_blank">Source files on Github</a></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Removing repetitive code (overloading methods and constructors)" duration="0">
+        <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>Becoming familiar with the term overloading</li>
+<li>Creating multiple constructors for a class.</li>
+<li>Creating multiple methods with the same name in a class.</li>
+</ul>
+<p>Let&#39;s once more return to our Person class. It currently looks like this:</p>
+<pre><code>class Person:
+
+    def __init__(self,name):
+        self.name = name
+        self.age = 0
+        self.weight = 0
+        self.height = 0
+
+    def growOlder(self):
+        self.age += 1
+
+    def isAdult(self):
+        if (self.age &lt; 18):
+            return False
+
+        return True
+
+    def bodyMassIndex(self):
+        heightInMeters = self.height / 100.0
+
+        return self.weight / (heightInMeters * heightInMeters)
+
+    def __str__():
+        return self.name + &#34; is &#34; + str(self.age) + &#34; years old, their BMI is &#34; + str(self.bodyMassIndex())
+    }
+
+    def setHeight(height):
+        self.height = height
+
+    def getHeight():
+        return self.height
+
+    def getWeight():
+        return self.weight
+
+    def setWeight(weight):
+        self.weight = weight
+
+    def getName():
+        return self.name
+</code></pre>
+<p>All person objects are 0 years old when created. This is because the constructor sets the value of the instance variable <code>age</code> to 0:</p>
+<pre><code>def __init__(self, name):
+    self.name = name
+    self.age = 0
+    self.weight = 0
+    self.height = 0
+</code></pre>
+<h2 is-upgraded>Constructor Overloading</h2>
+<p>We would also like to be able to create persons so that the constructor is provided both the age as well as the name as parameters. This is possible in Python if we use <strong>class methods</strong>. Note that if you are coming from a programming background that allows multiple constructors, this is not allowed in Python. Class methods can be implemented as follows:</p>
+<pre><code>class Person:
+    def __init__(self,name, age=0, weight=0, height=0):
+        self.name = name
+        self.age = age
+        self.weight = weight
+        self.height = height
+
+    @classmethod
+    def with_age(cls,name,age):
+        return cls(name,age)
+
+    def __str__(self):
+      return self.name + &#34; is &#34; + str(self.age) + &#34; years old.&#34;
+</code></pre>
+<p>Notice here that we have moved the declaration of the zero age, weight and height into the argument of the <code>__init__</code> method to allows us to use the classmethod.</p>
+<p>We now have two alternative ways to create objects:</p>
+<pre><code>def main():
+    paul = Person(&#34;Paul&#34;)
+    ada = Person.with_age(&#34;Ada&#34;,24)
+
+    print(paul)
+    print(ada)
+</code></pre>
+<aside class="warning"><p>Paul is 0 years old. <br> Ada is 24 years old.</p>
+</aside>
+<p>The technique of having two (or more) constructors in a class is known as <em>constructor overloading</em>.</p>
+<aside class="special"><p><strong>Exercise - Constructor Overload<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-5-5-constructor-overload.git" target="_blank">Source files on Github</a></p>
+</aside>
+<h2 is-upgraded>Method Overloading</h2>
+<p>Methods and constructors can also be overloaded in Python by specifying an argument list quantified by the keyword <code>None</code>. It&#39;s arguable as to whether this is neater or more readable than the example above, but in the interest of completeness, let&#39;s take a look at it. Let&#39;s change the <code>growOlder</code> method so that we can specify a value that ages the person by the amount of years given to it as a parameter.</p>
+<pre><code>def growOlder(self, years=None):
+
+    if years is not None:
+        self.age = self.age + years
+    else:
+        self.age = self.age + 1
+</code></pre>
+<p>In the example below, &#34;Paul&#34; is born 24 years old, ages by a year and then by 10 years:</p>
+<pre><code>def main():
+    paul = Person(&#34;Paul&#34;, 24)
+    print(paul)
+
+    paul.growOlder()
+    print(paul)
+
+    paul.growOlder(10)
+    print(paul)
+}
+</code></pre>
+<p>Prints:</p>
+<aside class="warning"><p>Paul is 24 years old. <br> Paul is 25 years old. <br> Paul is 35 years old.</p>
+</aside>
+<aside class="special"><p><strong>Exercise - Overloaded Counter<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-5-6-overloaded-counter.git" target="_blank">Source files on Github</a></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Objects and references" duration="0">
+        <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>You will brush up on using classes and objects.</li>
+<li>You can use an object as an object variable and a method parameter.</li>
+<li>You can create a method that returns an object.</li>
+<li>You can create the method equals, which can be used to check if two objects of the same type have the same contents or state.</li>
+</ul>
+<p>Let&#39;s continue working with objects. Assume we can use the class that represents a person, shown below. Person has object variables name, age, weight and height. Additionally, it contains methods to calculate the body mass index, among other things.</p>
+<pre><code>class Person:
+
+    def __init__(self,name, age=0, weight=0, height=0):
+        self.name = name
+        self.age = age
+        self.weight = weight
+        self.height = height
+
+    @classmethod
+    def with_age(cls,name,age):
+        return cls(name,age)
+
+    @classmethod
+    def with_age_weight_height(cls,name,age,weight,height):
+        return cls(name,age,weight,height)
+
+    # other constructors and methods
+
+    def getName(self):
+        return self.name
+
+    def getAge(self):
+        return self.age
+
+    def getHeight(self):
+        return self.height
+
+    def growOlder(self):
+        self.age = self.age + 1
+
+    def setHeight(self,newHeight):
+        self.height = newHeight
+
+    def setWeight(self,newWeight):
+        self.weight = newWeight
+
+    def bodyMassIndex(self):
+        heightPerHundred = self.height / 100.0
+        return self.weight / (heightPerHundred * heightPerHundred)
+
+    def __str__(self):
+        return self.name + &#34;, age &#34; + str(self.age) + &#34; years&#34;
+</code></pre>
+<p>Precisely what happens when a new object is created?</p>
+<pre><code>joan = Person(&#34;Joan Ball&#34;)
+</code></pre>
+<p>Calling a constructor with this command causes several things to happen. First, space is reserved in the computer memory for storing object variables. Then default or initial values are set to object variables (e.g. variable receives an initial value of 0). Lastly, the source code in the constructor is executed.</p>
+<p>A constructor call returns a reference to an object. A <strong>reference</strong> is information about the location of object data.</p>
+<p>So the value of the variable is set to be a reference, i.e. knowledge about the location of related object data. The image above also reveals that strings – the name of our example person, for instance – are objects, too.</p>
+<h2 is-upgraded>Assigning a reference type variable copies the reference</h2>
+<p>Let&#39;s add a <code>Person</code> type variable called <code>ball</code> into the program, and assign <code>joan</code> as its initial value. What happens then?</p>
+<pre><code>joan = Person(&#34;Joan Ball&#34;)
+print(joan)
+
+ball = joan
+</code></pre>
+<p>The statement <code>ball = joan</code> creates a new Person variable <code>ball</code>, and copies the value of the variable <code>joan</code> as its value. As a result, <code>ball</code> refers to the same object as <code>joan</code>.</p>
+<p>Let&#39;s inspect the same example a little more thoroughly.</p>
+<pre><code>joan = Person(&#34;Joan Ball&#34;)
+print(joan)
+
+ball = joan
+ball.growOlder()
+ball.growOlder()
+
+print(joan)
+</code></pre>
+<aside class="warning"><p>Joan Ball, age 0 years <br> Joan Ball, age 2 years</p>
+</aside>
+<p>Joan Ball – i.e. the Person object that the reference in the <code>joan</code> variable points at – starts as 0 years old. After this the value of the <code>joan</code> variable is assigned (so copied) to the <code>ball</code> variable. The Person object <code>ball</code> is aged by two years, and Joan Ball ages as a consequence!</p>
+<p>An object&#39;s internal state is not copied when a variable&#39;s value is assigned. A new object is not being created in the statement <code>ball = joan</code> – the value of the variable ball is assigned to be the copy of  joan&#39;s value, i.e. a reference to an object.</p>
+<p>Next, the example is continued so that a new object is created for the <code>joan</code> variable, and a reference to it is assigned as the value of the variable. The variable <code>ball</code> still refers to the object that we created earlier.</p>
+<pre><code>joan = Person(&#34;Joan Ball&#34;)
+print(joan)
+
+ball = joan
+ball.growOlder()
+ball.growOlder()
+
+print(joan)
+
+joan = Person(&#34;Joan B.&#34;)
+print(joan)
+</code></pre>
+<p>The following is printed:</p>
+<aside class="warning"><p>Joan Ball, age 0 years <br> Joan Ball, age 2 years <br> Joan B., age 0 years</p>
+</aside>
+<p>So in the beginning the variable <code>joan</code> contains a reference to one object, but in the end a reference to another object has been copied as its value. Here is a picture of the situation after the last line of code.</p>
+<h2 is-upgraded><code>None</code> value of a reference variable</h2>
+<p>Let&#39;s extend the example further by setting  the value of the reference variable <code>ball</code> to <code>None</code>, i.e. a reference &#34;to nothing&#34;. The <code>None</code> reference can be set as the value of any reference type variable.</p>
+<pre><code>Person joan = new Person(&#34;Joan Ball&#34;)
+print(joan)
+
+Person ball = joan
+ball.growOlder()
+ball.growOlder()
+
+print(joan)
+
+joan = new Person(&#34;Joan B.&#34;)
+print(joan)
+
+ball = None
+</code></pre>
+<p>The object whose name is Joan Ball is referred to by nobody. In other words, the object has become &#34;garbage&#34;. In the Java programming language the programmer need not worry about the program&#39;s memory use. From time to time, the automatic garbage collector of the Java language cleans up the objects that have become garbage. If the garbage collection did not happen, the garbage objects would reserve a memory location until the end of the program execution.</p>
+<p>Let&#39;s see what happens when we try to print a variable that references &#34;nothing&#34; i.e. <code>None</code>.</p>
+<pre><code>Person joan = new Person(&#34;Joan Ball&#34;)
+print(joan)
+
+Person ball = joan
+ball.growOlder()
+ball.growOlder()
+
+print(joan)
+
+joan = new Person(&#34;Joan B.&#34;)
+print(joan)
+
+ball = None
+print(ball)
+</code></pre>
+<aside class="warning"><p>Joan Ball, age 0 years <br> Joan Ball, age 2 years <br> Joan B., age 0 years <br> None</p>
+</aside>
+<p>Printing a <code>None</code> reference prints &#34;None&#34;. How about if we were to try and call a method, say <code>growOlder</code>, on an object that refers to nothing:</p>
+<pre><code>Person joan = new Person(&#34;Joan Ball&#34;)
+print(joan)
+
+joan = None
+joan.growOlder()
+</code></pre>
+<p>The result is an Atribute Error.</p>
+<p>Bad things follow. This could be the first time you have seen the text <strong>NullPointerException</strong>. In the course of the program, there occured an error indicating that we called a method on a variable that refers to nothing.</p>
+<p>We promise that this is not the last time you will encounter the previous error. When you do, the first step is to look for variables whose value could be <code>None</code>. Fortunately, the error message is useful: it tells which row caused the error. Try it out yourself!</p>
+<h2 is-upgraded>Object as a method parameter</h2>
+<p>We have seen variables act as method parameters. Since objects are also variables, any type of object can be defined to be a method parameter. Let&#39;s take a look at a practical demonstration.</p>
+<p>Amusement park rides only permit people who are taller than a certain height. The limit is not the same for all attractions. Let&#39;s create a class representing an amusement park ride. When creating a new object, the constructor receives as parameters the name of the ride, and the smallest height that permits entry to the ride.</p>
+<pre><code>class AmusementParkRide:
+    def __init__(self,name,lowestHeight):
+        self.name = name
+        self.lowestHeight = lowestHeight
+
+    def __str__(self):
+        return self.name + &#34;, minimum height: &#34; + str(self.lowestHeight)
+</code></pre>
+<p>Then let&#39;s write a method that can be used to check if a person is allowed to enter the ride, so if they are tall enough. The method returns <code>True</code> if the person given as the parameter is permitted access, and <code>False</code> otherwise.</p>
+<p>Below, it is assumed that Person has the method <code>def getHeight()</code> that returns the height of the person.</p>
+<pre><code>class AmusementParkRide:
+    def __init__(self,name,lowestHeight):
+        self.name = name
+        self.lowestHeight = lowestHeight
+
+    def allowedToRide(self,person):
+        if (person.getHeight() &lt; self.lowestHeight):
+            return False
+
+        return True
+
+    def __str__(self):
+        return self.name + &#34;, minimum height: &#34; + str(self.lowestHeight)
+</code></pre>
+<p>So the method <code>allowedToRide</code> of an AmusementParkRide object is given a <code>Person</code> object as a parameter. Like earlier, the value of the variable is copied for the method to use. The method handles this and it calls the <code>getHeight</code> method of the person passed as a parameter.</p>
+<p>Below is an example main program where the amusement park ride method is called twice: first the supplied parameter is a person object <code>matt</code>, and then a person object <code>jasper</code>:</p>
+<pre><code>matt = Person(&#34;Matt&#34;)
+matt.setWeight(86)
+matt.setHeight(180)
+
+jasper = Person(&#34;Jasper&#34;)
+jasper.setWeight(34)
+jasper.setHeight(132)
+
+waterTrack = AmusementParkRide(&#34;Water track&#34;, 140)
+
+if (waterTrack.allowedToRide(matt)):
+    print(matt.getName() + &#34; may enter the ride&#34;)
+else:
+    print(matt.getName() + &#34; may not enter the ride&#34;)
+
+if (waterTrack.allowedToRide(jasper)):
+    print(jasper.getName() + &#34; may enter the ride&#34;)
+else:
+    print(jasper.getName() + &#34; may not enter the ride&#34;)
+
+print(waterTrack)
+</code></pre>
+<p>The output of the program is:</p>
+<aside class="warning"><p>Matt may enter the ride <br> Jasper may not enter the ride <br> Water track, minimum height: 140</p>
+</aside>
+<p>What if we wanted to know how many people have taken the ride?</p>
+<p>Let&#39;s add an object variable to the amusement park ride. It keeps track of the number of people that were permitted to enter.</p>
+<pre><code>class AmusementParkRide:
+    def __init__(self,name,lowestHeight):
+        self.name = name
+        self.lowestHeight = lowestHeight
+        self.visitors = 0
+
+    def allowedToRide(self,person):
+        if (person.getHeight() &lt; self.lowestHeight):
+            return False
+
+        self.visitors += 1
+        return True
+
+    def __str__(self):
+        return self.name + &#34;, minimum height: &#34; + str(self.lowestHeight) + &#34;, visitors: &#34; + str(self.visitors)
+</code></pre>
+<p>Now the previously used example program also keeps track of the number of visitors who have experienced the ride.</p>
+<pre><code>matt = Person(&#34;Matt&#34;)
+matt.setWeight(86)
+matt.setHeight(180)
+
+jasper = Person(&#34;Jasper&#34;)
+jasper.setWeight(34)
+jasper.setHeight(132)
+
+waterTrack = AmusementParkRide(&#34;Water track&#34;, 140)
+
+if (waterTrack.allowedToRide(matt)):
+    print(matt.getName() + &#34; may enter the ride&#34;)
+else:
+    print(matt.getName() + &#34; may not enter the ride&#34;)
+
+if (waterTrack.allowedToRide(jasper)):
+    print(jasper.getName() + &#34; may enter the ride&#34;)
+else:
+    print(jasper.getName() + &#34; may not enter the ride&#34;)
+
+print(waterTrack)
+</code></pre>
+<p>The output of the program is:</p>
+<aside class="warning"><p>Matt may enter the ride <br> Jasper may not enter the ride <br> Water track, minimum height: 140, visitors: 1</p>
+</aside>
+<aside class="special"><p><strong>Exercise - Health station<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-5-7-health-station.git" target="_blank">Source files on Github</a></p>
+</aside>
+<aside class="special"><p><strong>Exercise - Card payments<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-5-8-card-payments.git" target="_blank">Source files on Github</a></p>
+</aside>
+<h2 is-upgraded>Object as object variable</h2>
+<p>Objects may contain references to objects.</p>
+<p>Let&#39;s keep working with people, and add a birthday to the person class. A natural way of representing a birthday is to use a <code>Date</code> class. We will call this class <code>SimpleDate</code></p>
+<pre><code>class SimpleDate:
+    def __init__(self,day,month,year):
+        self.day = day
+        self.month = month
+        self.year = year
+
+    def getDay(self):
+        return self.day
+
+    def getMonth(self):
+        return self.month
+
+    def getYear(self):
+        return self.year
+
+    def __str__(self):
+        return str(self.day) + &#34;.&#34; + str(self.month) + &#34;.&#34; + str(self.year)
+</code></pre>
+<p>We can change our Person class to take reference of the birthday. Since we know the birthday, there is no need to store that age of a person as a separate object variable. The age of the person can be inferred from their birthday.</p>
+<p>Let&#39;s create a new Person method that allows for setting the birthday:</p>
+<pre><code>@classmethod
+def with_birthday(cls, name, date):
+    return cls(name,date)
+</code></pre>
+<p>Along with constructor above, we could give Person another constructor where the birthday was given as integers.</p>
+<pre><code>@classmethod
+def with_birthday_as_integers(cls, name, day, month, year):
+    date = SimpleDate(day,month,year)
+    return cls(name,date)
+</code></pre>
+<p>The constructor receives as parameters the different parts of the date (day, month, year). They are used to create a date object, and finally the reference to that date is copied to <code>__init__</code>.</p>
+<p>Let&#39;s modify the <code>__str__</code> method of the Person class so that instead of age, the method returns the birthday:</p>
+<pre><code>def __str__(self):
+    return self.name + &#34;, born on &#34; + str(self.birthday)
+</code></pre>
+<p>Let&#39;s see how the updated Person class works.</p>
+<pre><code>date = SimpleDate(1, 1, 1780)
+euler = Person(&#34;Euler&#34;, date)
+pascal = Person.with_birthday_as_integers(&#34;Pascal&#34;, 19, 6, 1623)
+
+print(euler)
+print(pascal)
+</code></pre>
+<aside class="warning"><p>Euler, born on 1.1.1780 <br> Pascal, born on 19.6.1623</p>
+</aside>
+<aside class="special"><p><strong>Dates in Python<br><br></strong> Python has special methods which can handle datetimes. You can read more <a href="https://www.w3schools.com/python/python_datetime.asp" target="_blank">here</a>.</p>
+</aside>
+<aside class="special"><p><strong>Exercise - Biggest pet shop<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-5-9-biggest-pet-shop.git" target="_blank">Source files on Github</a></p>
+</aside>
+<h2 is-upgraded>Object of same type as method parameter</h2>
+<p>We will continue working with the <code>Person</code> class. We recall that persons know their birthdays:</p>
+<p>We would like to compare the ages of two people. The comparison can be done in multiple ways. We could, for instance, implement a method called <code>def ageAsYears()</code> for the Person class  in that case, the comparison would happen in the following manner:</p>
+<pre><code>date = SimpleDate(1, 1, 1780)
+euler = Person(&#34;Euler&#34;, date)
+pascal = Person.with_birthday_as_integers(&#34;Pascal&#34;, 19, 6, 1623)
+
+if (euler.ageAsYears() &gt; pascal.ageAsYears()):
+    print(euler.getName() + &#34; is older than &#34; + pascal.getName())
+</code></pre>
+<p>We are now going to learn a more &#34;object-oriented&#34; way to compare the ages of people.</p>
+<p>We are going to create a new method <code>olderThan(compared)</code> for the Person class. It can be used to compare a certain person object to the person supplied as the parameter based on their ages.</p>
+<p>The method is meant to be used like this:</p>
+<pre><code>date = SimpleDate(1, 1, 1780)
+euler = Person(&#34;Euler&#34;, date)
+pascal = Person.with_birthday_as_integers(&#34;Pascal&#34;, 19, 6, 1623)
+
+if euler.olderThan(pascal):  #  same as euler.olderThan(pascal)==true
+    print(euler.getName() + &#34; is older than &#34; + pascal.getName())
+else:
+    print(euler.getName() + &#34; is not older than &#34; + pascal.getName())
+</code></pre>
+<p>The program above asks if Euler is older than Pascal. The method <code>olderThan</code> returns <code>True</code> if the object that is used to call the method (<code>object.olderThan(objectGivenAsParameter)</code>) is older than the object given as the parameter, and <code>False</code> otherwise.</p>
+<p>In practice, we call the <code>olderThan</code> method of the object that matches &#34;Euler ibn Musa Euler&#34;, which is referred to by the variable <code>euler</code>. The reference <code>pascal</code>, matching the object &#34;Blaise Pascal&#34;, is given as the parameter to that method.</p>
+<p>The program prints:</p>
+<aside class="warning"><p>Euler is older than Pascal</p>
+</aside>
+<p>The method <code>olderThan</code> receives a person object as its parameter. More precisely, the variable that is defined as the method parameter receives a copy of the value contained by the given variable. That value is a reference to an object, in this case.</p>
+<p>The implementation of the method is illustrated below. Note that the <strong>method may return a value in more than one place</strong> – here the comparison has been divided into multiple parts based on the years, the months, and the days:</p>
+<pre><code>class Person:
+    # ...
+
+    def olderThan(compared):
+        # 1. First compare years
+        ownYear = self.getBirthday().getYear()
+        comparedYear = compared.getBirthday().getYear()
+
+        if (ownYear &lt; comparedYear):
+            return True
+
+        if (ownYear &gt; comparedYear):
+            return False
+
+        # 2. Same birthyear, compare months
+        ownMonth = self.getBirthday().getMonth()
+        comparedMonth = compared.getBirthday().getMonth()
+
+        if (ownMonth &lt; comparedMonth):
+            return True
+
+        if (ownMonth &gt; comparedMonth):
+            return False
+
+        # 3. Same birth year and month, compare days
+        ownDay = self.getBirthday().getDay()
+        comparedDay = compared.getBirthday().getDay()
+
+        if (ownDay &lt; comparedDay):
+            return True
+
+        return False
+</code></pre>
+<p>Let&#39;s pause for a moment to consider abstraction, one of the principles of object-oriented programming. The idea behind abstraction is to conceptualize the programming code so that each concept has its own clear responsibilities. When viewing the solution above, however, we notice that the comparison functionality would be better placed inside the <code>SimpleDate</code> class instead of the <code>Person</code> class.</p>
+<p>We&#39;ll create a method called <code>def before(self,compared)</code> for the class <code>SimpleDate</code>. The method returns the value <code>true</code> if the date given as the parameter is after (or on the same day as) the date of the object whose method is called.</p>
+<pre><code>class SimpleDate:
+
+    def __init__(self,day,month,year):
+        self.day = day
+        self.month = month
+        self.year = year
+
+    def getDay(self):
+        return self.day
+
+    def getMonth(self):
+        return self.month
+
+    def getYear(self):
+        return self.year
+
+    def __str__(self):
+        return str(self.day) + &#34;.&#34; + str(self.month) + &#34;.&#34; + str(self.year)
+
+    # used to check if this date object (`self`) is before
+    # the date object given as the parameter (`compared`)
+    def before(self,compared):
+        # first compare years
+        if (self.year &lt; compared.year):
+            return True
+
+        if (self.year &gt; compared.year):
+            return False
+
+        # years are same, compare months
+        if (self.month &lt; compared.month):
+            return True
+
+        if (self.month &gt; compared.month):
+            return False
+
+        # years and months are same, compare days
+        if (self.day &lt; compared.day):
+            return True
+
+        return False
+</code></pre>
+<p>An example of how to use the method:</p>
+<pre><code>def main():
+    d1 = SimpleDate(14, 2, 2011)
+    d2 = SimpleDate(21, 2, 2011)
+    d3 = SimpleDate(1, 3, 2011)
+    d4 = SimpleDate(31, 12, 2010)
+
+    print(d1 + &#34; is earlier than &#34; + d2 + &#34;: &#34; + d1.before(p2))
+    print(d2 + &#34; is earlier than &#34; + d1 + &#34;: &#34; + d2.before(p1))
+
+    print(d2 + &#34; is earlier than &#34; + d3 + &#34;: &#34; + d2.before(p3))
+    print(d3 + &#34; is earlier than &#34; + d2 + &#34;: &#34; + d3.before(p2))
+
+    print(d4 + &#34; is earlier than &#34; + d1 + &#34;: &#34; + d4.before(p1))
+    print(d1 + &#34; is earlier than &#34; + d4 + &#34;: &#34; + d1.before(p4))
+</code></pre>
+<aside class="warning"><p>14.2.2011 is earlier than 21.2.2011: true <br> 21.2.2011 is earlier than 14.2.2011: false <br> 21.2.2011 is earlier than 1.3.2011: true <br> 1.3.2011 is earlier than 21.2.2011: false <br> 31.12.2010 is earlier than 14.2.2011: true <br> 14.2.2011 is earlier than 31.12.2010: false</p>
+</aside>
+<p>Let&#39;s tweak the method olderThan of the Person class so that from here on out, we take use of the comparison functionality that date objects provide.</p>
+<pre><code>class Person:
+    # ...
+
+    def olderThan(self,compared):
+        if (self.birthday.before(compared.getBirthday())):
+            return True
+
+        return False
+
+        # or return more directly:
+        # return self.birthday.before(compared.getBirthday())
+</code></pre>
+<p>Now the concrete comparison of dates is implemented in the class that it logically (based on the class names) belongs to.</p>
+<aside class="special"><p><strong>Exercise - Comparing apartments<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-5-10-comparing-apartments.git" target="_blank">Source files on Github</a></p>
+</aside>
+<h2 is-upgraded>Comparing the equality of objects (equals)</h2>
+<p>With variables, comparison can be done with two equality signs. This is because the value of a variable is stored directly in the &#34;variable&#39;s box&#34;.</p>
+<p>The method <code>is</code> is similar to the method <code>__str__</code> in the respect that it is available for use even if it has not been defined in the class. The default implementation of this method compares the equality of the references. Let&#39;s observe this with the help of the previously written <code>SimpleDate</code> class.</p>
+<pre><code>first = SimpleDate(1, 1, 2000)
+second = SimpleDate(1, 1, 2000)
+third = SimpleDate(12, 12, 2012)
+fourth = first
+
+if (first is first):
+    print(&#34;Variables first and first are equal&#34;)
+else:
+    print(&#34;Variables first and first are not equal&#34;)
+
+if (first is second):
+    print(&#34;Variables first and second are equal&#34;)
+else:
+    print(&#34;Variables first and second are not equal&#34;)
+
+if (first is third):
+    print(&#34;Variables first and third are equal&#34;)
+else:
+    print(&#34;Variables first and third are not equal&#34;)
+
+if (first is fourth):
+    print(&#34;Variables first and fourth are equal&#34;)
+else:
+    print(&#34;Variables first and fourth are not equal&#34;)
+</code></pre>
+<aside class="warning"><p>Variables first and first are equal <br> Variables first and second are not equal <br> Variables first and third are not equal <br> Variables first and fourth are equal</p>
+</aside>
+<p>There is a problem with the program above. Even though two dates (first and second) have exactly the same values for object variables, they are different from each other from the point of view of the default <code>is</code> method.</p>
+<p>If we want to be able to compare two objects of our own design with the equals method, that method must be defined in the class. The method equals is defined as a method that returns a boolean type value – the return value indicates whether the objects are equal.</p>
+<p>The method <code>is</code> is implemented in a way that allows for using it to compare the current object with any other object. The method receives an Object type object as its single parameter – all objects are Object type, in addition to their own type. The equals method first compares if the addresses are equal: if so, the objects are equal. After this, we examine if the types of the objects are the same: if not, the objects are not equal. Then the Object object passed as the parameter is converted to the type of the object that is being examined by using a type cast. Then the values of the object variables can be compared. Below the equality comparison has been implemented for the SimpleDate class.</p>
+<pre><code>class SimpleDate:
+
+    def __init__(self,day,month,year):
+        self.day = day
+        self.month = month
+        self.year = year
+
+    def getDay(self):
+        return self.day
+
+    def getMonth(self):
+        return self.month
+
+    def getYear(self):
+        return self.year
+
+    def __eq__(self,compared):
+        # if the type of the compared object is not SimpleDate, the objects are not equal
+        if not isinstance(compared,SimpleDate):
+            return False
+
+        # if the values of the object variables are the same, the objects are equal
+        if (self.day == comparedSimpleDate.day and self.month == comparedSimpleDate.month and self.year == comparedSimpleDate.year):
+            return True
+
+        # otherwise the objects are not equal
+        return False
+
+    def __str__(self):
+        return self.day + &#34;.&#34; + self.month + &#34;.&#34; + self.year
+</code></pre>
+<p>Building a similar comparison functionality is possible for Person objects, too. Below, the comparison has been implemented for Person objects that don&#39;t have a separate SimpleDate object. Notice that the names of people are strings (i.e. objects), so we use the equals method for comparing them.</p>
+<pre><code>class Person:
+    # constructors and methods
+
+
+    def equals(compared):
+        # if the compared object is not of type Person, the objects are not equal
+        if not isinstance(compared,Person):
+            return False
+
+        # if the values of the object variables are equal, the objects are equal
+        if (self.name == comparedPerson.name and self.age == comparedPerson.age and self.weight == comparedPerson.weight and self.height == comparedPerson.height):
+            return True
+
+        # otherwise the objects are not equal
+        return False
+
+    # .. methods
+</code></pre>
+<aside class="special"><p><strong>Exercise - Song<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-5-11-song.git" target="_blank">Source files on Github</a></p>
+</aside>
+<aside class="special"><p><strong>Exercise - Identical Twins<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-5-12-identical-twins.git" target="_blank">Source files on Github</a></p>
+</aside>
+<h2 is-upgraded>Object equality and lists</h2>
+<p>Every class we create (and every ready-made Python class) inherits the class Object, even though it is not specially visible in the program code. This is why an instance of any class can be passed as a parameter to a method that receives an Object type variable as its parameter. Inheriting the Object can be seen elsewhere, too: for instance, the <code>__str__</code> method exists even if you have not implemented it yourself, just as the <code>__eq__</code> method does.</p>
+<p>To illustrate, the following source code runs successfully: <code>==</code> method can be found in the Object class inherited by all classes.</p>
+<pre><code>class Bird:
+
+    def __init__ (self,name):
+        self.name = name
+</code></pre>
+<pre><code>red = Bird(&#34;Red&#34;)
+print(red)
+
+chuck = Bird(&#34;Chuck&#34;)
+print(chuck)
+
+if (red == chuck):
+    print(red + &#34; equals &#34; + chuck)
+</code></pre>
+<p>Let&#39;s examine how the <code>__eq__</code> method is used with lists. Let&#39;s assume we have the previously described class <code>Bird</code> without any <code>__eq__</code> method.</p>
+<pre><code>class Bird:
+
+    def __init__ (self,name):
+        self.name = name
+</code></pre>
+<p>Let&#39;s create a list and add a bird to it. After this we&#39;ll check if that bird is contained in it.</p>
+<pre><code>birds = []
+red = Bird(&#34;Red&#34;)
+
+if red in birds:
+    print(&#34;Red is on the list.&#34;)
+else:
+    print(&#34;Red is not on the list.&#34;)
+
+birds.append(red)
+if red in birds:
+    print(&#34;Red is on the list.&#34;)
+else:
+    print(&#34;Red is not on the list.&#34;)
+
+print(&#34;However!&#34;)
+
+red = Bird(&#34;Red&#34;)
+if red in birds:
+    print(&#34;Red is on the list.&#34;)
+else:
+    print(&#34;Red is not on the list.&#34;)
+</code></pre>
+<aside class="warning"><p>Red is not on the list. <br> Red is on the list. <br> However! <br> Red is not on the list.</p>
+</aside>
+<p>We can notice in the example above that we can search a list for our own objects. First, when the bird had not been added to the list, it is not found – and after adding it is found. When the program switches the <code>red</code> object into a new object, with exactly the same contents as before, it is no longer equal to the object on the list, and therefore cannot be found on the list.</p>
+<p>The <code>is</code> method of a list uses the <code>==</code> method that is defined for the objects in its search for objects. In the example above, the <code>Bird</code> class has no definition for that method, so a bird with exactly the same contents – but a different reference – cannot be found on the list.</p>
+<p>Let&#39;s implement an <code>__eq__</code> method for the class <code>Bird</code>. The method examines if the names of the objects are equal – if the names match, the birds are thought to be equal.</p>
+<pre><code>class Bird:
+
+    def __init__ (self,name):
+        self.name = name
+
+    def __eq__(self,compared):
+        # if the compared object is not of type Bird, the objects are not equal
+        if not isinstance(compared,Bird):
+            return False
+
+        # if the values of the object variables are equal, the objects are, too
+        return self.name == comparedBird.name
+</code></pre>
+<p>Now the contains list method recognizes birds with identical contents.</p>
+<pre><code>ArrayList&lt;Bird&gt; birds = new ArrayList&lt;&gt;()
+Bird red = new Bird(&#34;Red&#34;)
+
+if (birds.contains(red)):
+    print(&#34;Red is on the list.&#34;)
+else:
+    print(&#34;Red is not on the list.&#34;)
+}
+
+birds.append(red)
+if (birds.contains(red)):
+    print(&#34;Red is on the list.&#34;)
+else:
+    print(&#34;Red is not on the list.&#34;)
+}
+
+
+print(&#34;However!&#34;)
+
+red = new Bird(&#34;Red&#34;)
+if (birds.contains(red)):
+    print(&#34;Red is on the list.&#34;)
+else:
+    print(&#34;Red is not on the list.&#34;)
+}
+</code></pre>
+<aside class="warning"><p>Red is not on the list. <br> Red is on the list. <br> However! <br> Red is on the list.</p>
+</aside>
+<aside class="special"><p><strong>Exercise - Books<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-5-13-books.git" target="_blank">Source files on Github</a></p>
+</aside>
+<aside class="special"><p><strong>Exercise - Archive<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-5-14-archive.git" target="_blank">Source files on Github</a></p>
+</aside>
+<h2 is-upgraded>Object as a method&#39;s return value</h2>
+<p>We have seen methods return boolean values, numbers, and strings. Easy to guess, a method can return an object of any type.</p>
+<p>In the next example we present a simple counter that has the method <code>clone</code>. The method can be used to create a clone of the counter  i.e. a new counter object that has the same value at the time of its creation as the counter that is being cloned.</p>
+<pre><code>class Counter:
+
+    def __init__(self,initialValue):
+        self.value = initialValue
+
+    def increase(self):
+        self.value = self.value + 1
+
+    def __str__(self):
+        return &#34;value: &#34; + str(self.value)
+
+    def counter_clone(self):
+        # create a new counter object that receives the value of the cloned counter as its initial value
+        clone = Counter(self.value)
+
+        # return the clone to the caller
+        return clone
+</code></pre>
+<p>An example of using counters follows:</p>
+<pre><code>counter = Counter(0)
+counter.increase()
+counter.increase()
+
+print(counter)          # prints 2
+
+clone = counter.counter_clone()
+
+print(counter)          # prints 2
+print(clone)           # prints 2
+
+counter.increase()
+counter.increase()
+counter.increase()
+counter.increase()
+
+print(counter)          # prints 6
+print(clone)           # prints 2
+
+clone.increase()
+
+print(counter)          # prints 6
+print(clone)           # prints 3
+</code></pre>
+<p>Immediately after the cloning operation, the values contained by the clone and the cloned object are the same. However, they are two different objects, so increasing the value of one counter does not affect the value of the other in any way.</p>
+<p>Similarly, a <code>Factory</code> object could also be used to create and return new <code>Car</code> objects. Below is a sketch of the outline of the factory – the factory also knows the makes of the cars that are created.</p>
+<pre><code>class Factory {
+
+    def __init__(self,make):
+        self.make = make
+
+    def procuceCar(self):
+        return Car(self.make)
+</code></pre>
+<aside class="special"><p><strong>Exercise - Dating app<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-5-15-dating-app.git" target="_blank">Source files on Github</a></p>
+</aside>
+<aside class="special"><p><strong>Exercise - Money<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-5-16-money.git" target="_blank">Source files on Github</a></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Summary" duration="0">
+        <p>In the fifth part we took a deep dive into the world of objects. We examined the differences between primitive and reference variables. We learned to overload methods and constructors, and we practiced using objects as object variables, method parameters, and method return values. We created methods that compare objects with each other, and we saw how objects are handled with objects in them.</p>
 
 
       </google-codelab-step>
@@ -44,7 +1046,7 @@
   <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
   <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
   <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="../../elements/codelab-elements/codelab-elements.js"></script>
   <script src="//support.google.com/inapp/api.js"></script>
 
 </body>
