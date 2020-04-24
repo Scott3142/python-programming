@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2020-04-24T12:49:48+01:00",
+  "id": "part-5",
+  "duration": 0,
+  "title": "Part 5",
+  "summary": "The fifth part of the course material continues with object-oriented programming, which was introduced in the fourth part.",
+  "source": "part-5.md",
+  "theme": "",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "btec-unit4"
+  ],
+  "tags": [
+    "web"
+  ],
+  "feedback": "https://github.com/Scott3142/python-programming",
+  "ga": "UA-49751789-4",
+  "url": "part-5"
+}
