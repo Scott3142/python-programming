@@ -428,37 +428,39 @@ Negative
 Positive
 : **Exercise - Gauge** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-12-gauge.git)
 
-### A string representation of an object and the toString-method
+### A string representation of an object and the __str__-method
 
-We are guilty of programming in a somewhat poor style by creating a method for printing the object, i.e., the `printPerson` method. A preferred way is to define a method for the object that returns a "string representation" of the object. We can call the method returning the string representation `toString`. Let's define this method for the person in the following example:
+We are guilty of programming in a somewhat poor style by creating a method for printing the object, i.e., the `printPerson` method. A preferred way is to define a method for the object that returns a "string representation" of the object. We can call the method returning the string representation `__str__`. Let's define this method for the person in the following example:
+
+The `__str__` functions as `printPerson` does. However, it doesn't itself print anything but instead returns a string representation, which the calling method can execute for printing as needed.
+
+The method is used in a somewhat surprising way:
 
 ```python
 class Person:
     # ...
 
-    def toString(self):
+    def __str__(self):
         return self.name + ", age " + str(self.age) + " years"
 ```
 
-The `toString` functions as `printPerson` does. However, it doesn't itself print anything but instead returns a string representation, which the calling method can execute for printing as needed.
-
 ```python
-def main(String[] args):
-    Person grace = new Person("Grace")
-    Person alan = new Person("Alan")
+def main():
+    grace = Person("Grace")
+    alan = Person("Alan")
 
-    int i = 0
+    i = 0
     while (i < 30):
         grace.growOlder()
         i = i + 1
-    }
 
     alan.growOlder()
 
-    print(grace.toString())
-    print(alan.toString())
-}
+    print(grace)
+    print(alan)
 ```
+
+In principle, the `print` method requests the object's string representation and prints it. The call to the `__str__` method returning the string representation does not have to be written explicitly, as Python adds it automatically.
 
 Positive
 : **Exercise - Agent** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-13-agent.git)
@@ -483,8 +485,8 @@ class Person:
         self.weight = newWeight
 
     def bodyMassIndex(self):
-        heigthPerHundred = self.height / 100.0
-        return self.weight / (heigthPerHundred * heigthPerHundred)
+        heightPerHundred = self.height / 100.0
+        return self.weight / (heightPerHundred * heightPerHundred)
 
     # ...
 ```
@@ -547,10 +549,10 @@ Positive
 
 ### Calling an internal method
 
-The object may also call its methods. For example, if we wanted the string representation returned by toString to also tell of a person's body mass index, the object's own `bodyMassIndex` method should be called in the `toString` method:
+The object may also call its methods. For example, if we wanted the string representation returned by __str__ to also tell of a person's body mass index, the object's own `bodyMassIndex` method should be called in the `__str__` method:
 
 ```python
-def toString():
+def __str__():
     return self.name + ", age " + str(self.age) + " years, my body mass index is " + str(self.bodyMassIndex())
 }
 ```
@@ -565,3 +567,444 @@ Positive
 
 Positive
 : **Rounding errors** <br><br> You probably noticed that some of the figures have rounding errors. In the previous exercise, for example, Grace's balance of 30.7 may be printed as `30.700000000000003`. This is because floating-point numbers, such as `double`, are actually stored in binary form. That is, in zeros and ones using only a limited number of numbers. <br><br> As the number of floating-point numbers is infinite -- (in case you're wondering "how infinite?", think how many floating-point or decimal values fit between the numbers 5 and 6 for instance). All of the floating-point numbers simply cannot be represented by a finite number of zeros and ones. Thus, the computer must place a limit on the accuracy of stored numbers. <br><br> Normally, account balances, for instance, are saved as integers such that, say, the value 1 represents one cent.
+
+## Objects in a list
+
+### What you'll learn
+* You can add objects to a list
+* You can go through objects in a list
+
+In the example below we first add strings to a list, after which the strings in the list are printed one by one.
+
+```python
+# initialise list
+names = []
+
+# string can first be stored in a variable
+name = "Betty Jennings"
+# then add it to the list
+names.append(name)
+
+# strings can also be directly added to the list:
+names.append("Betty Snyder")
+names.append("Frances Spence")
+names.append("Kay McNulty")
+names.append("Marlyn Wescoff")
+names.append("Ruth Lichterman")
+
+# several different repeat statements can be
+# used to go through the list elements
+
+# 1. while loop
+index = 0
+while (index < len(names)):
+    print(names[index])
+    index = index + 1
+
+print()
+
+# 2. for loop with index
+for i in range(len(names)):
+    print(names[i])
+
+print()
+
+# 3. for each loop (no index)
+for name in names:
+    print(name)
+```
+
+Negative
+: Betty Jennings <br> Betty Snyder <br> Frances Spence <br> Kay McNulty <br> Marlyn Wescoff <br> Ruth Lichterman <br><br> Betty Jennings <br> Betty Snyder <br> Frances Spence <br> Kay McNulty <br> Marlyn Wescoff <br> Ruth Lichterman <br><br> Betty Jennings <br> Betty Snyder <br> Frances Spence <br> Kay McNulty <br> Marlyn Wescoff <br> Ruth Lichterman
+
+### Adding object to a list
+
+Strings are objects, so it should come as no surprise that other kinds of objects can also be found in lists. Next, let's examine the cooperation of lists and objects in more detail.
+
+Let's assume we have access to the class defined below, describing a person.
+
+
+```python
+class Person:
+    def __init__(self,name):
+        self.age = 0
+        self.name = name
+        self.weight = 0
+        self.height = 0
+
+    def getName(self):
+        return self.name
+
+    def getAge(self):
+        return self.age
+
+    def growOlder(self):
+        self.age = self.age + 1
+
+    def isOfLegalAge(self):
+        if (self.age < 18):
+            return False
+
+        return True
+
+    def setHeight(self,newHeight):
+        self.height = newHeight
+
+    def setWeight(self,newWeight):
+        self.weight = newWeight
+
+    def bodyMassIndex(self):
+        heightPerHundred = self.height / 100.0
+        return self.weight / (heightPerHundred * heightPerHundred)
+
+    def __str__(self):
+        return self.name + ", age " + str(self.age) + " years"
+
+```
+
+Handling objects in a list is not really different in any way from the previous experience we have with lists. The essential difference is only to define the type for the stored elements when you create the list.
+
+In the example below we first create a list meant for storing Person type object, after which we add persons to it. Finally the person objects are printed one by one.
+
+```python
+persons = []
+
+# a person object can be created first
+john = Person("John")
+
+# and then added to the list
+persons.append(john)
+
+# person objects can also be created "in the same sentence" that they are added to the list
+persons.append(Person("Matthew"))
+persons.append(Person("Martin"))
+
+for person in persons:
+    print(person)
+```
+
+Negative
+: John, age 0 years <br> Matthew, age 0 years <br> Martin, age 0 years
+
+### Adding user-inputted objects to a list
+
+The structure we used earlier for reading inputs is still very useful.
+
+```python
+persons = []
+
+# Read the names of persons from the user
+while (True):
+    name = input("Enter a name, empty will stop: ")
+    if not name: # nice way of checking if a list is empty
+        break
+
+    # Add to the list a new person
+    # whose name is the previous user input
+    persons.append(Person(name))
+
+# Print the number of the entered persons, and their individual information
+print()
+print("Persons in total: " + str(len(persons)))
+print("Persons: ")
+
+for person in persons:
+    print(person)
+```
+
+Negative
+: Enter a name, empty will stop: <br> *User: \<Ada\>* <br> Enter a name, empty will stop: *User: \<Grace\>* <br> Enter a name, empty will stop: *User: \<Katherine\>* <br><br> Persons in total: 3 <br> Persons: <br> Ada, age 0 years <br> Grace, age 0 years <br> Katherine, age 0 years
+
+Positive
+: **Exercise - Items** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-17-items.git)
+
+### Multiple constructor parameters
+
+If the constructor demands more than one parameter, you can query the user for more information. Let's assume we have the following constructor for the class `Person`.
+
+```python
+class Person:
+    def __init__(self,name,age):
+        self.age = age
+        self.name = name
+        self.weight = 0
+        self.height = 0
+
+    # ...
+```
+
+In this case, an object is created by calling the two-parameter constructor.
+
+If we want to query the user for this kind of object, they must be asked for each parameter separately. In the example below, name and age parameters are asked separately from the user. Entering an empty name will end the reading part.
+
+The persons are printed after they have been read.
+
+```python
+persons = []
+
+# Read person information from the user
+while (True):
+    name = input("Enter name, empty will end: ")
+    if not name:
+        break
+
+    print("Enter the age of the person " + name + ": ")
+
+    age = int(input("Enter the age of the person " + name + ": "))
+
+    # We add a new person to the list.
+    # The person's name and age were decided by the user
+    persons.append(Person(name, age))
+
+# We'll print the number of the inputted persons, and the persons themselves
+print()
+print("Total number of persons: " + str(len(persons)))
+print("Persons: ")
+
+for person in persons:
+    print(person)
+```
+
+Negative
+: Enter name, empty will end: <br> *User: \<Grace Hopper\>* <br> Enter the age of the person Grace Hopper: <br> *User: \<85\>* <br> Enter name, empty will end: <br><br> Total number of persons: 1 <br> Persons: <br> Grace Hopper, age 85 years
+
+Positive
+: **Exercise - Personal Information** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-18-personal-information.git)
+
+### Reading input in a specific format
+
+In the example and exercise below, the required information was entered line by line. By no means is it impossible to ask for input in a specific format, e.g. separated by a comma.
+
+If the name and age were separated by a comma, the program could work in the following manner.
+
+```python
+persons = []
+
+# Read person information from the user
+print("Enter the person details separated by a comma, e.g.: Randall,2")
+while (True):
+    details = input("Enter the details, empty will stop: ")
+    if not details:
+        break
+
+    parts = details.split(",")
+    name = parts[0]
+    age = int(parts[1])
+    persons.append(Person(name, age))
+
+# Print the number of the entered persons, and the persons themselves
+print()
+print("Total number of persons: " + str(len(persons)))
+print("Persons: ")
+
+for person in persons:
+    print(person)
+```
+
+### Filtered printing from the list
+
+You can also examine the objects on the list as you go through it. In the example below, we first ask the user for an age restriction, after which we print all the objects whose age is at least the number given by the user.
+
+```python
+# Assume we have a 'persons' list
+# that consists of person objects
+
+ageLimit = int(input("What is the age limit? "))
+
+for person in persons:
+    if (person.getAge() >= ageLimit):
+        print(person)
+```
+
+Positive
+: **Exercise - Television Programs** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-19-television-programs.git)
+
+Positive
+: **Exercise - Books** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-20-books.git)
+
+## Files and reading data
+
+### What you'll learn
+* You'll review reading keyboard input.
+* You know what a file and a filesystem are, and are able to add an empty text file into the filesystem.
+* You know how to create a write a program that reads data from a file.
+
+A considerable amount of software is in one way or another based on handling data. Software created for playing music handles music files and those created for the purpose of image manipulation handle image files. Applications that run on the internet and mobile devices, such as Facebook, WhatsApp, and Telegram, handle user information that is stored in file-based databases. What these all have in common is that they read and manipulate data in one way or another. Also, the data being handled is ultimately stored in some format in one or more files.
+
+### Reading From the Keyboard
+
+We've been using the `input`-method since the beginning of this course to read user input. The block in which data is read has been a while-true loop where the reading ends at a specific input.
+
+```python
+while (True):
+    line = input()
+
+    if (line == "end"):
+        break
+
+    # add the read line to a list for later
+    # handling or handle the line immediately
+```
+
+In text-based user interfaces, the input of the user is directed into the input stream one line at a time, which means that the information is sent to be handled every time the user enters a new line.
+
+Positive
+: **Exercise - Number of strings** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-21-number-of-strings.git)
+
+The user input is read in string form. If we wanted to handle the input as integers, for instance, we'd have to convert it to another form. An example program has been provided below - it reads input from the user until the user inputs "end". As long as the user input is not "end" the inputs are handled as integers -- in this case, the number is simply printed.
+
+```python
+while (True):
+    row = input()
+
+    if (row == "end"):
+        break
+
+    number = int(row)
+    print(row)
+```
+
+Positive
+: **Exercise - Cubes** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-22-cubes.git)
+
+### Files and the Filesystem
+
+**Files** are collections of data that live in computers. These files can contain, among other things, text, images, music, or any combination of these. The file format determines the content of the file as well as the program required to read the file. For example, PDF files are read with a program suited for reading PDF files, and music files are read with a program suited for reading music files. Each of these programs is made by humans, and the creators of these programs -- i.e., programmers -- also specify the file format as part of the work.
+
+Computers have several different programs for browsing files. These programs are specific to the operating system. All programs used for browsing files make use of the filesystem of the computer in one way or another.
+
+Positive
+: **The Concrete File Storage Format** <br><br> Files exist on the hard drive of a computer, which is, in reality, a large set of ones and zeros, i.e., bits. Information is made up of these bits, e.g., one variable of type int takes up 32 bits (i.e., 32 ones or zeros). Modern terabyte-sized hard drives hold about 8 trillion bits (written out the number is 8,000,000,000,000). On this scale, a single integer is very small. <br><br> Files can exist practically anywhere on a hard drive, even separated into multiple pieces. The computer's **filesystem** has the responsibility of keeping track of the locations of files on the hard drive as well as providing the ability to create new files and modify them. The filesystem's main responsibility is abstracting the true structure of the hard drive  a user or a program using a file doesn't need to care about the about how, or where, the file is actually stored.
+
+### Reading From a File
+
+**Reading a file** is done using the `open()` method. When we want to read a file, we give the path for the file we want to read as a parameter to the method call. The path to the file is a concept that will become clearer as the course progresses.
+
+Once we have invoked `open()`, the file can be read using a `read()` method. The reading proceeds until all the lines of the file have been read, i.e., until the read command find no more lines to read. Reading a file may result in an error, and for this reason, many programming languages require separate blocks - one for the `try`, and another, called `except` in Python, to catch potential errors.
+
+```python
+# we create a scanner for reading the file
+try:
+    # open the file
+    f = open("file.txt","r")
+
+    # we read the file until all lines have been read
+    print(f.read())
+
+except:
+    print("Something went wrong opening the file")
+
+finally:
+    f.close()
+```
+
+The final line closes the open file, which flushes any unwritten information and closes the file object, after which no more writing can be done. Python automatically closes a file when the reference object of a file is reassigned to another file but it is a good practice to always use the close() method to close a file. We'll be returning to the topic of error handling later but in Python, we can simplify this code down to the use of a single `with` statement as follows:
+
+```python
+with open("file.txt",'r') as f:
+    data = f.read().splitlines()
+    # do something with data
+```
+
+This takes care of closing the file too, so there's no need to use a `close()` statement together with a `with` statement. The `splitlines()` method splits the file by **new lines** by default
+
+A file is read from the project root by default, i.e., the folder that contains the python file you are working from.
+
+Positive:
+: **Read and write** <br><br> Note that we have a second parameter `r` passed to the `open()` method, which tells Python that we want to **read** the file. <br><br> If we wanted to write data to the file, we can pass `w` instead. It is important to make this distinction, to avoid accidentally overwriting files that you want to keep. If you overwrite something in Python in this way, there's no getting it back!
+
+Positive
+: **Exercise - Printing from a file** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-23-printing-from-a-file.git)
+
+Positive
+: **Exercise - Printing a specified file** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-23-printing-a-specified-file.git)
+
+In the example below, we read all the lines of the file "file.txt", which are then added to a list. This implementation uses the Python `with` keyword. This effectively
+
+```python
+with open('demofile.txt','r') as f:
+      lines = f.read().splitlines()
+
+# we print the total number of lines
+print("Total lines: " + str(len(lines)))
+```
+
+Positive
+: **Exercise - Guest list from a file** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-24-guest-list-from-a-file.git)
+
+Positive
+: **Exercise - Is it in the file?** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-25-is-it-in-the-file.git)
+
+Positive
+: **Exercise - Numbers from a file?** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-26-numbers-from-a-file.git)
+
+### Reading Data of a Specific Format From a File
+
+The world is full of data that are related to other data -- these form collections. For example, personal information can include a name, date of birth and a phone number. Address information, on the other hand, can include a country, city, street address, postal number and so on.
+
+Data is often stored in files using a specific format. One such format that's already familiar to us is comma-separated values (CSV) format, i.e., data separated by commas. Python has a special library for reading csv files, which can be *imported* using the `import` statement as follows.
+
+```python
+import csv
+with open("data.csv") as f:
+    reader = csv.reader(f,delimiter=',')
+
+    for row in reader:
+        print(row)
+```
+
+In the example above, each row becomes a Python list in its own right, and can be operated on accordingly. For example, with example data
+
+Negative
+: Marie Curie, 26 <br> Rosalind Franklin, 32 <br> Mary Anning, 45
+
+we could read the names only like so:
+
+```python
+import csv
+with open("data.csv") as f:
+    reader = csv.reader(f,delimiter=',')
+
+    for row in reader:
+        print(row[0])
+```
+
+which prints
+
+Negative
+: Marie Curie <br> Rosalind Franklin <br> Mary Anning
+
+Positive
+: **Exercise - Records from a File** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-27-records-from-a-file.git)
+
+### Reading Objects From a File
+
+Creating objects from data that is read from a file is straightforward. Let's assume that we have a class called `Person`, as well as the data from before.
+
+Reading objects can be done like so:
+
+```python
+people = []
+
+import csv
+with open("records.csv") as f:
+    reader = csv.reader(f,delimiter=',')
+
+    for row in reader:
+        people.append(Person(reader[0],reader[1]))
+
+print("Total amount of people read: " + str(len(people)))
+```
+
+Reading objects from a file is a clear responsibility in and of itself, and should for that reason be isolated into a method. This is what we'll be doing in the next exercise.
+
+Positive
+: **Exercise - Storing Records** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-28-storing-records.git)
+
+
+Positive
+: **Exercise - Sport Statistics** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-29-sporting-statistics.git)
+
+## Summary
+
+In the fourth part of the course we learned to read data from files, and took our first steps towards object-oriented programming. We learned classes and objects to suit our programming needs. We defined constructors, methods, and object variables for the classes, and grew used to printing object-related information with their `__str__` method. We also practised handling objects on a list.
