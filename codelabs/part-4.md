@@ -428,37 +428,39 @@ Negative
 Positive
 : **Exercise - Gauge** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-12-gauge.git)
 
-### A string representation of an object and the toString-method
+### A string representation of an object and the __str__-method
 
-We are guilty of programming in a somewhat poor style by creating a method for printing the object, i.e., the `printPerson` method. A preferred way is to define a method for the object that returns a "string representation" of the object. We can call the method returning the string representation `toString`. Let's define this method for the person in the following example:
+We are guilty of programming in a somewhat poor style by creating a method for printing the object, i.e., the `printPerson` method. A preferred way is to define a method for the object that returns a "string representation" of the object. We can call the method returning the string representation `__str__`. Let's define this method for the person in the following example:
+
+The `__str__` functions as `printPerson` does. However, it doesn't itself print anything but instead returns a string representation, which the calling method can execute for printing as needed.
+
+The method is used in a somewhat surprising way:
 
 ```python
 class Person:
     # ...
 
-    def toString(self):
+    def __str__(self):
         return self.name + ", age " + str(self.age) + " years"
 ```
 
-The `toString` functions as `printPerson` does. However, it doesn't itself print anything but instead returns a string representation, which the calling method can execute for printing as needed.
-
 ```python
-def main(String[] args):
-    Person grace = new Person("Grace")
-    Person alan = new Person("Alan")
+def main():
+    grace = Person("Grace")
+    alan = Person("Alan")
 
-    int i = 0
+    i = 0
     while (i < 30):
         grace.growOlder()
         i = i + 1
-    }
 
     alan.growOlder()
 
-    print(grace.toString())
-    print(alan.toString())
-}
+    print(grace)
+    print(alan)
 ```
+
+In principle, the `print` method requests the object's string representation and prints it. The call to the `__str__` method returning the string representation does not have to be written explicitly, as Python adds it automatically.
 
 Positive
 : **Exercise - Agent** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-13-agent.git)
@@ -483,8 +485,8 @@ class Person:
         self.weight = newWeight
 
     def bodyMassIndex(self):
-        heigthPerHundred = self.height / 100.0
-        return self.weight / (heigthPerHundred * heigthPerHundred)
+        heightPerHundred = self.height / 100.0
+        return self.weight / (heightPerHundred * heightPerHundred)
 
     # ...
 ```
@@ -547,10 +549,10 @@ Positive
 
 ### Calling an internal method
 
-The object may also call its methods. For example, if we wanted the string representation returned by toString to also tell of a person's body mass index, the object's own `bodyMassIndex` method should be called in the `toString` method:
+The object may also call its methods. For example, if we wanted the string representation returned by __str__ to also tell of a person's body mass index, the object's own `bodyMassIndex` method should be called in the `__str__` method:
 
 ```python
-def toString():
+def __str__():
     return self.name + ", age " + str(self.age) + " years, my body mass index is " + str(self.bodyMassIndex())
 }
 ```
@@ -565,3 +567,257 @@ Positive
 
 Positive
 : **Rounding errors** <br><br> You probably noticed that some of the figures have rounding errors. In the previous exercise, for example, Grace's balance of 30.7 may be printed as `30.700000000000003`. This is because floating-point numbers, such as `double`, are actually stored in binary form. That is, in zeros and ones using only a limited number of numbers. <br><br> As the number of floating-point numbers is infinite -- (in case you're wondering "how infinite?", think how many floating-point or decimal values fit between the numbers 5 and 6 for instance). All of the floating-point numbers simply cannot be represented by a finite number of zeros and ones. Thus, the computer must place a limit on the accuracy of stored numbers. <br><br> Normally, account balances, for instance, are saved as integers such that, say, the value 1 represents one cent.
+
+## Objects in a list
+
+### What you'll learn
+* You can add objects to a list
+* You can go through objects in a list
+
+In the example below we first add strings to a list, after which the strings in the list are printed one by one.
+
+```python
+# initialise list
+names = []
+
+# string can first be stored in a variable
+name = "Betty Jennings"
+# then add it to the list
+names.append(name)
+
+# strings can also be directly added to the list:
+names.append("Betty Snyder")
+names.append("Frances Spence")
+names.append("Kay McNulty")
+names.append("Marlyn Wescoff")
+names.append("Ruth Lichterman")
+
+# several different repeat statements can be
+# used to go through the list elements
+
+# 1. while loop
+index = 0
+while (index < len(names)):
+    print(names[index])
+    index = index + 1
+
+print()
+
+# 2. for loop with index
+for i in range(len(names)):
+    print(names[i])
+
+print()
+
+# 3. for each loop (no index)
+for name in names:
+    print(name)
+```
+
+Negative
+: Betty Jennings <br> Betty Snyder <br> Frances Spence <br> Kay McNulty <br> Marlyn Wescoff <br> Ruth Lichterman <br><br> Betty Jennings <br> Betty Snyder <br> Frances Spence <br> Kay McNulty <br> Marlyn Wescoff <br> Ruth Lichterman <br><br> Betty Jennings <br> Betty Snyder <br> Frances Spence <br> Kay McNulty <br> Marlyn Wescoff <br> Ruth Lichterman
+
+### Adding object to a list
+
+Strings are objects, so it should come as no surprise that other kinds of objects can also be found in lists. Next, let's examine the cooperation of lists and objects in more detail.
+
+Let's assume we have access to the class defined below, describing a person.
+
+
+```python
+class Person:
+    def __init__(self,name):
+        self.age = 0
+        self.name = name
+        self.weight = 0
+        self.height = 0
+
+    def getName(self):
+        return self.name
+
+    def getAge(self):
+        return self.age
+
+    def growOlder(self):
+        self.age = self.age + 1
+
+    def isOfLegalAge(self):
+        if (self.age < 18):
+            return False
+
+        return True
+
+    def setHeight(self,newHeight):
+        self.height = newHeight
+
+    def setWeight(self,newWeight):
+        self.weight = newWeight
+
+    def bodyMassIndex(self):
+        heightPerHundred = self.height / 100.0
+        return self.weight / (heightPerHundred * heightPerHundred)
+
+    def __str__(self):
+        return self.name + ", age " + str(self.age) + " years"
+
+```
+
+Handling objects in a list is not really different in any way from the previous experience we have with lists. The essential difference is only to define the type for the stored elements when you create the list.
+
+In the example below we first create a list meant for storing Person type object, after which we add persons to it. Finally the person objects are printed one by one.
+
+```python
+persons = []
+
+# a person object can be created first
+john = Person("John")
+
+# and then added to the list
+persons.append(john)
+
+# person objects can also be created "in the same sentence" that they are added to the list
+persons.append(Person("Matthew"))
+persons.append(Person("Martin"))
+
+for person in persons:
+    print(person)
+```
+
+Negative
+: John, age 0 years <br> Matthew, age 0 years <br> Martin, age 0 years
+
+### Adding user-inputted objects to a list
+
+The structure we used earlier for reading inputs is still very useful.
+
+```python
+persons = []
+
+# Read the names of persons from the user
+while (True):
+    name = input("Enter a name, empty will stop: ")
+    if not name: # nice way of checking if a list is empty
+        break
+
+    # Add to the list a new person
+    # whose name is the previous user input
+    persons.append(Person(name))
+
+# Print the number of the entered persons, and their individual information
+print()
+print("Persons in total: " + str(len(persons)))
+print("Persons: ")
+
+for person in persons:
+    print(person)
+```
+
+Negative
+: Enter a name, empty will stop: <br> *User: \<Ada\>* <br> Enter a name, empty will stop: *User: \<Grace\>* <br> Enter a name, empty will stop: *User: \<Katherine\>* <br><br> Persons in total: 3 <br> Persons: <br> Ada, age 0 years <br> Grace, age 0 years <br> Katherine, age 0 years
+
+Positive
+: **Exercise - Items** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-17-items.git)
+
+### Multiple constructor parameters
+
+If the constructor demands more than one parameter, you can query the user for more information. Let's assume we have the following constructor for the class `Person`.
+
+```python
+class Person:
+    def __init__(self,name,age):
+        self.age = age
+        self.name = name
+        self.weight = 0
+        self.height = 0
+
+    # ...
+```
+
+In this case, an object is created by calling the two-parameter constructor.
+
+If we want to query the user for this kind of object, they must be asked for each parameter separately. In the example below, name and age parameters are asked separately from the user. Entering an empty name will end the reading part.
+
+The persons are printed after they have been read.
+
+```python
+persons = []
+
+# Read person information from the user
+while (True):
+    name = input("Enter name, empty will end: ")
+    if not name:
+        break
+
+    print("Enter the age of the person " + name + ": ")
+
+    age = int(input("Enter the age of the person " + name + ": "))
+
+    # We add a new person to the list.
+    # The person's name and age were decided by the user
+    persons.append(Person(name, age))
+
+# We'll print the number of the inputted persons, and the persons themselves
+print()
+print("Total number of persons: " + str(len(persons)))
+print("Persons: ")
+
+for person in persons:
+    print(person)
+```
+
+Negative
+: Enter name, empty will end: <br> *User: \<Grace Hopper\>* <br> Enter the age of the person Grace Hopper: <br> *User: \<85\>* <br> Enter name, empty will end: <br><br> Total number of persons: 1 <br> Persons: <br> Grace Hopper, age 85 years
+
+Positive
+: **Exercise - Personal Information** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-18-personal-information.git)
+
+### Reading input in a specific format
+
+In the example and exercise below, the required information was entered line by line. By no means is it impossible to ask for input in a specific format, e.g. separated by a comma.
+
+If the name and age were separated by a comma, the program could work in the following manner.
+
+```python
+persons = []
+
+# Read person information from the user
+print("Enter the person details separated by a comma, e.g.: Randall,2")
+while (True):
+    details = input("Enter the details, empty will stop: ")
+    if not details:
+        break
+
+    parts = details.split(",")
+    name = parts[0]
+    age = int(parts[1])
+    persons.append(Person(name, age))
+
+# Print the number of the entered persons, and the persons themselves
+print()
+print("Total number of persons: " + str(len(persons)))
+print("Persons: ")
+
+for person in persons:
+    print(person)
+```
+
+### Filtered printing from the list
+
+You can also examine the objects on the list as you go through it. In the example below, we first ask the user for an age restriction, after which we print all the objects whose age is at least the number given by the user.
+
+```python
+# Assume we have a 'persons' list
+# that consists of person objects
+
+ageLimit = int(input("What is the age limit? "))
+
+for person in persons:
+    if (person.getAge() >= ageLimit):
+        print(person)
+```
+
+Positive
+: **Exercise - Television Programs** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-19-television-programs.git)
+
+Positive
+: **Exercise - Books** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-20-books.git)
