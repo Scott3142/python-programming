@@ -1003,4 +1003,8 @@ Positive
 
 
 Positive
-: **Exercise - Sport Statistics** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-29-sporting-statistics.git)s
+: **Exercise - Sport Statistics** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-29-sporting-statistics.git)
+
+## Summary
+
+In the fourth part of the course we learned to read data from files, and took our first steps towards object-oriented programming. We learned classes and objects to suit our programming needs. We defined constructors, methods, and object variables for the classes, and grew used to printing object-related information with their `__str__` method. We also practised handling objects on a list.
