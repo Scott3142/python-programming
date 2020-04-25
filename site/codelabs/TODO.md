@@ -9,3 +9,4 @@
     - section on testing
     - projects
 - Fix styles to PEP8
+- Add development instructions
