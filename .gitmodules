@@ -332,7 +332,7 @@
 	path = exercise-files/exercise-6-13-testing
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-6-13-testing.git
 [submodule "exercise-files/exercise-7-2-liquid-containers-2"]
-	path = exercise-files/exercise-7-3-liquid-containers-2
+	path = exercise-files/exercise-7-2-liquid-containers-2
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-7-2-liquid-containers-2.git
 [submodule "exercise-files/exercise-7-1-liquid-containers"]
 	path = exercise-files/exercise-7-1-liquid-containers

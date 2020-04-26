@@ -939,9 +939,6 @@ Positive
 Positive
 : **Exercise - Printing from a file** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-23-printing-from-a-file.git)
 
-Positive
-: **Exercise - Printing a specified file** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-23-printing-a-specified-file.git)
-
 In the example below, we read all the lines of the file "file.txt", which are then added to a list. This implementation uses the Python `with` keyword.
 
 ```python
