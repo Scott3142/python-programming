@@ -54,7 +54,7 @@ hours = 0
 minutes = 0
 seconds = 0
 
-while (True):
+while True:
     # 1. printing the time
     print_out(hours, minutes, seconds)
     print()
@@ -93,14 +93,14 @@ The same implemented in an object-oriented way:
 
 ```python
 class Hand:
-    def __init__(upperBound):
-        self.upperBound = upperBound
+    def __init__(self,upper_bound):
+        self.upper_bound = upper_bound
         self.value = 0
 
     def advance(self):
         self.value = self.value + 1
 
-        if (self.value >= self.upperBound):
+        if (self.value >= self.upper_bound):
             self.value = 0
 
     def value(self):
@@ -137,7 +137,7 @@ class Clock():
 ```python
 clock = Clock()
 
-while (True):
+while True:
     print(clock)
     clock.advance()
 ```
@@ -213,7 +213,7 @@ Next let's take a look at algorithms meant for information retrieval.
 Linear search is a search algorithm that searches for information in array by going through every value in the array one by one. When the value that was searched for is found, its index is immediately returned. If the requested value cannot be found, linear sort return the information that the value was not found -- typically this means returning `-1` instead of a valid index.
 
 ```python
-def linearSearch(array,searched):
+def linear_search(array,searched):
         for index in range(len(array)):
             if (array[i] == searched):
                 return i
@@ -246,4 +246,12 @@ Positive
 
 ## Conclusion
 
-During the first seven parts you've become familiar with the basics of programming and produced many functioning program. You now know how to use variables, conditionals, loops and methods. You know that the naming of variables and methods affects the understandability of your programs. You've also dived deeper into the world of object-oriented programming, and to the wording of your programs through it. In addition, you've become acquainted with one of the most important tools of a professional developer - the integrated development environment (IDE).
+During the first seven parts you've become familiar with the basics of programming and produced many functioning program.
+
+You now know how to use variables, conditionals, loops and methods.
+
+You know that the naming of variables and methods affects the understandability of your programs.
+
+You've also dived deeper into the world of object-oriented programming, and to the wording of your programs through it.
+
+In addition, you've become acquainted with one of the most important tools of a professional developer - the integrated development environment (IDE).

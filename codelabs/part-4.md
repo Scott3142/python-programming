@@ -31,7 +31,7 @@ A **Method** is a piece of source code written inside a class that's been named 
 An object is always instantiated by calling a method that created an object.
 
 Positive
-: **The Relationship Between a Class and an Object** <br>>br> A class lays out a blueprint for any objects that are instantiated from it. Let's draw from an analogy from outside the world of computers. Detached houses are most likely familiar to most, and we can safely assume the existence of drawings somewhere that determine what exactly a detached house is to be like. A class is a blueprint. In other words, it specifies what kinds of objects can be instantiated from it. <br><br> Individual objects, detached houses in this case, are all created based on the same blueprints - they're instances of the same class. The states of individual objects, i.e., their attributes (such as the wall color, the building material of the roof, the color of its foundations, the doors' materials and color, ...) may all vary, however.
+: **The Relationship Between a Class and an Object** <br><br> A class lays out a blueprint for any objects that are instantiated from it. Let's draw from an analogy from outside the world of computers. Detached houses are most likely familiar to most, and we can safely assume the existence of drawings somewhere that determine what exactly a detached house is to be like. A class is a blueprint. In other words, it specifies what kinds of objects can be instantiated from it. <br><br> Individual objects, detached houses in this case, are all created based on the same blueprints - they're instances of the same class. The states of individual objects, i.e., their attributes (such as the wall color, the building material of the roof, the color of its foundations, the doors' materials and color, ...) may all vary, however.
 
 Positive
 : **Exercise - Your first account** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-1-your-first-account.git)
@@ -53,18 +53,18 @@ A class is defined to represent some meaningful entity, where a "meaningful enti
 Let's begin. We'll assume that we have a project template that has an empty main program:
 
 ```python
-class Main:
-
-    def __init__(self):
-        # some code
+def main():
+    # some code
 ```
 
-Let's create a class named `Person`. For this class, we create a separate file named `Person.py`. Our program now consists of two separate files since the main program is also in its own file. The `Person.py` file initially contains the class definition **class Person** and the block that confines the contents of the class.
+We will assume that this main program is located in a file called `main.py`. Let's create a class named `Person`. For this class, we create a separate file named `person.py`. Our program now consists of two separate files since the main program is also in its own file. The `person.py` file initially contains the class definition **class Person** and the block that confines the contents of the class.
 
 ```python
 class Person:
 
 ```
+We call this file a **module**, which should follow the [PEP 8 styling guidelines](https://www.python.org/dev/peps/pep-0008/#package-and-module-names) on naming. Similarly to variables, methods and functions, module names should be snake_case, but as short as possible.
+
 A class defines the attributes and behaviours of objects that are created from it. Let's decide that each person object has a name and an age. It's natural to represent the name as a string, and the age as an integer. We'll go ahead and add these to our blueprint:
 
 ```python
@@ -75,9 +75,39 @@ class Person:
 
 We specify above that each object created from the `Person` class has a `name` and an `age`. Variables defined inside a class are called **instance variables**, or object fields or object attributes. Other names also seem to exist.
 
-Instance variables are written on the lines following the class definition `class Person:`. Many programming languages such as Java has a concept of **encapsulation**, which allows **private** variables to be "hidden" inside the object. In Python, there is no existence of “Private” instance variables so we do not discuss them further here.
+Instance variables are written on the lines following the class definition `class Person:`. Many programming languages such as Java has a concept of **encapsulation**, which allows **private** variables to be "hidden" inside the object. In Python, there is no existence of “Private” instance variables so we do not discuss them further here. For the vast majority of the forthcoming examples, we will not define instance variables either, and will only declare variables inside the *constructor* method which we discuss below.
 
 We have now defined a blueprint -- a class -- for the person object. Each new person object has the variables `name` and `age`, which are able to hold object-specific values. The "state" of a person consists of the values assigned to their name and age.
+
+To access the `Person` class in the `main.py` program, we will need to import it. Let's see how this works below with an example and review the file and folder structure. We should have a folder structure as follows:
+
+```
++-- project_folder
+|   +-- main.py
+|   +-- person.py
+```
+
+where each the contents of the file are as follows:
+
+#### person.py
+```python
+class Person:
+    name = ""
+    age = 0
+```
+
+#### main.py
+```python
+from person import Person
+
+def main():
+    # some code here
+```
+
+The import statement at the top of the `main.py` file functions like so: `from module import method`. While these statements may be missing from subsequent code snippets throughout this course, you must always assume that the folder structures are
+
+Positive
+: **Naming modules** <br><br> The filenames are important in Python and you shouldn't use a filename that is the same as a common Python command like `print`. If you call a module `print.py` and import it, you will override the built-in `print()` method and your program will not function as expected.
 
 Positive
 : **Exercise - Dog attributes** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-3-dog-attributes.git)
@@ -87,7 +117,7 @@ Positive
 We want to set an initial state for an object that's created. It'd be convenient to pass values ​​to the variables of that object as it's being created. For example, when creating a new person object, it's useful to be able to provide it with a name:
 
 ```python
-def main(Person):
+def main():
     ada = Person("Ada")
     # ...
 ```
@@ -96,25 +126,22 @@ This is achieved by defining the method that creates the object, i.e., its const
 
 ```python
 class Person:
-    name = ""
-    age = 0
-
-    def __init__(self,initialName):
+    def __init__(self,initial_name):
         self.age = 0
-        self.name = initialName
+        self.name = initial_name
 ```
 
 The constructor is provided, as a parameter, to the name of the person object to be created. The parameter is enclosed in parentheses and follows the constructor's name. The parentheses that contain optional parameters are followed by curly brackets. In between these brackets is the source code that the program executes when the constructor is called (e.g., `Person ("Ada")`).
 
 Objects are always created using a constructor.
 
-A few things to note: the constructor contains the expression `self.age = 0`. This expression sets the instance variable `age` of the newly created object (i.e., "self" object's age) to 0. The second expression `self.name = initialName` likewise assigns the string passed as a parameter to the instance variable `name` of the object created.
+A few things to note: the constructor contains the expression `self.age = 0`. This expression sets the instance variable `age` of the newly created object (i.e., "self" object's age) to 0. The second expression `self.name = initial_name` likewise assigns the string passed as a parameter to the instance variable `name` of the object created.
 
 Positive
 : **Exercise - Room** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-4-room.git)
 
 Positive
-: **Default Constructor** <br><br> If the programmer does not define a constructor for a class, Java automatically creates a default one for it. A default constructor is a constructor that doesn't do anything apart from creating the object. The object's variables remain uninitialized (generally, the value of any object references will be `null`, meaning that they do not point to anything, and the values of primitives will be `0`) <br><br>
+: **Default Constructor** <br><br> If the programmer does not define a constructor for a class, Python automatically creates a default one for it. <br><br> A default constructor is a constructor that doesn't do anything apart from creating the object. <br><br> The object's variables remain uninitialized (generally, the value of any object references will be `None`, meaning that they do not point to anything)
 
 ### Defining Methods For an Object
 
@@ -122,20 +149,17 @@ We know how to create an object and initialize its variables. However, an object
 
 ```python
 class Person:
-    name = ""
-    age = 0
-
-    def __init__(self,initialName):
+    def __init__(self,initial_name):
         self.age = 0
-        self.name = initialName
+        self.name = initial_name
 
-    def printPerson(self):
+    def print_person(self):
         print(self.name + ", age " + str(self.age) + " years")
 ```
 
 A method is written inside of the class beneath the constructor. The method name is preceded by `def`, just like a function. The only difference between a function and a method is that a method is tied to an object, as we've seen.
 
-The method `printPerson` contains one line of code that makes use of the instance variables `name` and `age`.. Instance variables are referred to with the prefix `this`. All of the object's variables are visible and available from within the method.
+The method `print_person` contains one line of code that makes use of the instance variables `name` and `age`. Instance variables are referred to with the prefix `self`. All of the object's variables are visible and available from within the method.
 
 Let's create three persons in the main program and request them to print themselves:
 
@@ -145,9 +169,9 @@ def main():
     alan = Person("Alan")
     grace = Person("Grace")
 
-    ada.printPerson()
-    alan.printPerson()
-    grace.printPerson()
+    ada.print_person()
+    alan.print_person()
+    grace.print_person()
 
 main()
 ```
@@ -172,18 +196,18 @@ Let's add a method to the previously created person class that increments the ag
 
 ```python
 class Person:
-    def __init__(self,initialName):
+    def __init__(self,initial_name):
         self.age = 0
-        self.name = initialName
+        self.name = initial_name
 
-    def printPerson(self):
+    def print_person(self):
         print(self.name + ", age " + str(self.age) + " years")
 
-    def growOlder(self):
+    def grow_older(self):
         self.age = self.age + 1
 ```
 
-The method is written inside the `Person` class just as the `printPerson` method was. The method increments the value of the instance variable `age` by one.
+The method is written inside the `Person` class just as the `print_person` method was. The method increments the value of the instance variable `age` by one.
 
 Let's call the method and see what happens:
 
@@ -193,15 +217,15 @@ def main():
     alan = Person("Alan")
     grace = Person("Grace")
 
-    ada.printPerson()
-    alan.printPerson()
-    grace.printPerson()
+    ada.print_person()
+    alan.print_person()
+    grace.print_person()
 
-    ada.growOlder()
-    alan.growOlder()
+    ada.grow_older()
+    alan.grow_older()
 
-    ada.printPerson()
-    alan.printPerson()
+    ada.print_person()
+    alan.print_person()
 
 main()
 ```
@@ -211,20 +235,20 @@ Prints:
 Negative
 :  Ada, age 0 years <br> Alan, age 0 years <br> Grace, age 0 years <br> Ada, age 1 years <br> Alan, age 1 years <br>
 
-That is to say that when the two objects are "born" they're both zero-years old (`self.age = 0 ` is executed in the constructor). The `ada` object's `growOlder` method is called twice. As the print output demonstrates, the age of Ada is 2 years after growing older. Calling the method on an object corresponding to Ada has no impact on the age of the other person object since each object instantiated form a class has its own instance variables.
+That is to say that when the two objects are "born" they're both zero-years old (`self.age = 0 ` is executed in the constructor). The `ada` object's `grow_older` method is called twice. As the print output demonstrates, the age of Ada is 2 years after growing older. Calling the method on an object corresponding to Ada has no impact on the age of the other person object since each object instantiated form a class has its own instance variables.
 
-The method can also contain conditional statements and loops. The growOlder method below limits aging to 30 years.
+The method can also contain conditional statements and loops. The grow_older method below limits aging to 30 years.
 
 ```python
 class Person:
-    def __init__(self,initialName):
+    def __init__(self,initial_name):
         self.age = 0
-        self.name = initialName
+        self.name = initial_name
 
-    def printPerson(self):
+    def print_person(self):
         print(self.name + ", age " + str(self.age) + " years")
 
-    def growOlder(self):
+    def grow_older(self):
         if (self.age < 30):
             self.age = self.age + 1
 ```
@@ -285,22 +309,22 @@ def main():
 Negative
 : Grading average 10.0
 
-Let's continue with the Person class and add a `returnAge` method that returns the person's age.
+Let's continue with the Person class and add a `return_age` method that returns the person's age.
 
 ```python
 class Person:
-    def __init__(self,initialName):
+    def __init__(self,initial_name):
         self.age = 0
-        self.name = initialName
+        self.name = initial_name
 
-    def printPerson(self):
+    def print_person(self):
         print(self.name + ", age " + str(self.age) + " years")
 
-    def growOlder(self):
+    def grow_older(self):
         self.age = self.age + 1
 
     # the added method
-    def returnAge(self):
+    def return_age(self):
         return self.age
 
 ```
@@ -312,14 +336,14 @@ def main():
     grace = Person("Grace")
     alan = Person("Alan")
 
-    grace.growOlder()
-    grace.growOlder()
+    grace.grow_older()
+    grace.grow_older()
 
-    alan.growOlder()
+    alan.grow_older()
 
-    print("Grace's age: " + str(grace.returnAge()))
-    print("Alan's age: " + str(alan.returnAge()))
-    combined = grace.returnAge() + alan.returnAge()
+    print("Grace's age: " + str(grace.return_age()))
+    print("Alan's age: " + str(alan.return_age()))
+    combined = grace.return_age() + alan.return_age()
 
     print("Grace's and Alan's combined age " + str(combined) + " years")
 ```
@@ -340,7 +364,7 @@ Let's now write a method for the person that determines if the person is of lega
 ```python
 class Person:
 
-    def isOfLegalAge(self):
+    def is_of_legal_age(self):
         if (self.age < 18):
             return False
 
@@ -348,7 +372,7 @@ class Person:
 
     # The method could have been written more succintly in the following way:
     #
-    # def isOfLegalAge():
+    # def is_of_legal_age():
     #    return self.age >= 18
 ```
 
@@ -361,24 +385,24 @@ def main():
 
     i = 0
     while (i < 30):
-        grace.growOlder()
+        grace.grow_older()
         i = i + 1
 
-    alan.growOlder()
+    alan.grow_older()
 
-    if (alan.isOfLegalAge()):
+    if (alan.is_of_legal_age()):
         print("of legal age: ")
-        alan.printPerson()
+        alan.print_person()
     else:
         print("underage: ")
-        alan.printPerson()
+        alan.print_person()
 
-    if (grace.isOfLegalAge()):
+    if (grace.is_of_legal_age()):
         print("of legal age: ")
-        grace.printPerson()
+        grace.print_person()
     else:
         print("underage: ")
-        grace.printPerson()
+        grace.print_person()
 ```
 Negative
 : underage: Alan, age 1 years <br> of legal age: Grace, age 30 years
@@ -389,11 +413,11 @@ Let's fine-tune the solution a bit more. In its current form, a person can only 
 class Person:
     # ...
 
-    def getName(self):
+    def get_name(self):
         return self.name
 ```
 
-The `getName` method returns the instance variable `name` to the caller. The name of this method is somewhat strange. It is the usual convention to name a method that returns an instance variable exactly this way, i.e., `getVariableName`. Such methods are often referred to as "getters".
+The `get_name` method returns the instance variable `name` to the caller. The name of this method is somewhat strange. It is the usual convention to name a method that returns an instance variable exactly this way, i.e., `getVariableName`. Such methods are often referred to as "getters".
 
 Let's mould the main program to use the new "getter" method:
 
@@ -404,20 +428,20 @@ def main():
 
     i = 0
     while (i < 30):
-        grace.growOlder()
+        grace.grow_older()
         i = i + 1
 
-    alan.growOlder()
+    alan.grow_older()
 
-    if (alan.isOfLegalAge()):
-         print(alan.getName() + " is of legal age")
+    if (alan.is_of_legal_age()):
+         print(alan.get_name() + " is of legal age")
     else:
-         print(alan.getName() + " is underage")
+         print(alan.get_name() + " is underage")
 
-    if (grace.isOfLegalAge()):
-         print(grace.getName() + " is of legal age")
+    if (grace.is_of_legal_age()):
+         print(grace.get_name() + " is of legal age")
     else:
-         print(grace.getName() + " is underage ")
+         print(grace.get_name() + " is underage ")
 ```
 
 The print output is starting to turn out quit neat:
@@ -430,9 +454,9 @@ Positive
 
 ### A string representation of an object and the __str__-method
 
-We are guilty of programming in a somewhat poor style by creating a method for printing the object, i.e., the `printPerson` method. A preferred way is to define a method for the object that returns a "string representation" of the object. We can call the method returning the string representation `__str__`. Let's define this method for the person in the following example:
+We are guilty of programming in a somewhat poor style by creating a method for printing the object, i.e., the `print_person` method. A preferred way is to define a method for the object that returns a "string representation" of the object. We can call the method returning the string representation `__str__`. Let's define this method for the person in the following example:
 
-The `__str__` functions as `printPerson` does. However, it doesn't itself print anything but instead returns a string representation, which the calling method can execute for printing as needed.
+The `__str__` functions as `print_person` does. However, it doesn't itself print anything but instead returns a string representation, which the calling method can execute for printing as needed.
 
 The method is used in a somewhat surprising way:
 
@@ -451,10 +475,10 @@ def main():
 
     i = 0
     while (i < 30):
-        grace.growOlder()
+        grace.grow_older()
         i = i + 1
 
-    alan.growOlder()
+    alan.grow_older()
 
     print(grace)
     print(alan)
@@ -472,40 +496,40 @@ Let's continue with the `Person` class once more. We've decided that we want to 
 ```python
 class Person:
 
-    def Person(self,initialName):
+    def Person(self,initial_name):
         self.age = 0
         self.weight = 0
         self.height = 0
-        self.name = initialName
+        self.name = initial_name
 
-    def setHeight(self,newHeight):
-        self.height = newHeight
+    def set_height(self,new_height):
+        self.height = new_height
 
-    def setWeight(self,newWeight):
-        self.weight = newWeight
+    def set_weight(self,new_weight):
+        self.weight = new_weight
 
-    def bodyMassIndex(self):
-        heightPerHundred = self.height / 100.0
-        return self.weight / (heightPerHundred * heightPerHundred)
+    def body_mass_index(self):
+        height_per_hundred = self.height / 100.0
+        return self.weight / (height_per_hundred * height_per_hundred)
 
     # ...
 ```
 
-The instance variables `height` and `weight` were added to the person. Values for these can be set using the `setHeight` and `setWeight` methods. Java's standard naming convention is used once again, that is, if the method's only purpose is to set a value to an instance variable, then it's named as `setVariableName`. Value-setting methods are often called "setters". The new methods are put to use in the following case:
+The instance variables `height` and `weight` were added to the person. Values for these can be set using the `set_height` and `set_weight` methods. Java's standard naming convention is used once again, that is, if the method's only purpose is to set a value to an instance variable, then it's named as `set_variable_name`. Value-setting methods are often called "setters". The new methods are put to use in the following case:
 
 ```python
 def main():
     grace = Person("Grace")
     ada = Person("Ada")
 
-    grace.setHeight(180)
-    grace.setWeight(86)
+    grace.set_height(180)
+    grace.set_weight(86)
 
-    ada.setHeight(175)
-    ada.setWeight(64)
+    ada.set_height(175)
+    ada.set_weight(64)
 
-    print(grace.getName() + ", body mass index is " + str(grace.bodyMassIndex()))
-    print(ada.getName() + ", body mass index is " + str(ada.bodyMassIndex()))
+    print(grace.get_name() + ", body mass index is " + str(grace.body_mass_index()))
+    print(ada.get_name() + ", body mass index is " + str(ada.body_mass_index()))
 }
 ```
 
@@ -514,32 +538,32 @@ Prints:
 Negative
 : Grace, body mass index is 26.54320987654321 <br> Ada, body mass index is 20.897959183673468
 
-### A parameter and instance variable having the same name!
+### A parameter and instance variable having the same name
 
-In the preceding example, the `setHeight` method sets the value of the parameter `newHeight` to the instance variable `height`:
+In the preceding example, the `set_height` method sets the value of the parameter `new_height` to the instance variable `height`:
 
 ```python
-def setHeight(self,newHeight):
-    self.height = newHeight
+def set_height(self,new_height):
+    self.height = new_height
 ```
 
 The parameter's name could also be the same as the instance variable's, so the following would also work:
 
 ```python
-def setHeight(self,height):
+def set_height(self,height):
     self.height = height
 ```
 
 In this case, `height` in the method refers specifically to a parameter named _height_ and `self.height` to an instance variable of the same name. For example, the following example would not work as the code does not refer to the instance variable _height_ at all. What the code does in effect is set the `height` variable received as a parameter to the value it already contains:
 
 ```python
-def setHeight(self,height):
+def set_height(self,height):
     # DON'T DO THIS!!!
     height = height
 ```
 
 ```python
-def setHeight(self,height):
+def set_height(self,height):
     # DO THIS INSTEAD!!!
     self.height = height
 ```
@@ -549,11 +573,11 @@ Positive
 
 ### Calling an internal method
 
-The object may also call its methods. For example, if we wanted the string representation returned by __str__ to also tell of a person's body mass index, the object's own `bodyMassIndex` method should be called in the `__str__` method:
+The object may also call its methods. For example, if we wanted the string representation returned by __str__ to also tell of a person's body mass index, the object's own `body_mass_index` method should be called in the `__str__` method:
 
 ```python
 def __str__():
-    return self.name + ", age " + str(self.age) + " years, my body mass index is " + str(self.bodyMassIndex())
+    return self.name + ", age " + str(self.age) + " years, my body mass index is " + str(self.body_mass_index())
 }
 ```
 
@@ -566,7 +590,7 @@ Positive
 : **Exercise - Payment Card** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-16-payment-card.git)
 
 Positive
-: **Rounding errors** <br><br> You probably noticed that some of the figures have rounding errors. In the previous exercise, for example, Grace's balance of 30.7 may be printed as `30.700000000000003`. This is because floating-point numbers, such as `double`, are actually stored in binary form. That is, in zeros and ones using only a limited number of numbers. <br><br> As the number of floating-point numbers is infinite -- (in case you're wondering "how infinite?", think how many floating-point or decimal values fit between the numbers 5 and 6 for instance). All of the floating-point numbers simply cannot be represented by a finite number of zeros and ones. Thus, the computer must place a limit on the accuracy of stored numbers. <br><br> Normally, account balances, for instance, are saved as integers such that, say, the value 1 represents one cent.
+: **Rounding errors** <br><br> You probably noticed that some of the figures have rounding errors. In the previous exercise, for example, Grace's balance of 30.7 may be printed as `30.700000000000003`. This is because floating-point numbers, such as `float`, are actually stored in binary form. That is, in zeros and ones using only a limited number of numbers. <br><br> As the number of floating-point numbers is infinite -- (in case you're wondering "how infinite?", think how many floating-point or decimal values fit between the numbers 5 and 6 for instance). All of the floating-point numbers simply cannot be represented by a finite number of zeros and ones. Thus, the computer must place a limit on the accuracy of stored numbers. <br><br> Normally, account balances, for instance, are saved as integers such that, say, the value 1 represents one cent.
 
 ## Objects in a list
 
@@ -632,30 +656,30 @@ class Person:
         self.weight = 0
         self.height = 0
 
-    def getName(self):
+    def get_name(self):
         return self.name
 
-    def getAge(self):
+    def get_age(self):
         return self.age
 
-    def growOlder(self):
+    def grow_older(self):
         self.age = self.age + 1
 
-    def isOfLegalAge(self):
+    def is_of_legal_age(self):
         if (self.age < 18):
             return False
 
         return True
 
-    def setHeight(self,newHeight):
-        self.height = newHeight
+    def set_height(self,new_height):
+        self.height = new_height
 
-    def setWeight(self,newWeight):
-        self.weight = newWeight
+    def set_weight(self,new_weight):
+        self.weight = new_weight
 
-    def bodyMassIndex(self):
-        heightPerHundred = self.height / 100.0
-        return self.weight / (heightPerHundred * heightPerHundred)
+    def body_mass_index(self):
+        height_per_hundred = self.height / 100.0
+        return self.weight / (height_per_hundred * height_per_hundred)
 
     def __str__(self):
         return self.name + ", age " + str(self.age) + " years"
@@ -694,7 +718,7 @@ The structure we used earlier for reading inputs is still very useful.
 persons = []
 
 # Read the names of persons from the user
-while (True):
+while True:
     name = input("Enter a name, empty will stop: ")
     if not name: # nice way of checking if a list is empty
         break
@@ -743,7 +767,7 @@ The persons are printed after they have been read.
 persons = []
 
 # Read person information from the user
-while (True):
+while True:
     name = input("Enter name, empty will end: ")
     if not name:
         break
@@ -782,7 +806,7 @@ persons = []
 
 # Read person information from the user
 print("Enter the person details separated by a comma, e.g.: Randall,2")
-while (True):
+while True:
     details = input("Enter the details, empty will stop: ")
     if not details:
         break
@@ -809,10 +833,10 @@ You can also examine the objects on the list as you go through it. In the exampl
 # Assume we have a 'persons' list
 # that consists of person objects
 
-ageLimit = int(input("What is the age limit? "))
+age_limit = int(input("What is the age limit? "))
 
 for person in persons:
-    if (person.getAge() >= ageLimit):
+    if (person.get_age() >= age_limit):
         print(person)
 ```
 
@@ -836,7 +860,7 @@ A considerable amount of software is in one way or another based on handling dat
 We've been using the `input`-method since the beginning of this course to read user input. The block in which data is read has been a while-true loop where the reading ends at a specific input.
 
 ```python
-while (True):
+while True:
     line = input()
 
     if (line == "end"):
@@ -854,7 +878,7 @@ Positive
 The user input is read in string form. If we wanted to handle the input as integers, for instance, we'd have to convert it to another form. An example program has been provided below - it reads input from the user until the user inputs "end". As long as the user input is not "end" the inputs are handled as integers -- in this case, the number is simply printed.
 
 ```python
-while (True):
+while True:
     row = input()
 
     if (row == "end"):
@@ -883,7 +907,6 @@ Positive
 Once we have invoked `open()`, the file can be read using a `read()` method. The reading proceeds until all the lines of the file have been read, i.e., until the read command find no more lines to read. Reading a file may result in an error, and for this reason, many programming languages require separate blocks - one for the `try`, and another, called `except` in Python, to catch potential errors.
 
 ```python
-# we create a scanner for reading the file
 try:
     # open the file
     f = open("file.txt","r")
@@ -898,7 +921,7 @@ finally:
     f.close()
 ```
 
-The final line closes the open file, which flushes any unwritten information and closes the file object, after which no more writing can be done. Python automatically closes a file when the reference object of a file is reassigned to another file but it is a good practice to always use the close() method to close a file. We'll be returning to the topic of error handling later but in Python, we can simplify this code down to the use of a single `with` statement as follows:
+The final line closes the open file, which flushes any unwritten information and closes the file object, after which no more writing can be done. Python automatically closes a file when the reference object of a file is reassigned to another file but it is a good practice to always use the `close()` method to close a file. In Python, we can simplify this code down to the use of a single `with` statement as follows:
 
 ```python
 with open("file.txt",'r') as f:
@@ -906,11 +929,11 @@ with open("file.txt",'r') as f:
     # do something with data
 ```
 
-This takes care of closing the file too, so there's no need to use a `close()` statement together with a `with` statement. The `splitlines()` method splits the file by **new lines** by default
+This takes care of closing the file too, so there's no need to use a `close()` statement together with a `with` statement. The `splitlines()` method splits the file by **new lines** by default.
 
 A file is read from the project root by default, i.e., the folder that contains the python file you are working from.
 
-Positive:
+Positive
 : **Read and write** <br><br> Note that we have a second parameter `r` passed to the `open()` method, which tells Python that we want to **read** the file. <br><br> If we wanted to write data to the file, we can pass `w` instead. It is important to make this distinction, to avoid accidentally overwriting files that you want to keep. If you overwrite something in Python in this way, there's no getting it back!
 
 Positive
@@ -919,7 +942,7 @@ Positive
 Positive
 : **Exercise - Printing a specified file** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-23-printing-a-specified-file.git)
 
-In the example below, we read all the lines of the file "file.txt", which are then added to a list. This implementation uses the Python `with` keyword. This effectively
+In the example below, we read all the lines of the file "file.txt", which are then added to a list. This implementation uses the Python `with` keyword.
 
 ```python
 with open('demofile.txt','r') as f:
@@ -946,6 +969,7 @@ Data is often stored in files using a specific format. One such format that's al
 
 ```python
 import csv
+
 with open("data.csv") as f:
     reader = csv.reader(f,delimiter=',')
 
@@ -962,6 +986,7 @@ we could read the names only like so:
 
 ```python
 import csv
+
 with open("data.csv") as f:
     reader = csv.reader(f,delimiter=',')
 
