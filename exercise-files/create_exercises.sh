@@ -16,7 +16,7 @@ do
         then
             echo "Repo was present on remote so we added it as a submodule."
         else
-            echo "Repo not present on remote. It should have been though, so perhaps look into that."
+            echo "Something went wrong. Have you already added this as a submodule?"
             #echo "Repo not present on remote. Creating and pushing initial commit."
             #mkdir $filename
             #cp -r base-exercise-files/. $filename
