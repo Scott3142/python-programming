@@ -340,3 +340,87 @@
 [submodule "exercise-files/exercise-7-8-big-year"]
 	path = exercise-files/exercise-7-8-big-year
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-7-8-big-year.git
+[submodule "exercise-files/exercise-2-23-from-one-to-parameter"]
+	path = exercise-files/exercise-2-23-from-one-to-parameter
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-2-23-from-one-to-parameter.git
+[submodule "exercise-files/exercise-2-24-from-parameter-to-one"]
+	path = exercise-files/exercise-2-24-from-parameter-to-one
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-2-24-from-parameter-to-one.git
+[submodule "exercise-files/exercise-2-25-division"]
+	path = exercise-files/exercise-2-25-division
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-2-25-division.git
+[submodule "exercise-files/exercise-2-26-numero-uno"]
+	path = exercise-files/exercise-2-26-numero-uno
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-2-26-numero-uno.git
+[submodule "exercise-files/exercise-2-27-summation"]
+	path = exercise-files/exercise-2-27-summation
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-2-27-summation.git
+[submodule "exercise-files/exercise-2-28-smallest"]
+	path = exercise-files/exercise-2-28-smallest
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-2-28-smallest.git
+[submodule "exercise-files/exercise-2-30-averaging"]
+	path = exercise-files/exercise-2-30-averaging
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-2-30-averaging.git
+[submodule "exercise-files/exercise-3-1-third-element"]
+	path = exercise-files/exercise-3-1-third-element
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-1-third-element.git
+[submodule "exercise-files/exercise-3-2-second-plus-third"]
+	path = exercise-files/exercise-3-2-second-plus-third
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-2-second-plus-third.git
+[submodule "exercise-files/exercise-3-3-list-size"]
+	path = exercise-files/exercise-3-3-list-size
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-3-list-size.git
+[submodule "exercise-files/exercise-3-4-last-in-list"]
+	path = exercise-files/exercise-3-4-last-in-list
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-4-last-in-list.git
+[submodule "exercise-files/exercise-3-6-remember-these-numbers"]
+	path = exercise-files/exercise-3-6-remember-these-numbers
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-6-remember-these-numbers.git
+[submodule "exercise-files/exercise-3-7-only-these-numbers"]
+	path = exercise-files/exercise-3-7-only-these-numbers
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-7-only-these-numbers.git
+[submodule "exercise-files/exercise-3-8-greatest-in-list"]
+	path = exercise-files/exercise-3-8-greatest-in-list
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-8-greatest-in-list.git
+[submodule "exercise-files/exercise-3-9-index-of"]
+	path = exercise-files/exercise-3-9-index-of
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-9-index-of.git
+[submodule "exercise-files/exercise-3-10-index-of-smallest"]
+	path = exercise-files/exercise-3-10-index-of-smallest
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-10-index-of-smallest.git
+[submodule "exercise-files/exercise-3-11-sum-of-a-list"]
+	path = exercise-files/exercise-3-11-sum-of-a-list
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-11-sum-of-a-list.git
+[submodule "exercise-files/exercise-3-13-on-the-list"]
+	path = exercise-files/exercise-3-13-on-the-list
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-13-on-the-list.git
+[submodule "exercise-files/exercise-3-14-print-in-range"]
+	path = exercise-files/exercise-3-14-print-in-range
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-14-print-in-range.git
+[submodule "exercise-files/exercise-3-15-sum"]
+	path = exercise-files/exercise-3-15-sum
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-15-sum.git
+[submodule "exercise-files/exercise-4-11-film"]
+	path = exercise-files/exercise-4-11-film
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-11-film.git
+[submodule "exercise-files/exercise-4-12-gauge"]
+	path = exercise-files/exercise-4-12-gauge
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-12-gauge.git
+[submodule "exercise-files/exercise-4-13-agent"]
+	path = exercise-files/exercise-4-13-agent
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-13-agent.git
+[submodule "exercise-files/exercise-4-14-mutiplier"]
+	path = exercise-files/exercise-4-14-mutiplier
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-14-mutiplier.git
+[submodule "exercise-files/exercise-4-23-printing-from-a-file"]
+	path = exercise-files/exercise-4-23-printing-from-a-file
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-23-printing-from-a-file.git
+[submodule "exercise-files/exercise-4-23-printing-a-specified-file"]
+	path = exercise-files/exercise-4-23-printing-a-specified-file
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-23-printing-a-specified-file.git
+[submodule "exercise-files/exercise-4-24-guest-list-from-a-file"]
+	path = exercise-files/exercise-4-24-guest-list-from-a-file
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-24-guest-list-from-a-file.git
+[submodule "exercise-files/exercise-4-25-is-it-in-the-file"]
+	path = exercise-files/exercise-4-25-is-it-in-the-file
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-25-is-it-in-the-file.git
