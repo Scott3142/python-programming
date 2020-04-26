@@ -154,6 +154,9 @@
 [submodule "exercise-files/exercise-2-21-in-a-hole-in-the-ground"]
 	path = exercise-files/exercise-2-21-in-a-hole-in-the-ground
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-2-21-in-a-hole-in-the-ground.git
+[submodule "exercise-files/exercise-2-22-reprint"]
+	path = exercise-files/exercise-2-22-reprint
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-2-22-reprint.git
 [submodule "exercise-files/exercise-3-16-remove-last"]
 	path = exercise-files/exercise-3-16-remove-last
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-16-remove-last.git
@@ -211,6 +214,9 @@
 [submodule "exercise-files/exercise-4-9-debt"]
 	path = exercise-files/exercise-4-9-debt
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-9-debt.git
+[submodule "exercise-files/exercise-4-15-statistics"]
+	path = exercise-files/exercise-4-15-statistics
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-15-statistics.git
 [submodule "exercise-files/exercise-4-16-payment-card"]
 	path = exercise-files/exercise-4-16-payment-card
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-16-payment-card.git
@@ -232,9 +238,15 @@
 [submodule "exercise-files/exercise-4-27-records-from-a-file"]
 	path = exercise-files/exercise-4-27-records-from-a-file
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-27-records-from-a-file.git
+[submodule "exercise-files/exercise-4-29-sporting-statistics"]
+	path = exercise-files/exercise-4-29-sporting-statistics
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-29-sporting-statistics.git
 [submodule "exercise-files/exercise-4-28-storing-records"]
 	path = exercise-files/exercise-4-28-storing-records
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-28-storing-records.git
+[submodule "exercise-files/exercise-5-1-one-minute"]
+	path = exercise-files/exercise-5-1-one-minute
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-5-1-one-minute.git
 [submodule "exercise-files/exercise-5-2-book"]
 	path = exercise-files/exercise-5-2-book
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-5-2-book.git
@@ -319,6 +331,9 @@
 [submodule "exercise-files/exercise-6-13-testing"]
 	path = exercise-files/exercise-6-13-testing
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-6-13-testing.git
+[submodule "exercise-files/exercise-7-2-liquid-containers-2"]
+	path = exercise-files/exercise-7-3-liquid-containers-2
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-7-2-liquid-containers-2.git
 [submodule "exercise-files/exercise-7-1-liquid-containers"]
 	path = exercise-files/exercise-7-1-liquid-containers
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-7-1-liquid-containers.git
@@ -358,6 +373,9 @@
 [submodule "exercise-files/exercise-2-28-smallest"]
 	path = exercise-files/exercise-2-28-smallest
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-2-28-smallest.git
+[submodule "exercise-files/exercise-2-29-greatest"]
+	path = exercise-files/exercise-2-29-greatest
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-2-29-greatest.git
 [submodule "exercise-files/exercise-2-30-averaging"]
 	path = exercise-files/exercise-2-30-averaging
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-2-30-averaging.git
@@ -373,6 +391,9 @@
 [submodule "exercise-files/exercise-3-4-last-in-list"]
 	path = exercise-files/exercise-3-4-last-in-list
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-4-last-in-list.git
+[submodule "exercise-files/exercise-3-5-first-and-last"]
+	path = exercise-files/exercise-3-5-first-and-last
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-5-first-and-last.git
 [submodule "exercise-files/exercise-3-6-remember-these-numbers"]
 	path = exercise-files/exercise-3-6-remember-these-numbers
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-6-remember-these-numbers.git
@@ -391,6 +412,9 @@
 [submodule "exercise-files/exercise-3-11-sum-of-a-list"]
 	path = exercise-files/exercise-3-11-sum-of-a-list
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-11-sum-of-a-list.git
+[submodule "exercise-files/exercise-3-12-average-of-a-list"]
+	path = exercise-files/exercise-3-12-average-of-a-list
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-12-average-of-a-list.git
 [submodule "exercise-files/exercise-3-13-on-the-list"]
 	path = exercise-files/exercise-3-13-on-the-list
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-13-on-the-list.git
@@ -400,6 +424,9 @@
 [submodule "exercise-files/exercise-3-15-sum"]
 	path = exercise-files/exercise-3-15-sum
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-3-15-sum.git
+[submodule "exercise-files/exercise-4-10-song"]
+	path = exercise-files/exercise-4-10-song
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-110-song.git
 [submodule "exercise-files/exercise-4-11-film"]
 	path = exercise-files/exercise-4-11-film
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-11-film.git
@@ -412,12 +439,12 @@
 [submodule "exercise-files/exercise-4-14-mutiplier"]
 	path = exercise-files/exercise-4-14-mutiplier
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-14-mutiplier.git
+[submodule "exercise-files/exercise-4-22-cubes"]
+	path = exercise-files/exercise-4-22-cubes
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-22-cubes.git
 [submodule "exercise-files/exercise-4-23-printing-from-a-file"]
 	path = exercise-files/exercise-4-23-printing-from-a-file
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-23-printing-from-a-file.git
-[submodule "exercise-files/exercise-4-23-printing-a-specified-file"]
-	path = exercise-files/exercise-4-23-printing-a-specified-file
-	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-23-printing-a-specified-file.git
 [submodule "exercise-files/exercise-4-24-guest-list-from-a-file"]
 	path = exercise-files/exercise-4-24-guest-list-from-a-file
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-24-guest-list-from-a-file.git
