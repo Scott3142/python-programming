@@ -8,8 +8,10 @@ feedback link: https://github.com/Scott3142/python-programming
 analytics account: UA-49751789-4
 
 # Part 1
+Duration: 07:00:00
 
 ## Getting Started with Programming
+Duration: 01:00:00
 
 ### What you'll learn
 * Become familiar with the Atom development environment used in this course.
