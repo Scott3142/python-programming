@@ -94,43 +94,43 @@ The same implemented in an object-oriented way:
 ```python
 class Hand:
     def __init__(upperBound):
-        this.upperBound = upperBound
-        this.value = 0
+        self.upperBound = upperBound
+        self.value = 0
 
-    def advance():
-        this.value = this.value + 1
+    def advance(self):
+        self.value = self.value + 1
 
-        if (this.value >= this.upperBound):
-            this.value = 0
+        if (self.value >= self.upperBound):
+            self.value = 0
 
-    def value():
-        return this.value
+    def value(self):
+        return self.value
 
-    def __str__():
-        if (this.value < 10):
-            return "0" + str(this.value)
+    def __str__(self):
+        if (self.value < 10):
+            return "0" + str(self.value)
 
-        return "" + str(this.value)
+        return "" + str(self.value)
 ```
 
 ```python
 class Clock():
 
-    def __init__():
-        this.hours = Hand(24)
-        this.minutes = Hand(60)
-        this.hours = Hand(60)
+    def __init__(self):
+        self.hours = Hand(24)
+        self.minutes = Hand(60)
+        self.hours = Hand(60)
 
-    def advance():
-        this.seconds.advance()
+    def advance(self):
+        self.seconds.advance()
 
-        if (this.seconds.value() == 0):
-            this.minutes.advance()
+        if (self.seconds.value() == 0):
+            self.minutes.advance()
 
-            if (this.minutes.value() == 0):
-                this.hours.advance()
+            if (self.minutes.value() == 0):
+                self.hours.advance()
 
-    def __str__():
+    def __str__(self):
         return str(hours) + ":" + str(minutes) + ":" + str(seconds)
 ```
 
