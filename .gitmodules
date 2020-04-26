@@ -22,6 +22,9 @@
 [submodule "exercise-files/exercise-1-8-conversation"]
 	path = exercise-files/exercise-1-8-conversation
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-1-8-conversation.git
+[submodule "exercise-files/exercise-1-9-story"]
+	path = exercise-files/exercise-1-9-story
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-1-9-story.git
 [submodule "exercise-files/exercise-1-11-different-inputs"]
 	path = exercise-files/exercise-1-11-different-inputs
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-1-11-different-inputs.git
