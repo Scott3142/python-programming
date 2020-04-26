@@ -1,0 +1,33 @@
+#!/bin/bash
+input="exercise-list.dat"
+while IFS= read -r line
+do
+    filename="exercise-""$line"
+    if [[ -d "$filename" ]]
+    then
+        echo "Directory $filename exists. Pulling git repo!"
+        cd $filename
+        git remote add origin git@github.com:btec-diploma-unit4-programming-master/$filename
+        git pull origin master
+        cd ..
+    else
+        echo "Directory $filename doesn't exist locally. Checking to see if repo exists on remote..."
+        if git submodule add git@github.com:btec-diploma-unit4-programming-master/$filename.git
+        then
+            echo "Repo was present on remote so we added it as a submodule."
+        else
+            echo "Repo not present on remote. It should have been though, so perhaps look into that."
+            #echo "Repo not present on remote. Creating and pushing initial commit."
+            #mkdir $filename
+            #cp -r base-exercise-files/. $filename
+            #cd $filename
+            #echo "# Exercise ""$line" >> README.md
+            #git init
+            #git add --all
+            #git commit -m 'Initial commit'
+            #hub create btec-diploma-unit4-programming-master/$filename
+            #git push origin master
+            #cd ..
+        fi
+    fi
+done < "$input"
