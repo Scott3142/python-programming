@@ -451,3 +451,6 @@
 [submodule "exercise-files/exercise-4-25-is-it-in-the-file"]
 	path = exercise-files/exercise-4-25-is-it-in-the-file
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-25-is-it-in-the-file.git
+[submodule "exercise-files/exercise-4-26-numbers-from-a-file"]
+	path = exercise-files/exercise-4-26-numbers-from-a-file
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-26-numbers-from-a-file.git
