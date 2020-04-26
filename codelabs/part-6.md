@@ -1068,7 +1068,7 @@ def test_ada():
 
 Each of these programs is in a different file in the same directory. The first has the filename `adafile.py` while the second has the filename `test_adafile.py`. You can run the test with the command `pytest` in the same directory.
 
-## Unit Testing
+### Unit Testing
 
 The automated testing mehtod laid out above where the input to a program is modified is quite convenient, but limited nonetheless. Testing larger programs in this way is challenging. One solution to this is unit testing, where small parts of the program are tested in isolation.
 
