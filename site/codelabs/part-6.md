@@ -25,13 +25,13 @@ class Playlist:
     def __init__(self):
         self.songs = []
 
-    def addSong(self,song):
+    def add_song(self,song):
         self.songs.append(song)
 
-    def removeSong(self,song):
+    def remove_song(self,song):
         self.songs.remove(song)
 
-    def printSongs(self):
+    def print_songs(self):
         for song in self.songs:
             print(song)
 ```
@@ -40,9 +40,9 @@ Creating playlists is easy with the help of the class above.
 
 ```python
 list = Playlist()
-list.addSong("22")
-list.addSong("Blank Space")
-list.printSongs()
+list.add_song("22")
+list.add_song("Blank Space")
+list.print_songs()
 ```
 
 Negative
@@ -62,47 +62,47 @@ In the previous section, we created a class called `AmusementParkRide`, which wa
 
 ```python
 class AmusementParkRide:
-     def __init__(self,name,minimumHeight):
+     def __init__(self,name,minimum_height):
          self.name = name
-         self.minimumHeight = minimumHeight
+         self.minimum_height = minimum_height
          self.visitors = 0
 
-     def isAllowedOn(self,person):
-         if (person.getHeight() < self.minimumHeight):
+     def is_allowed_on(self,person):
+         if (person.get_height() < self.minimum_height):
              return False
 
          self.visitors += 1
          return True
 
      def __str__(self):
-         return self.name + ", minimum height: " + str(self.minimumHeight) + ", visitors: " + str(self.visitors)
+         return self.name + ", minimum height: " + str(self.minimum_height) + ", visitors: " + str(self.visitors)
 ```
 
 We'll extend the class so that the amusement park keeps track of the people on the ride. In this version, the ride has, as an instance variable, a list of the people who have been allowed on the ride. The list is created in the constructor.
 
 ```python
 class AmusementParkRide:
-     def __init__(self,name,minimumHeight):
+     def __init__(self,name,minimum_height):
          self.name = name
-         self.minimumHeight = minimumHeight
+         self.minimum_height = minimum_height
          self.visitors = 0
          self.riding = []
 
     # ...
 ```
 
-Let's change the method `isAllowedOn`. The method adds to the list all the persons who meet the height requirements.
+Let's change the method `is_allowed_on`. The method adds to the list all the persons who meet the height requirements.
 
 ```python
 class AmusementParkRide:
-     def __init__(self,name,minimumHeight):
+     def __init__(self,name,minimum_height):
          self.name = name
-         self.minimumHeight = minimumHeight
+         self.minimum_height = minimum_height
          self.visitors = 0
          self.riding = []
 
-    def isAllowedOn(self,person):
-        if (person.getHeight() < self.minimumHeight):
+    def is_allowed_on(self,person):
+        if (person.get_height() < self.minimum_height):
             return False
 
         self.visitors += 1
@@ -110,8 +110,8 @@ class AmusementParkRide:
         return True
 
     def __str__():
-        return self.name + ", minimum height requirement: " + self.minimumHeight +
-            ", visitors: " + self.visitors
+        return self.name + ", minimum height requirement: " + str(self.minimum_height) +
+            ", visitors: " + str(self.visitors)
 ```
 
 Positive
@@ -123,14 +123,14 @@ Let's now modify the `__str__` method so that the string returned by the method 
 
 ```python
 class AmusementParkRide:
-      def __init__(self,name,minimumHeight):
+      def __init__(self,name,minimum_height):
          self.name = name
-         self.minimumHeight = minimumHeight
+         self.minimum_height = minimum_height
          self.visitors = 0
          self.riding = []
 
-      def isAllowedOn(self,person):
-          if (person.getHeight() < self.minimumHeight):
+      def is_allowed_on(self,person):
+          if (person.get_height() < self.minimum_height):
               return False
 
           self.visitors += 1
@@ -139,25 +139,25 @@ class AmusementParkRide:
 
       def __str__(self):
           # let's form a string from all the people on the list
-          onTheRide = ""
+          on_the_ride = ""
           for person in self.riding:
-              onTheRide = onTheRide + person.getName() + "\n"
+              on_the_ride = on_the_ride + person.get_name() + "\n"
 
           # we return a string describing the object
           # including the names of those on the ride
-          return self.name + ", minimum height requirement: " + str(self.minimumHeight) + ", visitors: " + str(self.visitors) + "\n" + "riding:\n" + onTheRide
+          return self.name + ", minimum height requirement: " + str(self.minimum_height) + ", visitors: " + str(self.visitors) + "\n" + "riding:\n" + on_the_ride
 ```
 
 Let's test out the extended amusement park ride:
 
 ```python
 matt = Person("Matt")
-matt.setWeight(86)
-matt.setHeight(180)
+matt.set_weight(86)
+matt.set_height(180)
 
 ada = Person("Ada")
-ada.setWeight(34)
-ada.setHeight(132)
+ada.set_weight(34)
+ada.set_height(132)
 
 megafobia = AmusementParkRide("Megafobia", 140)
 
@@ -165,15 +165,15 @@ print(megafobia)
 
 print()
 
-if (megafobia.isAllowedOn(matt)):
-    print(matt.getName() + " is allowed on the ride")
+if (megafobia.is_allowed_on(matt)):
+    print(matt.get_name() + " is allowed on the ride")
 else:
-    print(matt.getName() + " is not allowed on the ride")
+    print(matt.get_name() + " is not allowed on the ride")
 
-if (megafobia.isAllowedOn(ada)):
-    print(ada.getName() + " is allowed on the ride")
+if (megafobia.is_allowed_on(ada)):
+    print(ada.get_name() + " is allowed on the ride")
 else:
-    print(ada.getName() + " is not allowed on the ride")
+    print(ada.get_name() + " is not allowed on the ride")
 
 print(megafobia)
 ```
@@ -193,9 +193,9 @@ Even though there is no one on the ride, the string `riding:` is on the print ou
 
 ```python
 class AmusementParkRide:
-      def __init__(self,name,minimumHeight):
+      def __init__(self,name,minimum_height):
          self.name = name
-         self.minimumHeight = minimumHeight
+         self.minimum_height = minimum_height
          self.visitors = 0
          self.riding = []
 
@@ -203,7 +203,7 @@ class AmusementParkRide:
 
     def __str__(self):
 
-        printOutput = self.name + ", minimum height requirement: " + str(self.minimumHeight) + ", visitors: " + str(self.visitors) + "\n"
+        printOutput = self.name + ", minimum height requirement: " + str(self.minimum_height) + ", visitors: " + str(self.visitors) + "\n"
 
         if not self.riding:
             return printOutput + "no one is on the ride."
@@ -212,7 +212,7 @@ class AmusementParkRide:
         peopleOnRide = ""
 
         for person in self.riding:
-            peopleOnRide = peopleOnRide + person.getName() + "\n"
+            peopleOnRide = peopleOnRide + person.get_name() + "\n"
 
         return printOutput + "\n" + "on the ride:\n" + peopleOnRide
 ```
@@ -227,13 +227,13 @@ Positive
 
 ### Clearing an Object's List
 
-We'll next add a `removeEveryoneOnRide` method to the amusement park ride, which removes each and every person currently on the ride. The list method `clear` is very handy here.
+We'll next add a `remove_everyone_on_ride` method to the amusement park ride, which removes each and every person currently on the ride. The list method `clear` is very handy here.
 
 ```python
-class AmusementParkRIde {
+class AmusementParkRide:
     # ...
 
-    def removeEveryoneOnRide(self):
+    def remove_everyone_on_ride(self):
         self.riding.clear()
 
     # ...
@@ -241,12 +241,12 @@ class AmusementParkRIde {
 
 ```python
 matt = Person("Matt")
-matt.setWeight(86)
-matt.setHeight(180)
+matt.set_weight(86)
+matt.set_height(180)
 
 ada = Person("Ada")
-ada.setWeight(34)
-ada.setHeight(132)
+ada.set_weight(34)
+ada.set_height(132)
 
 megafobia = AmusementParkRide("Megafobia", 140)
 
@@ -254,19 +254,19 @@ print(megafobia)
 
 print()
 
-if (megafobia.isAllowedOn(matt)):
-    print(matt.getName() + " is allowed on the ride")
+if (megafobia.is_allowed_on(matt)):
+    print(matt.get_name() + " is allowed on the ride")
 else:
-    print(matt.getName() + " is not allowed on the ride")
+    print(matt.get_name() + " is not allowed on the ride")
 
-if (megafobia.isAllowedOn(ada)):
-    print(ada.getName() + " is allowed on the ride")
+if (megafobia.is_allowed_on(ada)):
+    print(ada.get_name() + " is allowed on the ride")
 else:
-    print(ada.getName() + " is not allowed on the ride")
+    print(ada.get_name() + " is not allowed on the ride")
 
 print(megafobia)
 
-megafobia.removeEveryoneOnRide()
+megafobia.remove_everyone_on_ride()
 
 print()
 print(megafobia)
@@ -284,40 +284,40 @@ Let's now create a method for the amusement park ride that calculates the averag
 The implementation underneath returns `-1` if not a single person is on the ride. The result of `-1` is impossible in a program that calculates averages. Based on that, we can determine that the average could not have been calculated.
 
 ```python
-class AmusementParkRIde {
+class AmusementParkRide:
     # ...
 
-    def averageHeightOfPeopleOnRide(self):
+    def average_height_of_people_on_ride(self):
         if not self.riding:
             return -1
 
-        sumOfHeights = 0
+        sum_of_heights = 0
         for person in self.riding:
-            sumOfHeights += person.getHeight()
+            sum_of_heights += person.get_height()
 
-        return sumOfHeights / len(self.riding)
+        return sum_of_heights / len(self.riding)
     # ...
 ```
 
 
 ```python
 matt = Person("Matt")
-matt.setHeight(180)
+matt.set_height(180)
 
 ada = Person("Ada")
-ada.setHeight(132)
+ada.set_height(132)
 
 grace = Person("Grace")
-grace.setHeight(194)
+grace.set_height(194)
 
 megafobia = AmusementParkRide("Megafobia", 140)
 
-megafobia.isAllowedOn(matt)
-megafobia.isAllowedOn(ada)
-megafobia.isAllowedOn(grace)
+megafobia.is_allowed_on(matt)
+megafobia.is_allowed_on(ada)
+megafobia.is_allowed_on(grace)
 
 print(megafobia)
-print(megafobia.averageHeightOfPeopleOnRide())
+print(megafobia.average_height_of_people_on_ride())
 ```
 
 The program's output is:
@@ -335,56 +335,56 @@ We'll now create a method for the amusement park ride that returns the tallest p
 Methods that retrieve objects from a list should be implemented in the following way. First off, we'll check whether or not the list is empty - if it is, we return a `None` reference or some other value indicating that the list had no values. After that, we create an object reference variable that describes the object to be returned. We set the first object on the list as its value. We then go through the values on the list by comparing each list object with the object variable representing the object to be returned. If the comparison finds a better matching object, its assigned to the object reference variable to be returned. Finally, we return the object variable describing the object that we want to return.
 
 ```python
-def getTallest(self):
+def get_tallest(self):
     # return a null reference if there's no one on the ride
     if not self.riding:
         return None
 
     # create an object reference for the object to be returned
     # its first value is the first object on the list
-    returnObject = self.riding[0]
+    return_object = self.riding[0]
 
     # go through the list
     for prs in self.riding:
         # compare each object on the list
-        # to the returnObject -- we compare heights
+        # to the return_object -- we compare heights
         # since we're searching for the tallest,
 
-        if (returnObject.getHeight() < prs.getHeight()):
+        if (return_object.get_height() < prs.get_height()):
             # if we find a taller person in the comparison,
-            # we assign it as the value of the returnObject
-            returnObject = prs
+            # we assign it as the value of the return_object
+            return_object = prs
 
     # finally, the object reference describing the
     # return object is returned
-    return returnObject
+    return return_object
 ```
 
 Finding the tallest person is now easy.
 
 ```python
 matt = Person("Matt")
-matt.setHeight(180)
+matt.set_height(180)
 
 ada = Person("Ada")
-ada.setHeight(132)
+ada.set_height(132)
 
 grace = Person("Grace")
-grace.setHeight(194)
+grace.set_height(194)
 
 megafobia = AmusementParkRide("Megafobia", 140)
 
-megafobia.isAllowedOn(matt)
-megafobia.isAllowedOn(ada)
-megafobia.isAllowedOn(grace)
+megafobia.is_allowed_on(matt)
+megafobia.is_allowed_on(ada)
+megafobia.is_allowed_on(grace)
 
 print(megafobia)
-print(megafobia.averageHeightOfPeopleOnRide())
+print(megafobia.average_height_of_people_on_ride())
 
 print()
-print(megafobia.getTallest().getName())
-tallest = megafobia.getTallest()
-print(tallest.getName())
+print(megafobia.get_tallest().get_name())
+tallest = megafobia.get_tallest()
+print(tallest.get_name())
 ```
 
 Negative
@@ -430,8 +430,8 @@ Creating and starting up a user interface can be done as follows.
 
 ```python
 def main():
-    userInterface = UserInterface()
-    userInterface.start()
+    user_interface = UserInterface()
+    user_interface.start()
 ```
 
 ### Looping and quitting
@@ -444,7 +444,7 @@ class UserInterface:
     def __init__(self):
 
     def start(self):
-        while (True):
+        while True:
             print("Enter a word: ")
             word = input()
 
@@ -462,15 +462,15 @@ class UserInterface:
     def __init__(self):
 
     def start(self):
-        while (True):
+        while True:
             word = input("Enter a word: ")
 
-            if self.alreadyEntered(word):
+            if self.already_entered(word):
                 break
 
         print("You gave the same word twice!")
 
-    def alreadyEntered(self,word):
+    def already_entered(self,word):
         # do something here
 
         return False
@@ -479,7 +479,7 @@ class UserInterface:
 It's a good idea to test the program continuously, so let's make a test version of the method:
 
 ```python
-def alreadyEntered(self,word):
+def already_entered(self,word):
     if word == "end":
         return True
 
@@ -508,10 +508,10 @@ class UserInterface:
 When a new word is entered, it has to be added to the list of words that have been entered before. This is done by adding a line that updates our list to the while-loop:
 
 ```python
-while (True):
+while True:
     word = input("Enter a word: ")
 
-    if (self.alreadyEntered(word)):
+    if (self.already_entered(word)):
         break
 
     # adding the word to the list of previous words
@@ -527,17 +527,17 @@ class UserInterface:
         self.words = []
 
     def start(self):
-        while (True):
+        while True:
             word = input("Enter a word: ")
 
-            if (self.alreadyEntered(word)):
+            if (self.already_entered(word)):
                 break
 
             # adding the word to the list of previous words
             self.words.append(word)
         print("You gave the same word twice!")
 
-    def alreadyEntered(self,word):
+    def already_entered(self,word):
         if word == "end":
             return True
 
@@ -554,10 +554,10 @@ for word in self.words:
 
 ### Combining the solutions to sub-problems
 
-Let's change the method 'alreadyEntered' so that it checks whether the entered word is contained in our list of words that have been already entered.
+Let's change the method 'already_entered' so that it checks whether the entered word is contained in our list of words that have been already entered.
 
 ```python
-def alreadyEntered(self,word):
+def already_entered(self,word):
     return word in self.words
 ```
 
@@ -579,10 +579,10 @@ class UserInterface:
         self.words = []
 
     def start(self):
-        while (True):
+        while True:
             word = input("Enter a word: ")
 
-            if (self.alreadyEntered(word)):
+            if (self.already_entered(word)):
                 break
 
             # adding the word to the list of previous words
@@ -592,7 +592,7 @@ class UserInterface:
             print(word)            
         print("You gave the same word twice!")
 
-    def alreadyEntered(self,word):
+    def already_entered(self,word):
         return word in self.words
 ```
 
@@ -603,18 +603,18 @@ From the point of view of the user interface, the support variable 'words' is ju
 Let's make a class called 'WordSet'. After implenting the class, the user interface's start method looks like this:
 
 ```python
-while (True):
+while True:
     word = input()
 
     if (words.contains(word)):
         break
 
-    wordSet.add(word)
+    word_set.add(word)
 
 print("You gave the same word twice!")
 ```
 
-From the point of view of the user interface, the class WordSet should contain the method 'contains(self,word)', that checks whether the given word is contained in our set of words, and the method 'add(self,word)', that adds the given word into the set.
+From the point of view of the user interface, the class WordSet should contain the method `contains(self,word)`, that checks whether the given word is contained in our set of words, and the method `add(self,word)`, that adds the given word into the set.
 
 We notice that the readability of the user interface is greatly improved when it's written like this.
 
@@ -659,17 +659,17 @@ Let's now edit the user interface so that it uses the class WordSet. The class i
 class UserInterface:
 
     def __init__(self,WordSet):
-        self.wordSet = WordSet
+        self.word_set = WordSet
 
     def start(self):
-        while (True):
+        while True:
             word = input("Enter a word: ")
 
-            if (self.wordSet.contains(word)):
+            if (self.word_set.contains(word)):
                 break
 
             # adding the word to the list of previous words
-            self.wordSet.add(word)
+            self.word_set.add(word)
 
         print("You gave the same word twice!")
 ```
@@ -680,8 +680,8 @@ Starting the program is now done as follows:
 def main():
     set = WordSet()
 
-    userInterface = UserInterface(set)
-    userInterface.start()
+    user_interface = UserInterface(set)
+    user_interface.start()
 ```
 
 ### Changing the implementation of a class
@@ -696,17 +696,17 @@ In the future, we might want to augment the program so that the class 'WordSet' 
 
 ```python
 def start(self):
-        while (True):
+        while True:
             word = input("Enter a word: ")
 
-            if (self.wordSet.contains(word)):
+            if (self.word_set.contains(word)):
                 break
 
             # adding the word to the list of previous words
-            self.wordSet.add(word)
+            self.word_set.add(word)
 
         print("You gave the same word twice!")
-        print(str(self.wordSet.palindromes()) + " of the words were palindromes.")
+        print(str(self.word_set.palindromes()) + " of the words were palindromes.")
 
 ```
 
@@ -727,12 +727,12 @@ class WordSet:
         count = 0
 
         for word in self.words:
-            if isPalindrome(word):
+            if is_palindrome(word):
                 count += 1
 
         return count
 
-    def isPalindrome(self,word):
+    def is_palindrome(self,word):
         end = len(word) - 1
 
         i = 0
@@ -747,7 +747,7 @@ class WordSet:
         return True
 ```
 
-The method 'palindromes' uses the helper method 'isPalindrome' to check whether the word that's given to it as a parameter is, in fact, a palindrome.
+The method 'palindromes' uses the helper method 'is_palindrome' to check whether the word that's given to it as a parameter is, in fact, a palindrome.
 
 Positive
 : **Recycling** <br><br> When concepts have been separated into different classes in the code, recycling them and reusing them in other projects becomes easy. For example, the class 'WordSet' could be well be used in a graphical user interface, and it could also part of a mobile phone application. In addition, testing the program is much easier when it has been divided into several concepts, each of which has its own separate logic and can function alone as a unit.
@@ -793,7 +793,7 @@ As with almost all programs, this program can be written into main as one entity
 def main():
     grades = []
 
-    while (True):
+    while True:
         textinput = input("Points: ")
         if (textinput == ""):
             break
@@ -854,10 +854,10 @@ class GradeRegister:
     def __init__(self):
         self.grades = []
 
-    def addGradeBasedOnPoints(self,points):
-        self.grades.append(self.pointsToGrades(points))
+    def add_grade_based_on_points(self,points):
+        self.grades.append(self.points_to_grades(points))
 
-    def numberOfGrades(self,grade):
+    def number_of_grades(self,grade):
         count = 0
         for received in self.grades:
             if (received == grade):
@@ -865,7 +865,7 @@ class GradeRegister:
 
         return count
 
-    def pointsToGrades(self,points):
+    def points_to_grades(self,points):
 
         grade = 0
         if (points < 50):
@@ -890,7 +890,7 @@ When the grade register has been separated into a class, we can remove the funct
 def main():
     register = GradeRegister()
 
-    while (True):
+    while True:
         textinput = input("Points: ")
         if not textinput: # same as input == ""
             break
@@ -901,12 +901,12 @@ def main():
             print("Impossible number.")
             continue
 
-        register.addGradeBasedOnPoints(score)
+        register.add_grade_based_on_points(score)
 
     print("")
     grade = 5
     while (grade >= 0):
-        stars = register.numberOfGrades(grade)
+        stars = register.number_of_grades(grade)
         print(str(grade) + ": ")
         while (stars > 0):
             print("*")
@@ -921,11 +921,11 @@ Separating the program logic is a major benefit for the maintenance of the progr
 
 ```python
 register = GradeRegister()
-register.addGradeBasedOnPoints(51)
-register.addGradeBasedOnPoints(50)
-register.addGradeBasedOnPoints(49)
+register.add_grade_based_on_points(51)
+register.add_grade_based_on_points(50)
+register.add_grade_based_on_points(49)
 
-print("Number of students with grade 0 (should be 1): " + str(register.numberOfGrades(0)))
+print("Number of students with grade 0 (should be 1): " + str(register.number_of_grades(0)))
 ```
 
 ### User interface
@@ -938,8 +938,8 @@ When we now have a separate user interface at our disposal, the main program tha
 def main():
     register = GradeRegister()
 
-    userInterface = UserInterface(register)
-    userInterface.start()
+    user_interface = UserInterface(register)
+    user_interface.start()
 ```
 
 Let's have a look at how the user interface is implemented. There are two essential parts to the UI: reading the points, and printing the grade distribution.
@@ -951,13 +951,13 @@ class UserInterface:
         self.register = register
 
     def start(self):
-        self.readPoints()
+        self.read_points()
         print("")
-        self.printGradeDistribution()
+        self.print_grade_distribution()
 
-    def readPoints(self):
+    def read_points(self):
 
-    def printGradeDistribution(self):
+    def print_grade_distribution(self):
 ```
 
 We can copy the code for reading exam points and printing grade distribution nearly as is from the previous main program. In the program below, parts of the code have indeed been copied from the earlier main program, and new method for printing stars has also been created -- this clarifies the method that is used for printing the grade distribution.
@@ -969,12 +969,12 @@ class UserInterface:
         self.register = register
 
     def start(self):
-        self.readPoints()
+        self.read_points()
         print("")
-        self.printGradeDistribution()
+        self.print_grade_distribution()
 
-    def readPoints(self):
-        while (True):
+    def read_points(self):
+        while True:
             textinput = input("Points: ")
             if not textinput: # same as input == ""
                 break
@@ -985,19 +985,19 @@ class UserInterface:
                 print("Impossible number.")
                 continue
 
-            self.register.addGradeBasedOnPoints(score)
+            self.register.add_grade_based_on_points(score)
 
-    def printGradeDistribution(self):
+    def print_grade_distribution(self):
         grade = 5
         while (grade >= 0):
-            stars = self.register.numberOfGrades(grade)
+            stars = self.register.number_of_grades(grade)
             print(str(grade) + ": ")
-            self.printStars(stars)
+            self.print_stars(stars)
             print("")
 
             grade = grade - 1
 
-    def printStars(self,stars):
+    def print_stars(self,stars):
         while (stars > 0):
             print("*")
             stars-= 1

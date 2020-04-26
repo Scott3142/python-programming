@@ -44,7 +44,7 @@
 <pre><code>values = 0
 sum = 0
 
-while (True):
+while True:
     value = int(input(&#34;Provide a value, a negative value ends the program&#34;))
     if (value &lt; 0):
         break
@@ -85,13 +85,13 @@ while (value &gt; 0):
 <p>Comments have no impact on the execution of the program, i.e., the program works in the same way with the comments as it does without them.</p>
 <p>The comment style displayed above that is intended for learning purposes is, however, too elaborate for real development, where the goal is for the source code to be <strong>self documenting</strong>. This means that the functionality of the program should be evident from the way classes, methods, and variables are named.</p>
 <p>The example can be &#34;commented out&#34; by encapsulating the code into an appropriately named method. Below are two examples of methods that do this - one of the methods is more general in its purpose compared to the other. The more general method assumes, however, that the user knows which of the two parameters is assigned the higher value and which the lower.</p>
-<pre><code>def printValuesFromTenToOne():
+<pre><code>def print_values_from_ten_to_one():
     value = 10
     while (value &gt; 0):
         print(value)
         value = value - 1
 </code></pre>
-<pre><code>def printValuesFromLargestToSmallest(start, end):
+<pre><code>def print_values_from_largest_to_smallest(start, end):
     while (start &gt;= end):
         print(start)
         start = start - 1
@@ -102,7 +102,7 @@ while (value &gt; 0):
 <pre><code>values = 0
 sum = 0
 
-while (True):
+while True:
     value = int(input(&#34;Provide a value, a negative value ends the program&#34;))
     if (value &lt; 0):
         break
@@ -120,7 +120,7 @@ else:
 <pre><code>values = 0
 sum = 0
 
-while (True):
+while True:
     print(&#34;-- values: &#34; + str(values) + &#34;, sum: &#34; + str(sum))
 
     value = int(input(&#34;Provide a value, a negative value ends the program&#34;))
@@ -162,7 +162,7 @@ word5 = &#34;you&#34;
 word6 = &#34;today?&#34;
 </code></pre>
 <p>The solution presented above is useless in effect – consider a situation in which there are thousands of words to store.</p>
-<p>Programming languages offer tools to assist in storing a large quantity of values. We will next take a peek at perhaps the single most used tool in Python, the [list]https://docs.python.org/3.8/tutorial/datastructures.html?highlight=lists), which is used for storing many values.</p>
+<p>Programming languages offer tools to assist in storing a large quantity of values. We will next take a peek at perhaps the single most used tool in Python, the <a href="https://docs.python.org/3.8/tutorial/datastructures.html?highlight=lists" target="_blank">list</a>, which is used for storing many values.</p>
 <p>The list tool offers various methods, including ones for adding values to the list, removing values from it, and also for the retrieval of a value from a specific place in the list. The concrete implementations – i.e., how the list is actually programmed – has been abstracted behind the methods, so that a programmer making use of a list doesn&#39;t need to concern themselves with its inner workings.</p>
 <h2 is-upgraded>Using and Creating Lists</h2>
 <p>Creating a new list is done with the command <code>list_name = []</code>, where the values to be stored in the list are included in the square brackets. We create a list for storing strings in the example below.</p>
@@ -178,30 +178,30 @@ word6 = &#34;today?&#34;
 <p>To call a list method you first write the name of the variable describing the list, followed by a dot and the name of the method.</p>
 <pre><code>def word_list_example():
     # create the word list
-    wordList = []
+    word_list = []
 
     # add two values to the word list
-    wordList.append(&#34;First&#34;)
-    wordList.append(&#34;Second&#34;)
+    word_list.append(&#34;First&#34;)
+    word_list.append(&#34;Second&#34;)
 
     # retrieve the value from position 0 of the word list, and print it
-    print(wordList[0])
+    print(word_list[0])
 
 word_list_example()
 </code></pre>
 <aside class="warning"><p>First</p>
 </aside>
-<p>As can be seen, this method retrieves the first value from the list when it is given the parameter <code>0</code>. This is because <strong>list positions are counted starting from zero</strong>. The first value is found by <code>wordList[0]</code>, the second by <code>wordList[0]</code>, and so on.</p>
+<p>As can be seen, this method retrieves the first value from the list when it is given the parameter <code>0</code>. This is because <strong>list positions are counted starting from zero</strong>. The first value is found by <code>word_list[0]</code>, the second by <code>word_list[0]</code>, and so on.</p>
 <pre><code>def word_list_example():
     # create the word list
-    wordList = []
+    word_list = []
 
     # add two values to the word list
-    wordList.append(&#34;First&#34;)
-    wordList.append(&#34;Second&#34;)
+    word_list.append(&#34;First&#34;)
+    word_list.append(&#34;Second&#34;)
 
     # retrieve the value from position 1 of the word list, and print it
-    print(wordList[1])
+    print(word_list[1])
 
 word_list_example()
 </code></pre>
@@ -210,15 +210,15 @@ word_list_example()
 <p>You can also use negative indexing, which means beginning from the end. For example, -1 refers to the last item, -2 refers to the second last item and so on, as seen below:</p>
 <pre><code>def word_list_example():
     # create the word list
-    wordList = []
+    word_list = []
 
     # add two values to the word list
-    wordList.append(&#34;First&#34;)
-    wordList.append(&#34;Second&#34;)
-    wordList.append(&#34;Thirdd&#34;)
+    word_list.append(&#34;First&#34;)
+    word_list.append(&#34;Second&#34;)
+    word_list.append(&#34;Thirdd&#34;)
 
     # retrieve the value from the last position of the word list, and print it
-    print(wordList[-1])
+    print(word_list[-1])
 
 word_list_example()
 </code></pre>
@@ -232,14 +232,14 @@ word_list_example()
 <p>If you try to retrieve information from a place that does not exist on the list, the program will print an <code>IndexError</code>. In the example below, two values are added to a list, after which there is an attempt to print the value at place two on the list.</p>
 <pre><code>def word_list_example():
     # create the word list
-    wordList = []
+    word_list = []
 
     # add two values to the word list
-    wordList.append(&#34;First&#34;)
-    wordList.append(&#34;Second&#34;)
+    word_list.append(&#34;First&#34;)
+    word_list.append(&#34;Second&#34;)
 
     # retrieve the value from position 1 of the word list, and print it
-    print(wordList[2])
+    print(word_list[2])
 
 word_list_example()
 </code></pre>
@@ -344,24 +344,14 @@ for index in range(len(teachers)):
 <aside class="warning"><p>Simon <br> Samuel <br> Ann <br> Anna</p>
 </aside>
 <p>Python actually has a &#34;better&#34; way of accessing list items in a for loop which is different to certain other languages. You can use the syntax <code>for item in list</code> to access each item like so:</p>
-<pre><code>teachers = []
-
-teachers.append(&#34;Simon&#34;)
-teachers.append(&#34;Samuel&#34;)
-teachers.append(&#34;Ann&#34;)
-teachers.append(&#34;Anna&#34;)
+<pre><code>teachers = [&#34;Simon&#34;,&#34;Samuel&#34;,&#34;Ann&#34;,&#34;Anna&#34;] # an alternative way of creating a list
 
 for teacher in teachers:
      print(teachers)
 </code></pre>
 <p>There are certain reasons why you&#39;d use <code>range(len(list))</code> but most of the time we will use the latter of these two options.</p>
 <p>Let&#39;s consider using a list to store integers. The functionality is largely the same as in the previous example.</p>
-<pre><code>numbers = []
-
-numbers.append(1)
-numbers.append(2)
-numbers.append(3)
-numbers.append(4)
+<pre><code>numbers = [1,2,3,4] # an alternative way of creating a list
 
 for number in numbers:
     print(numbers)
@@ -369,12 +359,7 @@ for number in numbers:
 <aside class="warning"><p>1 <br> 2 <br> 3 <br> 4</p>
 </aside>
 <p>Printing the numbers in the list in reverse order would also be straightforward.</p>
-<pre><code>numbers = []
-
-numbers.append(1)
-numbers.append(2)
-numbers.append(3)
-numbers.append(4)
+<pre><code>numbers = [1,2,3,4]
 
 index = len(numbers) - 1
 while index &gt;= 0:
@@ -428,7 +413,7 @@ print(my_list)
 
 print(my_list.remove(&#39;Alice&#39;))
 
-print(my_list.pop(&#39;Bob&#39;))
+print(my_list.remove(&#39;Bob&#39;))
 </code></pre>
 <aside class="warning"><p>[‘Alice&#39;, ‘Bob&#39;, ‘Charlie&#39;, ‘Bob&#39;, ‘Dave&#39;] <br> [‘Bob&#39;, ‘Charlie&#39;, ‘Bob&#39;, ‘Dave&#39;] <br> [‘Charlie&#39;, ‘Bob&#39;, ‘Dave&#39;]</p>
 </aside>
@@ -463,20 +448,20 @@ printout(my_list)
 </aside>
 <p>The chosen parameter in the method definition is not dependent on the list that is passed as parameter in the method call. In the program that calls <code>printout</code>, the name of the list variable is <code>list</code>, but inside the method <code>printout</code> the variable is called <code>my_list</code> – the name of the variable that stores the list could also be <code>printables</code>, for instance.</p>
 <p>It&#39;s also possible to define multiple variables for a method. In the example the method receives two parameters: a list of numbers and a threshold value. It then prints all the numbers in the list that are smaller than the second parameter.</p>
-<pre><code>def printSmallerThan(numbers, threshold):
+<pre><code>def print_smaller_than(numbers, threshold):
     for number in numbers:
         if (number &lt; threshold):
              print(number)
 
 list = [1,2,3,2,1]
-printSmallerThan(list, 3)
+print_smaller_than(list, 3)
 </code></pre>
 <aside class="warning"><p>1 <br> 2 <br> 2 <br> 1</p>
 </aside>
 <aside class="special"><p><strong>Exercise - Print in range<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-3-14-print-in-range.git" target="_blank">Source files on Github</a></p>
 </aside>
-<p>As before, a method can also return a value. The methods that return values have the <code>return</code> command. The method below returns the size of the list.</p>
-<pre><code>def size(list):
+<p>As before, a method can also return a value. The methods that return values have the <code>return</code> command. The method below returns the length of the list, although is a completely redundant method.</p>
+<pre><code>def length(list):
     return len(list)
 </code></pre>
 <p>You can also define own variables for methods. The method below calculates the average of the numbers in the list. If the list is empty, it returns the number -1.</p>
@@ -498,7 +483,7 @@ printSmallerThan(list, 3)
 <p>Lists, among practically all the variables that can store large amounts of information, are <em>reference-type variables</em>. This means that the value of the variable is a reference that points to the location that contains the information.</p>
 <p>When a list (or any reference-type variable) is copied for a method&#39;s use, the method receives the value of the list variable, i.e., a <em>reference</em>. In such a case the <strong>method receives a reference to the real value of a reference-type variable</strong>, and the method is able to modify the value of the original reference type variable, such as a list. In practice, the list that the method receives as a parameter is the same list that is used in the program that calls the method.</p>
 <p>Let&#39;s look at this briefly with the following method.</p>
-<pre><code>def removeFirst(numbers):
+<pre><code>def remove_first(numbers):
     if len(numbers) == 0:
         return
 
@@ -507,12 +492,12 @@ printSmallerThan(list, 3)
 numbers = [3,2,6,-1]
 print(numbers)
 
-removeFirst(numbers)
+remove_first(numbers)
 print(numbers)
 
-removeFirst(numbers)
-removeFirst(numbers)
-removeFirst(numbers)
+remove_first(numbers)
+remove_first(numbers)
+remove_first(numbers)
 print(numbers)
 </code></pre>
 <aside class="warning"><p>[3, 2, 6, -1] <br> [2, 6, -1] <br> []</p>
@@ -531,12 +516,12 @@ print(numbers)
 <li>Revising reading, printing and comparing strings</li>
 <li>Knowing how to split a string into several pieces</li>
 </ul>
-<p>Let&#39;s first revise what we already know about strings and see how to split them. Below we create a string variable <code>magicWord</code>, that contains value <code>&#34;abracadabra&#34;</code>.</p>
-<pre><code>magicWord = &#34;abracadabra&#34;
+<p>Let&#39;s first revise what we already know about strings and see how to split them. Below we create a string variable <code>magic_word</code>, that contains value <code>&#34;abracadabra&#34;</code>.</p>
+<pre><code>magic_word = &#34;abracadabra&#34;
 </code></pre>
 <p>Passing a string as a parameter to a print command (or, for that matter, any method that takes a string parameter) happens in the familiar way:</p>
-<pre><code>magicWord = &#34;abracadabra&#34;
-print(magicWord)
+<pre><code>magic_word = &#34;abracadabra&#34;
+print(magic_word)
 </code></pre>
 <aside class="warning"><p>abracadabra</p>
 </aside>
@@ -592,7 +577,7 @@ for piece in pieces:
 </aside>
 <p>Let&#39;s assume the user enters the data above row by row, ending with an empty line.</p>
 <p>A program to print the names and ages looks like the following:</p>
-<pre><code>while (True):
+<pre><code>while True:
     textinput = input()
     if (textinput == &#34;&#34;):
         break
@@ -619,7 +604,7 @@ print(character)
 <p>The program below computes the sum of ages in this fixed format data. In order to compute the sum, the age must first be converted to a number (the familiar command <code>int()</code>.</p>
 <pre><code>sum = 0
 
-while (True):
+while True:
     textinput = input()
     if (textinput == &#34;&#34;):
         break
@@ -635,7 +620,7 @@ print(&#34;Sum of the ages is &#34; + str(sum))
 <pre><code>sum = 0
 count = 0
 
-while (True):
+while True:
     textinput = input()
     if (textinput == &#34;&#34;):
         break

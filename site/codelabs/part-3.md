@@ -34,7 +34,7 @@ Likewise, a programmer may focus on the most complicated aspect of a program fea
 values = 0
 sum = 0
 
-while (True):
+while True:
     value = int(input("Provide a value, a negative value ends the program"))
     if (value < 0):
         break
@@ -86,7 +86,7 @@ The comment style displayed above that is intended for learning purposes is, how
 The example can be "commented out" by encapsulating the code into an appropriately named method. Below are two examples of methods that do this - one of the methods is more general in its purpose compared to the other. The more general method assumes, however, that the user knows which of the two parameters is assigned the higher value and which the lower.
 
  ```python
-def printValuesFromTenToOne():
+def print_values_from_ten_to_one():
     value = 10
     while (value > 0):
         print(value)
@@ -94,7 +94,7 @@ def printValuesFromTenToOne():
 ```
 
  ```python
-def printValuesFromLargestToSmallest(start, end):
+def print_values_from_largest_to_smallest(start, end):
     while (start >= end):
         print(start)
         start = start - 1
@@ -110,7 +110,7 @@ Let's inspect the program already familiar to us from the previous question that
 values = 0
 sum = 0
 
-while (True):
+while True:
     value = int(input("Provide a value, a negative value ends the program"))
     if (value < 0):
         break
@@ -131,7 +131,7 @@ Had the program contained an error, print debugging could have been used to unra
 values = 0
 sum = 0
 
-while (True):
+while True:
     print("-- values: " + str(values) + ", sum: " + str(sum))
 
     value = int(input("Provide a value, a negative value ends the program"))
@@ -175,7 +175,7 @@ word6 = "today?"
 
 The solution presented above is useless in effect -- consider a situation in which there are thousands of words to store.
 
-Programming languages offer tools to assist in storing a large quantity of values. We will next take a peek at perhaps the single most used tool in Python, the [list]https://docs.python.org/3.8/tutorial/datastructures.html?highlight=lists), which is used for storing many values.
+Programming languages offer tools to assist in storing a large quantity of values. We will next take a peek at perhaps the single most used tool in Python, the [list](https://docs.python.org/3.8/tutorial/datastructures.html?highlight=lists), which is used for storing many values.
 
 The list tool offers various methods, including ones for adding values to the list, removing values from it, and also for the retrieval of a value from a specific place in the list. The concrete implementations -- i.e., how the list is actually programmed -- has been abstracted behind the methods, so that a programmer making use of a list doesn't need to concern themselves with its inner workings.
 
@@ -202,14 +202,14 @@ To call a list method you first write the name of the variable describing the li
 ```python
 def word_list_example():
     # create the word list
-    wordList = []
+    word_list = []
 
     # add two values to the word list
-    wordList.append("First")
-    wordList.append("Second")
+    word_list.append("First")
+    word_list.append("Second")
 
     # retrieve the value from position 0 of the word list, and print it
-    print(wordList[0])
+    print(word_list[0])
 
 word_list_example()
 ```
@@ -217,19 +217,19 @@ word_list_example()
 Negative
 : First
 
-As can be seen, this method retrieves the first value from the list when it is given the parameter `0`. This is because **list positions are counted starting from zero**. The first value is found by `wordList[0]`, the second by `wordList[0]`, and so on.
+As can be seen, this method retrieves the first value from the list when it is given the parameter `0`. This is because **list positions are counted starting from zero**. The first value is found by `word_list[0]`, the second by `word_list[0]`, and so on.
 
 ```python
 def word_list_example():
     # create the word list
-    wordList = []
+    word_list = []
 
     # add two values to the word list
-    wordList.append("First")
-    wordList.append("Second")
+    word_list.append("First")
+    word_list.append("Second")
 
     # retrieve the value from position 1 of the word list, and print it
-    print(wordList[1])
+    print(word_list[1])
 
 word_list_example()
 ```
@@ -242,15 +242,15 @@ You can also use negative indexing, which means beginning from the end. For exam
 ```python
 def word_list_example():
     # create the word list
-    wordList = []
+    word_list = []
 
     # add two values to the word list
-    wordList.append("First")
-    wordList.append("Second")
-    wordList.append("Thirdd")
+    word_list.append("First")
+    word_list.append("Second")
+    word_list.append("Thirdd")
 
     # retrieve the value from the last position of the word list, and print it
-    print(wordList[-1])
+    print(word_list[-1])
 
 word_list_example()
 ```
@@ -271,14 +271,14 @@ If you try to retrieve information from a place that does not exist on the list,
 ```python
 def word_list_example():
     # create the word list
-    wordList = []
+    word_list = []
 
     # add two values to the word list
-    wordList.append("First")
-    wordList.append("Second")
+    word_list.append("First")
+    word_list.append("Second")
 
     # retrieve the value from position 1 of the word list, and print it
-    print(wordList[2])
+    print(word_list[2])
 
 word_list_example()
 ```
@@ -414,12 +414,7 @@ Negative
 Python actually has a "better" way of accessing list items in a for loop which is different to certain other languages. You can use the syntax `for item in list` to access each item like so:
 
 ```python
-teachers = []
-
-teachers.append("Simon")
-teachers.append("Samuel")
-teachers.append("Ann")
-teachers.append("Anna")
+teachers = ["Simon","Samuel","Ann","Anna"] # an alternative way of creating a list
 
 for teacher in teachers:
      print(teachers)
@@ -430,12 +425,7 @@ There are certain reasons why you'd use `range(len(list))` but most of the time 
 Let's consider using a list to store integers. The functionality is largely the same as in the previous example.
 
 ```python
-numbers = []
-
-numbers.append(1)
-numbers.append(2)
-numbers.append(3)
-numbers.append(4)
+numbers = [1,2,3,4] # an alternative way of creating a list
 
 for number in numbers:
     print(numbers)
@@ -447,12 +437,7 @@ Negative
 Printing the numbers in the list in reverse order would also be straightforward.
 
 ```python
-numbers = []
-
-numbers.append(1)
-numbers.append(2)
-numbers.append(3)
-numbers.append(4)
+numbers = [1,2,3,4]
 
 index = len(numbers) - 1
 while index >= 0:
@@ -526,7 +511,7 @@ print(my_list)
 
 print(my_list.remove('Alice'))
 
-print(my_list.pop('Bob'))
+print(my_list.remove('Bob'))
 ```
 
 Negative
@@ -576,13 +561,13 @@ The chosen parameter in the method definition is not dependent on the list that 
 It's also possible to define multiple variables for a method. In the example the method receives two parameters: a list of numbers and a threshold value. It then prints all the numbers in the list that are smaller than the second parameter.
 
 ```python
-def printSmallerThan(numbers, threshold):
+def print_smaller_than(numbers, threshold):
     for number in numbers:
         if (number < threshold):
              print(number)
 
 list = [1,2,3,2,1]
-printSmallerThan(list, 3)
+print_smaller_than(list, 3)
 ```
 
 Negative
@@ -591,10 +576,10 @@ Negative
 Positive
 : **Exercise - Print in range** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-14-print-in-range.git)
 
-As before, a method can also return a value. The methods that return values have the `return` command. The method below returns the size of the list.
+As before, a method can also return a value. The methods that return values have the `return` command. The method below returns the length of the list, although is a completely redundant method.
 
 ```python
-def size(list):
+def length(list):
     return len(list)
 ```
 
@@ -627,7 +612,7 @@ When a list (or any reference-type variable) is copied for a method's use, the m
 Let's look at this briefly with the following method.
 
 ```python
-def removeFirst(numbers):
+def remove_first(numbers):
     if len(numbers) == 0:
         return
 
@@ -636,12 +621,12 @@ def removeFirst(numbers):
 numbers = [3,2,6,-1]
 print(numbers)
 
-removeFirst(numbers)
+remove_first(numbers)
 print(numbers)
 
-removeFirst(numbers)
-removeFirst(numbers)
-removeFirst(numbers)
+remove_first(numbers)
+remove_first(numbers)
+remove_first(numbers)
 print(numbers)
 ```
 
@@ -661,17 +646,17 @@ Positive
 * Revising reading, printing and comparing strings
 * Knowing how to split a string into several pieces
 
-Let's first revise what we already know about strings and see how to split them. Below we create a string variable `magicWord`, that contains value `"abracadabra"`.
+Let's first revise what we already know about strings and see how to split them. Below we create a string variable `magic_word`, that contains value `"abracadabra"`.
 
 ```python
-magicWord = "abracadabra"
+magic_word = "abracadabra"
 ```
 
 Passing a string as a parameter to a print command (or, for that matter, any method that takes a string parameter) happens in the familiar way:
 
 ```python
-magicWord = "abracadabra"
-print(magicWord)
+magic_word = "abracadabra"
+print(magic_word)
 ```
 
 Negative
@@ -753,7 +738,7 @@ Let's assume the user enters the data above row by row, ending with an empty lin
 A program to print the names and ages looks like the following:
 
 ```python
-while (True):
+while True:
     textinput = input()
     if (textinput == ""):
         break
@@ -793,7 +778,7 @@ The program below computes the sum of ages in this fixed format data. In order t
 ```python
 sum = 0
 
-while (True):
+while True:
     textinput = input()
     if (textinput == ""):
         break
@@ -813,7 +798,7 @@ We can write a program to compute the average of the ages in the same way:
 sum = 0
 count = 0
 
-while (True):
+while True:
     textinput = input()
     if (textinput == ""):
         break

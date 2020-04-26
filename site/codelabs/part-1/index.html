@@ -27,21 +27,25 @@
                   environment="web"
                   feedback-link="https://github.com/Scott3142/python-programming">
     
-      <google-codelab-step label="Getting Started with Programming" duration="0">
+      <google-codelab-step label="Getting Started with Programming" duration="45">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
 <ul class="checklist">
 <li>Become familiar with the Atom development environment used in this course.</li>
 <li>How to download and submit programming exercises.</li>
 </ul>
 <p>Modern programming is practically always done in an IDE (integrated development environment). An IDE contains a set of useful tools for the programmer. It does not create the program by itself, but it can give hints about common mistakes in the code, and help the programmer understand the structure of the program.</p>
-<p>The IDE we use on this course is called Atom, and we use it with the atom-python-test plugin.</p>
+<p>The IDE we use on this course is called Atom, and we use it with the atom-python-test plugin. Atom describes itself as a &#34;hackable text editor for the 21st Century&#34; and is built and maintained by <a href="https://github.com/" target="_blank">Github</a>, which we will also use extensively throughout this course.</p>
 <p>To start the course you will need:</p>
 <ol type="1">
 <li>A Github account</li>
 <li>Python installed via Anaconda</li>
 <li>Atom development environment</li>
 </ol>
-<p>You can sign up for Github <a href="https://github.com/" target="_blank">here</a>. Installation instructions for Anaconda and Atom can be found here: <a href="https://scott3142.uk/python-programming/installation" target="_blank">Anaconda and Atom installation guide</a>.</p>
+<p>You can sign up for Github <a href="https://github.com/" target="_blank">here</a>. Installation instructions for Anaconda and Atom can be found below:</p>
+<ul>
+<li><a href="https://docs.anaconda.com/anaconda/install/windows/" target="_blank">Anaconda installation guide (Windows)</a></li>
+<li><a href="https://flight-manual.atom.io/getting-started/sections/installing-atom/" target="_blank">Atom installation guide (Windows)</a></li>
+</ul>
 <p>Once you have created the user account and installed Anaconda and Atom, watch the video below. The video demonstrates what happens when Atom is opened for the first time. We log into Github and do the first programming exercise.</p>
 <aside class="special"><p>Video to be added</p>
 </aside>
@@ -55,23 +59,23 @@
 <pre><code>print(&#34;Hello World&#34;)
 </code></pre>
 <p>The above statement is pre-built into Python, and it&#39;s used for printing a string. The statement tells the computer to output the string that&#39;s been provided to it, placed between the quotation marks.</p>
-<p>Most of the programs you&#39;ll see in this course require a certain frame around the code to work, the <code>def function():</code> syntax. Don&#39;t worry too much about this for now, it&#39;ll become very familiar over this course. Although you might not be able to make sense of the surrounding frame of code, you could probably guess what the following program does based on the print statement described above.</p>
-<pre><code>def example():
+<p>A lot of the programs you&#39;ll see in this course will have a certain frame around the code to work, the <code>def main():</code> syntax. Don&#39;t worry too much about this for now, it&#39;ll become very familiar soon. You don&#39;t need this framing around the <code>print</code> statement for it to be able to run in Python, but it&#39;s useful to get into the habit now to make things easier later.</p>
+<pre><code>def main():
     print(&#34;Welcome to the course - you will learn to program!&#34;)
 
-example()
+main()
 </code></pre>
 <aside class="warning"><p><strong>Note:</strong> It is important to realise at this stage that <em>indentation</em> is critical in Python which is slightly different to other languages. The code snippet below is not the same as the one above and would result in an error.</p>
 </aside>
-<pre><code>def example():
+<pre><code>def main():
 print(&#34;Welcome to the course - you will learn to program!&#34;) #this indentation is wrong
-example()
+main()
 </code></pre>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Printing" duration="0">
+      <google-codelab-step label="Printing" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
 <ul class="checklist">
 <li>Learn to write a program that prints text.</li>
@@ -91,15 +95,15 @@ example()
 </aside>
 <h2 is-upgraded>Program Boilerplate</h2>
 <p>In Python, our programs will include some boilerplate code to function. This boilerplate, an example of which is shown below, for example tells the computer what your function is called. Below, the name of the function is <code>example</code>.</p>
-<pre><code>def example():
+<pre><code>def main():
     print(&#34;Text to be printed&#34;)
 
-example()
+main()
 </code></pre>
-<p>Execution of the program starts from the line that says <code>example()</code>. This command <em>invokes</em> the function <code>example</code> and runs it. Commands are executed inside <code>example</code> one line at a time from the top. In the above example, <code>print(&#34;Text to be printed&#34;)</code> is the only command to be executed. Its output is:</p>
+<p>Execution of the program starts from the line that says <code>main()</code>. This command <em>invokes</em> the function <code>example</code> and runs it. Commands are executed inside <code>example</code> one line at a time from the top. In the above example, <code>print(&#34;Text to be printed&#34;)</code> is the only command to be executed. Its output is:</p>
 <aside class="warning"><p>Text to be printed</p>
 </aside>
-<p>The examples in the material will not always show the template, but you can assume that your program file always needs one. As such, the examples might be as short as a single line, such as the example below that illustrates the print command.</p>
+<p>The examples in the material will not always show the template, but you can assume that your program file has one. As such, the examples might be as short as a single line, such as the example below that illustrates the print command.</p>
 <pre><code>print(&#34;Hello world&#34;)
 </code></pre>
 <p>In reality, the above example, when written as a full Python program, looks like so:</p>
@@ -117,16 +121,16 @@ hello_world()
 <p>Even though running the program is straightforward, a lot is happenings behind the scenes. When a program is run, the source code is first compiled into Python bytecode. This compilation process is done by the Python compiler, which itself is a program. Following that, the program gets executed, meaning the commands are executed one-by-one by a Python interpreter that is able to read Python bytecode.</p>
 <h2 is-upgraded>Printing Multiple Lines</h2>
 <p>Programs are constructed command-by-command, where each command is placed on a new line. In the example below, the command <code>print()</code> appears twice, which means that two print commands are being executed in the program.</p>
-<pre><code>def new_example():
+<pre><code>def new_main():
     print(&#34;Hello world!&#34;)
     print(&#34;... and the universe!&#34;)
 
-new_example()
+new_main()
 </code></pre>
 <p>The program above will print:</p>
 <aside class="warning"><p>Hello world! <br> ... and the universe!</p>
 </aside>
-<p>The programming exercises will be checked by Atom&#39;s tester, who is meticulous. The guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.</p>
+<p>The programming exercises will be checked by Atom&#39;s tester, which is meticulous. The guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.</p>
 <p>This preciseness with regard to the output is relevant in programming in a more general sense. Missing a single character may cause an error. Novice programmers often enter a comma instead of a dot, or write, for instance <code>prnt</code> instead of <code>print</code>, leave out apostrophes, or forget a bracket after a command. Any one of these would cause an error and cause the program execution to fail.</p>
 <p>Learning programming is, in fact, a path full of mistakes – and every error message is a chance to learn. Keep a look out for any red signs in the IDE and try to read the test errors!</p>
 <aside class="special"><p><strong>Exercise - Once Upon a Time<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-1-2-once-upon-a-time.git" target="_blank">Source files on Github</a></p>
@@ -144,7 +148,7 @@ new_example()
 </aside>
 <p>Although the previous example works, it&#39;s important to be considerate of other programmers (and your future self!) and to use line breaks. That way, anyone reading the program knows that each line does only a single concrete thing. Other languages (like Java) might require semicolons at the end of lines. We don&#39;t need to do this in Python.</p>
 <h3 is-upgraded>Comments</h3>
-<p>Source code can be commented to clarify it or to add notes. Single-line comments are marked with a hash <code>#</code>. Everything following them on the same line is interpreted as a comment. Python does not really* have a syntax for multi line comments, so to add a multiline comment you could insert a <code>#</code> for each line.</p>
+<p>Source code can be commented to clarify it or to add notes. Single-line comments are marked with a hash <code>#</code>. Everything following them on the same line is interpreted as a comment. Python does not <em>really</em> [see below] have a syntax for multi line comments, so to add a multiline comment you could insert a <code>#</code> for each line.</p>
 <p>Below is an example of a program where both are used.</p>
 <pre><code>def comments():
     #Printing
@@ -162,7 +166,7 @@ new_example()
 comments()
 </code></pre>
 <p>The last line of the example shows a particularly handy use-case for comments. Code that has been written does not need to be deleted to try out something else.</p>
-<aside class="special"><p>*there is the concept of a Python <em>Docstring</em>, which you will see later in the course. A docstring is a string literal that occurs as the first statement in a module, function, class, or method definition. Such a docstring becomes the <code>__doc__</code> special attribute of that object. All modules should normally have docstrings, and all functions and classes exported by a module should also have docstrings. We will revisit these concepts later.</p>
+<aside class="special"><p><strong>Docstrings<br><br></strong> In Python, there is the concept of a Python <em>Docstring</em>, which you will see later in the course. A docstring is a string literal that occurs as the first statement in a module, function, class, or method definition. Such a docstring becomes the <code>__doc__</code> special attribute of that object. All modules should normally have docstrings, and all functions and classes exported by a module should also have docstrings. We will revisit these concepts later.</p>
 </aside>
 
 
@@ -177,13 +181,13 @@ comments()
 </ul>
 <p>Input refers to text written by the user read by the program. Input is always read as a string. For reading input, we use the <code>input</code> tool that comes with Python. The tool can be used with the command <code>inputString = input(&#39;This text is printed to screen.&#39;)</code></p>
 <p>Below is an example of a program which asks for user input, reads the string entered by the user, and then prints it.</p>
-<pre><code>def userInput():
-    inputString = input(&#39;Write a message:&#39;)
-    print(inputString)
+<pre><code>def user_input():
+    input_string = input(&#39;Write a message:&#39;)
+    print(input_string)
 
-userInput()
+user_input()
 </code></pre>
-<p>More precisely, input is read and holds until the user writes something. When the user writes something and presses enter, the provided string is assigned to the string variable <code>inputString</code>. The program is then able to reference the variable message later on — in the example above, the variable message is referenced in the print command.</p>
+<p>More precisely, input is read and holds until the user writes something. When the user writes something and presses enter, the provided string is assigned to the string variable <code>input_string</code>. The program is then able to reference the variable message later on — in the example above, the variable message is referenced in the print command.</p>
 <p>When the program is run, its output can look like the example below. In this example, the user has written the text &#34;Hello world&#34; — user input is marked in the sample examples.</p>
 <aside class="warning"><p>Write a message: <br><em>User inputs message &lt;Hello World&gt;<br></em> Hello World</p>
 </aside>
@@ -210,27 +214,27 @@ print(&#34;message&#34;)
 </aside>
 <h3 is-upgraded>Concatenation - Joining Strings Together</h3>
 <p>The string to be printed can be formed from multiple strings using the <code>+</code> operator. For example, the program below prints &#34;Hello world!&#34; on one line.</p>
-<pre><code>def function():
+<pre><code>def main():
     print(&#34;Hello &#34; + &#34;world!&#34;)
 
-function()
+main()
 </code></pre>
 <p>The same method can be used to join a string literal and the value of a string variable.</p>
-<pre><code>def function():
+<pre><code>def main():
     message = &#34;Hello world!&#34;
     print(message + &#34;... and the universe!&#34;)
 
-function()
+main()
 </code></pre>
 <aside class="warning"><p>Hello world! ... and the universe!</p>
 </aside>
 <p>We can do the same with any number of strings.</p>
-<pre><code>def function():
+<pre><code>def main():
     start = &#34;My name is &#34;
     end = &#34;, James Bond&#34;
     print(start + &#34;Bond&#34; + end)
 
-function()
+main()
 </code></pre>
 <aside class="warning"><p>My name is Bond, James Bond</p>
 </aside>
@@ -238,12 +242,12 @@ function()
 </aside>
 <h2 is-upgraded>Reading Strings</h2>
 <p>The <code>input</code> command reads the user&#39;s input and <em>returns</em> a string. If we then want to use the string in the program, it must be saved to a string variable. A value saved to a variable can be used repeatedly. In the example below, the user input is printed twice.</p>
-<pre><code>def function():
+<pre><code>def main():
     message = input(&#39;Write a message:&#39;)
     print(message)
     print(message)
 
-function()
+main()
 </code></pre>
 <aside class="warning"><p>Write a message: <br><em>User: &lt;This will be printed twice&gt;<br></em> This will be printed twice <br> This will be printed twice</p>
 </aside>
@@ -251,11 +255,11 @@ function()
 </aside>
 <h2 is-upgraded>Input String as a Part of Output</h2>
 <p>We noticed in the &#34;Hi Ava Lovelace!&#34; exercise that string literals and string variables can be joined using the <code>+</code> -operator. The example below demonstrates a program that takes user input and prints it concatenated with a string literal.</p>
-<pre><code>def function():
+<pre><code>def main():
     message = input(&#39;Write a message:&#39;)
     print(&#39;You wrote: &#39; + message)
 
-function()
+main()
 </code></pre>
 <aside class="warning"><p>Write a message: <br><em>User: &lt;My message&gt;<br></em> You wrote: My message</p>
 </aside>
@@ -264,7 +268,7 @@ function()
 <h2 is-upgraded>Program Execution Waits for Input</h2>
 <p>When the program&#39;s execution comes to a statement that attempts to read input from the user (the command <code>input()</code>), the execution stops and waits. The execution continues only after the user has written some input and pressed enter.</p>
 <p>In the example below, the program prompts the user for three strings. First, the program prints <code>Write the first string:</code>, and then waits for user input. When the user writes some text, the program prints <code>Write the second string:</code>, and then waits for user input again. This continues for a third time, after which the program prints all three strings.</p>
-<pre><code>def function():
+<pre><code>def main():
     first = input(&#39;Write the first string:&#39;)
     second = input(&#39;Write the second string:&#39;)
     third = input(&#39;Write the third string:&#39;)
@@ -274,14 +278,14 @@ function()
     print(second)
     print(third)
 
-function()
+main()
 </code></pre>
 <aside class="warning"><p>Write the first string: <br><em>User: &lt;String number one&gt;<br></em> Write the second string: <br><em>User: &lt;String number two&gt;<br></em> Write the third string: <br><em>User: &lt;String number three&gt;<br><br></em> You wrote: <br> String number one <br> String number two <br> String number three</p>
 </aside>
 <aside class="special"><p><strong>Exercise - Conversation<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-1-8-conversation.git" target="_blank">Source files on Github</a></p>
 </aside>
 <p>In the previous example, we saved the user input to three different string variables. This can be done as long as the variables all have different names (in the example, the names are <code>first</code>, <code>second</code> and <code>third</code>).</p>
-<pre><code>def function():
+<pre><code>def main():
     first = input(&#39;Write the first string:&#39;)
     second = input(&#39;Write the second string:&#39;)
     third = input(&#39;Write the third string:&#39;)
@@ -291,10 +295,10 @@ function()
     print(second)
     print(third)
 
-function()
+main()
 </code></pre>
 <p>We can form more complicated texts whose content changes depending on the user&#39;s input by using more strings. In the example below, the user is told a bit more about the texts they wrote – notice that the order in which the strings are printed can be changed. In the example below, the third input string is printed first.</p>
-<pre><code>def function():
+<pre><code>def main():
     first = input(&#39;Write the first string:&#39;)
     second = input(&#39;Write the second string:&#39;)
     third = input(&#39;Write the third string:&#39;)
@@ -306,7 +310,7 @@ function()
 
     print(&#34;All together: &#34; + first + second + third)
 
-function()
+main()
 </code></pre>
 <aside class="warning"><p>Write the first string: <br><em>User: &lt;one&gt;<br></em> Write the second string: <br><em>User: &lt;two&gt;<br></em> Write the third string: <br><em>User: &lt;three&gt;<br><br></em> Last string you wrote was three, which <br> was preceded by two. <br> The first string was one. <br> All together: onetwothree</p>
 </aside>
@@ -329,14 +333,14 @@ function()
 <p>In the statement above, the value of 12 is assigned to a variable called months. The statement could be read as: &#34;the variable months is assigned the value 12&#34;. Note that type declaration is implicit in Python, and you don&#39;t necessarily have to declare the type in the assignment.</p>
 <p>A variable&#39;s value can be joined to a string using the + sign, as seen in the following example.</p>
 <pre><code>text = &#34;contains text&#34;
-wholeNumber = 123
-floatingPoint = 3.141592653
-trueOrFalse = True
+whole_number = 123
+floating_point = 3.141592653
+true_or_false = True
 
 print(&#34;Text variable: &#34; + text)
-print(&#34;Integer variable: &#34; + str(wholeNumber))
-print(&#34;Floating-point variable: &#34; + str(floatingPoint))
-print(&#34;Boolean: &#34; + str(trueOrFalse))
+print(&#34;Integer variable: &#34; + str(whole_number))
+print(&#34;Floating-point variable: &#34; + str(floating_point))
+print(&#34;Boolean: &#34; + str(true_or_false))
 </code></pre>
 <aside class="warning"><p>Text variable: contains text <br> Integer variable: 123 <br> Floating-point variable: 3.141592653 <br> Booolean: true</p>
 </aside>
@@ -368,7 +372,7 @@ int value = 10;
 number2 = 2
 print(number1/number2)
 </code></pre>
-<p>will output</p>
+<p>will output:</p>
 <aside class="warning"><p>0.5</p>
 </aside>
 <p>whereas the similar Java code</p>
@@ -376,7 +380,7 @@ print(number1/number2)
 int number2 = 2;
 System.out.println(number1/number2);
 </code></pre>
-<p>would output</p>
+<p>would output:</p>
 <aside class="warning"><p>0</p>
 </aside>
 <p>since both types are integers. We will not go too much further into the mechanisms of type declaration in Python here, but you can find more about it through a Google search for &#34;Type declarations in Python&#34;.</p>
@@ -392,17 +396,19 @@ print(c)
 </aside>
 <pre><code>pi = 3.14
 radius = 22
-surfaceArea = pi * radius * radius
+surface_area = pi * radius * radius
 
-print(surfaceArea)
+print(surface_area)
 </code></pre>
 <aside class="warning"><p>1519.76</p>
 </aside>
 <p>Both of the preceding examples function the same way and output the same result. One of them is, however, much more understandable. The objective here is to compute the surface area of a circle. The value of pi is defined in the first row, the circle&#39;s radius in the second, and the surface area calculated in the third.</p>
 <aside class="special"><p><strong>Variables Express the Program and the Problem to Be Solved<br><br></strong> Programming is a problem-solving tool. The aim is to create solutions for any given problem, such as the automation of control in cars. As a problem is approached, the developer decides on the terms used to describe the problem domain. The terminology that is chosen, such as variable names, will serve to describe the problem for anyone who is to work with it in the future. <br><br> As you&#39;re wording the problem that you&#39;re solving, think about the concepts related to that problem and appropriate terms that could be used to describe them. If you find it hard to come up with relevant names, think of the ones that definitely do not describe it. After this, settle on some terminology that you&#39;re going to use – the good thing is that you can usually improve on it later on. s Variable naming is limited by certain constraints.</p>
 </aside>
-<p>Variable names cannot contain certain special symbols, such as exclamation marks (!). Spaces are also not allowed, since they&#39;re used to separate parts of commands. Instead of spaces, the convention in many programming languages is to either use a style known as <a href="https://en.wikipedia.org/wiki/Camel_case" target="_blank">camelCase</a> or use underscores to delimit words. <strong>Note!</strong> The first letter of a variable name is always lower-cased:</p>
-<pre><code>camelCaseVariable = 7
+<p>Variable names cannot contain certain special symbols, such as exclamation marks (!). Spaces are also not allowed, since they&#39;re used to separate parts of commands. Instead of spaces, the convention in many programming languages is to either use a style known as <a href="https://en.wikipedia.org/wiki/Camel_case" target="_blank">camelCase</a> or <a href="https://en.wikipedia.org/wiki/Snake_case" target="_blank">snake_case</a> to delimit words. Python variable names are always written in snake_case.</p>
+<p><strong>Note!</strong> The first letter of a variable name is always lower-cased:</p>
+<pre><code>camelCaseVariable = 7 # will work, but not convention in Python
+snake_case_variable = 7 # this is the format recommended by Python
 </code></pre>
 <p>Python has community guidelines on how code should be formatted. You can <a href="https://www.python.org/dev/peps/pep-0008/" target="_blank">view the guide here</a>. We will follow these guidelines as much as practicable in this course.</p>
 <p>Numbers can be used within a variable name as long as the name does not begin with a number. Also, a name cannot consists of numbers only.</p>
@@ -424,11 +430,11 @@ print(&#34;You wrote &#34; + text)
 <table>
 <tr></tr>
 <tr><td colspan="1" rowspan="1"><p>Whole number, i.e., <code>int</code></p>
-</td><td colspan="1" rowspan="1"><p><code>value = int(4)</code></p>
+</td><td colspan="1" rowspan="1"><p><code>value = 4</code></p>
 </td><td colspan="1" rowspan="1"><p>An integer can contain whole numbers whose values lie between -2147483648 and 2147483647.</p>
 </td></tr>
 <tr><td colspan="1" rowspan="1"><p>Floating-point number, i.e., <code>float</code></p>
-</td><td colspan="1" rowspan="1"><p>`value = float(4.2)</p>
+</td><td colspan="1" rowspan="1"><p><code>value = 4.2</code></p>
 </td><td colspan="1" rowspan="1"><p>Floating-point numbers contain decimal numbers, with the greatest possible value being approximately 2^1023. When a decimal number is represented with a floating-point number, the value can be inaccurate as floating-points are incapable of representing all decimal numbers.</p>
 </td></tr>
 <tr><td colspan="1" rowspan="1"><p><code>String</code></p>
@@ -436,27 +442,27 @@ print(&#34;You wrote &#34; + text)
 </td><td colspan="1" rowspan="1"><p>A string can contain text. Strings are enclosed in quotation marks.</p>
 </td></tr>
 <tr><td colspan="1" rowspan="1"><p>True or false value, i.e., <code>bool</code></p>
-</td><td colspan="1" rowspan="1"><p><code>right = bool(True)</code></p>
+</td><td colspan="1" rowspan="1"><p><code>right = True</code></p>
 </td><td colspan="1" rowspan="1"><p>A boolean contains either the value <code>True</code> or <code>False</code>. (Note the capitalisation.)</p>
 </td></tr>
 </table>
 <h2 is-upgraded>Reading Integers</h2>
 <p>The <code>int</code> command converts a string to an integer. It takes the string containing the value to be converted as a parameter.</p>
-<pre><code>valueAsString = &#34;42&#34;
-value = int(valueAsString)
+<pre><code>value_as_string = &#34;42&#34;
+value = int(value_as_string)
 
 print(value)
 </code></pre>
 <aside class="warning"><p>42</p>
 </aside>
 <p>When using a the <code>input</code> call, the reading of the value is usually inserted directly into the type conversion. This happens like so:</p>
-<pre><code>def function():
+<pre><code>def main():
     value = int(input(&#34;Write a value &#34;))
     print(&#34;You wrote &#34; + str(value))
 </code></pre>
 <aside class="warning"><p>Write a value <br><em>User &lt;42&gt;<br></em> You wrote 42</p>
 </aside>
-<p>Note that we had to convert our variable back to a string in the <code>print</code> statement.</p>
+<p>Note that we had to convert our variable back to a string in the <code>print</code> statement in order to be able to concatenate it with the string &#34;You wrote &#34;. An error would have been thrown if we had ommited the <code>str()</code>.</p>
 <aside class="special"><p><strong>Exercise - Different types of input<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-1-11-different-inputs.git" target="_blank">Source files on Github</a></p>
 </aside>
 
@@ -480,23 +486,23 @@ print(sum) # prints 6
 </code></pre>
 <h2 is-upgraded>Precedence and Parentheses</h2>
 <p>You can affect the order of operations by using parentheses. Operations within parentheses are performed before those outside them.</p>
-<pre><code>calculationWithParentheses = (1 + 1) + 3 * (2 + 5)
-print(calculationWithParentheses) # prints 23
+<pre><code>calculation_with_parentheses = (1 + 1) + 3 * (2 + 5)
+print(calculation_with_parentheses) # prints 23
 
-calculationWithoutParentheses = 1 + 1 + 3 * 2 + 5
-print(calculationWithoutParentheses) # prints 13
+calculation_without_parentheses = 1 + 1 + 3 * 2 + 5
+print(calculation_without_parentheses) # prints 13
 
 </code></pre>
 <p>The example above can also be divided into steps.</p>
-<pre><code>calculationWithParentheses = (1 + 1)
-print(calculationWithParentheses) # prints 2
-calculationWithParentheses = calculationWithParentheses + 3 * (2 + 5)
-print(calculationWithParentheses) # prints 23
+<pre><code>calculation_with_parentheses = (1 + 1)
+print(calculation_with_parentheses) # prints 2
+calculation_with_parentheses = calculation_with_parentheses + 3 * (2 + 5)
+print(calculation_with_parentheses) # prints 23
 
-int calculationWithoutParentheses = 1 + 1
-calculationWithoutParentheses = calculationWithoutParentheses + 3 * 2
-calculationWithoutParentheses = calculationWithoutParentheses + 5
-print(calculationWithoutParentheses) # prints 13
+calculation_without_parentheses = 1 + 1
+calculation_without_parentheses = calculation_without_parentheses + 3 * 2
+calculation_without_parentheses = calculation_without_parentheses + 5
+print(calculation_without_parentheses) # prints 13
 </code></pre>
 <aside class="special"><p><strong>Exercise - Seconds in a day<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-1-12-seconds-in-a-day.git" target="_blank">Source files on Github</a></p>
 </aside>
@@ -530,7 +536,7 @@ print(str(2) + &#34; &lt;-- here is an integer&#34;)
 </code></pre>
 <aside class="warning"><p>here is an integer –&gt; 2 <br> 2 &lt;– here is an integer</p>
 </aside>
-<p>If one of the operands of the operation <code>+</code> is a string, the other operand will be changed into a string too during program execution. In the example below, the integer <code>2</code> is turned into the string &#34;2&#34;, and a string has been appended to it.</p>
+<p>If one of the operands of the operation <code>+</code> is a string, the other operand must be changed into a string too during program execution. In the example below, the integer <code>2</code> is turned into the string &#34;2&#34;, and a string has been appended to it.</p>
 <p>The precedence introduced earlier also apply here:</p>
 <pre><code>print(&#34;Four: &#34; + str(2 + 2))
 print(&#34;But! Twenty-two: &#34; + str(2) + str(2))
@@ -565,7 +571,7 @@ print(result)
 </code></pre>
 <aside class="warning"><p>1.5</p>
 </aside>
-<aside class="special"><p>The next exercises task you with calculating the average of the entered numbers. Let&#39;s briefly review the concept of <em>average</em>. <br> An average refers to the sum of numbers divided by their count. For instance, the average of the numbers 5 and 3 can be calculated with the formula (5+3)/2. Similarly, the average of the numbers 1, 2, and 4 is produced by the formula (1+2+4)/3. <br> In the context of programming, there are a few things to keep in mind. Firstly, dividing by zero is typically not permitted. This implies that calculating the average of zero numbers is impossible.</p>
+<aside class="special"><p><strong>Average<br><br></strong> The next exercises task you with calculating the average of the entered numbers. Let&#39;s briefly review the concept of <em>average</em>. <br><br> An average refers to the sum of numbers divided by their count. For instance, the average of the numbers 5 and 3 can be calculated with the formula (5+3)/2. Similarly, the average of the numbers 1, 2, and 4 is produced by the formula (1+2+4)/3. <br><br> In the context of programming, there are a few things to keep in mind. Firstly, dividing by zero is typically not permitted. This implies that calculating the average of zero numbers is impossible.</p>
 </aside>
 <aside class="special"><p><strong>Exercise - Average of two numbers<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-1-17-average-of-two-numbers.git" target="_blank">Source files on Github</a></p>
 </aside>
@@ -628,17 +634,21 @@ if (number &gt; 10):
 </aside>
 <h2 is-upgraded>Code Indentation and Block Statements</h2>
 <p>A code block refers to a section with a particular indentation level from the left hand-side.</p>
-<p>Most of our programs have included a recurring snippet <code>def function():</code>, which begins a block, with the code inside the function indented below.</p>
+<p>Most of our programs have included a recurring snippet <code>def main():</code>, which begins a block, with the code inside the function indented below.</p>
 <p>Blocks define a program&#39;s structure and its bounds. A conditional statement also marks the start of a new code block.</p>
 <pre><code># Look at the indentation below, which marks the blocks
-def function(): #start block 1
+def main(): #start block 1
     number = 10 #inside block 1
     if (number &gt; 5): #start block 2
         print(&#39;This is greater than 5!&#39;) #inside block 2
 
-function() #outside block 1 and 2
+main() #outside block 1 and 2
 </code></pre>
-<p>In addition to the defining program structure and functionality, block statements also have an effect on the readability of a program. Code living inside a block is indented. For example, any source code inside the block of a conditional statement is indented deeper than the <code>if</code> command that started the conditional statement. Indents can also be added by pressing the tab key (the key to the left of ‘q&#39;). When the block ends, the indentation also ends.</p>
+<p>In addition to the defining program structure and functionality, block statements also have an effect on the readability of a program. Code living inside a block is indented. For example, any source code inside the block of a conditional statement is indented deeper than the <code>if</code> command that started the conditional statement. Indents can also be added by pressing the tab key (the key to the left of ‘q&#39;). When the block ends, the indentation also ends. Python has explicit style guidelines on how code should be indented in the <a href="https://www.python.org/dev/peps/pep-0008" target="_blank">PEP 8</a> guidelines discussed previously. It boils down to:</p>
+<ul>
+<li>Use 4 spaces per indentation level.</li>
+<li>Use spaces instead of tabs.</li>
+</ul>
 <p>The example below is incorrectly indented and will result in an error.</p>
 <pre><code>if (number &gt; 10):
 number = 9
@@ -647,7 +657,7 @@ number = 9
 <pre><code>if (number &gt; 10):
     number = 9
 </code></pre>
-<aside class="special"><p>Code in Python is indented either by two or four spaces or a single tab for each block. Use either spaces or tabs for indentation, not both. The indentation might break in some cases if you use both at the same time.</p>
+<aside class="special"><p>Code in Python is indented by four spaces for each block. Use spaces for indentation, not tabs. The indentation might break in some cases if you use both spaces and tabs at the same time.</p>
 </aside>
 <p>Our program code always needs to be indented correctly in the exercises as well. If the indentation is incorrect, the development environment will not accept the solution and will not run. You will see indentation errors in the test results.</p>
 <h2 is-upgraded>Comparison Operators</h2>
@@ -729,14 +739,14 @@ else:
 </aside>
 <h2 is-upgraded>Conditional Statement Expression and the Boolean Variable</h2>
 <p>The value that goes between the parentheses of the conditional statement should be of type boolean after the evaluation. <code>boolean</code> type variables are either <em>true</em> or <em>false</em>.</p>
-<pre><code>isItTrue = True
-print(&#34;The value of the boolean variable is &#34; + str(isItTrue))
+<pre><code>is_it_true = True
+print(&#34;The value of the boolean variable is &#34; + str(is_it_true))
 </code></pre>
 <aside class="warning"><p>The value of the boolean variable is True</p>
 </aside>
 <p>The conditional statement can also be done as follows:</p>
-<pre><code>isItTrue = True
-if (isItTrue):
+<pre><code>is_it_true = True
+if (is_it_true):
     print(&#34;Pretty wild!&#34;)
 </code></pre>
 <aside class="warning"><p>Pretty wild!</p>
@@ -744,19 +754,19 @@ if (isItTrue):
 <p>Comparison operators can also be used outside of conditionals. In those cases, the boolean value resulting from the comparison is stored in a boolean variable for later use.</p>
 <pre><code>first = 1
 second = 3
-isGreater = first &gt; second
+is_greater = first &gt; second
 </code></pre>
 <p>In the example above, the boolean variable <code>isGreater</code> now contains the boolean value <em>false</em>. We can extend the previous example by adding a conditional statement to it.</p>
 <pre><code>first = 1
 second = 3
-isLessThan = first &lt; second
+is_less_than = first &lt; second
 
-if (isLessThan):
+if (is_less_than):
     print(&#34;1 is less than 3!&#34;)
 </code></pre>
 <aside class="warning"><p>1 is less than 3!</p>
 </aside>
-<p>The code above has been executed to the point where the program&#39;s variables have been created and assigned values. The variable <code>isLessThan</code> has <code>true</code> as its value. Next in the execution is the comparison <code>if (isLessThan)</code> – the value for the variable <code>isLessThan</code> is found in its container, and the program finally prints:</p>
+<p>The code above has been executed to the point where the program&#39;s variables have been created and assigned values. The variable <code>is_less_than</code> has <code>true</code> as its value. Next in the execution is the comparison <code>if (is_less_than)</code> – the value for the variable <code>is_less_than</code> is found in its container, and the program finally prints:</p>
 <aside class="special"><p><strong>Remainder</strong>: <br><br> The modulo operator is a slightly less-used operator, which is, however, very handy when we want to check the divisibility of a number, for example. The symbol for the modulo operator is <code>%</code>.</p>
 </aside>
 <pre><code>remainder = 7 % 2
@@ -804,7 +814,7 @@ else:
 <aside class="special"><p><strong>Exercise - Same<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-1-29-same.git" target="_blank">Source files on Github</a></p>
 </aside>
 <h2 is-upgraded>Logical Operators</h2>
-<p>The expression of a conditional statement may consist of multiple parts, in which the logical operators <strong>and</strong><code>and</code>, <strong>or</strong><code>or</code>, and <strong>not</strong><code>!</code> are used.</p>
+<p>The expression of a conditional statement may consist of multiple parts, in which the logical operators <strong>and</strong><code>and</code>, <strong>or</strong><code>or</code>, and <strong>not</strong><code>not</code> are used.</p>
 <ul>
 <li>An expression consisting of two expressions combined using the and-operator is true, if and only if both of the combined expressions evaluate to true.</li>
 <li>An expression consisting of two expressions combined using the or-operator is true if either one, or both, of the combined expressions evaluate to true.</li>
