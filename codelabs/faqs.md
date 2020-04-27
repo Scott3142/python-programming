@@ -9,7 +9,7 @@ analytics account: UA-49751789-4
 
 # FAQs
 
-## Frequently Asked Questions
+## Starting out
 
 Welcome to this course on Python Programming. This is a list of some of the most frequently asked questions about coding, programming and software development. If your question is one of these, it has probably been answered many times before, and you should get a good answer below.
 
