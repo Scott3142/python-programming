@@ -7,8 +7,8 @@ do
     then
         echo "Directory $filename exists. Entering directory."
         cd $filename
-        git add README.md
-        git commit -m 'Updates README'
+        git add --all
+        git commit -m 'Adds tests'
         git branch tmp
         git checkout master
         git merge tmp
