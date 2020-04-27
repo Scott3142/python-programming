@@ -29,16 +29,21 @@
     - [x] Part 7
 - [ ] Exercises
     - [x] Add template structures
-    - [ ] Populate exercises
+    - [x] Populate exercises
         - [x] Part 1
         - [x] Part 2
         - [x] Part 3
-        - [ ] Part 4
+        - [x] Part 4
+        - [x] Part 5
+        - [x] Part 6
+        - [x] Part 7
+    - [ ] Add exercise template files
+        - [ ] 3.2 - 3.14
+        - [ ] 4.1
+        - [ ] 4.17 - 4.20
         - [ ] Part 5
         - [ ] Part 6
         - [ ] Part 7
-        - [ ] Add template files
-            - [ ] 3.2 - 3.14
     - [ ] Write tests
         - [ ] Part 1
         - [ ] Part 2
@@ -53,7 +58,7 @@
 - [ ] Add:
     - [x] module imports
     - [x] PEP8 styling guidelines
-    - [ ] section on testing
+    - [ ] section on testing with exercise 6.13
     - [ ] projects
 
 ### Python Programming II
