@@ -1,0 +1,618 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>FAQs</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid="UA-49751789-4"
+                  id="faqs"
+                  title="FAQs"
+                  environment="web"
+                  feedback-link="https://github.com/Scott3142/python-programming">
+    
+      <google-codelab-step label="Frequently Asked Questions" duration="0">
+        <p>Welcome to this course on Python Programming. This is a list of some of the most frequently asked questions about coding, programming and software development. If your question is one of these, it has probably been answered many times before, and you should get a good answer below.</p>
+<p><strong>This has been adapted from the FAQs on the </strong><a href="https://www.reddit.com/r/learnprogramming/wiki/faq" target="_blank"><strong>r/learnprogramming</strong></a><strong> subreddit.</strong></p>
+<h2 is-upgraded>Where do I start?</h2>
+<p>If you&#39;re interested in learning to code, it&#39;s very helpful to start with the right mindset. This <a href="https://www.youtube.com/watch?v=mvK0UzFNw1Q" target="_blank">YouTube video</a> by Kevin Cheers does a great job of explaining the proper perspective you should have when starting out.</p>
+<p>Next, you should keep in mind that there&#39;s no universally agreed way of learning to code – everybody prefers learning in a slightly different way, and you may need to do some experimenting to find an approach that works best for you. Nevertheless, the majority of people seem to learn best using the following approach, which we strongly recommend you try:</p>
+<ol type="1">
+<li>Find some small problem or project that you&#39;re interested in tackling. You could try building a tool to solve a small problem in your life, or try implementing a program you find interesting from scratch. This project will help motivate you to continue to learn to code and will give you opportunities to practice applying what you&#39;re learning.</li>
+<li>Do some research to figure out which programming language is most appropriate for your project. (See below for recommendations)</li>
+<li>Find and follow a single, high-quality beginner-oriented resource for that language. (Again, see below)</li>
+<li>Supplement that resource by googling and asking questions</li>
+<li>Eventually complete several non-trivial projects using that language.</li>
+</ol>
+<p>Here are some things we recommend you avoid doing:</p>
+<ol type="1">
+<li>Don&#39;t just simply passively follow along whatever resource you&#39;re using. Do the exercises and homework assignments; practice is an absolutely essential part of learning to code.</li>
+<li>Avoid needlessly switching back and forth between programming languages; pick one and stick with it. This is because programming is ultimately about problem solving, not about programming languages. Learning to problem-solve is challenging and is a skill you can hone only through practice. Every time you switch languages, you&#39;re losing time you could have spent practicing applying what you&#39;ve learned to improve your problem-solving skills.</li>
+<li>Don&#39;t stop learning once you&#39;ve completed a tutorial. Programming is the kind of field where there&#39;s always something new to learn.</li>
+</ol>
+<p>And finally, remember that learning to code can be a <a href="http://norvig.com/21-days.html" target="_blank">long</a> and <a href="https://www.vikingcodeschool.com/posts/why-learning-to-code-is-so-damn-hard" target="_blank">difficult</a> process. If learning to code feels hard, don&#39;t get discouraged! That&#39;s completely normal – many people will spend years of their lives learning and practicing before they consider themselves competent enough to look for a job or contribute to a significant project. Fortunately, just getting started is not difficult at all.</p>
+<h2 is-upgraded>Which programming language should I start with?</h2>
+<p>There are two common misconceptions that cause people to ask this question. The first is that there actually is a &#34;best&#34; programming language for learning and the second is that the first language you learn will decide what the rest of your programming career looks like.</p>
+<p>In reality, there is no best language to start with, and your first language has virtually no lasting effect on your eventual career. Programming languages can look very different on the surface, but the majority of the fundamental concepts will transfer from language to language. Learning a new language will also get easier over time – it can take a beginner months before they feel comfortable with their first language; an experienced programmer can become familiar with a new language in a matter of days.</p>
+<p>All programmers should ideally have experience in multiple types of languages. Once you are comfortable with one language, move on to another language which differs in some fundamental way. As you learn more languages, you will become more equipped to choose the right tool for the task at hand, which is a hallmark of a good programmer. Since programming concepts are what matter most, we recommended that beginners start with one of the mainstream languages from the table below. All these languages enable beginners to start writing simple applications and practice programming without having to use any of the more complex language features.</p>
+<p>If you already have a project or goal in mind, you will learn faster if you can apply your skills to the problem you are trying to solve. The table below contains some recommended language choices for common projects:</p>
+<table>
+<tr></tr>
+<tr><td colspan="1" rowspan="1"><p>...make iPhone Apps</p>
+</td><td colspan="1" rowspan="1"><p>Swift (<a href="https://www.reddit.com/r/learnprogramming/wiki/faq#wiki_how_do_i_get_starting_making_mobile_apps.2Fandroid_apps.2Fios_apps.2Fwindows_phone_apps.3F" target="_blank">more</a>)</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>...make Android Apps</p>
+</td><td colspan="1" rowspan="1"><p>Java (<a href="https://www.reddit.com/r/learnprogramming/wiki/faq#wiki_how_do_i_get_starting_making_mobile_apps.2Fandroid_apps.2Fios_apps.2Fwindows_phone_apps.3F" target="_blank">more</a>)</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>...build a website</p>
+</td><td colspan="1" rowspan="1"><p>JavaScript, CSS, HTML5 (<a href="https://www.reddit.com/r/learnprogramming/wiki/faq#wiki_how_do_i_get_started_making_websites.2Fmaking_webapps.2Fdoing_web_development.3F" target="_blank">more</a>)</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>...write Windows desktop applications</p>
+</td><td colspan="1" rowspan="1"><p>C#</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>...make 2D/3D games</p>
+</td><td colspan="1" rowspan="1"><p>JavaScript, C#, or C++ (<a href="https://www.reddit.com/r/learnprogramming/wiki/faq#wiki_how_can_i_get_started_making_video_games.3F" target="_blank">more</a>)</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>...program Arduinos/micro-controllers/robots</p>
+</td><td colspan="1" rowspan="1"><p>C</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>...do scientific/mathematical computing or data analysis</p>
+</td><td colspan="1" rowspan="1"><p>Julia, Python, R, or Matlab</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>...do automation and scripting</p>
+</td><td colspan="1" rowspan="1"><p>Many languages (Python, Ruby, Bash, Powershell, AutoHotKey...)</p>
+</td></tr>
+</table>
+<p>If you still can&#39;t decide, try Python. Python is a good, beginner-friendly language with a huge community and many libraries for doing almost anything you want, ranging from making games to automating things at your home or workplace or doing data analysis to making websites. Try to find a learning resource which focuses on concepts and fundamentals before diving into more complex applications. You can find instructions for starting with any language on the subreddit <a href="http://www.reddit.com/r/learnprogramming/wiki/gettingstarted" target="_blank">r/learnprogramming getting started page</a>.</p>
+<h2 is-upgraded>Where do I find good learning resources (other than this course)?</h2>
+<ul>
+<li><a href="http://www.reddit.com/r/learnprogramming/wiki/books" target="_blank">Books</a></li>
+<li><a href="http://www.reddit.com/r/learnprogramming/wiki/online" target="_blank">Online Resources</a></li>
+<li><a href="https://github.com/Michael0x2a/curated-programming-resources/blob/master/resources.md" target="_blank">Curated Programming Resources</a></li>
+<li><a href="http://www.infocobuild.com/education/audio-video-courses/" target="_blank">InfoCobuild Education</a> - aggregated University courses</li>
+<li><a href="https://github.com/ossu/computer-science" target="_blank">OSSU Computer Science</a> - a full long-term curriculum for CS starting from zero</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="How to improve" duration="0">
+        <h2 is-upgraded>How do I move from a beginning to an intermediate level?</h2>
+<p>A common question we get from many beginners is &#34;now what?&#34;. In particular, you might have tried working through some tutorials, books, courseworks, but ultimately have difficulty making the gap from understanding how things like if statements and for loop works to understanding how to actually <em>apply</em> what you&#39;ve learned to make complex and interesting programs.</p>
+<p>Making this jump between intro tutorials to complex code can be difficult, and is a normal part of learning to code. <a href="http://www.vikingcodeschool.com/posts/why-learning-to-code-is-so-damn-hard" target="_blank">This article</a> describes this phenomenon very well. Many tutorials (in particular, commercialized &#34;learn-to-code&#34; websites like CodeAcademy) tend to hand-hold you through the basics, but stop after that point, leaving many beginners floundering.</p>
+<p>However, if you stick with it and work through the confusion, you&#39;ll eventually find yourself gradually growing better and better, until one day, without realizing it, you&#39;ll find that you&#39;ve started to become competent.</p>
+<p>Here are some suggestions on how to persevere, and what you should be doing next.</p>
+<ul>
+<li><strong>Switch from passive learning to active learning</strong>Rather just taking courses and classes that (you hope) will teach you what you want to learn, start actively researching for ways to teach yourself. If you have no idea how to make a game, for example, google &#34;how to program a game in X&#34;, where &#34;X&#34; is the programming language you want to use. If you run into an error message you don&#39;t recognize, try googling it. Want to learn how to do machine learning? Google, and find a textbook, tutorial, or online course that seems good.You&#39;ll often be able to find tutorials explaining what exactly it is you want to do, or at least articles that give you overviews and clues on how to compose more specific search queries. More broadly, there&#39;s no shame in doing research to learn new things – quite the opposite, in fact. Googling and researching is something all programmers, both beginning and advanced constantly do.</li>
+<li><strong>Constantly be practicing</strong>Programming is sort of like exercising, in that the main way to improve is through constant practice. Start simple, and try programming a basic game like &#34;rock-paper-scissors&#34; on the command line. Once you finish, try picking a more ambitious project, and work through that. Perhaps try some programming exercises, if you want to mix things up.Programming, fundamentally, is really about applied problem-solving, and the best way to learn how to problem-solve is to constantly be solving problems, big and small.(See also <a href="https://www.reddit.com/r/learnprogramming/wiki/faq#wiki_where_can_i_find_practice_exercises_and_project_ideas.3F" target="_blank">FAQ: Where can I find practice exercises and project ideas</a> and <a href="https://www.reddit.com/r/learnprogramming/wiki/faq#wiki_i_can.27t_come_up_with_any_cool_new_ideas_for_a_project._am_i_simply_lacking_in_creativity.3F_how_do_other_programmers_become_inspired.3F" target="_blank">FAQ: I can&#39;t come up with any cool new ideas for a project. Am I simply lacking in creativity? How do other programmers become inspired?</a>)</li>
+<li><strong>Learn how to decompose problems</strong>When you&#39;re trying to tackle a large project or problem, it&#39;s easy to become discouraged by just how big or intimidating the task seems. Instead of being intimidated, work on breaking the problem up (<em>decomposing</em> the problem) into smaller and smaller subproblems, until each individual subproblem seems manageable and doable.For example, let&#39;s say you wanted to make a rock-paper-scissors game. Well, if you really break it apart, this consists of several subproblems: how to get input from the user, how to make the computer pick a random option, how to tell who won, and how to repeat the entire thing (if you want to play multiple games).If you&#39;re not sure how to solve each of <em>these</em> subproblems, try breaking it apart more. For example, if you&#39;re not how to tell who&#39;s won, you could break it up into more sub-problems: how to tell if you&#39;ve tied, how to tell if you&#39;ve won (assuming you picked rock), how to tell if you&#39;ve won (assuming you picked paper), and how to tell if you&#39;ve won (assuming you picked scissors).If you&#39;re absolutely not sure (for example, how do you make the computer pick a random option?), try googling it. In this case, googling &#34;X pick random option&#34; (where X is the programming language you&#39;re using) will bring up multiple different methods you could use. Sometimes, you can break a problem up into many pieces before needing to google, and sometimes will need to do so immediately.For example, if you&#39;re learning Java, want to learn to write games, but have no idea where to start or how to break the problem apart, googling &#34;java game tutorial&#34; would bring up several good results that would both teach you how to write games, and (usually implicitly) how you can break down the process of writing a game into smaller pieces.Essentially, you&#39;re trying to gain the mindset of an engineer. If a problem is big, don&#39;t give up. Keep breaking it up into smaller and smaller pieces, and research things that seem irreducible. Then repeat, continuing the cycle: break down, google, break down, google...This, by the way, is a pretty effective strategy for self-teaching! As you practice, you&#39;ll get better at seeing how to break down problems, and will expand your pool of knowledge/possible solutions to problems.See <a href="https://www.reddit.com/r/learnprogramming/wiki/faq#wiki_how_can_i_improve_my_skill_to_convert_tasks.2Fproblems_into_programs_.28algorithmic_thinking.29.3F" target="_blank">FAQ: How can I improve my skill to convert tasks/problems into programs (Algorithmic thinking)?</a> for more suggestions.</li>
+<li><strong>Learn how to be systematic</strong>When coding and debugging your code, never fall into the habit of just &#34;trying&#34; things and hoping they work. Be as systematic and rigorous as possible, and avoid &#34;trial-and-error&#34;.When writing code, take a moment to pause and plan out in paper a rough plan of attack. Consider sketching some diagrams, or jotting down some pseudocode. If you have to change your plan (which you most likely will), think about why you&#39;re making that change, and what your new plan of attack is. (This planning phase is also a good time to practice problem decomposition!)When debugging, never be aimless. Try and think like a scientist – conduct experiments to either try fixing the bug or to narrow down where the bug might be, and record your results. If your hypothesis/attempted change turned out to be wrong, or if something worked when you didn&#39;t think it would, stop, pause, and figure out why. Consider tracking your experiments and tests in a notebook, if it helps you stay on-track.Bugs happen when your assumptions don&#39;t match up to reality. If something feels &#34;off&#34;, don&#39;t ignore it – trace that down until you pin down what the issue is/what incorrect assumption you made.Don&#39;t just &#34;do&#34; random stuff until you get lucky – be systematic about it.</li>
+<li><strong>Don&#39;t be discouraged by having to debug or google</strong>Something that not all beginners realize is that having to spend more time debugging or googling is perfectly normal, even among professional programmers.Debugging (and struggling!) is an essential part of coding. Try to avoid being stressed out or impatient, if possible. Treat it as an interesting hunt or a puzzle!Even if you&#39;re making no progress on your actual code due to some bug, as long as you&#39;re being systematic, you&#39;re still practicing your problem-solving skills, albeit in a different way.As a result, even if you spend many hours working through a single bug, you should still consider it time-well spent. Debugging is one of the best ways to become good at problem-solving!(This is even more true as you grow more experienced. It turns out that the difficulty of bugs you encounter will grow and scale with your level of experience. It isn&#39;t uncommon for experienced programmers to have to spend months tracking down just a single bug if it turns out to be particularly nasty.)</li>
+<li><strong>Don&#39;t be afraid to ask for help</strong>And finally, if you&#39;re completely stuck and have no idea what to do next, don&#39;t feel bad about asking for help!Programmers are generally very helpful. Many people are also self-taught, and so understand what it&#39;s like to struggle as a beginner and what it&#39;s like to be completely stuck.As a caveat, make sure you&#39;ve done your due diligence (tried decomposing the problem, tried debugging, tried googling, etc), and make sure you&#39;ve come up with a good-quality question. Like any subculture, programmers tend to have certain implicit rules and expectations. One of the key ones is that your question should be well-posed (even if it&#39;s basic).</li>
+<li><strong>Try taking a more rigorous intro course</strong>This bullet point only applies if your only exposure to programming has been really basic &#34;intro-to-programming&#34; courses like CodeCademy. Those sorts of websites are good at giving you a <em>taste</em> of what programming is like, and teaching some of the basics, but may not be helpful if you&#39;re trying to progress to an intermediate level.As a good rule of thumb, if whatever &#34;intro to programming&#34; course you took did not really challenge you, or did not ask you to work through exercises and mini-projects, you should consider finding a more rigorous one. Constant practice (and struggle!) is an essential part of the learning process.</li>
+</ul>
+<h2 is-upgraded>Where can I find practice exercises and project ideas?</h2>
+<p><strong>Project ideas:</strong></p>
+<p>If you are trying to make a project, here are some lists of ideas you can reference for inspiration:</p>
+<ul>
+<li>Big lists:  <ul>
+<li><a href="http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/" target="_blank">http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/</a></li>
+<li><a href="https://github.com/karan/Projects" target="_blank">https://github.com/karan/Projects</a></li>
+<li><a href="https://github.com/NirantK/awesome-project-ideas" target="_blank">https://github.com/NirantK/awesome-project-ideas</a></li>
+<li><a href="https://github.com/florinpop17/app-ideas" target="_blank">https://github.com/florinpop17/app-ideas</a> - growing list</li>
+</ul>
+</li>
+<li>Project ideas accompanied by tutorials or writeups  <ul>
+<li><a href="https://robertheaton.com/2018/12/08/programming-projects-for-advanced-beginners/" target="_blank">Programming projects for advanced beginners</a> (blog series)</li>
+<li><a href="https://github.com/tuvtran/project-based-learning" target="_blank">https://github.com/tuvtran/project-based-learning</a></li>
+<li><a href="http://aosabook.org/en/index.html" target="_blank">http://aosabook.org/en/index.html</a> - Note: read just the first book: &#34;500 lines or less&#34;. Complete solutions can be found on <a href="https://github.com/aosabook/500lines" target="_blank">https://github.com/aosabook/500lines</a></li>
+</ul>
+</li>
+<li>Topic-specific projects:  <ul>
+<li><a href="http://inventwithpython.com/blog/2012/02/20/i-need-practice-programming-49-ideas-for-game-clones-to-code/" target="_blank">http://inventwithpython.com/blog/2012/02/20/i-need-practice-programming-49-ideas-for-game-clones-to-code/</a></li>
+</ul>
+</li>
+<li>Other:  <ul>
+<li><a href="http://nifty.stanford.edu/" target="_blank">http://nifty.stanford.edu/</a> - Note: this website is really meant more for teachers who are looking for creative assignment ideas for their intro to programming courses, but it can serve as a good source of inspiration for self-learners.</li>
+</ul>
+</li>
+</ul>
+<p>Want to do something challenging? Try re-implementing programs that you use every day. For example, try writing your own...</p>
+<ul>
+<li>Command line utilities (ls, wget, curl, etc)</li>
+<li>Text editor</li>
+<li>IDE</li>
+<li>Image viewer</li>
+<li>Office suite (something like Microsoft Office or Libreoffice)</li>
+<li>Programming language (write an interpreter or compiler)</li>
+<li>Web browser</li>
+<li>Database (relational or non-relational)</li>
+<li>Web server</li>
+<li>Version control system</li>
+</ul>
+<p><strong>Practice exercises:</strong></p>
+<p>Here are some good sites/resources to start with:</p>
+<ul>
+<li>On reddit  <ul>
+<li><a href="/r/dailyprogrammer" target="_blank">/r/dailyprogrammer</a> - a subreddit with daily programming challenges</li>
+</ul>
+</li>
+<li>General exercises:  <ul>
+<li><a href="https://www.codestepbystep.com/" target="_blank">Coding step by step</a></li>
+<li><a href="https://leetcode.com/" target="_blank">Leetcode</a></li>
+<li><a href="https://www.codewars.com/" target="_blank">Codewars</a></li>
+<li><a href="https://www.hackerrank.com/" target="_blank">Hackerrank</a></li>
+<li><a href="http://www.codeabbey.com" target="_blank">CodeAbbey</a></li>
+<li><a href="http://codingbat.com/" target="_blank">Codingbat.com</a></li>
+<li><a href="http://rubyquiz.com/" target="_blank">Ruby Quiz</a> - a series of &#34;quizzes&#34; which ask you to write short programs of varying complexity. The canonical solutions are all in Ruby, but the prompts are language-agnostic so you should be able use any other programming language as long as you don&#39;t mind not having a definitive solution for reference.</li>
+</ul>
+</li>
+<li>Topic-specific exercises:  <ul>
+<li><a href="http://projecteuler.net/" target="_blank">Project Euler</a> - Focuses on maths related problems (i.e. number theory, primes, numeral systems) intended to be solved in a programmatic way.</li>
+<li><a href="http://www.codebymath.com/index.php/welcome/challenges" target="_blank">CodeByMath</a> - Like Project Euler, but with possibly simpler problems</li>
+<li><a href="http://rosalind.info" target="_blank">Rosalind</a> - has problems with a bioinformatics twist.</li>
+</ul>
+</li>
+<li>Competitive programming exercises:  <ul>
+<li><a href="https://www.topcoder.com/tc?module=ProblemArchive" target="_blank">TopCoder</a> - Has a collection of algorithmic challenges collected from other contests.</li>
+<li><a href="http://uva.onlinejudge.org/" target="_blank">UVa Online Judge</a></li>
+<li><a href="http://codeforces.com" target="_blank">CodeForces</a></li>
+<li><a href="http://acm.timus.ru" target="_blank">Timus</a></li>
+<li><a href="http://spoj.pl" target="_blank">SPOJ</a> - similar to UVA, with largest choice of programming languages allowed for solutions</li>
+<li><a href="http://usaco.org" target="_blank">USACO</a></li>
+<li><a href="https://www.codewars.com/" target="_blank">CodeWars</a></li>
+</ul>
+</li>
+<li>Language-specific:  <ul>
+<li><a href="http://www.ic.unicamp.br/%7Emeidanis/courses/mc336/2009s2/prolog/problemas/" target="_blank">P-99</a> and <a href="http://www.ic.unicamp.br/%7Emeidanis/courses/mc336/2006s2/funcional/L-99_Ninety-Nine_Lisp_Problems.html" target="_blank">L-99</a> - A set of 99 basic problems designed to help you become proficient with prolog and lisp respectively.</li>
+<li><a href="http://4clojure.com" target="_blank">4Clojure</a> - A set of programming exercises specifically geared around Clojure, a Lisp-variant.</li>
+</ul>
+</li>
+<li>Other:  <ul>
+<li><a href="http://codegolf.stackexchange.com/" target="_blank">codegolf.stackexchange.com</a> - site for posting and discussing programming puzzles</li>
+<li><a href="https://github.com/danistefanovic/build-your-own-x" target="_blank">Build your own X</a> - aggregation of completed projects and tutorials with commented source code</li>
+</ul>
+</li>
+</ul>
+<h2 is-upgraded>How can I improve my skill to convert tasks/problems into programs (Algorithmic thinking)?</h2>
+<p>This is one of the most commonly asked questions.</p>
+<p>The general answer is: <strong>By writing lots of programs.</strong></p>
+<p>However, there is a simple exercise that can help you to build up that skill:</p>
+<ul>
+<li>Pick an activity that you do every day, like making breakfast or something similar. It should be not too easy, but also not too difficult.</li>
+<li>Write down the steps that you should do for the activity, but do it <em>out of memory</em> in a different time to when you actually perform the activity. (Write the steps to make breakfast down in the afternoon.)</li>
+<li>The next time you perform the activity take your notes and try to follow the steps religiously. Try not to deviate from your written down steps and if you have to, note the differences down.</li>
+<li>Improve your algorithm until you are satisfied.</li>
+<li>Try this with different activities. The tasks become easier and easier.</li>
+</ul>
+<p>As stupid as it may sound, it works. The above has been tried on many students and proven to produce significant improvement.</p>
+<h2 is-upgraded>I can&#39;t come up with any cool new ideas for a project. Am I simply lacking in creativity? How do other programmers become inspired?</h2>
+<p>For starters, here&#39;s a good quote from <a href="https://en.wikipedia.org/wiki/Chuck_Close" target="_blank">Chuck Close</a> on (not) waiting for inspiration:</p>
+<p>The advice I like to give young artists, or really anybody who&#39;ll listen to me, is not to wait around for inspiration. Inspiration is for amateurs; the rest of us just show up and get to work. If you wait around for the clouds to part and a bolt of lightning to strike you in the brain, you are not going to make an awful lot of work. All the best ideas come out of the process; they come out of the work itself. Things occur to you. If you&#39;re sitting around trying to dream up a great art idea, you can sit there a long time before anything happens. But if you just get to work, something will occur to you and something else will occur to you and something else that you reject will push you in another direction. Inspiration is absolutely unnecessary and somehow deceptive. You feel like you need this great idea before you can get down to work, and I find that&#39;s almost never the case.</p>
+<p>You&#39;ll rarely get ideas by just sitting around and waiting for a spark of inspiration. Your time will be much more well-spent if you just go ahead and try building something (anything!), even if the idea seems somewhat stupid or already done.</p>
+<p>After all, that&#39;s what artists and musicians do – they don&#39;t necessarily start by trying to come up with a highly creative drawing or compose their own music. Instead, they draw landscapes or vases, or cover existing songs. Similarly, don&#39;t feel obligated when coming up with project ideas. Re-implementing existing programs is a time-honoured tradition – see how far you can get!</p>
+<p>But in any case, here are some other ideas and tricks for coming up with your own projects:</p>
+<ul>
+<li><strong>Try reimplementing an existing project.</strong> Much as how beginning musicians start by covering songs other people have written, it might be good to start by re-implementing programs others have made. 2D arcade games are a popular choice, for example – games like &#34;Pong&#34; or &#34;Space Invaders&#34; are very doable by beginners and will still teach you a lot.</li>
+<li><strong>Try connecting programming to another hobby.</strong> Programming is a very useful skill in that you can apply it to a <em>wide</em> variety of fields, even ones completely unrelated to computer science. For example, if you&#39;re interested in politics you could try analyzing voting pools and trends, if you&#39;re interested in music you could try writing a digital soundboard, if you&#39;re interested in sports you could try writing a fantasy football tracker or predictor, if you own a business you could write something to help you keep track of inventory... Having interests beyond computer science is useful here.</li>
+<li><strong>Try keeping track of things that irritate you.</strong> If you find anything in your life that you dislike doing or find repetitive, ask yourself if it&#39;s something you could automate. To get a sense of what sorts of things computers can automate, see <a href="https://automatetheboringstuff.com/" target="_blank">Automate the Boring Stuff</a>. This guide uses Python, but you can do all of the things it mentions using any programming language. Or, perhaps try googling &#34;home automation tutorial&#34; for more physical solutions.</li>
+</ul>
+<h2 is-upgraded>Where can I find examples of good code and projects to study?</h2>
+<p>Before you start, please keep in mind that studying existing code is not necessarily the best way to learn programming. Programming, in the end, is about applied problem solving, and the best way to get better at problem solving is through lots of practice. Just reading existing snippets of code isn&#39;t likely to teach you as much. Usually, when people <em>do</em> study code, it&#39;s in a targeted and specific way. For example, if a dev was interested in writing a game using some engine, it would be helpful to see the source code for various demos using that engine.</p>
+<p>In any case, try checking out the <a href="https://github.com/showcases" target="_blank">Showcases</a> section on Github. It has a curated list of tons of popular and interesting open-source programs that range from libraries and games to music and open journalism/data analysis, and is a good showcase of what sorts of things people are doing with code. The source code is also publicly viewable, so you can try downloading and tinkering with these projects yourself.</p>
+<p>Also see <a href="http://aosabook.org/en/index.html" target="_blank">The Architecture of Open Source Programs</a>, a series of free ebooks that contain more guided walkthroughs on how popular open-source programs are structured. The latest book in the series, &#34;500 lines or less&#34; might be a good starting point since the programs are small enough that you could feasibly tinker with them yourself and use them as a good jumping off point to start your own project.</p>
+<h2 is-upgraded>How do I learn topics covered by a typical computer science degree?</h2>
+<p>If you&#39;re interested in self-teaching yourself material covered by most standard computer science programs at the university or college level, the following links give a good overview, with links to additional learning sources:</p>
+<ul>
+<li><a href="http://matt.might.net/articles/what-cs-majors-should-know/" target="_blank">What every computer science major should know - Matt Might</a>Focuses on giving a high-level overview of different fields, and more importantly, <em>why</em> they&#39;re valuable. Also contains some reading recommendations.</li>
+<li><a href="https://github.com/open-source-society/computer-science" target="_blank">Open source computer science degree - Open Source Society</a>Gives more of a concrete roadmap, with links to mostly Coursera courses per each topic.</li>
+<li><a href="https://teachyourselfcs.com/" target="_blank">Teach yourself CS</a>Similar to the previous resource, except it mixes in recommendations for both books and video lectures. The upper-level recommendations focus mostly on systems (e.g. operating systems, databases...).</li>
+<li><a href="https://functionalcs.github.io/curriculum/" target="_blank">A Self-Learning, Modern Computer Science Curriculum</a>This resource is a bit unconventional and recommends a far more mathematical approach to learning computer science, focusing on topics like discrete maths, functional programming, software verification, proofs, type theory, and complexity theory.</li>
+</ul>
+<p>Please keep in mind that high-quality computer science degrees tend to be very rigorous and demanding. If you&#39;re interested in pursuing this path, it&#39;ll likely take you several years and a lot of hard work to acquire a similar level of education via self-teaching.</p>
+<h2 is-upgraded>How do I start and finish a large project?</h2>
+<p>First and foremost: <strong>get a full, comprehensive understanding of the problem</strong>.</p>
+<p>Often, <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging" target="_blank"><br>Rubber Duck Debugging</a> helps with this step. Explaining a problem or concept to someone (or something) that has zero knowledge or understanding helps to gain a deeper insight into the problem. By doing so, one has to think a lot more about the problem which will lead to a deeper understanding.</p>
+<p>Second: <strong>Don&#39;t go straight to the computer!</strong></p>
+<p>Spend considerable time pondering about the problem/task. Create some sketches, drawings, some pseudocode, some plain language hints, whatever may help <strong>on paper</strong> (I&#39;m emphasizing this here because digital tools are distractions from the actual task at hand - use only pencil &amp; paper or a whiteboard.) Analyse the problem thoroughly.</p>
+<p>This leads us to the following.</p>
+<p>Remember one thing when tackling big projects by yourself:</p>
+<p>Everything in the world is made of smaller parts.</p>
+<p>This means that basically whatever big machine, house, skyscraper, car, train, computer, etc. you look at consists of many smaller structures that, combined, make the final product. The smaller structures consist of smaller structures and so on.</p>
+<p>The same applies to big programs. They consist of many smaller units that are coupled together to form the whole. Ideally (but often not possible) each smaller unit should work (and be tested) independently from the others.</p>
+<p>Start small. Look at the problem you have chosen and try to break it down into smaller parts. Rinse and repeat until you think that you can&#39;t break it apart any further.</p>
+<p>Once you have reached that point, start programming. Build one small part, test it. Build the next small part, test it, and so on.</p>
+<p>Don&#39;t look at the final, big picture as this will overwhelm you. Tackle one individual part at a time.</p>
+<p>The biggest problem inexperienced programmers face is that mostly they get overwhelmed when they look at a large task. But this problem is not too difficult to overcome:</p>
+<p>Don&#39;t try to see the final program with all bells and whistles. Focus on a small, manageable part, complete it, and move on. Even the most complex program/system consists of small, simple parts.</p>
+<p><strong>How do I keep up with it?</strong></p>
+<p>Imagine that you are working for a client and the client needs to see and approve your design before you start to code as they might have one or another comment, or they want to make sure that the communication between them and you worked and you understood their requirements.</p>
+<ul>
+<li>Prepare a detailed description of your project, a so-called &#34;functional design specification&#34;</li>
+<li>Discuss that functional design specification with your imaginary client (i.e. explain it to some inanimate object, or if you have somebody who can bear it, to them).</li>
+<li>Refine the functional design specification - go back to the step above - loop until you are satisfied.</li>
+<li>Prepare a project schedule with a fixed (realistic) deadline</li>
+<li>Stick to the above (because otherwise the imaginary client would demand late-fees that could get quite expensive)</li>
+</ul>
+<p><strong>Some additional advice:</strong></p>
+<ul>
+<li>At first, forget about the code completely and imagine the program completely from the point of view of the user.</li>
+<li>Write down a list of features you want the software to do.</li>
+<li>Write down a list of features the software WON&#39;T have. (This will keep you from feature creep with &#34;it&#39;d be cool if it could do this...&#34;. Programs getting too big is the main reason folks abandon them after a few weeks.)</li>
+<li>Write out a few drawings of what screens the user will see and their workflow. These aren&#39;t blueprints or to show what they&#39;ll look like, it&#39;s more for &#34;first the user is at this page, then they can go to this page&#34;. Sketching it out helps you not forget any big things.</li>
+<li>Learn how to use git and get a github account. It&#39;s great for backup and also soliciting code reviews. (Ignore anyone&#39;s comments that are about code style, 99% of the time that&#39;s an unproductive debate.)</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Common concerns and fears" duration="0">
+        <h2 is-upgraded>Am I too old to code?</h2>
+<p>No, you can learn to program, and possibly have a career doing so, at any age.</p>
+<p>There&#39;s a common myth that the only way to be good at programming is if you start learning to code at an early age. This is false – while there are some people who start learning to code early (and so might have a bit of a head start), most people will start to learn to code when they enter college, or later.</p>
+<p>Learning is something you can do at any age – rather then focusing on others, just focus on yourself, and your personal rate of progress. Try and cultivate a &#34;<a href="http://edglossary.org/growth-mindset/" target="_blank">growth mindset</a>&#34; rather then a &#34;fixed mindset&#34;.</p>
+<h2 is-upgraded>Is there anything I should learn first?</h2>
+<p>There are very few prerequisites – for the most part, you can jump straight into learning to code.</p>
+<p>The only real prerequisites are:</p>
+<ul>
+<li>You know how to type (unless you&#39;re using a drag-and-drop language like Scratch)</li>
+<li>You own a computer</li>
+<li>You know how to google/search for answers independently</li>
+</ul>
+<p>It&#39;s also helpful if you know some maths (up to the basic algebra level) and if you know English (because many online resources are in English), but the two aren&#39;t required.</p>
+<p>All of the above is also more-or-less true if you want to get a formal degree at a university. Most universities and colleges expect incoming students to know nothing about computer science and programming, and will start by teaching you from scratch (though in some cases, you can skip one or two intro courses if you pass a test or demonstrate enough prior skill). If you&#39;re in high school or earlier, and want to study computer science at college, then it might be good to start studying ahead of time to get a head start, but you shouldn&#39;t feel obligated to do so.</p>
+<p>Some colleges may also have more stringent general education or maths prerequisites (most colleges have calculus as a pre-requisite, for example), but this will vary from college to college and is something you should directly investigate and ask the colleges and universities you&#39;re interested in attending about. See below for more details.</p>
+<h2 is-upgraded>Do I have to be good at maths?</h2>
+<p>Not necessarily - programming and computer science is a wide and broad field, and whether or not you need to be good at maths depends on what discipline you chose to specialize in.</p>
+<p>For example, some disciplines of programming do require strong maths skills. 2D and 3D games will make frequent use of vectors, matrices and linear algebra; data mining and machine learning make use of many concepts from statistics; and working out algorithmic complexity is easier if you have a good grasp on algebra and basic calculus.</p>
+<p>In general, the more advanced and complex the topic, the more likely it is that you need to have a strong mathematical foundation. If your goal is to be able to work on those types of complex problems, then having a good foundation will be invaluable.</p>
+<p>However, just as many aspects of computer science and programming <em>do not</em> require a good understanding of maths. The only things you <em>really</em> need to know are how to add, subtract, multiply, and divide, and maybe a little basic algebra. Many programmers go through their entire career with having to do barely any maths at all.</p>
+<p>In particular, many product-facing roles (e.g. web development, mobile development) require very minimal knowledge of maths. In those sub-disciplines, what matters most is your ability to write robust and maintainable code, as well as your ability to figure out how to build things that are valuable to your users.</p>
+<p>In any case, if you&#39;re not very good at maths, you can definitely learn and improve! After all, you&#39;re presumably not very good at programming yet either, but here you are, learning to code. Check out <a href="http://khanacademy.org" target="_blank">Khan Academy</a> and you can find free lessons starting from basic maths on up.</p>
+<p>Do note, however, that the answer is a bit different if you are interested in getting a <em>degree</em> in Computer Science. Many universities or colleges will have specific prerequisites you need to fulfill before you can either enter the major or graduate (calculus classes, etc). And, since Computer Science is, to a certain degree, <a href="https://www.reddit.com/r/learnprogramming/wiki/faq#wiki_what_is_the_difference_between_computer_science.2C_computer_engineering.2C_software_engineering.2C_programming.2C_and_coding.3F" target="_blank">applied mathematics</a>, you will almost certainly end up learning about discrete maths, writing proofs and other similar topics while earning your degree. You do not need to be inherently good at maths in order to learn these topics (or any mathematical topic, really), but having some mathematical maturity certainly wouldn&#39;t hurt, and would probably smooth the learning process.</p>
+<p>Exactly how mathematically-focused a CS degree will be differs from school to school. Some schools place a heavy emphasis on covering theory, while others de-emphasize both in favour of focusing on application. (And some schools emphasize both). If you want to find out more, you should directly investigate the degree requirements and structure of whatever colleges or universities you are interested in attending. We will not be able to easily predict what direction some given university will skew.</p>
+<p>To summarize, you do not necessarily need to be good at maths if you want a successful career as a developer. If you want to be a computer scientist, you will end up learning a fair amount of maths. If you want to work on harder problems/within certain domains, maths can be a helpful tool, depending on the situation.</p>
+<h2 is-upgraded>I Google a lot or don&#39;t know how to complete something before I start. Is that okay?</h2>
+<p><strong>YES</strong>. <a href="https://www.reddit.com/r/learnprogramming/comments/4mehpk/is_it_normal_as_a_programmer_to_never_know_how_to/" target="_blank">Here</a> is a thread which discusses the topic from a variety of angles. There are many more like it.</p>
+<h2 is-upgraded>Is programming hard?</h2>
+<p>Programming is like most skills: it&#39;s relatively easy to learn the basics and apply them. If you want to learn to bowl - you&#39;ll figure out how to put your fingers into the holes, and chuck it in the general direction of the pins. You might even knock a few over, and not find it particularly difficult.</p>
+<p>Programming is also like most skills in that it is much more involved to go from a beginner to someone with a degree of skill. To continue the bowling analogy: if you want to become a competition bowler, you&#39;re going to have to spend years mastering the skill. The same is true of coding: you&#39;re going to need to spend some (that is, a lot of) time trying to figure out why this <strong>stupid</strong> program won&#39;t work even when you&#39;ve checked it <strong>three times</strong>. You&#39;re going to need to read books, sit through lessons, and talk to people about it. You&#39;re going to learn jargon. You&#39;re also going to specialise - learning more about a few small fields really deeply. All of this still uses the basics of programming, but in new ways, and new combinations. Finding solutions to your problems will be hard. Focusing for hours on the same problem will be hard. That&#39;s okay, because if you enjoy it, and you&#39;re motivated - the hard parts don&#39;t feel as hard, and you can get through them.</p>
+<p>In summary, programming can be hard. Just like with most things, it takes effort, and that effort can be hard. Don&#39;t be discouraged - if you enjoy it, the hard parts will be worth the reward.</p>
+<h2 is-upgraded>Is it normal for a beginner to have some trouble on problems and some exercises?</h2>
+<p>Is it normal for a beginner to fall off a bike a couple times? Is it normal for a beginner to sink a couple times when learning to swim? Is it normal for a beginner to miss notes or play the wrong notes when learning an instrument? Is it normal for a beginner to burn some meals?</p>
+<p><strong>Absolutely yes!</strong></p>
+<p>Seriously, this is one of the dumbest, most frequently asked questions in relation to programming. Of course, it is natural to struggle and fail. After all you are just a <em>beginner</em>. You&#39;re supposed to struggle and fail.</p>
+<p><em>Failure</em> is an important part of learning. It is very important to know how <em>not to do things</em>. Failure is just <em>gained experience</em>.</p>
+<p>If you didn&#39;t fail or struggle, you would not be a beginner, you would already be an expert (and even those fail occasionally, just not as often as a beginner and usually they know how to recover).</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Questions about learning" duration="0">
+        <h2 is-upgraded>What does it mean to &#34;know a language&#34; or to &#34;know how to program&#34;?</h2>
+<p>To &#34;know a language&#34; for programming is similar to knowing a language for speaking. You can say you know it when you can use it effectively, even if you don&#39;t know &#34;everything&#34; about it. To &#34;know how to program&#34; generally means that you understand the concepts related to programming and you can use them effectively in one or more languages. Read some past threads on the topic.</p>
+<ul>
+<li><a href="http://redd.it/vhccu" target="_blank">http://redd.it/vhccu</a></li>
+<li><a href="http://redd.it/iea3f" target="_blank">http://redd.it/iea3f</a></li>
+<li><a href="http://redd.it/s4n5o" target="_blank">http://redd.it/s4n5o</a></li>
+<li><a href="http://redd.it/1nf8yd" target="_blank">http://redd.it/1nf8yd</a></li>
+</ul>
+<h2 is-upgraded>I just started learning language X. Should I start learning language Y?</h2>
+<p>Especially when you&#39;re starting to learn how to program, it&#39;s best to learn one language and stick with it for a while. Even if a particular problem domain uses a specific language that you don&#39;t know yet, first learn <em>how to program</em>. Once you understand the fundamentals (flow control, error handling, I/O, implementation of algorithms, data structures, etc.), then you can start worrying about picking up different languages.</p>
+<h2 is-upgraded>Should I learn more than one programming language at once?</h2>
+<p>If you are just starting out we recommend that you select <em>one</em> language (as the previous answer says, it doesn&#39;t really matter which), and stick with it for at least a month. Experienced programmers can learn bits of several languages at the same time, but beginners are more likely simply to confuse themselves by doing so. Combining a <em>programming language</em> (C, C++, C#, Java, Python, JavaScript, Ruby, etc.) with <em>markup languages</em> (HTML and CSS) is fine, however as they are not comparable at all.</p>
+<h2 is-upgraded>How can I get/stay motivated to learn programming?</h2>
+<p>Check out <a href="/r/GetMotivated/" target="_blank">/r/GetMotivated/</a> and <a href="/r/GetDisciplined" target="_blank">/r/GetDisciplined</a>.</p>
+<p>Often we think &#34;if I were motivated enough... then I could...,&#34; however; it is action that drives motivation. First comes action, then motivation. Find small, specific programs to create. Get rid of the distractions. Get browser plugins to block websites such as Reddit, Facebook, and Twitter. Take a minute to visualize how great it will feel when you have become a more knowledgeable programmer.</p>
+<p>Here are some past threads on this topic:</p>
+<ul>
+<li><a href="http://redd.it/uzt31" target="_blank">http://redd.it/uzt31</a></li>
+<li><a href="http://redd.it/1c1bnj" target="_blank">http://redd.it/1c1bnj</a></li>
+<li><a href="http://redd.it/2j6b7i" target="_blank">http://redd.it/2j6b7i</a></li>
+<li><a href="http://redd.it/1s347g" target="_blank">http://redd.it/1s347g</a></li>
+<li><a href="http://redd.it/javfv" target="_blank">http://redd.it/javfv</a></li>
+<li><a href="http://redd.it/gy0xa" target="_blank">http://redd.it/gy0xa</a></li>
+<li><a href="http://redd.it/1xvdte" target="_blank">http://redd.it/1xvdte</a></li>
+<li><a href="http://redd.it/1hh76b" target="_blank">http://redd.it/1hh76b</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="How do I get started in X?" duration="0">
+        <h2 is-upgraded>How can I get started making video games?</h2>
+<p>Modern video games are made using <a href="https://en.wikipedia.org/wiki/Game_engine" target="_blank">game engines</a>: software libraries that handle complex tasks like graphics, sound, physics and networking. There are many <a href="https://www.reddit.com/r/gamedev/wiki/engine_faq" target="_blank">options available</a> - However, the following engines are strongly recommended for beginners as they are free to develop with and have the best documentation for learning:</p>
+<ul>
+<li><a href="https://unity3d.com/learn/tutorials" target="_blank">Unity</a> (C#): Suitable for 2D &amp; 3D mobile, desktop, browser/online &amp; console games</li>
+<li><a href="https://www.scirra.com/tutorials/37/beginners-guide-to-construct-2" target="_blank">Construct2</a> (JavaScript): for 2D mobile, desktop, browser/online</li>
+<li><a href="http://inventwithpython.com/pygame/chapters" target="_blank">Pygame</a> (Python): engine for 2D desktop games</li>
+<li><a href="https://love2d.org/wiki/Category:Tutorials" target="_blank">LÖVE</a> (LUA): Suitable for 2D desktop games</li>
+</ul>
+<p>Always remember that <a href="https://en.wikipedia.org/wiki/Reinventing_the_wheel" target="_blank">your goal is to develop games, not engines</a>!</p>
+<p>Engines will help you get started with graphics and user controls for your games, but you will still need to thoroughly learn a programming language to write your <a href="https://unity3d.com/learn/tutorials/topics/scripting" target="_blank">game logic</a> - so pick a good <a href="https://www.reddit.com/r/learnprogramming/wiki/books" target="_blank">Book</a> or <a href="https://www.reddit.com/r/learnprogramming/wiki/online" target="_blank">Online Resource</a>.</p>
+<p>Most importantly: <strong>Start simple</strong>. You will want to dive right in and create your dream game straight away, but remember that <a href="https://www.reddit.com/r/gamedev/comments/stg2o/how_i_went_from_knowing_nothing_about_programming/" target="_blank">the only way to climb a mountain is by taking many small steps</a>. Here is a list of simple practice games listed in ascending order of difficulty - consider trying a few of these before jumping right to your end goal:</p>
+<ul>
+<li><a href="http://www.funbrain.com/cgi-bin/gn.cgi?A1=s&A2=100&A3=1" target="_blank">Guess the number game</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Blackjack" target="_blank">Blackjack</a> or <a href="https://en.wikipedia.org/wiki/Tic-tac-toe" target="_blank">Tic-tac-toe</a></li>
+<li><a href="http://www.ifiction.org/games/playz.php?cat=&game=249&mode=html" target="_blank">Hunt the wumpus</a> (<a href="https://en.wikipedia.org/wiki/Hunt_the_Wumpus" target="_blank">Rules</a>)</li>
+<li>Your own choose-your-own adventure or <a href="https://en.wikipedia.org/wiki/Zork" target="_blank">Zork</a> clone</li>
+<li><a href="http://noobtuts.com/unity/2d-pong-game" target="_blank">Pong</a>, <a href="http://gamedevelopment.tutsplus.com/series/implementing-tetris--gamedev-12717" target="_blank">Tetris</a> or Minesweeper clone</li>
+<li>Horizontal/Vertical scrolling <a href="https://unity3d.com/learn/tutorials/projects/space-shooter-tutorial" target="_blank">Space Shooter</a></li>
+<li>Simple DOOM, Mario or Legend of Zelda clone</li>
+</ul>
+<p>Be sure to check out the <a href="/r/gamedev" target="_blank">/r/gamedev</a> FAQ, read the <a href="/r/gamedev" target="_blank">/r/gamedev</a> &#34;How to Get Started&#34; guide, and perform some searches for past threads on <a href="/r/gamedev" target="_blank">/r/gamedev</a> and <a href="/r/learnprogramming" target="_blank">/r/learnprogramming</a>.</p>
+<h2 is-upgraded>How do I get started making websites/making webapps/doing web development?</h2>
+<p>There are many different ways to learn about web development, but in general, the core skills that you need are usually divided into <em>frontend</em> skills (code that runs on a user&#39;s web browser), and <em>backend</em> skills (code that runs on your server).</p>
+<p>In general, most people will recommend that you start by learning HTML, CSS, and Javascript (in that order), which are the core three languages that run on every web browser and makes up every website.</p>
+<p>You can find more information on the <a href="http://www.reddit.com/r/webdev/wiki/faq" target="_blank">/r/webdev FAQ</a>. Here&#39;s another <a href="https://github.com/Michael0x2a/curated-programming-resources/blob/master/resources.md#html-css-and-javascript" target="_blank">list of online courses, tutorials, and resources</a> for beginners.</p>
+<h2 is-upgraded>How do I get starting making mobile apps/Android apps/iOS apps/Windows phone apps?</h2>
+<p>You will need to learn a different programming language for each type of smartphone.</p>
+<ul>
+<li>Android apps are coded primarily in Java – see <a href="http://www.reddit.com/r/androiddev/wiki/index" target="_blank">/r/androiddev&#39;s FAQ</a> for more info.</li>
+<li>iOS apps are coded in either Objective-C or Swift – see the sidebar of <a href="/r/iosprogramming" target="_blank">/r/iosprogramming</a> and their wiki (<a href="https://github.com/programmingthomas/FAQ" target="_blank">hosted on Github</a>) for more info.</li>
+<li>Windows Phone apps are coded in either C#, Visual Basic, or Javascript – see the sidebar of <a href="/r/WPDev" target="_blank">/r/WPDev</a> for more info.</li>
+</ul>
+<p>You can also make apps that can run on all three major smartphones using technologies such as <a href="http://phonegap.com/" target="_blank">Phonegap</a> and <a href="http://www.appcelerator.com/titanium/" target="_blank">Titanium</a> – they allow you to write your app once using HTML, CSS, and Javascript, and run your app on any platform.</p>
+<p>See the <a href="https://www.reddit.com/r/learnprogramming/wiki/online#wiki_mobile_app_development" target="_blank">list of mobile app development resources</a> for more information. Here is a past thread on the topic: <a href="http://redd.it/352f09" target="_blank">http://redd.it/352f09</a></p>
+<p>However, do keep in mind that many, if not all, of the above sources are geared towards people who already have some prior experience with programming. If you&#39;ve never programmed before, you <em>may</em> want to start with learning a language which has more resources geared towards beginners. Once you&#39;ve acquired some experience, and learned about the underlying concepts behind programming, you&#39;ll often find that it&#39;s <em>much</em> easier to learn a new language and begin learning about mobile development. The <a href="http://www.reddit.com/r/learnprogramming/wiki/faq#wiki_how_do_i_get_started_with_programming.3F" target="_blank">Getting Started</a> section in our FAQ has some more info on where to begin.</p>
+<h2 is-upgraded>How do I automate things?</h2>
+<p>For <em>Windows</em> there are a couple dedicated programming languages, such as <a href="https://autohotkey.com/" target="_blank">Autohotkey</a> and <a href="https://www.autoitscript.com/site/autoit/" target="_blank">AutoIt</a>.</p>
+<p>Another viable, cross platform alternative is <a href="http://python.org" target="_blank">Python</a>. <a href="http://automatetheboringstuff.com" target="_blank">Automate the Boring Stuff with Python</a> is a great learning resource.</p>
+<p>If you want to automate <em>MS-Office</em>, use the built-in programming language <em>Visual Basic for Applications</em> (VBA). <a href="/r/vba" target="_blank">/r/vba</a> is dedicated for VBA programming.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="What are the best..." duration="0">
+        <p><a href="/u/thekodols" target="_blank">/u/thekodols</a> compiled a list of more than 150 &#34;what are the best&#34; questions and answers in <a href="https://www.reddit.com/r/learnprogramming/comments/3r7lhp/a_collection_of_150_what_are_the_best_dev/" target="_blank">this post</a> covering various languages, tools, and topics.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Terminology and Vocab" duration="0">
+        <h2 is-upgraded>What is the difference between computer science, computer engineering, software engineering, programming, and coding?</h2>
+<p><strong>CS/CE/SE vs Programming/Coding</strong></p>
+<p>Computer science (CS), computer engineering (CE), software engineering (SE), programming, and coding are all terms that are interrelated yet subtly different from each other, often making it difficult for beginners to tell them apart.</p>
+<p>The first distinction you should make is to distinguish between CS/CE/SE and programming/coding. CS, CE, and SE are all <strong>fields of study</strong>. Saying &#34;I&#39;m studying computer science&#34; would be similar to saying &#34;I&#39;m studying chemistry&#34; or &#34;I&#39;m studying literature&#34;. In contrast, programming and coding are <strong>activities</strong> – they&#39;re things you do. To use a metaphor, studying CS/CE/SE would be like studying musical theory, while learning programming/coding would be like learning how to play a particular instrument.</p>
+<p>Theoretically, you could learn one and not learn the other, but your experience will be much more enriched if you learn both.</p>
+<p>Another difference is that while CS/CE/SE are things that you can study, learning to program is something that only comes through practice. And in fact, what most universities and schools will do is formally teach one language to teach the basics of coding, then will focus on teaching CS, CE, and SE and leave you to learn how to program through practicing and completing homework.</p>
+<p><strong>CS vs CE vs SE</strong></p>
+<p>The next distinction you should make is between CS, CE, and SE. In a nutshell, though there&#39;s a lot of overlap, &#34;computer science&#34; has little to do with either computers or science and is more of a field of applied maths that studies the concept of computability. Computer engineering is similar to CS, but tends to focus more on lower-level hardware – it&#39;s like a cross between computer science and electrical engineering. And finally, software engineering is more about how to build large and complex programs while preventing them from collapsing under their own weight – it&#39;s like CS and CE, but with less theory.</p>
+<p>You can find a more detailed overview here: <a href="http://www.reddit.com/r/learnprogramming/comments/2k569h/eli5_computer_science_vs_software_engineering_vs/" target="_blank">http://www.reddit.com/r/learnprogramming/comments/2k569h/eli5_computer_science_vs_software_engineering_vs/</a></p>
+<p><strong>Programming vs Coding</strong></p>
+<p>And finally, you have programming vs coding. The difference between these two terms are very small – many people use them interchangeably. In general, the term &#34;programming&#34; seems to have slightly more positive connotations then &#34;coding&#34;. If you say &#34;I&#39;m a programmer&#34;, it implies a certain level of professionalism – it indicates that you can not only write code, but also have a firm grasp on the fundamentals and theory, know how to communicate with clients and work with others, etc.</p>
+<p>In contrast, if you say &#34;I&#39;m a coder&#34;, it usually implies that your focus is exclusively on writing code, and less so on the other things.</p>
+<p>However, again, the different connotations are very small here – you can use the two terms interchangeably in the vast majority of cases.</p>
+<h2 is-upgraded>What is the difference between C, C++, Objective-C, and C#?</h2>
+<p>TL;DR - C, C++, Objective-C, and C# are <strong>not</strong> different flavours of the same language.</p>
+<p>C is the smallest and the oldest of these languages. It was originally created as a systems programming language for the Unix operating system, and is still widely used today for applications programming.</p>
+<p>C++ is a very popular, general-purpose programming language, originally based on C. With some tweaking, most C code can be made to compile as C++ code. However C++ adds a large set of language features which change the way the language is used significantly from the way C is used. It is generally considered a bad practice to write C-style code in C++.</p>
+<p>Objective-C is a strict superset of C, meaning that all valid C code is also valid Objective-C code. Objective-C is not nearly as popular as C or C++, and is mainly used today in development for Apple&#39;s OS X and iOS platforms.</p>
+<p>C# is <em>not</em> based on C in any technical sense. C# is a general purpose language designed by Microsoft and is similar in many ways to Java. It compiles down to an intermediate form which runs in a virtual machine (CLR), unlike the previous three languages which are all compiled to native machine code. While C# borrows syntactic elements from C and C++ (as does Java), it has no real technical relation to those languages.</p>
+<h2 is-upgraded>What is the difference between Java and JavaScript?</h2>
+<p>Java is related to JavaScript in the same way that a grape is related to a grapefruit.</p>
+<p>Similarly to the previous question, Java and JavaScript are not related in any technical sense. They share a bit of syntax as they are both influenced by C, but that&#39;s about it. Wikipedia has a good explanation of why the name similarity exists: <a href="http://en.wikipedia.org/wiki/Javascript#JavaScript_and_Java" target="_blank">Wikipedia: JavaScript and Java</a></p>
+<h2 is-upgraded>Classes versus Interfaces</h2>
+<p>This is a question that appears frequently and often confuses beginners since on the outside both seem to do similar things.</p>
+<p><a href="/u/donsagiv" target="_blank">/u/donsagiv</a> wrote a great and simple ELI5 (link to <a href="https://www.reddit.com/r/learnprogramming/comments/d56gnb/eli5_interface_vs_class/f0k5ism/" target="_blank">original comment</a>):</p>
+<p>A boy scout has badges that merits them to do certain things, such as cooking, swimming, starting a campfire, canoeing, etc. The boy scout troop doesn&#39;t care how they were able to do these things (i.e. swimming with the breast-stroke, back-stroke, etc.) as long that they meet the specification for it (being able to move in the water by a certain, controlled movement of the body while staying afloat). Each boy scout can have zero or many badges, meaning they are certified to do each of the things merited by the badge.</p>
+<p>Despite that, they are still boy scouts. Every boy scout is allowed to attend their periodic meetings, wear their uniform, etc... A boy scout doesn&#39;t need a badge to swim. However, they can&#39;t go river-rafting unless they have a swim badge. <strong>Edit: a swim badge can&#39;t swim by itself. It is merely an indicator that the boy scout it&#39;s attached to can swim.</strong></p>
+<p><strong>The boy scout is the class, and the swim badge is an interface it implements</strong>.</p>
+<p>Every object that of the class that is instantiated have the same functions (i.e. attending periodic meetings, uniforms, etc). If the class implements an interface, the class MUST have be able to perform the functions specified in the interface (i.e swimming, canoeing). Some classes can&#39;t be used in certain parts of your code unless they implement that interface (i.e. going river rafting requires swim badges). <strong>Edit: An interface is an abstraction, so it can&#39;t be instantiated. (A badge by itself can&#39;t swim.) To sum up, an interface is a contract a class must follow in order for a class to implement it.</strong></p>
+<p>Interfaces and classes behave differently in different languages (My example is from what I know in C# with generics). I suggest you read the documentation to your language carefully.</p>
+<p>Interfaces can also be used to collect objects from different classes (they act like a data type).</p>
+<p>You could collect all boy scouts who can swim, regardless of their nationality, gender, age, etc. and go river rafting. You don&#39;t need to know anything about the individual boy scouts, but you know that each of them is able to swim.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Tools and version control" duration="0">
+        <h2 is-upgraded>What is Source/Version/Revision Control? Should I be using it?</h2>
+<p>A Version Control System (VCS) is a tool which keeps track of the changes to your code, and allows you do handy things like undo coding errors and see what has changed in the code over time. Modern Distributed Version Control Systems (DVCS) also allow you to work easily with other programmers on the same code. And yes, you should definitely be using a version control system!</p>
+<p>The two most popular DVCSs are git and Mercurial; which you use mostly comes down to personal preference, but we <em>strongly</em> advise you to use one of them.</p>
+<h2 is-upgraded>So how do I get started with revision control?</h2>
+<p>You can start with git by reading <a href="http://cgordini.blogspot.com/2013/05/git-101.html" target="_blank">a git primer</a>, written by a redditor, and also <a href="http://git-scm.com/book" target="_blank">the free git book</a>.</p>
+<p>A good, brief tutorial on Mercurial is <a href="http://hginit.com/01.html" target="_blank">here</a>.</p>
+<p>We have links to download sites for both pieces of software on <a href="http://www.reddit.com/r/learnprogramming/wiki/tools#wiki_version_control_systems" target="_blank">our tools page</a>.</p>
+<h2 is-upgraded>What is an IDE? Should I be using one?</h2>
+<p>An IDE is an Integrated Development Environment, which is a GUI application that generally includes a text editor with code completion and syntax highlighting, some project management features, a compiler or interpreter (either configurable or included), and many other fancy features to make writing, running, and testing code easier. The alternative to using an IDE is to do what the IDE is doing for you automatically on your own. This method requires the programmer to use separate tools and to have a more in-depth knowledge of the development process.</p>
+<p>For beginners, there are arguments for both of these development methods:</p>
+<ul>
+<li>Using an IDE means that you don&#39;t have to know as much about the development process, don&#39;t have to use a command-line interface, and don&#39;t have to configure those tools to work together correctly; an IDE offers a quick way to get your code building, and may even write some of the code for you!</li>
+<li>On the other hand, working from the command-line means that you don&#39;t have to fit in with the mindset of the IDE&#39;s designer, and since less of the development process is hidden from you, you get a better understanding of the software build process.</li>
+</ul>
+<p>Use of an IDE versus separate tools generally comes down to a matter of personal preference (unless of course your employer/school requires the use of a specific development environment). If you&#39;ve never used an IDE before, download one of the popular ones and tinker around with it. And if you&#39;ve never used vim or compiled code from the command-line, try it out and see if you like it. A list of common IDEs and lightweight text editors can be found in <a href="http://www.reddit.com/r/learnprogramming/wiki/tools" target="_blank">Programming Tools</a>.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Computers and Operating Systems" duration="0">
+        <h2 is-upgraded>What kind of operating system should I use?</h2>
+<p>A common question many beginners have is what sort of operating system they should use – Windows, Mac, or Linux.</p>
+<p>It honestly doesn&#39;t matter – in this day and age, the quality and maturity of the tools available to you are going to be about the same on all platforms, and any decent programming language will be useable on all operating systems.</p>
+<p>That being said, you should eventually gain some level of familiarity with all three operating systems so that you&#39;re not completely lost when you encounter a new kind of OS (for example, when remoting in to another machine or when you arrive at a new job).</p>
+<p>There are two main exceptions to this rule:</p>
+<ul>
+<li>If you want to do Windows-specific development, get a Windows computer.</li>
+<li>If you want to do Mac or iOS-specific development, get a Mac.</li>
+</ul>
+<p>There are a number of good options for running <a href="http://timjones.tw/blog/archive/2015/09/19/cross-platform-csharp-and-fsharp-in-2015" target="_blank">C# code on other platforms</a>, but some Microsoft and .NET tools are still primarily targeted towards Windows.</p>
+<p>While you can develop Mac and iOS apps on any computer, you must use Xcode on a Mac machine to compile and submit your app to the app store.</p>
+<p>Finally, it&#39;s also worth noting that you&#39;re not &#34;locked in&#34; once you&#39;ve picked an operating system – it&#39;s always possible to run a virtual machine (VM) with another operating system installed. For example, if I own a Windows computer, it would be very easy to set up a Linux virtual machine that I can use without fear of it interfering with my existing Windows OS.</p>
+<h2 is-upgraded>What kind of computer/laptop should I get?</h2>
+<p>Again, it doesn&#39;t really matter – any mid-range laptop or computer should do. If you already own a computer or laptop, you should just use that instead of purchasing a new computer. Basically, you can learn to program and can write complex and interesting programs on pretty much any computer in existence.</p>
+<p>If you&#39;re basically destitute and without any usable computer, you can always check places like Craigslist for a used computer, or ask around. You can get very far with an old computer if it&#39;s just for learning.</p>
+<p>However, if you happen to need to buy a new computer and want to use it for programming, you should prioritize CPU, RAM, and hard drive space. If possible, try and obtain a computer with the following specs or better:</p>
+<ul>
+<li>Intel i5 CPU (3.0+ GHz)</li>
+<li>4+ GB RAM</li>
+<li>200+ GB Hard drive</li>
+<li>(Optional) A solid-state drive</li>
+</ul>
+<p>If you can upgrade, it&#39;s probably safe to prioritize getting a better CPU and more RAM over getting a larger hard drive – a beefier CPU will always help. In contrast, most kinds of programming don&#39;t require you to have a lot of disk space: the only exceptions would be if you&#39;re trying to do something with images or videos, or if you want to download and analyze large data sets while learning about machine learning and similar things (and you can typically store those things in the cloud, if it comes down to it).</p>
+<p>If you want to purchase a desktop, these specs are really the only relevant ones. If you want portability, you should purchase a laptop and make sure that it comes with a big enough screen and keyboard to be comfortable programming with. However, there&#39;s a fine balance between usability and portability in a laptop:</p>
+<ul>
+<li>The larger the screen, the shorter the battery life (but the dimmer you&#39;re willing to set the screen&#39;s brightness, the longer the batter life)</li>
+<li>The smaller the screen, the less you can fit on it and the more flipping between windows/desktops you&#39;ll have to do.  <ul>
+<li>Ideally, you should be able to comfortably fit 2 windows side by side</li>
+</ul>
+</li>
+<li>The larger the laptop, the heavier it is, and the heavier it is to carry around</li>
+</ul>
+<p>It&#39;s also worth asking yourself how you plan on using your laptop. Do you plan on just having it sit on your desk all day, or on carrying it all around campus, or on going hiking in the Yukon with it?</p>
+<p>If possible, try testing the laptops you&#39;re considering in person. If you find typing on particular laptop&#39;s keyboard to be unpleasant and not something you can get used to, for example, you may want to give that laptop a pass no matter how good it looks on paper.</p>
+<p>If you are also trying to buy a laptop to prepare for classes in university or college, you may want to try checking their website/the website of their computer science or software engineering departments to see if they have any more specific suggestions and recommendations.</p>
+<p>For more information, and for more detailed help, visit the following subreddits to get more personalized recommendations:</p>
+<ul>
+<li><a href="/r/suggestalaptop" target="_blank">/r/suggestalaptop</a></li>
+<li><a href="/r/suggestapc" target="_blank">/r/suggestapc</a></li>
+</ul>
+<p>You may also want to be cautious about buying Chromebooks – they&#39;ll require either some degree of customization or will require you to work using online editors and IDEs and require constant internet access. For more information, see the following links:</p>
+<ul>
+<li><a href="http://www.howtogeek.com/162120/how-to-install-ubuntu-linux-on-your-chromebook-with-crouton/" target="_blank">http://www.howtogeek.com/162120/how-to-install-ubuntu-linux-on-your-chromebook-with-crouton/</a></li>
+<li><a href="http://blog.codestarter.org/post/93985346780/how-we-turn-199-chromebooks-into-ubuntu-based" target="_blank">http://blog.codestarter.org/post/93985346780/how-we-turn-199-chromebooks-into-ubuntu-based</a></li>
+<li><a href="http://www.reddit.com/r/learnprogramming/comments/1ba1gd/programming_on_a_chromebook/" target="_blank">http://www.reddit.com/r/learnprogramming/comments/1ba1gd/programming_on_a_chromebook/</a></li>
+<li><a href="http://www.chromebookhq.com/five-best-online-ides-making-the-switch-to-a-chromebook/" target="_blank">http://www.chromebookhq.com/five-best-online-ides-making-the-switch-to-a-chromebook/</a></li>
+</ul>
+<p>You should be even more cautious about trying to use tablets or phones as your primary programming device. While it&#39;s possible to program using a tablet or phone with some effort, nearly all software development is done using desktops or laptops using a keyboard.</p>
+<p>If you need advice on picking a specific brand, just keep in mind that programming doesn&#39;t require anything special from your computer. This means that a good general-purpose computer will, in all likelihood, be a good programming computer. (This makes searching for a good laptop easier, since you don&#39;t need to try and search for one specifically marketed towards programmers.)</p>
+<p>One final optional constraint: If you&#39;re specifically interested in doing machine learning, natural language processing, or graphics (including game development), you may want to consider purchasing a machine with a GPU. While you don&#39;t need a GPU to do any of these things, you can often speed up your code by carefully writing it so that it takes advantage of GPUs (when possible).</p>
+<p>If you&#39;re interested more in machine learning or NLP, do note that you can rent machines with GPUs in the cloud via services like Amazon Web Services (AWS) or Google Compute Engine (GCE) for relatively cheap prices.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Careers and jobs" duration="0">
+        <h2 is-upgraded>Can I earn lots of money programming?</h2>
+<p>Maybe, but only if you are good at it. But you can also earn lots of money as a plumber, or in any other number of businesses. You can also fail horribly. Programming is not a guaranteed, safe job.</p>
+<h2 is-upgraded>Can I get a programming job without a Computer Science degree? Or without any degree at all?</h2>
+<p>Yes and yes.</p>
+<p>It is possible to get a job without a CS degree, and without a degree in general, though with decreased probability. Quitting school is definitely not recommended. If programming isn&#39;t for you, switch majors. If it is for you, staying in school will give you the best chance at a job once you are finished.</p>
+<p>You may get more informed responses to these and other career-oriented questions if you post them in <a href="/r/cscareerquestions" target="_blank">/r/cscareerquestions</a> or <a href="/r/cscareerquestionsEU" target="_blank">/r/cscareerquestionsEU</a>.</p>
+<h2 is-upgraded>How do I break into the industry and get an entry-level job?</h2>
+<p>This question is again mostly out-of-scope for this subreddit – career-related questions are better asked on <a href="/r/cscareerquestions" target="_blank">/r/cscareerquestions</a> and by consulting their <a href="https://www.reddit.com/r/cscareerquestions/wiki/index" target="_blank">comprehensive wiki</a>. Also see <a href="/r/cscareerquestionsEU" target="_blank">/r/cscareerquestionsEU</a> if you are living in the EU.</p>
+<p>But in general, there are two main phases to getting an entry level job, assuming you already know how to code:</p>
+<ol type="1">
+<li>Build a CV that stands out enough that people start inviting you to interview</li>
+<li>Pass the interview</li>
+</ol>
+<p>The two stages require somewhat different strategies.</p>
+<p><strong>Phase 1: Build a CV that stands out</strong></p>
+<p>In phase 1, your goal is to steadily start adding items to your CV that help you stand out (or at least help make you comparable to) any other applicants that are applying.</p>
+<p>One particularly helpful strategy for doing this is to start building a portfolio of non-trivial projects you can show off to prospective employers. Your portfolio could contain anything ranging from:</p>
+<ul>
+<li>Independent side projects</li>
+<li>Volunteer work – e.g. maybe making a website for some non-profit</li>
+<li>Class projects</li>
+<li>Work you did at your job where you found a way to incorporate programming</li>
+<li>Technical work you do for a club at school – maybe some club wants a new website, or maybe you can find a club with a technological focus</li>
+<li>A research project – either an independent one, or research you did as a part of a lab at your school</li>
+<li>Projects from past jobs or internships</li>
+</ul>
+<p>Having a strong portfolio shows employers that can successfully apply programming languages, libraries, and technologies to solve problems and gives them a way to more accurately gauge your skill level. (And, as it turns out, working on non-trivial projects is also one of the better ways to improve your skill level in general!)</p>
+<p>To put it another way, you want to establish that you have a track record of successfully building relatively complex things. If you don&#39;t have any prior job history in this field, working on projects is one of the better ways of doing that.</p>
+<p>Some additional notes:</p>
+<ul>
+<li>Your projects don&#39;t necessarily need to be visually flashy. Most recruiters will focus on your CV (and often will read <em>only</em> your CV!), and recruiters with a technical background will understand that not all interesting projects have or need a slick interface. What&#39;s probably more important that you can honestly describe your project on your CV in a way that showcases the complexity of the work you did.Perhaps the main exception is if you&#39;re applying to a role that requires some visual flair. For example, if you&#39;re applying to a frontend web designer role, it would help to have projects that show you can make a polished and usable website.</li>
+<li>Of course, working on projects aren&#39;t the only things you can do. Doing things like getting a degree (preferably in a subject related to computer science) will also definitely help. Just keep in mind that many job applicants will also have a tech-related degree, so just having one might not be sufficient to help you stand out – you&#39;ll also want to take full advantage of any extracurricular opportunities your school has to offer. Good schools will have many potential side projects you can get involved in if you dig a little. Having access to those potential side projects is one of the biggest benefits to paying tuition.</li>
+<li>Some people also attend bootcamps in part to expedite the process of building a relevant CV/portfolio. Just be sure to do your research before committing to a bootcamp: some are great, and some are outright scams. Before committing to any one bootcamp, try reaching out to alumni of that bootcamp on sites like Linkedin to see how they feel, try checking to see if the bootcamp reports stats on <a href="https://cirr.org/" target="_blank">CIRR</a>, try asking people in a variety of different communities (not just reddit)... Also see <a href="https://www.reddit.com/r/cscareerquestions/wiki/index#wiki_bootcamps" target="_blank">/r/cscareerquestion&#39;s FAQ section on bootcamps</a>.</li>
+<li>If your CV is not getting a lot of attention, try posting it for review on <a href="/r/cscareerquestions" target="_blank">/r/cscareerquestions</a>&#39; or <a href="/r/cscareerquestionsEU" target="_blank">/r/cscareerquestionsEU</a>&#39;s weekly CV review thread.</li>
+</ul>
+<p><strong>Phase 2: Pass the interview</strong></p>
+<p>What exactly happens in phase 2 (pass the interview) can vary from region to region. For example, many silicon-valley-esque companies prefer asking data structures and algorithms questions, so if you plan on applying to those types of companies having a strong foundation in that topic is a must. This may not necessarily be the case in other parts of the world or for other kinds of companies.</p>
+<p>Some common interview archetypes you may run into include:</p>
+<ul>
+<li>Giving you a coding challenge of some kind, usually about data structures and algorithms – especially at the entry level. To learn more about what these types of interviews look like and how to prepare for them, consider purchasing or borrowing a copy of &#34;Cracking the Coding Interview&#34;.</li>
+<li>Asking you questions related to the specific role you&#39;re interviewing for – e.g. frontend web design, security, data science...</li>
+<li>Asking you to pair program together with your interviewer where you collaboratively build or debug a small program</li>
+<li>Asking you to complete a take-home challenge of some kind</li>
+<li>Asking you to try designing the high-level architecture of some larger program</li>
+<li>Asking you about items you have listed on your CV (sometimes in general, sometimes focusing on a single project in-depth)</li>
+<li>Just having a discussion about technology in general</li>
+</ul>
+<p>Note: this is not an exhaustive list. You should also keep in mind that different employers will look for different things and interviewing practices that are common in one area may be almost completely unheard of in another. So, we strongly recommend you network with developers in your local area and ask them for advice.</p>
+<p>Also see <a href="https://www.reddit.com/r/cscareerquestions/wiki/index" target="_blank">/r/cscareerquestions&#39; wiki</a> – and perhaps <a href="/r/cscareerquestionsEU" target="_blank">/r/cscareerquestionsEU</a> if you&#39;re living in the EU.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Now what do I do?" duration="0">
+        <h2 is-upgraded>No longer a beginner:</h2>
+<p>There comes a time when every programmer grows up, and they face a problem, they are plunged into the real world. In the real world, there is no hand holding or major guidance. Instead, you need to learn how to make your way. If you&#39;ve come this far, you should have a field of interest, may it just be general programming, web development, algorithms, or anything of that sort. Maybe, you want to learn of other, different fields involving programming, or maybe, you just want to know what to do next.</p>
+<h2 is-upgraded>Programming is just a tool</h2>
+<p>When you started programming, you might have wondered on when you would learn to create the next Reddit, or when you would learn about being able to make those fancy graphics, or how to perform different algorithms. Well, if you consider yourself to no longer be a beginner, then you have programming under your tool-belt. Now you need to learn how to apply it, and how to strengthen in it. Very soon you will be able to do these things, and be learning all about them.</p>
+<h2 is-upgraded>Enhancing your programming skills</h2>
+<p>Many people face the fear that they are not competent enough while programming. And thus, many want to improve their programming skills. But, at this stage, there is only one way to do that, and this is with practice. There are many sites and locations dedicated to practicing, things like <a href="/r/dailyprogrammer" target="_blank">/r/dailyprogrammer</a>, <a href="http://www.codewars.com/dashboard" target="_blank">CodeWars</a>, <a href="https://www.hackerrank.com/" target="_blank">HackerRank</a>, <a href="https://projecteuler.net/" target="_blank">Project Euler</a>, and many others.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Misc" duration="0">
+        <h2 is-upgraded>How can I contribute to open source projects?</h2>
+<p>Participate in one of the projects in the <a href="https://github.com/LearnProgramming" target="_blank">/r/learnprogramming github group</a>! This group was <a href="http://www.reddit.com/r/learnprogramming/comments/tl1qy/learnprogramming_on_github_a_place_for_you_to/" target="_blank">created by jfredett</a> with the express purpose of providing projects for new programmers to learn how to contribute to open source by interacting with more experienced programmers as mentors.</p>
+<p>The group is still in its infancy but several people are working to get it up and running.</p>
+<p>Here are some websites that contain links to projects thare are actively looking for contributors of all levels of experience, and will often link to open bugs or issues that are very approachable for beginners.</p>
+<ul>
+<li><a href="https://openhatch.org/" target="_blank">OpenHatch</a></li>
+<li><a href="https://24pullrequests.com/" target="_blank">24PullRequests</a></li>
+<li><a href="https://www.codetriage.com/" target="_blank">CodeTriage</a></li>
+<li><a href="http://up-for-grabs.net/#/" target="_blank">Up For Grabs</a></li>
+</ul>
+<p>Here are some past threads about working on open source projects.</p>
+<ul>
+<li><a href="https://www.reddit.com/r/programming/comments/5bab3n/how_to_contribute_to_an_open_source_project_on/" target="_blank">https://www.reddit.com/r/programming/comments/5bab3n/how_to_contribute_to_an_open_source_project_on/</a></li>
+<li><a href="http://www.reddit.com/r/learnprogramming/comments/t0fk4/how_do_i_actually_contribute_to_open_source/" target="_blank">http://www.reddit.com/r/learnprogramming/comments/t0fk4/how_do_i_actually_contribute_to_open_source/</a></li>
+<li><a href="http://www.reddit.com/r/learnprogramming/comments/swwbd/how_to_contribute_to_an_opensource_project/" target="_blank">http://www.reddit.com/r/learnprogramming/comments/swwbd/how_to_contribute_to_an_opensource_project/</a></li>
+<li><a href="http://www.reddit.com/r/learnprogramming/comments/sw209/question_about_contributing_to_open_source" target="_blank">http://www.reddit.com/r/learnprogramming/comments/sw209/question_about_contributing_to_open_source</a></li>
+<li><a href="http://www.reddit.com/r/learnprogramming/comments/ee6fq/opensource_projects_for_beginners/" target="_blank">http://www.reddit.com/r/learnprogramming/comments/ee6fq/opensource_projects_for_beginners/</a></li>
+<li><a href="http://www.reddit.com/r/learnprogramming/comments/cm8be/reddit_how_do_i_get_involved_in_open_source/" target="_blank">http://www.reddit.com/r/learnprogramming/comments/cm8be/reddit_how_do_i_get_involved_in_open_source/</a></li>
+</ul>
+<h2 is-upgraded>I have a question about C/Python/some specific language</h2>
+<p>Try consulting some language-specific wikis to see if your question is listed there:</p>
+<ul>
+<li><a href="http://www.reddit.com/r/learnprogramming/wiki/faq_c" target="_blank">C FAQ</a></li>
+<li><a href="http://www.reddit.com/r/learnprogramming/wiki/faq_cpp" target="_blank">C++ FAQ</a></li>
+<li><a href="http://www.reddit.com/r/learnprogramming/wiki/faq_java" target="_blank">Java FAQ</a></li>
+<li><a href="http://www.reddit.com/r/learnprogramming/wiki/faq_php" target="_blank">PHP FAQ</a></li>
+<li><a href="http://www.reddit.com/r/learnprogramming/wiki/faq_python" target="_blank">Python FAQ</a></li>
+</ul>
+<h2 is-upgraded>My question wasn&#39;t one of these; what now?</h2>
+<p>Check the <a href="http://www.reddit.com/r/learnprogramming/wiki/qtsgfb" target="_blank">quick troubleshooting guide for beginners</a> and the FAQ page for the language you&#39;re using to see if it&#39;s answered in either location. If not, post on <a href="http://www.reddit.com/r/learnprogramming/" target="_blank">r/learnprogramming</a>.</p>
+<ul>
+<li><a href="http://www.reddit.com/r/learnprogramming/wiki/faq_c" target="_blank">C FAQ</a></li>
+<li><a href="http://www.reddit.com/r/learnprogramming/wiki/faq_cpp" target="_blank">C++ FAQ</a></li>
+<li><a href="http://www.reddit.com/r/learnprogramming/wiki/faq_java" target="_blank">Java FAQ</a></li>
+<li><a href="http://www.reddit.com/r/learnprogramming/wiki/faq_php" target="_blank">PHP FAQ</a></li>
+<li><a href="http://www.reddit.com/r/learnprogramming/wiki/faq_python" target="_blank">Python FAQ</a></li>
+</ul>
+<p>Try also checking the <a href="https://www.reddit.com/r/learnprogramming/wiki/index#wiki_related_communities" target="_blank">list of related communities</a>.</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

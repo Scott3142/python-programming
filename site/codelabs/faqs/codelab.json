@@ -3,12 +3,12 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2020-04-27T13:59:34+01:00",
-  "id": "part-6",
-  "duration": 190,
-  "title": "Part 6",
-  "summary": "The sixth part of the course material handles objects consisting of objects, and we’ll take a look at separating the text user interface and the program logic.",
-  "source": "part-6.md",
+  "updated": "2020-04-27T14:29:57+01:00",
+  "id": "faqs",
+  "duration": 0,
+  "title": "FAQs",
+  "summary": "Have a question? Check it out here first.",
+  "source": "faqs.md",
   "theme": "",
   "status": [
     "draft"
@@ -21,5 +21,5 @@
   ],
   "feedback": "https://github.com/Scott3142/python-programming",
   "ga": "UA-49751789-4",
-  "url": "part-6"
+  "url": "faqs"
 }
