@@ -21,6 +21,7 @@ The course material is licensed under a [Creative Commons BY-NC-SA 4.0](https://
 MIT License
 
 Copyright (c) 2017 Tu Tran
+Modifications copyright (c) 2020 [Scott Morgan](https://github.com/Scott3142)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
