@@ -31,12 +31,14 @@
     - [x] Add template structures
     - [ ] Populate exercises
         - [x] Part 1
-        - [ ] Part 2
-        - [ ] Part 3
+        - [x] Part 2
+        - [x] Part 3
         - [ ] Part 4
         - [ ] Part 5
         - [ ] Part 6
         - [ ] Part 7
+        - [ ] Add template files
+            - [ ] 3.2 - 3.14
     - [ ] Write tests
         - [ ] Part 1
         - [ ] Part 2
