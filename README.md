@@ -28,4 +28,4 @@ TBC
 ## Authors
 
 Material template created by [Henrik Nygren](https://github.com/nygrenh) and [Antti Leinonen](https://github.com/Redande). 
-Python adaptations by [Scott Morgan](https://github.com/Scott3142)
+Python adaptations by [Scott Morgan](https://github.com/Scott3142).
