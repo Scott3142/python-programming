@@ -4,7 +4,14 @@
 # We have to manually change the place the codelabs look for their formatting to our custom directory
 # This fixes the path executed when user presses 'Done' at the end of the codelab.
 
-claat export part-*.md
+claat export faqs.md
+claat export part-1.md
+claat export part-2.md
+claat export part-3.md
+claat export part-4.md
+claat export part-5.md
+claat export part-6.md
+claat export part-7.md
 
 # Options -o
 # `local` Serve only codelabs locally

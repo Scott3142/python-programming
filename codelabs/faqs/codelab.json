@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2020-04-27T14:29:57+01:00",
+  "id": "faqs",
+  "duration": 0,
+  "title": "FAQs",
+  "summary": "Have a question? Check it out here first.",
+  "source": "faqs.md",
+  "theme": "",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "btec-unit4"
+  ],
+  "tags": [
+    "web"
+  ],
+  "feedback": "https://github.com/Scott3142/python-programming",
+  "ga": "UA-49751789-4",
+  "url": "faqs"
+}
