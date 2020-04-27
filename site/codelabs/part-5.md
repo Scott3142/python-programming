@@ -10,6 +10,7 @@ analytics account: UA-49751789-4
 # Part 5
 
 ## Learning object-oriented programming
+Duration: 01:00:00
 
 ### What you'll learn
 * To revise the concepts of class and object.
@@ -271,6 +272,7 @@ Positive
 : **Exercise - FitByte** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-5-4-FitByte.git)
 
 ## Removing repetitive code (overloading methods and constructors)
+Duration: 01:00:00
 
 ### What you'll learn
 * Becoming familiar with the term overloading
@@ -411,6 +413,7 @@ Positive
 : **Exercise - Overloaded Counter** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-5-6-overloaded-counter.git)
 
 ## Objects and references
+Duration: 01:00:00
 
 ### What you'll learn
 * You will brush up on using classes and objects.
@@ -1265,5 +1268,6 @@ Positive
 : **Exercise - Money** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-5-16-money.git)
 
 ## Summary
+Duration: 00:10:00
 
 In the fifth part we took a deep dive into the world of objects. We examined the differences between primitive and reference variables. We learned to overload methods and constructors, and we practiced using objects as object variables, method parameters, and method return values. We created methods that compare objects with each other, and we saw how objects are handled with objects in them.

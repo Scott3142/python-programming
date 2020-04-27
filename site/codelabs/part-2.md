@@ -10,6 +10,7 @@ analytics account: UA-49751789-4
 # Part 2
 
 ## Recurring problems and patterns to solve them
+Duration: 01:00:00
 
 ### What you'll learn
 * You recognize that certain sub-problems, such as reading input or calculations, recur in programs.
@@ -147,6 +148,7 @@ Positive
 : **Exercise - Comparing Numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-4-comparing-numbers.git)
 
 ## Repeating functionality
+Duration: 01:00:00
 
 ### What you'll learn
 * You are familiar with loops and know how to create a program that contains one.
@@ -603,6 +605,7 @@ Positive
 : **Exercise - Average of positive numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-13-average-of-positive-numbers.git)
 
 ## More loops
+Duration: 01:00:00
 
 ### What you'll learn
 * You're familiar with the condition of the while loop.
@@ -844,6 +847,7 @@ Positive
 : **Implementing a program one small part at a time** <br><br> In the previous exercise, we used a series of exercises to practice implementing a program one piece at a time. <br><br> When you are writing a program, whether it's an exercise or a personal project, figure out the types of parts the program needs to function and proceed by implementing them one part at a time. Make sure to test the program right after implementing each part. <br><br> Never try solving the whole problem at once, because that makes running and testing the program in the middle of the problem-solving process difficult. Start with something easy that you know you can do. When one part works, you can move on to the next. <br><br> Some of the exercises are already split into parts. However, it's often the case in programming that these parts need to be split into even smaller parts. You should almost always run the program after every new line of code. This ensures that the solution is moving in the right direction. <br><br>
 
 ## Methods &amp; Classes
+Duration: 01:00:00
 
 ### What you'll learn
 * You will be familiar with the concept of a class.
@@ -1445,5 +1449,6 @@ Negative
 : 1  2  3 <br> 2  4  6 <br> 3  6  9
 
 ## Summary
+Duration: 00:05:00
 
 Programs grow in size as we add more functionality to them. When the program size increases, so does the complexity. This results in source code that is more difficult to understand. In this part, we took our first steps towards managing program complexity: loop structures can be used to execute program code time and again and custom methods allow for dividing a program into smaller, more manageable parts.

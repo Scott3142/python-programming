@@ -10,6 +10,7 @@ analytics account: UA-49751789-4
 # Part 7
 
 ## Programming paradigms
+Duration: 01:00:00
 
 ### What you'll learn
 * You know the concept of a programming paradigm.
@@ -149,6 +150,7 @@ Positive
 : **Exercise - Liquid containers 2.0** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-7-2-liquid-containers-2.git)
 
 ## Algorithms
+Duration: 01:00:00
 
 ### What you'll learn
 * You understand the concept of algorithms and you are familiar with a few algorithms
@@ -232,6 +234,7 @@ Positive
 : **Exercise - Searching** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-7-5-searching.git)
 
 ## Larger exercises
+Duration: 01:00:00
 
 To conclude the seventh part, you'll do a few more extensive exercises. There is no predefined structure for these tasks -- think about the classes and objects that will help you complete the task while you're completing it.
 
@@ -245,6 +248,7 @@ Positive
 : **Exercise - Big year** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-7-8-big-year.git)
 
 ## Conclusion
+Duration: 00:10:00
 
 During the first seven parts you've become familiar with the basics of programming and produced many functioning program.
 

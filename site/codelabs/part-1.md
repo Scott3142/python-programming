@@ -10,7 +10,7 @@ analytics account: UA-49751789-4
 # Part 1
 
 ## Getting Started with Programming
-Duration: 00:45:00
+Duration: 01:00:00
 
 ### What you'll learn
 * Become familiar with the Atom development environment used in this course.
@@ -223,6 +223,7 @@ Positive
 : **Docstrings** <br><br> In Python, there is the concept of a Python *Docstring*, which you will see later in the course. A docstring is a string literal that occurs as the first statement in a module, function, class, or method definition. Such a docstring becomes the `__doc__` special attribute of that object. All modules should normally have docstrings, and all functions and classes exported by a module should also have docstrings. We will revisit these concepts later.
 
 ## Reading input
+Duration: 01:00:00
 
 ### What you'll learn
 * Learn to write a program that reads text written by a user.
@@ -430,6 +431,7 @@ Positive
 : **Exercise - Story**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-9-story.git)
 
 ## Variables
+Duration: 01:00:00
 
 ### What you'll learn
 * Understand the concept of a variable. You know what variable types, names, and values are.
@@ -636,6 +638,7 @@ Positive
 : **Exercise - Different types of input**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-11-different-inputs.git)
 
 ## Calculating with numbers
+Duration: 01:00:00
 
 ### What you'll learn
 * Learn to perform calculations with the help of variables.
@@ -828,6 +831,7 @@ Negative
 : line 1: initiate a variable first <br> line 1: copy the result of the calculation 1 + 1 as the value of the variable first <br> line 1: the value of the variable first is 2 <br> line 2: create the variable second <br> line 2: calculate 2 + 5, 2 + 5 -> 7 <br> line 2: calculate 3 * 7, 3 * 7 -> 21 <br> line 2: calculate first + 21 <br> line 2: copy the value of the variable first into the calculation, its value is 2 <br> line 2: calculate 2 + 21, 2 + 21 -> 23 <br> line 2: copy 23 to the value of the variable second <br> line 2: the value of the variable second is 23 <br> line 3: (empty, do nothing) <br> line 4: copy 5 to the value of the variable first <br> line 4: the value of the variable first is 5 <br> line 5: (empty, do nothing) <br> line 6: create variable third <br> line 6: calculate first + second <br> line 6: copy the value of the variable first into the calculation, its value is 5 <br> line 6: calculate 5 + second <br> line 6: copy the value of the variable second into the calculation, its value is 23 <br> line 6: calculate 5 + 23 -> 28 <br> line 6: copy 28 to the value of the variable third <br> line 6: the value of the variable third is 28 <br> line 7: print the variable first <br> line 7: copy the value of the variable first for the print operation, its value is 5 <br> line 7: print the value 5 <br> line 8: print the variable second <br> line 8: copy the value of the variable second for the print operation, its value is 23 <br> line 8: print the value 23 <br> line 9: print the variable third <br> line 9: copy the value of the variable third for the print operation, its value is 28 <br> line 9: we print the value 28 <br>
 
 ## Conditional statements and conditional operation
+Duration: 01:00:00
 
 ### What you'll learn
 * Become familiar with the idea of a conditional statement and know how to create a program containing optional operations through the use of conditional statements.
@@ -1274,6 +1278,7 @@ Positive
 : **Exercise - Inheritance tax**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-32-inheritance-tax.git)
 
 ## Programming in our society
+Duration: 00:10:00
 
 When you're just starting to learn programming, it's hard to realize how dependent our society actually is on the software produced by developers. Without software, everyday things such as communication, shopping, travel, and so on would all be more complicated. Mobile phones could not work -- or there would be very few of them, and we'd have no credit cards, let alone online banking. Travel reservations and the use of personal documents online would be impossible. Electronic health services such as e-prescriptions and the seamless transfer of patient data between wards and hospitals would be the stuff of dreams. There'd also be no Wikipedia or search engines, so any time you'd like to know something, you'd open a dictionary or an encyclopaedia.
 
