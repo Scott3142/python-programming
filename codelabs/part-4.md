@@ -10,6 +10,7 @@ analytics account: UA-49751789-4
 # Part 4
 
 ## Introduction to object-oriented programming
+Duration: 01:00:00
 
 ### What you'll learn
 * You're familiar with the concepts of class, object, constructor, object methods, and object variables.
@@ -593,6 +594,7 @@ Positive
 : **Rounding errors** <br><br> You probably noticed that some of the figures have rounding errors. In the previous exercise, for example, Grace's balance of 30.7 may be printed as `30.700000000000003`. This is because floating-point numbers, such as `float`, are actually stored in binary form. That is, in zeros and ones using only a limited number of numbers. <br><br> As the number of floating-point numbers is infinite -- (in case you're wondering "how infinite?", think how many floating-point or decimal values fit between the numbers 5 and 6 for instance). All of the floating-point numbers simply cannot be represented by a finite number of zeros and ones. Thus, the computer must place a limit on the accuracy of stored numbers. <br><br> Normally, account balances, for instance, are saved as integers such that, say, the value 1 represents one cent.
 
 ## Objects in a list
+Duration: 01:00:00
 
 ### What you'll learn
 * You can add objects to a list
@@ -847,6 +849,7 @@ Positive
 : **Exercise - Books** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-20-books.git)
 
 ## Files and reading data
+Duration: 01:00:00
 
 ### What you'll learn
 * You'll review reading keyboard input.
@@ -939,9 +942,6 @@ Positive
 Positive
 : **Exercise - Printing from a file** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-23-printing-from-a-file.git)
 
-Positive
-: **Exercise - Printing a specified file** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-23-printing-a-specified-file.git)
-
 In the example below, we read all the lines of the file "file.txt", which are then added to a list. This implementation uses the Python `with` keyword.
 
 ```python
@@ -1031,5 +1031,6 @@ Positive
 : **Exercise - Sport Statistics** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-4-29-sporting-statistics.git)
 
 ## Summary
+Duration: 00:10:00
 
 In the fourth part of the course we learned to read data from files, and took our first steps towards object-oriented programming. We learned classes and objects to suit our programming needs. We defined constructors, methods, and object variables for the classes, and grew used to printing object-related information with their `__str__` method. We also practised handling objects on a list.

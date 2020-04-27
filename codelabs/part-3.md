@@ -10,6 +10,7 @@ analytics account: UA-49751789-4
 # Part 3
 
 ## Discovering errors
+Duration: 01:00:00
 
 ### What you'll learn
 * Know the term perceptual blindness, and can learn to recognize essential (and non-essential) information with practice.
@@ -154,6 +155,7 @@ else:
 When a program is executed multiple times with appropriate inputs the hidden error is often found. Coming up with relevant inputs is a skill in its own right. It's essential to test the so-called corner cases, i.e., circumstances where the program execution could be exceptional. An example scenario would be one where the user does not enter a single acceptable value or enters zeros or very large values.
 
 ## Lists
+Duration: 01:00:00
 
 ### What you'll learn
 * You are familiar with the list structure and know how to use a list in a program.
@@ -641,6 +643,7 @@ Positive
 : **NumPy Arrays** <br><br> We've gotten familiar with the list, which has a lot of functionality to make the life of a programmer easier. Perhaps the most important is about adding elements. From the point of view of the programmer, the size of the list is unlimited. In reality there are no magic tricks in the list -- they have been programmed like any other programs or tools offered by the programming language. When you create a list, a limited space is reserved in the memory of the computer. When the list runs out of space, a larger space is reserved and the data from the previous space is copied to the new one. <br><br> Even though the list is simple to use, sometimes we need an alternative way of storing data, the NumPy array. The main benefits of using NumPy arrays is, in general, smaller memory consumption and better runtime behaviour. We will not dive any deeper into NumPy arrays in this course, but you should be aware of their existence and, in particular their applicability to data science and scientific computing. <br><br> You can read more [here](https://numpy.org/doc/stable/reference/generated/numpy.array.html?highlight=array#numpy.array).
 
 ## Working with strings
+Duration: 01:00:00
 
 ### What you'll learn
 * Revising reading, printing and comparing strings
@@ -837,5 +840,6 @@ Positive
 : **Exercise - Personal details** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-25-personal-details.git)
 
 ## Summary
+Duration: 00:10:00
 
 Very often programs handle data. This data must be stored somewhere for the duration of program execution — creating a new variable for each piece of data would be very labour intensive and make the code hard to understand. In this part we have taken the first steps towards effective data management: by using lists and arrays we can store almost unlimited amounts of data for the duration of program execution. We have also practiced string handling and splitting strings into smaller substrings.

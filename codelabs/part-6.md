@@ -10,6 +10,7 @@ analytics account: UA-49751789-4
 # Part 6
 
 ## Objects on a list and a list as part of an object
+Duration: 01:00:00
 
 ### What you'll learn
 * You review the use of lists.
@@ -400,6 +401,7 @@ Positive
 : **Exercise - Cargo hold** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-6-8-cargo-hold.git)
 
 ## Separating the user interface from program logic
+Duration: 01:00:00
 
 ### What you'll learn
 * Understand creating programs so that the user interface and the application logic are separated
@@ -1010,6 +1012,7 @@ Positive
 : **Exercise - Joke manager** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-6-12-joke-manager.git)
 
 ## Introduction to testing
+Duration: 01:00:00
 
 ### What you'll learn
 * Can tell about some issues caused by software bugs.
@@ -1104,6 +1107,7 @@ Positive
 : **Unit testing** <br><br> Unit testing is only a part of software testing. On top of unit testing, a developer also performs integration tests that examine the interoperability of components, such as classes, and interface tests that test the application's interface through elements provided by the interface, such as buttons. <br><br> These testing methods are covered in more detail in more advanced courses.
 
 ## Complex programs
+Duration: 00:10:00
 
 When you learn programming, you also develop a better eye for reading code (yours and others). In this part we understood the use of lists and practiced separating the UI from the program logic.
 
