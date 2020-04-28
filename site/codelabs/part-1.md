@@ -168,7 +168,7 @@ The program above will print:
 Negative
 : Hello world! <br> ... and the universe!
 
-The programming exercises will be checked by Atom's tester, which is meticulous. The guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.
+The programming exercises will be checked by Python's tester when uploaded to Github. The tester is very meticulous. The guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.
 
 This preciseness with regard to the output is relevant in programming in a more general sense. Missing a single character may cause an error. Novice programmers often enter a comma instead of a dot, or write, for instance `prnt` instead of `print`, leave out apostrophes, or forget a bracket after a command. Any one of these would cause an error and cause the program execution to fail.
 
