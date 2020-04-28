@@ -11,7 +11,7 @@
     - [x] Part 5
     - [x] Part 6
     - [x] Part 7
-- [x] Check and fix typos
+- [x] Check and fix typos:
     - [x] Part 1
     - [x] Part 2
     - [x] Part 3
@@ -19,7 +19,7 @@
     - [x] Part 5
     - [x] Part 6
     - [x] Part 7
-- [x] Fix styles to PEP8
+- [x] Fix styles to PEP8:
     - [x] Part 1
     - [x] Part 2
     - [x] Part 3
@@ -27,7 +27,7 @@
     - [x] Part 5
     - [x] Part 6
     - [x] Part 7
-- [ ] Exercises
+- [ ] Exercises:
     - [x] Add template structures
     - [x] Populate exercises
         - [x] Part 1
@@ -52,14 +52,14 @@
         - [ ] Part 5
         - [ ] Part 6
         - [ ] Part 7
-- [x] Link to Atom and Anaconda installation guide
-- [x] [\_\_name\_\_ and \_\_main\_\_](https://stackoverflow.com/questions/419163/what-does-if-name-main-do)
-- [ ] Add development instructions
 - [ ] Add:
     - [x] module imports
     - [x] PEP8 styling guidelines
+    - [x] projects
+    - [x] Link to Atom and Anaconda installation guide
+    - [x] \_\_name\_\_ and \_\_main\_\_
+    - [ ] development instructions
     - [ ] section on testing with exercise 6.13
-    - [ ] projects
 
 ### Python Programming II
 
