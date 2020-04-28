@@ -191,7 +191,7 @@ You have three options:
 
 - Be happy that your landing page lives at `{{baseUrl}}/python-programming`
 - Remove the references to `python-programming` in `app/elements/codelab-elements/codelabs-elements.js`
-- Remove the find/replace lines in `claat_export.sh` which change the script links in each `index.html` from `../../elements/codelab-elements/codelab-elements.js` to `https://storage.googleapis.com/codelab-elements/codelabs-elements.js`
+- Remove the find/replace lines in `claat_export.sh` which change the script links in each `index.html` from `https://storage.googleapis.com/codelab-elements/codelabs-elements.js` to `../../elements/codelab-elements/codelab-elements.js`
 
 Finally:
 
