@@ -173,8 +173,8 @@ The instructions here detail the process for deployment to Github pages, but sin
 
 Prerequisites for a Github pages deployment:
 
-- a gh-pages branch of the repo you are deploying to.
-- `node` and `gulp` installed (see instructions in parent folder). 
+- a `gh-pages` branch of the repo you are deploying to
+- `node` and `gulp` installed (see instructions in parent folder)
 
 There are two files in which the baseUrl for the site is set (currently set to https://scott3142.uk). You will want to change these. The files are:
 
@@ -185,13 +185,19 @@ It's unfortunate that it this also has to be done in the scripts file but a work
 
 Finally:
 
-- Fix the repo name in the last few lines of `gulpfile.js`. 
-- Run `gulp deploy:prod`.
+- Fix the repo name in the last few lines of `gulpfile.js`
+- Run `gulp deploy:prod`
 
-There may be a cryptic error about the `.publish` directory. Worksround is to checkout `gh-pages`, copy .git folder outside repo, checkout `master`, move `gh-pages` git repo to .publish. Can't figure out a better way yet... 
+You may see a cryptic error about the `.publish` directory. I think this is due to a bug in gulp-gh-pages. There is a clunky workaround:
 
-*NB:* The command `gulp deploy:build` is broken at the moment. Always use `gulp deploy:prod`.
+- Checkout `gh-pages` locally 
+- Copy `.git` folder outside repo
+- Checkout `master`
+- Move copied `gh-pages` git repo to `.publish` 
 
+A better workaround is in the TODOs. If you think you have a fix for this, please submit a PR following [the usual guidelines](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests). 
+
+*NB:* The command `gulp deploy:build` is broken at the moment. You should always use `gulp deploy:prod` until this is fixed. 
 
 ## Help
 
