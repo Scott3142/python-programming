@@ -191,7 +191,7 @@ You have three options:
 
 - Be happy that your landing page lives at `{{baseUrl}}/python-programming`
 - Remove the references to `python-programming` in `app/elements/codelab-elements/codelabs-elements.js`
-- Update the script links in 
+- Update the script links in ... from `../../elements/codelab-elements/codelab-elements.js` to `https://storage.googleapis.com/codelab-elements/codelabs-elements.js`
 
 Finally:
 
