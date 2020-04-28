@@ -949,7 +949,7 @@ if (number >= 1000):
 ```
 
 Negative
-: The number was not equal to 0
+: The number is not equal to 0
 
 Positive
 : **Exercise - Orwell**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-21-orwell.git)
