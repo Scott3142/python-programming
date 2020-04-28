@@ -55,8 +55,8 @@ $ gulp serve:dist
 
 Views are themed/styled collections of codelabs, served from the same url.
 Codelab tags are used for selecting codelabs into views. View definitions are
-stored in `/app/views` directory. Views commonly correspond to events (e.g. NEXT
-2018) or abstract themes (e.g. Windows), but we refer to them generically as
+stored in `/app/views` directory. Views commonly correspond to events (e.g. Conference
+2018) or abstract themes (e.g. Python), but they are referred to generically as
 "views" internally.
 
 #### Add a new view
@@ -167,13 +167,26 @@ $ gulp serve --views-filer='^event-*'
 Note this filter takes a regular expression. By default, all views are built.
 
 
-## Deployment (notes to self)
+## Deployment 
 
-We will deploy to Github pages here so make sure you have a gh-pages branch of the repo you are deploying to.
+The instructions here detail the process for deployment to Github pages, but since static HTML/CSS/JS FILES are created, it can be deployed to a hosting service of your choice. 
 
-You will need to update the baseUrl in `gulpfile.js` as well as `app/scripts/app.js`. It's unfortunate that it has to be done here but a workaround is TBC.
+Prerequisites for a Github pages deployment:
 
-Fix the repo name in the last few lines of `gulpfile.js` then run `gulp deploy:prod`. 
+- a gh-pages branch of the repo you are deploying to.
+- `node` and `gulp` installed (see instructions in parent folder). 
+
+There are two files in which the baseUrl for the site is set (currently set to https://scott3142.uk). You will want to change these. The files are:
+
+- `gulpfile.js`
+- `app/scripts/app.js` 
+
+It's unfortunate that it this also has to be done in the scripts file but a workaround is in the TODOs. If you think you have a fix for this, please submit a PR following [the usual guidelines](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests). 
+
+Finally:
+
+- Fix the repo name in the last few lines of `gulpfile.js`. 
+- Run `gulp deploy:prod`.
 
 There may be a cryptic error about the `.publish` directory. Worksround is to checkout `gh-pages`, copy .git folder outside repo, checkout `master`, move `gh-pages` git repo to .publish. Can't figure out a better way yet... 
 
