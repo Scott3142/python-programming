@@ -45,16 +45,16 @@
         - [ ] Part 6
         - [ ] Part 7
     - [ ] Write tests
-        - [ ] Part 1
-        - [ ] Part 2
+        - [x] Part 1
+        - [x] Part 2
         - [ ] Part 3
         - [ ] Part 4
         - [ ] Part 5
         - [ ] Part 6
         - [ ] Part 7
 - [x] Link to Atom and Anaconda installation guide
+- [x] [\_\_name\_\_ and \_\_main\_\_](https://stackoverflow.com/questions/419163/what-does-if-name-main-do)
 - [ ] Add development instructions
-- [ ] [\_\_name\_\_ and \_\_main\_\_](https://stackoverflow.com/questions/419163/what-does-if-name-main-do)
 - [ ] Add:
     - [x] module imports
     - [x] PEP8 styling guidelines
