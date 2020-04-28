@@ -1065,7 +1065,7 @@ second = 3
 is_greater = first > second
 ```
 
-In the example above, the boolean variable `isGreater` now contains the boolean value _false_. We can extend the previous example by adding a conditional statement to it.
+In the example above, the boolean variable `is_greater` now contains the boolean value _false_. We can extend the previous example by adding a conditional statement to it.
 
 ```python
 first = 1
