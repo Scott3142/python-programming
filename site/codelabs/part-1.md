@@ -18,7 +18,9 @@ Duration: 01:00:00
 
 Modern programming is practically always done in an IDE (integrated development environment). An IDE contains a set of useful tools for the programmer. It does not create the program by itself, but it can give hints about common mistakes in the code, and help the programmer understand the structure of the program.
 
-The IDE we use on this course is called Atom, and we use it with the atom-python-test plugin. Atom describes itself as a "hackable text editor for the 21st Century" and is built and maintained by [Github](https://github.com/), which we will also use extensively throughout this course.
+There are many IDEs that can be used with Python, including [PyCharm](https://www.jetbrains.com/pycharm), [Idle](https://docs.python.org/3/library/idle.html) and [VS Code](https://code.visualstudio.com/). At the risk of sparking some heated debate ("I love vim", "nano 4eva" etc.), the text editor we recommend and support on this course is called Atom. Atom describes itself as a "hackable text editor for the 21st Century" and is built and maintained by [Github](https://github.com/), which we will also use extensively throughout this course.
+
+Atom is not [technically](https://www.quora.com/Is-Atom-an-IDE-or-Text-Editor) an IDE, but comes with many useful plugins that can be used to mimic the functionality of an IDE. We will use the `script` and `atom-python-test` plugins predominantly on this course. 
 
 To start the course you will need:
 
