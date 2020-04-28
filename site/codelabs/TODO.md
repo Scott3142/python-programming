@@ -60,6 +60,8 @@
     - [x] \_\_name\_\_ and \_\_main\_\_
     - [ ] development instructions
     - [ ] section on testing with exercise 6.13
+- [ ] Update favicon
+- [ ] Update description
 
 ### Python Programming II
 
