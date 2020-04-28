@@ -14,8 +14,20 @@ If you'd help us making the correction, you can open a pull request with your pr
 
 ## Development environment
 
-*Notes to self:*
-You'll need to install npm and gulp on a first run. **Please use nvm to install node**. 
+The instructions for serving the landing page and the codelabs themselves are in the `README.md` file in the `site` directory. 
+
+Prerequisites:
+- `node` and `npm`
+- `gulp`
+
+The best way to install `node` is via `nvm`. Detailed instructions are [here](https://itnext.io/nvm-the-easiest-way-to-switch-node-js-environments-on-your-machine-in-a-flash-17babb7d5f1b) but if you know what you're doing, it boils down to running 
+
+```bash
+curl -o- 
+https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+```
+
+and updating the PATH. Once you have `node` (and hence `npm`) installed, you can run the following commands to install `gulp`:
 
 ```bash
 npm install
@@ -23,7 +35,15 @@ npm install --global gulp-cli
 npm install --save-dev gulp
 ```
 
-TBC
+The codelabs can be deployed from the `site` directory using the commands:
+
+```bash
+./claat_export.sh -o local # deploys codelabs only locally on http://localhost:9090
+./claat_export.sh -o landing # deploys codelabs and landing page locally on http://localhost:8000
+./claat_export.sh -o deploy # deploys to Github pages
+```
+
+**NB: Be sure to read the deployment instructions in the `site` directory before running these commands. 
 
 ## Authors
 
