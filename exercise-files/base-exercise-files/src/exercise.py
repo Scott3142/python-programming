@@ -1,4 +1,5 @@
 def main():
   #write your code below this line
 
-main()
+if __name__ == '__main__':
+    main()
