@@ -1138,7 +1138,8 @@ else:
 Negative
 : Enter the first string <br> *User: \<same\>* <br> Enter the second string <br> *User: \<same\>* <br> The strings were the same!
 
-Enter the first string <br> *User: \<same\>* <br> Enter the second string <br> *User: \<different\>* <br> The strings were different!
+Negative
+: Enter the first string <br> *User: \<same\>* <br> Enter the second string <br> *User: \<different\>* <br> The strings were different!
 
 Positive
 : **Exercise - Password**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-28-password.git)
