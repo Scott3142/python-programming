@@ -176,7 +176,7 @@ Prerequisites for a Github pages deployment:
 - a `gh-pages` branch of the repo you are deploying to
 - `node` and `gulp` installed (see instructions in parent folder)
 
-There are two files in which the baseUrl for the site is set (currently set to https://scott3142.uk). You will want to change these. The files are:
+There are two files in which the `baseUrl` for the site is set (currently set to https://scott3142.uk). You will want to change these. The files are:
 
 - `gulpfile.js`
 - `app/scripts/app.js` 
