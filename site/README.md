@@ -176,7 +176,7 @@ Prerequisites for a Github pages deployment:
 - a `gh-pages` branch of the repo you are deploying to
 - `node` and `gulp` installed (see instructions in parent folder)
 
-There are two files in which the `baseUrl` for the site is set (currently set to https://scott3142.uk). You will want to change these. The files are:
+There are two files in which the `baseUrl` for the site is set (currently set to https://scott3142.uk/python-programming). You will want to change these. The files are:
 
 - `gulpfile.js`
 - `app/scripts/app.js` 
@@ -190,7 +190,7 @@ I have edited some core codelabs files to make the landing page links redirect t
 You have three options:
 
 - Be happy that your landing page lives at `{{baseUrl}}/python-programming`
-- Remove the references to `python-programming` in `app/elements/codelab-elements/codelabs-elements.js`
+- Alter the references to `python-programming` in `app/elements/codelab-elements/codelabs-elements.js` to whatever your `baseUrl` is
 - Remove the find/replace lines in `claat_export.sh` which change the script links in each `index.html` from `https://storage.googleapis.com/codelab-elements/codelabs-elements.js` to `../../elements/codelab-elements/codelab-elements.js`
 
 Finally:
