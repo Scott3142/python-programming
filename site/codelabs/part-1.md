@@ -107,7 +107,7 @@ Negative
 
 ### Program Boilerplate
 
-In Python, our programs will include some boilerplate code to function. This boilerplate, an example of which is shown below, for example tells the computer what your function is called. Below, the name of the function is `example`.
+In Python, our programs will include some boilerplate code to function. This boilerplate, an example of which is shown below, for example tells the computer what your function is called. Below, the name of the function is `main`.
 
 ```python
 def main():
@@ -117,12 +117,10 @@ if __name__ == '__main__':
     main()
 ```
 
-Execution of the program starts from the line that says `main()`. This command *invokes* the function `example` and runs it. Commands are executed inside `example` one line at a time from the top. In the above example, `print("Text to be printed")` is the only command to be executed. Its output is:
+Execution of the program starts from the line that says `main()`. This command *invokes* the function `main` and runs it. Commands are executed inside `main` one line at a time from the top. In the above example, `print("Text to be printed")` is the only command to be executed. Its output is:
 
 Negative
 : Text to be printed
-
-<text-box variant="hint" name="Examples in the Material and Code Templates">
 
 The examples in the material will not always show the template, but you can assume that your program file has one. As such, the examples might be as short as a single line, such as the example below that illustrates the print command.
 
