@@ -181,7 +181,7 @@ There are two files in which the `baseUrl` for the site is set (currently set to
 - `gulpfile.js`
 - `app/scripts/app.js` 
 
-It's unfortunate that it this also has to be done in the scripts file but a workaround is in the TODOs. If you think you have a fix for this, please submit a PR following [the usual guidelines](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests). 
+It's unfortunate that this has to be done twice but a workaround is in the TODOs. If you think you have a fix for this, please submit a PR following [the usual guidelines](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests). 
 
 I have edited some core codelabs files to make the landing page links redirect to `{{baseUrl}}/python-programming`. The file that has been changed is
 
