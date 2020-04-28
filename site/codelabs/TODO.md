@@ -39,8 +39,8 @@
         - [x] Part 7
     - [ ] Add exercise template files
         - [x] 3.2 - 3.14
-        - [ ] 4.1
-        - [ ] 4.17 - 4.20
+        - [x] 4.1
+        - [x] 4.17 - 4.20
         - [ ] Part 5
         - [ ] Part 6
         - [ ] Part 7
@@ -48,7 +48,7 @@
         - [x] Part 1
         - [x] Part 2
         - [x] Part 3
-        - [ ] Part 4
+        - [x] Part 4
         - [ ] Part 5
         - [ ] Part 6
         - [ ] Part 7
