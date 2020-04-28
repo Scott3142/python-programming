@@ -574,8 +574,8 @@ Both of the preceding examples function the same way and output the same result.
 
 Positive
 : **Variables Express the Program and the Problem to Be Solved** <br><br> Programming is a problem-solving tool. The aim is to create solutions for any given problem, such as the automation of control in cars. As a problem is approached, the developer decides on the terms used to describe the problem domain. The terminology that is chosen, such as variable names, will serve to describe the problem for anyone who is to work with it in the future. <br><br> As you're wording the problem that you're solving, think about the concepts related to that problem and appropriate terms that could be used to describe them. If you find it hard to come up with relevant names, think of the ones that definitely do not describe it. After this, settle on some terminology that you're going to use -- the good thing is that you can usually improve on it later on.
-s
-Variable naming is limited by certain constraints.
+
+Variable naming is limited by certain constraints. 
 
 Variable names cannot contain certain special symbols, such as exclamation marks (!). Spaces are also not allowed, since they're used to separate parts of commands. Instead of spaces, the convention in many programming languages is to either use a style known as [camelCase](https://en.wikipedia.org/wiki/Camel_case "Camel case – Wikipedia") or [snake_case](https://en.wikipedia.org/wiki/Snake_case) to delimit words. Python variable names are always written in snake_case.
 
