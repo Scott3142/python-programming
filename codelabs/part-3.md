@@ -213,7 +213,8 @@ def word_list_example():
     # retrieve the value from position 0 of the word list, and print it
     print(word_list[0])
 
-word_list_example()
+if __name__ == '__main__':
+    word_list_example()
 ```
 
 Negative
@@ -233,7 +234,8 @@ def word_list_example():
     # retrieve the value from position 1 of the word list, and print it
     print(word_list[1])
 
-word_list_example()
+if __name__ == '__main__':
+    word_list_example()
 ```
 
 Negative
@@ -254,7 +256,8 @@ def word_list_example():
     # retrieve the value from the last position of the word list, and print it
     print(word_list[-1])
 
-word_list_example()
+if __name__ == '__main__':
+    word_list_example()
 ```
 
 Negative
@@ -282,7 +285,8 @@ def word_list_example():
     # retrieve the value from position 1 of the word list, and print it
     print(word_list[2])
 
-word_list_example()
+if __name__ == '__main__':
+    word_list_example()
 ```
 
 Since the numbering (i.e., **indexing**) of the list elements starts with zero, the program isn't able to find anything at place two and its execution ends with an error. Below is a description of the error message caused by the program.

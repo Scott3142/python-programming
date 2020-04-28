@@ -19,6 +19,9 @@ Duration: 01:00:00
 
 The same small problems, or "sub-problems", reappear in programs time after time: "Read input from the user", "Calculate the sum of values", and so forth.
 
+Positive
+: Note that from now on, we will drop the if `__name__ == '__main__':` block from the code snippets. You should assume that it still exists, and write it in the exercises for the code you submit.
+
 Let's look at a few sub-problems and patterns for solving them.
 
 ### Reading User Input
@@ -33,8 +36,6 @@ def sqrt():
     number = 9
     sqrt_number = np.sqrt(number)
     print(sqrt_number)
-
-sqrt()
 ```
 
 ### Calculating
@@ -922,8 +923,6 @@ def add():
   a = 2
   b = 3
   print(a+b)
-
-add()
 ```
 
 This can become a method when we insert it into a suitable place in a class.
@@ -963,7 +962,8 @@ class Example:
 def main():
     myClass = Example()
 
-main()
+if __name__ == '__main__':
+    main()
 ```
 
 The execution of the program produces the following output:
@@ -1096,8 +1096,6 @@ class Example:
 
 def main():
     myClass = Example()
-
-main()
 ```
 
 The output of the program is:

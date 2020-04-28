@@ -59,16 +59,18 @@
 <pre><code>print(&#34;Hello World&#34;)
 </code></pre>
 <p>The above statement is pre-built into Python, and it&#39;s used for printing a string. The statement tells the computer to output the string that&#39;s been provided to it, placed between the quotation marks.</p>
-<p>A lot of the programs you&#39;ll see in this course will have a certain frame around the code to work, the <code>def main():</code> syntax. Don&#39;t worry too much about this for now, it&#39;ll become very familiar soon. You don&#39;t need this framing around the <code>print</code> statement for it to be able to run in Python, but it&#39;s useful to get into the habit now to make things easier later.</p>
+<p>A lot of the programs you&#39;ll see in this course will have a certain frame around the code to work, the <code>def main():</code> syntax and the <code>if __name__ == &#39;__main__&#39;:</code> block. Don&#39;t worry too much about this for now, it&#39;ll become very familiar soon. You don&#39;t need th framing around the <code>print</code> statement or the <code>if __name__ == &#39;__main__&#39;:</code> statement for it to be able to run in Python, but it&#39;s useful to get into the habit now to make things easier later.</p>
 <pre><code>def main():
     print(&#34;Welcome to the course - you will learn to program!&#34;)
 
-main()
+if __name__ == &#39;__main__&#39;:
+    main()
 </code></pre>
 <aside class="warning"><p><strong>Note:</strong> It is important to realise at this stage that <em>indentation</em> is critical in Python which is slightly different to other languages. The code snippet below is not the same as the one above and would result in an error.</p>
 </aside>
 <pre><code>def main():
 print(&#34;Welcome to the course - you will learn to program!&#34;) #this indentation is wrong
+if __name__ == &#39;__main__&#39;:
 main()
 </code></pre>
 
@@ -98,7 +100,8 @@ main()
 <pre><code>def main():
     print(&#34;Text to be printed&#34;)
 
-main()
+if __name__ == &#39;__main__&#39;:
+    main()
 </code></pre>
 <p>Execution of the program starts from the line that says <code>main()</code>. This command <em>invokes</em> the function <code>example</code> and runs it. Commands are executed inside <code>example</code> one line at a time from the top. In the above example, <code>print(&#34;Text to be printed&#34;)</code> is the only command to be executed. Its output is:</p>
 <aside class="warning"><p>Text to be printed</p>
@@ -110,7 +113,8 @@ main()
 <pre><code>def hello_world():
     print(&#34;Hello world&#34;)
 
-hello_world()
+if __name__ == &#39;__main__&#39;:
+    hello_world()
 </code></pre>
 <p>Here&#39;s the second programming exercise of this course. If you&#39;d like, you can watch this video on how to solve the exercise first:</p>
 <aside class="special"><p>Video to be added.</p>
@@ -125,7 +129,8 @@ hello_world()
     print(&#34;Hello world!&#34;)
     print(&#34;... and the universe!&#34;)
 
-new_main()
+if __name__ == &#39;__main__&#39;:
+    new_main()
 </code></pre>
 <p>The program above will print:</p>
 <aside class="warning"><p>Hello world! <br> ... and the universe!</p>
@@ -163,7 +168,8 @@ new_main()
     print(&#34;Some other text to print&#34;)
     # print(&#34;Trying stuff out&#34;)
 
-comments()
+if __name__ == &#39;__main__&#39;:
+    comments()
 </code></pre>
 <p>The last line of the example shows a particularly handy use-case for comments. Code that has been written does not need to be deleted to try out something else.</p>
 <aside class="special"><p><strong>Docstrings<br><br></strong> In Python, there is the concept of a Python <em>Docstring</em>, which you will see later in the course. A docstring is a string literal that occurs as the first statement in a module, function, class, or method definition. Such a docstring becomes the <code>__doc__</code> special attribute of that object. All modules should normally have docstrings, and all functions and classes exported by a module should also have docstrings. We will revisit these concepts later.</p>
@@ -185,7 +191,8 @@ comments()
     input_string = input(&#39;Write a message:&#39;)
     print(input_string)
 
-user_input()
+if __name__ == &#39;__main__&#39;:
+    user_input()
 </code></pre>
 <p>More precisely, input is read and holds until the user writes something. When the user writes something and presses enter, the provided string is assigned to the string variable <code>input_string</code>. The program is then able to reference the variable message later on — in the example above, the variable message is referenced in the print command.</p>
 <p>When the program is run, its output can look like the example below. In this example, the user has written the text &#34;Hello world&#34; — user input is marked in the sample examples.</p>
@@ -217,14 +224,16 @@ print(&#34;message&#34;)
 <pre><code>def main():
     print(&#34;Hello &#34; + &#34;world!&#34;)
 
-main()
+if __name__ == &#39;__main__&#39;:
+    main()
 </code></pre>
 <p>The same method can be used to join a string literal and the value of a string variable.</p>
 <pre><code>def main():
     message = &#34;Hello world!&#34;
     print(message + &#34;... and the universe!&#34;)
 
-main()
+if __name__ == &#39;__main__&#39;:
+    main()
 </code></pre>
 <aside class="warning"><p>Hello world! ... and the universe!</p>
 </aside>
@@ -234,7 +243,8 @@ main()
     end = &#34;, James Bond&#34;
     print(start + &#34;Bond&#34; + end)
 
-main()
+if __name__ == &#39;__main__&#39;:
+    main()
 </code></pre>
 <aside class="warning"><p>My name is Bond, James Bond</p>
 </aside>
@@ -247,7 +257,8 @@ main()
     print(message)
     print(message)
 
-main()
+if __name__ == &#39;__main__&#39;:
+    main()
 </code></pre>
 <aside class="warning"><p>Write a message: <br><em>User: &lt;This will be printed twice&gt;<br></em> This will be printed twice <br> This will be printed twice</p>
 </aside>
@@ -259,7 +270,8 @@ main()
     message = input(&#39;Write a message:&#39;)
     print(&#39;You wrote: &#39; + message)
 
-main()
+if __name__ == &#39;__main__&#39;:
+    main()
 </code></pre>
 <aside class="warning"><p>Write a message: <br><em>User: &lt;My message&gt;<br></em> You wrote: My message</p>
 </aside>
@@ -278,7 +290,8 @@ main()
     print(second)
     print(third)
 
-main()
+if __name__ == &#39;__main__&#39;:
+    main()
 </code></pre>
 <aside class="warning"><p>Write the first string: <br><em>User: &lt;String number one&gt;<br></em> Write the second string: <br><em>User: &lt;String number two&gt;<br></em> Write the third string: <br><em>User: &lt;String number three&gt;<br><br></em> You wrote: <br> String number one <br> String number two <br> String number three</p>
 </aside>
@@ -295,7 +308,8 @@ main()
     print(second)
     print(third)
 
-main()
+if __name__ == &#39;__main__&#39;:
+    main()
 </code></pre>
 <p>We can form more complicated texts whose content changes depending on the user&#39;s input by using more strings. In the example below, the user is told a bit more about the texts they wrote – notice that the order in which the strings are printed can be changed. In the example below, the third input string is printed first.</p>
 <pre><code>def main():
@@ -310,7 +324,8 @@ main()
 
     print(&#34;All together: &#34; + first + second + third)
 
-main()
+if __name__ == &#39;__main__&#39;:
+    main()
 </code></pre>
 <aside class="warning"><p>Write the first string: <br><em>User: &lt;one&gt;<br></em> Write the second string: <br><em>User: &lt;two&gt;<br></em> Write the third string: <br><em>User: &lt;three&gt;<br><br></em> Last string you wrote was three, which <br> was preceded by two. <br> The first string was one. <br> All together: onetwothree</p>
 </aside>
@@ -642,7 +657,8 @@ def main(): #start block 1
     if (number &gt; 5): #start block 2
         print(&#39;This is greater than 5!&#39;) #inside block 2
 
-main() #outside block 1 and 2
+if __name__ == &#39;__main__&#39;:
+    main() #outside block 1 and 2 but inside the if block
 </code></pre>
 <p>In addition to the defining program structure and functionality, block statements also have an effect on the readability of a program. Code living inside a block is indented. For example, any source code inside the block of a conditional statement is indented deeper than the <code>if</code> command that started the conditional statement. Indents can also be added by pressing the tab key (the key to the left of ‘q&#39;). When the block ends, the indentation also ends. Python has explicit style guidelines on how code should be indented in the <a href="https://www.python.org/dev/peps/pep-0008" target="_blank">PEP 8</a> guidelines discussed previously. It boils down to:</p>
 <ul>
