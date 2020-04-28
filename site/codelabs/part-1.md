@@ -55,7 +55,7 @@ print("Hello World")
 
 The above statement is pre-built into Python, and it's used for printing a string. The statement tells the computer to output the string that's been provided to it, placed between the quotation marks.
 
-A lot of the programs you'll see in this course will have a certain frame around the code to work, the `def main():` syntax and the `if __name__ == '__main__':` block. Don't worry too much about this for now, it'll become very familiar soon. You don't need th framing around the `print` statement or the `if __name__ == '__main__':` statement for it to be able to run in Python, but it's useful to get into the habit now to make things easier later.
+A lot of the programs you'll see in this course will have a certain frame around the code; the `def main():` syntax and the `if __name__ == '__main__':` block. Don't worry too much about this for now, it'll become very familiar over the course of the material. You don't technically need the framing around the `print` statement or the `if __name__ == '__main__':` block for the program to be able to run in Python, but it's useful to get into the habit now to make things easier later.
 
 ```python
 def main():
