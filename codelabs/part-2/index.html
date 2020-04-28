@@ -35,7 +35,7 @@
 <li>You practice combining solution patterns used on sub-problems to solve broader ones.</li>
 </ul>
 <p>The same small problems, or &#34;sub-problems&#34;, reappear in programs time after time: &#34;Read input from the user&#34;, &#34;Calculate the sum of values&#34;, and so forth.</p>
-<aside class="special"><p>Note that from now on, we will drop the if <code>__name__ == &#39;__main__&#39;:</code> block from the code snippets. You should assume that it still exists, and write it in the exercises for the code you submit.</p>
+<aside class="special"><p>Note that from now on, we might drop the if <code>__name__ == &#39;__main__&#39;:</code> block from the code snippets. You should assume that it still exists, and write it in the exercises for the code you submit.</p>
 </aside>
 <p>Let&#39;s look at a few sub-problems and patterns for solving them.</p>
 <h2 is-upgraded>Reading User Input</h2>
@@ -689,7 +689,69 @@ print(&#34;Invalid numbers: &#34; + str(invalid_numbers))
 <p>So far, we&#39;ve used various commands: value assignment, calculations, conditional statements, and loops.</p>
 <p>Printing to the screen has been done with the statement <code>print()</code>, and the reading of values with <code>input()</code>. <code>if</code> has been used in conditional statements, and <code>while</code> and <code>for</code> in loops. We notice that printing and reading operations somewhat differ from <code>if</code>, <code>while</code>, and <code>for</code> in that the print and read commands are followed by parentheses, which may include parameters passed to the command. The ones that &#34;end in parentheses&#34; are not actually commands, but methods.</p>
 <p>Technically speaking, <strong>a method</strong> is a named set of statements. It&#39;s a piece of a program that can be called from elsewhere in the code by the name given to the method. For instance <code>print(&#34;I am a parameter given to the method!&#34;)</code> calls a methods that performs printing to the screen. The internal implementation of the method – meaning the set of statements to be executed – is hidden, and the programmer does not need to concern themselves with it when using the method.</p>
-<p>So far all the methods we have used have been ready-made Python methods. Next we will learn to create our own methods.</p>
+<p>So far all the methods we have used have been ready-made Python methods. We will learn to create our own methods in this section, but first let&#39;s revisit <code>if __name__ == &#39;__main__&#39;:</code>, the directory structure and importing packages.</p>
+<h2 is-upgraded>Directories, pacakges and __name__ == ‘__main__&#39;</h2>
+<p>You&#39;ve probably noticed by now that the exercise files contain a specific directory structure that looks as follows:</p>
+<pre><code>exercise-files/
++-- README.md
++-- src/
+|   +-- __init__.py
+|   +-- exercise.py
++-- tests/
+|   +-- test_exercise.py
+</code></pre>
+<p>Some of these files should be fairly self explanatory. The automated testing is run from the <code>tests/</code> folder. The <code>README.md</code> file explains what the exercise is about, and READMEs in general explain what the code in the repository is about.</p>
+<p>The <code>src/</code> directory contains all of the source code for the project. Since we&#39;ve only had one Python file until now, there are no more folders inside <code>src</code>. The <code>__init__.py</code> file (which has been empty for us so far), is required to make Python treat the directories as containing packages which can then be <em>imported</em>. If you look at one of the testing files:</p>
+<pre><code>import pytest
+from src.exercise import average # this imports the method &#39;average&#39; from the &#39;exercise.py&#39; file in the &#39;src&#39; folder
+
+def test_exercise():
+    assert average(16, 12, 5, 3) == 9 # this runs the &#39;average&#39; method and checks if the answer is correct
+</code></pre>
+<p>you can see that our package is imported from the <code>src</code> folder and used in the program. This is common Python functionality. You have previously imported and used the <code>numpy</code> package which allowed you to use a <code>sqrt</code> function. This is exactly the same functionality, except that you haven&#39;t written the <code>numpy</code> package. Python knows where to get <code>numpy</code> from because it is a common package listed in the <a href="https://pypi.org/" target="_blank">Python Package Index (PyPI)</a> , which is a repository of software for the Python programming language. You can create your own packages and make them available on PyPi if you think it would be useful for others.</p>
+<p><strong>What is name == ‘main&#39;?</strong></p>
+<p>So far, our <code>exercise.py</code> files have looked like this:</p>
+<pre><code>def main():
+    # some code ...
+
+if __name__ == &#39;__main__&#39;:
+    main()
+</code></pre>
+<p>Whenever the Python interpreter reads a source file, it does two things:</p>
+<ul>
+<li>it sets a few special variables, such as __name__, and then</li>
+<li>it executes all of the code found in the file.</li>
+</ul>
+<p>When the Python interpeter reads a source file, it first defines a few special variables. In this case, we care about the <strong>name</strong> variable.</p>
+<p><strong>When Your Module Is the Main Program</strong></p>
+<p>If you are running your module (the source file) as the main program, e.g.</p>
+<pre><code>python exercise.py
+</code></pre>
+<p>the interpreter will assign the hard-coded string <code>&#34;__main__&#34;</code> to the <code>__name__</code> variable, i.e.</p>
+<pre><code># It&#39;s as if the interpreter inserts this at the top
+# of your module when run as the main program.
+__name__ = &#34;__main__&#34;
+</code></pre>
+<p><strong>When Your Module Is Imported By Another</strong></p>
+<p>On the other hand, suppose some other module is the main program and it imports your module. This means there&#39;s a statement like this in the main program, or in some other module the main program imports:</p>
+<pre><code># Suppose this is in some other main program.
+import exercise
+</code></pre>
+<p>The interpreter will search for your foo.py file (along with searching for a few other variants), and prior to executing that module, it will assign the name &#34;exercise&#34; from the import statement to the <code>__name__</code> variable, i.e.</p>
+<pre><code># It&#39;s as if the interpreter inserts this at the top
+# of your module when it&#39;s imported from another module.
+__name__ = &#34;exercise&#34;
+</code></pre>
+<p>In this case, the <code>if __name__ == &#39;__main__&#39;:</code> statement would resolve to <code>False</code> and anything within the block wouldn&#39;t run.</p>
+<p><strong>Why does it work this way?</strong></p>
+<p>You might naturally wonder why anybody would want this. Well, sometimes you want to write a .py file that can be both used by other programs and/or modules as a module, and can also be run as the main program itself. Examples:</p>
+<ul>
+<li>Your module is a library, but you want to have a script mode where it runs some unit tests or a demo.</li>
+<li>Your module is only used as a main program, but it has some unit tests, and the testing framework works by importing .py files like your script and running special test functions. You don&#39;t want it to try running the script just because it&#39;s importing the module.</li>
+<li>Your module is mostly used as a main program, but it also provides a programmer-friendly API for advanced users.</li>
+</ul>
+<p>Beyond those examples, it&#39;s elegant that running a script in Python is just setting up a few magic variables and importing the script. &#34;Running&#34; the script is a side effect of importing the script&#39;s module.</p>
+<p><em>For us, it&#39;s important to have this statement for the testing routines. As you learn more about modules, packages and libraries, you&#39;ll come to understand this more. Don&#39;t worry too much about it for now. If you are interested you can check out </em><a href="https://stackoverflow.com/questions/419163/what-does-if-name-main-do" target="_blank"><em>this thread</em></a><em>, from which this was adapted.</em></p>
 <h2 is-upgraded>Custom Methods</h2>
 <p><strong>A method</strong> means a named set consisting of statements that can be called from elsewhere in the program code by its name. Programming languages offer pre-made methods, but programmers can also write their own ones. It would, in fact, be quite exceptional if a program used no methods written by the programmer, because methods help in structuring the program. From this point onward nearly every program on the course will therefore contain custom-created methods.</p>
 <p>We will also introduce the concept of a class here, which will become far clearer as we go through the course. A Class is like an object constructor, or a &#34;blueprint&#34; for creating objects.</p>

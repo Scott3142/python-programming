@@ -20,7 +20,7 @@ Duration: 01:00:00
 The same small problems, or "sub-problems", reappear in programs time after time: "Read input from the user", "Calculate the sum of values", and so forth.
 
 Positive
-: Note that from now on, we will drop the if `__name__ == '__main__':` block from the code snippets. You should assume that it still exists, and write it in the exercises for the code you submit.
+: Note that from now on, we might drop the if `__name__ == '__main__':` block from the code snippets. You should assume that it still exists, and write it in the exercises for the code you submit.
 
 Let's look at a few sub-problems and patterns for solving them.
 
@@ -861,7 +861,101 @@ Printing to the screen has been done with the statement `print()`, and the readi
 
 Technically speaking, **a method** is a named set of statements. It's a piece of a program that can be called from elsewhere in the code by the name given to the method. For instance `print("I am a parameter given to the method!")` calls a methods that performs printing to the screen. The internal implementation of the method -- meaning the set of statements to be executed -- is hidden, and the programmer does not need to concern themselves with it when using the method.
 
-So far all the methods we have used have been ready-made Python methods. Next we will learn to create our own methods.
+So far all the methods we have used have been ready-made Python methods. We will learn to create our own methods in this section, but first let's revisit `if __name__ == '__main__':`, the directory structure and importing packages.
+
+### Directories, pacakges and \_\_name\_\_ == '\_\_main\_\_'
+
+You've probably noticed by now that the exercise files contain a specific directory structure that looks as follows:
+
+```
+exercise-files/
++-- README.md
++-- src/
+|   +-- __init__.py
+|   +-- exercise.py
++-- tests/
+|   +-- test_exercise.py
+```
+
+Some of these files should be fairly self explanatory. The automated testing is run from the `tests/` folder. The `README.md` file explains what the exercise is about, and READMEs in general explain what the code in the repository is about.
+
+The `src/` directory contains all of the source code for the project. Since we've only had one Python file until now, there are no more folders inside `src`. The `__init__.py` file (which has been empty for us so far), is required to make Python treat the directories as containing packages which can then be _imported_. If you look at one of the testing files:
+
+```python
+import pytest
+from src.exercise import average # this imports the method 'average' from the 'exercise.py' file in the 'src' folder
+
+def test_exercise():
+    assert average(16, 12, 5, 3) == 9 # this runs the 'average' method and checks if the answer is correct
+```
+
+you can see that our package is imported from the `src` folder and used in the program. This is common Python functionality. You have previously imported and used the `numpy` package which allowed you to use a `sqrt` function. This is exactly the same functionality, except that you haven't written the `numpy` package. Python knows where to get `numpy` from because it is a common package listed in the [Python Package Index (PyPI)](https://pypi.org/) , which is a repository of software for the Python programming language. You can create your own packages and make them available on PyPi if you think it would be useful for others.
+
+**What is __name__ == '__main__'?**
+
+So far, our `exercise.py` files have looked like this:
+
+```python
+def main():
+    # some code ...
+
+if __name__ == '__main__':
+    main()
+```
+
+Whenever the Python interpreter reads a source file, it does two things:
+
+* it sets a few special variables, such as \_\_name\_\_, and then
+* it executes all of the code found in the file.
+
+When the Python interpeter reads a source file, it first defines a few special variables. In this case, we care about the __name__ variable.
+
+**When Your Module Is the Main Program**
+
+If you are running your module (the source file) as the main program, e.g.
+
+```
+python exercise.py
+```
+
+the interpreter will assign the hard-coded string `"__main__"` to the `__name__` variable, i.e.
+
+```python
+# It's as if the interpreter inserts this at the top
+# of your module when run as the main program.
+__name__ = "__main__"
+```
+
+**When Your Module Is Imported By Another**
+
+On the other hand, suppose some other module is the main program and it imports your module. This means there's a statement like this in the main program, or in some other module the main program imports:
+
+```python
+# Suppose this is in some other main program.
+import exercise
+```
+
+The interpreter will search for your foo.py file (along with searching for a few other variants), and prior to executing that module, it will assign the name "exercise" from the import statement to the `__name__` variable, i.e.
+
+```python
+# It's as if the interpreter inserts this at the top
+# of your module when it's imported from another module.
+__name__ = "exercise"
+```
+
+In this case, the `if __name__ == '__main__':` statement would resolve to `False` and anything within the block wouldn't run.
+
+**Why does it work this way?**
+
+You might naturally wonder why anybody would want this. Well, sometimes you want to write a .py file that can be both used by other programs and/or modules as a module, and can also be run as the main program itself. Examples:
+
+- Your module is a library, but you want to have a script mode where it runs some unit tests or a demo.
+- Your module is only used as a main program, but it has some unit tests, and the testing framework works by importing .py files like your script and running special test functions. You don't want it to try running the script just because it's importing the module.
+- Your module is mostly used as a main program, but it also provides a programmer-friendly API for advanced users.
+
+Beyond those examples, it's elegant that running a script in Python is just setting up a few magic variables and importing the script. "Running" the script is a side effect of importing the script's module.
+
+_For us, it's important to have this statement for the testing routines. As you learn more about modules, packages and libraries, you'll come to understand this more. Don't worry too much about it for now. If you are interested you can check out [this thread](https://stackoverflow.com/questions/419163/what-does-if-name-main-do), from which this was adapted._
 
 ### Custom Methods
 
