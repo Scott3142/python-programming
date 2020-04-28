@@ -193,3 +193,5 @@ If gulp startup times are really slow, try removing `node_modules/` or running
 ```text
 $ npm dedupe
 ```
+
+The codelabs and landing page are adapted from Google's tools available [here](https://github.com/googlecodelabs/tools). 
