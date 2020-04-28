@@ -207,7 +207,7 @@ The codelabs can be deployed using the commands:
 ./claat_export.sh -o deploy # deploys to Github pages
 ```
 
-**NB: Be sure to check out these files and check out what they do before running these commands.**
+**NB: Be sure to check out these files and understand what they do before running these commands.**
 
 ## Help
 
