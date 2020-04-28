@@ -236,7 +236,7 @@ Duration: 01:00:00
 * Know what a "string" refers to in programming.
 * Know how to join (i.e., "concatenate") strings together.
 
-Input refers to text written by the user read by the program. Input is always read as a string. For reading input, we use the `input` tool that comes with Python. The tool can be used with the command `inputString = input('This text is printed to screen.')`
+Input refers to text written by the user read by the program. Input is always read as a string. For reading input, we use the `input` tool that comes with Python. The tool can be used with the command `input_string = input('This text is printed to screen.')`
 
 Below is an example of a program which asks for user input, reads the string entered by the user, and then prints it.
 
