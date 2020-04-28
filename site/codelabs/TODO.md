@@ -62,6 +62,7 @@
     - [ ] section on testing with exercise 6.13
 - [ ] Update favicon
 - [ ] Update description
+- [ ] Add videos
 
 ### Python Programming II
 
