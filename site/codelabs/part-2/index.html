@@ -35,6 +35,8 @@
 <li>You practice combining solution patterns used on sub-problems to solve broader ones.</li>
 </ul>
 <p>The same small problems, or &#34;sub-problems&#34;, reappear in programs time after time: &#34;Read input from the user&#34;, &#34;Calculate the sum of values&#34;, and so forth.</p>
+<aside class="special"><p>Note that from now on, we will drop the if <code>__name__ == &#39;__main__&#39;:</code> block from the code snippets. You should assume that it still exists, and write it in the exercises for the code you submit.</p>
+</aside>
 <p>Let&#39;s look at a few sub-problems and patterns for solving them.</p>
 <h2 is-upgraded>Reading User Input</h2>
 <p>The solution pattern for programming tasks involving reading user input is straightforward. If the program needs to calculate the square root of a function, we need to import some code which has been created for the task. We will use the library <code>numpy</code> for this, which is imported at the top of the example below.  Importing the tool makes it available for the program. Importing external libraries is an important part of programming, and allows us to not ‘reinvent the wheel&#39;. We&#39;ll cover importing modules in more detail a later part of the course.</p>
@@ -45,8 +47,6 @@ def sqrt():
     number = 9
     sqrt_number = np.sqrt(number)
     print(sqrt_number)
-
-sqrt()
 </code></pre>
 <h2 is-upgraded>Calculating</h2>
 <p>We quite often need to calculate something in a program, such as an average or a sum. The solution pattern to solve such problems is as follows.</p>
@@ -727,8 +727,6 @@ print(p1.x)
   a = 2
   b = 3
   print(a+b)
-
-add()
 </code></pre>
 <p>This can become a method when we insert it into a suitable place in a class.</p>
 <pre><code>class Example:
@@ -760,7 +758,8 @@ add()
 def main():
     myClass = Example()
 
-main()
+if __name__ == &#39;__main__&#39;:
+    main()
 </code></pre>
 <p>The execution of the program produces the following output:</p>
 <aside class="warning"><p>Let&#39;s see if we can travel to the method world: <br> Greetings from the method world! <br> Looks like we can, let&#39;s try again: <br> Greetings from the method world! <br> Greetings from the method world! <br> Greetings from the method world! <br></p>
@@ -849,8 +848,6 @@ sum(number1, number2)
 
 def main():
     myClass = Example()
-
-main()
 </code></pre>
 <p>The output of the program is:</p>
 <aside class="warning"><p>5 <br> 6 <br> 7 <br> 8 <br> 9 <br><br> 8 <br> 9</p>
