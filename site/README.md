@@ -199,6 +199,16 @@ A better workaround is in the TODOs. If you think you have a fix for this, pleas
 
 *NB:* The command `gulp deploy:build` is broken at the moment. You should always use `gulp deploy:prod` until this is fixed. 
 
+The codelabs can be deployed using the commands:
+
+```bash
+./claat_export.sh -o local # deploys codelabs only locally on http://localhost:9090
+./claat_export.sh -o landing # deploys codelabs and landing page locally on http://localhost:8000
+./claat_export.sh -o deploy # deploys to Github pages
+```
+
+**NB: Be sure to check out these files and check out what they do before running these commands.**
+
 ## Help
 
 For help documentation/usage of the Gulp tasks, run:
