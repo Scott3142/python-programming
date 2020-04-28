@@ -174,7 +174,8 @@ def main():
     alan.print_person()
     grace.print_person()
 
-main()
+if __name__ == '__main__':
+    word_list_example()
 ```
 
 Prints:
@@ -228,7 +229,8 @@ def main():
     ada.print_person()
     alan.print_person()
 
-main()
+if __name__ == '__main__':
+    word_list_example()
 ```
 
 Prints:

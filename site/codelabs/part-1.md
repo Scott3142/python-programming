@@ -55,13 +55,14 @@ print("Hello World")
 
 The above statement is pre-built into Python, and it's used for printing a string. The statement tells the computer to output the string that's been provided to it, placed between the quotation marks.
 
-A lot of the programs you'll see in this course will have a certain frame around the code to work, the `def main():` syntax. Don't worry too much about this for now, it'll become very familiar soon. You don't need this framing around the `print` statement for it to be able to run in Python, but it's useful to get into the habit now to make things easier later.
+A lot of the programs you'll see in this course will have a certain frame around the code to work, the `def main():` syntax and the `if __name__ == '__main__':` block. Don't worry too much about this for now, it'll become very familiar soon. You don't need th framing around the `print` statement or the `if __name__ == '__main__':` statement for it to be able to run in Python, but it's useful to get into the habit now to make things easier later.
 
 ```python
 def main():
     print("Welcome to the course - you will learn to program!")
 
-main()
+if __name__ == '__main__':
+    main()
 ```
 
 Negative
@@ -70,6 +71,7 @@ Negative
 ```python
 def main():
 print("Welcome to the course - you will learn to program!") #this indentation is wrong
+if __name__ == '__main__':
 main()
 ```
 
@@ -109,7 +111,8 @@ In Python, our programs will include some boilerplate code to function. This boi
 def main():
     print("Text to be printed")
 
-main()
+if __name__ == '__main__':
+    main()
 ```
 
 Execution of the program starts from the line that says `main()`. This command *invokes* the function `example` and runs it. Commands are executed inside `example` one line at a time from the top. In the above example, `print("Text to be printed")` is the only command to be executed. Its output is:
@@ -131,7 +134,8 @@ In reality, the above example, when written as a full Python program, looks like
 def hello_world():
     print("Hello world")
 
-hello_world()
+if __name__ == '__main__':
+    hello_world()
 ```
 
 Here's the second programming exercise of this course. If you'd like, you can watch this video on how to solve the exercise first:
@@ -155,7 +159,8 @@ def new_main():
     print("Hello world!")
     print("... and the universe!")
 
-new_main()
+if __name__ == '__main__':
+    new_main()
 ```
 
 The program above will print:
@@ -214,7 +219,8 @@ def comments():
     print("Some other text to print")
     # print("Trying stuff out")
 
-comments()
+if __name__ == '__main__':
+    comments()
 ```
 
 The last line of the example shows a particularly handy use-case for comments. Code that has been written does not need to be deleted to try out something else.
@@ -239,7 +245,8 @@ def user_input():
     input_string = input('Write a message:')
     print(input_string)
 
-user_input()
+if __name__ == '__main__':
+    user_input()
 ```
 
 More precisely, input is read and holds until the user writes something. When the user writes something and presses enter, the provided string is assigned to the string variable `input_string`. The program is then able to reference the variable message later on — in the example above, the variable message is referenced in the print command.
@@ -294,7 +301,8 @@ The string to be printed can be formed from multiple strings using the `+` opera
 def main():
     print("Hello " + "world!")
 
-main()
+if __name__ == '__main__':
+    main()
 ```
 
 The same method can be used to join a string literal and the value of a string variable.
@@ -304,7 +312,8 @@ def main():
     message = "Hello world!"
     print(message + "... and the universe!")
 
-main()
+if __name__ == '__main__':
+    main()
 ```
 
 Negative
@@ -318,7 +327,8 @@ def main():
     end = ", James Bond"
     print(start + "Bond" + end)
 
-main()
+if __name__ == '__main__':
+    main()
 ```
 
 Negative
@@ -337,7 +347,8 @@ def main():
     print(message)
     print(message)
 
-main()
+if __name__ == '__main__':
+    main()
 ```
 
 Negative
@@ -355,7 +366,8 @@ def main():
     message = input('Write a message:')
     print('You wrote: ' + message)
 
-main()
+if __name__ == '__main__':
+    main()
 ```
 
 Negative
@@ -381,7 +393,8 @@ def main():
     print(second)
     print(third)
 
-main()
+if __name__ == '__main__':
+    main()
 ```
 
 Negative
@@ -403,7 +416,8 @@ def main():
     print(second)
     print(third)
 
-main()
+if __name__ == '__main__':
+    main()
 ```
 
 We can form more complicated texts whose content changes depending on the user's input by using more strings. In the example below, the user is told a bit more about the texts they wrote -- notice that the order in which the strings are printed can be changed. In the example below, the third input string is printed first.
@@ -421,7 +435,8 @@ def main():
 
     print("All together: " + first + second + third)
 
-main()
+if __name__ == '__main__':
+    main()
 ```
 
 Negative
@@ -884,7 +899,8 @@ def main(): #start block 1
     if (number > 5): #start block 2
         print('This is greater than 5!') #inside block 2
 
-main() #outside block 1 and 2
+if __name__ == '__main__':
+    main() #outside block 1 and 2 but inside the if block
 ```
 
 In addition to the defining program structure and functionality, block statements also have an effect on the readability of a program. Code living inside a block is indented. For example, any source code inside the block of a conditional statement is indented deeper than the `if` command that started the conditional statement. Indents can also be added by pressing the tab key (the key to the left of 'q'). When the block ends, the indentation also ends. Python has explicit style guidelines on how code should be indented in the [PEP 8](https://www.python.org/dev/peps/pep-0008) guidelines discussed previously. It boils down to:
