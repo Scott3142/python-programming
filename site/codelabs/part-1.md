@@ -610,7 +610,7 @@ Negative
 Other input types, such as integers, floats, and booleans must be converted to the target variable's type with the help of the `int`, `float` or `bool` methods provided by Python.
 
 ### The Type of the Variable Informs of Possible Values
-A variable's type can be specificed after reading user input data. For example, a variable containing the string "text" is declared when read with the `input` call, and an integer having the value 42 can be declared using `int(varableName)`.
+A variable's type can be specificed after reading user input data. For example, a variable containing the string "text" is declared when read with the `input` call, and an integer having the value 42 can be declared using `int(varable_name)`.
 
 A variable's type determines the types of values that can be assigned to it. String types hold text, int types whole numbers, float floating-point numbers, and boolean types are either true or false.
 
