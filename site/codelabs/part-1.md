@@ -35,8 +35,7 @@ You can sign up for Github [here](https://github.com/). Installation instruction
 
 Once you have created the user account and installed Anaconda and Atom, watch the video below. The video demonstrates what happens when Atom is opened for the first time. We log into Github and do the first programming exercise.
 
-Positive
-: Video to be added
+replace-with-video
 
 Positive
 : **Exercise - Sandbox** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/sandbox.git)
@@ -140,8 +139,7 @@ if __name__ == '__main__':
 
 Here's the second programming exercise of this course. If you'd like, you can watch this video on how to solve the exercise first:
 
-Positive
-: Video to be added.
+replace-with-video
 
 Positive
 : **Exercise - Ada Lovelace** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-1-ada-lovelace.git)
@@ -1312,3 +1310,5 @@ You've now taken your first steps in the world of programming. During the course
 After this course, simple instructions, such as "_Buy two cartons of milk. If the shop has oranges, buy four of them._", will be viewed in a different way. Although this message may be clear to a human, a computer might end up buying four cartons of milk.
 
 Great to have you on this journey!
+
+replace-with-summary-form-1

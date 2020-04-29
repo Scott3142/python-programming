@@ -65,7 +65,7 @@
     - [x] section on virtual environments
 - [x] Update favicon
 - [x] Update description
-- [ ] Add videos
+- [x] Add videos
 - [ ] Add forms
 
 ### Python Programming II
