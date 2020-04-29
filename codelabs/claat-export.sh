@@ -20,22 +20,27 @@ claat export project-list.md
 # `landing` Serve landing pages locally
 # `deploy` Deploy full landing page and codelabs
 
+replace="<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/6G5pCNRPZPU\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen><\/iframe>"
+
 while getopts ":o:" opt; do
   case $opt in
     o)
       if [ "$OPTARG" = "local" ]; then
         echo "Serving codelabs locally." >&2
+        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-video<\/p>/$replace/g" {} \;
         claat serve
       elif [ "$OPTARG" = "landing" ]; then
         echo "Serving landing page locally." >&2
-	echo "Be aware - this is okay, but it loads the codelabs from scott3142.uk" >&2
-	find . -type f -name 'index.html' -exec sed -i 's/https:\/\/storage\.googleapis\.com\/codelab-elements\/codelab-elements\.js/\.\.\/\.\.\/elements\/codelab-elements\/codelab-elements\.js/g' {} \;
+	    echo "Be aware - this is okay, but it loads the codelabs from scott3142.uk" >&2
+	    find . -type f -name 'index.html' -exec sed -i 's/https:\/\/storage\.googleapis\.com\/codelab-elements\/codelab-elements\.js/\.\.\/\.\.\/elements\/codelab-elements\/codelab-elements\.js/g' {} \;
+        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-video<\/p>/$replace/g" {} \;
         cd ../
         gulp serve
       elif [ "$OPTARG" = "deploy" ]; then
         echo "Deploying landing page and codelabs." >&2
         find . -type f -name 'index.html' -exec sed -i 's/https:\/\/storage\.googleapis\.com\/codelab-elements\/codelab-elements\.js/\.\.\/\.\.\/elements\/codelab-elements\/codelab-elements\.js/g' {} \;
-	cd ../
+        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-video<\/p>/$replace/g" {} \;
+        cd ../
         gulp deploy:prod
       fi
       ;;
