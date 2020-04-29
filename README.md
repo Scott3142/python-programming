@@ -43,7 +43,7 @@ The codelabs can be deployed from the `site` directory using the commands:
 ./claat_export.sh -o deploy # deploys to Github pages
 ```
 
-**NB: Be sure to read the deployment instructions in the `site` directory before running these commands. 
+**NB: Be sure to read the deployment instructions in the `site` directory before running these commands.** 
 
 ## Authors
 
