@@ -40,6 +40,17 @@
 <p>One of the key aspects of using a terminal is being able to navigate your file system. Firstly, run the following command: <code>ls -la</code>. You should see a list of files and folders.</p>
 <p>The <code>ls</code> command lists the contents of the directory that you are currently in (your present working directory). The <code>-la</code> component of the command is what&#39;s known as a ‘flag&#39;. Flags modify the command that&#39;s being run. In this case the <code>l</code> displays the contents of the directory in a list, showing data such as their sizes and when they were last edited, and the a displays all files, including those beginning with a ., known as ‘dotfiles&#39;. Dotfiles usually act as configuration files for software and as they are written in text, they can be modified by simply editing them.</p>
 <p>In order to navigate to other directories the change directory command, <code>cd</code>, can be used. You can specify the directory that you want to go to by either the ‘absolute&#39; or the ‘relative&#39; path. So if you wanted to navigate to the <code>Downloads</code> directory, you could either do <code>cd /home/username/Downloads</code> or just <code>cd Downloads</code> (if you are currently in <code>/home/username</code>). There are some special cases that may be useful: <code>~</code> acts as an alias for your home directory, so <code>~/Downloads</code> is the same as <code>/home/username/Downloads</code>; <code>.</code> and <code>..</code> are aliases for the current directory and the parent directory respectively, e.g. if you were in <code>/home/username/Downloads</code>, cd .. would take you to <code>/home/username</code>.</p>
+<h2 is-upgraded>Running Python commands in the terminal</h2>
+<p>If you have a directory structure containing some <code>.py</code> files,</p>
+<pre><code>.
++-- __init__.py
++-- main.py
++-- my_python_file.py
+</code></pre>
+<p>you can compile and run the <code>main.py</code> file using the following command:</p>
+<pre><code>python3 main.py
+</code></pre>
+<p>If you get an error saying that <code>python3</code> is not recognised as a command, <a href="https://www.python.org/downloads/" target="_blank">make sure it&#39;s installed</a>.</p>
 <h2 is-upgraded>History and auto-complete</h2>
 <p>Rather than type every command, the terminal allows you to scroll through previous commands that you&#39;ve run by pressing the <code>up</code> or <code>down</code> keys on your keyboard. If you are writing the name of a file or directory as part of a command then pressing <code>tab</code> will attempt to auto-complete the name of what you are typing. For example, if you have a file in a directory called <code>aLongFileName</code> then pressing tab after typing <code>a</code> will allow you to choose from all file and directory names beginning with <code>a</code> in the current directory, allowing you to choose <code>aLongFileName</code>.</p>
 <h2 is-upgraded>Sudo</h2>
@@ -140,13 +151,229 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Python virtual environments" duration="0">
-        
+      <google-codelab-step label="Python virtual environments" duration="30">
+        <p>The following is adapted from <a href="https://docs.python.org/3/tutorial/venv.html" target="_blank">the Python documentation</a>.</p>
+<p>Python applications will often use packages and modules that don&#39;t come as part of the standard library. Applications will sometimes need a specific version of a library, because the application may require that a particular bug has been fixed or the application may be written using an obsolete version of the library&#39;s interface.</p>
+<p>This means it may not be possible for one Python installation to meet the requirements of every application. If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.</p>
+<p>The solution for this problem is to create a virtual environment, a self-contained directory tree that contains a Python installation for a particular version of Python, plus a number of additional packages.</p>
+<p>Different applications can then use different virtual environments. To resolve the earlier example of conflicting requirements, application A can have its own virtual environment with version 1.0 installed while application B has another virtual environment with version 2.0. If application B requires a library be upgraded to version 3.0, this will not affect application A&#39;s environment.</p>
+<p>The module used to create and manage virtual environments is called venv. venv will usually install the most recent version of Python that you have available. If you have multiple versions of Python on your system, you can select a specific Python version by running python3 or whichever version you want.</p>
+<p>To create a virtual environment, decide upon a directory where you want to place it, and run the venv module as a script with the directory path:</p>
+<pre><code>python3 -m venv my-environment
+</code></pre>
+<p>Once you&#39;ve created a virtual environment, you may activate it.</p>
+<p>On Windows, run:</p>
+<pre><code>tutorial-env\Scripts\activate.bat
+</code></pre>
+<p>On Unix or MacOS, run:</p>
+<pre><code>source tutorial-env/bin/activate
+</code></pre>
+<p>(This script is written for the bash shell. If you use the csh or fish shells, there are alternate activate.csh and activate.fish scripts you should use instead.)</p>
+<p>Activating the virtual environment will change your shell&#39;s prompt to show what virtual environment you&#39;re using, and modify the environment so that running python will get you that particular version and installation of Python.</p>
+<p>It is important to enter a virtual environment whenever you are testing Python code. It makes sure the packages are correctly defined and eliminates a lot of errors.</p>
+
 
       </google-codelab-step>
     
-      <google-codelab-step label="Version control with git" duration="0">
-        <p>Hello</p>
+      <google-codelab-step label="Version control with git" duration="30">
+        <h2 is-upgraded>What is Git?</h2>
+<p>The following is adapted from <a href="https://projects.raspberrypi.org/en/projects/getting-started-with-git" target="_blank">these Raspberry Pi foundation resources</a>.</p>
+<p class="image-container"><img alt="logo" src="img/a541254233c49153.png"></p>
+<p>Git is a version control system (VCS) for tracking changes to files and coordinating changes between multiple people who are all working on the same code base.</p>
+<p>One way to think about Git is to imagine a magical school bag. You can pull books out of your bag and do some work whenever you like. Once you&#39;ve finished your homework, you can put the books back into your school bag, and the bag remembers what changes you made to all the books inside it.</p>
+<p>What&#39;s really clever is that this school bag can be synchronised with another magical school bag that lives in the clouds. Whenever you like, you can tell the bag to copy the contents of all the books to the sky-bag. If you lose your own school bag, you don&#39;t have to worry, as you can just get a new one and grab all the books and writing from the sky-bag.</p>
+<p>That&#39;s not all though. All your friends at school also have magical school bags. They also keep their bags synchronised with the sky-bag. This means that you and your friends can all work on the homework together. If a friend has a better answer to a science question than you do, you can copy their answer from the sky-bag to your book.</p>
+<p>It gets even better than that: your teacher also has a magical school bag. When she wants to check the homework, she just copies all the books from the sky-bag to her bag. She can then check through the answers from the whole class in one go. If she spots a mistake, she can write a comment in the margin of the book, and then all the magical bags from the whole class will receive the comment. Only one person in the class needs to correct the mistake though, and then everyone in the class immediately has the correct answer.</p>
+<h2 is-upgraded>Installing Git</h2>
+<p>If you&#39;re on Linux, and you don&#39;t have Git installed, then you can just use your package manager to grab the software. Something like this should work:</p>
+<pre><code>sudo apt install git
+</code></pre>
+<p>If you&#39;re on other operating systems, you can check out the guides below:</p>
+<ul>
+<li><a href="https://www.atlassian.com/git/tutorials/install-git#mac-os-x" target="_blank">Installing git on Mac OS</a></li>
+<li><a href="https://www.atlassian.com/git/tutorials/install-git#windows" target="_blank">Installing git on Windows</a></li>
+</ul>
+<h2 is-upgraded>Setting up Git</h2>
+<p>You&#39;re going to be working in a terminal window for the duration of this resource, so open it up by clicking on the icon on the desktop, or by pressing <code>Ctrl + Alt + T</code> on your keyboard.</p>
+<p>The first thing to do is to tell Git who you are. This is important, as Git can be used collaboratively by lots of people, so it needs to know who made changes to which files. You can use your own username and email address, unless you are in fact <a href="https://en.wikipedia.org/wiki/Grace_Hopper" target="_blank">Grace Hopper</a>.</p>
+<pre><code>git config --global user.name &#34;Grace Hopper&#34;
+git config --global user.email &#34;g.hopper@harvard.edu&#34;
+</code></pre>
+<p>Next you need to tell Git which text editor you want to use. If you don&#39;t have any particularly strong feelings about text editors, then you can just type:</p>
+<pre><code>git config --global core.editor nano
+</code></pre>
+<h2 is-upgraded>Creating your first repo</h2>
+<p>If you want to start a new project which uses git, you&#39;ll want a directory on your computer for all your files to sit in, so the first thing to do is create that directory.</p>
+<p>In the terminal, you can use the <code>mkdir</code> (make directory) command to create a new directory.</p>
+<pre><code>mkdir my_project
+</code></pre>
+<p>Now you want to go into that directory. You can use the <code>cd</code> (change directory) command to do this.</p>
+<pre><code>cd my_project
+</code></pre>
+<p>Next, you can create a file that will tell people what the project is about. You can use any text editor to do this, such as Notepad or nano. Create a file called <code>README.md</code>. The <code>.md</code> extension stands for <strong>Markdown</strong>, which is a markup language. You can learn more about Markdown <a href="https://daringfireball.net/projects/markdown/" target="_blank">here</a>.</p>
+<p>You can now give the file a title and write a short explanation of what your project is about.</p>
+<pre><code># This is my description
+I am making a really cool Python project
+</code></pre>
+<p>If you&#39;ve used nano, pressing <code>Ctrl + X</code> will cause a save prompt to appear. You can type <code>Y</code> to save and then hit <code>Enter</code> to close.</p>
+<p>Your file should have been created and will now be sitting in your directory. You can type <code>ls</code> in the terminal or <code>dir</code> if you are using Windows, to see a list of files.</p>
+<pre><code>ls
+</code></pre>
+<p>At the moment, the directory is just like any other directory on your system. You now need to make the magical school bag part. This is known as a <strong>Git repository</strong>, and it takes the form of a hidden directory that keeps track of all the changes to the working directory. Type the following to create the repository, which from now on will just be called a <strong>repo</strong>:</p>
+<pre><code>git init
+</code></pre>
+<p>If you type <code>ls</code> again, nothing will appear to have changed. You can use <code>ls -a</code> to see all the hidden files and directories, though. If you are using Windows then type <code>dir /A</code> instead.</p>
+<pre><code>ls -a
+</code></pre>
+<p>You should now see something like this in your terminal window:</p>
+<pre><code>.  ..  .git  README.md
+</code></pre>
+<p>That <code>.git</code> directory is the <strong>repo skeleton</strong>. You can have a look inside it by typing the following. (Remember if you are using Windows it would be <code>dir /A .git</code>.)</p>
+<pre><code>ls -a .git
+</code></pre>
+<p>This should bring up something like:</p>
+<pre><code>branches  config  description  HEAD  hooks  info  objects  refs
+</code></pre>
+<p>You don&#39;t really need to worry about this directory at all now. Just know that it is there and that it is tracking all the changes to the parent directory <code>my_project</code>.</p>
+<h2 is-upgraded>Adding files</h2>
+<p>So you now have the repo initialised, but you haven&#39;t yet added anything to it. You need to tell Git that you want to add the <code>README.md</code> file to the repo. To do this you can simply type:</p>
+<pre><code>git add README.md
+</code></pre>
+<p>Sometime it&#39;s easier to just add everything to the repo though, rather than adding individual files. To do this you can type:</p>
+<pre><code>git add --all
+</code></pre>
+<p>Now Git knows it needs to keep track of all the changes that happen to the <code>README.md</code> file. You can have a look at the status of your repo at any time by typing the following:</p>
+<pre><code>git status
+</code></pre>
+<p>You should see something like this</p>
+<pre><code>On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use &#34;git rm --cached &lt;file&gt;...&#34; to unstage)
+
+	new file:   README.md
+</code></pre>
+<p>The above response is telling you that the <code>README.md</code> file has not yet been <strong>committed</strong>. This means that although Git knows about the file, it doesn&#39;t yet have any of the file&#39;s contents stored. The simplest way to do a commit is by typing:</p>
+<pre><code>git commit -m &#34;adds README.md&#34;
+</code></pre>
+<p>This commits all changes you have made in the directory to the Git repo, and adds a message saying what you did. The message can be anything really, but it&#39;s best to keep it fairly short yet descriptive of what you changed.</p>
+<h2 is-upgraded>Adding more files and travelling in time</h2>
+<p>Now that you have set up your repo, it&#39;s time to get on with the project. Here, two new files have been created: <code>person.py</code> and <code>data.csv</code>. Typing <code>ls</code> reveals those files.</p>
+<pre><code>README.md  data.csv  person.py
+</code></pre>
+<p>The new files need to be added to the Git repo and then committed.</p>
+<pre><code>git add --all
+git commit -am &#39;adds data csv and python program&#39;
+</code></pre>
+<p>Then you carry on working on your code for a bit. Every time you make a significant change to the file, you can perform a new commit.</p>
+<pre><code>git commit -am &#39;finishes find function&#39;
+</code></pre>
+<p>Now imagine that you&#39;ve made a horrible mistake. You&#39;ve been working for a while and you&#39;ve deleted your <code>get_age()</code> method, and then performed a commit. With Git, it&#39;s easy to go back in time and restore an earlier version of any of your files. Let&#39;s first look at the commit history of the file.</p>
+<pre><code>git log person.py
+</code></pre>
+<p>This produces something like this:</p>
+<pre><code>commit 12c4c693e95438ceadcf3f4fb39c83ce1ade712f
+Author: Grace Hopper &lt;g.hopper@harvard.edu&gt;
+Date:   Fri Mar 3 20:27:17 2017 +0000
+
+	deletes find function
+
+commit 5fd772a292c019a7cf3012b1156685280d4a7d2d
+Author: Grace Hopper &lt;g.hopper@harvard.edu&gt;
+Date:   Fri Mar 3 20:24:52 2017 +0000
+
+	finishes find function
+
+commit 127545c19794b5fe869dd22d0cf57bf8820c5794
+Author: Grace Hopper &lt;g.hopper@harvard.edu&gt;
+Date:   Fri Mar 3 20:20:18 2017 +0000
+
+	adds data csv and python program
+</code></pre>
+<p>You can see that in that last commit (the one at the top) was where the function was deleted. Luckily the commit message has made it easy to see what was done, which is why commit messages are important. However, typing <code>git log -p person.py</code> would have actually shown the changed contents of the file, if the commit message wasn&#39;t clear enough.</p>
+<p>You can now get back the version of the file from the commit before. The long string of characters after the word ‘commit&#39; is called a hash, and is used by Git to keep track of files. In this case, the commit that needs to be restored is <code>5fd772a292c019a7cf3012b1156685280d4a7d2d</code>. So typing the following will get the file back to the way it was:</p>
+<pre><code>git checkout 5fd772a292c019a7cf3012b1156685280d4a7d2d person.py
+</code></pre>
+<p>The file will be restored and you can now commit this change.</p>
+<pre><code>git commit -am &#39;restores find function&#39;
+</code></pre>
+<h2 is-upgraded>Making major changes</h2>
+<p>Imagine you&#39;re talking to your friend about your amazing project, and they have a really cool idea for some changes you could make to improve it. The changes are quite large, though, and you&#39;re worried that if you make them, you might break the project. You could make a copy of the directory and start working on this copy, but to keep using Git you&#39;d have to make an entirely new repo. This could all get quite confusing. Luckily, Git has a feature called <strong>branches</strong>; using a branch allows you to make copies without losing or altering your original work.</p>
+<p>First, you can have a look at your repo&#39;s current status.</p>
+<pre><code>git status
+</code></pre>
+<p>This should show something like this:</p>
+<pre><code>On branch master
+nothing to commit, working directory clean
+</code></pre>
+<p>Now you can make a new branch in the repo, which lets you work on your amazing new adaption.</p>
+<pre><code>git checkout -b new-version
+</code></pre>
+<p>Now <code>git status</code> will show you something like this:</p>
+<pre><code>On branch new-version
+nothing to commit, working directory clean
+</code></pre>
+<p>This tells you that you are on the <code>new-version</code> branch. To view all the branches in your repo, you can type <code>git branch</code> which will show something like this:</p>
+<pre><code>* new-version
+	master
+</code></pre>
+<p>You can now work on the new-version branch without altering your master branch. If you try out the new approach and find it doesn&#39;t work, you can simply delete the branch using <code>git branch -D new-version</code>. However, if it all works well, you can merge the branch back into your master branch.</p>
+<p>First, you&#39;ll need to make sure all your changes are committed and then switch back to the master branch.</p>
+<pre><code>git checkout master
+</code></pre>
+<p>Then you can merge the version into the master branch</p>
+<pre><code>git merge new-version
+</code></pre>
+<p><strong>Warning</strong>: you can cause problems with a merge if you&#39;re working on two branches at the same time, as Git won&#39;t know which changes are the ones you want to keep. For this reason, it&#39;s best to just work on one branch at a time.</p>
+<h2 is-upgraded>Working in the cloud</h2>
+<p>Now that you know how to do the basics in Git, it&#39;s time to learn how to use it to its full potential: use it to share your work and collaborate with others.</p>
+<p>There are lots of services that will host your Git repo for you, free of charge. <a href="https://about.gitlab.com/" target="_blank">GitLab</a> is one such service and <a href="https://bitbucket.org/" target="_blank">BitBucket</a> is another. In this resource, you are going to be using <a href="https://github.com/" target="_blank">GitHub</a>, which is one of the more popular services.</p>
+<p>The first thing to do is to register for an account on <a href="https://github.com/join?source=header-home" target="_blank">GitHub</a>, and just choose the free plan.</p>
+<p>Now that you have an account, you can create a <code>my-project</code> repo on GitHub. Find the <strong>New repository</strong> button and click it.</p>
+<p>Give the repo a name and a description and click on the <strong>Create repository</strong> button</p>
+<p>This should then bring up a page of instructions.</p>
+<p>As you already have a repo ready to push to GitHub, then all you need to do is make sure you are in your project directory and type:</p>
+<pre><code>git remote add origin git@github.com:GraceHopper/my-project.git
+</code></pre>
+<p>and then</p>
+<pre><code>git push -u origin master
+</code></pre>
+<p>If you look on GitHub, you should now be able to see your repo, along with the displayed <code>README.md</code> file that you wrote.</p>
+<p>Any time you make changes to your project, and you want to push them up to GitHub, you can just type:</p>
+<pre><code>git push origin master
+</code></pre>
+<p>If you are working on a different branch you would type:</p>
+<pre><code>git push origin &lt;branch-name&gt;
+</code></pre>
+<h2 is-upgraded>Collaborative working</h2>
+<p>The true power of services like GitHub becomes apparent when you start working with other people. GitHub lets other people make their own copies of your projects, or you to make copies of theirs. Either of you can then make improvements to the project and then push the improvements up to GitHub for everyone to share.</p>
+<p>This resource is itself a GitHub repo. You can find it at <a href="https://github.com/Scott3142/python-programming" target="_blank">https://github.com/Scott3142/python-programming</a>. That means that if you found a mistake in the resource, or if you just wanted to make some improvements, you can. There are two main ways to get involved with other people&#39;s projects: <strong>issues</strong> and <strong>pull requests</strong>.</p>
+<h2 is-upgraded>GitHub issues</h2>
+<p>You might spot a mistake in some of the code throughout this course, and that&#39;s where you can help out. Take this bit of code for example:</p>
+<pre><code>prnt(&#34;Hello World!&#34;)
+</code></pre>
+<p>Let&#39;s see how you could help fix this error:</p>
+<ul>
+<li>Head on over to <a href="https://github.com/Scott3142/python-programming" target="_blank">https://github.com/Scott3142/python-programming</a>, and make sure you are logged in.</li>
+<li>Now, you want to find the <strong>Issues</strong> tab.</li>
+<li>You can now create a new issue, and give a description. the best descriptions are really descriptive, and make life as easy as possible for the maintainer.</li>
+<li>Once that&#39;s completed, the maintainers of the repo (me) will be able to reply to you, and close the issue once it&#39;s fixed.</li>
+</ul>
+<h2 is-upgraded>Pull requests</h2>
+<p>Issues are great, but if you want to help out even more, then project maintainers are usually very happy for you to fix or improve projects yourself. To do this, you need to make your own copy of the repo so that you can work on it.</p>
+<p>On the projects main page, find the <strong>Fork</strong> button, and click it.</p>
+<p>You will now have a copy of the repo. You should see a <strong>Clone or download</strong> button. Clicking this will reveal the uniform resource identifier (URI) of the repo. Now, using the terminal, you can clone the repo to your computer with <code>git clone</code>:</p>
+<pre><code>git clone https://github.com/HelpfulUser/getting-started-with-git.git
+</code></pre>
+<p>All the files and directories will now be on your computer. Go ahead and make the changes you want, then commit them and push them back up to GitHub, just like you would normally do. Here your commit message is particularly important, as it will explain the changes you have made to the resource&#39;s original owner.</p>
+<ul>
+<li>You can now head back over to GitHub. Find the button that says <strong>New pull request</strong>.</li>
+<li>Click the button and then click on the <strong>Create pull request</strong> button.</li>
+<li>Your commit message will be there, but you can change it and even add a more detailed description if you like.</li>
+<li>Once you&#39;re happy, click the <strong>Create pull request</strong> button. The maintainer of the repo will then be able to see your pull request. They can then choose to merge it into their repo, or close it.</li>
+</ul>
 
 
       </google-codelab-step>

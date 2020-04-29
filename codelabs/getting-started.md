@@ -36,6 +36,25 @@ The `ls` command lists the contents of the directory that you are currently in (
 
 In order to navigate to other directories the change directory command, `cd`, can be used. You can specify the directory that you want to go to by either the 'absolute' or the 'relative' path. So if you wanted to navigate to the `Downloads` directory, you could either do `cd /home/username/Downloads` or just `cd Downloads` (if you are currently in `/home/username`). There are some special cases that may be useful: `~` acts as an alias for your home directory, so `~/Downloads` is the same as `/home/username/Downloads`; `.` and `..` are aliases for the current directory and the parent directory respectively, e.g. if you were in `/home/username/Downloads`, cd .. would take you to `/home/username`.
 
+### Running Python commands in the terminal
+
+If you have a directory structure containing some `.py` files,
+
+```plaintext
+.
++-- __init__.py
++-- main.py
++-- my_python_file.py
+```
+
+you can compile and run the `main.py` file using the following command:
+
+```bash
+python3 main.py
+```
+
+If you get an error saying that `python3` is not recognised as a command, [make sure it's installed](https://www.python.org/downloads/).
+
 ### History and auto-complete
 
 Rather than type every command, the terminal allows you to scroll through previous commands that you've run by pressing the `up` or `down` keys on your keyboard. If you are writing the name of a file or directory as part of a command then pressing `tab` will attempt to auto-complete the name of what you are typing. For example, if you have a file in a directory called `aLongFileName` then pressing tab after typing `a` will allow you to choose from all file and directory names beginning with `a` in the current directory, allowing you to choose `aLongFileName`.
@@ -215,6 +234,7 @@ The `hostname` command displays the current hostname of the system. A privileged
 ### ifconfig
 
 Use `ifconfig` to display the network configuration details for the interfaces on the current system when run without any arguments (i.e. `ifconfig`). By supplying the command with the name of an interface (e.g. `eth0` or `lo`) you can then alter the configuration: check the manual page for more details.
+
 ### Finding out about a command
 
 To find out more information about a particular command then you can run the `man` followed by the command you want to know more about (e.g. `man ls`). The man-page (or manual page) for that command will be displayed, including information about the flags for that program and what effect they have. Some man-pages will give example usage.
@@ -227,7 +247,397 @@ This course focuses mainly on a Linux environment, which can be utilised in Wind
 - [Windows Powershell](https://programminghistorian.org/en/lessons/intro-to-powershell)
 
 ## Python virtual environments
+Duration: 00:30:00
+
+The following is adapted from [the Python documentation](https://docs.python.org/3/tutorial/venv.html).
+
+Python applications will often use packages and modules that don’t come as part of the standard library. Applications will sometimes need a specific version of a library, because the application may require that a particular bug has been fixed or the application may be written using an obsolete version of the library’s interface.
+
+This means it may not be possible for one Python installation to meet the requirements of every application. If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.
+
+The solution for this problem is to create a virtual environment, a self-contained directory tree that contains a Python installation for a particular version of Python, plus a number of additional packages.
+
+Different applications can then use different virtual environments. To resolve the earlier example of conflicting requirements, application A can have its own virtual environment with version 1.0 installed while application B has another virtual environment with version 2.0. If application B requires a library be upgraded to version 3.0, this will not affect application A’s environment.
+
+The module used to create and manage virtual environments is called venv. venv will usually install the most recent version of Python that you have available. If you have multiple versions of Python on your system, you can select a specific Python version by running python3 or whichever version you want.
+
+To create a virtual environment, decide upon a directory where you want to place it, and run the venv module as a script with the directory path:
+
+```bash
+python3 -m venv my-environment
+```
+
+Once you’ve created a virtual environment, you may activate it.
+
+On Windows, run:
+
+```code
+tutorial-env\Scripts\activate.bat
+```
+
+On Unix or MacOS, run:
+```bash
+source tutorial-env/bin/activate
+```
+
+(This script is written for the bash shell. If you use the csh or fish shells, there are alternate activate.csh and activate.fish scripts you should use instead.)
+
+Activating the virtual environment will change your shell’s prompt to show what virtual environment you’re using, and modify the environment so that running python will get you that particular version and installation of Python.
+
+It is important to enter a virtual environment whenever you are testing Python code. It makes sure the packages are correctly defined and eliminates a lot of errors.
 
 ## Version control with git
+Duration: 00:30:00
 
-Hello
+### What is Git?
+
+The following is adapted from [these Raspberry Pi foundation resources](https://projects.raspberrypi.org/en/projects/getting-started-with-git).
+
+![logo](img/git-logo.png)
+
+Git is a version control system (VCS) for tracking changes to files and coordinating changes between multiple people who are all working on the same code base.
+
+One way to think about Git is to imagine a magical school bag. You can pull books out of your bag and do some work whenever you like. Once you've finished your homework, you can put the books back into your school bag, and the bag remembers what changes you made to all the books inside it.
+
+What's really clever is that this school bag can be synchronised with another magical school bag that lives in the clouds. Whenever you like, you can tell the bag to copy the contents of all the books to the sky-bag. If you lose your own school bag, you don't have to worry, as you can just get a new one and grab all the books and writing from the sky-bag.
+
+That's not all though. All your friends at school also have magical school bags. They also keep their bags synchronised with the sky-bag. This means that you and your friends can all work on the homework together. If a friend has a better answer to a science question than you do, you can copy their answer from the sky-bag to your book.
+
+It gets even better than that: your teacher also has a magical school bag. When she wants to check the homework, she just copies all the books from the sky-bag to her bag. She can then check through the answers from the whole class in one go. If she spots a mistake, she can write a comment in the margin of the book, and then all the magical bags from the whole class will receive the comment. Only one person in the class needs to correct the mistake though, and then everyone in the class immediately has the correct answer.
+
+### Installing Git
+
+If you're on Linux, and you don't have Git installed, then you can just use your package manager to grab the software. Something like this should work:
+
+```bash
+sudo apt install git
+```
+
+If you're on other operating systems, you can check out the guides below:
+
+- [Installing git on Mac OS](https://www.atlassian.com/git/tutorials/install-git#mac-os-x)
+- [Installing git on Windows](https://www.atlassian.com/git/tutorials/install-git#windows)
+
+### Setting up Git
+
+You're going to be working in a terminal window for the duration of this resource, so open it up by clicking on the icon on the desktop, or by pressing `Ctrl + Alt + T` on your keyboard.
+
+The first thing to do is to tell Git who you are. This is important, as Git can be used collaboratively by lots of people, so it needs to know who made changes to which files. You can use your own username and email address, unless you are in fact [Grace Hopper](https://en.wikipedia.org/wiki/Grace_Hopper).
+
+```bash
+git config --global user.name "Grace Hopper"
+git config --global user.email "g.hopper@harvard.edu"
+```
+
+Next you need to tell Git which text editor you want to use. If you don't have any particularly strong feelings about text editors, then you can just type:
+
+```bash
+git config --global core.editor nano
+```
+
+### Creating your first repo
+
+If you want to start a new project which uses git, you'll want a directory on your computer for all your files to sit in, so the first thing to do is create that directory.
+
+In the terminal, you can use the `mkdir` (make directory) command to create a new directory.
+
+```bash
+mkdir my_project
+```
+
+Now you want to go into that directory. You can use the `cd` (change directory) command to do this.
+
+```bash
+cd my_project
+```
+
+Next, you can create a file that will tell people what the project is about. You can use any text editor to do this, such as Notepad or nano. Create a file called `README.md`. The `.md` extension stands for **Markdown**, which is a markup language. You can learn more about Markdown [here](https://daringfireball.net/projects/markdown/).
+
+You can now give the file a title and write a short explanation of what your project is about.
+
+```markdown
+# This is my description
+I am making a really cool Python project
+```
+
+If you've used nano, pressing `Ctrl + X` will cause a save prompt to appear. You can type `Y` to save and then hit `Enter` to close.
+
+Your file should have been created and will now be sitting in your directory. You can type `ls` in the terminal or `dir` if you are using Windows, to see a list of files.
+
+```bash
+ls
+```
+
+At the moment, the directory is just like any other directory on your system. You now need to make the magical school bag part. This is known as a **Git repository**, and it takes the form of a hidden directory that keeps track of all the changes to the working directory. Type the following to create the repository, which from now on will just be called a **repo**:
+
+```bash
+git init
+```
+
+If you type `ls` again, nothing will appear to have changed. You can use `ls -a` to see all the hidden files and directories, though. If you are using Windows then type `dir /A` instead.
+
+```
+ls -a
+```
+
+You should now see something like this in your terminal window:
+
+```bash
+.  ..  .git  README.md
+```
+
+That `.git` directory is the **repo skeleton**. You can have a look inside it by typing the following. (Remember if you are using Windows it would be `dir /A .git`.)
+
+```bash
+ls -a .git
+```
+
+This should bring up something like:
+
+```bash
+branches  config  description  HEAD  hooks  info  objects  refs
+```
+
+You don't really need to worry about this directory at all now. Just know that it is there and that it is tracking all the changes to the parent directory `my_project`.
+
+### Adding files
+
+So you now have the repo initialised, but you haven't yet added anything to it. You need to tell Git that you want to add the `README.md` file to the repo. To do this you can simply type:
+
+```bash
+git add README.md
+```
+
+Sometime it's easier to just add everything to the repo though, rather than adding individual files. To do this you can type:
+
+```bash
+git add --all
+```
+
+Now Git knows it needs to keep track of all the changes that happen to the `README.md` file. You can have a look at the status of your repo at any time by typing the following:
+
+```bash
+git status
+```
+
+You should see something like this
+
+```bash
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   README.md
+```
+
+The above response is telling you that the `README.md` file has not yet been **committed**. This means that although Git knows about the file, it doesn't yet have any of the file's contents stored. The simplest way to do a commit is by typing:
+
+```bash
+git commit -m "adds README.md"
+```
+
+This commits all changes you have made in the directory to the Git repo, and adds a message saying what you did. The message can be anything really, but it's best to keep it fairly short yet descriptive of what you changed.
+
+### Adding more files and travelling in time
+
+Now that you have set up your repo, it's time to get on with the project. Here, two new files have been created: `person.py` and `data.csv`. Typing `ls` reveals those files.
+
+```bash
+README.md  data.csv  person.py
+```
+
+The new files need to be added to the Git repo and then committed.
+
+```bash
+git add --all
+git commit -am 'adds data csv and python program'
+```
+
+Then you carry on working on your code for a bit. Every time you make a significant change to the file, you can perform a new commit.
+
+```bash
+git commit -am 'finishes find function'
+```
+
+Now imagine that you've made a horrible mistake. You've been working for a while and you've deleted your `get_age()` method, and then performed a commit. With Git, it's easy to go back in time and restore an earlier version of any of your files. Let's first look at the commit history of the file.
+
+```bash
+git log person.py
+```
+
+This produces something like this:
+
+```bash
+commit 12c4c693e95438ceadcf3f4fb39c83ce1ade712f
+Author: Grace Hopper <g.hopper@harvard.edu>
+Date:   Fri Mar 3 20:27:17 2017 +0000
+
+	deletes find function
+
+commit 5fd772a292c019a7cf3012b1156685280d4a7d2d
+Author: Grace Hopper <g.hopper@harvard.edu>
+Date:   Fri Mar 3 20:24:52 2017 +0000
+
+	finishes find function
+
+commit 127545c19794b5fe869dd22d0cf57bf8820c5794
+Author: Grace Hopper <g.hopper@harvard.edu>
+Date:   Fri Mar 3 20:20:18 2017 +0000
+
+	adds data csv and python program
+```
+
+You can see that in that last commit (the one at the top) was where the function was deleted. Luckily the commit message has made it easy to see what was done, which is why commit messages are important. However, typing `git log -p person.py` would have actually shown the changed contents of the file, if the commit message wasn't clear enough.
+
+You can now get back the version of the file from the commit before. The long string of characters after the word 'commit' is called a hash, and is used by Git to keep track of files. In this case, the commit that needs to be restored is `5fd772a292c019a7cf3012b1156685280d4a7d2d`. So typing the following will get the file back to the way it was:
+
+```bash
+git checkout 5fd772a292c019a7cf3012b1156685280d4a7d2d person.py
+```
+
+The file will be restored and you can now commit this change.
+
+```bash
+git commit -am 'restores find function'
+```
+
+### Making major changes
+
+Imagine you're talking to your friend about your amazing project, and they have a really cool idea for some changes you could make to improve it. The changes are quite large, though, and you're worried that if you make them, you might break the project. You could make a copy of the directory and start working on this copy, but to keep using Git you'd have to make an entirely new repo. This could all get quite confusing. Luckily, Git has a feature called **branches**; using a branch allows you to make copies without losing or altering your original work.
+
+First, you can have a look at your repo's current status.
+
+```bash
+git status
+```
+
+This should show something like this:
+
+```bash
+On branch master
+nothing to commit, working directory clean
+```
+
+Now you can make a new branch in the repo, which lets you work on your amazing new adaption.
+
+```bash
+git checkout -b new-version
+```
+
+Now `git status` will show you something like this:
+
+```bash
+On branch new-version
+nothing to commit, working directory clean
+```
+
+This tells you that you are on the `new-version` branch. To view all the branches in your repo, you can type `git branch` which will show something like this:
+
+```bash
+* new-version
+	master
+```
+
+You can now work on the new-version branch without altering your master branch. If you try out the new approach and find it doesn't work, you can simply delete the branch using `git branch -D new-version`. However, if it all works well, you can merge the branch back into your master branch.
+
+First, you'll need to make sure all your changes are committed and then switch back to the master branch.
+
+```bash
+git checkout master
+```
+Then you can merge the version into the master branch
+
+```bash
+git merge new-version
+```
+
+**Warning**: you can cause problems with a merge if you're working on two branches at the same time, as Git won't know which changes are the ones you want to keep. For this reason, it's best to just work on one branch at a time.
+
+### Working in the cloud
+
+Now that you know how to do the basics in Git, it's time to learn how to use it to its full potential: use it to share your work and collaborate with others.
+
+There are lots of services that will host your Git repo for you, free of charge. [GitLab](https://about.gitlab.com/) is one such service and [BitBucket](https://bitbucket.org/) is another. In this resource, you are going to be using [GitHub](https://github.com/), which is one of the more popular services.
+
+The first thing to do is to register for an account on [GitHub](https://github.com/join?source=header-home), and just choose the free plan.
+
+Now that you have an account, you can create a `my-project` repo on GitHub. Find the **New repository** button and click it.
+
+Give the repo a name and a description and click on the **Create repository** button
+
+This should then bring up a page of instructions.
+
+As you already have a repo ready to push to GitHub, then all you need to do is make sure you are in your project directory and type:
+
+```bash
+git remote add origin git@github.com:GraceHopper/my-project.git
+```
+
+and then
+
+```bash
+git push -u origin master
+```
+
+If you look on GitHub, you should now be able to see your repo, along with the displayed `README.md` file that you wrote.
+
+Any time you make changes to your project, and you want to push them up to GitHub, you can just type:
+
+```bash
+git push origin master
+```
+
+If you are working on a different branch you would type:
+
+```bash
+git push origin <branch-name>
+```
+
+### Collaborative working
+
+The true power of services like GitHub becomes apparent when you start working with other people. GitHub lets other people make their own copies of your projects, or you to make copies of theirs. Either of you can then make improvements to the project and then push the improvements up to GitHub for everyone to share.
+
+This resource is itself a GitHub repo. You can find it at [https://github.com/Scott3142/python-programming](https://github.com/Scott3142/python-programming). That means that if you found a mistake in the resource, or if you just wanted to make some improvements, you can. There are two main ways to get involved with other people's projects: **issues** and **pull requests**.
+
+### GitHub issues
+
+You might spot a mistake in some of the code throughout this course, and that's where you can help out. Take this bit of code for example:
+
+```python
+prnt("Hello World!")
+```
+
+Let's see how you could help fix this error:
+
+- Head on over to [https://github.com/Scott3142/python-programming](https://github.com/Scott3142/python-programming), and make sure you are logged in.
+
+- Now, you want to find the **Issues** tab.
+
+- You can now create a new issue, and give a description. the best descriptions are really descriptive, and make life as easy as possible for the maintainer.
+
+- Once that's completed, the maintainers of the repo (me) will be able to reply to you, and close the issue once it's fixed.
+
+### Pull requests
+
+Issues are great, but if you want to help out even more, then project maintainers are usually very happy for you to fix or improve projects yourself. To do this, you need to make your own copy of the repo so that you can work on it.
+
+On the projects main page, find the **Fork** button, and click it.
+
+You will now have a copy of the repo. You should see a **Clone or download** button. Clicking this will reveal the uniform resource identifier (URI) of the repo. Now, using the terminal, you can clone the repo to your computer with `git clone`:
+
+```bash
+git clone https://github.com/HelpfulUser/getting-started-with-git.git
+```
+
+All the files and directories will now be on your computer. Go ahead and make the changes you want, then commit them and push them back up to GitHub, just like you would normally do. Here your commit message is particularly important, as it will explain the changes you have made to the resource's original owner.
+
+- You can now head back over to GitHub. Find the button that says **New pull request**.
+
+- Click the button and then click on the **Create pull request** button.
+
+- Your commit message will be there, but you can change it and even add a more detailed description if you like.
+
+- Once you're happy, click the **Create pull request** button. The maintainer of the repo will then be able to see your pull request. They can then choose to merge it into their repo, or close it.
