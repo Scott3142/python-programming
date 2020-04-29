@@ -48,12 +48,26 @@ while getopts ":o:" opt; do
 	    echo "Be aware - this is okay, but it loads the codelabs from scott3142.uk" >&2
 	    find . -type f -name 'index.html' -exec sed -i 's/https:\/\/storage\.googleapis\.com\/codelab-elements\/codelab-elements\.js/\.\.\/\.\.\/elements\/codelab-elements\/codelab-elements\.js/g' {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-video<\/p>/$replaceVideo/g" {} \;
+        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-1<\/p>/$replaceSummaryOne/g" {} \;
+        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-2<\/p>/$replaceSummaryTwo/g" {} \;
+        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-3<\/p>/$replaceSummaryThree/g" {} \;
+        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-4<\/p>/$replaceSummaryFour/g" {} \;
+        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-5<\/p>/$replaceSummaryFive/g" {} \;
+        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-6<\/p>/$replaceSummarySix/g" {} \;
+        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-7<\/p>/$replaceSummarySeven/g" {} \;
         cd ../
         gulp serve
       elif [ "$OPTARG" = "deploy" ]; then
         echo "Deploying landing page and codelabs." >&2
         find . -type f -name 'index.html' -exec sed -i 's/https:\/\/storage\.googleapis\.com\/codelab-elements\/codelab-elements\.js/\.\.\/\.\.\/elements\/codelab-elements\/codelab-elements\.js/g' {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-video<\/p>/$replaceVideo/g" {} \;
+        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-1<\/p>/$replaceSummaryOne/g" {} \;
+        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-2<\/p>/$replaceSummaryTwo/g" {} \;
+        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-3<\/p>/$replaceSummaryThree/g" {} \;
+        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-4<\/p>/$replaceSummaryFour/g" {} \;
+        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-5<\/p>/$replaceSummaryFive/g" {} \;
+        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-6<\/p>/$replaceSummarySix/g" {} \;
+        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-7<\/p>/$replaceSummarySeven/g" {} \;
         cd ../
         gulp deploy:prod
       fi

@@ -66,7 +66,7 @@
 - [x] Update favicon
 - [x] Update description
 - [x] Add videos
-- [ ] Add forms
+- [x] Add forms
 
 ### Python Programming II
 
