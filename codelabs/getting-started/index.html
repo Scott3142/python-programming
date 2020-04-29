@@ -1,0 +1,163 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Getting Started</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid="UA-49751789-4"
+                  id="getting-started"
+                  title="Getting Started"
+                  environment="web"
+                  feedback-link="https://github.com/Scott3142/python-programming">
+    
+      <google-codelab-step label="The command line" duration="30">
+        <p>If you&#39;ve never used the command line before, it can be quite daunting but once you get used to it you&#39;ll wonder how you ever worked without it.</p>
+<p>The terminal (or ‘command-line&#39;) on a computer allows a user a great deal of control over their system. Users of Windows may already have come across Command Prompt or Powershell and Mac OS users may be familiar with Terminal. All of these tools allow a user to directly manipulate their system through the use of commands. These commands can be chained together and/or combined together into complex scripts that can potentially complete tasks more efficiently than much larger traditional software packages.</p>
+<p>The following is adapted from <a href="https://www.raspberrypi.org/documentation/" target="_blank">these Raspberry Pi foundation resources</a>.</p>
+<h2 is-upgraded>The terminal in Linux</h2>
+<p>If you are using the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">Windows Subsystem for Linux</a>, open it according to the instructions contained on that page, otherwise search for <code>Terminal</code> in your installed software and open it. You should be greeted with a command prompt that looks something like:</p>
+<pre><code>username@hostname ~ $
+</code></pre>
+<p>This shows your username and the hostname of the machine you are working on.</p>
+<p>Now, let&#39;s try running a command. Type <code>pwd</code> (present working directory) followed by the Enter key. This should display something like <code>/home/username</code>.</p>
+<p>One of the key aspects of using a terminal is being able to navigate your file system. Firstly, run the following command: <code>ls -la</code>. You should see a list of files and folders.</p>
+<p>The <code>ls</code> command lists the contents of the directory that you are currently in (your present working directory). The <code>-la</code> component of the command is what&#39;s known as a ‘flag&#39;. Flags modify the command that&#39;s being run. In this case the <code>l</code> displays the contents of the directory in a list, showing data such as their sizes and when they were last edited, and the a displays all files, including those beginning with a ., known as ‘dotfiles&#39;. Dotfiles usually act as configuration files for software and as they are written in text, they can be modified by simply editing them.</p>
+<p>In order to navigate to other directories the change directory command, <code>cd</code>, can be used. You can specify the directory that you want to go to by either the ‘absolute&#39; or the ‘relative&#39; path. So if you wanted to navigate to the <code>Downloads</code> directory, you could either do <code>cd /home/username/Downloads</code> or just <code>cd Downloads</code> (if you are currently in <code>/home/username</code>). There are some special cases that may be useful: <code>~</code> acts as an alias for your home directory, so <code>~/Downloads</code> is the same as <code>/home/username/Downloads</code>; <code>.</code> and <code>..</code> are aliases for the current directory and the parent directory respectively, e.g. if you were in <code>/home/username/Downloads</code>, cd .. would take you to <code>/home/username</code>.</p>
+<h2 is-upgraded>History and auto-complete</h2>
+<p>Rather than type every command, the terminal allows you to scroll through previous commands that you&#39;ve run by pressing the <code>up</code> or <code>down</code> keys on your keyboard. If you are writing the name of a file or directory as part of a command then pressing <code>tab</code> will attempt to auto-complete the name of what you are typing. For example, if you have a file in a directory called <code>aLongFileName</code> then pressing tab after typing <code>a</code> will allow you to choose from all file and directory names beginning with <code>a</code> in the current directory, allowing you to choose <code>aLongFileName</code>.</p>
+<h2 is-upgraded>Sudo</h2>
+<p>The Linux operating system is a multi-user operating system which allows multiple users to log in and use the computer. To protect the computer (and the privacy of other users), the users&#39; abilities are restricted.</p>
+<p>Most users are allowed to run most programs, and to save and edit files stored in their own home folder. Normal users are not normally allowed to edit files in other users&#39; folders or any of the system files. There&#39;s a special user in Linux known as the <strong>superuser</strong>, which is usually given the username <code>root</code>. The superuser has unrestricted access to the computer and can do almost anything.</p>
+<h2 is-upgraded>sudo</h2>
+<p>You won&#39;t normally log into the computer as <code>root</code>, but you can use the <code>sudo</code> command to provide access as the superuser. If you log into your computer as <code>username</code>, then you&#39;re logging in as a normal user. You can run commands as the <code>root</code> user by using the <code>sudo</code> command before the program you want to run.</p>
+<p>For example, if you want to install additional software on Raspbian then you normally use the <code>apt</code> tool. To update the list of available software, you need to prefix the <code>apt</code> command with sudo:</p>
+<p><code>sudo apt update</code></p>
+<p>You can also run a superuser shell by using <code>sudo su</code>. When running commands as a superuser there&#39;s nothing to protect against mistakes that could damage the system. It&#39;s recommended that you only run commands as the superuser when required, and to exit a superuser shell when it&#39;s no longer needed.</p>
+<h2 is-upgraded>Who can use sudo?</h2>
+<p>It would defeat the point of the security if anyone could just put <code>sudo</code> in front of their commands, so only approved users can use <code>sudo</code> to gain administrator privileges. The <code>username</code> user is included in the <code>sudoers</code> file of approved users. To allow other users to act as a superuser you can add the user to the <code>sudo</code> group with <code>usermod</code>, edit the <code>/etc/sudoers</code> file, or add them using <code>visudo</code>.</p>
+<h2 is-upgraded>Installing software using apt</h2>
+<p>You can use the <code>apt</code> command to install software in Raspbian. This is the ‘package manager&#39; that is included with any Debian-based Linux distributions (including Raspbian). It allows you to install and manage new software packages on your Pi. In order to install a new package, you would type <code>sudo apt install &lt;package-name&gt;</code> (where <code>&lt;package-name&gt;</code> is the package that you want to install). Running <code>sudo apt update</code> will update a list of software packages that are available on your system. If a new version of a package is available, then <code>sudo apt full-upgrade</code> will update any old packages to the new version. Finally, <code>sudo apt remove &lt;package-name&gt;</code> removes or uninstalls a package from your system.</p>
+<h2 is-upgraded>Other useful commands</h2>
+<p>There are a few other commands that you may find useful, these are listed below:</p>
+<h2 is-upgraded>ls</h2>
+<p>The <code>ls</code> command lists the content of the current directory (or one that is specified). It can be used with the <code>-l</code> flag to display additional information (permissions, owner, group, size, date and timestamp of last edit) about each file and directory in a list format. The <code>-a</code> flag allows you to view files beginning with <code>.</code> (i.e. dotfiles).</p>
+<h2 is-upgraded>cd</h2>
+<p>Using <code>cd</code> changes the current directory to the one specified. You can use relative (i.e. <code>cd directoryA</code>) or absolute (i.e. <code>cd /home/username/directoryA</code>) paths.</p>
+<h2 is-upgraded>pwd</h2>
+<p>The <code>pwd</code> command displays the name of the present working directory: on a Raspberry Pi, entering <code>pwd</code> will output something like <code>/home/username</code>.</p>
+<h2 is-upgraded>mkdir</h2>
+<p>You can use <code>mkdir</code> to create a new directory, e.g. <code>mkdir newDir</code> would create the directory <code>newDir</code> in the present working directory.</p>
+<h2 is-upgraded>rmdir</h2>
+<p>To remove empty directories, use <code>rmdir</code>. So, for example, <code>rmdir oldDir</code> will remove the directory <code>oldDir</code> only if it is empty.</p>
+<h2 is-upgraded>rm</h2>
+<p>The command <code>rm</code>removes the specified file (or recursively from a directory when used with <code>-r</code>). Be careful with this command: files deleted in this way are mostly gone for good!</p>
+<h2 is-upgraded>cp</h2>
+<p>Using <code>cp</code> makes a copy of a file and places it at the specified location (this is similar to copying and pasting). For example, <code>cp ~/fileA /home/otherUser/</code> would copy the file <code>fileA</code> from your home directory to that of the user <code>otherUser</code> (assuming you have permission to copy it there). This command can either take <code>FILE FILE</code> (<code>cp fileA fileB</code>), <code>FILE DIR</code> (<code>cp fileA /directoryB/</code>) or <code>-r DIR DIR</code> (which recursively copies the contents of directories) as arguments.</p>
+<h2 is-upgraded>mv</h2>
+<p>The <code>mv</code> command moves a file and places it at the specified location (so where <code>cp</code> performs a ‘copy-paste&#39;, <code>mv</code> performs a ‘cut-paste&#39;). The usage is similar to <code>cp</code>. So <code>mv ~/fileA /home/otherUser/</code> would move the file <code>fileA</code> from your home directory to that of the user otherUser. This command can either take <code>FILE FILE</code> (<code>mv fileA fileB</code>), <code>FILE DIR</code> (<code>mv fileA /directoryB/</code>) or <code>DIR DIR</code> (<code>mv /directoryB /directoryC</code>) as arguments. This command is also useful as a method to rename files and directories after they&#39;ve been created.</p>
+<h2 is-upgraded>touch</h2>
+<p>The command <code>touch</code> sets the last modified time-stamp of the specified file(s) or creates it if it does not already exist.</p>
+<h2 is-upgraded>cat</h2>
+<p>You can use <code>cat</code> to list the contents of file(s), e.g. <code>cat thisFile</code> will display the contents of <code>thisFile</code>. Can be used to list the contents of multiple files, i.e. <code>cat *.txt</code> will list the contents of all <code>.txt</code> files in the current directory.</p>
+<h2 is-upgraded>head</h2>
+<p>The <code>head</code> command displays the beginning of a file. Can be used with <code>-n</code> to specify the number of lines to show (by default ten), or with <code>-c</code> to specify the number of bytes.</p>
+<h2 is-upgraded>tail</h2>
+<p>The opposite of <code>head</code>, <code>tail</code> displays the end of a file. The starting point in the file can be specified either through <code>-b</code> for 512 byte blocks, <code>-c</code> for bytes, or <code>-n</code> for number of lines.</p>
+<h2 is-upgraded>chmod</h2>
+<p>You would normally use <code>chmod</code> to change the permissions for a file. The <code>chmod</code> command can use symbols <code>u</code> (user that owns the file), <code>g</code> (the files group) ,  and <code>o</code> (other users) and the permissions <code>r</code> (read), <code>w</code> (write), and <code>x</code> (execute). Using <code>chmod u+x *filename*</code> will add execute permission for the owner of the file.</p>
+<h2 is-upgraded>chown</h2>
+<p>The <code>chown</code> command changes the user and/or group that owns a file. It normally needs to be run as root using sudo e.g. <code>sudo chown username:root *filename*</code> will change the owner to username and the group to root.</p>
+<h2 is-upgraded>ssh</h2>
+<p><code>ssh</code> denotes the secure shell. Connect to another computer using an encrypted network connection. For more details see <a href="../../remote-access/ssh/" target="_blank">SSH (secure shell)</a></p>
+<h2 is-upgraded>scp</h2>
+<p>The <code>scp</code> command copies a file from one computer to another using <code>ssh</code>. For more details see <a href="../../remote-access/ssh/scp.md" target="_blank">SCP (secure copy)</a></p>
+<h2 is-upgraded>sudo</h2>
+<p>The <code>sudo</code> command enables you to run a command as a superuser, or another user. Use <code>sudo -s</code> for a superuser shell. For more details see <a href="root.md" target="_blank">Root user / sudo</a></p>
+<h2 is-upgraded>dd</h2>
+<p>The <code>dd</code> command copies a file converting the file as specified. It is often used to copy an entire disk to a single file or back again. So, for example, <code>dd if=/dev/sdd of=backup.img</code> will create a backup image from an SD card or USB disk drive at /dev/sdd. Make sure to use the correct drive when copying an image to the SD card as it can overwrite the entire disk.</p>
+<h2 is-upgraded>df</h2>
+<p>Use <code>df</code> to display the disk space available and used on the mounted filesystems. Use <code>df -h</code> to see the output in a human-readable format using M for MBs rather than showing number of bytes.</p>
+<h2 is-upgraded>unzip</h2>
+<p>The <code>unzip</code> command extracts the files from a compressed zip file.</p>
+<h2 is-upgraded>tar</h2>
+<p>Use <code>tar</code> to store or extract files from a tape archive file. It can also reduce the space required by compressing the file similar to a zip file.</p>
+<p>To create a compressed file, use <code>tar -cvzf *filename.tar.gz* *directory/*</code> To extract the contents of a file, use <code>tar -xvzf *filename.tar.gz*</code></p>
+<h2 is-upgraded>pipes</h2>
+<p>A pipe allows the output from one command to be used as the input for another command. The pipe symbol is a vertical line <code>|</code>. For example, to only show the first ten entries of the <code>ls</code> command it can be piped through the head command <code>ls | head</code></p>
+<h2 is-upgraded>tree</h2>
+<p>Use the <code>tree</code> command to show a directory and all subdirectories and files indented as a tree structure.</p>
+<h2 is-upgraded>&amp;</h2>
+<p>Run a command in the background with <code>&amp;</code>, freeing up the shell for future commands.</p>
+<h2 is-upgraded>wget</h2>
+<p>Download a file from the web directly to the computer with <code>wget</code>. So <code>wget https://www.raspberrypi.org/documentation/linux/usage/commands.md</code> will download this file to your computer as <code>commands.md</code></p>
+<h2 is-upgraded>curl</h2>
+<p>Use <code>curl</code> to download or upload a file to/from a server. By default, it will output the file contents of the file to the screen.</p>
+<h2 is-upgraded>man</h2>
+<p>Show the manual page for a file with <code>man</code>. To find out more, run <code>man man</code> to view the manual page of the man command.</p>
+<h2 is-upgraded>grep</h2>
+<p>Use <code>grep</code> to search inside files for certain search patterns. For example, <code>grep &#34;search&#34; *.txt</code> will look in all the files in the current directory ending with .txt for the string search.</p>
+<p>The <code>grep</code> command supports regular expressions which allows special letter combinations to be included in the search.</p>
+<h2 is-upgraded>awk</h2>
+<p><code>awk</code> is a programming language useful for searching and manipulating text files.</p>
+<h2 is-upgraded>find</h2>
+<p>The <code>find</code> command searches a directory and subdirectories for files matching certain patterns.</p>
+<h2 is-upgraded>whereis</h2>
+<p>Use <code>whereis</code> to find the location of a command. It looks through standard program locations until it finds the requested command.</p>
+<h2 is-upgraded>ping</h2>
+<p>The <code>ping</code> utility is usually used to check if communication can be made with another host. It can be used with default settings by just specifying a hostname (e.g. <code>ping raspberrypi.org</code>) or an IP address (e.g. <code>ping 8.8.8.8</code>). It can specify the number of packets to send with the <code>-c</code> flag.</p>
+<h2 is-upgraded>nmap</h2>
+<p><code>nmap</code> is a network exploration and scanning tool. It can return port and OS information about a host or a range of hosts. Running just <code>nmap</code> will display the options available as well as example usage.</p>
+<h2 is-upgraded>hostname</h2>
+<p>The <code>hostname</code> command displays the current hostname of the system. A privileged (super) user can set the hostname to a new one by supplying it as an argument (e.g. <code>hostname new-host</code>).</p>
+<h2 is-upgraded>ifconfig</h2>
+<p>Use <code>ifconfig</code> to display the network configuration details for the interfaces on the current system when run without any arguments (i.e. <code>ifconfig</code>). By supplying the command with the name of an interface (e.g. <code>eth0</code> or <code>lo</code>) you can then alter the configuration: check the manual page for more details.</p>
+<h2 is-upgraded>Finding out about a command</h2>
+<p>To find out more information about a particular command then you can run the <code>man</code> followed by the command you want to know more about (e.g. <code>man ls</code>). The man-page (or manual page) for that command will be displayed, including information about the flags for that program and what effect they have. Some man-pages will give example usage.</p>
+<h2 is-upgraded>The terminal in other Operating Systems</h2>
+<p>This course focuses mainly on a Linux environment, which can be utilised in Windows through the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">Windows Subsystem for Linux</a>. If you are using alternative terminals or operating systems, you can check out the guides below:</p>
+<ul>
+<li><a href="https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line" target="_blank">Mac OS</a></li>
+<li><a href="https://programminghistorian.org/en/lessons/intro-to-powershell" target="_blank">Windows Powershell</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Python virtual environments" duration="0">
+        
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Version control with git" duration="0">
+        <p>Hello</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="../../elements/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

@@ -3,7 +3,7 @@ summary: Welcome to learning programming! Take the plunge and getting familiar w
 id: part-1
 categories: btec-unit4
 environments: Web
-status: Draft
+status: Published
 feedback link: https://github.com/Scott3142/python-programming
 analytics account: UA-49751789-4
 
@@ -20,7 +20,7 @@ Modern programming is practically always done in an IDE (integrated development 
 
 There are many IDEs that can be used with Python, including [PyCharm](https://www.jetbrains.com/pycharm), [Idle](https://docs.python.org/3/library/idle.html) and [VS Code](https://code.visualstudio.com/). At the risk of sparking some heated debate ("I love vim", "nano 4eva" etc.), the text editor we recommend and support on this course is called Atom. Atom describes itself as a "hackable text editor for the 21st Century" and is built and maintained by [Github](https://github.com/), which we will also use extensively throughout this course.
 
-Atom is not [technically](https://www.quora.com/Is-Atom-an-IDE-or-Text-Editor) an IDE, but comes with many useful plugins that can be used to mimic the functionality of an IDE. We will use the `script` and `atom-python-test` plugins predominantly on this course. 
+Atom is not [technically](https://www.quora.com/Is-Atom-an-IDE-or-Text-Editor) an IDE, but comes with many useful plugins that can be used to mimic the functionality of an IDE. We will use the `script` and `atom-python-test` plugins predominantly on this course.
 
 To start the course you will need:
 
@@ -486,7 +486,7 @@ Positive
 
 ### Changing a Value Assigned to a Variable
 
-A variable exists from the moment of its declaration, and its initial value is preserved until another value is assigned to it. You can change a variable's value using a statement that comprises the variable name, an equals sign, and the new value to be assigned. 
+A variable exists from the moment of its declaration, and its initial value is preserved until another value is assigned to it. You can change a variable's value using a statement that comprises the variable name, an equals sign, and the new value to be assigned.
 
 ```python
 number = 123
@@ -575,7 +575,7 @@ Both of the preceding examples function the same way and output the same result.
 Positive
 : **Variables Express the Program and the Problem to Be Solved** <br><br> Programming is a problem-solving tool. The aim is to create solutions for any given problem, such as the automation of control in cars. As a problem is approached, the developer decides on the terms used to describe the problem domain. The terminology that is chosen, such as variable names, will serve to describe the problem for anyone who is to work with it in the future. <br><br> As you're wording the problem that you're solving, think about the concepts related to that problem and appropriate terms that could be used to describe them. If you find it hard to come up with relevant names, think of the ones that definitely do not describe it. After this, settle on some terminology that you're going to use -- the good thing is that you can usually improve on it later on.
 
-Variable naming is limited by certain constraints. 
+Variable naming is limited by certain constraints.
 
 Variable names cannot contain certain special symbols, such as exclamation marks (!). Spaces are also not allowed, since they're used to separate parts of commands. Instead of spaces, the convention in many programming languages is to either use a style known as [camelCase](https://en.wikipedia.org/wiki/Camel_case "Camel case – Wikipedia") or [snake_case](https://en.wikipedia.org/wiki/Snake_case) to delimit words. Python variable names are always written in snake_case.
 

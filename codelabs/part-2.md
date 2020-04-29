@@ -3,7 +3,7 @@ summary: The second part of the material focusses on repetition in programs and 
 id: part-2
 categories: btec-unit4
 environments: Web
-status: Draft
+status: Published
 feedback link: https://github.com/Scott3142/python-programming
 analytics account: UA-49751789-4
 

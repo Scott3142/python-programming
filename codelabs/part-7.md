@@ -3,7 +3,7 @@ summary: In the seventh part of the course we'll focus on general programming pa
 id: part-7
 categories: btec-unit4
 environments: Web
-status: Draft
+status: Published
 feedback link: https://github.com/Scott3142/python-programming
 analytics account: UA-49751789-4
 

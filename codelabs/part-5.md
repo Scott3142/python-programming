@@ -3,7 +3,7 @@ summary: The fifth part of the course material continues with object-oriented pr
 id: part-5
 categories: btec-unit4
 environments: Web
-status: Draft
+status: Published
 feedback link: https://github.com/Scott3142/python-programming
 analytics account: UA-49751789-4
 
