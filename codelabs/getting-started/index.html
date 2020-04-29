@@ -116,8 +116,6 @@
 <p>Use the <code>tree</code> command to show a directory and all subdirectories and files indented as a tree structure.</p>
 <h2 is-upgraded>&amp;</h2>
 <p>Run a command in the background with <code>&amp;</code>, freeing up the shell for future commands.</p>
-<h2 is-upgraded>wget</h2>
-<p>Download a file from the web directly to the computer with <code>wget</code>. So <code>wget https://www.raspberrypi.org/documentation/linux/usage/commands.md</code> will download this file to your computer as <code>commands.md</code></p>
 <h2 is-upgraded>curl</h2>
 <p>Use <code>curl</code> to download or upload a file to/from a server. By default, it will output the file contents of the file to the screen.</p>
 <h2 is-upgraded>man</h2>
@@ -132,7 +130,7 @@
 <h2 is-upgraded>whereis</h2>
 <p>Use <code>whereis</code> to find the location of a command. It looks through standard program locations until it finds the requested command.</p>
 <h2 is-upgraded>ping</h2>
-<p>The <code>ping</code> utility is usually used to check if communication can be made with another host. It can be used with default settings by just specifying a hostname (e.g. <code>ping raspberrypi.org</code>) or an IP address (e.g. <code>ping 8.8.8.8</code>). It can specify the number of packets to send with the <code>-c</code> flag.</p>
+<p>The <code>ping</code> utility is usually used to check if communication can be made with another host. It can be used with default settings by just specifying a hostname (e.g. <code>ping google.com</code>) or an IP address (e.g. <code>ping 8.8.8.8</code>). It can specify the number of packets to send with the <code>-c</code> flag.</p>
 <h2 is-upgraded>nmap</h2>
 <p><code>nmap</code> is a network exploration and scanning tool. It can return port and OS information about a host or a range of hosts. Running just <code>nmap</code> will display the options available as well as example usage.</p>
 <h2 is-upgraded>hostname</h2>
@@ -151,7 +149,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Python virtual environments" duration="30">
+      <google-codelab-step label="Python virtual environments" duration="10">
         <p>The following is adapted from <a href="https://docs.python.org/3/tutorial/venv.html" target="_blank">the Python documentation</a>.</p>
 <p>Python applications will often use packages and modules that don&#39;t come as part of the standard library. Applications will sometimes need a specific version of a library, because the application may require that a particular bug has been fixed or the application may be written using an obsolete version of the library&#39;s interface.</p>
 <p>This means it may not be possible for one Python installation to meet the requirements of every application. If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.</p>
@@ -365,7 +363,7 @@ nothing to commit, working directory clean
 <p>Issues are great, but if you want to help out even more, then project maintainers are usually very happy for you to fix or improve projects yourself. To do this, you need to make your own copy of the repo so that you can work on it.</p>
 <p>On the projects main page, find the <strong>Fork</strong> button, and click it.</p>
 <p>You will now have a copy of the repo. You should see a <strong>Clone or download</strong> button. Clicking this will reveal the uniform resource identifier (URI) of the repo. Now, using the terminal, you can clone the repo to your computer with <code>git clone</code>:</p>
-<pre><code>git clone https://github.com/HelpfulUser/getting-started-with-git.git
+<pre><code>git clone https://github.com/HelpfulUser/python-programming.git
 </code></pre>
 <p>All the files and directories will now be on your computer. Go ahead and make the changes you want, then commit them and push them back up to GitHub, just like you would normally do. Here your commit message is particularly important, as it will explain the changes you have made to the resource&#39;s original owner.</p>
 <ul>

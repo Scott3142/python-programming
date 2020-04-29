@@ -189,10 +189,6 @@ Use the `tree` command to show a directory and all subdirectories and files inde
 
 Run a command in the background with `&`, freeing up the shell for future commands.
 
-### wget
-
-Download a file from the web directly to the computer with `wget`. So `wget https://www.raspberrypi.org/documentation/linux/usage/commands.md` will download this file to your computer as `commands.md`
-
 ### curl
 
 Use `curl` to download or upload a file to/from a server. By default, it will output the file contents of the file to the screen.
@@ -221,7 +217,7 @@ Use `whereis` to find the location of a command. It looks through standard progr
 
 ### ping
 
-The `ping` utility is usually used to check if communication can be made with another host. It can be used with default settings by just specifying a hostname (e.g. `ping raspberrypi.org`) or an IP address (e.g. `ping 8.8.8.8`). It can specify the number of packets to send with the `-c` flag.
+The `ping` utility is usually used to check if communication can be made with another host. It can be used with default settings by just specifying a hostname (e.g. `ping google.com`) or an IP address (e.g. `ping 8.8.8.8`). It can specify the number of packets to send with the `-c` flag.
 
 ### nmap
 
@@ -247,7 +243,7 @@ This course focuses mainly on a Linux environment, which can be utilised in Wind
 - [Windows Powershell](https://programminghistorian.org/en/lessons/intro-to-powershell)
 
 ## Python virtual environments
-Duration: 00:30:00
+Duration: 00:10:00
 
 The following is adapted from [the Python documentation](https://docs.python.org/3/tutorial/venv.html).
 
@@ -629,7 +625,7 @@ On the projects main page, find the **Fork** button, and click it.
 You will now have a copy of the repo. You should see a **Clone or download** button. Clicking this will reveal the uniform resource identifier (URI) of the repo. Now, using the terminal, you can clone the repo to your computer with `git clone`:
 
 ```bash
-git clone https://github.com/HelpfulUser/getting-started-with-git.git
+git clone https://github.com/HelpfulUser/python-programming.git
 ```
 
 All the files and directories will now be on your computer. Go ahead and make the changes you want, then commit them and push them back up to GitHub, just like you would normally do. Here your commit message is particularly important, as it will explain the changes you have made to the resource's original owner.
