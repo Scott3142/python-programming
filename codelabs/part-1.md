@@ -18,7 +18,9 @@ Duration: 01:00:00
 
 Modern programming is practically always done in an IDE (integrated development environment). An IDE contains a set of useful tools for the programmer. It does not create the program by itself, but it can give hints about common mistakes in the code, and help the programmer understand the structure of the program.
 
-The IDE we use on this course is called Atom, and we use it with the atom-python-test plugin. Atom describes itself as a "hackable text editor for the 21st Century" and is built and maintained by [Github](https://github.com/), which we will also use extensively throughout this course.
+There are many IDEs that can be used with Python, including [PyCharm](https://www.jetbrains.com/pycharm), [Idle](https://docs.python.org/3/library/idle.html) and [VS Code](https://code.visualstudio.com/). At the risk of sparking some heated debate ("I love vim", "nano 4eva" etc.), the text editor we recommend and support on this course is called Atom. Atom describes itself as a "hackable text editor for the 21st Century" and is built and maintained by [Github](https://github.com/), which we will also use extensively throughout this course.
+
+Atom is not [technically](https://www.quora.com/Is-Atom-an-IDE-or-Text-Editor) an IDE, but comes with many useful plugins that can be used to mimic the functionality of an IDE. We will use the `script` and `atom-python-test` plugins predominantly on this course. 
 
 To start the course you will need:
 
@@ -105,7 +107,7 @@ Negative
 
 ### Program Boilerplate
 
-In Python, our programs will include some boilerplate code to function. This boilerplate, an example of which is shown below, for example tells the computer what your function is called. Below, the name of the function is `example`.
+In Python, our programs will include some boilerplate code to function. This boilerplate, an example of which is shown below, for example tells the computer what your function is called. Below, the name of the function is `main`.
 
 ```python
 def main():
@@ -115,12 +117,10 @@ if __name__ == '__main__':
     main()
 ```
 
-Execution of the program starts from the line that says `main()`. This command *invokes* the function `example` and runs it. Commands are executed inside `example` one line at a time from the top. In the above example, `print("Text to be printed")` is the only command to be executed. Its output is:
+Execution of the program starts from the line that says `main()`. This command *invokes* the function `main` and runs it. Commands are executed inside `main` one line at a time from the top. In the above example, `print("Text to be printed")` is the only command to be executed. Its output is:
 
 Negative
 : Text to be printed
-
-<text-box variant="hint" name="Examples in the Material and Code Templates">
 
 The examples in the material will not always show the template, but you can assume that your program file has one. As such, the examples might be as short as a single line, such as the example below that illustrates the print command.
 
@@ -168,7 +168,7 @@ The program above will print:
 Negative
 : Hello world! <br> ... and the universe!
 
-The programming exercises will be checked by Atom's tester, which is meticulous. The guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.
+The programming exercises will be checked by Python's tester when uploaded to Github. The tester is very meticulous. The guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.
 
 This preciseness with regard to the output is relevant in programming in a more general sense. Missing a single character may cause an error. Novice programmers often enter a comma instead of a dot, or write, for instance `prnt` instead of `print`, leave out apostrophes, or forget a bracket after a command. Any one of these would cause an error and cause the program execution to fail.
 
@@ -236,7 +236,7 @@ Duration: 01:00:00
 * Know what a "string" refers to in programming.
 * Know how to join (i.e., "concatenate") strings together.
 
-Input refers to text written by the user read by the program. Input is always read as a string. For reading input, we use the `input` tool that comes with Python. The tool can be used with the command `inputString = input('This text is printed to screen.')`
+Input refers to text written by the user read by the program. Input is always read as a string. For reading input, we use the `input` tool that comes with Python. The tool can be used with the command `input_string = input('This text is printed to screen.')`
 
 Below is an example of a program which asks for user input, reads the string entered by the user, and then prints it.
 
@@ -486,7 +486,7 @@ Positive
 
 ### Changing a Value Assigned to a Variable
 
-A variable exists from the moment of its declaration, and its initial value is preserved until another value is assigned to it. You can change a variable's value using a statement that comprises the variable name, an equals sign, and the new value to be assigned. Remember to keep in mind that the variable type is only stated during the initial variable declaration.
+A variable exists from the moment of its declaration, and its initial value is preserved until another value is assigned to it. You can change a variable's value using a statement that comprises the variable name, an equals sign, and the new value to be assigned. 
 
 ```python
 number = 123
@@ -574,8 +574,8 @@ Both of the preceding examples function the same way and output the same result.
 
 Positive
 : **Variables Express the Program and the Problem to Be Solved** <br><br> Programming is a problem-solving tool. The aim is to create solutions for any given problem, such as the automation of control in cars. As a problem is approached, the developer decides on the terms used to describe the problem domain. The terminology that is chosen, such as variable names, will serve to describe the problem for anyone who is to work with it in the future. <br><br> As you're wording the problem that you're solving, think about the concepts related to that problem and appropriate terms that could be used to describe them. If you find it hard to come up with relevant names, think of the ones that definitely do not describe it. After this, settle on some terminology that you're going to use -- the good thing is that you can usually improve on it later on.
-s
-Variable naming is limited by certain constraints.
+
+Variable naming is limited by certain constraints. 
 
 Variable names cannot contain certain special symbols, such as exclamation marks (!). Spaces are also not allowed, since they're used to separate parts of commands. Instead of spaces, the convention in many programming languages is to either use a style known as [camelCase](https://en.wikipedia.org/wiki/Camel_case "Camel case – Wikipedia") or [snake_case](https://en.wikipedia.org/wiki/Snake_case) to delimit words. Python variable names are always written in snake_case.
 
@@ -610,7 +610,7 @@ Negative
 Other input types, such as integers, floats, and booleans must be converted to the target variable's type with the help of the `int`, `float` or `bool` methods provided by Python.
 
 ### The Type of the Variable Informs of Possible Values
-A variable's type can be specificed after reading user input data. For example, a variable containing the string "text" is declared when read with the `input` call, and an integer having the value 42 can be declared using `int(varableName)`.
+A variable's type can be specificed after reading user input data. For example, a variable containing the string "text" is declared when read with the `input` call, and an integer having the value 42 can be declared using `int(varable_name)`.
 
 A variable's type determines the types of values that can be assigned to it. String types hold text, int types whole numbers, float floating-point numbers, and boolean types are either true or false.
 
@@ -949,7 +949,7 @@ if (number >= 1000):
 ```
 
 Negative
-: The number was not equal to 0
+: The number is not equal to 0
 
 Positive
 : **Exercise - Orwell**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-21-orwell.git)
@@ -1065,7 +1065,7 @@ second = 3
 is_greater = first > second
 ```
 
-In the example above, the boolean variable `isGreater` now contains the boolean value _false_. We can extend the previous example by adding a conditional statement to it.
+In the example above, the boolean variable `is_greater` now contains the boolean value _false_. We can extend the previous example by adding a conditional statement to it.
 
 ```python
 first = 1
@@ -1138,7 +1138,8 @@ else:
 Negative
 : Enter the first string <br> *User: \<same\>* <br> Enter the second string <br> *User: \<same\>* <br> The strings were the same!
 
-Enter the first string <br> *User: \<same\>* <br> Enter the second string <br> *User: \<different\>* <br> The strings were different!
+Negative
+: Enter the first string <br> *User: \<same\>* <br> Enter the second string <br> *User: \<different\>* <br> The strings were different!
 
 Positive
 : **Exercise - Password**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-1-28-password.git)
