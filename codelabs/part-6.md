@@ -1123,3 +1123,5 @@ _When you write a software module, you want to make sure that when changes are r
 _[..in other words..] Gather together the things that change for the same reasons. Separate those things that change for different reasons._
 
 Proper program structure and following good naming principles leads to clean code. When you code a bit more, you'll learn that each program part can be given one clear area of responsibility.
+
+replace-with-summary-form-6

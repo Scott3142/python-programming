@@ -259,3 +259,5 @@ You know that the naming of variables and methods affects the understandability 
 You've also dived deeper into the world of object-oriented programming, and to the wording of your programs through it.
 
 In addition, you've become acquainted with one of the most important tools of a professional developer - the integrated development environment (IDE).
+
+replace-with-summary-form-7

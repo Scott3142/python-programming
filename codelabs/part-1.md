@@ -1310,3 +1310,5 @@ You've now taken your first steps in the world of programming. During the course
 After this course, simple instructions, such as "_Buy two cartons of milk. If the shop has oranges, buy four of them._", will be viewed in a different way. Although this message may be clear to a human, a computer might end up buying four cartons of milk.
 
 Great to have you on this journey!
+
+replace-with-summary-form-1
