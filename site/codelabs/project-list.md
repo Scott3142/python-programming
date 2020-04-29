@@ -3,7 +3,7 @@ summary: Try out some of these projects below!
 id: project-list
 categories: btec-unit4
 environments: Web
-status: Draft
+status: Published
 feedback link: https://github.com/Scott3142/python-programming
 analytics account: UA-49751789-4
 

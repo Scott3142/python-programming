@@ -3,7 +3,7 @@ summary: The main themes in the third part of the course are adding information 
 id: part-3
 categories: btec-unit4
 environments: Web
-status: Draft
+status: Published
 feedback link: https://github.com/Scott3142/python-programming
 analytics account: UA-49751789-4
 

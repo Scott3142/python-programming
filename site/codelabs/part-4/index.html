@@ -414,7 +414,6 @@ if __name__ == &#39;__main__&#39;:
 
     print(grace.get_name() + &#34;, body mass index is &#34; + str(grace.body_mass_index()))
     print(ada.get_name() + &#34;, body mass index is &#34; + str(ada.body_mass_index()))
-}
 </code></pre>
 <p>Prints:</p>
 <aside class="warning"><p>Grace, body mass index is 26.54320987654321 <br> Ada, body mass index is 20.897959183673468</p>
@@ -443,7 +442,6 @@ if __name__ == &#39;__main__&#39;:
 <p>The object may also call its methods. For example, if we wanted the string representation returned by <strong>str</strong> to also tell of a person&#39;s body mass index, the object&#39;s own <code>body_mass_index</code> method should be called in the <code>__str__</code> method:</p>
 <pre><code>def __str__():
     return self.name + &#34;, age &#34; + str(self.age) + &#34; years, my body mass index is &#34; + str(self.body_mass_index())
-}
 </code></pre>
 <p>So, when an object calls an internal method, the name of the method and this prefix suffice.</p>
 <aside class="special"><p><strong>Exercise - Statistics<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-4-15-statistics.git" target="_blank">Source files on Github</a></p>

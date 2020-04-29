@@ -3,7 +3,7 @@ summary: The sixth part of the course material handles objects consisting of obj
 id: part-6
 categories: btec-unit4
 environments: Web
-status: Draft
+status: Published
 feedback link: https://github.com/Scott3142/python-programming
 analytics account: UA-49751789-4
 
@@ -1073,14 +1073,14 @@ Each of these programs is in a different file in the same directory. The first h
 
 ### Unit Testing
 
-The automated testing mehtod laid out above where the input to a program is modified is quite convenient, but limited nonetheless. Testing larger programs in this way is challenging. One solution to this is unit testing, where small parts of the program are tested in isolation.
+The automated testing method laid out above where the input to a program is modified is quite convenient, but limited nonetheless. Testing larger programs in this way is challenging. One solution to this is unit testing, where small parts of the program are tested in isolation.
 
 Unit testing refers to the testing of individual components in the source code, such as classes and their provided methods. The writing of tests reveals whether each class and method observes or deviates from the guideline of each method and class having a single, clear responsibility. The more responsibility the method has, the more complex the test. If a large application is written in a single method, writing tests for it becomes very challenging, if not impossible. Similarly, if the application is broken into clear classes and methods, then writing tests is straightforward.
 
 Ready-made unit test libraries are commonly used in writing tests, which provide methods and help classes for writing tests. The most common unit testing library in Python is `unittest`. The code you have been submitting to Github throughout this course has been unit tested along the way. Go back and look through the folders you've been submitting. You should see test files in there which are used to verify your code is correct. Explore them!
 
 Positive
-: **Unit Testing and the Parts of an Application** <br><br> Unit testing tends to be extremely complicated if the whole application has been written in one function. To make testing easier, the app should split into small parts, each having a clear responsibility. In the previous section, we practiced this when we seperated the user interface from the application logic. Writing tests for parts of an application, such as the 'JokeManager' class from the previous section is significantly easier than writing them for program contained in "main" in its entirety.
+: **Unit Testing and the Parts of an Application** <br><br> Unit testing tends to be extremely complicated if the whole application has been written in one function. To make testing easier, the app should split into small parts, each having a clear responsibility. In the previous section, we practiced this when we separated the user interface from the application logic. Writing tests for parts of an application, such as the 'JokeManager' class from the previous section is significantly easier than writing them for program contained in "main" in its entirety.
 
 ### Test-Driven Development
 
@@ -1104,7 +1104,7 @@ Positive
 : **Exercise - Testing** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-6-13-testing.git)
 
 Positive
-: **Unit testing** <br><br> Unit testing is only a part of software testing. On top of unit testing, a developer also performs integration tests that examine the interoperability of components, such as classes, and interface tests that test the application's interface through elements provided by the interface, such as buttons. <br><br> These testing methods are covered in more detail in more advanced courses.
+: **Unit testing** <br><br> Unit testing is only a part of software testing. On top of unit testing, a developer also performs integration tests that examine the interoperability of components, such as classes, and interface tests that test the application's interface through elements provided by the interface, such as buttons. <br><br> These testing methods are covered in more detail in more advanced courses. <br><br> You can check out [this excellent resource](https://realpython.com/python-testing/) if you are interested in learning more about testing in Python.
 
 ## Complex programs
 Duration: 00:10:00
