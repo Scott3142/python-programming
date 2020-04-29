@@ -1,13 +1,13 @@
 {
-  "title": "Codelabs",
-  "description": "Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.",
+  "title": "Python Programming",
+  "description": "During this course, you will learn the basics of computer programming, along with algorithms and object-oriented programming through the Python programming language. The course includes comprehensive materials and plenty of programming exercises - all of which are tested using automatic testing via Github.",
   "tags": [],
   "categories": [],
   "exclude": [
     "^lang-.*"
   ],
   "logoUrl": "{{baseUrl}}/images/logo.png",
-  "toolbarBgColor": "#37474F",
+  "toolbarBgColor": "#00AEEF",
   "sort": "mainCategory",
   "pins": []
 }
