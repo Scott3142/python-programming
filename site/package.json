@@ -43,9 +43,11 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
+    "acorn": "^5.7.4",
     "deep-extend": "^0.5.1",
     "gift": "^0.10.2",
     "gulp-gh-pages-gift": "^0.5.5",
+    "lodash.template": "^4.5.0",
     "ncp": "^2.0.0",
     "open": "^6.0.0"
   }
