@@ -59,3 +59,17 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
 See the License for the specific language governing permissions and
 limitations under the License.
+
+## Command line resources
+
+Creative Commons Licence
+
+Raspberry Pi Documentation by the Raspberry Pi Foundation is licensed under a Creative Commons Attribution 4.0 International Licence.
+
+Based on a work at https://github.com/raspberrypi/documentation
+
+## Version control with git
+
+***Getting Started with Git*** by the [Raspberry Pi Foundation](http://www.raspberrypi.org) is licenced under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+
+Based on a work at https://github.com/raspberrypilearning/getting-started-with-git
