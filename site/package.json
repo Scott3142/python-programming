@@ -43,6 +43,7 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
+    "deep-extend": "^0.5.1",
     "gift": "^0.10.2",
     "gulp-gh-pages-gift": "^0.5.5",
     "ncp": "^2.0.0"
