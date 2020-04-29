@@ -34,7 +34,8 @@
 <li>How to download and submit programming exercises.</li>
 </ul>
 <p>Modern programming is practically always done in an IDE (integrated development environment). An IDE contains a set of useful tools for the programmer. It does not create the program by itself, but it can give hints about common mistakes in the code, and help the programmer understand the structure of the program.</p>
-<p>The IDE we use on this course is called Atom, and we use it with the atom-python-test plugin. Atom describes itself as a &#34;hackable text editor for the 21st Century&#34; and is built and maintained by <a href="https://github.com/" target="_blank">Github</a>, which we will also use extensively throughout this course.</p>
+<p>There are many IDEs that can be used with Python, including <a href="https://www.jetbrains.com/pycharm" target="_blank">PyCharm</a>, <a href="https://docs.python.org/3/library/idle.html" target="_blank">Idle</a> and <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>. At the risk of sparking some heated debate (&#34;I love vim&#34;, &#34;nano 4eva&#34; etc.), the text editor we recommend and support on this course is called Atom. Atom describes itself as a &#34;hackable text editor for the 21st Century&#34; and is built and maintained by <a href="https://github.com/" target="_blank">Github</a>, which we will also use extensively throughout this course.</p>
+<p>Atom is not <a href="https://www.quora.com/Is-Atom-an-IDE-or-Text-Editor" target="_blank">technically</a> an IDE, but comes with many useful plugins that can be used to mimic the functionality of an IDE. We will use the <code>script</code> and <code>atom-python-test</code> plugins predominantly on this course.</p>
 <p>To start the course you will need:</p>
 <ol type="1">
 <li>A Github account</li>
@@ -96,14 +97,14 @@ main()
 <aside class="warning"><p>Hello there!</p>
 </aside>
 <h2 is-upgraded>Program Boilerplate</h2>
-<p>In Python, our programs will include some boilerplate code to function. This boilerplate, an example of which is shown below, for example tells the computer what your function is called. Below, the name of the function is <code>example</code>.</p>
+<p>In Python, our programs will include some boilerplate code to function. This boilerplate, an example of which is shown below, for example tells the computer what your function is called. Below, the name of the function is <code>main</code>.</p>
 <pre><code>def main():
     print(&#34;Text to be printed&#34;)
 
 if __name__ == &#39;__main__&#39;:
     main()
 </code></pre>
-<p>Execution of the program starts from the line that says <code>main()</code>. This command <em>invokes</em> the function <code>example</code> and runs it. Commands are executed inside <code>example</code> one line at a time from the top. In the above example, <code>print(&#34;Text to be printed&#34;)</code> is the only command to be executed. Its output is:</p>
+<p>Execution of the program starts from the line that says <code>main()</code>. This command <em>invokes</em> the function <code>main</code> and runs it. Commands are executed inside <code>main</code> one line at a time from the top. In the above example, <code>print(&#34;Text to be printed&#34;)</code> is the only command to be executed. Its output is:</p>
 <aside class="warning"><p>Text to be printed</p>
 </aside>
 <p>The examples in the material will not always show the template, but you can assume that your program file has one. As such, the examples might be as short as a single line, such as the example below that illustrates the print command.</p>
@@ -135,7 +136,7 @@ if __name__ == &#39;__main__&#39;:
 <p>The program above will print:</p>
 <aside class="warning"><p>Hello world! <br> ... and the universe!</p>
 </aside>
-<p>The programming exercises will be checked by Atom&#39;s tester, which is meticulous. The guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.</p>
+<p>The programming exercises will be checked by Python&#39;s tester when uploaded to Github. The tester is very meticulous. The guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.</p>
 <p>This preciseness with regard to the output is relevant in programming in a more general sense. Missing a single character may cause an error. Novice programmers often enter a comma instead of a dot, or write, for instance <code>prnt</code> instead of <code>print</code>, leave out apostrophes, or forget a bracket after a command. Any one of these would cause an error and cause the program execution to fail.</p>
 <p>Learning programming is, in fact, a path full of mistakes – and every error message is a chance to learn. Keep a look out for any red signs in the IDE and try to read the test errors!</p>
 <aside class="special"><p><strong>Exercise - Once Upon a Time<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-1-2-once-upon-a-time.git" target="_blank">Source files on Github</a></p>
@@ -185,7 +186,7 @@ if __name__ == &#39;__main__&#39;:
 <li>Know what a &#34;string&#34; refers to in programming.</li>
 <li>Know how to join (i.e., &#34;concatenate&#34;) strings together.</li>
 </ul>
-<p>Input refers to text written by the user read by the program. Input is always read as a string. For reading input, we use the <code>input</code> tool that comes with Python. The tool can be used with the command <code>inputString = input(&#39;This text is printed to screen.&#39;)</code></p>
+<p>Input refers to text written by the user read by the program. Input is always read as a string. For reading input, we use the <code>input</code> tool that comes with Python. The tool can be used with the command <code>input_string = input(&#39;This text is printed to screen.&#39;)</code></p>
 <p>Below is an example of a program which asks for user input, reads the string entered by the user, and then prints it.</p>
 <pre><code>def user_input():
     input_string = input(&#39;Write a message:&#39;)
@@ -363,7 +364,7 @@ print(&#34;Boolean: &#34; + str(true_or_false))
 <aside class="special"><p><strong>Exercise - Various Variables<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-1-10-various-variables.git" target="_blank">Source files on Github</a></p>
 </aside>
 <h2 is-upgraded>Changing a Value Assigned to a Variable</h2>
-<p>A variable exists from the moment of its declaration, and its initial value is preserved until another value is assigned to it. You can change a variable&#39;s value using a statement that comprises the variable name, an equals sign, and the new value to be assigned. Remember to keep in mind that the variable type is only stated during the initial variable declaration.</p>
+<p>A variable exists from the moment of its declaration, and its initial value is preserved until another value is assigned to it. You can change a variable&#39;s value using a statement that comprises the variable name, an equals sign, and the new value to be assigned.</p>
 <pre><code>number = 123
 print(&#34;The value of the variable is &#34; + str(number))
 
@@ -418,8 +419,9 @@ print(surface_area)
 <aside class="warning"><p>1519.76</p>
 </aside>
 <p>Both of the preceding examples function the same way and output the same result. One of them is, however, much more understandable. The objective here is to compute the surface area of a circle. The value of pi is defined in the first row, the circle&#39;s radius in the second, and the surface area calculated in the third.</p>
-<aside class="special"><p><strong>Variables Express the Program and the Problem to Be Solved<br><br></strong> Programming is a problem-solving tool. The aim is to create solutions for any given problem, such as the automation of control in cars. As a problem is approached, the developer decides on the terms used to describe the problem domain. The terminology that is chosen, such as variable names, will serve to describe the problem for anyone who is to work with it in the future. <br><br> As you&#39;re wording the problem that you&#39;re solving, think about the concepts related to that problem and appropriate terms that could be used to describe them. If you find it hard to come up with relevant names, think of the ones that definitely do not describe it. After this, settle on some terminology that you&#39;re going to use – the good thing is that you can usually improve on it later on. s Variable naming is limited by certain constraints.</p>
+<aside class="special"><p><strong>Variables Express the Program and the Problem to Be Solved<br><br></strong> Programming is a problem-solving tool. The aim is to create solutions for any given problem, such as the automation of control in cars. As a problem is approached, the developer decides on the terms used to describe the problem domain. The terminology that is chosen, such as variable names, will serve to describe the problem for anyone who is to work with it in the future. <br><br> As you&#39;re wording the problem that you&#39;re solving, think about the concepts related to that problem and appropriate terms that could be used to describe them. If you find it hard to come up with relevant names, think of the ones that definitely do not describe it. After this, settle on some terminology that you&#39;re going to use – the good thing is that you can usually improve on it later on.</p>
 </aside>
+<p>Variable naming is limited by certain constraints.</p>
 <p>Variable names cannot contain certain special symbols, such as exclamation marks (!). Spaces are also not allowed, since they&#39;re used to separate parts of commands. Instead of spaces, the convention in many programming languages is to either use a style known as <a href="https://en.wikipedia.org/wiki/Camel_case" target="_blank">camelCase</a> or <a href="https://en.wikipedia.org/wiki/Snake_case" target="_blank">snake_case</a> to delimit words. Python variable names are always written in snake_case.</p>
 <p><strong>Note!</strong> The first letter of a variable name is always lower-cased:</p>
 <pre><code>camelCaseVariable = 7 # will work, but not convention in Python
@@ -439,7 +441,7 @@ print(&#34;You wrote &#34; + text)
 </aside>
 <p>Other input types, such as integers, floats, and booleans must be converted to the target variable&#39;s type with the help of the <code>int</code>, <code>float</code> or <code>bool</code> methods provided by Python.</p>
 <h2 is-upgraded>The Type of the Variable Informs of Possible Values</h2>
-<p>A variable&#39;s type can be specificed after reading user input data. For example, a variable containing the string &#34;text&#34; is declared when read with the <code>input</code> call, and an integer having the value 42 can be declared using <code>int(varableName)</code>.</p>
+<p>A variable&#39;s type can be specificed after reading user input data. For example, a variable containing the string &#34;text&#34; is declared when read with the <code>input</code> call, and an integer having the value 42 can be declared using <code>int(varable_name)</code>.</p>
 <p>A variable&#39;s type determines the types of values that can be assigned to it. String types hold text, int types whole numbers, float floating-point numbers, and boolean types are either true or false.</p>
 <p>As such, the possible values of a given variable type are limited. For example, a string cannot contain an integer, nor can a float contain a boolean value.</p>
 <table>
@@ -693,7 +695,7 @@ if (number != 0):
 if (number &gt;= 1000):
     print(&#34;The number is at least 1000&#34;)
 </code></pre>
-<aside class="warning"><p>The number was not equal to 0</p>
+<aside class="warning"><p>The number is not equal to 0</p>
 </aside>
 <aside class="special"><p><strong>Exercise - Orwell<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-1-21-orwell.git" target="_blank">Source files on Github</a></p>
 </aside>
@@ -772,7 +774,7 @@ if (is_it_true):
 second = 3
 is_greater = first &gt; second
 </code></pre>
-<p>In the example above, the boolean variable <code>isGreater</code> now contains the boolean value <em>false</em>. We can extend the previous example by adding a conditional statement to it.</p>
+<p>In the example above, the boolean variable <code>is_greater</code> now contains the boolean value <em>false</em>. We can extend the previous example by adding a conditional statement to it.</p>
 <pre><code>first = 1
 second = 3
 is_less_than = first &lt; second
@@ -824,7 +826,8 @@ else:
 </code></pre>
 <aside class="warning"><p>Enter the first string <br><em>User: &lt;same&gt;<br></em> Enter the second string <br><em>User: &lt;same&gt;<br></em> The strings were the same!</p>
 </aside>
-<p>Enter the first string <br><em>User: &lt;same&gt;<br></em> Enter the second string <br><em>User: &lt;different&gt;<br></em> The strings were different!</p>
+<aside class="warning"><p>Enter the first string <br><em>User: &lt;same&gt;<br></em> Enter the second string <br><em>User: &lt;different&gt;<br></em> The strings were different!</p>
+</aside>
 <aside class="special"><p><strong>Exercise - Password<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-1-28-password.git" target="_blank">Source files on Github</a></p>
 </aside>
 <aside class="special"><p><strong>Exercise - Same<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> If you are a student at Bridgend College, you will have received the exercise via email in your own repo. <br><br><a href="https://github.com/btec-diploma-unit4-programming-master/exercise-1-29-same.git" target="_blank">Source files on Github</a></p>
