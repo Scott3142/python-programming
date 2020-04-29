@@ -1,6 +1,6 @@
 # Material template
 
-This repository contains both the source code of this course's webpage and the source for the content of the course. The content is located in the `data` folder and everything else is for the website.
+This repository contains both the source code of this course's webpage and the source for the content of the course. The codelabs are located in the `site/codelabs` folder and everything else is for the website. The exercise files link via submodules in the `exercise_files` directory.
 
 ## Contributing to the content
 
