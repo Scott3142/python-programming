@@ -64,7 +64,7 @@ Each number is printed on its own line.
 
 # We create an integer variable named value,
 # assigning the value 10 to it.
-int value = 10
+value = 10
 
 # The loop execution continues until
 # the value of the variable named value is less than or equal to
@@ -77,7 +77,6 @@ while (value > 0):
     print(value)
     # we decrement the value by one
     value = value - 1
-}
 ```
 
 Comments have no impact on the execution of the program, i.e., the program works in the same way with the comments as it does without them.
@@ -123,7 +122,6 @@ if (sum == 0):
     print("The average of the values could not be calculated.")
 else:
     print("Average of values: " + str(1.0 * sum / values))
-}
 ```
 
 Had the program contained an error, print debugging could have been used to unravel its functionality by adding print statements in the appropriate places. The example below contains one possible example of a program containing print-debug statements.
@@ -601,7 +599,6 @@ def average(numbers):
         sum = sum + number
 
     return sum / len(numbers)
-}
 ```
 
 Positive

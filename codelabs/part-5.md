@@ -91,9 +91,9 @@ class ClockHand:
 
     def __str__(self):
         if (self.value < 10):
-            return "0" + self.value
+            return "0" + str(self.value)
 
-        return "" + self.value
+        return "" + str(self.value)
 ```
 
 Once we've created the ClockHand class, our clock has become clearer. It's now straightforward to print the clock, i.e., the clock hand, and the hand's progression is hidden away in the ClockHand class.
@@ -304,23 +304,22 @@ class Person:
 
         return self.weight / (height_in_meters * height_in_meters)
 
-    def __str__():
+    def __str__(self):
         return self.name + " is " + str(self.age) + " years old, their BMI is " + str(self.body_mass_index())
-    }
 
     def set_height(height):
         self.height = height
 
-    def get_height():
+    def get_height(self):
         return self.height
 
-    def get_weight():
+    def get_weight(self):
         return self.weight
 
     def set_weight(weight):
         self.weight = weight
 
-    def get_name():
+    def get_name(self):
         return self.name
 ```
 
@@ -847,7 +846,7 @@ The implementation of the method is illustrated below. Note that the **method ma
 class Person:
     # ...
 
-    def older_than(compared):
+    def older_than(self,compared):
         # 1. First compare years
         own_year = self.get_birthday().get_year()
         compared_year = compared.get_birthday().get_year()
@@ -1165,14 +1164,12 @@ if (birds.contains(red)):
     print("Red is on the list.")
 else:
     print("Red is not on the list.")
-}
 
 birds.append(red)
 if (birds.contains(red)):
     print("Red is on the list.")
 else:
     print("Red is not on the list.")
-}
 
 
 print("However!")
@@ -1182,7 +1179,6 @@ if (birds.contains(red)):
     print("Red is on the list.")
 else:
     print("Red is not on the list.")
-}
 ```
 
 Negative

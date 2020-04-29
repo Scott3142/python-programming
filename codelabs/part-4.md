@@ -533,7 +533,6 @@ def main():
 
     print(grace.get_name() + ", body mass index is " + str(grace.body_mass_index()))
     print(ada.get_name() + ", body mass index is " + str(ada.body_mass_index()))
-}
 ```
 
 Prints:
@@ -581,7 +580,6 @@ The object may also call its methods. For example, if we wanted the string repre
 ```python
 def __str__():
     return self.name + ", age " + str(self.age) + " years, my body mass index is " + str(self.body_mass_index())
-}
 ```
 
 So, when an object calls an internal method, the name of the method and this prefix suffice.

@@ -97,9 +97,9 @@ while True:
 
     def __str__(self):
         if (self.value &lt; 10):
-            return &#34;0&#34; + self.value
+            return &#34;0&#34; + str(self.value)
 
-        return &#34;&#34; + self.value
+        return &#34;&#34; + str(self.value)
 </code></pre>
 <p>Once we&#39;ve created the ClockHand class, our clock has become clearer. It&#39;s now straightforward to print the clock, i.e., the clock hand, and the hand&#39;s progression is hidden away in the ClockHand class.</p>
 <p>Since the the hand returns to the beginning automatically with the help of the upper-limit variable defined by the ClockHand class, the way the hands work together is slightly different than in the implementation that used integers. That one looked at whether the value of the integer that represented the clock hand exceeded the upper limit, after which its value was set to zero and the value of the integer representing the next clock hand was incremented.</p>
@@ -268,23 +268,22 @@ print(first.surface_area())
 
         return self.weight / (height_in_meters * height_in_meters)
 
-    def __str__():
+    def __str__(self):
         return self.name + &#34; is &#34; + str(self.age) + &#34; years old, their BMI is &#34; + str(self.body_mass_index())
-    }
 
     def set_height(height):
         self.height = height
 
-    def get_height():
+    def get_height(self):
         return self.height
 
-    def get_weight():
+    def get_weight(self):
         return self.weight
 
     def set_weight(weight):
         self.weight = weight
 
-    def get_name():
+    def get_name(self):
         return self.name
 </code></pre>
 <p>All person objects are 0 years old when created. This is because the constructor sets the value of the instance variable <code>age</code> to 0:</p>
@@ -680,7 +679,7 @@ else:
 <pre><code>class Person:
     # ...
 
-    def older_than(compared):
+    def older_than(self,compared):
         # 1. First compare years
         own_year = self.get_birthday().get_year()
         compared_year = compared.get_birthday().get_year()
@@ -947,14 +946,12 @@ if (birds.contains(red)):
     print(&#34;Red is on the list.&#34;)
 else:
     print(&#34;Red is not on the list.&#34;)
-}
 
 birds.append(red)
 if (birds.contains(red)):
     print(&#34;Red is on the list.&#34;)
 else:
     print(&#34;Red is not on the list.&#34;)
-}
 
 
 print(&#34;However!&#34;)
@@ -964,7 +961,6 @@ if (birds.contains(red)):
     print(&#34;Red is on the list.&#34;)
 else:
     print(&#34;Red is not on the list.&#34;)
-}
 </code></pre>
 <aside class="warning"><p>Red is not on the list. <br> Red is on the list. <br> However! <br> Red is on the list.</p>
 </aside>
