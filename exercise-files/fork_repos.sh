@@ -10,7 +10,7 @@ do
     if [[ -d "$reponame" ]]
     then
         echo "Directory $reponame exists. Forking repo to $orgname."
-        git submodule update --init $filename
+        git submodule update --init $reponame
         cd $reponame
         git add --all
         git commit -m 'Nothing to do? There should not be anything here.'
@@ -22,6 +22,6 @@ do
         hub fork --org=$orgname
         cd ..
     else
-        echo "Directory $filename doesn't exist locally. There's somthing wrong here!"
+        echo "Directory $reponame doesn't exist locally. There's somthing wrong here!"
     fi
 done < "$input"
