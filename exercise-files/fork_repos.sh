@@ -5,12 +5,12 @@ do
     reponame="exercise-""$line"
     if [[ -d "$reponame" ]]
     then
-        echo "Directory $reponame exists. Forking repo to den01-python-programming."
+        echo "Directory $reponame exists. Forking repo to $orgname."
         cd $reponame
-        hub fork --org=den01-python-programming
+        hub fork --org=$orgname
         cd ..
     else
         echo "Directory $filename doesn't exist locally. Cloning repo."
-        git clone git@github.com:den01-python-programming/$reponame.git
+        git clone git@github.com:$orgname/$reponame.git
     fi
 done < "$input"

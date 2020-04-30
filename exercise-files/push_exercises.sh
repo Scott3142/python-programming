@@ -1,5 +1,5 @@
 #!/bin/bash
-input="in-progress.dat"
+input="working-exercises.dat"
 while IFS= read -r line
 do
     filename="exercise-""$line"
@@ -8,7 +8,7 @@ do
         echo "Directory $filename exists. Entering directory."
         cd $filename
         git add --all
-        git commit -m 'Adds tests'
+        git commit -m 'Updates exercise'
         git branch tmp
         git checkout master
         git merge tmp

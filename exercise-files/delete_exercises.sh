@@ -1,5 +1,5 @@
 #!/bin/bash
-input="del_exercise-list.dat"
+input="del_working-exercises.dat"
 
 echo "I'm going to cancel this to make sure you know what you're doing here..."
 echo "Please read and understand this file!"
