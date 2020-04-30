@@ -33,7 +33,7 @@
 <p>The following is adapted from <a href="https://www.raspberrypi.org/documentation/" target="_blank">these Raspberry Pi foundation resources</a>.</p>
 <h2 is-upgraded>The terminal in Linux</h2>
 <p>If you are using the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">Windows Subsystem for Linux</a>, open it according to the instructions contained on that page, otherwise search for <code>Terminal</code> in your installed software and open it. You should be greeted with a command prompt that looks something like:</p>
-<pre><code>username@hostname ~ $
+<pre><code>user@host:~$
 </code></pre>
 <p>This shows your username and the hostname of the machine you are working on.</p>
 <p>Now, let&#39;s try running a command. Type <code>pwd</code> (present working directory) followed by the Enter key. This should display something like <code>/home/username</code>.</p>
@@ -48,7 +48,7 @@
 +-- my_python_file.py
 </code></pre>
 <p>you can compile and run the <code>main.py</code> file using the following command:</p>
-<pre><code>python3 main.py
+<pre><code>user@host:~$ python3 main.py
 </code></pre>
 <p>If you get an error saying that <code>python3</code> is not recognised as a command, <a href="https://www.python.org/downloads/" target="_blank">make sure it&#39;s installed</a>.</p>
 <h2 is-upgraded>History and auto-complete</h2>
@@ -149,35 +149,11 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Python virtual environments" duration="10">
-        <p>The following is adapted from <a href="https://docs.python.org/3/tutorial/venv.html" target="_blank">the Python documentation</a>.</p>
-<p>Python applications will often use packages and modules that don&#39;t come as part of the standard library. Applications will sometimes need a specific version of a library, because the application may require that a particular bug has been fixed or the application may be written using an obsolete version of the library&#39;s interface.</p>
-<p>This means it may not be possible for one Python installation to meet the requirements of every application. If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.</p>
-<p>The solution for this problem is to create a virtual environment, a self-contained directory tree that contains a Python installation for a particular version of Python, plus a number of additional packages.</p>
-<p>Different applications can then use different virtual environments. To resolve the earlier example of conflicting requirements, application A can have its own virtual environment with version 1.0 installed while application B has another virtual environment with version 2.0. If application B requires a library be upgraded to version 3.0, this will not affect application A&#39;s environment.</p>
-<p>The module used to create and manage virtual environments is called venv. venv will usually install the most recent version of Python that you have available. If you have multiple versions of Python on your system, you can select a specific Python version by running python3 or whichever version you want.</p>
-<p>To create a virtual environment, decide upon a directory where you want to place it, and run the venv module as a script with the directory path:</p>
-<pre><code>python3 -m venv my-environment
-</code></pre>
-<p>Once you&#39;ve created a virtual environment, you may activate it.</p>
-<p>On Windows, run:</p>
-<pre><code>my-environment\Scripts\activate.bat
-</code></pre>
-<p>On Unix or MacOS, run:</p>
-<pre><code>source my-environment/bin/activate
-</code></pre>
-<p>(This script is written for the bash shell. If you use the csh or fish shells, there are alternate activate.csh and activate.fish scripts which you should use instead).</p>
-<p>Activating the virtual environment will change your shell&#39;s prompt to show what virtual environment you&#39;re using, and modify the environment so that running python will get you that particular version and installation of Python.</p>
-<p>It is important to enter a virtual environment whenever you are testing Python code. It makes sure the packages are correctly defined and eliminates a lot of errors.</p>
-
-
-      </google-codelab-step>
-    
       <google-codelab-step label="Installing packages with pip" duration="20">
         <h2 is-upgraded>What is pip?</h2>
 <p>The following is adapted from <a href="https://realpython.com/what-is-pip/" target="_blank">here</a>.</p>
 <p>Pip is the standard package manager for Python which allows you to install and manage packages which are not part of the <a href="https://docs.python.org/3/py-modindex.html" target="_blank">Python standard library</a>. Much like <code>npm</code> for JavaScript, <code>gem</code> for Ruby or even <code>apt</code> for Debian, <code>pip</code> allows you to install and manage additional libraries and dependencies for your projects. If you have installed Python on your machine, the Python installer installs pip, so it should be ready for you to use.  You can verify that pip is available by running the following command in your console:</p>
-<pre><code>pip --version
+<pre><code>user@host:~$ pip --version
 </code></pre>
 <p>A lot of commonly used packages are included as standard in the <a href="https://docs.python.org/3/py-modindex.html" target="_blank">Python standard library</a>, which includes an extensive set of packages and modules to help developers with their scripts and applications.</p>
 <p>Sometimes, however, you&#39;ll need functionality that isn&#39;t included as standard, for example <code>numpy</code> or <code>scipy</code> if you&#39;re doing scientific computing and for that you&#39;ll want to look in the <a href="https://pypi.org/" target="_blank">Python Package Index</a>, otherwise known as PyPI. To install these packages, you can use <code>pip</code>.</p>
@@ -232,10 +208,93 @@ General Options:
                               whether a new version of pip is available for
                               download. Implied with --no-index.
 </code></pre>
-<p>As you can see, <code>pip</code> provides an install command to install packages. You can run it to install the <code>numpy</code> package:</p>
-<pre><code>user@hostpip install numpy
+<p>As you can see, <code>pip</code> provides an install command to install packages. You can run it to install the <code>numpy</code> package. Run the following <code>pip install numpy</code> from a command prompt.</p>
+<pre><code>user@host:~$ pip install numpy
 </code></pre>
 <p>As you can see, there are plenty of other useful commands available with <code>pip</code> but we will only explore a few of them here. You can find out more comprehensive information about <code>pip</code> in the <a href="https://pip.pypa.io/en/stable/" target="_blank">docs</a>.</p>
+<h2 is-upgraded>Package versions and the requirements file</h2>
+<p>If you&#39;ve downloaded a Python project that someone else has written or you&#39;ve explored some of the Python repos on Github, you might have noticed a <code>requirements.txt</code> file in the root directory. This is used to tell anyone running the code (including the original developer) which versions of installed packages were used to develop and test the application, so there are no surprises when deploying to production.</p>
+<p>Let&#39;s use an example. Say your project is using <code>numpy</code> to calculate the standard deviation of a dataset. The latest version of <code>numpy</code> available at the time of writing is <code>v1.18.3</code> so we use that to create our project.</p>
+<p>Sometime later, <code>numpy</code> releases a new version which changes the way the standard deviation is called - the output array which used to be optional is now required in the method call. Your code would no longer work with a fresh install of <code>numpy</code>, and your project would break through no fault of your own.</p>
+<p>With a package as popular as <code>numpy</code>, this would almost never happen and developers would be given plenty of notice if there was going to be such a drastic change. But the point is that it <em>could</em>, it certainly could with a less well-known or obscure package you&#39;ve found, and you don&#39;t want to have to rely on package maintainers to make their packages backwards compatible.</p>
+<aside class="special"><p>Something like this is happening, and has been happening for years, with Python 2. Python 2 was officially sunset on January 1, 2020, which means that the developers have not been improving it since that day, even if someone has found a security vulnerability. <em>Python 3 was released in 2008.<br><br></em> This means that Python has given 12 years to developers to move away from Python 2 code but many packages still depend on it. You may have already noticed a break in compatibility if you&#39;ve tried to use a <code>print</code> statement. In Python 2, you could write <code>print &#34;Hello world!&#34;</code> which was perfectly valid syntax. In Python 3, this throws an error, and in fact you need <code>print(&#34;Hello world!&#34;)</code> instead. <br><br> This course doesn&#39;t cover Python 2 at all, but it&#39;s important to know of its existence, and the headaches it causes in assuring dependencies are compatible.</p>
+</aside>
+<p>Let&#39;s get back to our <code>requirements.txt</code> file. If you look at the output of <code>pip help</code>, you can see the line</p>
+<pre><code>freeze      Output installed packages in requirements format.
+</code></pre>
+<p>which is a very useful command to generate a <code>requirements.txt</code> file. With our <code>numpy</code> example, running the command</p>
+<pre><code>user@host:~$ pip freeze &gt; requirements.txt
+</code></pre>
+<p>should produce an output in a text file called <code>requirements.txt</code> that looks like:</p>
+<pre><code>numpy==1.18.3
+</code></pre>
+<p>When you want to replicate the environment in another system, you can run <code>pip install</code> specifying the requirements file using the <code>-r</code> switch:</p>
+<pre><code>user@host:~$ pip install -r requirements.txt
+</code></pre>
+<p>This will install the versions of each of the packages specified in the <code>requirements.txt</code> file, which should save your code from breaking on package version updates.</p>
+<aside class="special"><p><strong>A note on security<br><br></strong> When using a requirements file, more often than not you&#39;ll be fine to just use the versions specified by the developer. However, a package might have been updated because of a <em>security vulnerability</em>, in which case you want to check out what the issue is and act accordingly. <br><br> If you upload your code to Github, your code can be <a href="https://help.github.com/en/github/managing-security-vulnerabilities/about-security-alerts-for-vulnerable-dependencies" target="_blank">automatically checked</a> for security vulnerabilities in your dependencies and given a rating from <em>low</em> to <em>critical</em>. Sometimes, Github can automatically fix the vulnerability too, by updating to a newer package.<br><br> Github won&#39;t do this if it thinks the update will break your code, and it will tell you you&#39;ll have to update it manually. <br><br> It&#39;s up to you whether you do this, or whether you&#39;re happy with the vulnerability. If you do decide to update a dependency, you&#39;ll want to make sure your code is appropriately <a href="https://scott3142.uk/python-programming/codelabs/part-6/index.html?index=..%2F..index#2" target="_blank">tested</a> so that nothing unexpected happens. Github can help here too with its <a href="https://github.com/features/actions" target="_blank">Github Actions</a>, an example of which you&#39;ll see in the first video of the course. <br><br> You can read more about Github Actions and similar workflows by reading about <a href="https://www.redhat.com/en/topics/devops/what-is-ci-cd" target="_blank">CI/CD</a> which stands for Continuous Integration/Continuous Deployment. This is covered in courses on <a href="https://cloud.google.com/devops" target="_blank">DevOps</a>.</p>
+</aside>
+<h2 is-upgraded>What if I need different versions for different projects?</h2>
+<p>Cue virtual environments...</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Python virtual environments" duration="10">
+        <p>The following is adapted from <a href="https://docs.python.org/3/tutorial/venv.html" target="_blank">the Python documentation</a>.</p>
+<p>As we&#39;ve seen, Python applications will often use packages and modules that don&#39;t come as part of the standard library. These are usually installed via <code>pip</code>. Applications will also sometimes need a specific version of a library, because the application may require that a particular bug has been fixed or the application may be written using an obsolete version of the library&#39;s interface.</p>
+<p>This means it may not be possible for one Python installation to meet the requirements of every application. If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.</p>
+<p>The solution for this problem is to create a virtual environment, a self-contained directory tree that contains a Python installation for a particular version of Python, plus a number of additional packages.</p>
+<p>Different applications can then use different virtual environments. To resolve the earlier example of conflicting requirements, application A can have its own virtual environment with version 1.0 installed while application B has another virtual environment with version 2.0. If application B requires a library be upgraded to version 3.0, this will not affect application A&#39;s environment.</p>
+<p>The module used to create and manage virtual environments is called venv. venv will usually install the most recent version of Python that you have available. If you have multiple versions of Python on your system, you can select a specific Python version by running python3 or whichever version you want.</p>
+<p>To create a virtual environment, decide upon a directory where you want to place it, and run the venv module as a script with the directory path:</p>
+<pre><code>user@host:~$ python3 -m venv my-environment
+</code></pre>
+<p>Once you&#39;ve created a virtual environment, you may activate it.</p>
+<p>On Windows, run:</p>
+<pre><code>PS C:\Users\User&gt; my-environment\Scripts\activate.bat
+</code></pre>
+<p>On Linux or MacOS, run:</p>
+<pre><code>user@host:~$ source my-environment/bin/activate
+</code></pre>
+<p>Activating the virtual environment will change your shell&#39;s prompt to show what virtual environment you&#39;re using, and modify the environment so that running python will get you that particular version and installation of Python.</p>
+<p>It is important to enter a virtual environment whenever you are testing Python code. It makes sure the packages are correctly defined and eliminates a lot of errors.</p>
+<p>Any packages you install via <code>pip</code> inside your virtual environment will not persist outside of it. For example, if you have a project directory called <code>mydir</code> and a virtual environment called <code>myenv</code>, your command prompt should look like this once you have activated the environment:</p>
+<pre><code>(myenv) user@host:~/mydir$
+</code></pre>
+<p>This shows that you are in the virtual environment <code>myenv</code>. Running</p>
+<pre><code>(myenv) user@host:~/mydir$ pip install numpy
+</code></pre>
+<p>will install <code>numpy</code> inside your virtual environment. Let&#39;s make a <code>main.py</code> file, import <code>numpy</code> and print the version.</p>
+<h3 is-upgraded>main.py</h3>
+<pre><code>import numpy as np
+print(np.__version__)
+</code></pre>
+<p>Running <code>python3 main.py</code> in your command prompt should output</p>
+<pre><code>1.18.3
+</code></pre>
+<p>or whichever version is latest. Now let&#39;s make a new virtual environment and try to run the program again.</p>
+<p>You can leave a virtual environment with the</p>
+<pre><code>(myenv) user@host:~/mydir$ deactivate
+</code></pre>
+<p>command. Run</p>
+<pre><code>user@host:~/mydir$ python3 -m venv my-new-env
+user@host:~$ source my-new-env/bin/activate
+</code></pre>
+<p>so that your command prompt looks like:</p>
+<pre><code>(my-new-env) user@host:~/mydir$
+</code></pre>
+<p>and run</p>
+<pre><code>(my-new-env) user@host:~/mydir$ python3 main.py
+</code></pre>
+<p>again. This time, you should get</p>
+<pre><code>Traceback (most recent call last):
+  File &#34;main.py&#34;, line 1, in &lt;module&gt;
+    import numpy as np
+ModuleNotFoundError: No module named &#39;numpy&#39;
+</code></pre>
+<p>which shows that <code>numpy</code> is not installed in this virtual environment.</p>
+<p>You can check which packages are installed at any time using the <code>pip freeze</code> command.</p>
 
 
       </google-codelab-step>
@@ -251,7 +310,7 @@ General Options:
 <p>It gets even better than that: your teacher also has a magical school bag. When she wants to check the homework, she just copies all the books from the sky-bag to her bag. She can then check through the answers from the whole class in one go. If she spots a mistake, she can write a comment in the margin of the book, and then all the magical bags from the whole class will receive the comment. Only one person in the class needs to correct the mistake though, and then everyone in the class immediately has the correct answer.</p>
 <h2 is-upgraded>Installing Git</h2>
 <p>If you&#39;re on Linux, and you don&#39;t have Git installed, then you can just use your package manager to grab the software. Something like this should work:</p>
-<pre><code>sudo apt install git
+<pre><code>user@host:~$ sudo apt install git
 </code></pre>
 <p>If you&#39;re on other operating systems, you can check out the guides below:</p>
 <ul>
@@ -261,19 +320,19 @@ General Options:
 <h2 is-upgraded>Setting up Git</h2>
 <p>You&#39;re going to be working in a terminal window for the duration of this resource, so open it up by clicking on the icon on the desktop, or by pressing <code>Ctrl + Alt + T</code> on your keyboard.</p>
 <p>The first thing to do is to tell Git who you are. This is important, as Git can be used collaboratively by lots of people, so it needs to know who made changes to which files. You can use your own username and email address, unless you are in fact <a href="https://en.wikipedia.org/wiki/Grace_Hopper" target="_blank">Grace Hopper</a>.</p>
-<pre><code>git config --global user.name &#34;Grace Hopper&#34;
-git config --global user.email &#34;g.hopper@harvard.edu&#34;
+<pre><code>user@host:~$ git config --global user.name &#34;Grace Hopper&#34;
+user@host:~$ git config --global user.email &#34;g.hopper@harvard.edu&#34;
 </code></pre>
 <p>Next you need to tell Git which text editor you want to use. If you don&#39;t have any particularly strong feelings about text editors, then you can just type:</p>
-<pre><code>git config --global core.editor nano
+<pre><code>user@host:~$ git config --global core.editor nano
 </code></pre>
 <h2 is-upgraded>Creating your first repo</h2>
 <p>If you want to start a new project which uses git, you&#39;ll want a directory on your computer for all your files to sit in, so the first thing to do is create that directory.</p>
 <p>In the terminal, you can use the <code>mkdir</code> (make directory) command to create a new directory.</p>
-<pre><code>mkdir my_project
+<pre><code>user@host:~$ mkdir my_project
 </code></pre>
 <p>Now you want to go into that directory. You can use the <code>cd</code> (change directory) command to do this.</p>
-<pre><code>cd my_project
+<pre><code>user@host:~$ my_project
 </code></pre>
 <p>Next, you can create a file that will tell people what the project is about. You can use any text editor to do this, such as Notepad or nano. Create a file called <code>README.md</code>. The <code>.md</code> extension stands for <strong>Markdown</strong>, which is a markup language. You can learn more about Markdown <a href="https://daringfireball.net/projects/markdown/" target="_blank">here</a>.</p>
 <p>You can now give the file a title and write a short explanation of what your project is about.</p>
@@ -282,10 +341,10 @@ I am making a really cool Python project
 </code></pre>
 <p>If you&#39;ve used nano, pressing <code>Ctrl + X</code> will cause a save prompt to appear. You can type <code>Y</code> to save and then hit <code>Enter</code> to close.</p>
 <p>Your file should have been created and will now be sitting in your directory. You can type <code>ls</code> in the terminal or <code>dir</code> if you are using Windows, to see a list of files.</p>
-<pre><code>ls
+<pre><code>user@host:~$ ls
 </code></pre>
 <p>At the moment, the directory is just like any other directory on your system. You now need to make the magical school bag part. This is known as a <strong>Git repository</strong>, and it takes the form of a hidden directory that keeps track of all the changes to the working directory. Type the following to create the repository, which from now on will just be called a <strong>repo</strong>:</p>
-<pre><code>git init
+<pre><code>user@host:~$ git init
 </code></pre>
 <p>If you type <code>ls</code> again, nothing will appear to have changed. You can use <code>ls -a</code> to see all the hidden files and directories, though. If you are using Windows then type <code>dir /A</code> instead.</p>
 <pre><code>ls -a
@@ -294,7 +353,7 @@ I am making a really cool Python project
 <pre><code>.  ..  .git  README.md
 </code></pre>
 <p>That <code>.git</code> directory is the <strong>repo skeleton</strong>. You can have a look inside it by typing the following. (Remember if you are using Windows it would be <code>dir /A .git</code>.)</p>
-<pre><code>ls -a .git
+<pre><code>user@host:~$ ls -a .git
 </code></pre>
 <p>This should bring up something like:</p>
 <pre><code>branches  config  description  HEAD  hooks  info  objects  refs
@@ -302,13 +361,13 @@ I am making a really cool Python project
 <p>You don&#39;t really need to worry about this directory at all now. Just know that it is there and that it is tracking all the changes to the parent directory <code>my_project</code>.</p>
 <h2 is-upgraded>Adding files</h2>
 <p>So you now have the repo initialised, but you haven&#39;t yet added anything to it. You need to tell Git that you want to add the <code>README.md</code> file to the repo. To do this you can simply type:</p>
-<pre><code>git add README.md
+<pre><code>user@host:~$ git add README.md
 </code></pre>
 <p>Sometime it&#39;s easier to just add everything to the repo though, rather than adding individual files. To do this you can type:</p>
-<pre><code>git add --all
+<pre><code>user@host:~$ git add --all
 </code></pre>
 <p>Now Git knows it needs to keep track of all the changes that happen to the <code>README.md</code> file. You can have a look at the status of your repo at any time by typing the following:</p>
-<pre><code>git status
+<pre><code>user@host:~$ git status
 </code></pre>
 <p>You should see something like this</p>
 <pre><code>On branch master
@@ -321,7 +380,7 @@ Changes to be committed:
 	new file:   README.md
 </code></pre>
 <p>The above response is telling you that the <code>README.md</code> file has not yet been <strong>committed</strong>. This means that although Git knows about the file, it doesn&#39;t yet have any of the file&#39;s contents stored. The simplest way to do a commit is by typing:</p>
-<pre><code>git commit -m &#34;adds README.md&#34;
+<pre><code>user@host:~$ git commit -m &#34;adds README.md&#34;
 </code></pre>
 <p>This commits all changes you have made in the directory to the Git repo, and adds a message saying what you did. The message can be anything really, but it&#39;s best to keep it fairly short yet descriptive of what you changed.</p>
 <h2 is-upgraded>Adding more files and travelling in time</h2>
@@ -329,14 +388,14 @@ Changes to be committed:
 <pre><code>README.md  data.csv  person.py
 </code></pre>
 <p>The new files need to be added to the Git repo and then committed.</p>
-<pre><code>git add --all
-git commit -am &#39;adds data csv and python program&#39;
+<pre><code>user@host:~$ git add --all
+user@host:~$ git commit -am &#39;adds data csv and python program&#39;
 </code></pre>
 <p>Then you carry on working on your code for a bit. Every time you make a significant change to the file, you can perform a new commit.</p>
-<pre><code>git commit -am &#39;finishes find function&#39;
+<pre><code>user@host:~$ git commit -am &#39;finishes find function&#39;
 </code></pre>
 <p>Now imagine that you&#39;ve made a horrible mistake. You&#39;ve been working for a while and you&#39;ve deleted your <code>get_age()</code> method, and then performed a commit. With Git, it&#39;s easy to go back in time and restore an earlier version of any of your files. Let&#39;s first look at the commit history of the file.</p>
-<pre><code>git log person.py
+<pre><code>user@host:~$ git log person.py
 </code></pre>
 <p>This produces something like this:</p>
 <pre><code>commit 12c4c693e95438ceadcf3f4fb39c83ce1ade712f
@@ -359,22 +418,22 @@ Date:   Fri Mar 3 20:20:18 2017 +0000
 </code></pre>
 <p>You can see that in that last commit (the one at the top) was where the function was deleted. Luckily the commit message has made it easy to see what was done, which is why commit messages are important. However, typing <code>git log -p person.py</code> would have actually shown the changed contents of the file, if the commit message wasn&#39;t clear enough.</p>
 <p>You can now get back the version of the file from the commit before. The long string of characters after the word ‘commit&#39; is called a hash, and is used by Git to keep track of files. In this case, the commit that needs to be restored is <code>5fd772a292c019a7cf3012b1156685280d4a7d2d</code>. So typing the following will get the file back to the way it was:</p>
-<pre><code>git checkout 5fd772a292c019a7cf3012b1156685280d4a7d2d person.py
+<pre><code>user@host:~$ git checkout 5fd772a292c019a7cf3012b1156685280d4a7d2d person.py
 </code></pre>
 <p>The file will be restored and you can now commit this change.</p>
-<pre><code>git commit -am &#39;restores find function&#39;
+<pre><code>user@host:~$ git commit -am &#39;restores find function&#39;
 </code></pre>
 <h2 is-upgraded>Making major changes</h2>
 <p>Imagine you&#39;re talking to your friend about your amazing project, and they have a really cool idea for some changes you could make to improve it. The changes are quite large, though, and you&#39;re worried that if you make them, you might break the project. You could make a copy of the directory and start working on this copy, but to keep using Git you&#39;d have to make an entirely new repo. This could all get quite confusing. Luckily, Git has a feature called <strong>branches</strong>; using a branch allows you to make copies without losing or altering your original work.</p>
 <p>First, you can have a look at your repo&#39;s current status.</p>
-<pre><code>git status
+<pre><code>user@host:~$ git status
 </code></pre>
 <p>This should show something like this:</p>
 <pre><code>On branch master
 nothing to commit, working directory clean
 </code></pre>
 <p>Now you can make a new branch in the repo, which lets you work on your amazing new adaption.</p>
-<pre><code>git checkout -b new-version
+<pre><code>user@host:~$ git checkout -b new-version
 </code></pre>
 <p>Now <code>git status</code> will show you something like this:</p>
 <pre><code>On branch new-version
@@ -386,10 +445,10 @@ nothing to commit, working directory clean
 </code></pre>
 <p>You can now work on the new-version branch without altering your master branch. If you try out the new approach and find it doesn&#39;t work, you can simply delete the branch using <code>git branch -D new-version</code>. However, if it all works well, you can merge the branch back into your master branch.</p>
 <p>First, you&#39;ll need to make sure all your changes are committed and then switch back to the master branch.</p>
-<pre><code>git checkout master
+<pre><code>user@host:~$ git checkout master
 </code></pre>
 <p>Then you can merge the version into the master branch</p>
-<pre><code>git merge new-version
+<pre><code>user@host:~$ git merge new-version
 </code></pre>
 <p><strong>Warning</strong>: you can cause problems with a merge if you&#39;re working on two branches at the same time, as Git won&#39;t know which changes are the ones you want to keep. For this reason, it&#39;s best to just work on one branch at a time.</p>
 <h2 is-upgraded>Working in the cloud</h2>
@@ -400,17 +459,17 @@ nothing to commit, working directory clean
 <p>Give the repo a name and a description and click on the <strong>Create repository</strong> button</p>
 <p>This should then bring up a page of instructions.</p>
 <p>As you already have a repo ready to push to GitHub, then all you need to do is make sure you are in your project directory and type:</p>
-<pre><code>git remote add origin git@github.com:GraceHopper/my-project.git
+<pre><code>user@host:~$ git remote add origin git@github.com:GraceHopper/my-project.git
 </code></pre>
 <p>and then</p>
-<pre><code>git push -u origin master
+<pre><code>user@host:~$ git push -u origin master
 </code></pre>
 <p>If you look on GitHub, you should now be able to see your repo, along with the displayed <code>README.md</code> file that you wrote.</p>
 <p>Any time you make changes to your project, and you want to push them up to GitHub, you can just type:</p>
-<pre><code>git push origin master
+<pre><code>user@host:~$ git push origin master
 </code></pre>
 <p>If you are working on a different branch you would type:</p>
-<pre><code>git push origin &lt;branch-name&gt;
+<pre><code>user@host:~$ git push origin &lt;branch-name&gt;
 </code></pre>
 <h2 is-upgraded>Collaborative working</h2>
 <p>The true power of services like GitHub becomes apparent when you start working with other people. GitHub lets other people make their own copies of your projects, or you to make copies of theirs. Either of you can then make improvements to the project and then push the improvements up to GitHub for everyone to share.</p>
@@ -430,7 +489,7 @@ nothing to commit, working directory clean
 <p>Issues are great, but if you want to help out even more, then project maintainers are usually very happy for you to fix or improve projects yourself. To do this, you need to make your own copy of the repo so that you can work on it.</p>
 <p>On the projects main page, find the <strong>Fork</strong> button, and click it.</p>
 <p>You will now have a copy of the repo. You should see a <strong>Clone or download</strong> button. Clicking this will reveal the uniform resource identifier (URI) of the repo. Now, using the terminal, you can clone the repo to your computer with <code>git clone</code>:</p>
-<pre><code>git clone https://github.com/HelpfulUser/python-programming.git
+<pre><code>user@host:~$ git clone https://github.com/HelpfulUser/python-programming.git
 </code></pre>
 <p>All the files and directories will now be on your computer. Go ahead and make the changes you want, then commit them and push them back up to GitHub, just like you would normally do. Here your commit message is particularly important, as it will explain the changes you have made to the resource&#39;s original owner.</p>
 <ul>
