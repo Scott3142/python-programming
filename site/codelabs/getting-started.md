@@ -23,7 +23,7 @@ The following is adapted from [these Raspberry Pi foundation resources](https://
 If you are using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), open it according to the instructions contained on that page, otherwise search for `Terminal` in your installed software and open it. You should be greeted with a command prompt that looks something like:
 
 ```bash
-username@hostname ~ $
+user@host:~$
 ```
 
 This shows your username and the hostname of the machine you are working on.
@@ -50,7 +50,7 @@ If you have a directory structure containing some `.py` files,
 you can compile and run the `main.py` file using the following command:
 
 ```bash
-python3 main.py
+user@host:~$ python3 main.py
 ```
 
 If you get an error saying that `python3` is not recognised as a command, [make sure it's installed](https://www.python.org/downloads/).
@@ -242,12 +242,137 @@ This course focuses mainly on a Linux environment, which can be utilised in Wind
 - [Mac OS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)
 - [Windows Powershell](https://programminghistorian.org/en/lessons/intro-to-powershell)
 
+## Installing packages with pip
+Duration: 00:20:00
+
+### What is pip?
+
+The following is adapted from [here](https://realpython.com/what-is-pip/).
+
+Pip is the standard package manager for Python which allows you to install and manage packages which are not part of the [Python standard library](https://docs.python.org/3/py-modindex.html). Much like `npm` for JavaScript, `gem` for Ruby or even `apt` for Debian, `pip` allows you to install and manage additional libraries and dependencies for your projects. If you have installed Python on your machine, the Python installer installs pip, so it should be ready for you to use.  You can verify that pip is available by running the following command in your console:
+
+```bash
+user@host:~$ pip --version
+```
+
+A lot of commonly used packages are included as standard in the [Python standard library](https://docs.python.org/3/py-modindex.html), which includes an extensive set of packages and modules to help developers with their scripts and applications.
+
+Sometimes, however, you'll need functionality that isn't included as standard, for example `numpy` or `scipy` if you're doing scientific computing and for that you'll want to look in the [Python Package Index](https://pypi.org/), otherwise known as PyPI. To install these packages, you can use `pip`.
+
+Typing `pip help` into your command prompt should return something like the following:
+
+```plaintext
+Usage:
+  pip <command> [options]
+
+Commands:
+  install                     Install packages.
+  download                    Download packages.
+  uninstall                   Uninstall packages.
+  freeze                      Output installed packages in requirements format.
+  list                        List installed packages.
+  show                        Show information about installed packages.
+  check                       Verify installed packages have compatible
+                              dependencies.
+  config                      Manage local and global configuration.
+  search                      Search PyPI for packages.
+  wheel                       Build wheels from your requirements.
+  hash                        Compute hashes of package archives.
+  completion                  A helper command used for command completion.
+  help                        Show help for commands.
+
+General Options:
+  -h, --help                  Show help.
+  --isolated                  Run pip in an isolated mode, ignoring environment
+                              variables and user configuration.
+  -v, --verbose               Give more output. Option is additive, and can be
+                              used up to 3 times.
+  -V, --version               Show version and exit.
+  -q, --quiet                 Give less output. Option is additive, and can be
+                              used up to 3 times (corresponding to WARNING,
+                              ERROR, and CRITICAL logging levels).
+  --log <path>                Path to a verbose appending log.
+  --proxy <proxy>             Specify a proxy in the form
+                              [user:passwd@]proxy.server:port.
+  --retries <retries>         Maximum number of retries each connection should
+                              attempt (default 5 times).
+  --timeout <sec>             Set the socket timeout (default 15 seconds).
+  --exists-action <action>    Default action when a path already exists:
+                              (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort).
+  --trusted-host <hostname>   Mark this host as trusted, even though it does
+                              not have valid or any HTTPS.
+  --cert <path>               Path to alternate CA bundle.
+  --client-cert <path>        Path to SSL client certificate, a single file
+                              containing the private key and the certificate in
+                              PEM format.
+  --cache-dir <dir>           Store the cache data in <dir>.
+  --no-cache-dir              Disable the cache.
+  --disable-pip-version-check
+                              Don't periodically check PyPI to determine
+                              whether a new version of pip is available for
+                              download. Implied with --no-index.
+```
+
+As you can see, `pip` provides an install command to install packages. You can run it to install the `numpy` package. Run the following `pip install numpy` from a command prompt.
+
+```bash
+user@host:~$ pip install numpy
+```
+
+As you can see, there are plenty of other useful commands available with `pip` but we will only explore a few of them here. You can find out more comprehensive information about `pip` in the [docs](https://pip.pypa.io/en/stable/).
+
+### Package versions and the requirements file
+
+If you've downloaded a Python project that someone else has written or you've explored some of the Python repos on Github, you might have noticed a `requirements.txt` file in the root directory. This is used to tell anyone running the code (including the original developer) which versions of installed packages were used to develop and test the application, so there are no surprises when deploying to production.
+
+Let's use an example. Say your project is using `numpy` to calculate the standard deviation of a dataset. The latest version of `numpy` available at the time of writing is `v1.18.3` so we use that to create our project.
+
+Sometime later, `numpy` releases a new version which changes the way the standard deviation is called - the output array which used to be optional is now required in the method call. Your code would no longer work with a fresh install of `numpy`, and your project would break through no fault of your own.
+
+With a package as popular as `numpy`, this would almost never happen and developers would be given plenty of notice if there was going to be such a drastic change. But the point is that it _could_, it certainly could with a less well-known or obscure package you've found, and you don't want to have to rely on package maintainers to make their packages backwards compatible.
+
+Positive
+: Something like this is happening, and has been happening for years, with Python 2. Python 2 was officially sunset on January 1, 2020, which means that the developers have not been improving it since that day, even if someone has found a security vulnerability. *Python 3 was released in 2008.* <br><br> This means that Python has given 12 years to developers to move away from Python 2 code but many packages still depend on it. You may have already noticed a break in compatibility if you've tried to use a `print` statement. In Python 2, you could write `print "Hello world!"` which was perfectly valid syntax. In Python 3, this throws an error, and in fact you need `print("Hello world!")` instead. <br><br> This course doesn't cover Python 2 at all, but it's important to know of its existence, and the headaches it causes in assuring dependencies are compatible.
+
+Let's get back to our `requirements.txt` file. If you look at the output of `pip help`, you can see the line
+
+```plaintext
+freeze      Output installed packages in requirements format.
+```
+
+which is a very useful command to generate a `requirements.txt` file. With our `numpy` example, running the command
+
+```bash
+user@host:~$ pip freeze > requirements.txt
+```
+
+should produce an output in a text file called `requirements.txt` that looks like:
+
+```plaintext
+numpy==1.18.3
+```
+
+When you want to replicate the environment in another system, you can run `pip install` specifying the requirements file using the `-r` switch:
+
+```bash
+user@host:~$ pip install -r requirements.txt
+```
+
+This will install the versions of each of the packages specified in the `requirements.txt` file, which should save your code from breaking on package version updates.
+
+Positive
+: **A note on security** <br><br> When using a requirements file, more often than not you'll be fine to just use the versions specified by the developer. However, a package might have been updated because of a *security vulnerability*, in which case you want to check out what the issue is and act accordingly. <br><br> If you upload your code to Github, your code can be [automatically checked](https://help.github.com/en/github/managing-security-vulnerabilities/about-security-alerts-for-vulnerable-dependencies) for security vulnerabilities in your dependencies and given a rating from *low* to *critical*. Sometimes, Github can automatically fix the vulnerability too, by updating to a newer package.<br><br> Github won't do this if it thinks the update will break your code, and it will tell you you'll have to update it manually. <br><br> It's up to you whether you do this, or whether you're happy with the vulnerability. If you do decide to update a dependency, you'll want to make sure your code is appropriately [tested](https://scott3142.uk/python-programming/codelabs/part-6/index.html?index=..%2F..index#2) so that nothing unexpected happens. Github can help here too with its [Github Actions](https://github.com/features/actions), an example of which you'll see in the first video of the course. <br><br> You can read more about Github Actions and similar workflows by reading about [CI/CD](https://www.redhat.com/en/topics/devops/what-is-ci-cd) which stands for Continuous Integration/Continuous Deployment. This is covered in courses on [DevOps](https://cloud.google.com/devops).
+
+### What if I need different versions for different projects?
+
+Cue virtual environments...
+
 ## Python virtual environments
 Duration: 00:10:00
 
 The following is adapted from [the Python documentation](https://docs.python.org/3/tutorial/venv.html).
 
-Python applications will often use packages and modules that don’t come as part of the standard library. Applications will sometimes need a specific version of a library, because the application may require that a particular bug has been fixed or the application may be written using an obsolete version of the library’s interface.
+As we've seen, Python applications will often use packages and modules that don’t come as part of the standard library. These are usually installed via `pip`. Applications will also sometimes need a specific version of a library, because the application may require that a particular bug has been fixed or the application may be written using an obsolete version of the library’s interface.
 
 This means it may not be possible for one Python installation to meet the requirements of every application. If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.
 
@@ -260,27 +385,92 @@ The module used to create and manage virtual environments is called venv. venv w
 To create a virtual environment, decide upon a directory where you want to place it, and run the venv module as a script with the directory path:
 
 ```bash
-python3 -m venv my-environment
+user@host:~$ python3 -m venv my-environment
 ```
 
 Once you’ve created a virtual environment, you may activate it.
 
 On Windows, run:
 
-```code
-tutorial-env\Scripts\activate.bat
-```
-
-On Unix or MacOS, run:
 ```bash
-source tutorial-env/bin/activate
+PS C:\Users\User> my-environment\Scripts\activate.bat
 ```
 
-(This script is written for the bash shell. If you use the csh or fish shells, there are alternate activate.csh and activate.fish scripts you should use instead.)
+On Linux or MacOS, run:
+
+```bash
+user@host:~$ source my-environment/bin/activate
+```
 
 Activating the virtual environment will change your shell’s prompt to show what virtual environment you’re using, and modify the environment so that running python will get you that particular version and installation of Python.
 
 It is important to enter a virtual environment whenever you are testing Python code. It makes sure the packages are correctly defined and eliminates a lot of errors.
+
+Any packages you install via `pip` inside your virtual environment will not persist outside of it. For example, if you have a project directory called `mydir` and a virtual environment called `myenv`, your command prompt should look like this once you have activated the environment:
+
+```bash
+(myenv) user@host:~/mydir$
+```
+
+This shows that you are in the virtual environment `myenv`. Running
+
+```bash
+(myenv) user@host:~/mydir$ pip install numpy
+```
+
+will install `numpy` inside your virtual environment. Let's make a `main.py` file, import `numpy` and print the version.
+
+#### main.py
+```python
+import numpy as np
+print(np.__version__)
+```
+
+Running `python3 main.py` in your command prompt should output
+
+```plaintext
+1.18.3
+```
+
+or whichever version is latest. Now let's make a new virtual environment and try to run the program again.
+
+You can leave a virtual environment with the
+
+```bash
+(myenv) user@host:~/mydir$ deactivate
+```
+
+command. Run
+
+```bash
+user@host:~/mydir$ python3 -m venv my-new-env
+user@host:~$ source my-new-env/bin/activate
+```
+
+so that your command prompt looks like:
+
+```bash
+(my-new-env) user@host:~/mydir$
+```
+
+and run
+
+```bash
+(my-new-env) user@host:~/mydir$ python3 main.py
+```
+
+again. This time, you should get
+
+```plaintext
+Traceback (most recent call last):
+  File "main.py", line 1, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+```
+
+which shows that `numpy` is not installed in this virtual environment.
+
+You can check which packages are installed at any time using the `pip freeze` command.
 
 ## Version control with git
 Duration: 00:30:00
@@ -306,7 +496,7 @@ It gets even better than that: your teacher also has a magical school bag. When 
 If you're on Linux, and you don't have Git installed, then you can just use your package manager to grab the software. Something like this should work:
 
 ```bash
-sudo apt install git
+user@host:~$ sudo apt install git
 ```
 
 If you're on other operating systems, you can check out the guides below:
@@ -321,14 +511,14 @@ You're going to be working in a terminal window for the duration of this resourc
 The first thing to do is to tell Git who you are. This is important, as Git can be used collaboratively by lots of people, so it needs to know who made changes to which files. You can use your own username and email address, unless you are in fact [Grace Hopper](https://en.wikipedia.org/wiki/Grace_Hopper).
 
 ```bash
-git config --global user.name "Grace Hopper"
-git config --global user.email "g.hopper@harvard.edu"
+user@host:~$ git config --global user.name "Grace Hopper"
+user@host:~$ git config --global user.email "g.hopper@harvard.edu"
 ```
 
 Next you need to tell Git which text editor you want to use. If you don't have any particularly strong feelings about text editors, then you can just type:
 
 ```bash
-git config --global core.editor nano
+user@host:~$ git config --global core.editor nano
 ```
 
 ### Creating your first repo
@@ -338,13 +528,13 @@ If you want to start a new project which uses git, you'll want a directory on yo
 In the terminal, you can use the `mkdir` (make directory) command to create a new directory.
 
 ```bash
-mkdir my_project
+user@host:~$ mkdir my_project
 ```
 
 Now you want to go into that directory. You can use the `cd` (change directory) command to do this.
 
 ```bash
-cd my_project
+user@host:~$ my_project
 ```
 
 Next, you can create a file that will tell people what the project is about. You can use any text editor to do this, such as Notepad or nano. Create a file called `README.md`. The `.md` extension stands for **Markdown**, which is a markup language. You can learn more about Markdown [here](https://daringfireball.net/projects/markdown/).
@@ -361,13 +551,13 @@ If you've used nano, pressing `Ctrl + X` will cause a save prompt to appear. You
 Your file should have been created and will now be sitting in your directory. You can type `ls` in the terminal or `dir` if you are using Windows, to see a list of files.
 
 ```bash
-ls
+user@host:~$ ls
 ```
 
 At the moment, the directory is just like any other directory on your system. You now need to make the magical school bag part. This is known as a **Git repository**, and it takes the form of a hidden directory that keeps track of all the changes to the working directory. Type the following to create the repository, which from now on will just be called a **repo**:
 
 ```bash
-git init
+user@host:~$ git init
 ```
 
 If you type `ls` again, nothing will appear to have changed. You can use `ls -a` to see all the hidden files and directories, though. If you are using Windows then type `dir /A` instead.
@@ -378,19 +568,19 @@ ls -a
 
 You should now see something like this in your terminal window:
 
-```bash
+```plaintext
 .  ..  .git  README.md
 ```
 
 That `.git` directory is the **repo skeleton**. You can have a look inside it by typing the following. (Remember if you are using Windows it would be `dir /A .git`.)
 
 ```bash
-ls -a .git
+user@host:~$ ls -a .git
 ```
 
 This should bring up something like:
 
-```bash
+```plaintext
 branches  config  description  HEAD  hooks  info  objects  refs
 ```
 
@@ -401,24 +591,24 @@ You don't really need to worry about this directory at all now. Just know that i
 So you now have the repo initialised, but you haven't yet added anything to it. You need to tell Git that you want to add the `README.md` file to the repo. To do this you can simply type:
 
 ```bash
-git add README.md
+user@host:~$ git add README.md
 ```
 
 Sometime it's easier to just add everything to the repo though, rather than adding individual files. To do this you can type:
 
 ```bash
-git add --all
+user@host:~$ git add --all
 ```
 
 Now Git knows it needs to keep track of all the changes that happen to the `README.md` file. You can have a look at the status of your repo at any time by typing the following:
 
 ```bash
-git status
+user@host:~$ git status
 ```
 
 You should see something like this
 
-```bash
+```plaintext
 On branch master
 
 Initial commit
@@ -432,7 +622,7 @@ Changes to be committed:
 The above response is telling you that the `README.md` file has not yet been **committed**. This means that although Git knows about the file, it doesn't yet have any of the file's contents stored. The simplest way to do a commit is by typing:
 
 ```bash
-git commit -m "adds README.md"
+user@host:~$ git commit -m "adds README.md"
 ```
 
 This commits all changes you have made in the directory to the Git repo, and adds a message saying what you did. The message can be anything really, but it's best to keep it fairly short yet descriptive of what you changed.
@@ -441,32 +631,32 @@ This commits all changes you have made in the directory to the Git repo, and add
 
 Now that you have set up your repo, it's time to get on with the project. Here, two new files have been created: `person.py` and `data.csv`. Typing `ls` reveals those files.
 
-```bash
+```plaintext
 README.md  data.csv  person.py
 ```
 
 The new files need to be added to the Git repo and then committed.
 
 ```bash
-git add --all
-git commit -am 'adds data csv and python program'
+user@host:~$ git add --all
+user@host:~$ git commit -am 'adds data csv and python program'
 ```
 
 Then you carry on working on your code for a bit. Every time you make a significant change to the file, you can perform a new commit.
 
 ```bash
-git commit -am 'finishes find function'
+user@host:~$ git commit -am 'finishes find function'
 ```
 
 Now imagine that you've made a horrible mistake. You've been working for a while and you've deleted your `get_age()` method, and then performed a commit. With Git, it's easy to go back in time and restore an earlier version of any of your files. Let's first look at the commit history of the file.
 
 ```bash
-git log person.py
+user@host:~$ git log person.py
 ```
 
 This produces something like this:
 
-```bash
+```plaintext
 commit 12c4c693e95438ceadcf3f4fb39c83ce1ade712f
 Author: Grace Hopper <g.hopper@harvard.edu>
 Date:   Fri Mar 3 20:27:17 2017 +0000
@@ -491,13 +681,13 @@ You can see that in that last commit (the one at the top) was where the function
 You can now get back the version of the file from the commit before. The long string of characters after the word 'commit' is called a hash, and is used by Git to keep track of files. In this case, the commit that needs to be restored is `5fd772a292c019a7cf3012b1156685280d4a7d2d`. So typing the following will get the file back to the way it was:
 
 ```bash
-git checkout 5fd772a292c019a7cf3012b1156685280d4a7d2d person.py
+user@host:~$ git checkout 5fd772a292c019a7cf3012b1156685280d4a7d2d person.py
 ```
 
 The file will be restored and you can now commit this change.
 
 ```bash
-git commit -am 'restores find function'
+user@host:~$ git commit -am 'restores find function'
 ```
 
 ### Making major changes
@@ -507,12 +697,12 @@ Imagine you're talking to your friend about your amazing project, and they have 
 First, you can have a look at your repo's current status.
 
 ```bash
-git status
+user@host:~$ git status
 ```
 
 This should show something like this:
 
-```bash
+```plaintext
 On branch master
 nothing to commit, working directory clean
 ```
@@ -520,19 +710,19 @@ nothing to commit, working directory clean
 Now you can make a new branch in the repo, which lets you work on your amazing new adaption.
 
 ```bash
-git checkout -b new-version
+user@host:~$ git checkout -b new-version
 ```
 
 Now `git status` will show you something like this:
 
-```bash
+```plaintext
 On branch new-version
 nothing to commit, working directory clean
 ```
 
 This tells you that you are on the `new-version` branch. To view all the branches in your repo, you can type `git branch` which will show something like this:
 
-```bash
+```plaintext
 * new-version
 	master
 ```
@@ -542,12 +732,12 @@ You can now work on the new-version branch without altering your master branch. 
 First, you'll need to make sure all your changes are committed and then switch back to the master branch.
 
 ```bash
-git checkout master
+user@host:~$ git checkout master
 ```
 Then you can merge the version into the master branch
 
 ```bash
-git merge new-version
+user@host:~$ git merge new-version
 ```
 
 **Warning**: you can cause problems with a merge if you're working on two branches at the same time, as Git won't know which changes are the ones you want to keep. For this reason, it's best to just work on one branch at a time.
@@ -569,13 +759,13 @@ This should then bring up a page of instructions.
 As you already have a repo ready to push to GitHub, then all you need to do is make sure you are in your project directory and type:
 
 ```bash
-git remote add origin git@github.com:GraceHopper/my-project.git
+user@host:~$ git remote add origin git@github.com:GraceHopper/my-project.git
 ```
 
 and then
 
 ```bash
-git push -u origin master
+user@host:~$ git push -u origin master
 ```
 
 If you look on GitHub, you should now be able to see your repo, along with the displayed `README.md` file that you wrote.
@@ -583,13 +773,13 @@ If you look on GitHub, you should now be able to see your repo, along with the d
 Any time you make changes to your project, and you want to push them up to GitHub, you can just type:
 
 ```bash
-git push origin master
+user@host:~$ git push origin master
 ```
 
 If you are working on a different branch you would type:
 
 ```bash
-git push origin <branch-name>
+user@host:~$ git push origin <branch-name>
 ```
 
 ### Collaborative working
@@ -625,7 +815,7 @@ On the projects main page, find the **Fork** button, and click it.
 You will now have a copy of the repo. You should see a **Clone or download** button. Clicking this will reveal the uniform resource identifier (URI) of the repo. Now, using the terminal, you can clone the repo to your computer with `git clone`:
 
 ```bash
-git clone https://github.com/HelpfulUser/python-programming.git
+user@host:~$ git clone https://github.com/HelpfulUser/python-programming.git
 ```
 
 All the files and directories will now be on your computer. Go ahead and make the changes you want, then commit them and push them back up to GitHub, just like you would normally do. Here your commit message is particularly important, as it will explain the changes you have made to the resource's original owner.
