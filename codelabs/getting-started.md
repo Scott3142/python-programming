@@ -268,15 +268,15 @@ Once you’ve created a virtual environment, you may activate it.
 On Windows, run:
 
 ```code
-tutorial-env\Scripts\activate.bat
+my-environment\Scripts\activate.bat
 ```
 
 On Unix or MacOS, run:
 ```bash
-source tutorial-env/bin/activate
+source my-environment/bin/activate
 ```
 
-(This script is written for the bash shell. If you use the csh or fish shells, there are alternate activate.csh and activate.fish scripts you should use instead.)
+(This script is written for the bash shell. If you use the csh or fish shells, there are alternate activate.csh and activate.fish scripts which you should use instead).
 
 Activating the virtual environment will change your shell’s prompt to show what virtual environment you’re using, and modify the environment so that running python will get you that particular version and installation of Python.
 
