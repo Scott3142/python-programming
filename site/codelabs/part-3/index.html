@@ -247,7 +247,13 @@ if __name__ == &#39;__main__&#39;:
 </code></pre>
 <p>Since the numbering (i.e., <strong>indexing</strong>) of the list elements starts with zero, the program isn&#39;t able to find anything at place two and its execution ends with an error. Below is a description of the error message caused by the program.</p>
 <p><strong>Example output:</strong></p>
-<p class="image-container"><img alt="alt text" title="Index error example" src="img/d77bd1f8af5dd236.png"></p>
+<pre><code>Traceback (most recent call last):
+  File &#34;/path/to/example.pyy&#34;, line 13, in &lt;module&gt;
+    word_list_example()
+  File &#34;/path/to/example.py&#34;, line 10, in word_list_example
+    print(word_list[2])
+IndexError: list index out of range
+</code></pre>
 <aside class="special"><p><strong>A Place in a List Is Called an Index<br><br></strong> Numbering places, i.e., indexing, always begins with zero. The list&#39;s first value is located at index 0, the second value at index 1, the third value at index 2, and so on. In programs, an index is denoted with a variable called <code>i</code>.</p>
 </aside>
 <h2 is-upgraded>Iterating Over a List</h2>

@@ -863,10 +863,22 @@ print(&#34;Number of students with grade 0 (should be 1): &#34; + str(register.n
 <aside class="special"><p><strong>Software Error<br><br></strong> The report in the address <a href="http://sunnyday.mit.edu/accidents/MCO_report.pdf" target="_blank">http://sunnyday.mit.edu/accidents/MCO_report.pdf</a> describes an incident resulting from a more serious software error and also the error itself. <br><br> The bug in the software was caused by the fact that the program in question expected the programmer to use the <a href="a href =" target="_blank">International System of Units</a>https://en.wikipedia.org/wiki/International_System_of_Units) (meters, kilograms, ...) in the calculations. However, the programmer had used the <a href="https://en.wikipedia.org/wiki/English_Engineering_units" target="_blank">American Measurement System</a> for some of the system&#39;s calculations, which prevented the satellite navigation auto-correction system from working as inteded. <br><br> The satellite was destroyed.</p>
 </aside>
 <p>As programs grow in their complexity, finding errors becomes even more challenging.</p>
-<h2 is-upgraded>Stack Trace</h2>
-<p>When an error occurs in a program, the program typically prints something called a stack trace, i.e., the list of method calls that resulted in the error. For example, a stack trace might look like this:</p>
-<p class="image-container"><img alt="alt text" title="Index error example" src="img/d77bd1f8af5dd236.png"></p>
-<p>The type of error is stated at the beginning of the list, and the following line tells us where the error occurred.</p>
+<h2 is-upgraded>Stack Trace (Traceback)</h2>
+<p>When an error occurs in a program, the program typically prints something called a stack trace, i.e., the list of method calls that resulted in the error. For example, for a file that contains:</p>
+<pre><code>def greet(name):
+    print(&#39;Hello, &#39; + nam)
+
+greet(&#39;Ada&#39;)
+</code></pre>
+<p>a stack trace might look like this:</p>
+<pre><code>Traceback (most recent call last):
+  File &#34;/path/to/example.py&#34;, line 4, in &lt;module&gt;
+    greet(&#39;Ada&#39;)
+  File &#34;/path/to/example.py&#34;, line 2, in greet
+    print(&#39;Hello, &#39; + nam)
+NameError: name &#39;nam&#39; is not defined
+</code></pre>
+<p>The type of error is stated at the beginning of the list, and the following lines tell us where the error occurred. The type of error thrown here is a <code>NameError</code>, which says that Python didn&#39;t understand the variable <code>nam</code> (since it should have been <code>name</code> here).</p>
 <h2 is-upgraded>Checklist for Troubleshooting</h2>
 <p>If your code doesn&#39;t work and you don&#39;t know where the error is, these steps will help you get started.</p>
 <ol type="1">

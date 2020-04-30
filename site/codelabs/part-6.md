@@ -1033,13 +1033,29 @@ Positive
 
 As programs grow in their complexity, finding errors becomes even more challenging.
 
-### Stack Trace
+### Stack Trace (Traceback)
 
-When an error occurs in a program, the program typically prints something called a stack trace, i.e., the list of method calls that resulted in the error. For example, a stack trace might look like this:
+When an error occurs in a program, the program typically prints something called a stack trace, i.e., the list of method calls that resulted in the error. For example, for a file that contains:
 
-![alt text](img/indexError.png "Index error example")
+```python
+def greet(name):
+    print('Hello, ' + nam)
 
-The type of error is stated at the beginning of the list, and the following line tells us where the error occurred.
+greet('Ada')
+```
+
+a stack trace might look like this:
+
+```plaintext
+Traceback (most recent call last):
+  File "/path/to/example.py", line 4, in <module>
+    greet('Ada')
+  File "/path/to/example.py", line 2, in greet
+    print('Hello, ' + nam)
+NameError: name 'nam' is not defined
+```
+
+The type of error is stated at the beginning of the list, and the following lines tell us where the error occurred. The type of error thrown here is a `NameError`, which says that Python didn't understand the variable `nam` (since it should have been `name` here).
 
 ### Checklist for Troubleshooting
 

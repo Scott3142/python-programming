@@ -291,7 +291,14 @@ Since the numbering (i.e., **indexing**) of the list elements starts with zero, 
 
 **Example output:**
 
-![alt text](img/indexError.png "Index error example")
+```plaintext
+Traceback (most recent call last):
+  File "/path/to/example.pyy", line 13, in <module>
+    word_list_example()
+  File "/path/to/example.py", line 10, in word_list_example
+    print(word_list[2])
+IndexError: list index out of range
+```
 
 Positive
 : **A Place in a List Is Called an Index** <br><br> Numbering places, i.e., indexing, always begins with zero. The list's first value is located at index 0, the second value at index 1, the third value at index 2, and so on. In programs, an index is denoted with a variable called `i`.
