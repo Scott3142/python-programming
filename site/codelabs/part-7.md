@@ -1,7 +1,7 @@
 author: Scott Morgan
 summary: In the seventh part of the course we'll focus on general programming paradigms and algorithms.
 id: part-7
-categories: btec-unit4
+categories: python-programming
 environments: Web
 status: Published
 feedback link: https://github.com/Scott3142/python-programming
@@ -144,10 +144,10 @@ while True:
 ```
 
 Positive
-: **Exercise - Liquid containers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-7-1-liquid-containers.git)
+: **Exercise - Liquid containers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-7-1-liquid-containers.git)
 
 Positive
-: **Exercise - Liquid containers 2.0** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-7-2-liquid-containers-2.git)
+: **Exercise - Liquid containers 2.0** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-7-2-liquid-containers-2.git)
 
 ## Algorithms
 Duration: 01:00:00
@@ -172,7 +172,7 @@ If the information (data) giving to a computer, doesn't follow any rules and isn
 Every programmer should be familiar with at least one sorting algorithm (i.e a way to sort an array). Let's familiarize ourselves with one "classic" sorting algorithm, the selection sort. We'll do so with a programing exercise.
 
 Positive
-: **Exercise - Sorting** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-7-3-sorting.git)
+: **Exercise - Sorting** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-7-3-sorting.git)
 
 ###  Build-in sorting algorithms in Python
 
@@ -204,7 +204,7 @@ Negative
 Python's build-in sorting algorithms work with value type variables and some of Python's build-in reference type variables, like String. In order for our own classes to be sorted, we need to provide Python with some tips on how to do that, because the classes themselves don't contain information on how objects created from them should be ordered. We'll get back to ordering objects created from classes we made ourselves in the advanced course in programming.
 
 Positive
-: **Exercise - Ready made sorting algorithms** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-7-4-ready-made-sorting-algorithms.git)
+: **Exercise - Ready made sorting algorithms** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-7-4-ready-made-sorting-algorithms.git)
 
 ### Information retrieval
 
@@ -231,7 +231,7 @@ When the data searched is in order, searching can be implemented a lot more effi
 The idea behind Binary Search is to start looking for the searched value in the middle index of the array (or list), compare the value found there to the searched value, and if needed (i.e, when the value isn't found there) eliminate half of the search area.
 
 Positive
-: **Exercise - Searching** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-7-5-searching.git)
+: **Exercise - Searching** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-7-5-searching.git)
 
 ## Larger exercises
 Duration: 01:00:00
@@ -239,13 +239,13 @@ Duration: 01:00:00
 To conclude the seventh part, you'll do a few more extensive exercises. There is no predefined structure for these tasks -- think about the classes and objects that will help you complete the task while you're completing it.
 
 Positive
-: **Exercise - Grade statistics** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-7-6-grade-statistics.git)
+: **Exercise - Grade statistics** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-7-6-grade-statistics.git)
 
 Positive
-: **Exercise - Recipe search** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-7-7-recipe-search.git)
+: **Exercise - Recipe search** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-7-7-recipe-search.git)
 
 Positive
-: **Exercise - Big year** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-7-8-big-year.git)
+: **Exercise - Big year** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-7-8-big-year.git)
 
 ## Conclusion
 Duration: 00:10:00
