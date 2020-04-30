@@ -11,6 +11,6 @@ do
         cd ..
     else
         echo "Directory $filename doesn't exist locally. Cloning repo."
-        git clone git@github.com:btec-diploma-unit4-programming-master/$reponame.git
+        git clone git@github.com:den01-python-programming/$reponame.git
     fi
 done < "$input"

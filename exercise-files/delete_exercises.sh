@@ -9,9 +9,9 @@ while IFS= read -r line
 do
     filename="exercise-""$line"
     echo "Checking to see if repo exists on remote..."
-    if git clone git@github.com:btec-diploma-unit4-programming-master/$filename.git
+    if git clone git@github.com:den01-python-programming/$filename.git
     then
-        if hub delete -y btec-diploma-unit4-programming-master/$filename
+        if hub delete -y den01-python-programming/$filename
         then
             echo "Repo was present on remote so we deleted it."
         else

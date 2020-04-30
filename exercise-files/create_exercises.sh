@@ -7,12 +7,12 @@ do
     then
         echo "Directory $filename exists. Pulling git repo!"
         cd $filename
-        #git remote add origin git@github.com:btec-diploma-unit4-programming-master/$filename
+        #git remote add origin git@github.com:den01-python-programming/$filename
         #git pull origin master
         cd ..
     else
         echo "Directory $filename doesn't exist locally. Checking to see if repo exists on remote..."
-        if git submodule add git@github.com:btec-diploma-unit4-programming-master/$filename.git
+        if git submodule add git@github.com:den01-python-programming/$filename.git
         then
             echo "Repo was present on remote so we added it as a submodule."
         else
@@ -25,7 +25,7 @@ do
             #git init
             #git add --all
             #git commit -m 'Initial commit'
-            #hub create btec-diploma-unit4-programming-master/$filename
+            #hub create den01-python-programming/$filename
             #git push origin master
             #cd ..
         fi
