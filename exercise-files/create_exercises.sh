@@ -7,8 +7,8 @@ do
     then
         echo "Directory $filename exists. Pulling git repo!"
         cd $filename
-        git remote add origin git@github.com:btec-diploma-unit4-programming-master/$filename
-        git pull origin master
+        #git remote add origin git@github.com:btec-diploma-unit4-programming-master/$filename
+        #git pull origin master
         cd ..
     else
         echo "Directory $filename doesn't exist locally. Checking to see if repo exists on remote..."

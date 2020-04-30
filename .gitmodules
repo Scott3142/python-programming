@@ -454,3 +454,6 @@
 [submodule "exercise-files/exercise-4-26-numbers-from-a-file"]
 	path = exercise-files/exercise-4-26-numbers-from-a-file
 	url = git@github.com:btec-diploma-unit4-programming-master/exercise-4-26-numbers-from-a-file.git
+[submodule "exercise-files/exercise-1-10-various-variables"]
+	path = exercise-files/exercise-1-10-various-variables
+	url = git@github.com:btec-diploma-unit4-programming-master/exercise-1-10-various-variables.git
