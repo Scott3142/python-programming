@@ -1,7 +1,7 @@
 author: Scott Morgan
 summary: Setting up git and virtual environments
 id: getting-started
-categories: btec-unit4
+categories: python-programming
 environments: Web
 status: Published
 feedback link: https://github.com/Scott3142/python-programming

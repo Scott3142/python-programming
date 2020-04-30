@@ -3,7 +3,7 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2020-04-29T10:45:27+01:00",
+  "updated": "2020-04-30T10:02:39+01:00",
   "id": "faqs",
   "duration": 0,
   "title": "FAQs",
@@ -14,7 +14,7 @@
     "published"
   ],
   "category": [
-    "btec-unit4"
+    "python-programming"
   ],
   "tags": [
     "web"

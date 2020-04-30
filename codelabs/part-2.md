@@ -1,7 +1,7 @@
 author: Scott Morgan
 summary: The second part of the material focusses on repetition in programs and how to divide functionality into distinct units.
 id: part-2
-categories: btec-unit4
+categories: python-programming
 environments: Web
 status: Published
 feedback link: https://github.com/Scott3142/python-programming
@@ -81,10 +81,10 @@ def product():
 In the example above, the program has been implemented so that the variables are declared first after which values are read into them. Variable declaration and the reading of values into them can also be combined into one.
 
 Positive
-: **Exercise - Squared** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-1-squared.git)
+: **Exercise - Squared** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-1-squared.git)
 
 Positive
-: **Exercise - Square Root of Sum** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-2-square-root-of-sum.git)
+: **Exercise - Square Root of Sum** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-2-square-root-of-sum.git)
 
 ### Conditional Logic
 
@@ -143,10 +143,10 @@ def product():
 ```
 
 Positive
-: **Exercise - Absolute Value** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-3-absolute-value.git)
+: **Exercise - Absolute Value** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-3-absolute-value.git)
 
 Positive
-: **Exercise - Comparing Numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-4-comparing-numbers.git)
+: **Exercise - Comparing Numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-4-comparing-numbers.git)
 
 ## Repeating functionality
 Duration: 01:00:00
@@ -271,7 +271,7 @@ Negative
 : Exit? (y exits) <br> *User: \<no\>* <br> Ok! Let's carry on! <br> Exit? (y exits) <br> *User: \<non\>* <br> Ok! Let's carry on! <br> Exit? (y exits) <br> *User: \<y\>* <br> Ready! <br>
 
 Positive
-: **Exercise - Carry on?** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-5-carry-on.git)
+: **Exercise - Carry on?** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-5-carry-on.git)
 
 In the previous example, the program read inputs of type string from the user. The program can also be implemented with other types of variables. The program below asks numbers from the user until the user inputs a zero.
 
@@ -292,7 +292,7 @@ Negative
 : Input a number, 0 to quit <br> *User: \<5\>* <br> You input 5 <br> Input a number, 0 to quit <br> *User: \<-2\>* <br> You input -2 <br> Input a number, 0 to quit <br> *User: \<y\>* <br> Done, thank you! <br>
 
 Positive
-: **Exercise - Are we there yet?** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-6-are-we-there-yet.git)
+: **Exercise - Are we there yet?** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-6-are-we-there-yet.git)
 
 ### Returning to the Start of the Loop
 
@@ -330,7 +330,7 @@ while True:
 ```
 
 Positive
-: **Exercise - Only positives** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-7-only-positives.git)
+: **Exercise - Only positives** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-7-only-positives.git)
 
 In the previous exercise, you made a program that asks the user for numbers. If the user entered a negative number, the program would inform them that the number was invalid, and if the user entered a zero, the program would exit. A possible solution to the exercise is the following.
 
@@ -539,15 +539,15 @@ Negative
 : Insert a number (0 exits) <br> *User: \<1\>* <br> Insert a number (0 exits) <br> *User: \<2\>* <br> Insert a number (0 exits) <br> *User: \<1\>* <br> Insert a number (0 exits) <br> *User: \<-1\>* <br> Insert a number (0 exits) <br> *User: \<0\>* <br> Total of ones: 2
 
 Positive
-: **Exercise - Number of Numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-8-number-of-numbers.git)
+: **Exercise - Number of Numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-8-number-of-numbers.git)
 
 Positive
-: **Exercise - Number of Negative Numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-9-number-of-negative-numbers.git)
+: **Exercise - Number of Negative Numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-9-number-of-negative-numbers.git)
 
 The programs written in the previous exercises have read input from the user and kept track of the count of certain types of numbers. In the next exercise, the requested sum of numbers is not much different -- this time, rather than keeping track of the number of values entered, you add the number entered by the user to the sum.
 
 Positive
-: **Exercise - Sum of Numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-10-sum-of-numbers.git)
+: **Exercise - Sum of Numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-10-sum-of-numbers.git)
 
 Sometimes you need to use multiple variables. The example below shows a program which reads numbers from the user until the user writes 0.
 Then the program prints the number of positive and negative numbers given, and the percentage of positive numbers from all numbers given.
@@ -597,13 +597,13 @@ if (number_of_positives + number_of_negatives > 0):
 ```
 
 Positive
-: **Exercise - Number and sum of numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-11-number-and-sum-of-numbers.git)
+: **Exercise - Number and sum of numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-11-number-and-sum-of-numbers.git)
 
 Positive
-: **Exercise - Average of numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-12-average-of-numbers.git)
+: **Exercise - Average of numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-12-average-of-numbers.git)
 
 Positive
-: **Exercise - Average of positive numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-13-average-of-positive-numbers.git)
+: **Exercise - Average of positive numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-13-average-of-positive-numbers.git)
 
 ## More loops
 Duration: 01:00:00
@@ -673,13 +673,13 @@ for target_list "in" expression_list:
 We will continue practicing loops in the following exercises. You can use either a `while` loop with a condition, or a `for` loop.
 
 Positive
-: **Exercise - Counting** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-14-counting.git)
+: **Exercise - Counting** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-14-counting.git)
 
 Positive
-: **Exercise - Counting to a hundred** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-15-counting-to-hundred.git)
+: **Exercise - Counting to a hundred** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-15-counting-to-hundred.git)
 
 Positive
-: **Exercise - From where to where?** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-16-from-where-to-where.git)
+: **Exercise - From where to where?** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-16-from-where-to-where.git)
 
 ### On Stopping a Loop Execution
 
@@ -753,13 +753,13 @@ print(result)
 ```
 
 Positive
-: **Exercise - Sum of a sequence** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-17-sum-of-a-sequence.git)
+: **Exercise - Sum of a sequence** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-17-sum-of-a-sequence.git)
 
 Positive
-: **Exercise - Sum of a sequence - the sequel** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-18-sum-of-a-sequence-2.git)
+: **Exercise - Sum of a sequence - the sequel** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-18-sum-of-a-sequence-2.git)
 
 Positive
-: **Exercise - Factorial** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-19-factorial.git)
+: **Exercise - Factorial** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-19-factorial.git)
 
 ### On the Structure of Programs Using Loops
 
@@ -842,7 +842,7 @@ print("Invalid numbers: " + str(invalid_numbers))
 ```
 
 Positive
-: **Exercise - Repeating, breaking and remembering** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-20-repeating-breaking-and-remembering.git)
+: **Exercise - Repeating, breaking and remembering** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-20-repeating-breaking-and-remembering.git)
 
 Positive
 : **Implementing a program one small part at a time** <br><br> In the previous exercise, we used a series of exercises to practice implementing a program one piece at a time. <br><br> When you are writing a program, whether it's an exercise or a personal project, figure out the types of parts the program needs to function and proceed by implementing them one part at a time. Make sure to test the program right after implementing each part. <br><br> Never try solving the whole problem at once, because that makes running and testing the program in the middle of the problem-solving process difficult. Start with something easy that you know you can do. When one part works, you can move on to the next. <br><br> Some of the exercises are already split into parts. However, it's often the case in programming that these parts need to be split into even smaller parts. You should almost always run the program after every new line of code. This ensures that the solution is moving in the right direction. <br><br>
@@ -1073,10 +1073,10 @@ Positive
 : **Methods vs Functions** <br><br> A method in python is somewhat similar to a function, except it is associated with object/classes. Methods in python are very similar to functions except for two major differences. <br><br> 1. The method is implicitly used for an object for which it is called. <br> 2. The method is accessible to data that is contained within the class. <br><br> You can read more [here](https://www.tutorialspoint.com/difference-between-method-and-function-in-python).
 
 Positive
-: **Exercise - In a hole in the ground** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-21-in-a-hole-in-the-ground.git)
+: **Exercise - In a hole in the ground** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-21-in-a-hole-in-the-ground.git)
 
 Positive
-: **Exercise - Reprint** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-22-reprint.git)
+: **Exercise - Reprint** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-22-reprint.git)
 
 From here on out, when introducing methods, we will not explicitly mention that they must be located in the correct place. Methods cannot be defined e.g. inside other methods.
 
@@ -1137,10 +1137,10 @@ Negative
 If an expression is used as a parameter for a method, the expression is evaluated prior to the method call. Above, the expression evaluates to `3` and the final method call is of the form `greet(3) `.
 
 Positive
-: **Exercise - From one to parameter** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-23-from-one-to-parameter.git)
+: **Exercise - From one to parameter** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-23-from-one-to-parameter.git)
 
 Positive
-: **Exercise - From parameter to one** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-24-from-parameter-to-one.git)
+: **Exercise - From parameter to one** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-24-from-parameter-to-one.git)
 
 ### Multiple Parameters
 
@@ -1164,7 +1164,7 @@ Negative
 : The sum of numbers 3 and 5 is 8 <br> The sum of numbers 2 and 4 is 6
 
 Positive
-: **Exercise - Division** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-25-division.git)
+: **Exercise - Division** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-25-division.git)
 
 ### Parameter Values Are Copied in a Method Call
 
@@ -1253,7 +1253,7 @@ print("the result of the calculation " + str(number))
 ```
 
 Positive
-: **Exercise - Numero uno** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-26-numero-uno.git)
+: **Exercise - Numero uno** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-26-numero-uno.git)
 
 When execution inside a method reaches the command `return`, the execution of that method ends and the value is returned to the calling method. Any lines of source code following the command `return` are never executed.
 
@@ -1388,17 +1388,17 @@ def sum(self,first,second):
 Now the value of the variable `number1` is copied as the value of the method parameter `first`, and the value of the variable `number2` is copied as the value of the parameter `second`.
 
 Positive
-: **Exercise - Summation** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-27-summation.git)
+: **Exercise - Summation** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-27-summation.git)
 
 Positive
-: **Exercise - Smallest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-28-smallest.git)
+: **Exercise - Smallest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-28-smallest.git)
 
 Positive
-: **Exercise - Greatest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-29-greatest.git)
+: **Exercise - Greatest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-29-greatest.git)
 <programming-exercise name='Averaging' tmcname='part02-Part02_32.Averaging'>
 
 Positive
-: **Exercise - Averaging** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-2-30-averaging.git)
+: **Exercise - Averaging** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-30-averaging.git)
 
 ### Execution of Method Calls and the Call Stack
 

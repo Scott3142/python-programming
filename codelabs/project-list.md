@@ -1,7 +1,7 @@
 author: Scott Morgan
 summary: Try out some of these projects below!
 id: project-list
-categories: btec-unit4
+categories: python-programming
 environments: Web
 status: Published
 feedback link: https://github.com/Scott3142/python-programming

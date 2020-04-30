@@ -1,7 +1,7 @@
 author: Scott Morgan
 summary: The main themes in the third part of the course are adding information to list and array data structures, and handling information in string form.
 id: part-3
-categories: btec-unit4
+categories: python-programming
 environments: Web
 status: Published
 feedback link: https://github.com/Scott3142/python-programming
@@ -262,10 +262,10 @@ Negative
 : Third
 
 Positive
-: **Exercise - Third Element** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-1-third-element.git)
+: **Exercise - Third Element** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-1-third-element.git)
 
 Positive
-: **Exercise - Second Plus Third** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-2-second-plus-third.git)
+: **Exercise - Second Plus Third** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-2-second-plus-third.git)
 
 ### Retrieving Information from a "Non-Existent" Place
 
@@ -345,7 +345,7 @@ Negative
 : Number of values on the list: 0 <br> Number of values on the list: 1 <br> Number of values on the list: 1
 
 Positive
-: **Exercise - List size** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-3-list-size.git)
+: **Exercise - List size** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-3-list-size.git)
 
 ### Iterating Over a List Continued
 
@@ -466,31 +466,31 @@ Positive
 : **Notice about the following exercises** <br><br> The next exercises are meant for learning to use lists and indices. Even if you could complete the exercises without a list, concentrate on training to use it. The functionality in the exercises is to be implemented after reading the input numbers.
 
 Positive
-: **Exercise - Last in list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-4-last-in-list.git)
+: **Exercise - Last in list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-4-last-in-list.git)
 
 Positive
-: **Exercise - First and last** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-5-first-and-last.git)
+: **Exercise - First and last** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-5-first-and-last.git)
 
 Positive
-: **Exercise - Reember these numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-6-remember-these-numbers.git)
+: **Exercise - Reember these numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-6-remember-these-numbers.git)
 
 Positive
-: **Exercise - Only these numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-7-only-these-numbers.git)
+: **Exercise - Only these numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-7-only-these-numbers.git)
 
 Positive
-: **Exercise - Greatest in list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-8-greatest-in-list.git)
+: **Exercise - Greatest in list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-8-greatest-in-list.git)
 
 Positive
-: **Exercise - Index of** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-9-index-of.git)
+: **Exercise - Index of** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-9-index-of.git)
 
 Positive
-: **Exercise - Index of smallest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-10-index-of-smallest.git)
+: **Exercise - Index of smallest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-10-index-of-smallest.git)
 
 Positive
-: **Exercise - Sum of a list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-11-sum-of-a-list.git)
+: **Exercise - Sum of a list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-11-sum-of-a-list.git)
 
 Positive
-: **Exercise - Average of a list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-12-average-of-a-list.git)
+: **Exercise - Average of a list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-12-average-of-a-list.git)
 
 ### Removing from a List and Checking the Existence of a Value
 
@@ -550,7 +550,7 @@ Negative
 : Is the first found? true <br> Second was found <br> Second can still be found
 
 Positive
-: **Exercise - On the list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-13-on-the-list.git)
+: **Exercise - On the list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-13-on-the-list.git)
 
 ### List as a Method Parameter
 
@@ -585,7 +585,7 @@ Negative
 : 1 <br> 2 <br> 2 <br> 1
 
 Positive
-: **Exercise - Print in range** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-14-print-in-range.git)
+: **Exercise - Print in range** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-14-print-in-range.git)
 
 As before, a method can also return a value. The methods that return values have the `return` command. The method below returns the length of the list, although is a completely redundant method.
 
@@ -609,7 +609,7 @@ def average(numbers):
 ```
 
 Positive
-: **Exercise - Sum** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-15-sum.git)
+: **Exercise - Sum** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-15-sum.git)
 
 ### On Copying the List to a Method Parameter
 
@@ -645,7 +645,7 @@ Negative
 : [3, 2, 6, -1] <br> [2, 6, -1] <br> []
 
 Positive
-: **Exercise - Remove last** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-16-remove-last.git)
+: **Exercise - Remove last** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-16-remove-last.git)
 
 Positive
 : **NumPy Arrays** <br><br> We've gotten familiar with the list, which has a lot of functionality to make the life of a programmer easier. Perhaps the most important is about adding elements. From the point of view of the programmer, the size of the list is unlimited. In reality there are no magic tricks in the list -- they have been programmed like any other programs or tools offered by the programming language. When you create a list, a limited space is reserved in the memory of the computer. When the list runs out of space, a larger space is reserved and the data from the previous space is copied to the new one. <br><br> Even though the list is simple to use, sometimes we need an alternative way of storing data, the NumPy array. The main benefits of using NumPy arrays is, in general, smaller memory consumption and better runtime behaviour. We will not dive any deeper into NumPy arrays in this course, but you should be aware of their existence and, in particular their applicability to data science and scientific computing. <br><br> You can read more [here](https://numpy.org/doc/stable/reference/generated/numpy.array.html?highlight=array#numpy.array).
@@ -702,13 +702,13 @@ Negative
 : Hi Lily and see you later!
 
 Positive
-: **Exercise - Print thrice** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-17-print-thrice.git)
+: **Exercise - Print thrice** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-17-print-thrice.git)
 
 Positive
-: **Exercise - Is it true** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-18-is-it-true.git)
+: **Exercise - Is it true** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-18-is-it-true.git)
 
 Positive
-: **Exercise - Login** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-19-login.git)
+: **Exercise - Login** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-19-login.git)
 
 ### Splitting a string
 
@@ -732,10 +732,10 @@ Negative
 : first <br> second <br> third <br> fourth <br><br> first <br> second <br> third <br> fourth <br>
 
 Positive
-: **Exercise - Line by line** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-20-line-by-line.git)
+: **Exercise - Line by line** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-20-line-by-line.git)
 
 Positive
-: **Exercise - AV Club** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-21-av-club.git)
+: **Exercise - AV Club** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-21-av-club.git)
 
 ### Data of Fixed Format
 
@@ -762,7 +762,7 @@ Negative
 : *User: \<sebastian,2\>* <br> Name: sebastian, age: 2 <br> *User: \<lucas,2\>* <br> Name: lucas, age: 2 <br> *User: \<lily,1\>* <br>  Name: lily, age: 1
 
 Positive
-: **Exercise - First Words** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-22-first-words.git)
+: **Exercise - First Words** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-22-first-words.git)
 
 In the exercises above, we actually implemented a very simple decrypting method for secret messages. One variant of these hidden messages consists of the first character of each line. Let's continue along the same theme! You can get a character at a specified index of a string very similarly to how you access the index of a list, with the `[]` notation.
 
@@ -828,10 +828,10 @@ Negative
 : *User: \<sebastian,2\>* <br> *User: \<lucas,2\>* <br> *User: \<lily,1\>* <br> Average age: 1.66...
 
 Positive
-: **Exercise - Age of the Oldest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-23-age-of-oldest.git)
+: **Exercise - Age of the Oldest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-23-age-of-oldest.git)
 
 Positive
-: **Exercise - Name of the Oldest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-24-name-of-oldest.git)
+: **Exercise - Name of the Oldest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-24-name-of-oldest.git)
 
 In the next exercise you'll be asked for the length of the names. You can find out the length of a string exactly as for a list, with the `len()`-method:
 
@@ -845,7 +845,7 @@ Negative
 : The length of the word equisterian is 11
 
 Positive
-: **Exercise - Personal details** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/btec-diploma-unit4-programming-master/exercise-3-25-personal-details.git)
+: **Exercise - Personal details** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-25-personal-details.git)
 
 ## Summary
 Duration: 00:10:00

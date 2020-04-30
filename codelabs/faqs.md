@@ -1,7 +1,7 @@
 author: Scott Morgan
 summary: Have a question? Check it out here first.
 id: faqs
-categories: btec-unit4
+categories: python-programming
 environments: Web
 status: Published
 feedback link: https://github.com/Scott3142/python-programming
