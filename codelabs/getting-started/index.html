@@ -173,6 +173,73 @@
 
       </google-codelab-step>
     
+      <google-codelab-step label="Installing packages with pip" duration="20">
+        <h2 is-upgraded>What is pip?</h2>
+<p>The following is adapted from <a href="https://realpython.com/what-is-pip/" target="_blank">here</a>.</p>
+<p>Pip is the standard package manager for Python which allows you to install and manage packages which are not part of the <a href="https://docs.python.org/3/py-modindex.html" target="_blank">Python standard library</a>. Much like <code>npm</code> for JavaScript, <code>gem</code> for Ruby or even <code>apt</code> for Debian, <code>pip</code> allows you to install and manage additional libraries and dependencies for your projects. If you have installed Python on your machine, the Python installer installs pip, so it should be ready for you to use.  You can verify that pip is available by running the following command in your console:</p>
+<pre><code>pip --version
+</code></pre>
+<p>A lot of commonly used packages are included as standard in the <a href="https://docs.python.org/3/py-modindex.html" target="_blank">Python standard library</a>, which includes an extensive set of packages and modules to help developers with their scripts and applications.</p>
+<p>Sometimes, however, you&#39;ll need functionality that isn&#39;t included as standard, for example <code>numpy</code> or <code>scipy</code> if you&#39;re doing scientific computing and for that you&#39;ll want to look in the <a href="https://pypi.org/" target="_blank">Python Package Index</a>, otherwise known as PyPI. To install these packages, you can use <code>pip</code>.</p>
+<p>Typing <code>pip help</code> into your command prompt should return something like the following:</p>
+<pre><code>Usage:
+  pip &lt;command&gt; [options]
+
+Commands:
+  install                     Install packages.
+  download                    Download packages.
+  uninstall                   Uninstall packages.
+  freeze                      Output installed packages in requirements format.
+  list                        List installed packages.
+  show                        Show information about installed packages.
+  check                       Verify installed packages have compatible
+                              dependencies.
+  config                      Manage local and global configuration.
+  search                      Search PyPI for packages.
+  wheel                       Build wheels from your requirements.
+  hash                        Compute hashes of package archives.
+  completion                  A helper command used for command completion.
+  help                        Show help for commands.
+
+General Options:
+  -h, --help                  Show help.
+  --isolated                  Run pip in an isolated mode, ignoring environment
+                              variables and user configuration.
+  -v, --verbose               Give more output. Option is additive, and can be
+                              used up to 3 times.
+  -V, --version               Show version and exit.
+  -q, --quiet                 Give less output. Option is additive, and can be
+                              used up to 3 times (corresponding to WARNING,
+                              ERROR, and CRITICAL logging levels).
+  --log &lt;path&gt;                Path to a verbose appending log.
+  --proxy &lt;proxy&gt;             Specify a proxy in the form
+                              [user:passwd@]proxy.server:port.
+  --retries &lt;retries&gt;         Maximum number of retries each connection should
+                              attempt (default 5 times).
+  --timeout &lt;sec&gt;             Set the socket timeout (default 15 seconds).
+  --exists-action &lt;action&gt;    Default action when a path already exists:
+                              (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort).
+  --trusted-host &lt;hostname&gt;   Mark this host as trusted, even though it does
+                              not have valid or any HTTPS.
+  --cert &lt;path&gt;               Path to alternate CA bundle.
+  --client-cert &lt;path&gt;        Path to SSL client certificate, a single file
+                              containing the private key and the certificate in
+                              PEM format.
+  --cache-dir &lt;dir&gt;           Store the cache data in &lt;dir&gt;.
+  --no-cache-dir              Disable the cache.
+  --disable-pip-version-check
+                              Don&#39;t periodically check PyPI to determine
+                              whether a new version of pip is available for
+                              download. Implied with --no-index.
+</code></pre>
+<p>As you can see, <code>pip</code> provides an install command to install packages. You can run it to install the <code>numpy</code> package:</p>
+<pre><code>user@hostpip install numpy
+</code></pre>
+<p>As you can see, there are plenty of other useful commands available with <code>pip</code> but we will only explore a few of them here. You can find out more comprehensive information about <code>pip</code> in the <a href="https://pip.pypa.io/en/stable/" target="_blank">docs</a>.</p>
+
+
+      </google-codelab-step>
+    
       <google-codelab-step label="Version control with git" duration="30">
         <h2 is-upgraded>What is Git?</h2>
 <p>The following is adapted from <a href="https://projects.raspberrypi.org/en/projects/getting-started-with-git" target="_blank">these Raspberry Pi foundation resources</a>.</p>

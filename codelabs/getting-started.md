@@ -282,6 +282,85 @@ Activating the virtual environment will change your shell’s prompt to show wha
 
 It is important to enter a virtual environment whenever you are testing Python code. It makes sure the packages are correctly defined and eliminates a lot of errors.
 
+## Installing packages with pip
+Duration: 00:20:00
+
+### What is pip?
+
+The following is adapted from [here](https://realpython.com/what-is-pip/).
+
+Pip is the standard package manager for Python which allows you to install and manage packages which are not part of the [Python standard library](https://docs.python.org/3/py-modindex.html). Much like `npm` for JavaScript, `gem` for Ruby or even `apt` for Debian, `pip` allows you to install and manage additional libraries and dependencies for your projects. If you have installed Python on your machine, the Python installer installs pip, so it should be ready for you to use.  You can verify that pip is available by running the following command in your console:
+
+```bash
+pip --version
+```
+
+A lot of commonly used packages are included as standard in the [Python standard library](https://docs.python.org/3/py-modindex.html), which includes an extensive set of packages and modules to help developers with their scripts and applications.
+
+Sometimes, however, you'll need functionality that isn't included as standard, for example `numpy` or `scipy` if you're doing scientific computing and for that you'll want to look in the [Python Package Index](https://pypi.org/), otherwise known as PyPI. To install these packages, you can use `pip`.
+
+Typing `pip help` into your command prompt should return something like the following:
+
+```plaintext
+Usage:
+  pip <command> [options]
+
+Commands:
+  install                     Install packages.
+  download                    Download packages.
+  uninstall                   Uninstall packages.
+  freeze                      Output installed packages in requirements format.
+  list                        List installed packages.
+  show                        Show information about installed packages.
+  check                       Verify installed packages have compatible
+                              dependencies.
+  config                      Manage local and global configuration.
+  search                      Search PyPI for packages.
+  wheel                       Build wheels from your requirements.
+  hash                        Compute hashes of package archives.
+  completion                  A helper command used for command completion.
+  help                        Show help for commands.
+
+General Options:
+  -h, --help                  Show help.
+  --isolated                  Run pip in an isolated mode, ignoring environment
+                              variables and user configuration.
+  -v, --verbose               Give more output. Option is additive, and can be
+                              used up to 3 times.
+  -V, --version               Show version and exit.
+  -q, --quiet                 Give less output. Option is additive, and can be
+                              used up to 3 times (corresponding to WARNING,
+                              ERROR, and CRITICAL logging levels).
+  --log <path>                Path to a verbose appending log.
+  --proxy <proxy>             Specify a proxy in the form
+                              [user:passwd@]proxy.server:port.
+  --retries <retries>         Maximum number of retries each connection should
+                              attempt (default 5 times).
+  --timeout <sec>             Set the socket timeout (default 15 seconds).
+  --exists-action <action>    Default action when a path already exists:
+                              (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort).
+  --trusted-host <hostname>   Mark this host as trusted, even though it does
+                              not have valid or any HTTPS.
+  --cert <path>               Path to alternate CA bundle.
+  --client-cert <path>        Path to SSL client certificate, a single file
+                              containing the private key and the certificate in
+                              PEM format.
+  --cache-dir <dir>           Store the cache data in <dir>.
+  --no-cache-dir              Disable the cache.
+  --disable-pip-version-check
+                              Don't periodically check PyPI to determine
+                              whether a new version of pip is available for
+                              download. Implied with --no-index.
+```
+
+As you can see, `pip` provides an install command to install packages. You can run it to install the `numpy` package:
+
+```console
+user@hostpip install numpy
+```
+
+As you can see, there are plenty of other useful commands available with `pip` but we will only explore a few of them here. You can find out more comprehensive information about `pip` in the [docs](https://pip.pypa.io/en/stable/).
+
 ## Version control with git
 Duration: 00:30:00
 
