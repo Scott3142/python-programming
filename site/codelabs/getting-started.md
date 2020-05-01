@@ -172,7 +172,7 @@ It would defeat the point of the security if anyone could just put `sudo` in fro
 
 ### Installing software using apt
 
-You can use the `apt` command to install software. This is the 'package manager' that is included with any Debian-based Linux distributions (including Raspbian). It allows you to install and manage new software packages on your Pi. In order to install a new package, you would type `sudo apt install <package-name>` (where `<package-name>` is the package that you want to install). Running `sudo apt update` will update a list of software packages that are available on your system. If a new version of a package is available, then `sudo apt full-upgrade` will update any old packages to the new version. Finally, `sudo apt remove <package-name>` removes or uninstalls a package from your system.
+You can use the `apt` command to install software. This is the 'package manager' that is included with any Debian-based Linux distributions including Ubuntu. It allows you to install and manage new software packages on your Pi. In order to install a new package, you would type `sudo apt install <package-name>` (where `<package-name>` is the package that you want to install). Running `sudo apt update` will update a list of software packages that are available on your system. If a new version of a package is available, then `sudo apt full-upgrade` will update any old packages to the new version. Finally, `sudo apt remove <package-name>` removes or uninstalls a package from your system.
 
 ### Other useful commands
 
@@ -188,7 +188,7 @@ Using `cd` changes the current directory to the one specified. You can use relat
 
 ### pwd
 
-The `pwd` command displays the name of the present working directory: on a Raspberry Pi, entering `pwd` will output something like `/home/username`.
+The `pwd` command displays the name of the present working directory: on a Linux system, entering `pwd` will output something like `/home/username`.
 
 ### mkdir
 
