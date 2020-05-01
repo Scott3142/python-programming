@@ -21,14 +21,14 @@ claat export project-list.md
 # `deploy` Deploy full landing page and codelabs
 
 replaceVideo="<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/6G5pCNRPZPU\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen><\/iframe>"
-replaceSummaryZero="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSdeOZySX5e-0odSsE2W8kNOp_b7OwbqjAcC4_aAJzWCUgVrbg\/viewform?embedded=true\" width=\"640\" height=\"2502\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
-replaceSummaryOne="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSe_xp2JKUSJg1bePtHrADnuREN7n-mLK867P3LiPkoQCa1lGQ\/viewform?embedded=true\" width=\"560\" height=\"1116\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
-replaceSummaryTwo="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSe7zRIt9josURXvpg-0vClO4mDLshGzvEg6pzhiPQaKyLfemg\/viewform?embedded=true\" width=\"560\" height=\"1980\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
-replaceSummaryThree="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSe7DA-Oubzxiv-HMPdB40lrE25xe5FcFnmaxKRiagOwdO7mEg\/viewform?embedded=true\" width=\"560\" height=\"1290\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
-replaceSummaryFour="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSfRRM6PgNppRVObvy4bDi3jDFFdQyCBfUiIDlRNvCs2RNSUIA\/viewform?embedded=true\" width=\"560\" height=\"2082\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
-replaceSummaryFive="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSd6hYWMQVD7qYoAdx9oPY3uOCDmHDNz2kkGt7O-PfnImDGl5w\/viewform?embedded=true\" width=\"560\" height=\"1314\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
-replaceSummarySix="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSd095S6bRAwCzm9aLjK64QmU2MLSZjOyosvCXO-pXGpOMDloQ\/viewform?embedded=true\" width=\"560\" height=\"1686\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
-replaceSummarySeven="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLScgSjpwaXRRYjzDBJsrNNmsGQyAqaGqrp8DhwdcrE1uFmpv3g\/viewform?embedded=true\" width=\"560\" height=\"1536\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
+replaceSummaryZero="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSdeOZySX5e-0odSsE2W8kNOp_b7OwbqjAcC4_aAJzWCUgVrbg\/viewform?embedded=true\" width=\"560\" height=\"2650\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
+replaceSummaryOne="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSe_xp2JKUSJg1bePtHrADnuREN7n-mLK867P3LiPkoQCa1lGQ\/viewform?embedded=true\" width=\"560\" height=\"1216\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
+replaceSummaryTwo="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSe7zRIt9josURXvpg-0vClO4mDLshGzvEg6pzhiPQaKyLfemg\/viewform?embedded=true\" width=\"560\" height=\"2080\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
+replaceSummaryThree="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSe7DA-Oubzxiv-HMPdB40lrE25xe5FcFnmaxKRiagOwdO7mEg\/viewform?embedded=true\" width=\"560\" height=\"1390\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
+replaceSummaryFour="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSfRRM6PgNppRVObvy4bDi3jDFFdQyCBfUiIDlRNvCs2RNSUIA\/viewform?embedded=true\" width=\"560\" height=\"2182\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
+replaceSummaryFive="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSd6hYWMQVD7qYoAdx9oPY3uOCDmHDNz2kkGt7O-PfnImDGl5w\/viewform?embedded=true\" width=\"560\" height=\"1414\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
+replaceSummarySix="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSd095S6bRAwCzm9aLjK64QmU2MLSZjOyosvCXO-pXGpOMDloQ\/viewform?embedded=true\" width=\"560\" height=\"1786\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
+replaceSummarySeven="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLScgSjpwaXRRYjzDBJsrNNmsGQyAqaGqrp8DhwdcrE1uFmpv3g\/viewform?embedded=true\" width=\"560\" height=\"1636\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
 
 while getopts ":o:" opt; do
   case $opt in

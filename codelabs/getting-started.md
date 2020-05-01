@@ -980,6 +980,6 @@ You can find out more [here](https://help.github.com/articles/licensing-a-reposi
 
 In this part you learned about the setting your computer up to get ready for some Python programming, how to submit exercises on this course and how the command line works. We've also explored version control with git and how to work with remote repositories via Github. In the next section we'll actually do some real Python coding, and start to build on the foundations to create functioning projects.
 
-Every part of this course comes with the following learning outcome summary. All answers will be anonymous and it is just for feedback so I can continue to update this material. 
+Every part of this course comes with the following learning outcome summary. All answers will be anonymous and it is just for feedback so I can continue to update this material.
 
-replace-with-summary-form-1
+replace-with-summary-form-0
