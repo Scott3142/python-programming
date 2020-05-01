@@ -625,7 +625,7 @@ user@host:~$ mkdir my_project
 Now you want to go into that directory. You can use the `cd` (change directory) command to do this.
 
 ```bash
-user@host:~$ my_project
+user@host:~$ cd my_project
 ```
 
 Next, you can create a file that will tell people what the project is about. You can use any text editor to do this, such as Notepad or nano. Create a file called `README.md`. The `.md` extension stands for **Markdown**, which is a markup language. You can learn more about Markdown [here](https://daringfireball.net/projects/markdown/).
