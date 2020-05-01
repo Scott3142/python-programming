@@ -9,73 +9,6 @@ analytics account: UA-49751789-4
 
 # Part 1
 
-## Getting Started with Programming
-Duration: 01:00:00
-
-### What you'll learn
-* Become familiar with the Atom development environment used in this course.
-* How to download and submit programming exercises.
-
-Modern programming is practically always done in an IDE (integrated development environment). An IDE contains a set of useful tools for the programmer. It does not create the program by itself, but it can give hints about common mistakes in the code, and help the programmer understand the structure of the program.
-
-There are many IDEs that can be used with Python, including [PyCharm](https://www.jetbrains.com/pycharm), [Idle](https://docs.python.org/3/library/idle.html) and [VS Code](https://code.visualstudio.com/). At the risk of sparking some heated debate ("I love vim", "nano 4eva" etc.), the text editor we recommend and support on this course is called Atom. Atom describes itself as a "hackable text editor for the 21st Century" and is built and maintained by [Github](https://github.com/), which we will also use extensively throughout this course.
-
-Atom is not [technically](https://www.quora.com/Is-Atom-an-IDE-or-Text-Editor) an IDE, but comes with many useful plugins that can be used to mimic the functionality of an IDE. We will use the `script` and `atom-python-test` plugins predominantly on this course.
-
-To start the course you will need:
-
-1. A Github account
-2. Python installed via Anaconda
-3. Atom development environment
-
-You can sign up for Github [here](https://github.com/). Installation instructions for Anaconda and Atom can be found below:
-
-- [Anaconda installation guide (Windows)](https://docs.anaconda.com/anaconda/install/windows/)
-- [Atom installation guide (Windows)](https://flight-manual.atom.io/getting-started/sections/installing-atom/)
-
-Once you have created the user account and installed Anaconda and Atom, watch the video below. The video demonstrates what happens when Atom is opened for the first time. We log into Github and do the first programming exercise.
-
-replace-with-video
-
-Positive
-: **Exercise - Sandbox** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/sandbox.git)
-
-### Programmers Write Source Code
-
-Programming is designing and implementing software. The functionality is implemented based on the wishes and requirements of the users and the customers. Programs are typically implemented (i.e., written or "coded") in a programming language meant to be written and read by humans.
-
-There are hundreds of programming languages out there, and this course focuses one of them. The language used in this course is [Python](https://www.python.org/), which is one of the most commonly-used programming languages in the world. Learning Python also makes it easy to pick up other programming languages.
-
-Programming languages, such as Python, have many commands built-in that a programmer uses when developing software. This makes programming easier as you don't need to implement everything from scratch. For example, programming languages typically have built-in options available for different menus and views used for making graphical user interfaces. Indeed, a large part of programming is making use of available functions and tools in solving problems -- this, however, requires programming experience, which you only gain by programming.
-
-The "code" you write is called **source code**. Source code consists of statements and expressions, which are read line by line from top to bottom, and from left to right. For example, to print "Hello world", you can use the pre-defined Python command `print()`, to which you need to provide the text inside the parentheses that you'd like to be printed:
-
-```python
-print("Hello World")
-```
-
-The above statement is pre-built into Python, and it's used for printing a string. The statement tells the computer to output the string that's been provided to it, placed between the quotation marks.
-
-A lot of the programs you'll see in this course will have a certain frame around the code; the `def main():` syntax and the `if __name__ == '__main__':` block. Don't worry too much about this for now, it'll become very familiar over the course of the material. You don't technically need the framing around the `print` statement or the `if __name__ == '__main__':` block for the program to be able to run in Python, but it's useful to get into the habit now to make things easier later.
-
-```python
-def main():
-    print("Welcome to the course - you will learn to program!")
-
-if __name__ == '__main__':
-    main()
-```
-
-Negative
-: **Note:** It is important to realise at this stage that _indentation_ is critical in Python which is slightly different to other languages. The code snippet below is not the same as the one above and would result in an error.
-
-```python
-def main():
-print("Welcome to the course - you will learn to program!") #this indentation is wrong
-if __name__ == '__main__':
-main()
-```
-
 ## Printing
 Duration: 01:00:00
 
@@ -84,7 +17,7 @@ Duration: 01:00:00
 * Become familiar with executing programs.
 * Know what the term "parameter" means.
 
-The print command `print("Hello world")` prints the text "Hello world".
+As you've seen in the [Getting started](https://scott3142.uk/python-programming/codelabs/part-1/index.html) section of this course, the print command `print("Hello world")` prints the text "Hello world".
 
 ```python
 print("Hello world!")
@@ -93,7 +26,10 @@ print("Hello world!")
 Negative
 : Hello world!
 
-In this material, text boxes like the one above demonstrate an output produced by the example code. Accordingly, the above program would produce the print output "Hello World!". You can try any of these examples in the exercise template named "sandbox", which you will find in the Github repository you cloned in the first part.
+In this material, text boxes like the one above demonstrate an output produced by the example code. Accordingly, the above program would produce the print output "Hello World!". You can try any of these examples in the exercise template named "sandbox", which you will find in the Github repository you cloned in the [first part](https://scott3142.uk/python-programming/codelabs/part-1/index.html).
+
+Positive
+: **Note:** <br><br> The rest of this course assumes from this point on that you can <br> - [Run Python files in the terminal](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#0) <br> - [Clone a repository from Github](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#3) <br> - [Push your completed repository back to Github](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#3). <br><br> If you haven't _at least_ done this with the [sandbox exercise](https://github.com/den01-python-programming/sandbox.git) yet, please make sure you do this _now_ before continuing.
 
 You can print any text you want with the command, as long as you use the command `print("arbitrary text")`. The command below will print the text "Hello there!".
 

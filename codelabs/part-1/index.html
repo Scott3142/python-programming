@@ -27,56 +27,6 @@
                   environment="web"
                   feedback-link="https://github.com/Scott3142/python-programming">
     
-      <google-codelab-step label="Getting Started with Programming" duration="60">
-        <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul class="checklist">
-<li>Become familiar with the Atom development environment used in this course.</li>
-<li>How to download and submit programming exercises.</li>
-</ul>
-<p>Modern programming is practically always done in an IDE (integrated development environment). An IDE contains a set of useful tools for the programmer. It does not create the program by itself, but it can give hints about common mistakes in the code, and help the programmer understand the structure of the program.</p>
-<p>There are many IDEs that can be used with Python, including <a href="https://www.jetbrains.com/pycharm" target="_blank">PyCharm</a>, <a href="https://docs.python.org/3/library/idle.html" target="_blank">Idle</a> and <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>. At the risk of sparking some heated debate (&#34;I love vim&#34;, &#34;nano 4eva&#34; etc.), the text editor we recommend and support on this course is called Atom. Atom describes itself as a &#34;hackable text editor for the 21st Century&#34; and is built and maintained by <a href="https://github.com/" target="_blank">Github</a>, which we will also use extensively throughout this course.</p>
-<p>Atom is not <a href="https://www.quora.com/Is-Atom-an-IDE-or-Text-Editor" target="_blank">technically</a> an IDE, but comes with many useful plugins that can be used to mimic the functionality of an IDE. We will use the <code>script</code> and <code>atom-python-test</code> plugins predominantly on this course.</p>
-<p>To start the course you will need:</p>
-<ol type="1">
-<li>A Github account</li>
-<li>Python installed via Anaconda</li>
-<li>Atom development environment</li>
-</ol>
-<p>You can sign up for Github <a href="https://github.com/" target="_blank">here</a>. Installation instructions for Anaconda and Atom can be found below:</p>
-<ul>
-<li><a href="https://docs.anaconda.com/anaconda/install/windows/" target="_blank">Anaconda installation guide (Windows)</a></li>
-<li><a href="https://flight-manual.atom.io/getting-started/sections/installing-atom/" target="_blank">Atom installation guide (Windows)</a></li>
-</ul>
-<p>Once you have created the user account and installed Anaconda and Atom, watch the video below. The video demonstrates what happens when Atom is opened for the first time. We log into Github and do the first programming exercise.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6G5pCNRPZPU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<aside class="special"><p><strong>Exercise - Sandbox<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/den01-python-programming/sandbox.git" target="_blank">Source files on Github</a></p>
-</aside>
-<h2 is-upgraded>Programmers Write Source Code</h2>
-<p>Programming is designing and implementing software. The functionality is implemented based on the wishes and requirements of the users and the customers. Programs are typically implemented (i.e., written or &#34;coded&#34;) in a programming language meant to be written and read by humans.</p>
-<p>There are hundreds of programming languages out there, and this course focuses one of them. The language used in this course is <a href="https://www.python.org/" target="_blank">Python</a>, which is one of the most commonly-used programming languages in the world. Learning Python also makes it easy to pick up other programming languages.</p>
-<p>Programming languages, such as Python, have many commands built-in that a programmer uses when developing software. This makes programming easier as you don&#39;t need to implement everything from scratch. For example, programming languages typically have built-in options available for different menus and views used for making graphical user interfaces. Indeed, a large part of programming is making use of available functions and tools in solving problems – this, however, requires programming experience, which you only gain by programming.</p>
-<p>The &#34;code&#34; you write is called <strong>source code</strong>. Source code consists of statements and expressions, which are read line by line from top to bottom, and from left to right. For example, to print &#34;Hello world&#34;, you can use the pre-defined Python command <code>print()</code>, to which you need to provide the text inside the parentheses that you&#39;d like to be printed:</p>
-<pre><code>print(&#34;Hello World&#34;)
-</code></pre>
-<p>The above statement is pre-built into Python, and it&#39;s used for printing a string. The statement tells the computer to output the string that&#39;s been provided to it, placed between the quotation marks.</p>
-<p>A lot of the programs you&#39;ll see in this course will have a certain frame around the code; the <code>def main():</code> syntax and the <code>if __name__ == &#39;__main__&#39;:</code> block. Don&#39;t worry too much about this for now, it&#39;ll become very familiar over the course of the material. You don&#39;t technically need the framing around the <code>print</code> statement or the <code>if __name__ == &#39;__main__&#39;:</code> block for the program to be able to run in Python, but it&#39;s useful to get into the habit now to make things easier later.</p>
-<pre><code>def main():
-    print(&#34;Welcome to the course - you will learn to program!&#34;)
-
-if __name__ == &#39;__main__&#39;:
-    main()
-</code></pre>
-<aside class="warning"><p><strong>Note:</strong> It is important to realise at this stage that <em>indentation</em> is critical in Python which is slightly different to other languages. The code snippet below is not the same as the one above and would result in an error.</p>
-</aside>
-<pre><code>def main():
-print(&#34;Welcome to the course - you will learn to program!&#34;) #this indentation is wrong
-if __name__ == &#39;__main__&#39;:
-main()
-</code></pre>
-
-
-      </google-codelab-step>
-    
       <google-codelab-step label="Printing" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
 <ul class="checklist">
@@ -84,12 +34,14 @@ main()
 <li>Become familiar with executing programs.</li>
 <li>Know what the term &#34;parameter&#34; means.</li>
 </ul>
-<p>The print command <code>print(&#34;Hello world&#34;)</code> prints the text &#34;Hello world&#34;.</p>
+<p>As you&#39;ve seen in the <a href="https://scott3142.uk/python-programming/codelabs/part-1/index.html" target="_blank">Getting started</a> section of this course, the print command <code>print(&#34;Hello world&#34;)</code> prints the text &#34;Hello world&#34;.</p>
 <pre><code>print(&#34;Hello world!&#34;)
 </code></pre>
 <aside class="warning"><p>Hello world!</p>
 </aside>
-<p>In this material, text boxes like the one above demonstrate an output produced by the example code. Accordingly, the above program would produce the print output &#34;Hello World!&#34;. You can try any of these examples in the exercise template named &#34;sandbox&#34;, which you will find in the Github repository you cloned in the first part.</p>
+<p>In this material, text boxes like the one above demonstrate an output produced by the example code. Accordingly, the above program would produce the print output &#34;Hello World!&#34;. You can try any of these examples in the exercise template named &#34;sandbox&#34;, which you will find in the Github repository you cloned in the <a href="https://scott3142.uk/python-programming/codelabs/part-1/index.html" target="_blank">first part</a>.</p>
+<aside class="special"><p><strong>Note:<br><br></strong> The rest of this course assumes from this point on that you can <br> - <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#0" target="_blank">Run Python files in the terminal</a><br> - <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#3" target="_blank">Clone a repository from Github</a><br> - <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#3" target="_blank">Push your completed repository back to Github</a>. <br><br> If you haven&#39;t <em>at least</em> done this with the <a href="https://github.com/den01-python-programming/sandbox.git" target="_blank">sandbox exercise</a> yet, please make sure you do this <em>now</em> before continuing.</p>
+</aside>
 <p>You can print any text you want with the command, as long as you use the command <code>print(&#34;arbitrary text&#34;)</code>. The command below will print the text &#34;Hello there!&#34;.</p>
 <pre><code>print(&#34;Hello there!&#34;)
 </code></pre>

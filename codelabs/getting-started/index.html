@@ -27,11 +27,85 @@
                   environment="web"
                   feedback-link="https://github.com/Scott3142/python-programming">
     
+      <google-codelab-step label="Getting Started with Programming" duration="60">
+        <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>Become familiar with the Atom development environment used in this course.</li>
+<li>How to download and submit programming exercises.</li>
+</ul>
+<p>Modern programming is practically always done in an IDE (integrated development environment). An IDE contains a set of useful tools for the programmer. It does not create the program by itself, but it can give hints about common mistakes in the code, and help the programmer understand the structure of the program.</p>
+<p>There are many IDEs that can be used with Python, including <a href="https://www.jetbrains.com/pycharm" target="_blank">PyCharm</a>, <a href="https://docs.python.org/3/library/idle.html" target="_blank">Idle</a> and <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>. At the risk of sparking some heated debate (&#34;I love vim&#34;, &#34;nano 4eva&#34; etc.), the text editor we recommend and support on this course is called Atom. Atom describes itself as a &#34;hackable text editor for the 21st Century&#34; and is built and maintained by <a href="https://github.com/" target="_blank">Github</a>, which we will also use extensively throughout this course.</p>
+<p>Atom is not <a href="https://www.quora.com/Is-Atom-an-IDE-or-Text-Editor" target="_blank">technically</a> an IDE, but comes with many useful plugins that can be used to mimic the functionality of an IDE. We will use the <code>script</code> and <code>atom-python-test</code> plugins predominantly on this course.</p>
+<p>To start the course you will need:</p>
+<ol type="1">
+<li>A Github account</li>
+<li>Python installed on your computer</li>
+<li>Atom development environment</li>
+</ol>
+<p>You can sign up for Github <a href="https://github.com/" target="_blank">here</a>. Installation instructions for Python and Atom can be found below:</p>
+<ul>
+<li><a href="https://www.python.org/downloads/" target="_blank">Python installation guide (Windows)</a></li>
+<li><a href="https://flight-manual.atom.io/getting-started/sections/installing-atom/" target="_blank">Atom installation guide (Windows)</a></li>
+</ul>
+<p>Once you have created the user account and installed Python and Atom, watch the video below. The video demonstrates what happens when Atom is opened for the first time. We log into Github and do the first programming exercise.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6G5pCNRPZPU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<aside class="special"><p><strong>Exercise - Sandbox<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/den01-python-programming/sandbox.git" target="_blank">Source files on Github</a></p>
+</aside>
+<h2 is-upgraded>Programmers Write Source Code</h2>
+<p>Programming is designing and implementing software. The functionality is implemented based on the wishes and requirements of the users and the customers. Programs are typically implemented (i.e., written or &#34;coded&#34;) in a programming language meant to be written and read by humans.</p>
+<p>There are hundreds of programming languages out there, and this course focuses one of them. The language used in this course is <a href="https://www.python.org/" target="_blank">Python</a>, which is one of the most commonly-used programming languages in the world. Learning Python also makes it easy to pick up other programming languages.</p>
+<p>Programming languages, such as Python, have many commands built-in that a programmer uses when developing software. This makes programming easier as you don&#39;t need to implement everything from scratch. For example, programming languages typically have built-in options available for different menus and views used for making graphical user interfaces. Indeed, a large part of programming is making use of available functions and tools in solving problems – this, however, requires programming experience, which you only gain by programming.</p>
+<p>The &#34;code&#34; you write is called <strong>source code</strong>. Source code consists of statements and expressions, which are read line by line from top to bottom, and from left to right. For example, to print &#34;Hello world&#34;, you can use the pre-defined Python command <code>print()</code>, to which you need to provide the text inside the parentheses that you&#39;d like to be printed:</p>
+<pre><code>print(&#34;Hello World&#34;)
+</code></pre>
+<p>The above statement is pre-built into Python, and it&#39;s used for printing a string. The statement tells the computer to output the string that&#39;s been provided to it, placed between the quotation marks.</p>
+<p>A lot of the programs you&#39;ll see in this course will have a certain frame around the code; the <code>def main():</code> syntax and the <code>if __name__ == &#39;__main__&#39;:</code> block. Don&#39;t worry too much about this for now, it&#39;ll become very familiar over the course of the material. You don&#39;t technically need the framing around the <code>print</code> statement or the <code>if __name__ == &#39;__main__&#39;:</code> block for the program to be able to run in Python, but it&#39;s useful to get into the habit now to make things easier later.</p>
+<pre><code>def main():
+    print(&#34;Welcome to the course - you will learn to program!&#34;)
+
+if __name__ == &#39;__main__&#39;:
+    main()
+</code></pre>
+<aside class="warning"><p><strong>Note:</strong> It is important to realise at this stage that <em>indentation</em> is critical in Python which is slightly different to other languages. The code snippet below is not the same as the one above and would result in an error.</p>
+</aside>
+<pre><code>def main():
+print(&#34;Welcome to the course - you will learn to program!&#34;) #this indentation is wrong
+if __name__ == &#39;__main__&#39;:
+main()
+</code></pre>
+
+
+      </google-codelab-step>
+    
       <google-codelab-step label="The command line" duration="30">
         <p>If you&#39;ve never used the command line before, it can be quite daunting but once you get used to it you&#39;ll wonder how you ever worked without it.</p>
 <p>The terminal (or ‘command-line&#39;) on a computer allows a user a great deal of control over their system. Users of Windows may already have come across Command Prompt or Powershell and Mac OS users may be familiar with Terminal. All of these tools allow a user to directly manipulate their system through the use of commands. These commands can be chained together and/or combined together into complex scripts that can potentially complete tasks more efficiently than much larger traditional software packages.</p>
 <p>The following is adapted from <a href="https://www.raspberrypi.org/documentation/" target="_blank">these Raspberry Pi foundation resources</a>.</p>
+<h2 is-upgraded>The terminal in operating systems that aren&#39;t Linux</h2>
+<p>This course focuses mainly on a Linux environment, which can be utilised in Windows through the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">Windows Subsystem for Linux</a>. If you are using alternative terminals or operating systems, you can check out the guides below:</p>
+<ul>
+<li><a href="https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line" target="_blank">Mac OS</a></li>
+<li><a href="https://programminghistorian.org/en/lessons/intro-to-powershell" target="_blank">Windows Powershell</a></li>
+</ul>
+<h2 is-upgraded>Running Python commands in the terminal</h2>
+<p>If you have a directory structure containing some <code>.py</code> files, which you will have if you successfully downloaded the <a href="https://github.com/den01-python-programming/sandbox.git" target="_blank">sandbox exercise</a>, you should see something like the following directory structure. You can view this either in your usual folder structure, or through the command line itself:</p>
+<pre><code>.
++-- README.md
++-- sandbox.py
+</code></pre>
+<p>There may be multiple files in the directory, depending on the repo that you&#39;ve cloned, but if there&#39;s a Python file in there, it will always have the extension <code>.py</code>. You can compile and run the <code>sandbox.py</code> file using the following command from a terminal:</p>
+<pre><code>python3 sandbox.py
+</code></pre>
+<p>Your full command prompt will probably look something like this:</p>
+<pre><code>user@host:~$ python3 main.py
+</code></pre>
+<p>if you&#39;re on Linux, or like this:</p>
+<pre><code>PS C:\Users\User&gt; python3 main.py
+</code></pre>
+<p>if you&#39;re on Windows and using Powershell. Throughout this section, the first part of the command (either <code>user@host:~$</code> for Linux or <code>PS C:\Users\User&gt;</code> for Windows) is not to be typed into the command line. This is just to illustrate to you what the full prompt should look like in each case.</p>
+<p>If you get an error saying that <code>python3</code> is not recognised as a command, <a href="https://www.python.org/downloads/" target="_blank">make sure it&#39;s installed</a>.</p>
 <h2 is-upgraded>The terminal in Linux</h2>
+<p>If you are not using Linux or the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">Windows Subsystem for Linux</a>, you can freely skip ahead to the <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#1" target="_blank">next part</a>.</p>
 <p>If you are using the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">Windows Subsystem for Linux</a>, open it according to the instructions contained on that page, otherwise search for <code>Terminal</code> in your installed software and open it. You should be greeted with a command prompt that looks something like:</p>
 <pre><code>user@host:~$
 </code></pre>
@@ -40,17 +114,6 @@
 <p>One of the key aspects of using a terminal is being able to navigate your file system. Firstly, run the following command: <code>ls -la</code>. You should see a list of files and folders.</p>
 <p>The <code>ls</code> command lists the contents of the directory that you are currently in (your present working directory). The <code>-la</code> component of the command is what&#39;s known as a ‘flag&#39;. Flags modify the command that&#39;s being run. In this case the <code>l</code> displays the contents of the directory in a list, showing data such as their sizes and when they were last edited, and the a displays all files, including those beginning with a ., known as ‘dotfiles&#39;. Dotfiles usually act as configuration files for software and as they are written in text, they can be modified by simply editing them.</p>
 <p>In order to navigate to other directories the change directory command, <code>cd</code>, can be used. You can specify the directory that you want to go to by either the ‘absolute&#39; or the ‘relative&#39; path. So if you wanted to navigate to the <code>Downloads</code> directory, you could either do <code>cd /home/username/Downloads</code> or just <code>cd Downloads</code> (if you are currently in <code>/home/username</code>). There are some special cases that may be useful: <code>~</code> acts as an alias for your home directory, so <code>~/Downloads</code> is the same as <code>/home/username/Downloads</code>; <code>.</code> and <code>..</code> are aliases for the current directory and the parent directory respectively, e.g. if you were in <code>/home/username/Downloads</code>, cd .. would take you to <code>/home/username</code>.</p>
-<h2 is-upgraded>Running Python commands in the terminal</h2>
-<p>If you have a directory structure containing some <code>.py</code> files,</p>
-<pre><code>.
-+-- __init__.py
-+-- main.py
-+-- my_python_file.py
-</code></pre>
-<p>you can compile and run the <code>main.py</code> file using the following command:</p>
-<pre><code>user@host:~$ python3 main.py
-</code></pre>
-<p>If you get an error saying that <code>python3</code> is not recognised as a command, <a href="https://www.python.org/downloads/" target="_blank">make sure it&#39;s installed</a>.</p>
 <h2 is-upgraded>History and auto-complete</h2>
 <p>Rather than type every command, the terminal allows you to scroll through previous commands that you&#39;ve run by pressing the <code>up</code> or <code>down</code> keys on your keyboard. If you are writing the name of a file or directory as part of a command then pressing <code>tab</code> will attempt to auto-complete the name of what you are typing. For example, if you have a file in a directory called <code>aLongFileName</code> then pressing tab after typing <code>a</code> will allow you to choose from all file and directory names beginning with <code>a</code> in the current directory, allowing you to choose <code>aLongFileName</code>.</p>
 <h2 is-upgraded>Sudo</h2>
@@ -139,12 +202,6 @@
 <p>Use <code>ifconfig</code> to display the network configuration details for the interfaces on the current system when run without any arguments (i.e. <code>ifconfig</code>). By supplying the command with the name of an interface (e.g. <code>eth0</code> or <code>lo</code>) you can then alter the configuration: check the manual page for more details.</p>
 <h2 is-upgraded>Finding out about a command</h2>
 <p>To find out more information about a particular command then you can run the <code>man</code> followed by the command you want to know more about (e.g. <code>man ls</code>). The man-page (or manual page) for that command will be displayed, including information about the flags for that program and what effect they have. Some man-pages will give example usage.</p>
-<h2 is-upgraded>The terminal in other Operating Systems</h2>
-<p>This course focuses mainly on a Linux environment, which can be utilised in Windows through the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">Windows Subsystem for Linux</a>. If you are using alternative terminals or operating systems, you can check out the guides below:</p>
-<ul>
-<li><a href="https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line" target="_blank">Mac OS</a></li>
-<li><a href="https://programminghistorian.org/en/lessons/intro-to-powershell" target="_blank">Windows Powershell</a></li>
-</ul>
 
 
       </google-codelab-step>
