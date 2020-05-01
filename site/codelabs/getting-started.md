@@ -9,8 +9,79 @@ analytics account: UA-49751789-4
 
 # Getting Started
 
+## Getting Started with Programming
+Duration: 01:00:00
+
+### What you'll learn
+* Become familiar with the Atom development environment used in this course.
+* How to download and submit programming exercises.
+
+Modern programming is practically always done in an IDE (integrated development environment). An IDE contains a set of useful tools for the programmer. It does not create the program by itself, but it can give hints about common mistakes in the code, and help the programmer understand the structure of the program.
+
+There are many IDEs that can be used with Python, including [PyCharm](https://www.jetbrains.com/pycharm), [Idle](https://docs.python.org/3/library/idle.html) and [VS Code](https://code.visualstudio.com/). At the risk of sparking some heated debate ("I love vim", "nano 4eva" etc.), the text editor we recommend and support on this course is called Atom. Atom describes itself as a "hackable text editor for the 21st Century" and is built and maintained by [Github](https://github.com/), which we will also use extensively throughout this course.
+
+Atom is not [technically](https://www.quora.com/Is-Atom-an-IDE-or-Text-Editor) an IDE, but comes with many useful plugins that can be used to mimic the functionality of an IDE. We will use the `script` and `atom-python-test` plugins predominantly on this course.
+
+To start the course you will need:
+
+1. A Github account
+2. Python installed on your computer
+3. Atom development environment
+
+You can sign up for Github [here](https://github.com/). Installation instructions for Python and Atom can be found below:
+
+- [Python installation guide (Windows)](https://www.python.org/downloads/)
+- [Atom installation guide (Windows)](https://flight-manual.atom.io/getting-started/sections/installing-atom/)
+
+Once you have created the user account and installed Python and Atom, watch the video below. The video demonstrates what happens when Atom is opened for the first time. We log into Github and do the first programming exercise.
+
+replace-with-video
+
+Positive
+: **Exercise - Sandbox** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/sandbox.git)
+
+### Programmers Write Source Code
+
+Programming is designing and implementing software. The functionality is implemented based on the wishes and requirements of the users and the customers. Programs are typically implemented (i.e., written or "coded") in a programming language meant to be written and read by humans.
+
+There are hundreds of programming languages out there, and this course focuses one of them. The language used in this course is [Python](https://www.python.org/), which is one of the most commonly-used programming languages in the world. Learning Python also makes it easy to pick up other programming languages.
+
+Programming languages, such as Python, have many commands built-in that a programmer uses when developing software. This makes programming easier as you don't need to implement everything from scratch. For example, programming languages typically have built-in options available for different menus and views used for making graphical user interfaces. Indeed, a large part of programming is making use of available functions and tools in solving problems -- this, however, requires programming experience, which you only gain by programming.
+
+The "code" you write is called **source code**. Source code consists of statements and expressions, which are read line by line from top to bottom, and from left to right. For example, to print "Hello world", you can use the pre-defined Python command `print()`, to which you need to provide the text inside the parentheses that you'd like to be printed:
+
+```python
+print("Hello World")
+```
+
+The above statement is pre-built into Python, and it's used for printing a string. The statement tells the computer to output the string that's been provided to it, placed between the quotation marks.
+
+A lot of the programs you'll see in this course will have a certain frame around the code; the `def main():` syntax and the `if __name__ == '__main__':` block. Don't worry too much about this for now, it'll become very familiar over the course of the material. You don't technically need the framing around the `print` statement or the `if __name__ == '__main__':` block for the program to be able to run in Python, but it's useful to get into the habit now to make things easier later.
+
+```python
+def main():
+    print("Welcome to the course - you will learn to program!")
+
+if __name__ == '__main__':
+    main()
+```
+
+Negative
+: **Note:** It is important to realise at this stage that _indentation_ is critical in Python which is slightly different to other languages. The code snippet below is not the same as the one above and would result in an error.
+
+```python
+def main():
+print("Welcome to the course - you will learn to program!") #this indentation is wrong
+if __name__ == '__main__':
+main()
+```
+
 ## The command line
 Duration: 00:30:00
+
+### What you'll learn
+* How to run Python commands in the terminal
+* Some key commands to know in Linux
 
 If you've never used the command line before, it can be quite daunting but once you get used to it you'll wonder how you ever worked without it.
 
@@ -18,7 +89,48 @@ The terminal (or 'command-line') on a computer allows a user a great deal of con
 
 The following is adapted from [these Raspberry Pi foundation resources](https://www.raspberrypi.org/documentation/).
 
+### The terminal in operating systems that aren't Linux
+
+This course focuses mainly on a Linux environment, which can be utilised in Windows through the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10). If you are using alternative terminals or operating systems, you can check out the guides below:
+
+- [Mac OS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)
+- [Windows Powershell](https://programminghistorian.org/en/lessons/intro-to-powershell)
+
+### Running Python commands in the terminal
+
+If you have a directory structure containing some `.py` files, which you will have if you successfully downloaded the [sandbox exercise](https://github.com/den01-python-programming/sandbox.git), you should see something like the following directory structure. You can view this either in your usual folder structure, or through the command line itself:
+
+```plaintext
+.
++-- README.md
++-- sandbox.py
+```
+
+There may be multiple files in the directory, depending on the repo that you've cloned, but if there's a Python file in there, it will always have the extension `.py`. You can compile and run the `sandbox.py` file using the following command from a terminal:
+
+```bash
+python3 sandbox.py
+```
+
+Your full command prompt will probably look something like this:
+
+```bash
+user@host:~$ python3 main.py
+```
+
+if you're on Linux, or like this:
+
+```bash
+PS C:\Users\User> python3 main.py
+```
+
+if you're on Windows and using Powershell. Throughout this section, the first part of the command (either `user@host:~$` for Linux or `PS C:\Users\User>` for Windows) is not to be typed into the command line. This is just to illustrate to you what the full prompt should look like in each case.
+
+If you get an error saying that `python3` is not recognised as a command, [make sure it's installed](https://www.python.org/downloads/).
+
 ### The terminal in Linux
+
+If you are not using Linux or the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), you can freely skip ahead to the [next part](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#1).
 
 If you are using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), open it according to the instructions contained on that page, otherwise search for `Terminal` in your installed software and open it. You should be greeted with a command prompt that looks something like:
 
@@ -35,25 +147,6 @@ One of the key aspects of using a terminal is being able to navigate your file s
 The `ls` command lists the contents of the directory that you are currently in (your present working directory). The `-la` component of the command is what's known as a 'flag'. Flags modify the command that's being run. In this case the `l` displays the contents of the directory in a list, showing data such as their sizes and when they were last edited, and the a displays all files, including those beginning with a ., known as 'dotfiles'. Dotfiles usually act as configuration files for software and as they are written in text, they can be modified by simply editing them.
 
 In order to navigate to other directories the change directory command, `cd`, can be used. You can specify the directory that you want to go to by either the 'absolute' or the 'relative' path. So if you wanted to navigate to the `Downloads` directory, you could either do `cd /home/username/Downloads` or just `cd Downloads` (if you are currently in `/home/username`). There are some special cases that may be useful: `~` acts as an alias for your home directory, so `~/Downloads` is the same as `/home/username/Downloads`; `.` and `..` are aliases for the current directory and the parent directory respectively, e.g. if you were in `/home/username/Downloads`, cd .. would take you to `/home/username`.
-
-### Running Python commands in the terminal
-
-If you have a directory structure containing some `.py` files,
-
-```plaintext
-.
-+-- __init__.py
-+-- main.py
-+-- my_python_file.py
-```
-
-you can compile and run the `main.py` file using the following command:
-
-```bash
-user@host:~$ python3 main.py
-```
-
-If you get an error saying that `python3` is not recognised as a command, [make sure it's installed](https://www.python.org/downloads/).
 
 ### History and auto-complete
 
@@ -235,15 +328,12 @@ Use `ifconfig` to display the network configuration details for the interfaces o
 
 To find out more information about a particular command then you can run the `man` followed by the command you want to know more about (e.g. `man ls`). The man-page (or manual page) for that command will be displayed, including information about the flags for that program and what effect they have. Some man-pages will give example usage.
 
-### The terminal in other Operating Systems
-
-This course focuses mainly on a Linux environment, which can be utilised in Windows through the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10). If you are using alternative terminals or operating systems, you can check out the guides below:
-
-- [Mac OS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)
-- [Windows Powershell](https://programminghistorian.org/en/lessons/intro-to-powershell)
-
 ## Installing packages with pip
 Duration: 00:20:00
+
+### What you'll learn
+* What pip is and how to use it
+* What the requirements file is
 
 ### What is pip?
 
@@ -370,6 +460,10 @@ Cue virtual environments...
 ## Python virtual environments
 Duration: 00:10:00
 
+### What you'll learn
+* What virtual environments are
+* How to manage virtual environments and package dependencies
+
 The following is adapted from [the Python documentation](https://docs.python.org/3/tutorial/venv.html).
 
 As we've seen, Python applications will often use packages and modules that don’t come as part of the standard library. These are usually installed via `pip`. Applications will also sometimes need a specific version of a library, because the application may require that a particular bug has been fixed or the application may be written using an obsolete version of the library’s interface.
@@ -474,6 +568,12 @@ You can check which packages are installed at any time using the `pip freeze` co
 
 ## Version control with git
 Duration: 00:30:00
+
+### What you'll learn
+* What git is
+* How to create repositories and make commits
+* How to work with Github, including cloning, pushing and pulling repositories
+* How open source licenses work
 
 ### What is Git?
 
@@ -836,13 +936,13 @@ _Open source products include permission to use the source code, design document
 
 I firmly consider myself part of the [open-source-software movement](https://en.wikipedia.org/wiki/Open-source-software_movement), which is why the material in this course is, and always will be, freely available to access, edit and share. In fact, this course wouldn't even exist without other open-source projects. It's heavily adapted from this [Java programming](https://java-programming.mooc.fi/) course and the website is built from an adapted [open-source project](https://github.com/googlecodelabs/tools) developed by Google.
 
-Whilst a vast number of projects are open-source, some are not and even within the open-source field there are varying **licenses** which define how you are allowed to share and adapt the code. Some allow commercial adaptations, some don't, and most require you to credit the original author. 
+Whilst a vast number of projects are open-source, some are not and even within the open-source field there are varying **licenses** which define how you are allowed to share and adapt the code. Some allow commercial adaptations, some don't, and most require you to credit the original author.
 
-_Whether it specifically says to or not, you should always do this._ 
+_Whether it specifically says to or not, you should always do this._
 
 It is considered to be highly distasteful to pass something off as your own work when someone else has initially created it. The ongoing attributions for content producers is a huge part of the open-source movement so it is well worth learning about.
 
-The Linux Foundation has [this free course](https://java-programming.mooc.fi/) available to explain the fundamentals of open source software and licensing. 
+The Linux Foundation has [this free course](https://java-programming.mooc.fi/) available to explain the fundamentals of open source software and licensing.
 
 Be aware that these licenses constitute legal agreements in most cases, and most online tutorials are not a substitute for legal advice. You should always read and understand the license agreements before using any code, open source or otherwise.
 
@@ -875,3 +975,11 @@ but not afforded:
 - Warranty
 
 You can find out more [here](https://help.github.com/articles/licensing-a-repository/#disclaimer).
+
+## Summary
+
+In this part you learned about the setting your computer up to get ready for some Python programming, how to submit exercises on this course and how the command line works. We've also explored version control with git and how to work with remote repositories via Github. In the next section we'll actually do some real Python coding, and start to build on the foundations to create functioning projects.
+
+Every part of this course comes with the following learning outcome summary. All answers will be anonymous and it is just for feedback so I can continue to update this material. 
+
+replace-with-summary-form-1

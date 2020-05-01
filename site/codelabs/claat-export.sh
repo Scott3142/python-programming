@@ -21,6 +21,7 @@ claat export project-list.md
 # `deploy` Deploy full landing page and codelabs
 
 replaceVideo="<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/6G5pCNRPZPU\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen><\/iframe>"
+replaceSummaryZero="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSdeOZySX5e-0odSsE2W8kNOp_b7OwbqjAcC4_aAJzWCUgVrbg\/viewform?embedded=true\" width=\"640\" height=\"2502\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
 replaceSummaryOne="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSe_xp2JKUSJg1bePtHrADnuREN7n-mLK867P3LiPkoQCa1lGQ\/viewform?embedded=true\" width=\"560\" height=\"1116\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
 replaceSummaryTwo="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSe7zRIt9josURXvpg-0vClO4mDLshGzvEg6pzhiPQaKyLfemg\/viewform?embedded=true\" width=\"560\" height=\"1980\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
 replaceSummaryThree="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSe7DA-Oubzxiv-HMPdB40lrE25xe5FcFnmaxKRiagOwdO7mEg\/viewform?embedded=true\" width=\"560\" height=\"1290\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
@@ -35,6 +36,7 @@ while getopts ":o:" opt; do
       if [ "$OPTARG" = "local" ]; then
         echo "Serving codelabs locally." >&2
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-video<\/p>/$replaceVideo/g" {} \;
+        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-0<\/p>/$replaceSummaryZero/g" {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-1<\/p>/$replaceSummaryOne/g" {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-2<\/p>/$replaceSummaryTwo/g" {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-3<\/p>/$replaceSummaryThree/g" {} \;
@@ -48,6 +50,7 @@ while getopts ":o:" opt; do
 	    echo "Be aware - this is okay, but it loads the codelabs from scott3142.uk" >&2
 	    find . -type f -name 'index.html' -exec sed -i 's/https:\/\/storage\.googleapis\.com\/codelab-elements\/codelab-elements\.js/\.\.\/\.\.\/elements\/codelab-elements\/codelab-elements\.js/g' {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-video<\/p>/$replaceVideo/g" {} \;
+        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-0<\/p>/$replaceSummaryZero/g" {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-1<\/p>/$replaceSummaryOne/g" {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-2<\/p>/$replaceSummaryTwo/g" {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-3<\/p>/$replaceSummaryThree/g" {} \;
@@ -61,6 +64,7 @@ while getopts ":o:" opt; do
         echo "Deploying landing page and codelabs." >&2
         find . -type f -name 'index.html' -exec sed -i 's/https:\/\/storage\.googleapis\.com\/codelab-elements\/codelab-elements\.js/\.\.\/\.\.\/elements\/codelab-elements\/codelab-elements\.js/g' {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-video<\/p>/$replaceVideo/g" {} \;
+        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-0<\/p>/$replaceSummaryZero/g" {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-1<\/p>/$replaceSummaryOne/g" {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-2<\/p>/$replaceSummaryTwo/g" {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-3<\/p>/$replaceSummaryThree/g" {} \;
