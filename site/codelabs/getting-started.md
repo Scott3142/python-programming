@@ -158,11 +158,9 @@ The Linux operating system is a multi-user operating system which allows multipl
 
 Most users are allowed to run most programs, and to save and edit files stored in their own home folder. Normal users are not normally allowed to edit files in other users' folders or any of the system files. There's a special user in Linux known as the **superuser**, which is usually given the username `root`. The superuser has unrestricted access to the computer and can do almost anything.
 
-### sudo
-
 You won't normally log into the computer as `root`, but you can use the `sudo` command to provide access as the superuser. If you log into your computer as `username`, then you're logging in as a normal user. You can run commands as the `root` user by using the `sudo` command before the program you want to run.
 
-For example, if you want to install additional software on Raspbian then you normally use the `apt` tool. To update the list of available software, you need to prefix the `apt` command with sudo:
+For example, if you want to install additional software then you normally use the `apt` tool. To update the list of available software, you need to prefix the `apt` command with sudo:
 
 `sudo apt update`
 
@@ -174,7 +172,7 @@ It would defeat the point of the security if anyone could just put `sudo` in fro
 
 ### Installing software using apt
 
-You can use the `apt` command to install software in Raspbian. This is the 'package manager' that is included with any Debian-based Linux distributions (including Raspbian). It allows you to install and manage new software packages on your Pi. In order to install a new package, you would type `sudo apt install <package-name>` (where `<package-name>` is the package that you want to install). Running `sudo apt update` will update a list of software packages that are available on your system. If a new version of a package is available, then `sudo apt full-upgrade` will update any old packages to the new version. Finally, `sudo apt remove <package-name>` removes or uninstalls a package from your system.
+You can use the `apt` command to install software. This is the 'package manager' that is included with any Debian-based Linux distributions (including Raspbian). It allows you to install and manage new software packages on your Pi. In order to install a new package, you would type `sudo apt install <package-name>` (where `<package-name>` is the package that you want to install). Running `sudo apt update` will update a list of software packages that are available on your system. If a new version of a package is available, then `sudo apt full-upgrade` will update any old packages to the new version. Finally, `sudo apt remove <package-name>` removes or uninstalls a package from your system.
 
 ### Other useful commands
 
