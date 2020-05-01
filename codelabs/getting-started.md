@@ -79,6 +79,10 @@ main()
 ## The command line
 Duration: 00:30:00
 
+### What you'll learn
+* How to run Python commands in the terminal
+* Some key commands to know in Linux
+
 If you've never used the command line before, it can be quite daunting but once you get used to it you'll wonder how you ever worked without it.
 
 The terminal (or 'command-line') on a computer allows a user a great deal of control over their system. Users of Windows may already have come across Command Prompt or Powershell and Mac OS users may be familiar with Terminal. All of these tools allow a user to directly manipulate their system through the use of commands. These commands can be chained together and/or combined together into complex scripts that can potentially complete tasks more efficiently than much larger traditional software packages.
@@ -327,6 +331,10 @@ To find out more information about a particular command then you can run the `ma
 ## Installing packages with pip
 Duration: 00:20:00
 
+### What you'll learn
+* What pip is and how to use it
+* What the requirements file is
+
 ### What is pip?
 
 The following is adapted from [here](https://realpython.com/what-is-pip/).
@@ -452,6 +460,10 @@ Cue virtual environments...
 ## Python virtual environments
 Duration: 00:10:00
 
+### What you'll learn
+* What virtual environments are
+* How to manage virtual environments and package dependencies
+
 The following is adapted from [the Python documentation](https://docs.python.org/3/tutorial/venv.html).
 
 As we've seen, Python applications will often use packages and modules that don’t come as part of the standard library. These are usually installed via `pip`. Applications will also sometimes need a specific version of a library, because the application may require that a particular bug has been fixed or the application may be written using an obsolete version of the library’s interface.
@@ -556,6 +568,12 @@ You can check which packages are installed at any time using the `pip freeze` co
 
 ## Version control with git
 Duration: 00:30:00
+
+### What you'll learn
+* What git is
+* How to create repositories and make commits
+* How to work with Github, including cloning, pushing and pulling repositories
+* How open source licenses work
 
 ### What is Git?
 
@@ -957,3 +975,11 @@ but not afforded:
 - Warranty
 
 You can find out more [here](https://help.github.com/articles/licensing-a-repository/#disclaimer).
+
+## Summary
+
+In this part you learned about the setting your computer up to get ready for some Python programming, how to submit exercises on this course and how the command line works. We've also explored version control with git and how to work with remote repositories via Github. In the next section we'll actually do some real Python coding, and start to build on the foundations to create functioning projects.
+
+Every part of this course comes with the following learning outcome summary. All answers will be anonymous and it is just for feedback so I can continue to update this material. 
+
+replace-with-summary-form-1

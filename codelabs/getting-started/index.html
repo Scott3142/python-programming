@@ -78,7 +78,12 @@ main()
       </google-codelab-step>
     
       <google-codelab-step label="The command line" duration="30">
-        <p>If you&#39;ve never used the command line before, it can be quite daunting but once you get used to it you&#39;ll wonder how you ever worked without it.</p>
+        <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>How to run Python commands in the terminal</li>
+<li>Some key commands to know in Linux</li>
+</ul>
+<p>If you&#39;ve never used the command line before, it can be quite daunting but once you get used to it you&#39;ll wonder how you ever worked without it.</p>
 <p>The terminal (or ‘command-line&#39;) on a computer allows a user a great deal of control over their system. Users of Windows may already have come across Command Prompt or Powershell and Mac OS users may be familiar with Terminal. All of these tools allow a user to directly manipulate their system through the use of commands. These commands can be chained together and/or combined together into complex scripts that can potentially complete tasks more efficiently than much larger traditional software packages.</p>
 <p>The following is adapted from <a href="https://www.raspberrypi.org/documentation/" target="_blank">these Raspberry Pi foundation resources</a>.</p>
 <h2 is-upgraded>The terminal in operating systems that aren&#39;t Linux</h2>
@@ -207,7 +212,12 @@ main()
       </google-codelab-step>
     
       <google-codelab-step label="Installing packages with pip" duration="20">
-        <h2 is-upgraded>What is pip?</h2>
+        <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>What pip is and how to use it</li>
+<li>What the requirements file is</li>
+</ul>
+<h2 is-upgraded>What is pip?</h2>
 <p>The following is adapted from <a href="https://realpython.com/what-is-pip/" target="_blank">here</a>.</p>
 <p>Pip is the standard package manager for Python which allows you to install and manage packages which are not part of the <a href="https://docs.python.org/3/py-modindex.html" target="_blank">Python standard library</a>. Much like <code>npm</code> for JavaScript, <code>gem</code> for Ruby or even <code>apt</code> for Debian, <code>pip</code> allows you to install and manage additional libraries and dependencies for your projects. If you have installed Python on your machine, the Python installer installs pip, so it should be ready for you to use.  You can verify that pip is available by running the following command in your console:</p>
 <pre><code>user@host:~$ pip --version
@@ -298,7 +308,12 @@ General Options:
       </google-codelab-step>
     
       <google-codelab-step label="Python virtual environments" duration="10">
-        <p>The following is adapted from <a href="https://docs.python.org/3/tutorial/venv.html" target="_blank">the Python documentation</a>.</p>
+        <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>What virtual environments are</li>
+<li>How to manage virtual environments and package dependencies</li>
+</ul>
+<p>The following is adapted from <a href="https://docs.python.org/3/tutorial/venv.html" target="_blank">the Python documentation</a>.</p>
 <p>As we&#39;ve seen, Python applications will often use packages and modules that don&#39;t come as part of the standard library. These are usually installed via <code>pip</code>. Applications will also sometimes need a specific version of a library, because the application may require that a particular bug has been fixed or the application may be written using an obsolete version of the library&#39;s interface.</p>
 <p>This means it may not be possible for one Python installation to meet the requirements of every application. If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.</p>
 <p>The solution for this problem is to create a virtual environment, a self-contained directory tree that contains a Python installation for a particular version of Python, plus a number of additional packages.</p>
@@ -357,7 +372,14 @@ ModuleNotFoundError: No module named &#39;numpy&#39;
       </google-codelab-step>
     
       <google-codelab-step label="Version control with git" duration="30">
-        <h2 is-upgraded>What is Git?</h2>
+        <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>What git is</li>
+<li>How to create repositories and make commits</li>
+<li>How to work with Github, including cloning, pushing and pulling repositories</li>
+<li>How open source licenses work</li>
+</ul>
+<h2 is-upgraded>What is Git?</h2>
 <p>The following is adapted from <a href="https://projects.raspberrypi.org/en/projects/getting-started-with-git" target="_blank">these Raspberry Pi foundation resources</a>.</p>
 <p class="image-container"><img alt="git-logo" src="img/a541254233c49153.png"></p>
 <p>Git is a version control system (VCS) for tracking changes to files and coordinating changes between multiple people who are all working on the same code base.</p>
@@ -586,6 +608,14 @@ nothing to commit, working directory clean
 <li>Warranty</li>
 </ul>
 <p>You can find out more <a href="https://help.github.com/articles/licensing-a-repository/#disclaimer" target="_blank">here</a>.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Summary" duration="0">
+        <p>In this part you learned about the setting your computer up to get ready for some Python programming, how to submit exercises on this course and how the command line works. We&#39;ve also explored version control with git and how to work with remote repositories via Github. In the next section we&#39;ll actually do some real Python coding, and start to build on the foundations to create functioning projects.</p>
+<p>Every part of this course comes with the following learning outcome summary. All answers will be anonymous and it is just for feedback so I can continue to update this material.</p>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe_xp2JKUSJg1bePtHrADnuREN7n-mLK867P3LiPkoQCa1lGQ/viewform?embedded=true" width="560" height="1116" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 
       </google-codelab-step>
