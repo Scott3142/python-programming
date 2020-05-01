@@ -479,7 +479,7 @@ Duration: 00:30:00
 
 The following is adapted from [these Raspberry Pi foundation resources](https://projects.raspberrypi.org/en/projects/getting-started-with-git).
 
-![logo](img/git-logo.png)
+![git-logo](img/git-logo.png)
 
 Git is a version control system (VCS) for tracking changes to files and coordinating changes between multiple people who are all working on the same code base.
 
@@ -827,3 +827,45 @@ All the files and directories will now be on your computer. Go ahead and make th
 - Your commit message will be there, but you can change it and even add a more detailed description if you like.
 
 - Once you're happy, click the **Create pull request** button. The maintainer of the repo will then be able to see your pull request. They can then choose to merge it into their repo, or close it.
+
+### A note on licensing and open-source
+
+From [Wikipeida](https://en.wikipedia.org/wiki/Open_source):
+
+_Open source products include permission to use the source code, design documents, or content of the product. It most commonly refers to the open-source model, in which open-source software or other products are released under an open-source license as part of the open-source-software movement._
+
+I firmly consider myself part of the [open-source-software movement](https://en.wikipedia.org/wiki/Open-source-software_movement), which is why the material in this course is, and always will be, freely available to access edit and share. In fact, this course wouldn't even exist without other open-source projects. It's heavily adapted from this [Java programming](https://java-programming.mooc.fi/) course and the website is built from an adapted [open-source project](https://github.com/googlecodelabs/tools) developed by Google.
+
+Whilst a vast number of projects are open-source, some are not and even within the open-source field there are varying **licenses** which define how you are allowed to share and adapt the code. Some allow commercial adaptations, some don't and most require you to credit the original author. _Whether is specifically says to or not, you should always do this._ It is considered to be highly distasteful to pass something off as your own work when someone else has initially created it. The ongoing attributions for content producers is a huge part of the open-source movement so it is well worth learning about.
+
+The Linux Foundation has [this free course](https://java-programming.mooc.fi/) available to explain the fundamentals of open source software and licensing. Be aware that these constitute legal agreements in most cases, and most online tutorials are not a substitute for legal advice. You should always read and understand the license agreements before using any code, open source or otherwise.
+
+#### Licenses on Github
+
+Github has a handy built-in feature that allows you to read licenses from the web interface, as long as your code has a `LICENSE.md` file. Let's look at an example using the [Google Codelabs](https://github.com/googlecodelabs/tools) repo that this site is built from.
+
+When you open the repo, you should see the following:
+
+![logo](img/licenses-1.png)
+
+Towards the top right hand side of that screen, you should see the words `Apache-2.0`. Click that. You'll see the license itself (usually legal jargon) following this handy description:
+
+![logo](img/licenses-2.png)
+
+This tells you exactly what you are allowed to do with these resources and gives a link to [learn more about repository licenses](https://help.github.com/articles/licensing-a-repository/#disclaimer).
+
+For example, with the [Google codelabs](https://github.com/googlecodelabs/tools/) resource, we are allowed:
+
+- Commercial use
+- Modification
+- Distribution
+- Patent use
+- Private use
+
+but not afforded:
+
+- Trademark use
+- Liability
+- Warranty
+
+You can find out more [here](https://help.github.com/articles/licensing-a-repository/#disclaimer).
