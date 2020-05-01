@@ -237,17 +237,10 @@ The `chown` command changes the user and/or group that owns a file. It normally 
 ### ssh
 
 `ssh` denotes the secure shell. Connect to another computer using an encrypted network connection.
-For more details see [SSH (secure shell)](../../remote-access/ssh/)
 
 ### scp
 
 The `scp` command copies a file from one computer to another using `ssh`.
-For more details see [SCP (secure copy)](../../remote-access/ssh/scp.md)
-
-### sudo
-
-The `sudo` command enables you to run a command as a superuser, or another user. Use `sudo -s` for a superuser shell.
-For more details see [Root user / sudo](root.md)
 
 ### dd
 
