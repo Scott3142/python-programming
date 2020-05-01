@@ -736,7 +736,7 @@ user@host:~$ git commit -am 'adds data csv and python program'
 Then you carry on working on your code for a bit. Every time you make a significant change to the file, you can perform a new commit.
 
 ```bash
-user@host:~$ git commit -am 'finishes find function'
+user@host:~$ git commit -am 'finishes get_age method'
 ```
 
 Now imagine that you've made a horrible mistake. You've been working for a while and you've deleted your `get_age()` method, and then performed a commit. With Git, it's easy to go back in time and restore an earlier version of any of your files. Let's first look at the commit history of the file.
@@ -752,13 +752,13 @@ commit 12c4c693e95438ceadcf3f4fb39c83ce1ade712f
 Author: Grace Hopper <g.hopper@harvard.edu>
 Date:   Fri Mar 3 20:27:17 2017 +0000
 
-	deletes find function
+	deletes get_age method
 
 commit 5fd772a292c019a7cf3012b1156685280d4a7d2d
 Author: Grace Hopper <g.hopper@harvard.edu>
 Date:   Fri Mar 3 20:24:52 2017 +0000
 
-	finishes find function
+	finishes get_age method
 
 commit 127545c19794b5fe869dd22d0cf57bf8820c5794
 Author: Grace Hopper <g.hopper@harvard.edu>
@@ -778,7 +778,7 @@ user@host:~$ git checkout 5fd772a292c019a7cf3012b1156685280d4a7d2d person.py
 The file will be restored and you can now commit this change.
 
 ```bash
-user@host:~$ git commit -am 'restores find function'
+user@host:~$ git commit -am 'restores get_age method'
 ```
 
 ### Making major changes
