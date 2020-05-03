@@ -21,7 +21,9 @@ We've so far been practicing the fundamentals of the language, such as variables
 
 ### A Programmer Blind to Their Own Code
 
-A programmer often becomes blind to their code. Let's familiarize ourselves with this effect with the aid of the short video below. Count how many times the white-shirted players pass the ball between each other. [Watch video](https://www.youtube.com/watch?v=Ahg6qcgoay)
+A programmer often becomes blind to their code. Let's familiarize ourselves with this effect with the aid of the short video below. Count how many times the white-shirted players pass the ball between each other.
+
+replace-with-perception-video
 
 There's something else that also happens in the video that may go unnoticed at first. This effect is known as perceptual blindness, and is explained by the fact that as we focus on a specific task, our brains tend to filter out information that is irrelevant to that task. However, we don't always know what information is, in fact, essential and what is not - an example of this being when we study. Concentrating on a specific part of a study exercise can lead to relevant information being filtered out.
 
@@ -37,16 +39,17 @@ sum = 0
 
 while True:
     value = int(input("Provide a value, a negative value ends the program"))
+
     if (value < 0):
         break
 
     values = values + 1
-    sum = sum + value
+    sum = sum + value        
 
 if (sum == 0):
     print("The average of the values could not be calculated.")
 else:
-    print("Average of values: " + str(1.0 * sum / values))
+    print("Average of values: " + str(sum / values))
 ```
 
 Perceptual blindness is something that one cannot be eliminated completely. However, there are ways by which a programmer can lessen its effect - the first one being taking breaks, which requires that work is begun early. Code comments, proper naming of things, and "debugging" prints are additional examples of things that are also helpful.
@@ -121,7 +124,7 @@ while True:
 if (sum == 0):
     print("The average of the values could not be calculated.")
 else:
-    print("Average of values: " + str(1.0 * sum / values))
+    print("Average of values: " + str(sum / values))
 ```
 
 Had the program contained an error, print debugging could have been used to unravel its functionality by adding print statements in the appropriate places. The example below contains one possible example of a program containing print-debug statements.
@@ -147,7 +150,7 @@ print("-- values: " + str(values) + ", sum: " + str(sum))
 if (sum == 0):
     print("The average of the values could not be calculated.")
 else:
-    print("Average of values: " + str(1.0 * sum / values))
+    print("Average of values: " + str(sum / values))
 ```
 
 When a program is executed multiple times with appropriate inputs the hidden error is often found. Coming up with relevant inputs is a skill in its own right. It's essential to test the so-called corner cases, i.e., circumstances where the program execution could be exceptional. An example scenario would be one where the user does not enter a single acceptable value or enters zeros or very large values.
@@ -160,7 +163,7 @@ Duration: 01:00:00
 * You are familiar with the concept of an index, you can add values to a list, and you know how to retrieve information from a list's indices.
 * You know how to iterate over a list with multiple different loop types.
 * You know how to check if a value exists in a list, and also know how to remove values from a list.
-* You are aware of the list being a reference-type variable, and become familiar with using lists as method parameters.
+* You will become familiar with using lists as method parameters.
 
 In programming, we often encounter situations where we want to handle many values. The only method we've used so far has been to define a separate variable for storing each value. This is impractical.
 
@@ -195,7 +198,7 @@ The type of the my_list variable is `list`. The list can hold multiple variable 
 
 ### Adding to a List and Retrieving a Value from a Specific Place
 
-The next example demonstrates the addition of a few strings into a list containing strings. Addition is done with the list method `add`, which takes the value to be added as a parameter. We then print the value at position zero. To retrieve a value from a certain position, you using `my_list[2]` syntax, where the square brackets are given the place of retrieval as a parameter.
+The next example demonstrates the addition of a few strings into a list containing strings. Addition is done with the list method `append`, which takes the value to be added as a parameter. We then print the value at position zero. To retrieve a value from a certain position, you using `my_list[2]` syntax, where the square brackets are given the place of retrieval as a parameter.
 
 To call a list method you first write the name of the variable describing the list, followed by a dot and the name of the method.
 
@@ -249,7 +252,7 @@ def word_list_example():
     # add two values to the word list
     word_list.append("First")
     word_list.append("Second")
-    word_list.append("Thirdd")
+    word_list.append("Third")
 
     # retrieve the value from the last position of the word list, and print it
     print(word_list[-1])
@@ -293,7 +296,7 @@ Since the numbering (i.e., **indexing**) of the list elements starts with zero, 
 
 ```plaintext
 Traceback (most recent call last):
-  File "/path/to/example.pyy", line 13, in <module>
+  File "/path/to/example.py", line 13, in <module>
     word_list_example()
   File "/path/to/example.py", line 10, in word_list_example
     print(word_list[2])
@@ -301,7 +304,7 @@ IndexError: list index out of range
 ```
 
 Positive
-: **A Place in a List Is Called an Index** <br><br> Numbering places, i.e., indexing, always begins with zero. The list's first value is located at index 0, the second value at index 1, the third value at index 2, and so on. In programs, an index is denoted with a variable called `i`.
+: **A Place in a List Is Called an Index** <br><br> Numbering places, i.e., indexing, always begins with zero. The list's first value is located at index 0, the second value at index 1, the third value at index 2, and so on. In programs, an index is often denoted with a variable called `i`.
 
 ### Iterating Over a List
 
@@ -428,7 +431,7 @@ Python actually has a "better" way of accessing list items in a for loop which i
 teachers = ["Simon","Samuel","Ann","Anna"] # an alternative way of creating a list
 
 for teacher in teachers:
-     print(teachers)
+     print(teacher)
 ```
 
 There are certain reasons why you'd use `range(len(list))` but most of the time we will use the latter of these two options.
@@ -439,7 +442,7 @@ Let's consider using a list to store integers. The functionality is largely the 
 numbers = [1,2,3,4] # an alternative way of creating a list
 
 for number in numbers:
-    print(numbers)
+    print(number)
 ```
 
 Negative
@@ -504,9 +507,11 @@ In Python, list's methods `clear()`, `pop()`, and `remove()` are used to remove 
 my_list = list(range(10))
 print(my_list)
 
-print(my_list.pop(0))
+my_list.pop(0)
+print(my_list)
 
-print(my_list.pop(3))
+my_list.pop(3)
+print(my_list)
 ```
 
 Negative
@@ -520,9 +525,11 @@ You can remove the first item from the list where its value is equal to the spec
 my_list = ['Alice', 'Bob', 'Charlie', 'Bob', 'Dave']
 print(my_list)
 
-print(my_list.remove('Alice'))
+my_list.remove('Alice')
+print(my_list)
 
-print(my_list.remove('Bob'))
+my_list.remove('Bob')
+print(my_list)
 ```
 
 Negative
@@ -535,15 +542,15 @@ The list method **in** can be used to check the existence of a value in the list
 ```python
 list = ["First","Second","Third"]
 
- print("Is the first found? " + str("First" in list))
+print("Is the first found? " + str("First" in list))
 
 found = "Second" in list
 if found:
-     print("Second was found")
+    print("Second was found")
 
 # or more simply
 if "Second" in list:
-     print("Second can still be found")
+    print("Second can still be found")
 ```
 
 Negative
@@ -559,7 +566,7 @@ Like other variables, a list can be used as a parameter to a method too. When th
 ```python
 def printout(list):
     for value in list:
-         print(value)
+        print(value)
 
 my_list = ["One","Two"]
 printout(my_list)
@@ -575,7 +582,7 @@ It's also possible to define multiple variables for a method. In the example the
 def print_smaller_than(numbers, threshold):
     for number in numbers:
         if (number < threshold):
-             print(number)
+            print(number)
 
 list = [1,2,3,2,1]
 print_smaller_than(list, 3)
@@ -819,13 +826,13 @@ while True:
     count += 1
 
 if (count > 0):
-    print("Age average: " + str(1.0 * sum / count))
+    print("Age average: " + str(sum / count))
 else:
     print("No input.")
 ```
 
 Negative
-: *User: \<sebastian,2\>* <br> *User: \<lucas,2\>* <br> *User: \<lily,1\>* <br> Average age: 1.66...
+: *User: \<sebastian,2\>* <br> *User: \<lucas,2\>* <br> *User: \<lily,1\>* <br> Age average: 1.66...
 
 Positive
 : **Exercise - Age of the Oldest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-23-age-of-oldest.git)
