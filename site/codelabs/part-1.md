@@ -102,11 +102,11 @@ The program above will print:
 Negative
 : Hello world! <br> ... and the universe!
 
-The programming exercises will be checked by Python's tester when uploaded to Github. The tester is very meticulous. The guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.
+The programming exercises will be checked by Python's tester when uploaded to Github. The tester is very meticulous and the guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.
 
 This preciseness with regard to the output is relevant in programming in a more general sense. Missing a single character may cause an error. Novice programmers often enter a comma instead of a dot, or write, for instance `prnt` instead of `print`, leave out apostrophes, or forget a bracket after a command. Any one of these would cause an error and cause the program execution to fail.
 
-Learning programming is, in fact, a path full of mistakes -- and every error message is a chance to learn. Keep a look out for any red signs in the IDE and try to read the test errors!
+Learning programming is, in fact, a path full of mistakes -- and every error message is a chance to learn. Keep a look out for any error messages in Atom and try to read the test errors!
 
 Positive
 : **Exercise - Once Upon a Time** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-2-once-upon-a-time.git)
@@ -362,7 +362,6 @@ def main():
     second = input('Write the second string:')
     third = input('Write the third string:')
 
-    print('You wrote: ')
     print("Last string you wrote was " + third + ", which ")
     print("was preceded by " + second+ ".")
     print("The first string was" + first + ".")
@@ -432,13 +431,27 @@ print("The value of the variable is " + str(number))
 Negative
 : The value of the variable is 123 <br> The value of the variable is 42
 
-Let's look at the preceding program's execution step-by-step. When a variable appears in the program for the first time, the computer creates a 'named container' for the variable and assigns it a type. Then, the value on the right side of the equals sign is copied into this named container. You can read more about how Python defines a variable's type [here](https://www.tutorialspoint.com/python/python_variable_types.htm).
+Let's look at the preceding program's execution step-by-step. When a variable appears in the program for the first time, the computer creates a 'named container' for the variable. Then, the value on the right side of the equals sign is copied into this named container.
 
 Whenever a variable is referenced by its name in a program -- here, we want to print the string "The value of the variable is " followed by the value of the `number` variable -- its value is retrieved from a container that has the corresponding name.
 
 The variable is then referenced again by its name in the program -- we again want to print the string "The value of the variable is " followed by the value of the `number` variable. We proceed as normal, retrieving the value of `number` from a container having its name.
 
- At the end of the program, you'll notice that the original value of the variable has vanished. A variable can hold only one value at a time.
+At the end of the program, you'll notice that the original value of the variable has vanished. A variable can hold only one value at a time.
+
+Unlike some other programming languages, you can also redefine a variable to have a different implicit type:
+
+```python
+number = 123
+print("The value of the variable is " + str(number))
+
+number = 42.6
+print("The value of the variable is " + str(number))
+```
+Negative
+: The value of the variable is 123 <br> The value of the variable is 42.6
+
+In the first example, the variable `number` had the type `int` in line 1 and was reassigned to another `int` type in line 4. In the second example, the variable `number` had the type `int` in line 1 and was reassigned to `float` type in line 4. This is prefectly fine in Python but may be strange if coming from other languages like Java.
 
 ### Variable Types
 
@@ -477,7 +490,7 @@ would output:
 Negative
 : 0
 
-since both types are integers. We will not go too much further into the mechanisms of type declaration in Python here, but you can find more about it through a Google search for "Type declarations in Python".
+since both types are integers. We will not go too much further into the mechanisms of type declaration in Python here, but you can read more about it [here](https://www.tutorialspoint.com/python/python_variable_types.htm).
 
 ### Naming Variables
 
@@ -511,9 +524,7 @@ Positive
 
 Variable naming is limited by certain constraints.
 
-Variable names cannot contain certain special symbols, such as exclamation marks (!). Spaces are also not allowed, since they're used to separate parts of commands. Instead of spaces, the convention in many programming languages is to either use a style known as [camelCase](https://en.wikipedia.org/wiki/Camel_case "Camel case – Wikipedia") or [snake_case](https://en.wikipedia.org/wiki/Snake_case) to delimit words. Python variable names are always written in snake_case.
-
-**Note!** The first letter of a variable name is always lower-cased:
+Variable names cannot contain certain special symbols, such as exclamation marks (!). Spaces are also not allowed, since they're used to separate parts of commands. Instead of spaces, the convention in many programming languages is to either use a style known as [snake_case](https://en.wikipedia.org/wiki/Snake_case) or [camelCase](https://en.wikipedia.org/wiki/Camel_case "Camel case – Wikipedia") to delimit words. Python variable names are always written in snake_case.
 
 ```python
 camelCaseVariable = 7 # will work, but not convention in Python
@@ -552,8 +563,8 @@ As such, the possible values of a given variable type are limited. For example, 
 
 | Type | Example | Accepted values |
 | --------------- | ---------------| --------------- |
-| Whole number, i.e., `int` | `value = 4` | An integer can contain whole numbers whose values lie between -2147483648 and 2147483647. |
-| Floating-point number, i.e., `float` | `value = 4.2` | Floating-point numbers contain decimal numbers, with the greatest possible value being approximately 2^1023. When a decimal number is represented with a floating-point number, the value can be inaccurate as floating-points are incapable of representing all decimal numbers. |
+| Whole number, i.e., `int` | `value = 4` | An integer can contain any whole number. Some programming languages have bounds for integer values to do with 32 or 64-bit representations but since Python 3, the values of `int` have been allowed to be unbounded. |
+| Floating-point number, i.e., `float` | `value = 4.2` | Floating-point numbers contain decimal numbers, with the greatest possible value being 1.7976931348623157e+308 (a **huge** value). When a decimal number is represented with a floating-point number, the value can be inaccurate as floating-points are incapable of representing all decimal numbers. You can see this inaccuracy if you run (for example) the command `1.2 - 1.0` in a Python file. Unless you are doing some serious scientific computing, you shouldn't need to worry much about these errors in practice. |
 | `String` | `value = "Hi!"`| A string can contain text. Strings are enclosed in quotation marks. |
 | True or false value, i.e., `bool`  | `right = True`| A boolean contains either the value `True` or `False`. (Note the capitalisation.) |
 
@@ -582,6 +593,36 @@ Negative
 : Write a value <br> *User \<42\>* <br> You wrote 42
 
 Note that we had to convert our variable back to a string in the `print` statement in order to be able to concatenate it with the string "You wrote ". An error would have been thrown if we had ommited the `str()`.
+
+### Reading floats and booleans
+
+The `float` and `bool` commands convert strings to floats and booleans. Similarly to `int`, they take the string containing the value to be converted as a parameter.
+
+```python
+value_as_string = "42.6"
+value = float(value_as_string)
+
+print(value)
+```
+Negative
+: 42.6
+
+```python
+value_as_string = "True"
+value = bool(value_as_string)
+
+print(value)
+```
+Negative
+: True
+
+If you try to convert a value such as `value_as_string = "42.6"` to an `int`, an error will be thrown:
+
+```plaintext
+Traceback (most recent call last):
+  File "sandbox.py"", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '42.6'
+```
 
 Positive
 : **Exercise - Different types of input**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-11-different-inputs.git)
@@ -654,11 +695,15 @@ An expression does not change the value stored in a variable unless the expressi
 first = 2
 second = 4
 
-# the expression below does not even work, since
-# the result is not assigned to any variable
-# or given as a parameter to a print statement
 first + second
 ```
+
+we would get the output
+
+Negative
+: 6
+
+Note that when working with numbers, the `print` statement is implicit. It is not recommended to omit the `print` statement intentionally, unless working with very simple programs as it can often lead to confusion.
 
 ### Calculating and Printing
 
@@ -720,7 +765,8 @@ Positive
 Positive
 : **Exercise - Multiplication formula**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-16-multiplication-formula.git)
 
-Once you have completed the previous exercise, try finding out the greatest possible multiplication that you can calculate. The reason behind the phenomenon you'll observe is that the value of an integer value is capped at the maximum of 2^31-1 (i.e. 2147483647). This is because integer variables are represented with 32 bits in the computer's memory.
+Positive
+: Once you have completed the previous exercise, try finding out the greatest possible multiplication of two floats that you can calculate. The reason behind the phenomenon you'll observe is that the value of a float is capped at the maximum of 1.7976931348623157e+308. This is because of limitations to the computer's memory. <br><br> To put it into some perspective, this value is **vastly** greater than the total number of atoms in the observable universe (10e+80) and is not even comprehensible to humans. There is very little to zero chance that any scientific or engineering application will ever require working with numbers so large.
 
 ### Division
 
@@ -803,7 +849,7 @@ Negative
 
 A conditional statement begins with the keyword `if` followed by a condition, which is evaluated when the conditional statement is reached. The result of the evaluation is a boolean value. No evaluation occurred above. Instead, a boolean value (`True`) was explicitly used in the conditional statement.
 
-The condition is followed by a block, which is indented beneath. The source code inside the block is executed if the expression inside the parentheses evaluates to _true_.
+The condition is followed by a block, which is indented beneath. The source code inside the block is executed if the expression inside the parentheses evaluates to `True`.
 
 Let's look at an example where we compare numbers in the conditional statement.
 
@@ -970,7 +1016,7 @@ Positive
 
 ### Conditional Statement Expression and the Boolean Variable
 
-The value that goes between the parentheses of the conditional statement should be of type boolean after the evaluation. `boolean` type variables are either _true_ or _false_.
+The value that goes between the parentheses of the conditional statement should be of type boolean after the evaluation. `boolean` type variables are either `True` or `False`.
 
 ```python
 is_it_true = True
@@ -999,7 +1045,7 @@ second = 3
 is_greater = first > second
 ```
 
-In the example above, the boolean variable `is_greater` now contains the boolean value _false_. We can extend the previous example by adding a conditional statement to it.
+In the example above, the boolean variable `is_greater` now contains the boolean value `False`. We can extend the previous example by adding a conditional statement to it.
 
 ```python
 first = 1
@@ -1013,7 +1059,7 @@ if (is_less_than):
 Negative
 : 1 is less than 3!
 
-The code above has been executed to the point where the program's variables have been created and assigned values. The variable `is_less_than` has `true` as its value. Next in the execution is the comparison `if (is_less_than)` -- the value for the variable `is_less_than` is found in its container, and the program finally prints:
+The code above has been executed to the point where the program's variables have been created and assigned values. The variable `is_less_than` has `True` as its value. Next in the execution is the comparison `if (is_less_than)` -- the value for the variable `is_less_than` is found in its container, and the program finally prints:
 
 Positive
 : **Remainder**: <br><br> The modulo operator is a slightly less-used operator, which is, however, very handy when we want to check the divisibility of a number, for example. The symbol for the modulo operator is `%`.
@@ -1083,7 +1129,7 @@ Positive
 
 ### Logical Operators
 
-The expression of a conditional statement may consist of multiple parts, in which the logical operators **and** `and`, **or** `or`, and **not** `not` are used.
+The expression of a conditional statement may consist of multiple parts, in which the logical operators `and`, `or`, and `not` are used.
 
 - An expression consisting of two expressions combined using the and-operator is true, if and only if both of the combined expressions evaluate to true.
 
@@ -1091,7 +1137,7 @@ The expression of a conditional statement may consist of multiple parts, in whic
 
 - Logical operators are not used for changing the boolean value from true to false, or false to true.
 
-In the next example we combine two individual conditions using `and`, i.e., the and-operator. The code is used to check if the number in the variable is greater than or equal to 5 and less than or equal to 10. In other words, whether it's within the range of 5-10:
+In the next example we combine two individual conditions using `and`. The code is used to check if the number in the variable is greater than or equal to 5 and less than or equal to 10. In other words, whether it's within the range of 5-10:
 
 ```python
 print("Is the number within the range 5-10: ")
