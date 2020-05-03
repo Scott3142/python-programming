@@ -1081,13 +1081,13 @@ If your code doesn't work and you don't know where the error is, these steps wil
 6. If your program causes an exception, you should definitely pay attention to the *stack trace* associated with the exception, which is the list of method calls that resulted in the situation that caused the exception.
 7. Learn how to use a debugger.
 
-### Passing Test Input to Scanner
+### Automated testing
 
-Manually testing the program is often laborious. It's possible to automate the passing of input by, for example, passing the string to be read into an `input()` method. You'll find an example below of how to test a program automatically using the Python library `unittest`.
+Manually testing the program is often laborious. It's possible to automate the testing by using a testing framework such as `pytest`. You'll find an example below of how to test a program automatically:
 
 ```python
 def ada():
-  return "Ada Lovelace"
+    return "Ada Lovelace"
 ```
 
 ```python
@@ -1105,14 +1105,14 @@ The automated testing method laid out above where the input to a program is modi
 
 Unit testing refers to the testing of individual components in the source code, such as classes and their provided methods. The writing of tests reveals whether each class and method observes or deviates from the guideline of each method and class having a single, clear responsibility. The more responsibility the method has, the more complex the test. If a large application is written in a single method, writing tests for it becomes very challenging, if not impossible. Similarly, if the application is broken into clear classes and methods, then writing tests is straightforward.
 
-Ready-made unit test libraries are commonly used in writing tests, which provide methods and help classes for writing tests. The most common unit testing library in Python is `unittest`. The code you have been submitting to Github throughout this course has been unit tested along the way. Go back and look through the folders you've been submitting. You should see test files in there which are used to verify your code is correct. Explore them!
+Ready-made unit test libraries are commonly used in writing tests, which provide methods and help classes for writing tests. The most common unit testing library in Python is `unittest` but we will advocate the usage of `pytest` in this course. The code you have been submitting to Github throughout this course has been unit tested along the way. Go back and look through the folders you've been submitting. You should see test files in there which are used to verify your code is correct. Explore them!
 
 Positive
-: **Unit Testing and the Parts of an Application** <br><br> Unit testing tends to be extremely complicated if the whole application has been written in one function. To make testing easier, the app should split into small parts, each having a clear responsibility. In the previous section, we practiced this when we separated the user interface from the application logic. Writing tests for parts of an application, such as the 'JokeManager' class from the previous section is significantly easier than writing them for program contained in "main" in its entirety.
+: **Unit Testing and the Parts of an Application** <br><br> Unit testing tends to be extremely complicated if the whole application has been written in one function. To make testing easier, the app should split into small parts, each having a clear responsibility. In the previous section, we practiced this when we separated the user interface from the application logic. Writing tests for parts of an application, such as the 'JokeManager' class from the exercise in the previous section is significantly easier than writing them for program contained in "main" in its entirety.
 
 ### Test-Driven Development
 
-[Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development) Test-driven development is a software development process that's based on constructing a piece of software in small iterations. In test-driven software development, the first thing a programmer always does is write an automatically-executable test, which tests a single piece of the computer program.
+[Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development) is a software development process that's based on constructing a piece of software in small iterations. In test-driven software development, the first thing a programmer always does is write an automatically-executable test, which tests a single piece of the computer program.
 
 The test will not pass because the functionality that satisfies the test, i.e., the part of the computer program to be examined, is missing. Once the test has been written, functionality that meets the test requirements is added to the program. The tests are run again. If all tests pass, a new test is added, or alternatively, if the tests fail, the already-written program is corrected. If necessary, the internal structure of the program will be corrected or refactored, so that the functionality of the program remains the same, but the structure becomes clearer.
 

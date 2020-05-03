@@ -51,7 +51,9 @@
             print(song)
 </code></pre>
 <p>Creating playlists is easy with the help of the class above.</p>
-<pre><code>list = Playlist()
+<pre><code>from playlist import Playlist
+
+list = Playlist()
 list.add_song(&#34;22&#34;)
 list.add_song(&#34;Blank Space&#34;)
 list.print_songs()
@@ -141,7 +143,10 @@ list.print_songs()
           return self.name + &#34;, minimum height requirement: &#34; + str(self.minimum_height) + &#34;, visitors: &#34; + str(self.visitors) + &#34;\n&#34; + &#34;riding:\n&#34; + on_the_ride
 </code></pre>
 <p>Let&#39;s test out the extended amusement park ride:</p>
-<pre><code>matt = Person(&#34;Matt&#34;)
+<pre><code>from amusement_park_ride import AmusementParkRide
+from person import Person
+
+matt = Person(&#34;Matt&#34;)
 matt.set_weight(86)
 matt.set_height(180)
 
@@ -168,8 +173,8 @@ else:
 print(megafobia)
 </code></pre>
 <p>The program&#39;s output is:</p>
-<p>Megafobia, minimum height requirement: 140, visitors: 0 riding:</p>
-<p>Matt is allowed on the ride Ada is not allowed on the ride Megafobia, minimum height requirement: 140, visitors: 1 riding: Matt</p>
+<aside class="warning"><p>Megafobia, minimum height requirement: 140, visitors: 0 <br> riding: <br><br> Matt is allowed on the ride <br> Ada is not allowed on the ride <br> Megafobia, minimum height requirement: 140, visitors: 1 <br> riding: <br> Matt</p>
+</aside>
 <p>Even though there is no one on the ride, the string <code>riding:</code> is on the print output. Let&#39;s modify the <code>__str__</code> method so that if there is no one on the ride, the string returned by the method informs of it.</p>
 <pre><code>class AmusementParkRide:
       def __init__(self,name,minimum_height):
@@ -196,7 +201,7 @@ print(megafobia)
         return printOutput + &#34;\n&#34; + &#34;on the ride:\n&#34; + peopleOnRide
 </code></pre>
 <p>The print output has now been improved.</p>
-<aside class="warning"><p>Megafobia, minimum height requirement: 140, visitors: 0 <br> no one is on the ride. <br><br> Matt is allowed on the ride <br> Ada is not allowed on the ride <br> Megafobia, minimum height requirement: 140, visitors: 1 <br> on the ride: <br> Matt</p>
+<aside class="warning"><p>Megafobia, minimum height requirement: 140, visitors: 0 <br> no one is on the ride. <br><br> Matt is allowed on the ride <br> Ada is not allowed on the ride <br> Megafobia, minimum height requirement: 140, visitors: 1 <br><br> on the ride: <br> Matt</p>
 </aside>
 <aside class="special"><p><strong>Exercise - Printing a Collection<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/den01-python-programming/exercise-6-4-printing-a-collection.git" target="_blank">Source files on Github</a></p>
 </aside>
@@ -210,7 +215,10 @@ print(megafobia)
 
     # ...
 </code></pre>
-<pre><code>matt = Person(&#34;Matt&#34;)
+<pre><code>from amusement_park_ride import AmusementParkRide
+from person import Person
+
+matt = Person(&#34;Matt&#34;)
 matt.set_weight(86)
 matt.set_height(180)
 
@@ -242,7 +250,7 @@ print()
 print(megafobia)
 </code></pre>
 <p>The program&#39;s output is:</p>
-<aside class="warning"><p>Megafobia, minimum height requirement: 140, visitors: 0 <br> no one is on the ride. <br><br> Matt is allowed on the ride <br> Ada is not allowed on the ride <br> Megafobia, minimum height requirement: 140, visitors: 1 <br> on the ride: <br> Matt <br> Megafobia, minimum height requirement: 140, visitors: 1 <br> no one is on the ride.</p>
+<aside class="warning"><p>Megafobia, minimum height requirement: 140, visitors: 0 <br> no one is on the ride. <br><br> Matt is allowed on the ride <br> Ada is not allowed on the ride <br> Megafobia, minimum height requirement: 140, visitors: 1 <br><br> on the ride: <br> Matt <br><br> Megafobia, minimum height requirement: 140, visitors: 1 <br> no one is on the ride.</p>
 </aside>
 <h2 is-upgraded>Calculating a Sum from Objects on a List</h2>
 <p>Let&#39;s now create a method for the amusement park ride that calculates the average height of the people currently on it. Average height can obtained by calculating the average from the persons on the ride – the average is calculated by adding up the individual values and dividing that sum by the number of values.</p>
@@ -261,7 +269,10 @@ print(megafobia)
         return sum_of_heights / len(self.riding)
     # ...
 </code></pre>
-<pre><code>matt = Person(&#34;Matt&#34;)
+<pre><code>from amusement_park_ride import AmusementParkRide
+from person import Person
+
+matt = Person(&#34;Matt&#34;)
 matt.set_height(180)
 
 ada = Person(&#34;Ada&#34;)
@@ -312,7 +323,10 @@ print(megafobia.average_height_of_people_on_ride())
     return return_object
 </code></pre>
 <p>Finding the tallest person is now easy.</p>
-<pre><code>matt = Person(&#34;Matt&#34;)
+<pre><code>from amusement_park_ride import AmusementParkRide
+from person import Person
+
+matt = Person(&#34;Matt&#34;)
 matt.set_height(180)
 
 ada = Person(&#34;Ada&#34;)
@@ -376,8 +390,6 @@ print(tallest.get_name())
 <p>This program has (at least) two &#34;sub-problems&#34;. The first problem is continuously reading words from the user until a certain condition is reached. We can outline this as follows.</p>
 <pre><code>class UserInterface:
 
-    def __init__(self):
-
     def start(self):
         while True:
             print(&#34;Enter a word: &#34;)
@@ -390,8 +402,6 @@ print(tallest.get_name())
 </code></pre>
 <p>The program continues to ask for words until the user enters a word that has already been entered before. Let us modify the program so that it checks whether the word has been entered or not. We don&#39;t know yet how to implement this functionality, so let us first build an outline for it.</p>
 <pre><code>class UserInterface:
-
-    def __init__(self):
 
     def start(self):
         while True:
@@ -559,7 +569,10 @@ print(&#34;You gave the same word twice!&#34;)
         print(&#34;You gave the same word twice!&#34;)
 </code></pre>
 <p>Starting the program is now done as follows:</p>
-<pre><code>def main():
+<pre><code>from user_interface import UserInterface
+from word_set import WordSet
+
+def main():
     set = WordSet()
 
     user_interface = UserInterface(set)
@@ -739,7 +752,9 @@ main()
         return grade
 </code></pre>
 <p>When the grade register has been separated into a class, we can remove the functionality associated with it from our main program. The main program now looks like this.</p>
-<pre><code>def main():
+<pre><code>from grade_register import GradeRegister
+
+def main():
     register = GradeRegister()
 
     while True:
@@ -779,7 +794,10 @@ print(&#34;Number of students with grade 0 (should be 1): &#34; + str(register.n
 <h2 is-upgraded>User interface</h2>
 <p>Typically each program has its own user interface. We will create the class <code>UserInterface</code> and separate it from the main program. The user interface receives two parameters in its constructor: a grade register for storing the grades, and a Scanner object used for reading input.</p>
 <p>When we now have a separate user interface at our disposal, the main program that initializes the whole program becomes very clear.</p>
-<pre><code>def main():
+<pre><code>from grade_register import GradeRegister
+from user_interface import UserInterface
+
+def main():
     register = GradeRegister()
 
     user_interface = UserInterface(register)
@@ -851,8 +869,8 @@ print(&#34;Number of students with grade 0 (should be 1): &#34; + str(register.n
       <google-codelab-step label="Introduction to testing" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
 <ul class="checklist">
-<li>Can tell about some issues caused by software bugs.</li>
-<li>You know what a stack trace is, the steps taken in troubleshooting, and can give textual test inputs to a Scanner.</li>
+<li>You can explain about some issues caused by software bugs.</li>
+<li>You know what a stack trace is, the steps taken in troubleshooting, and can give textual test inputs to code.</li>
 <li>You know what unit testing is all about and you can write unit tests.</li>
 <li>You know about test-driven software development.</li>
 </ul>
@@ -860,7 +878,7 @@ print(&#34;Number of students with grade 0 (should be 1): &#34; + str(register.n
 <h2 is-upgraded>Error Situations and Step-By-Step Problem Resolving</h2>
 <p>Errors end up in the programs that we write. Sometimes the errors are not serious and cause headache mostly to users of the program. Occasionally, however, mistakes can lead to very serious consequences. In any case, it&#39;s certain that a person learning to program makes many mistakes.</p>
 <p>You should never be afraid of or avoid making mistakes since that is the best way to learn. For this reason, try to break the program that you&#39;re working on from time to time to investigate error messages, and to see if those messages tell you something about the error(s) you&#39;ve made.</p>
-<aside class="special"><p><strong>Software Error<br><br></strong> The report in the address <a href="http://sunnyday.mit.edu/accidents/MCO_report.pdf" target="_blank">http://sunnyday.mit.edu/accidents/MCO_report.pdf</a> describes an incident resulting from a more serious software error and also the error itself. <br><br> The bug in the software was caused by the fact that the program in question expected the programmer to use the <a href="a href =" target="_blank">International System of Units</a>https://en.wikipedia.org/wiki/International_System_of_Units) (meters, kilograms, ...) in the calculations. However, the programmer had used the <a href="https://en.wikipedia.org/wiki/English_Engineering_units" target="_blank">American Measurement System</a> for some of the system&#39;s calculations, which prevented the satellite navigation auto-correction system from working as inteded. <br><br> The satellite was destroyed.</p>
+<aside class="special"><p><strong>Software Error<br><br></strong> The report in the address <a href="http://sunnyday.mit.edu/accidents/MCO_report.pdf" target="_blank">http://sunnyday.mit.edu/accidents/MCO_report.pdf</a> describes an incident resulting from a more serious software error and also the error itself. <br><br> The bug in the software was caused by the fact that the program in question expected the programmer to use the <a href="https://en.wikipedia.org/wiki/International_System_of_Units" target="_blank">International System of Units</a> (meters, kilograms, ...) in the calculations. However, the programmer had used the <a href="https://en.wikipedia.org/wiki/English_Engineering_units" target="_blank">American Measurement System</a> for some of the system&#39;s calculations, which prevented the satellite navigation auto-correction system from working as inteded. <br><br> The satellite was destroyed, costing millions of dollars of damage.</p>
 </aside>
 <p>As programs grow in their complexity, finding errors becomes even more challenging.</p>
 <h2 is-upgraded>Stack Trace (Traceback)</h2>
@@ -890,10 +908,10 @@ NameError: name &#39;nam&#39; is not defined
 <li>If your program causes an exception, you should definitely pay attention to the <em>stack trace</em> associated with the exception, which is the list of method calls that resulted in the situation that caused the exception.</li>
 <li>Learn how to use a debugger.</li>
 </ol>
-<h2 is-upgraded>Passing Test Input to Scanner</h2>
-<p>Manually testing the program is often laborious. It&#39;s possible to automate the passing of input by, for example, passing the string to be read into an <code>input()</code> method. You&#39;ll find an example below of how to test a program automatically using the Python library <code>unittest</code>.</p>
+<h2 is-upgraded>Automated testing</h2>
+<p>Manually testing the program is often laborious. It&#39;s possible to automate the testing by using a testing framework such as <code>pytest</code>. You&#39;ll find an example below of how to test a program automatically:</p>
 <pre><code>def ada():
-  return &#34;Ada Lovelace&#34;
+    return &#34;Ada Lovelace&#34;
 </code></pre>
 <pre><code>import adafile
 
@@ -904,11 +922,11 @@ def test_ada():
 <h2 is-upgraded>Unit Testing</h2>
 <p>The automated testing method laid out above where the input to a program is modified is quite convenient, but limited nonetheless. Testing larger programs in this way is challenging. One solution to this is unit testing, where small parts of the program are tested in isolation.</p>
 <p>Unit testing refers to the testing of individual components in the source code, such as classes and their provided methods. The writing of tests reveals whether each class and method observes or deviates from the guideline of each method and class having a single, clear responsibility. The more responsibility the method has, the more complex the test. If a large application is written in a single method, writing tests for it becomes very challenging, if not impossible. Similarly, if the application is broken into clear classes and methods, then writing tests is straightforward.</p>
-<p>Ready-made unit test libraries are commonly used in writing tests, which provide methods and help classes for writing tests. The most common unit testing library in Python is <code>unittest</code>. The code you have been submitting to Github throughout this course has been unit tested along the way. Go back and look through the folders you&#39;ve been submitting. You should see test files in there which are used to verify your code is correct. Explore them!</p>
-<aside class="special"><p><strong>Unit Testing and the Parts of an Application<br><br></strong> Unit testing tends to be extremely complicated if the whole application has been written in one function. To make testing easier, the app should split into small parts, each having a clear responsibility. In the previous section, we practiced this when we separated the user interface from the application logic. Writing tests for parts of an application, such as the ‘JokeManager&#39; class from the previous section is significantly easier than writing them for program contained in &#34;main&#34; in its entirety.</p>
+<p>Ready-made unit test libraries are commonly used in writing tests, which provide methods and help classes for writing tests. The most common unit testing library in Python is <code>unittest</code> but we will advocate the usage of <code>pytest</code> in this course. The code you have been submitting to Github throughout this course has been unit tested along the way. Go back and look through the folders you&#39;ve been submitting. You should see test files in there which are used to verify your code is correct. Explore them!</p>
+<aside class="special"><p><strong>Unit Testing and the Parts of an Application<br><br></strong> Unit testing tends to be extremely complicated if the whole application has been written in one function. To make testing easier, the app should split into small parts, each having a clear responsibility. In the previous section, we practiced this when we separated the user interface from the application logic. Writing tests for parts of an application, such as the ‘JokeManager&#39; class from the exercise in the previous section is significantly easier than writing them for program contained in &#34;main&#34; in its entirety.</p>
 </aside>
 <h2 is-upgraded>Test-Driven Development</h2>
-<p><a href="https://en.wikipedia.org/wiki/Test-driven_development" target="_blank">Test-driven development</a> Test-driven development is a software development process that&#39;s based on constructing a piece of software in small iterations. In test-driven software development, the first thing a programmer always does is write an automatically-executable test, which tests a single piece of the computer program.</p>
+<p><a href="https://en.wikipedia.org/wiki/Test-driven_development" target="_blank">Test-driven development</a> is a software development process that&#39;s based on constructing a piece of software in small iterations. In test-driven software development, the first thing a programmer always does is write an automatically-executable test, which tests a single piece of the computer program.</p>
 <p>The test will not pass because the functionality that satisfies the test, i.e., the part of the computer program to be examined, is missing. Once the test has been written, functionality that meets the test requirements is added to the program. The tests are run again. If all tests pass, a new test is added, or alternatively, if the tests fail, the already-written program is corrected. If necessary, the internal structure of the program will be corrected or refactored, so that the functionality of the program remains the same, but the structure becomes clearer.</p>
 <p>Test-driven software development consists of five steps that are repeated until the functionality of the program is complete.</p>
 <ol type="1">
