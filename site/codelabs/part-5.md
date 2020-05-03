@@ -103,6 +103,8 @@ Since the the hand returns to the beginning automatically with the help of the u
 Using clock-hand objects, the minute hand advances when the second hand's value is zero, and the hour hand advances when the minute hand's value is zero.
 
 ```python
+from clock_hand import ClockHand
+
 hours = ClockHand(24)
 minutes = ClockHand(60)
 seconds = ClockHand(60)
@@ -129,6 +131,8 @@ Separating a concept into its own class is a good idea for many reasons. Firstly
 We realized that the clock contains three hands, i.e., it consists of three concepts. The clock is a concept in and of itself. As such, we can create a class for it too. Next, we create a class called "Clock" that hides the hands inside of it.
 
 ```python
+from clock_hand import ClockHand
+
 class Clock:
 
     def __init__(self):
@@ -138,7 +142,6 @@ class Clock:
 
     def advance(self):
         self.seconds.advance()
-        print(self.seconds.get_value())
 
         if (self.seconds.get_value() == 0):
             self.minutes.advance()
@@ -153,6 +156,8 @@ class Clock:
 The way the program functions has become increasingly clearer. When you compare our program below to the original one that was made up of integers, you'll find that the program's readability is superior.
 
 ```python
+from clock import Clock
+
 clock = Clock()
 
 while True:
@@ -249,6 +254,8 @@ Some of the methods defined above do not return a value, while others do. The cl
 Objects are created from the class through constructors much like variable declarations. Below, we'll create two rectangles and print information related to them.
 
 ```python
+from rectangle import Rectangle
+
 first = Rectangle(40, 80)
 rectangle = Rectangle(10, 10)
 print(first)
@@ -540,16 +547,16 @@ So in the beginning the variable `joan` contains a reference to one object, but 
 Let's extend the example further by setting  the value of the reference variable `ball` to `None`, i.e. a reference "to nothing". The `None` reference can be set as the value of any reference type variable.
 
 ```python
-Person joan = new Person("Joan Ball")
+joan = Person("Joan Ball")
 print(joan)
 
-Person ball = joan
+ball = joan
 ball.grow_older()
 ball.grow_older()
 
 print(joan)
 
-joan = new Person("Joan B.")
+joan = Person("Joan B.")
 print(joan)
 
 ball = None
@@ -560,16 +567,16 @@ The object whose name is Joan Ball is referred to by nobody. In other words, the
 Let's see what happens when we try to print a variable that references "nothing" i.e. `None`.
 
 ```python
-Person joan = new Person("Joan Ball")
+joan = Person("Joan Ball")
 print(joan)
 
-Person ball = joan
+ball = joan
 ball.grow_older()
 ball.grow_older()
 
 print(joan)
 
-joan = new Person("Joan B.")
+joan = Person("Joan B.")
 print(joan)
 
 ball = None
@@ -582,7 +589,7 @@ Negative
 Printing a `None` reference prints "None". How about if we were to try and call a method, say `grow_older`, on an object that refers to nothing:
 
 ```python
-Person joan = new Person("Joan Ball")
+joan = Person("Joan Ball")
 print(joan)
 
 joan = None
@@ -636,6 +643,9 @@ So the method `allowed_to_ride` of an AmusementParkRide object is given a `Perso
 Below is an example main program where the amusement park ride method is called twice: first the supplied parameter is a person object `matt`, and then a person object `jasper`:
 
 ```python
+from amusement_park_ride import AmusementParkRide
+from person import Person
+
 matt = Person("Matt")
 matt.set_weight(86)
 matt.set_height(180)
@@ -689,6 +699,9 @@ class AmusementParkRide:
 Now the previously used example program also keeps track of the number of visitors who have experienced the ride.
 
 ```python
+from amusement_park_ride import AmusementParkRide
+from person import Person
+
 matt = Person("Matt")
 matt.set_weight(86)
 matt.set_height(180)
@@ -754,9 +767,17 @@ We can change our Person class to take reference of the birthday. Since we know 
 Let's create a new Person method that allows for setting the birthday:
 
 ```python
-@classmethod
-def with_birthday(cls, name, date):
-    return cls(name,date)
+from simple_date import SimpleDate
+
+class Person:
+
+    def __init__(self, name, birthday):
+        self.name = name
+        self.birthday = birthday
+
+    @classmethod
+    def with_birthday(cls, name, date):
+        return cls(name,date)
 ```
 
 Along with constructor above, we could give Person another constructor where the birthday was given as integers.
@@ -780,6 +801,9 @@ def __str__(self):
 Let's see how the updated Person class works.
 
 ```python
+from person import Person
+from simple_date import SimpleDate
+
 date = SimpleDate(1, 1, 1780)
 euler = Person("Euler", date)
 pascal = Person.with_birthday_as_integers("Pascal", 19, 6, 1623)
@@ -846,10 +870,10 @@ The implementation of the method is illustrated below. Note that the **method ma
 class Person:
     # ...
 
-    def older_than(self,compared):
+    def older_than(self,other):
         # 1. First compare years
         own_year = self.get_birthday().get_year()
-        compared_year = compared.get_birthday().get_year()
+        compared_year = other.get_birthday().get_year()
 
         if (own_year < compared_year):
             return True
@@ -859,7 +883,7 @@ class Person:
 
         # 2. Same birthyear, compare months
         own_month = self.get_birthday().get_month()
-        compared_month = compared.get_birthday().get_month()
+        compared_month = other.get_birthday().get_month()
 
         if (own_month < compared_month):
             return True
@@ -869,7 +893,7 @@ class Person:
 
         # 3. Same birth year and month, compare days
         own_day = self.get_birthday().get_day()
-        compared_day = compared.get_birthday().get_day()
+        compared_day = other.get_birthday().get_day()
 
         if (own_day < compared_day):
             return True
@@ -879,7 +903,7 @@ class Person:
 
 Let's pause for a moment to consider abstraction, one of the principles of object-oriented programming. The idea behind abstraction is to conceptualize the programming code so that each concept has its own clear responsibilities. When viewing the solution above, however, we notice that the comparison functionality would be better placed inside the `SimpleDate` class instead of the `Person` class.
 
-We'll create a method called `def before(self,compared)` for the class `SimpleDate`. The method returns the value `true` if the date given as the parameter is after (or on the same day as) the date of the object whose method is called.
+We'll create a method called `def before(self,other)` for the class `SimpleDate`. The method returns the value `true` if the date given as the parameter is after (or on the same day as) the date of the object whose method is called.
 
 ```python
 class SimpleDate:
@@ -903,23 +927,23 @@ class SimpleDate:
 
     # used to check if this date object (`self`) is before
     # the date object given as the parameter (`compared`)
-    def before(self,compared):
+    def before(self,other):
         # first compare years
-        if (self.year < compared.year):
+        if (self.year < other.year):
             return True
 
-        if (self.year > compared.year):
+        if (self.year > other.year):
             return False
 
         # years are same, compare months
-        if (self.month < compared.month):
+        if (self.month < other.month):
             return True
 
-        if (self.month > compared.month):
+        if (self.month > other.month):
             return False
 
         # years and months are same, compare days
-        if (self.day < compared.day):
+        if (self.day < other.day):
             return True
 
         return False
@@ -928,20 +952,22 @@ class SimpleDate:
 An example of how to use the method:
 
 ```python
+from simple_date import SimpleDate
+
 def main():
     d1 = SimpleDate(14, 2, 2011)
     d2 = SimpleDate(21, 2, 2011)
     d3 = SimpleDate(1, 3, 2011)
     d4 = SimpleDate(31, 12, 2010)
 
-    print(d1 + " is earlier than " + d2 + ": " + d1.before(p2))
-    print(d2 + " is earlier than " + d1 + ": " + d2.before(p1))
+    print(str(d1) + " is earlier than " + str(d2) + ": " + str(d1.before(d2)))
+    print(str(d2) + " is earlier than " + str(d1) + ": " + str(d2.before(d1)))
 
-    print(d2 + " is earlier than " + d3 + ": " + d2.before(p3))
-    print(d3 + " is earlier than " + d2 + ": " + d3.before(p2))
+    print(str(d2) + " is earlier than " + str(d3) + ": " + str(d2.before(d3)))
+    print(str(d3) + " is earlier than " + str(d2) + ": " + str(d3.before(d2)))
 
-    print(d4 + " is earlier than " + d1 + ": " + d4.before(p1))
-    print(d1 + " is earlier than " + d4 + ": " + d1.before(p4))
+    print(str(d4) + " is earlier than " + str(d1) + ": " + str(d4.before(d1)))
+    print(str(d1) + " is earlier than " + str(d4) + ": " + str(d1.before(d4)))
 ```
 
 Negative
@@ -953,14 +979,14 @@ Let's tweak the method older_than of the Person class so that from here on out, 
 class Person:
     # ...
 
-    def older_than(self,compared):
-        if (self.birthday.before(compared.get_birthday())):
+    def older_than(self,other):
+        if (self.birthday.before(other.get_birthday())):
             return True
 
         return False
 
         # or return more directly:
-        # return self.birthday.before(compared.get_birthday())
+        # return self.birthday.before(other.get_birthday())
 ```
 
 Now the concrete comparison of dates is implemented in the class that it logically (based on the class names) belongs to.
@@ -1027,13 +1053,13 @@ class SimpleDate:
     def get_year(self):
         return self.year
 
-    def __eq__(self,compared):
+    def __eq__(self,other):
         # if the type of the compared object is not SimpleDate, the objects are not equal
-        if not isinstance(compared,SimpleDate):
+        if not isinstance(other,SimpleDate):
             return False
 
         # if the values of the object variables are the same, the objects are equal
-        if (self.day == comparedSimpleDate.day and self.month == comparedSimpleDate.month and self.year == comparedSimpleDate.year):
+        if (self.day == other.day and self.month == other.month and self.year == other.year):
             return True
 
         # otherwise the objects are not equal
@@ -1050,13 +1076,13 @@ class Person:
     # constructors and methods
 
 
-    def __eq__(self,compared):
+    def __eq__(self,other):
         # if the compared object is not of type Person, the objects are not equal
-        if not isinstance(compared,Person):
+        if not isinstance(other,Person):
             return False
 
         # if the values of the object variables are equal, the objects are equal
-        if (self.name == compared.name and self.age == compared.age and self.weight == compared.weight and self.height == compared.height):
+        if (self.name == other.name and self.age == other.age and self.weight == other.weight and self.height == other.height):
             return True
 
         # otherwise the objects are not equal
@@ -1085,6 +1111,8 @@ class Bird:
 ```
 
 ```python
+from bird import Bird
+
 red = Bird("Red")
 print(red)
 
@@ -1107,6 +1135,8 @@ class Bird:
 Let's create a list and add a bird to it. After this we'll check if that bird is contained in it.
 
 ```python
+from bird import Bird
+
 birds = []
 red = Bird("Red")
 
@@ -1145,28 +1175,30 @@ class Bird:
     def __init__ (self,name):
         self.name = name
 
-    def __eq__(self,compared):
+    def __eq__(self,other):
         # if the compared object is not of type Bird, the objects are not equal
-        if not isinstance(compared,Bird):
+        if not isinstance(other,Bird):
             return False
 
         # if the values of the object variables are equal, the objects are, too
-        return self.name == comparedBird.name
+        return self.name == other.name
 ```
 
 Now the contains list method recognizes birds with identical contents.
 
 ```python
-ArrayList<Bird> birds = new ArrayList<>()
-Bird red = new Bird("Red")
+from bird import Bird
 
-if (birds.contains(red)):
+birds = []
+red = Bird("Red")
+
+if (red in birds):
     print("Red is on the list.")
 else:
     print("Red is not on the list.")
 
 birds.append(red)
-if (birds.contains(red)):
+if (red in birds):
     print("Red is on the list.")
 else:
     print("Red is not on the list.")
@@ -1174,11 +1206,12 @@ else:
 
 print("However!")
 
-red = new Bird("Red")
-if (birds.contains(red)):
+red = Bird("Red")
+if (red in birds):
     print("Red is on the list.")
 else:
     print("Red is not on the list.")
+
 ```
 
 Negative
@@ -1197,6 +1230,8 @@ We have seen methods return boolean values, numbers, and strings. Easy to guess,
 In the next example we present a simple counter that has the method `clone`. The method can be used to create a clone of the counter  i.e. a new counter object that has the same value at the time of its creation as the counter that is being cloned.
 
 ```python
+from counter import Counter
+
 class Counter:
 
     def __init__(self,initialValue):
