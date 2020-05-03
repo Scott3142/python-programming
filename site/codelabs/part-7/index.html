@@ -39,7 +39,7 @@
 <h2 is-upgraded>Object-Oriented Programming</h2>
 <p>In object-oriented programming, information is represented as classes that describe the concepts of the problem domain and the logic of the application. Classes define the methods that determine how information is handled. During program execution, classes are instantiated from objects that contain runtime information and that also have an effect on program execution: program execution typically proceeds through a series of method calls related to the objects. As mentioned a few weeks ago, &#34;the program is built from small, clear, and cooperative entities.&#34;</p>
 <p>The basic ideas of object-oriented programming, i.e., the representation of information and its processing methods with he help of classes and objects, first appeared in <a href="https://en.wikipedia.org/wiki/Simula" target="_blank">Simula 67</a>, which was designed for developing simulations and the <a href="https://en.wikipedia.org/wiki/Smalltalk" target="_blank">Smalltalk</a> programming language. Its breakthrough came in the 1980s through the <a href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank">C++</a> programming language and <a href="https://en.wikipedia.org/wiki/Java_(programming_language" target="_blank">Java</a> has made it one of the most widely used programming paradigms in the world.</p>
-<p>One of the major benefits of object-oriented programming is how problem-domain concepts are modelled through classes and objects, which makes programs easier to understand. In addition, structuring the problem domain into classes facilitates the construction and maintenance of programs. However, object-oriented programming is not inherently suited to all problems: for example, scientific computing and statistics applications typically make use of languages, such as <a href="https://en.wikipedia.org/wiki/R_(programming_language" target="_blank">R</a>), <a href="https://en.wikipedia.org/wiki/MATLAB" target="_blank">Matlab</a> or <a href="https://en.wikipedia.org/wiki/fortran" target="_blank">Fortran</a>.</p>
+<p>One of the major benefits of object-oriented programming is how problem-domain concepts are modelled through classes and objects, which makes programs easier to understand. In addition, structuring the problem domain into classes facilitates the construction and maintenance of programs. However, object-oriented programming is not inherently suited to all problems: for example, scientific computing and statistics applications typically make use of languages, such as <a href="https://en.wikipedia.org/wiki/R_(programming_language" target="_blank">R</a>, <a href="https://en.wikipedia.org/wiki/MATLAB" target="_blank">Matlab</a> or <a href="https://en.wikipedia.org/wiki/fortran" target="_blank">Fortran</a>.</p>
 <h2 is-upgraded>Procedural programming</h2>
 <p>Whereas in object-oriented programming, the structure of a program is formed by the data it processes, in procedural programming, the structure of the program is formed by functionality desired for the program: the program acts as a step-by-step guide for the functionality to be performed. The program is executed one step at a time, and subroutines (methods) are called whenever necessary.</p>
 <p>In procedural programming, the state of the program is maintained in variables and tables, and any methods handle only the values provided to them as parameters. The program tells the computer what should happen. As an example, the code below demonstrates the swapping of values for two variables a and b</p>
@@ -81,12 +81,6 @@ while True:
     print(hours)
     print(minutes)
     print(seconds)
-
-def print_out(value):
-    if (value &lt; 10):
-        print(&#34;0&#34;)
-
-    print(value)
 </code></pre>
 <p>The same implemented in an object-oriented way:</p>
 <pre><code>class Hand:
@@ -109,7 +103,9 @@ def print_out(value):
 
         return &#34;&#34; + str(self.value)
 </code></pre>
-<pre><code>class Clock():
+<pre><code>from hand import Hand
+
+class Clock:
 
     def __init__(self):
         self.hours = Hand(24)
@@ -128,7 +124,8 @@ def print_out(value):
     def __str__(self):
         return str(hours) + &#34;:&#34; + str(minutes) + &#34;:&#34; + str(seconds)
 </code></pre>
-<pre><code>clock = Clock()
+<pre><code>from clock import Clock
+clock = Clock()
 
 while True:
     print(clock)
@@ -153,12 +150,12 @@ while True:
 <p>The concept of <em>efficiency</em> is often associated with algorithms. A programs efficiency, i.e, the computation of required information fast enough, is an integral part of a programs usability. If it took two days for an algorithm designed for forecasting tomorrows weather run, the results wouldn&#39;t be very useful! Similarly, a user viewing a TVs program guide won&#39;t get any use out of it, if the tv-shows info only loads after the show already ended.</p>
 <p>In a more general sense, retrieving and displaying information quickly is an integral part of any applications function. Next let&#39;s explore algorithms associated with retrieving and sorting information. While the following examples utilize arrays, the algorithms shown will also work with other data-structures meant for storing information, such as lists.</p>
 <h2 is-upgraded>Sorting information</h2>
-<p>If the information (data) giving to a computer, doesn&#39;t follow any rules and isn&#39;t in order, retrieving that information is taxing for the computer. We need order!</p>
+<p>If the information (data) given to a computer, doesn&#39;t follow any rules and isn&#39;t in order, retrieving that information is taxing for the computer. We need order!</p>
 <h3 is-upgraded>Selection sort</h3>
 <p>Every programmer should be familiar with at least one sorting algorithm (i.e a way to sort an array). Let&#39;s familiarize ourselves with one &#34;classic&#34; sorting algorithm, the selection sort. We&#39;ll do so with a programing exercise.</p>
 <aside class="special"><p><strong>Exercise - Sorting<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/den01-python-programming/exercise-7-3-sorting.git" target="_blank">Source files on Github</a></p>
 </aside>
-<h2 is-upgraded>Build-in sorting algorithms in Python</h2>
+<h2 is-upgraded>Built-in sorting algorithms in Python</h2>
 <p>Python offers a significant amount of ready to use sorting algorithms. Arrays can be sorted (into their natural order) using the class method <code>sort</code> of the <code>List</code>-class.</p>
 <pre><code>numbers = [8, 3, 7, 9, 1, 2, 4]
 print(numbers)
@@ -184,9 +181,9 @@ print(numbers)
 <p>Next let&#39;s take a look at algorithms meant for information retrieval.</p>
 <h3 is-upgraded>Linear search</h3>
 <p>Linear search is a search algorithm that searches for information in array by going through every value in the array one by one. When the value that was searched for is found, its index is immediately returned. If the requested value cannot be found, linear sort return the information that the value was not found – typically this means returning <code>-1</code> instead of a valid index.</p>
-<pre><code>def linear_search(array,searched):
-        for index in range(len(array)):
-            if (array[i] == searched):
+<pre><code>def linear_search(array,search_for):
+        for i in range(len(array)):
+            if (array[i] == search_fir):
                 return i
 
         return -1

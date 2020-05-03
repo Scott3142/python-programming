@@ -28,7 +28,7 @@ In object-oriented programming, information is represented as classes that descr
 
 The basic ideas of object-oriented programming, i.e., the representation of information and its processing methods with he help of classes and objects, first appeared in [Simula 67](https://en.wikipedia.org/wiki/Simula), which was designed for developing simulations and the [Smalltalk](https://en.wikipedia.org/wiki/Smalltalk) programming language. Its breakthrough came in the 1980s through the [C++](https://en.wikipedia.org/wiki/C%2B%2B) programming language and [Java](https://en.wikipedia.org/wiki/Java_(programming_language) has made it one of the most widely used programming paradigms in the world.
 
-One of the major benefits of object-oriented programming is how problem-domain concepts are modelled through classes and objects, which makes programs easier to understand. In addition, structuring the problem domain into classes facilitates the construction and maintenance of programs. However, object-oriented programming is not inherently suited to all problems: for example, scientific computing and statistics applications typically make use of languages, such as [R](https://en.wikipedia.org/wiki/R_(programming_language)), [Matlab](https://en.wikipedia.org/wiki/MATLAB) or [Fortran](https://en.wikipedia.org/wiki/fortran).
+One of the major benefits of object-oriented programming is how problem-domain concepts are modelled through classes and objects, which makes programs easier to understand. In addition, structuring the problem domain into classes facilitates the construction and maintenance of programs. However, object-oriented programming is not inherently suited to all problems: for example, scientific computing and statistics applications typically make use of languages, such as [R](https://en.wikipedia.org/wiki/R_(programming_language), [Matlab](https://en.wikipedia.org/wiki/MATLAB) or [Fortran](https://en.wikipedia.org/wiki/fortran).
 
 ### Procedural programming
 
@@ -81,12 +81,6 @@ def print_out(hours,minutes,seconds):
     print(hours)
     print(minutes)
     print(seconds)
-
-def print_out(value):
-    if (value < 10):
-        print("0")
-
-    print(value)
 ```
 
 The same implemented in an object-oriented way:
@@ -115,7 +109,9 @@ class Hand:
 ```
 
 ```python
-class Clock():
+from hand import Hand
+
+class Clock:
 
     def __init__(self):
         self.hours = Hand(24)
@@ -136,6 +132,7 @@ class Clock():
 ```
 
 ```python
+from clock import Clock
 clock = Clock()
 
 while True:
@@ -165,7 +162,7 @@ In a more general sense, retrieving and displaying information quickly is an int
 
 ### Sorting information
 
-If the information (data) giving to a computer, doesn't follow any rules and isn't in order, retrieving that information is taxing for the computer. We need order!
+If the information (data) given to a computer, doesn't follow any rules and isn't in order, retrieving that information is taxing for the computer. We need order!
 
 #### Selection sort
 
@@ -174,7 +171,7 @@ Every programmer should be familiar with at least one sorting algorithm (i.e a w
 Positive
 : **Exercise - Sorting** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-7-3-sorting.git)
 
-###  Build-in sorting algorithms in Python
+###  Built-in sorting algorithms in Python
 
 Python offers a significant amount of ready to use sorting algorithms. Arrays can be sorted (into their natural order) using the class method `sort` of the `List`-class.
 
@@ -215,9 +212,9 @@ Next let's take a look at algorithms meant for information retrieval.
 Linear search is a search algorithm that searches for information in array by going through every value in the array one by one. When the value that was searched for is found, its index is immediately returned. If the requested value cannot be found, linear sort return the information that the value was not found -- typically this means returning `-1` instead of a valid index.
 
 ```python
-def linear_search(array,searched):
-        for index in range(len(array)):
-            if (array[i] == searched):
+def linear_search(array,search_for):
+        for i in range(len(array)):
+            if (array[i] == search_fir):
                 return i
 
         return -1
