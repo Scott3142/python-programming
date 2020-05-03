@@ -158,11 +158,9 @@ The Linux operating system is a multi-user operating system which allows multipl
 
 Most users are allowed to run most programs, and to save and edit files stored in their own home folder. Normal users are not normally allowed to edit files in other users' folders or any of the system files. There's a special user in Linux known as the **superuser**, which is usually given the username `root`. The superuser has unrestricted access to the computer and can do almost anything.
 
-### sudo
-
 You won't normally log into the computer as `root`, but you can use the `sudo` command to provide access as the superuser. If you log into your computer as `username`, then you're logging in as a normal user. You can run commands as the `root` user by using the `sudo` command before the program you want to run.
 
-For example, if you want to install additional software on Raspbian then you normally use the `apt` tool. To update the list of available software, you need to prefix the `apt` command with sudo:
+For example, if you want to install additional software then you normally use the `apt` tool. To update the list of available software, you need to prefix the `apt` command with sudo:
 
 `sudo apt update`
 
@@ -174,7 +172,7 @@ It would defeat the point of the security if anyone could just put `sudo` in fro
 
 ### Installing software using apt
 
-You can use the `apt` command to install software in Raspbian. This is the 'package manager' that is included with any Debian-based Linux distributions (including Raspbian). It allows you to install and manage new software packages on your Pi. In order to install a new package, you would type `sudo apt install <package-name>` (where `<package-name>` is the package that you want to install). Running `sudo apt update` will update a list of software packages that are available on your system. If a new version of a package is available, then `sudo apt full-upgrade` will update any old packages to the new version. Finally, `sudo apt remove <package-name>` removes or uninstalls a package from your system.
+You can use the `apt` command to install software. This is the 'package manager' that is included with any Debian-based Linux distributions including Ubuntu. It allows you to install and manage new software packages on your Pi. In order to install a new package, you would type `sudo apt install <package-name>` (where `<package-name>` is the package that you want to install). Running `sudo apt update` will update a list of software packages that are available on your system. If a new version of a package is available, then `sudo apt full-upgrade` will update any old packages to the new version. Finally, `sudo apt remove <package-name>` removes or uninstalls a package from your system.
 
 ### Other useful commands
 
@@ -190,7 +188,7 @@ Using `cd` changes the current directory to the one specified. You can use relat
 
 ### pwd
 
-The `pwd` command displays the name of the present working directory: on a Raspberry Pi, entering `pwd` will output something like `/home/username`.
+The `pwd` command displays the name of the present working directory: on a Linux system, entering `pwd` will output something like `/home/username`.
 
 ### mkdir
 
@@ -239,17 +237,10 @@ The `chown` command changes the user and/or group that owns a file. It normally 
 ### ssh
 
 `ssh` denotes the secure shell. Connect to another computer using an encrypted network connection.
-For more details see [SSH (secure shell)](../../remote-access/ssh/)
 
 ### scp
 
 The `scp` command copies a file from one computer to another using `ssh`.
-For more details see [SCP (secure copy)](../../remote-access/ssh/scp.md)
-
-### sudo
-
-The `sudo` command enables you to run a command as a superuser, or another user. Use `sudo -s` for a superuser shell.
-For more details see [Root user / sudo](root.md)
 
 ### dd
 
@@ -634,7 +625,7 @@ user@host:~$ mkdir my_project
 Now you want to go into that directory. You can use the `cd` (change directory) command to do this.
 
 ```bash
-user@host:~$ my_project
+user@host:~$ cd my_project
 ```
 
 Next, you can create a file that will tell people what the project is about. You can use any text editor to do this, such as Notepad or nano. Create a file called `README.md`. The `.md` extension stands for **Markdown**, which is a markup language. You can learn more about Markdown [here](https://daringfireball.net/projects/markdown/).
@@ -745,7 +736,7 @@ user@host:~$ git commit -am 'adds data csv and python program'
 Then you carry on working on your code for a bit. Every time you make a significant change to the file, you can perform a new commit.
 
 ```bash
-user@host:~$ git commit -am 'finishes find function'
+user@host:~$ git commit -am 'finishes get_age method'
 ```
 
 Now imagine that you've made a horrible mistake. You've been working for a while and you've deleted your `get_age()` method, and then performed a commit. With Git, it's easy to go back in time and restore an earlier version of any of your files. Let's first look at the commit history of the file.
@@ -761,13 +752,13 @@ commit 12c4c693e95438ceadcf3f4fb39c83ce1ade712f
 Author: Grace Hopper <g.hopper@harvard.edu>
 Date:   Fri Mar 3 20:27:17 2017 +0000
 
-	deletes find function
+	deletes get_age method
 
 commit 5fd772a292c019a7cf3012b1156685280d4a7d2d
 Author: Grace Hopper <g.hopper@harvard.edu>
 Date:   Fri Mar 3 20:24:52 2017 +0000
 
-	finishes find function
+	finishes get_age method
 
 commit 127545c19794b5fe869dd22d0cf57bf8820c5794
 Author: Grace Hopper <g.hopper@harvard.edu>
@@ -787,7 +778,7 @@ user@host:~$ git checkout 5fd772a292c019a7cf3012b1156685280d4a7d2d person.py
 The file will be restored and you can now commit this change.
 
 ```bash
-user@host:~$ git commit -am 'restores find function'
+user@host:~$ git commit -am 'restores get_age method'
 ```
 
 ### Making major changes

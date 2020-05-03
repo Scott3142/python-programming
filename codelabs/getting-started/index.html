@@ -124,15 +124,14 @@ main()
 <h2 is-upgraded>Sudo</h2>
 <p>The Linux operating system is a multi-user operating system which allows multiple users to log in and use the computer. To protect the computer (and the privacy of other users), the users&#39; abilities are restricted.</p>
 <p>Most users are allowed to run most programs, and to save and edit files stored in their own home folder. Normal users are not normally allowed to edit files in other users&#39; folders or any of the system files. There&#39;s a special user in Linux known as the <strong>superuser</strong>, which is usually given the username <code>root</code>. The superuser has unrestricted access to the computer and can do almost anything.</p>
-<h2 is-upgraded>sudo</h2>
 <p>You won&#39;t normally log into the computer as <code>root</code>, but you can use the <code>sudo</code> command to provide access as the superuser. If you log into your computer as <code>username</code>, then you&#39;re logging in as a normal user. You can run commands as the <code>root</code> user by using the <code>sudo</code> command before the program you want to run.</p>
-<p>For example, if you want to install additional software on Raspbian then you normally use the <code>apt</code> tool. To update the list of available software, you need to prefix the <code>apt</code> command with sudo:</p>
+<p>For example, if you want to install additional software then you normally use the <code>apt</code> tool. To update the list of available software, you need to prefix the <code>apt</code> command with sudo:</p>
 <p><code>sudo apt update</code></p>
 <p>You can also run a superuser shell by using <code>sudo su</code>. When running commands as a superuser there&#39;s nothing to protect against mistakes that could damage the system. It&#39;s recommended that you only run commands as the superuser when required, and to exit a superuser shell when it&#39;s no longer needed.</p>
 <h2 is-upgraded>Who can use sudo?</h2>
 <p>It would defeat the point of the security if anyone could just put <code>sudo</code> in front of their commands, so only approved users can use <code>sudo</code> to gain administrator privileges. The <code>username</code> user is included in the <code>sudoers</code> file of approved users. To allow other users to act as a superuser you can add the user to the <code>sudo</code> group with <code>usermod</code>, edit the <code>/etc/sudoers</code> file, or add them using <code>visudo</code>.</p>
 <h2 is-upgraded>Installing software using apt</h2>
-<p>You can use the <code>apt</code> command to install software in Raspbian. This is the ‘package manager&#39; that is included with any Debian-based Linux distributions (including Raspbian). It allows you to install and manage new software packages on your Pi. In order to install a new package, you would type <code>sudo apt install &lt;package-name&gt;</code> (where <code>&lt;package-name&gt;</code> is the package that you want to install). Running <code>sudo apt update</code> will update a list of software packages that are available on your system. If a new version of a package is available, then <code>sudo apt full-upgrade</code> will update any old packages to the new version. Finally, <code>sudo apt remove &lt;package-name&gt;</code> removes or uninstalls a package from your system.</p>
+<p>You can use the <code>apt</code> command to install software. This is the ‘package manager&#39; that is included with any Debian-based Linux distributions including Ubuntu. It allows you to install and manage new software packages on your Pi. In order to install a new package, you would type <code>sudo apt install &lt;package-name&gt;</code> (where <code>&lt;package-name&gt;</code> is the package that you want to install). Running <code>sudo apt update</code> will update a list of software packages that are available on your system. If a new version of a package is available, then <code>sudo apt full-upgrade</code> will update any old packages to the new version. Finally, <code>sudo apt remove &lt;package-name&gt;</code> removes or uninstalls a package from your system.</p>
 <h2 is-upgraded>Other useful commands</h2>
 <p>There are a few other commands that you may find useful, these are listed below:</p>
 <h2 is-upgraded>ls</h2>
@@ -140,7 +139,7 @@ main()
 <h2 is-upgraded>cd</h2>
 <p>Using <code>cd</code> changes the current directory to the one specified. You can use relative (i.e. <code>cd directoryA</code>) or absolute (i.e. <code>cd /home/username/directoryA</code>) paths.</p>
 <h2 is-upgraded>pwd</h2>
-<p>The <code>pwd</code> command displays the name of the present working directory: on a Raspberry Pi, entering <code>pwd</code> will output something like <code>/home/username</code>.</p>
+<p>The <code>pwd</code> command displays the name of the present working directory: on a Linux system, entering <code>pwd</code> will output something like <code>/home/username</code>.</p>
 <h2 is-upgraded>mkdir</h2>
 <p>You can use <code>mkdir</code> to create a new directory, e.g. <code>mkdir newDir</code> would create the directory <code>newDir</code> in the present working directory.</p>
 <h2 is-upgraded>rmdir</h2>
@@ -164,11 +163,9 @@ main()
 <h2 is-upgraded>chown</h2>
 <p>The <code>chown</code> command changes the user and/or group that owns a file. It normally needs to be run as root using sudo e.g. <code>sudo chown username:root *filename*</code> will change the owner to username and the group to root.</p>
 <h2 is-upgraded>ssh</h2>
-<p><code>ssh</code> denotes the secure shell. Connect to another computer using an encrypted network connection. For more details see <a href="../../remote-access/ssh/" target="_blank">SSH (secure shell)</a></p>
+<p><code>ssh</code> denotes the secure shell. Connect to another computer using an encrypted network connection.</p>
 <h2 is-upgraded>scp</h2>
-<p>The <code>scp</code> command copies a file from one computer to another using <code>ssh</code>. For more details see <a href="../../remote-access/ssh/scp.md" target="_blank">SCP (secure copy)</a></p>
-<h2 is-upgraded>sudo</h2>
-<p>The <code>sudo</code> command enables you to run a command as a superuser, or another user. Use <code>sudo -s</code> for a superuser shell. For more details see <a href="root.md" target="_blank">Root user / sudo</a></p>
+<p>The <code>scp</code> command copies a file from one computer to another using <code>ssh</code>.</p>
 <h2 is-upgraded>dd</h2>
 <p>The <code>dd</code> command copies a file converting the file as specified. It is often used to copy an entire disk to a single file or back again. So, for example, <code>dd if=/dev/sdd of=backup.img</code> will create a backup image from an SD card or USB disk drive at /dev/sdd. Make sure to use the correct drive when copying an image to the SD card as it can overwrite the entire disk.</p>
 <h2 is-upgraded>df</h2>
@@ -411,7 +408,7 @@ user@host:~$ git config --global user.email &#34;g.hopper@harvard.edu&#34;
 <pre><code>user@host:~$ mkdir my_project
 </code></pre>
 <p>Now you want to go into that directory. You can use the <code>cd</code> (change directory) command to do this.</p>
-<pre><code>user@host:~$ my_project
+<pre><code>user@host:~$ cd my_project
 </code></pre>
 <p>Next, you can create a file that will tell people what the project is about. You can use any text editor to do this, such as Notepad or nano. Create a file called <code>README.md</code>. The <code>.md</code> extension stands for <strong>Markdown</strong>, which is a markup language. You can learn more about Markdown <a href="https://daringfireball.net/projects/markdown/" target="_blank">here</a>.</p>
 <p>You can now give the file a title and write a short explanation of what your project is about.</p>
@@ -471,7 +468,7 @@ Changes to be committed:
 user@host:~$ git commit -am &#39;adds data csv and python program&#39;
 </code></pre>
 <p>Then you carry on working on your code for a bit. Every time you make a significant change to the file, you can perform a new commit.</p>
-<pre><code>user@host:~$ git commit -am &#39;finishes find function&#39;
+<pre><code>user@host:~$ git commit -am &#39;finishes get_age method&#39;
 </code></pre>
 <p>Now imagine that you&#39;ve made a horrible mistake. You&#39;ve been working for a while and you&#39;ve deleted your <code>get_age()</code> method, and then performed a commit. With Git, it&#39;s easy to go back in time and restore an earlier version of any of your files. Let&#39;s first look at the commit history of the file.</p>
 <pre><code>user@host:~$ git log person.py
@@ -481,13 +478,13 @@ user@host:~$ git commit -am &#39;adds data csv and python program&#39;
 Author: Grace Hopper &lt;g.hopper@harvard.edu&gt;
 Date:   Fri Mar 3 20:27:17 2017 +0000
 
-	deletes find function
+	deletes get_age method
 
 commit 5fd772a292c019a7cf3012b1156685280d4a7d2d
 Author: Grace Hopper &lt;g.hopper@harvard.edu&gt;
 Date:   Fri Mar 3 20:24:52 2017 +0000
 
-	finishes find function
+	finishes get_age method
 
 commit 127545c19794b5fe869dd22d0cf57bf8820c5794
 Author: Grace Hopper &lt;g.hopper@harvard.edu&gt;
@@ -500,7 +497,7 @@ Date:   Fri Mar 3 20:20:18 2017 +0000
 <pre><code>user@host:~$ git checkout 5fd772a292c019a7cf3012b1156685280d4a7d2d person.py
 </code></pre>
 <p>The file will be restored and you can now commit this change.</p>
-<pre><code>user@host:~$ git commit -am &#39;restores find function&#39;
+<pre><code>user@host:~$ git commit -am &#39;restores get_age method&#39;
 </code></pre>
 <h2 is-upgraded>Making major changes</h2>
 <p>Imagine you&#39;re talking to your friend about your amazing project, and they have a really cool idea for some changes you could make to improve it. The changes are quite large, though, and you&#39;re worried that if you make them, you might break the project. You could make a copy of the directory and start working on this copy, but to keep using Git you&#39;d have to make an entirely new repo. This could all get quite confusing. Luckily, Git has a feature called <strong>branches</strong>; using a branch allows you to make copies without losing or altering your original work.</p>
