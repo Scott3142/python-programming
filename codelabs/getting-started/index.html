@@ -73,6 +73,19 @@ print(&#34;Welcome to the course - you will learn to program!&#34;) #this indent
 if __name__ == &#39;__main__&#39;:
 main()
 </code></pre>
+<h2 is-upgraded>Running Python commands in Atom</h2>
+<p>The Atom development environment has several packages available which allow you to run your Python programs directly inside the editor. The most popular of these at the time of writing is the <code>script</code> package. You can read more about <code>script</code> at <a href="https://atom.io/packages/script" target="_blank">this link</a>.</p>
+<p>To install the <code>script</code> package, open Atom and click on the <em>packages</em> tab in the toolbar. Go to <em>Settings View</em> and click <em>Install Packages/Themes</em>.</p>
+<p class="image-container"><img alt="atom-script-1" src="img/37fcde961809ae24.png"></p>
+<p>Search for the <code>script</code> package and click <em>Install</em>.</p>
+<p class="image-container"><img alt="atom-script-2" src="img/b13f2d12cf136c34.png"></p>
+<p>Once it has installed, go and create a <code>test.py</code> file in your sandbox and enter <code>print(&#34;Hello world!&#34;)</code>. You can alternatively use any Python <code>.py</code> file for this step.</p>
+<p class="image-container"><img alt="atom-script-3" src="img/cbdb2fb6b6490e79.png"></p>
+<p>You should see an output in the bottom left of the screen which contains the contents of your program&#39;s output. If there are any errors in your code, the stack trace will also show up here.</p>
+<p class="image-container"><img alt="atom-script-4" src="img/aefb8367cca4618d.png"></p>
+<p>It is important to be able to successfully complete these steps to be able to continue to access the material in this course.</p>
+<aside class="special"><p>For the vast majority of the exercises, it will suffice to run your Python programs in this way. However, if you require virtual environments, <code>pip</code> installs or testing frameworks, it is crucial to understand how to run commands in the terminal and make this your preferred option. We will cover this in the following section.</p>
+</aside>
 
 
       </google-codelab-step>
@@ -109,6 +122,8 @@ main()
 </code></pre>
 <p>if you&#39;re on Windows and using Powershell. Throughout this section, the first part of the command (either <code>user@host:~$</code> for Linux or <code>PS C:\Users\User&gt;</code> for Windows) is not to be typed into the command line. This is just to illustrate to you what the full prompt should look like in each case.</p>
 <p>If you get an error saying that <code>python3</code> is not recognised as a command, <a href="https://www.python.org/downloads/" target="_blank">make sure it&#39;s installed</a>.</p>
+<aside class="special"><p><strong>Note:<br><br></strong> If you are using Atom as a development environment, you can run your Python programs from inside the editor with the <code>script</code> package. Once you have installed the <code>script</code> package, you can run your program with <code>Ctrl-Shift-B</code>. More information on the <code>script</code> package can be found <a href="https://atom.io/packages/script" target="_blank">here</a>.</p>
+</aside>
 <h2 is-upgraded>The terminal in Linux</h2>
 <p>If you are not using Linux or the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">Windows Subsystem for Linux</a>, you can freely skip ahead to the <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#1" target="_blank">next part</a>.</p>
 <p>If you are using the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">Windows Subsystem for Linux</a>, open it according to the instructions contained on that page, otherwise search for <code>Terminal</code> in your installed software and open it. You should be greeted with a command prompt that looks something like:</p>

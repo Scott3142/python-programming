@@ -76,6 +76,31 @@ if __name__ == '__main__':
 main()
 ```
 
+### Running Python commands in Atom
+
+The Atom development environment has several packages available which allow you to run your Python programs directly inside the editor. The most popular of these at the time of writing is the `script` package. You can read more about `script` at [this link](https://atom.io/packages/script).
+
+To install the `script` package, open Atom and click on the _packages_ tab in the toolbar. Go to _Settings View_ and click _Install Packages/Themes_.
+
+![atom-script-1](img/script-1.png)
+
+Search for the `script` package and click _Install_.
+
+![atom-script-2](img/script-2.png)
+
+Once it has installed, go and create a `test.py` file in your sandbox and enter `print("Hello world!")`. You can alternatively use any Python `.py` file for this step.
+
+![atom-script-3](img/script-3.png)
+
+You should see an output in the bottom left of the screen which contains the contents of your program's output. If there are any errors in your code, the stack trace will also show up here.
+
+![atom-script-4](img/script-4.png)
+
+It is important to be able to successfully complete these steps to be able to continue to access the material in this course.
+
+Positive
+: For the vast majority of the exercises, it will suffice to run your Python programs in this way. However, if you require virtual environments, `pip` installs or testing frameworks, it is crucial to understand how to run commands in the terminal and make this your preferred option. We will cover this in the following section.
+
 ## The command line
 Duration: 00:30:00
 
@@ -127,6 +152,9 @@ PS C:\Users\User> python3 main.py
 if you're on Windows and using Powershell. Throughout this section, the first part of the command (either `user@host:~$` for Linux or `PS C:\Users\User>` for Windows) is not to be typed into the command line. This is just to illustrate to you what the full prompt should look like in each case.
 
 If you get an error saying that `python3` is not recognised as a command, [make sure it's installed](https://www.python.org/downloads/).
+
+Positive
+: **Note:** <br><br> If you are using Atom as a development environment, you can run your Python programs from inside the editor with the `script` package. Once you have installed the `script` package, you can run your program with `Ctrl-Shift-B`. More information on the `script` package can be found [here](https://atom.io/packages/script).
 
 ### The terminal in Linux
 

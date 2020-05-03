@@ -86,9 +86,9 @@ if __name__ == &#39;__main__&#39;:
 <p>The program above will print:</p>
 <aside class="warning"><p>Hello world! <br> ... and the universe!</p>
 </aside>
-<p>The programming exercises will be checked by Python&#39;s tester when uploaded to Github. The tester is very meticulous. The guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.</p>
+<p>The programming exercises will be checked by Python&#39;s tester when uploaded to Github. The tester is very meticulous and the guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.</p>
 <p>This preciseness with regard to the output is relevant in programming in a more general sense. Missing a single character may cause an error. Novice programmers often enter a comma instead of a dot, or write, for instance <code>prnt</code> instead of <code>print</code>, leave out apostrophes, or forget a bracket after a command. Any one of these would cause an error and cause the program execution to fail.</p>
-<p>Learning programming is, in fact, a path full of mistakes – and every error message is a chance to learn. Keep a look out for any red signs in the IDE and try to read the test errors!</p>
+<p>Learning programming is, in fact, a path full of mistakes – and every error message is a chance to learn. Keep a look out for any error messages in Atom and try to read the test errors!</p>
 <aside class="special"><p><strong>Exercise - Once Upon a Time<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/den01-python-programming/exercise-1-2-once-upon-a-time.git" target="_blank">Source files on Github</a></p>
 </aside>
 <aside class="special"><p><strong>Exercise - Dinosaur<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/den01-python-programming/exercise-1-3-dinosaur.git" target="_blank">Source files on Github</a></p>
@@ -268,7 +268,6 @@ if __name__ == &#39;__main__&#39;:
     second = input(&#39;Write the second string:&#39;)
     third = input(&#39;Write the third string:&#39;)
 
-    print(&#39;You wrote: &#39;)
     print(&#34;Last string you wrote was &#34; + third + &#34;, which &#34;)
     print(&#34;was preceded by &#34; + second+ &#34;.&#34;)
     print(&#34;The first string was&#34; + first + &#34;.&#34;)
@@ -323,10 +322,20 @@ print(&#34;The value of the variable is &#34; + str(number))
 </code></pre>
 <aside class="warning"><p>The value of the variable is 123 <br> The value of the variable is 42</p>
 </aside>
-<p>Let&#39;s look at the preceding program&#39;s execution step-by-step. When a variable appears in the program for the first time, the computer creates a ‘named container&#39; for the variable and assigns it a type. Then, the value on the right side of the equals sign is copied into this named container. You can read more about how Python defines a variable&#39;s type <a href="https://www.tutorialspoint.com/python/python_variable_types.htm" target="_blank">here</a>.</p>
+<p>Let&#39;s look at the preceding program&#39;s execution step-by-step. When a variable appears in the program for the first time, the computer creates a ‘named container&#39; for the variable. Then, the value on the right side of the equals sign is copied into this named container.</p>
 <p>Whenever a variable is referenced by its name in a program – here, we want to print the string &#34;The value of the variable is &#34; followed by the value of the <code>number</code> variable – its value is retrieved from a container that has the corresponding name.</p>
 <p>The variable is then referenced again by its name in the program – we again want to print the string &#34;The value of the variable is &#34; followed by the value of the <code>number</code> variable. We proceed as normal, retrieving the value of <code>number</code> from a container having its name.</p>
 <p>At the end of the program, you&#39;ll notice that the original value of the variable has vanished. A variable can hold only one value at a time.</p>
+<p>Unlike some other programming languages, you can also redefine a variable to have a different implicit type:</p>
+<pre><code>number = 123
+print(&#34;The value of the variable is &#34; + str(number))
+
+number = 42.6
+print(&#34;The value of the variable is &#34; + str(number))
+</code></pre>
+<aside class="warning"><p>The value of the variable is 123 <br> The value of the variable is 42.6</p>
+</aside>
+<p>In the first example, the variable <code>number</code> had the type <code>int</code> in line 1 and was reassigned to another <code>int</code> type in line 4. In the second example, the variable <code>number</code> had the type <code>int</code> in line 1 and was reassigned to <code>float</code> type in line 4. This is prefectly fine in Python but may be strange if coming from other languages like Java.</p>
 <h2 is-upgraded>Variable Types</h2>
 <p>If you are used to certain other programming languages such as Java, you may have seen explicit declaration of type, such as:</p>
 <pre><code>boolean myBool = false;
@@ -349,7 +358,7 @@ System.out.println(number1/number2);
 <p>would output:</p>
 <aside class="warning"><p>0</p>
 </aside>
-<p>since both types are integers. We will not go too much further into the mechanisms of type declaration in Python here, but you can find more about it through a Google search for &#34;Type declarations in Python&#34;.</p>
+<p>since both types are integers. We will not go too much further into the mechanisms of type declaration in Python here, but you can read more about it <a href="https://www.tutorialspoint.com/python/python_variable_types.htm" target="_blank">here</a>.</p>
 <h2 is-upgraded>Naming Variables</h2>
 <p>Naming variables is a fundamental aspect of describing a program. Let&#39;s look at two examples.</p>
 <pre><code>a = 3.14
@@ -372,8 +381,7 @@ print(surface_area)
 <aside class="special"><p><strong>Variables Express the Program and the Problem to Be Solved<br><br></strong> Programming is a problem-solving tool. The aim is to create solutions for any given problem, such as the automation of control in cars. As a problem is approached, the developer decides on the terms used to describe the problem domain. The terminology that is chosen, such as variable names, will serve to describe the problem for anyone who is to work with it in the future. <br><br> As you&#39;re wording the problem that you&#39;re solving, think about the concepts related to that problem and appropriate terms that could be used to describe them. If you find it hard to come up with relevant names, think of the ones that definitely do not describe it. After this, settle on some terminology that you&#39;re going to use – the good thing is that you can usually improve on it later on.</p>
 </aside>
 <p>Variable naming is limited by certain constraints.</p>
-<p>Variable names cannot contain certain special symbols, such as exclamation marks (!). Spaces are also not allowed, since they&#39;re used to separate parts of commands. Instead of spaces, the convention in many programming languages is to either use a style known as <a href="https://en.wikipedia.org/wiki/Camel_case" target="_blank">camelCase</a> or <a href="https://en.wikipedia.org/wiki/Snake_case" target="_blank">snake_case</a> to delimit words. Python variable names are always written in snake_case.</p>
-<p><strong>Note!</strong> The first letter of a variable name is always lower-cased:</p>
+<p>Variable names cannot contain certain special symbols, such as exclamation marks (!). Spaces are also not allowed, since they&#39;re used to separate parts of commands. Instead of spaces, the convention in many programming languages is to either use a style known as <a href="https://en.wikipedia.org/wiki/Snake_case" target="_blank">snake_case</a> or <a href="https://en.wikipedia.org/wiki/Camel_case" target="_blank">camelCase</a> to delimit words. Python variable names are always written in snake_case.</p>
 <pre><code>camelCaseVariable = 7 # will work, but not convention in Python
 snake_case_variable = 7 # this is the format recommended by Python
 </code></pre>
@@ -398,11 +406,11 @@ print(&#34;You wrote &#34; + text)
 <tr></tr>
 <tr><td colspan="1" rowspan="1"><p>Whole number, i.e., <code>int</code></p>
 </td><td colspan="1" rowspan="1"><p><code>value = 4</code></p>
-</td><td colspan="1" rowspan="1"><p>An integer can contain whole numbers whose values lie between -2147483648 and 2147483647.</p>
+</td><td colspan="1" rowspan="1"><p>An integer can contain any whole number. Some programming languages have bounds for integer values to do with 32 or 64-bit representations but since Python 3, the values of <code>int</code> have been allowed to be unbounded.</p>
 </td></tr>
 <tr><td colspan="1" rowspan="1"><p>Floating-point number, i.e., <code>float</code></p>
 </td><td colspan="1" rowspan="1"><p><code>value = 4.2</code></p>
-</td><td colspan="1" rowspan="1"><p>Floating-point numbers contain decimal numbers, with the greatest possible value being approximately 2^1023. When a decimal number is represented with a floating-point number, the value can be inaccurate as floating-points are incapable of representing all decimal numbers.</p>
+</td><td colspan="1" rowspan="1"><p>Floating-point numbers contain decimal numbers, with the greatest possible value being 1.7976931348623157e+308 (a <strong>huge</strong> value). When a decimal number is represented with a floating-point number, the value can be inaccurate as floating-points are incapable of representing all decimal numbers. You can see this inaccuracy if you run (for example) the command <code>1.2 - 1.0</code> in a Python file. Unless you are doing some serious scientific computing, you shouldn&#39;t need to worry much about these errors in practice.</p>
 </td></tr>
 <tr><td colspan="1" rowspan="1"><p><code>String</code></p>
 </td><td colspan="1" rowspan="1"><p><code>value = &#34;Hi!&#34;</code></p>
@@ -430,6 +438,27 @@ print(value)
 <aside class="warning"><p>Write a value <br><em>User &lt;42&gt;<br></em> You wrote 42</p>
 </aside>
 <p>Note that we had to convert our variable back to a string in the <code>print</code> statement in order to be able to concatenate it with the string &#34;You wrote &#34;. An error would have been thrown if we had ommited the <code>str()</code>.</p>
+<h2 is-upgraded>Reading floats and booleans</h2>
+<p>The <code>float</code> and <code>bool</code> commands convert strings to floats and booleans. Similarly to <code>int</code>, they take the string containing the value to be converted as a parameter.</p>
+<pre><code>value_as_string = &#34;42.6&#34;
+value = float(value_as_string)
+
+print(value)
+</code></pre>
+<aside class="warning"><p>42.6</p>
+</aside>
+<pre><code>value_as_string = &#34;True&#34;
+value = bool(value_as_string)
+
+print(value)
+</code></pre>
+<aside class="warning"><p>True</p>
+</aside>
+<p>If you try to convert a value such as <code>value_as_string = &#34;42.6&#34;</code> to an <code>int</code>, an error will be thrown:</p>
+<pre><code>Traceback (most recent call last):
+  File &#34;sandbox.py&#34;&#34;, line 1, in &lt;module&gt;
+ValueError: invalid literal for int() with base 10: &#39;42.6&#39;
+</code></pre>
 <aside class="special"><p><strong>Exercise - Different types of input<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/den01-python-programming/exercise-1-11-different-inputs.git" target="_blank">Source files on Github</a></p>
 </aside>
 
@@ -486,11 +515,12 @@ print(2 + second - first - second)  # prints 0
 <pre><code>first = 2
 second = 4
 
-# the expression below does not even work, since
-# the result is not assigned to any variable
-# or given as a parameter to a print statement
 first + second
 </code></pre>
+<p>we would get the output</p>
+<aside class="warning"><p>6</p>
+</aside>
+<p>Note that when working with numbers, the <code>print</code> statement is implicit. It is not recommended to omit the <code>print</code> statement intentionally, unless working with very simple programs as it can often lead to confusion.</p>
 <h2 is-upgraded>Calculating and Printing</h2>
 <p>The command <code>print</code> prints the value of a variable. The string literal to be printed, which is marked by quotation marks, can be appended with other content by using the operation <code>+</code>.</p>
 <pre><code>length = 42
@@ -530,7 +560,8 @@ print(&#34;y is &#34; + str(y) + &#34; and z is &#34; + str(z))
 </aside>
 <aside class="special"><p><strong>Exercise - Multiplication formula<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/den01-python-programming/exercise-1-16-multiplication-formula.git" target="_blank">Source files on Github</a></p>
 </aside>
-<p>Once you have completed the previous exercise, try finding out the greatest possible multiplication that you can calculate. The reason behind the phenomenon you&#39;ll observe is that the value of an integer value is capped at the maximum of 2^31-1 (i.e. 2147483647). This is because integer variables are represented with 32 bits in the computer&#39;s memory.</p>
+<aside class="special"><p>Once you have completed the previous exercise, try finding out the greatest possible multiplication of two floats that you can calculate. The reason behind the phenomenon you&#39;ll observe is that the value of a float is capped at the maximum of 1.7976931348623157e+308. This is because of limitations to the computer&#39;s memory. <br><br> To put it into some perspective, this value is <strong>vastly</strong> greater than the total number of atoms in the observable universe (10e+80) and is not even comprehensible to humans. There is very little to zero chance that any scientific or engineering application will ever require working with numbers so large.</p>
+</aside>
 <h2 is-upgraded>Division</h2>
 <p>Division is accomplished in a similar way to addition and multiplication, but we have to be careful dividing by zero or something close to zero.</p>
 <pre><code>result = 3 / 2
@@ -590,7 +621,7 @@ if True:
 <aside class="warning"><p>Hello, world! <br> This code is unavoidable!</p>
 </aside>
 <p>A conditional statement begins with the keyword <code>if</code> followed by a condition, which is evaluated when the conditional statement is reached. The result of the evaluation is a boolean value. No evaluation occurred above. Instead, a boolean value (<code>True</code>) was explicitly used in the conditional statement.</p>
-<p>The condition is followed by a block, which is indented beneath. The source code inside the block is executed if the expression inside the parentheses evaluates to <em>true</em>.</p>
+<p>The condition is followed by a block, which is indented beneath. The source code inside the block is executed if the expression inside the parentheses evaluates to <code>True</code>.</p>
 <p>Let&#39;s look at an example where we compare numbers in the conditional statement.</p>
 <pre><code>number = 11
 if (number &gt; 10):
@@ -706,7 +737,7 @@ else:
 <aside class="special"><p><strong>Exercise - Grades and Points<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/den01-python-programming/exercise-1-26-grades-and-points.git" target="_blank">Source files on Github</a></p>
 </aside>
 <h2 is-upgraded>Conditional Statement Expression and the Boolean Variable</h2>
-<p>The value that goes between the parentheses of the conditional statement should be of type boolean after the evaluation. <code>boolean</code> type variables are either <em>true</em> or <em>false</em>.</p>
+<p>The value that goes between the parentheses of the conditional statement should be of type boolean after the evaluation. <code>boolean</code> type variables are either <code>True</code> or <code>False</code>.</p>
 <pre><code>is_it_true = True
 print(&#34;The value of the boolean variable is &#34; + str(is_it_true))
 </code></pre>
@@ -724,7 +755,7 @@ if (is_it_true):
 second = 3
 is_greater = first &gt; second
 </code></pre>
-<p>In the example above, the boolean variable <code>is_greater</code> now contains the boolean value <em>false</em>. We can extend the previous example by adding a conditional statement to it.</p>
+<p>In the example above, the boolean variable <code>is_greater</code> now contains the boolean value <code>False</code>. We can extend the previous example by adding a conditional statement to it.</p>
 <pre><code>first = 1
 second = 3
 is_less_than = first &lt; second
@@ -734,7 +765,7 @@ if (is_less_than):
 </code></pre>
 <aside class="warning"><p>1 is less than 3!</p>
 </aside>
-<p>The code above has been executed to the point where the program&#39;s variables have been created and assigned values. The variable <code>is_less_than</code> has <code>true</code> as its value. Next in the execution is the comparison <code>if (is_less_than)</code> – the value for the variable <code>is_less_than</code> is found in its container, and the program finally prints:</p>
+<p>The code above has been executed to the point where the program&#39;s variables have been created and assigned values. The variable <code>is_less_than</code> has <code>True</code> as its value. Next in the execution is the comparison <code>if (is_less_than)</code> – the value for the variable <code>is_less_than</code> is found in its container, and the program finally prints:</p>
 <aside class="special"><p><strong>Remainder</strong>: <br><br> The modulo operator is a slightly less-used operator, which is, however, very handy when we want to check the divisibility of a number, for example. The symbol for the modulo operator is <code>%</code>.</p>
 </aside>
 <pre><code>remainder = 7 % 2
@@ -783,13 +814,13 @@ else:
 <aside class="special"><p><strong>Exercise - Same<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/den01-python-programming/exercise-1-29-same.git" target="_blank">Source files on Github</a></p>
 </aside>
 <h2 is-upgraded>Logical Operators</h2>
-<p>The expression of a conditional statement may consist of multiple parts, in which the logical operators <strong>and</strong><code>and</code>, <strong>or</strong><code>or</code>, and <strong>not</strong><code>not</code> are used.</p>
+<p>The expression of a conditional statement may consist of multiple parts, in which the logical operators <code>and</code>, <code>or</code>, and <code>not</code> are used.</p>
 <ul>
 <li>An expression consisting of two expressions combined using the and-operator is true, if and only if both of the combined expressions evaluate to true.</li>
 <li>An expression consisting of two expressions combined using the or-operator is true if either one, or both, of the combined expressions evaluate to true.</li>
 <li>Logical operators are not used for changing the boolean value from true to false, or false to true.</li>
 </ul>
-<p>In the next example we combine two individual conditions using <code>and</code>, i.e., the and-operator. The code is used to check if the number in the variable is greater than or equal to 5 and less than or equal to 10. In other words, whether it&#39;s within the range of 5-10:</p>
+<p>In the next example we combine two individual conditions using <code>and</code>. The code is used to check if the number in the variable is greater than or equal to 5 and less than or equal to 10. In other words, whether it&#39;s within the range of 5-10:</p>
 <pre><code>print(&#34;Is the number within the range 5-10: &#34;)
 number = 7
 
