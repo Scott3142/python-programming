@@ -64,9 +64,6 @@ A program that both reads and calculates combines both of these patterns. One th
 
 ```python
 def product():
-    first = 1
-    second = 2
-
     # Assigning the user input to the variables
     first = int(input())
     second = int(input())
@@ -78,7 +75,7 @@ def product():
     print("The product of " + str(first) + " and " + str(second) + " is " + str(product))
 ```
 
-In the example above, the program has been implemented so that the variables are declared first after which values are read into them. Variable declaration and the reading of values into them can also be combined into one.
+In the example above, the program has been implemented so that the variables are declared and values are read into them.
 
 Positive
 : **Exercise - Squared** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-2-1-squared.git)
@@ -123,9 +120,6 @@ Conditional logic can be combined with other patterns used for problem solving. 
 
 ```python
 def product():
-    first = 1
-    second = 2
-
     # Assigning the user input to the variables
     first = int(input())
     second = int(input())
@@ -437,7 +431,7 @@ while True:
         print(number * number)
 ```
 
-We notice that it's difficult to define a single, clear task for `if-elif-else`-block. During the design and implementation of a program, it's desirable to aim for a situation in which every part of the program has a single, clear task. This theme repeats throughout the course.
+We notice that it's difficult to define a single, clear task for the `if-elif-else`-block. During the design and implementation of a program, it's desirable to aim for a situation in which every part of the program has a single, clear task. This theme repeats throughout the course.
 
 ### Calculation with Loops
 
@@ -576,7 +570,7 @@ while True:
     if (number_from_user < 0):
         number_of_negatives = number_of_negatives + 1
 
-    # Also could have used..
+    # Also could have used:
     # if (number_from_user > 0):
     #     number_of_positives = number_of_positives + 1
     # else:
@@ -859,7 +853,7 @@ So far, we've used various commands: value assignment, calculations, conditional
 
 Printing to the screen has been done with the statement `print()`, and the reading of values with `input()`. `if` has been used in conditional statements, and `while` and `for` in loops. We notice that printing and reading operations somewhat differ from `if`, `while`, and `for` in that the print and read commands are followed by parentheses, which may include parameters passed to the command. The ones that "end in parentheses" are not actually commands, but methods.
 
-Technically speaking, **a method** is a named set of statements. It's a piece of a program that can be called from elsewhere in the code by the name given to the method. For instance `print("I am a parameter given to the method!")` calls a methods that performs printing to the screen. The internal implementation of the method -- meaning the set of statements to be executed -- is hidden, and the programmer does not need to concern themselves with it when using the method.
+Technically speaking, **a method** is a named set of statements. It's a piece of a program that can be called from elsewhere in the code by the name given to the method. For instance `print("I am a parameter given to the method!")` calls a method that performs printing to the screen. The internal implementation of the method -- meaning the set of statements to be executed -- is hidden, and the programmer does not need to concern themselves with it when using the method.
 
 So far all the methods we have used have been ready-made Python methods. We will learn to create our own methods in this section, but first let's revisit `if __name__ == '__main__':`, the directory structure and importing packages.
 
@@ -889,7 +883,7 @@ def test_exercise():
     assert average(16, 12, 5, 3) == 9 # this runs the 'average' method and checks if the answer is correct
 ```
 
-you can see that our package is imported from the `src` folder and used in the program. This is common Python functionality. You have previously imported and used the `numpy` package which allowed you to use a `sqrt` function. This is exactly the same functionality, except that you haven't written the `numpy` package. Python knows where to get `numpy` from because it is a common package listed in the [Python Package Index (PyPI)](https://pypi.org/) , which is a repository of software for the Python programming language. You can create your own packages and make them available on PyPi if you think it would be useful for others.
+you can see that our package is imported from the `src` folder and used in the program. This is common Python functionality. You have previously imported and used the `numpy` package which allowed you to use a `sqrt` function. This is exactly the same functionality, except that you haven't written the `numpy` package. Python knows where to get `numpy` from because it is a common package listed in the [Python Package Index (PyPI)](https://pypi.org/) , which is a repository of software for the Python programming language. You can create your own packages and make them available on PyPi if you think they would be useful for others.
 
 **What is __name__ == '__main__'?**
 
@@ -905,10 +899,10 @@ if __name__ == '__main__':
 
 Whenever the Python interpreter reads a source file, it does two things:
 
-* it sets a few special variables, such as \_\_name\_\_, and then
+* it sets a few special variables, such as `__name__`, and then
 * it executes all of the code found in the file.
 
-When the Python interpeter reads a source file, it first defines a few special variables. In this case, we care about the __name__ variable.
+When the Python interpeter reads a source file, it first defines a few special variables. In this case, we care about the `__name__` variable.
 
 **When Your Module Is the Main Program**
 
@@ -935,7 +929,7 @@ On the other hand, suppose some other module is the main program and it imports 
 import exercise
 ```
 
-The interpreter will search for your foo.py file (along with searching for a few other variants), and prior to executing that module, it will assign the name "exercise" from the import statement to the `__name__` variable, i.e.
+The interpreter will search for your `exercise.py` file (along with searching for a few other variants), and prior to executing that module, it will assign the name "exercise" from the import statement to the `__name__` variable, i.e.
 
 ```python
 # It's as if the interpreter inserts this at the top
@@ -947,10 +941,10 @@ In this case, the `if __name__ == '__main__':` statement would resolve to `False
 
 **Why does it work this way?**
 
-You might naturally wonder why anybody would want this. Well, sometimes you want to write a .py file that can be both used by other programs and/or modules as a module, and can also be run as the main program itself. Examples:
+You might naturally wonder why anybody would want this. Well, sometimes you want to write a `.py` file that can be both used by other programs and/or modules as a module, and can also be run as the main program itself. Examples:
 
 - Your module is a library, but you want to have a script mode where it runs some unit tests or a demo.
-- Your module is only used as a main program, but it has some unit tests, and the testing framework works by importing .py files like your script and running special test functions. You don't want it to try running the script just because it's importing the module.
+- Your module is only used as a main program, but it has some unit tests, and the testing framework works by importing `.py` files like your script and running special test functions. You don't want it to try running the script just because it's importing the module.
 - Your module is mostly used as a main program, but it also provides a programmer-friendly API for advanced users.
 
 Beyond those examples, it's elegant that running a script in Python is just setting up a few magic variables and importing the script. "Running" the script is a side effect of importing the script's module.
@@ -1042,19 +1036,19 @@ class Example:
     def __init__(self, *args):
         # program code
         print("Let's see if we can travel to the method world:")
-        greet()
+        self.greet()
 
         print("Looks like we can, let's try again:")
-        greet()
-        greet()
-        greet()
+        self.greet()
+        self.greet()
+        self.greet()
 
     # your own methods here
     def greet(self):
         print("Greetings from the method world!")
 
 def main():
-    myClass = Example()
+    my_class = Example()
 
 if __name__ == '__main__':
     main()
@@ -1102,17 +1096,17 @@ def this_method_says_woof(self):
 
 **Parameters** are values given to a method that can be used in its execution. The parameters of a method are defined on the uppermost line of the method within the parentheses following its name. The values of the parameters that the method can use are copied from the values given to the method when it is executed.
 
-In the following example a parameterized method `greet` is defined. It has a parameter called `numOfTimes`.
+In the following example a parameterized method `greet` is defined. It has a parameter called `num_of_times`.
 
 ```python
-def greet(self, numOfTimes):
+def greet(self, num_of_times):
     i = 0
-    while (i < numOfTimes):
+    while (i < num_of_times):
         print("Greetings!")
         i += 1
 ```
 
-We will call the method `greet` with different values. The parameter `numOfTimes` is assigned the value `1` on the first call, and `3` on the second.
+We will call the method `greet` with different values. The parameter `num_of_times` is assigned the value `1` on the first call, and `3` on the second.
 
 ```python
 def __init__(self):
@@ -1128,7 +1122,7 @@ Just like when calling the predefined method `print`, you can pass an expression
 
 ```python
 def __init__(self):
-    greet(1 + 2)
+    self.greet(1 + 2)
 ```
 
 Negative
@@ -1189,7 +1183,7 @@ class Example:
             min += 1
 
 def main():
-    myClass = Example()
+    my_class = Example()
 ```
 
 The output of the program is:
@@ -1206,15 +1200,15 @@ To further demonstrate this point, let's consider the following example. We defi
 # main program
 def __init__(self):
     number = 1
-    print("The value of the variable 'number' in the main program: " + number)
-    increment_by_three(number)
-    print("The value of the variable 'number' in the main program: " + number)
+    print("The value of the variable 'number' in the main program: " + str(number))
+    self.increment_by_three(number)
+    print("The value of the variable 'number' in the main program: " + str(number))
 
 # method
 def increment_by_three(self, number):
-    print("The value of the method parameter 'number': " + number)
+    print("The value of the method parameter 'number': " + str(number))
     number = number + 3
-    print("The value of the method parameter 'number': " + number)
+    print("The value of the method parameter 'number': " + str(number))
 ```
 
 The execution of the program produces the following output.
@@ -1238,7 +1232,7 @@ The method defined above returns a value of `10` when called. For the return val
 
 ```python
 def __init__(self):
-    number = always_returns_ten()
+    number = self.always_returns_ten()
 
     print("the method returned the number " + str(number))
 ```
@@ -1247,7 +1241,7 @@ The return value can also be used in any other expression.
 
 
 ```python
-number = 4 * always_returns_ten() + (always_returns_ten() / 2) - 8
+number = 4 * self.always_returns_ten() + (self.always_returns_ten() / 2) - 8
 
 print("the result of the calculation " + str(number))
 ```
@@ -1348,7 +1342,7 @@ def sum(first, second):
 
 When the execution of the method reaches the statement `return first + second `, the expression `first + second` is evaluated, and then its value is returned.
 
-The method is called in the following way. Below, the method is used to add the numbers 2 and 7 together. The value resulting from the method call is placed into the variable `sumOfNumbers`.
+The method is called in the following way. Below, the method is used to add the numbers 2 and 7 together. The value resulting from the method call is placed into the variable `sum_of_numbers`.
 
 ```python
 sum_of_numbers = sum(2, 7)
@@ -1411,7 +1405,7 @@ When a method is called, the execution of the calling method is left waiting for
 ```python
 def __init__(self):
     print("Hello world!")
-    print_number()
+    self.print_number()
     print("Bye bye world!")
 
 def print_number(self):
@@ -1442,9 +1436,9 @@ def __init__(self):
     beginning = 1
     end = 5
 
-    print_stars(beginning, end)
+    self.print_stars(beginning, end)
 
-def print_stars(beginning, end):
+def print_stars(self, beginning, end):
     while (beginning < end):
         print("*")
         beginning += 1  # same as beginning = beginning + 1
@@ -1477,13 +1471,13 @@ Let's now study an example where the method returns a value. The `__init__` meth
 
 ```python
 def __init__(self):
-    start()
+    self.start()
 
 def start(self):
     first = 5
     second = 6
 
-    sum = sum(first, second)
+    sum = self.sum(first, second)
 
     print("Sum: " + str(sum))
 
@@ -1518,18 +1512,18 @@ After that, the print command is executed, and then we return to the `__init__` 
 As we noticed earlier, other methods can be called from within methods. An additional example of this technique is given below. We'll create the method `multiplication_table` that prints the multiplication table of the given number. The multiplication table prints the rows with the help of the `print_multiplication_table_row` method.
 
 ```python
-def multiplication_table(max):
+def multiplication_table(self,max):
     number = 1
 
     while (number <= max):
-        print_multiplication_table_row(number, max)
+        self.print_multiplication_table_row(number, max)
         number+= 1
 
 def print_multiplication_table_row(self, number, coefficient):
 
     printable = number
     while (printable <= number * coefficient):
-        print("  " + printable)
+        print("  " str(printable))
         printable += number
 
     print("")
@@ -1538,7 +1532,7 @@ def print_multiplication_table_row(self, number, coefficient):
 The output of the method call `multiplication_table(3)`, for instance, looks like this.
 
 Negative
-: 1  2  3 <br> 2  4  6 <br> 3  6  9
+: 1 <br> 2 <br> 3 <br><br> 2 <br> 4 <br> 6 <br><br> 3 <br> 6 <br> 9
 
 ## Summary
 Duration: 00:05:00
