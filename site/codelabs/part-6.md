@@ -412,8 +412,8 @@ Positive
 Duration: 01:00:00
 
 ### What you'll learn
-* Understand creating programs so that the user interface and the application logic are separated
-* Can create a textual user interface, which takes program specific application logic and a Scanner object as parameters
+* You understand creating programs so that the user interface and the application logic are separated
+* You can create a textual user interface, which takes program specific application logic as a parameter
 
 Let's examine the process of implementing a program and separating different areas of responsibility from each other. The program asks the user to write words until they write the same word twice.
 
