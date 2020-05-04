@@ -2,6 +2,8 @@
 
 ### Python Programming
 
+#### Main exercise material
+
 - [x] Add:
     - [x] Landing page
     - [x] Part 1
@@ -67,3 +69,15 @@
 - [x] Update description
 - [x] Add videos
 - [x] Add forms
+- [ ] Write accompanying slide deck
+- [ ] "Pythonise"
+    - [ ] Change string concatenation into f-strings
+    - [ ] Remove brackets from around conditionals
+    - [ ] Discuss `for index, value in enumerate(list):`
+
+### Codelabs
+
+- [x] Fix security vulnerabilities
+- [ ] Fix weird gh-pages .publish directory error
+- [ ] Update claat so that it exports correctly
+- [ ] Fix baseUrl changes
