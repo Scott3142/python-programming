@@ -475,7 +475,7 @@ Positive
 : **Exercise - First and last** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-5-first-and-last.git)
 
 Positive
-: **Exercise - Reember these numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-6-remember-these-numbers.git)
+: **Exercise - Remember these numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-6-remember-these-numbers.git)
 
 Positive
 : **Exercise - Only these numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-7-only-these-numbers.git)
@@ -712,7 +712,7 @@ Positive
 : **Exercise - Print thrice** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-17-print-thrice.git)
 
 Positive
-: **Exercise - Is it true** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-18-is-it-true.git)
+: **Exercise - Is it true?** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-18-is-it-true.git)
 
 Positive
 : **Exercise - Login** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-3-19-login.git)

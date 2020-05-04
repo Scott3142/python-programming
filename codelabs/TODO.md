@@ -1,6 +1,6 @@
 ## TODO:
 
-### Python Programming I
+### Python Programming
 
 - [x] Add:
     - [x] Landing page
@@ -67,14 +67,3 @@
 - [x] Update description
 - [x] Add videos
 - [x] Add forms
-
-### Python Programming II
-
-- [ ] Add:
-    - [ ] Part 8
-    - [ ] Part 9
-    - [ ] Part 10
-    - [ ] Part 11
-    - [ ] Part 12
-    - [ ] Part 13
-    - [ ] Part 14

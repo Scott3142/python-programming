@@ -282,9 +282,9 @@ Positive
 Duration: 01:00:00
 
 ### What you'll learn
-* Becoming familiar with the term overloading
-* Creating multiple constructors for a class.
-* Creating multiple methods with the same name in a class.
+* To become familiar with the term overloading.
+* To use classmethods as alternatives to multiple constructors for a class.
+* To overload methods in a class.
 
 Let's once more return to our Person class. It currently looks like this:
 
