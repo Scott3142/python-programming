@@ -40,8 +40,7 @@ if [ $enrolled == 'y' ]; then
     username_stripped=$(echo $username | sed -e 's/ /-/g' -e 's/[A-Z]/\L&/g')
 fi
 
-#input="exercise-list.dat"
-input="working-exercises.dat"
+input="exercise-list.dat"
 while IFS= read -r line
 do
     search="exercise-$exercise_number-"

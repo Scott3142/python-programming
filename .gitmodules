@@ -460,3 +460,6 @@
 [submodule "exercise-files/sandbox"]
 	path = exercise-files/sandbox
 	url = git@github.com:den01-python-programming/sandbox.git
+[submodule "exercise-files/exercises"]
+	path = exercise-files/exercises
+	url = git@github.com:den01-python-programming/exercises.git
