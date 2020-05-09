@@ -457,3 +457,6 @@
 [submodule "exercise-files/exercise-1-10-various-variables"]
 	path = exercise-files/exercise-1-10-various-variables
 	url = git@github.com:den01-python-programming/exercise-1-10-various-variables.git
+[submodule "exercise-files/sandbox"]
+	path = exercise-files/sandbox
+	url = git@github.com:den01-python-programming/sandbox.git
