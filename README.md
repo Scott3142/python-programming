@@ -4,7 +4,7 @@ This repository contains both the source code of this course's webpage and the s
 
 ## Contributing to the content
 
-If you spot a mistake, feel free to open an issue in this repo after consulting with the course assistants.
+If you spot a mistake, feel free to open an issue in this repo.
 
 If you'd help us making the correction, you can open a pull request with your proposed changes. You may find these resources helpful for doing this:
 
