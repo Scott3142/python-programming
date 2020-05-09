@@ -167,9 +167,9 @@ $ gulp serve --views-filer='^event-*'
 Note this filter takes a regular expression. By default, all views are built.
 
 
-## Deployment 
+## Deployment
 
-The instructions here detail the process for deployment to Github pages, but since static HTML/CSS/JS FILES are created, it can be deployed to a hosting service of your choice. 
+The instructions here detail the process for deployment to Github pages, but since static HTML/CSS/JS FILES are created, it can be deployed to a hosting service of your choice.
 
 Prerequisites for a Github pages deployment:
 
@@ -179,9 +179,9 @@ Prerequisites for a Github pages deployment:
 There are two files in which the `baseUrl` for the site is set (currently set to https://scott3142.uk/python-programming). You will want to change these. The files are:
 
 - `gulpfile.js`
-- `app/scripts/app.js` 
+- `app/scripts/app.js`
 
-It's unfortunate that this has to be done twice but a workaround is in the TODOs. If you think you have a fix for this, please submit a PR following [the usual guidelines](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests). 
+It's unfortunate that this has to be done twice but a workaround is in the TODOs. If you think you have a fix for this, please submit a PR following [the usual guidelines](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
 
 I have edited some core codelabs files to make the landing page links redirect to `{{baseUrl}}/python-programming`. The file that has been changed is
 
@@ -200,14 +200,14 @@ Finally:
 
 You may see a cryptic error about the `.publish` directory. I think this is due to a bug in gulp-gh-pages. There is a clunky workaround:
 
-- Checkout `gh-pages` locally 
+- Checkout `gh-pages` locally
 - Copy `.git` folder outside repo
 - Checkout `master`
-- Move copied `gh-pages` git repo to `.publish` 
+- Move copied `gh-pages` git repo to `.publish`
 
-A better workaround is in the TODOs. If you think you have a fix for this, please submit a PR following [the usual guidelines](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests). 
+A better workaround is in the TODOs. If you think you have a fix for this, please submit a PR following [the usual guidelines](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
 
-*NB:* The command `gulp deploy:build` is broken at the moment. You should always use `gulp deploy:prod` until this is fixed. 
+*NB:* The command `gulp deploy:build` is broken at the moment. You should always use `gulp deploy:prod` until this is fixed.
 
 The codelabs can be deployed using the commands:
 
@@ -233,4 +233,4 @@ If gulp startup times are really slow, try removing `node_modules/` or running
 $ npm dedupe
 ```
 
-The codelabs and landing page are adapted from Google's tools available [here](https://github.com/googlecodelabs/tools). 
+The codelabs and landing page are adapted from Google's tools available [here](https://github.com/googlecodelabs/tools).
