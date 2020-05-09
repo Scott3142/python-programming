@@ -78,7 +78,7 @@ Here's the second programming exercise of this course. If you'd like, you can wa
 replace-with-video
 
 Positive
-: **Exercise - Ada Lovelace** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-1-ada-lovelace.git)
+: **Exercise - Ada Lovelace** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-1-ada-lovelace.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-1)
 
 You can run a program in Atom by the keyboard combination Ctrl+Shift+B, if you have the `script` package installed as in the first part.
 
@@ -109,10 +109,10 @@ This preciseness with regard to the output is relevant in programming in a more 
 Learning programming is, in fact, a path full of mistakes -- and every error message is a chance to learn. Keep a look out for any error messages in Atom and try to read the test errors!
 
 Positive
-: **Exercise - Once Upon a Time** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-2-once-upon-a-time.git)
+: **Exercise - Once Upon a Time** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-2-once-upon-a-time.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-2)
 
 Positive
-: **Exercise - Dinosaur**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-3-dinosaur.git)
+: **Exercise - Dinosaur**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-3-dinosaur.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-3)
 
 ### Terminology and Code Comments
 
@@ -191,7 +191,7 @@ Negative
 : Write a message: <br> *User inputs message \<Hello World\>* <br> Hello World
 
 Positive
-: **Exercise - Message**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-4-message.git)
+: **Exercise - Message**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-4-message.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-4)
 
 ### Fundamentals of Strings
 
@@ -269,7 +269,7 @@ Negative
 : My name is Bond, James Bond
 
 Positive
-: **Exercise - Hi Ada Lovelace!**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-5-hi-ada.git)
+: **Exercise - Hi Ada Lovelace!**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-5-hi-ada.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-5)
 
 ### Reading Strings
 
@@ -289,7 +289,7 @@ Negative
 : Write a message: <br> *User: \<This will be printed twice\>* <br> This will be printed twice <br> This will be printed twice
 
 Positive
-: **Exercise - Message Three Times**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-6-message-three-times.git)
+: **Exercise - Message Three Times**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-6-message-three-times.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-6)
 
 ### Input String as a Part of Output
 
@@ -308,7 +308,7 @@ Negative
 : Write a message: <br> *User: \<My message\>* <br> You wrote: My message
 
 Positive
-: **Exercise - Greeting**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-7-greeting.git)
+: **Exercise - Greeting**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-7-greeting.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-7)
 
 ### Program Execution Waits for Input
 
@@ -335,7 +335,7 @@ Negative
 : Write the first string: <br> *User: \<String number one\>* <br> Write the second string: <br> *User: \<String number two\>* <br> Write the third string: <br> *User: \<String number three\>* <br><br> You wrote: <br> String number one <br> String number two <br> String number three
 
 Positive
-: **Exercise - Conversation**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-8-conversation.git)
+: **Exercise - Conversation**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-8-conversation.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-8)
 
 In the previous example, we saved the user input to three different string variables. This can be done as long as the variables all have different names (in the example, the names are `first`, `second` and `third`).
 
@@ -376,7 +376,7 @@ Negative
 : Write the first string: <br> *User: \<one\>* <br> Write the second string: <br> *User: \<two\>* <br> Write the third string: <br> *User: \<three\>* <br><br> Last string you wrote was three, which <br> was preceded by two. <br> The first string was one. <br> All together: onetwothree
 
 Positive
-: **Exercise - Story**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-9-story.git)
+: **Exercise - Story**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-9-story.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-9)
 
 ## Variables
 Duration: 01:00:00
@@ -415,7 +415,7 @@ Negative
 Note that any variable types that aren't originally declared as strings, must be converted into a string with the `str()` command either before or during printing.
 
 Positive
-: **Exercise - Various Variables**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-10-various-variables.git)
+: **Exercise - Various Variables**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-10-various-variables.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-10)
 
 ### Changing a Value Assigned to a Variable
 
@@ -625,7 +625,7 @@ ValueError: invalid literal for int() with base 10: '42.6'
 ```
 
 Positive
-: **Exercise - Different types of input**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-11-different-inputs.git)
+: **Exercise - Different types of input**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-11-different-inputs.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-11)
 
 ## Calculating with numbers
 Duration: 01:00:00
@@ -674,7 +674,7 @@ print(calculation_without_parentheses) # prints 13
 ```
 
 Positive
-: **Exercise - Seconds in a day**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-12-seconds-in-a-day.git)
+: **Exercise - Seconds in a day**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-12-seconds-in-a-day.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-12)
 
 Positive
 : **Expression and Statement** <br><br> An *expression* is a combination of values that is turned into another value through a calculation or evaluation. <br><br> The evaluation of an expression is always performed before its value is assigned to a variable. As such, the calculation "1 + 1 + 3 * 2 + 5" in the example `value = 1 + 1 + 3 * 2 + 5` above is performed before the result is assigned to the variable.
@@ -738,10 +738,10 @@ Negative
 : Four: 4 <br> But! Twenty-two: 22
 
 Positive
-: **Exercise - Sum of two numbers**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-13-sum-of-two-numbers.git)
+: **Exercise - Sum of two numbers**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-13-sum-of-two-numbers.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-13)
 
 Positive
-: **Exercise - Sum of three numbers**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-14-sum-of-three-numbers.git)
+: **Exercise - Sum of three numbers**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-14-sum-of-three-numbers.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-14)
 
 Applying this knowledge, we can create an expression consisting of some text and a variable, which is evaluated in connection with the printing:
 
@@ -760,10 +760,10 @@ Negative
 : The value of the variable x is: 10 <br> y is 5 and z is 6
 
 Positive
-: **Exercise - Addition formula**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-15-addition-formula.git)
+: **Exercise - Addition formula**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-15-addition-formula.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-15)
 
 Positive
-: **Exercise - Multiplication formula**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-16-multiplication-formula.git)
+: **Exercise - Multiplication formula**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-16-multiplication-formula.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-16)
 
 Positive
 : Once you have completed the previous exercise, try finding out the greatest possible multiplication of two floats that you can calculate. The reason behind the phenomenon you'll observe is that the value of a float is capped at the maximum of 1.7976931348623157e+308. This is because of limitations to the computer's memory. <br><br> To put it into some perspective, this value is **vastly** greater than the total number of atoms in the observable universe (10e+80) and is not even comprehensible to humans. There is very little to zero chance that any scientific or engineering application will ever require working with numbers so large.
@@ -784,13 +784,13 @@ Positive
 : **Average** <br><br> The next exercises task you with calculating the average of the entered numbers. Let's briefly review the concept of *average*. <br><br> An average refers to the sum of numbers divided by their count. For instance, the average of the numbers 5 and 3 can be calculated with the formula (5+3)/2. Similarly, the average of the numbers 1, 2, and 4 is produced by the formula (1+2+4)/3. <br><br> In the context of programming, there are a few things to keep in mind. Firstly, dividing by zero is typically not permitted. This implies that calculating the average of zero numbers is impossible.
 
 Positive
-: **Exercise - Average of two numbers**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-17-average-of-two-numbers.git)
+: **Exercise - Average of two numbers**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-17-average-of-two-numbers.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-17)
 
 Positive
-: **Exercise - Average of three numbers**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-18-average-of-three-numbers.git)
+: **Exercise - Average of three numbers**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-18-average-of-three-numbers.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-18)
 
 Positive
-: **Exercise - Simple calculator**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-19-simple-calculator.git)
+: **Exercise - Simple calculator**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-19-simple-calculator.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-19)
 
 ### Misunderstandings Related to the Value of a Variable
 
@@ -862,7 +862,7 @@ if (number > 10):
 If the expression in the conditional statement evaluates to true, the execution of the program progresses to the block defined by the conditional statement. In the example above, the conditional is "if the number in the variable is greater than 10". On the other hand, if the expression evaluates to false, the execution moves on to the statement after the closing curly bracket of the current conditional statement.
 
 Positive
-: **Exercise - Speeding ticket**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-20-speeding-ticket.git)
+: **Exercise - Speeding ticket**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-20-speeding-ticket.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-20)
 
 ### Code Indentation and Block Statements
 
@@ -932,10 +932,10 @@ Negative
 : The number is not equal to 0
 
 Positive
-: **Exercise - Orwell**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-21-orwell.git)
+: **Exercise - Orwell**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-21-orwell.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-21)
 
 Positive
-: **Exercise - Ancient**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-22-ancient.git)
+: **Exercise - Ancient**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-22-ancient.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-22)
 
 ### Else
 
@@ -958,10 +958,10 @@ Negative
 If an `else` branch has been specified for a conditional statement, the block defined by the else branch is run in the case that the condition of the conditional statement is false. The `else`-command is placed on the same line as the block defined by the `if`-command.
 
 Positive
-: **Exercise - Positivity**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-23-positivity.git)
+: **Exercise - Positivity**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-23-positivity.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-23)
 
 Positive
-: **Exercise - Adulthood**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-24-adulthood.git)
+: **Exercise - Adulthood**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-24-adulthood.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-24)
 
 ### More Conditionals: elif
 
@@ -986,7 +986,7 @@ Negative
 Let's read out the example above: 'If the number is one, then print "The number is one", else if the number is two, then print "The given number is two", else if the number is three, then print "The number must be three!". Otherwise, print "Something else!"'
 
 Positive
-: **Exercise - Larger Than or Equal To**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-25-larger-than-equal-to.git)
+: **Exercise - Larger Than or Equal To**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-25-larger-than-equal-to.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-25)
 
 ### Order of Execution for Comparisons
 
@@ -1012,7 +1012,7 @@ Negative
 The example above prints the string "The number is greater than zero." even if the condition `number > 2` is true. The comparison stops at the first condition that evaluates to true.
 
 Positive
-: **Exercise - Grades and Points**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-26-grades-and-points.git)
+: **Exercise - Grades and Points**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-26-grades-and-points.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-26)
 
 ### Conditional Statement Expression and the Boolean Variable
 
@@ -1097,7 +1097,7 @@ else:
 ```
 
 Positive
-: **Exercise - Odd or Even**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-27-odd-or-even.git)
+: **Exercise - Odd or Even**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-27-odd-or-even.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-27)
 
 ### Conditional Statements and Comparing Strings
 
@@ -1122,10 +1122,10 @@ Negative
 : Enter the first string <br> *User: \<same\>* <br> Enter the second string <br> *User: \<different\>* <br> The strings were different!
 
 Positive
-: **Exercise - Password**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-28-password.git)
+: **Exercise - Password**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-28-password.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-28)
 
 Positive
-: **Exercise - Same**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-29-same.git)
+: **Exercise - Same**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-29-same.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-29)
 
 ### Logical Operators
 
@@ -1182,7 +1182,7 @@ Negative
 : The number is greater than or equal to 4.
 
 Positive
-: **Exercise - Checking the age**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-30-checking-the-age.git)
+: **Exercise - Checking the age**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-30-checking-the-age.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-30)
 
 ### Execution Order of Conditional Statements
 
@@ -1269,10 +1269,10 @@ Negative
 : *User: \<15\>* <br> FizzBuzz
 
 Positive
-: **Exercise - Leap year**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-31-leap-year.git)
+: **Exercise - Leap year**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-31-leap-year.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-31)
 
 Positive
-: **Exercise - Inheritance tax**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-32-inheritance-tax.git)
+: **Exercise - Inheritance tax**  <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-32-inheritance-tax.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-32)
 
 ## Programming in our society
 Duration: 00:10:00
