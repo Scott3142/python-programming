@@ -52,10 +52,10 @@ Negative
 : 22 <br> Blank Space
 
 Positive
-: **Exercise - Menu** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-1-menu.git)
+: **Exercise - Menu** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-1-menu.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-6/exercise-6-1)
 
 Positive
-: **Exercise - Stack** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-2-stack.git)
+: **Exercise - Stack** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-2-stack.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-6/exercise-6-2)
 
 ### Objects in an Instance Variable List
 
@@ -118,7 +118,7 @@ class AmusementParkRide:
 ```
 
 Positive
-: **Exercise - Messaging Service** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-3-messaging-service.git)
+: **Exercise - Messaging Service** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-3-messaging-service.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-6/exercise-6-3)
 
 ### Printing an Object from a List
 
@@ -223,7 +223,7 @@ Negative
 : Megafobia, minimum height requirement: 140, visitors: 0 <br> no one is on the ride. <br><br> Matt is allowed on the ride <br> Ada is not allowed on the ride <br> Megafobia, minimum height requirement: 140, visitors: 1 <br><br> on the ride: <br> Matt
 
 Positive
-: **Exercise - Printing a Collection** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-4-printing-a-collection.git)
+: **Exercise - Printing a Collection** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-4-printing-a-collection.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-6/exercise-6-4)
 
 ### Clearing an Object's List
 
@@ -332,7 +332,7 @@ Negative
 : Megafobia, minimum height requirement: 140, visitors: 2 <br><br> on the ride: <br> Matt <br> Grace <br><br> 187.0
 
 Positive
-: **Exercise - Santa's Workshop** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-5-santas-workshop.git)
+: **Exercise - Santa's Workshop** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-5-santas-workshop.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-6/exercise-6-5)
 
 ### Retrieving a Specific Object from a List
 
@@ -400,13 +400,13 @@ Negative
 : Megafobia, minimum height requirement: 140, visitors: 2 <br> on the ride: <br> Matt <br> Grace <br><br> 187.0 <br><br> Grace <br> Grace
 
 Positive
-: **Exercise - Longest in collection** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-6-longest-in-collection.git)
+: **Exercise - Longest in collection** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-6-longest-in-collection.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-6/exercise-6-6)
 
 Positive
-: **Exercise - Height order** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-7-height-order.git)
+: **Exercise - Height order** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-7-height-order.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-6/exercise-6-7)
 
 Positive
-: **Exercise - Cargo hold** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-8-cargo-hold.git)
+: **Exercise - Cargo hold** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-8-cargo-hold.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-6/exercise-6-8)
 
 ## Separating the user interface from program logic
 Duration: 01:00:00
@@ -783,10 +783,10 @@ In the larger example above, we were following the advice given here.
 Programmers follow these conventions so that programming can be made easier. Following them also makes it easier to read programs, to keep them up, and to edit them in teams.
 
 Positive
-: **Exercise - Simple Dictionary** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-9-simple-dictionary.git)
+: **Exercise - Simple Dictionary** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-9-simple-dictionary.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-6/exercise-6-9)
 
 Positive
-: **Exercise - To do list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-10-to-do-list.git)
+: **Exercise - To do list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-10-to-do-list.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-6/exercise-6-10)
 
 ### From one entity to many parts
 
@@ -1018,10 +1018,10 @@ class UserInterface:
 ```
 
 Positive
-: **Exercise - Averages** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-11-averages.git)
+: **Exercise - Averages** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-11-averages.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-6/exercise-6-11)
 
 Positive
-: **Exercise - Joke manager** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-12-joke-manager.git)
+: **Exercise - Joke manager** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-12-joke-manager.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-6/exercise-6-12)
 
 ## Introduction to testing
 Duration: 01:00:00
@@ -1129,7 +1129,7 @@ Test-driven software development consists of five steps that are repeated until 
 5. Repair the internal structure of the program. As the size of the program increases, its internal structure is adjusted as needed. Methods that are too long are broken down into multiple parts and classes representing concepts are isolated. The tests are not modified, but are instead used to verify the correctness of the changes made to the program's internal structure - if a change in the program structure changes the functionality of the program, the tests will produce a warning and the programmer can remedy the situation.
 
 Positive
-: **Exercise - Testing** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-13-testing.git)
+: **Exercise - Testing** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-6-13-testing.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-6/exercise-6-13)
 
 Positive
 : **Unit testing** <br><br> Unit testing is only a part of software testing. On top of unit testing, a developer also performs integration tests that examine the interoperability of components, such as classes, and interface tests that test the application's interface through elements provided by the interface, such as buttons. <br><br> These testing methods are covered in more detail in more advanced courses. <br><br> You can check out [this excellent resource](https://realpython.com/python-testing/) if you are interested in learning more about testing in Python.

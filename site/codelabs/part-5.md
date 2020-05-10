@@ -168,7 +168,7 @@ while True:
 The clock we implemented above is an object whose functionality is based on "simpler" objects, i.e., its hands. This is precisely the **great idea behind ​​object-oriented programming: a program is built from small and distinct objects that work together**
 
 Positive
-: **Exercise - One Minute** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-1-one-minute.git)
+: **Exercise - One Minute** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-1-one-minute.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-5/exercise-5-1)
 
 Next, let's review topic terminology.
 
@@ -270,13 +270,13 @@ Negative
 : (40, 80) <br> (10, 10) <br> (39, 80) <br> 3920
 
 Positive
-: **Exercise - Book** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-2-book.git)
+: **Exercise - Book** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-2-book.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-5/exercise-5-2)
 
 Positive
-: **Exercise - Cube** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-3-cube.git)
+: **Exercise - Cube** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-3-cube.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-5/exercise-5-3)
 
 Positive
-: **Exercise - FitByte** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-4-FitByte.git)
+: **Exercise - FitByte** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-4-FitByte.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-5/exercise-5-4)
 
 ## Removing repetitive code (overloading methods and constructors)
 Duration: 01:00:00
@@ -379,7 +379,7 @@ Negative
 The technique of having two (or more) constructors in a class is known as *constructor overloading*.
 
 Positive
-: **Exercise - Constructor Overload** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-5-constructor-overload.git)
+: **Exercise - Constructor Overload** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-5-constructor-overload.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-5/exercise-5-5)
 
 ### Method Overloading
 
@@ -416,7 +416,7 @@ Negative
 : Paul is 24 years old. <br> Paul is 25 years old. <br> Paul is 35 years old.
 
 Positive
-: **Exercise - Overloaded Counter** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-6-overloaded-counter.git)
+: **Exercise - Overloaded Counter** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-6-overloaded-counter.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-5/exercise-5-6)
 
 ## Objects and references
 Duration: 01:00:00
@@ -731,10 +731,10 @@ Negative
 : Matt may enter the ride <br> Jasper may not enter the ride <br> Water track, minimum height: 140, visitors: 1
 
 Positive
-: **Exercise - Health station** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-7-health-station.git)
+: **Exercise - Health station** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-7-health-station.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-5/exercise-5-7)
 
 Positive
-: **Exercise - Card payments** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-8-card-payments.git)
+: **Exercise - Card payments** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-8-card-payments.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-5/exercise-5-8)
 
 ### Object as object variable
 
@@ -819,7 +819,7 @@ Positive
 : **Dates in Python** <br><br> Python has special methods which can handle datetimes. You can read more [here](https://www.w3schools.com/python/python_datetime.asp).
 
 Positive
-: **Exercise - Biggest pet shop** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-9-biggest-pet-shop.git)
+: **Exercise - Biggest pet shop** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-9-biggest-pet-shop.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-5/exercise-5-9)
 
 ### Object of same type as method parameter
 
@@ -992,7 +992,7 @@ class Person:
 Now the concrete comparison of dates is implemented in the class that it logically (based on the class names) belongs to.
 
 Positive
-: **Exercise - Comparing apartments** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-10-comparing-apartments.git)
+: **Exercise - Comparing apartments** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-10-comparing-apartments.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-5/exercise-5-10)
 
 ### Comparing the equality of objects (__eq__)
 
@@ -1092,10 +1092,10 @@ class Person:
 ```
 
 Positive
-: **Exercise - Song** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-11-song.git)
+: **Exercise - Song** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-11-song.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-5/exercise-5-11)
 
 Positive
-: **Exercise - Identical Twins** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-12-identical-twins.git)
+: **Exercise - Identical Twins** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-12-identical-twins.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-5/exercise-5-12)
 
 ### Object equality and lists
 
@@ -1218,10 +1218,10 @@ Negative
 : Red is not on the list. <br> Red is on the list. <br> However! <br> Red is on the list.
 
 Positive
-: **Exercise - Books** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-13-books.git)
+: **Exercise - Books** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-13-books.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-5/exercise-5-13)
 
 Positive
-: **Exercise - Archive** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-14-archive.git)
+: **Exercise - Archive** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-14-archive.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-5/exercise-5-14)
 
 ### Object as a method's return value
 
@@ -1293,10 +1293,10 @@ class Factory:
 ```
 
 Positive
-: **Exercise - Dating app** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-15-dating-app.git)
+: **Exercise - Dating app** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-15-dating-app.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-5/exercise-5-15)
 
 Positive
-: **Exercise - Money** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-16-money.git)
+: **Exercise - Money** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-5-16-money.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-5/exercise-5-16)
 
 ## Summary
 Duration: 00:10:00

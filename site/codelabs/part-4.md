@@ -35,10 +35,10 @@ Positive
 : **The Relationship Between a Class and an Object** <br><br> A class lays out a blueprint for any objects that are instantiated from it. Let's draw from an analogy from outside the world of computers. Detached houses are most likely familiar to most, and we can safely assume the existence of drawings somewhere that determine what exactly a detached house is to be like. A class is a blueprint. In other words, it specifies what kinds of objects can be instantiated from it. <br><br> Individual objects, detached houses in this case, are all created based on the same blueprints - they're instances of the same class. The states of individual objects, i.e., their attributes (such as the wall color, the building material of the roof, the color of its foundations, the doors' materials and color, ...) may all vary, however.
 
 Positive
-: **Exercise - Your first account** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-1-your-first-account.git)
+: **Exercise - Your first account** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-1-your-first-account.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-1)
 
 Positive
-: **Exercise - Your first bank transfer** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-2-your-first-bank-transfer.git)
+: **Exercise - Your first bank transfer** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-2-your-first-bank-transfer.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-2)
 
 ### Creating Classes
 
@@ -111,7 +111,7 @@ Positive
 : **Naming modules** <br><br> The filenames are important in Python and you shouldn't use a filename that is the same as a common Python command like `print`. If you call a module `print.py` and import it, you will override the built-in `print()` method and your program will not function as expected.
 
 Positive
-: **Exercise - Dog attributes** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-3-dog-attributes.git)
+: **Exercise - Dog attributes** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-3-dog-attributes.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-3)
 
 ### Defining a Constructor
 
@@ -139,7 +139,7 @@ Objects are always created using a constructor.
 A few things to note: the constructor contains the expression `self.age = 0`. This expression sets the instance variable `age` of the newly created object (i.e., "self" object's age) to 0. The second expression `self.name = initial_name` likewise assigns the string passed as a parameter to the instance variable `name` of the object created.
 
 Positive
-: **Exercise - Room** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-4-room.git)
+: **Exercise - Room** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-4-room.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-4)
 
 Positive
 : **Default Constructor** <br><br> If the programmer does not define a constructor for a class, Python automatically creates a default one for it. <br><br> A default constructor is a constructor that doesn't do anything apart from creating the object. <br><br> The object's variables remain uninitialized (generally, the value of any object references will be `None`, meaning that they do not point to anything).
@@ -186,13 +186,13 @@ Negative
 : Ada, age 0 years <br> Alan, age 0 years <br> Grace, age 0 years
 
 Positive
-: **Exercise - Whistle** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-5-whistle.git)
+: **Exercise - Whistle** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-5-whistle.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-5)
 
 Positive
-: **Exercise - Door** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-6-door.git)
+: **Exercise - Door** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-6-door.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-6)
 
 Positive
-: **Exercise - Product** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-7-product.git)
+: **Exercise - Product** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-7-product.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-7)
 
 ### Changing an Instance Variable's Value in a Method
 
@@ -261,10 +261,10 @@ class Person:
 ```
 
 Positive
-: **Exercise - Decreasing Counter** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-8-decreasing-counter.git)
+: **Exercise - Decreasing Counter** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-8-decreasing-counter.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-8)
 
 Positive
-: **Exercise - Debt** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-9-debt.git)
+: **Exercise - Debt** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-9-debt.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-9)
 
 ### Returning a Value From a Method
 
@@ -364,10 +364,10 @@ Negative
 : Grace's age: 2 <br> Alan's age: 1 <br><br> Grace's and Alan's combined age: 3 years
 
 Positive
-: **Exercise - Song** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-10-song.git)
+: **Exercise - Song** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-10-song.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-10)
 
 Positive
-: **Exercise - Film** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-11-film.git)
+: **Exercise - Film** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-11-film.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-11)
 
 As we came to notice, methods can contain source code in the same way as other parts of our program. Methods can have conditionals or loops, and other methods can also be called from them.
 
@@ -466,7 +466,7 @@ Negative
 : Alan is underage <br> Grace is of legal age
 
 Positive
-: **Exercise - Gauge** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-12-gauge.git)
+: **Exercise - Gauge** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-12-gauge.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-12)
 
 ### A string representation of an object and the __str__-method
 
@@ -503,7 +503,7 @@ def main():
 In principle, the `print` method requests the object's string representation and prints it. The call to the `__str__` method returning the string representation does not have to be written explicitly, as Python adds it automatically.
 
 Positive
-: **Exercise - Agent** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-13-agent.git)
+: **Exercise - Agent** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-13-agent.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-13)
 
 ### Method parameters
 
@@ -586,7 +586,7 @@ def set_height(self,height):
 ```
 
 Positive
-: **Exercise - Multiplier** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-14-mutiplier.git)
+: **Exercise - Multiplier** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-14-mutiplier.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-14)
 
 ### Calling an internal method
 
@@ -600,10 +600,10 @@ def __str__(self):
 So, when an object calls an internal method, the name of the method and this prefix suffice.
 
 Positive
-: **Exercise - Statistics** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-15-statistics.git)
+: **Exercise - Statistics** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-15-statistics.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-15)
 
 Positive
-: **Exercise - Payment Card** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-16-payment-card.git)
+: **Exercise - Payment Card** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-16-payment-card.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-16)
 
 Positive
 : **Rounding errors** <br><br> You probably noticed that some of the figures have rounding errors. In the previous exercise, for example, Grace's balance of 30.7 may be printed as `30.700000000000003`. This is because floating-point numbers, such as `float`, are actually stored in binary form. That is, in zeros and ones using only a limited number of numbers. <br><br> As the number of floating-point numbers is infinite -- (in case you're wondering "how infinite?", think how many floating-point or decimal values fit between the numbers 5 and 6 for instance). All of the floating-point numbers simply cannot be represented by a finite number of zeros and ones. Thus, the computer must place a limit on the accuracy of stored numbers. <br><br> Normally, account balances, for instance, are saved as integers such that, say, the value 1 represents one penny.
@@ -761,7 +761,7 @@ Negative
 : Enter a name, empty will stop: <br> *User: \<Ada\>* <br> Enter a name, empty will stop: *User: \<Grace\>* <br> Enter a name, empty will stop: *User: \<Katherine\>* <br><br> Persons in total: 3 <br> Persons: <br> Ada, age 0 years <br> Grace, age 0 years <br> Katherine, age 0 years
 
 Positive
-: **Exercise - Items** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-17-items.git)
+: **Exercise - Items** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-17-items.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-17)
 
 ### Multiple constructor parameters
 
@@ -816,7 +816,7 @@ Negative
 : Enter name, empty will end: <br> *User: \<Grace Hopper\>* <br> Enter the age of the person Grace Hopper: <br> *User: \<85\>* <br> Enter name, empty will end: <br><br> Total number of persons: 1 <br> Persons: <br> Grace Hopper, age 85 years
 
 Positive
-: **Exercise - Personal Information** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-18-personal-information.git)
+: **Exercise - Personal Information** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-18-personal-information.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-18)
 
 ### Reading input in a specific format
 
@@ -866,10 +866,10 @@ for person in persons:
 ```
 
 Positive
-: **Exercise - Television Programs** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-19-television-programs.git)
+: **Exercise - Television Programs** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-19-television-programs.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-19)
 
 Positive
-: **Exercise - Books** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-20-books.git)
+: **Exercise - Books** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-20-books.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-20)
 
 ## Files and reading data
 Duration: 01:00:00
@@ -899,7 +899,7 @@ while True:
 In text-based user interfaces, the input of the user is directed into the input stream one line at a time, which means that the information is sent to be handled every time the user enters a new line.
 
 Positive
-: **Exercise - Number of strings** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-21-number-of-strings.git)
+: **Exercise - Number of strings** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-21-number-of-strings.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-21)
 
 The user input is read in string form. If we wanted to handle the input as integers, for instance, we'd have to convert it to another form. An example program has been provided below - it reads input from the user until the user inputs "end". As long as the user input is not "end" the inputs are handled as integers -- in this case, the number is simply printed.
 
@@ -915,7 +915,7 @@ while True:
 ```
 
 Positive
-: **Exercise - Cubes** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-22-cubes.git)
+: **Exercise - Cubes** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-22-cubes.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-22)
 
 ### Files and the Filesystem
 
@@ -965,7 +965,7 @@ Positive
 : **Read and write** <br><br> Note that we have a second parameter `r` passed to the `open()` method, which tells Python that we want to **read** the file. <br><br> If we wanted to write data to the file, we can pass `w` instead. It is important to make this distinction, to avoid accidentally overwriting files that you want to keep. If you overwrite something in Python in this way, there's no getting it back!
 
 Positive
-: **Exercise - Printing from a file** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-23-printing-from-a-file.git)
+: **Exercise - Printing from a file** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-23-printing-from-a-file.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-23)
 
 In the example below, we read all the lines of the file "file.txt", which are then added to a list. This implementation uses the Python `with` keyword.
 
@@ -978,13 +978,13 @@ print("Total lines: " + str(len(lines)))
 ```
 
 Positive
-: **Exercise - Guest list from a file** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-24-guest-list-from-a-file.git)
+: **Exercise - Guest list from a file** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-24-guest-list-from-a-file.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-24)
 
 Positive
-: **Exercise - Is it in the file?** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-25-is-it-in-the-file.git)
+: **Exercise - Is it in the file?** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-25-is-it-in-the-file.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-25)
 
 Positive
-: **Exercise - Numbers from a file?** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-26-numbers-from-a-file.git)
+: **Exercise - Numbers from a file?** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-26-numbers-from-a-file.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-26)
 
 ### Reading Data of a Specific Format From a File
 
@@ -1025,7 +1025,7 @@ Negative
 : Marie Curie <br> Rosalind Franklin <br> Mary Anning
 
 Positive
-: **Exercise - Records from a File** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-27-records-from-a-file.git)
+: **Exercise - Records from a File** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-27-records-from-a-file.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-27)
 
 ### Reading Objects From a File
 
@@ -1066,11 +1066,11 @@ Negative
 Reading objects from a file is a clear responsibility in and of itself, and should for that reason be isolated into a method. This is what we'll be doing in the next exercise.
 
 Positive
-: **Exercise - Storing Records** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-28-storing-records.git)
+: **Exercise - Storing Records** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-28-storing-records.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-28)
 
 
 Positive
-: **Exercise - Sport Statistics** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-29-sporting-statistics.git)
+: **Exercise - Sport Statistics** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-4-29-sporting-statistics.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-4/exercise-4-29)
 
 ## Summary
 Duration: 00:10:00
