@@ -6,7 +6,10 @@ do
     if [[ -d "$filename" ]]
     then
         echo "Directory $filename exists. Pulling repo."
-        git submodule update --init $filename
+        #git submodule update --init $filename
+        cd $filename
+	git pull origin master
+        cd ..
     else
         echo "Directory $filename doesn't exist locally. There's something wrong here!"
     fi
