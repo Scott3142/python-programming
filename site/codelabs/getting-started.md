@@ -101,6 +101,16 @@ It is important to be able to successfully complete these steps to be able to co
 Positive
 : For the vast majority of the exercises, it will suffice to run your Python programs in this way. However, if you require virtual environments, `pip` installs or testing frameworks, it is crucial to understand how to run commands in the terminal and make this your preferred option. We will cover this in the following section.
 
+### [Update] A new workflow with Github Classroom and Repl.it IDE
+
+The recommended way to download, run and submit the exercises is above, but if you are having trouble installing Python or Atom, or you are on a Chromebook or device for which you don't have administrative rights, you can use [Repl.it](https://repl.it/~) to download, run, test and submit the exercises. 
+
+**Note:** This feature is currently (as of May 2020) in beta, so may not work as expected.
+
+You can watch the video below to see the steps required to work on the exercises in Repl.it or read more about the process in the [Github documentation](https://classroom.github.com/help/student-experience-replit).
+
+replace-with-replit-video
+
 ## The command line
 Duration: 00:30:00
 
