@@ -1,0 +1,306 @@
+Exercise 1.1
+den01-python-programming/exercise-1-1]z && [da-lovelace
+Exercise 1.2
+den01-python-programming/exercise-1-2-once-upon-a-time
+Exercise 1.3
+den01-python-programming/exercise-1-3-dinosaur
+Exercise 1.4
+den01-python-programming/exercise-1-4-message
+Exercise 1.5
+den01-python-programming/exercise-1-5-hi-ada
+Exercise 1.6
+den01-python-programming/exercise-1-6-message-three-times
+Exercise 1.7
+den01-python-programming/exercise-1-7-greeting
+Exercise 1.8
+den01-python-programming/exercise-1-8-conversation
+Exercise 1.9
+den01-python-programming/exercise-1-9-story
+Exercise 1.10
+den01-python-programming/exercise-1-10-various-variables
+Exercise 1.11
+den01-python-programming/exercise-1-11-different-inputs
+Exercise 1.12
+den01-python-programming/exercise-1-12-seconds-in-a-day
+Exercise 1.13
+den01-python-programming/exercise-1-13-sum-of-two-numbers
+Exercise 1.14
+den01-python-programming/exercise-1-14-sum-of-three-numbers
+Exercise 1.15
+den01-python-programming/exercise-1-15-addition-formula
+Exercise 1.16
+den01-python-programming/exercise-1-16-multiplication-formula
+Exercise 1.17
+den01-python-programming/exercise-1-17-average-of-two-numbers
+Exercise 1.18
+den01-python-programming/exercise-1-18-average-of-three-numbers
+Exercise 1.19
+den01-python-programming/exercise-1-19-simple-calculator
+Exercise 1.20
+den01-python-programming/exercise-1-20-speeding-ticket
+Exercise 1.21
+den01-python-programming/exercise-1-21-orwell
+Exercise 1.22
+den01-python-programming/exercise-1-22-ancient
+Exercise 1.23
+den01-python-programming/exercise-1-23-positivity
+Exercise 1.24
+den01-python-programming/exercise-1-24-adulthood
+Exercise 1.25
+den01-python-programming/exercise-1-25-larger-than-equal-to
+Exercise 1.26
+den01-python-programming/exercise-1-26-grades-and-points
+Exercise 1.27
+den01-python-programming/exercise-1-27-odd-or-even
+Exercise 1.28
+den01-python-programming/exercise-1-28-password
+Exercise 1.29
+den01-python-programming/exercise-1-29-same
+Exercise 1.30
+den01-python-programming/exercise-1-30-checking-the-age
+Exercise 1.31
+den01-python-programming/exercise-1-31-leap-year
+Exercise 1.32
+den01-python-programming/exercise-1-32-inheritance-tax
+Exercise 2.1
+den01-python-programming/exercise-2-1-squared
+Exercise 2.2
+den01-python-programming/exercise-2-2-square-root-of-sum
+Exercise 2.3
+den01-python-programming/exercise-2-3-absolute-value
+Exercise 2.4
+den01-python-programming/exercise-2-4-comparing-numbers
+Exercise 2.5
+den01-python-programming/exercise-2-5-carry-on
+Exercise 2.6
+den01-python-programming/exercise-2-6-are-we-there-yet
+Exercise 2.7
+den01-python-programming/exercise-2-7-only-positives
+Exercise 2.8
+den01-python-programming/exercise-2-8-number-of-numbers
+Exercise 2.9
+den01-python-programming/exercise-2-9-number-of-negative-numbers
+Exercise 2.10
+den01-python-programming/exercise-2-10-sum-of-numbers
+Exercise 2.11
+den01-python-programming/exercise-2-11-number-and-sum-of-numbers
+Exercise 2.12
+den01-python-programming/exercise-2-12-average-of-numbers
+Exercise 2.13
+den01-python-programming/exercise-2-13-average-of-positive-numbers
+Exercise 2.14
+den01-python-programming/exercise-2-14-counting
+Exercise 2.15
+den01-python-programming/exercise-2-15-counting-to-hundred
+Exercise 2.16
+den01-python-programming/exercise-2-16-from-where-to-where
+Exercise 2.17
+den01-python-programming/exercise-2-17-sum-of-a-sequence
+Exercise 2.18
+den01-python-programming/exercise-2-18-sum-of-a-sequence-2
+Exercise 2.19
+den01-python-programming/exercise-2-19-factorial
+Exercise 2.20
+den01-python-programming/exercise-2-20-repeating-breaking-and-remembering
+Exercise 2.21
+den01-python-programming/exercise-2-21-in-a-hole-in-the-ground
+Exercise 2.22
+den01-python-programming/exercise-2-22-reprint
+Exercise 2.23
+den01-python-programming/exercise-2-23-from-one-to-parameter
+Exercise 2.24
+den01-python-programming/exercise-2-24-from-parameter-to-one
+Exercise 2.25
+den01-python-programming/exercise-2-25-division
+Exercise 2.26
+den01-python-programming/exercise-2-26-numero-uno
+Exercise 2.27
+den01-python-programming/exercise-2-27-summation
+Exercise 2.28
+den01-python-programming/exercise-2-28-smallest
+Exercise 2.29
+den01-python-programming/exercise-2-29-greatest
+Exercise 2.30
+den01-python-programming/exercise-2-30-averaging
+Exercise 3.1
+den01-python-programming/exercise-3-1-third-element
+Exercise 3.2
+den01-python-programming/exercise-3-2-second-plus-third
+Exercise 3.3
+den01-python-programming/exercise-3-3-list-size
+Exercise 3.4
+den01-python-programming/exercise-3-4-last-in-list
+Exercise 3.5
+den01-python-programming/exercise-3-5-first-and-last
+Exercise 3.6
+den01-python-programming/exercise-3-6-remember-these-numbers
+Exercise 3.7
+den01-python-programming/exercise-3-7-only-these-numbers
+Exercise 3.8
+den01-python-programming/exercise-3-8-greatest-in-list
+Exercise 3.9
+den01-python-programming/exercise-3-9-index-of
+Exercise 3.10
+den01-python-programming/exercise-3-10-index-of-smallest
+Exercise 3.11
+den01-python-programming/exercise-3-11-sum-of-a-list
+Exercise 3.12
+den01-python-programming/exercise-3-12-average-of-a-list
+Exercise 3.13
+den01-python-programming/exercise-3-13-on-the-list
+Exercise 3.14
+den01-python-programming/exercise-3-14-print-in-range
+Exercise 3.15
+den01-python-programming/exercise-3-15-sum
+Exercise 3.16
+den01-python-programming/exercise-3-16-remove-last
+Exercise 3.17
+den01-python-programming/exercise-3-17-print-thrice
+Exercise 3.18
+den01-python-programming/exercise-3-18-is-it-true
+Exercise 3.19
+den01-python-programming/exercise-3-19-login
+Exercise 3.20
+den01-python-programming/exercise-3-20-line-by-line
+Exercise 3.21
+den01-python-programming/exercise-3-21-av-club
+Exercise 3.22
+den01-python-programming/exercise-3-22-first-words
+Exercise 3.23
+den01-python-programming/exercise-3-23-age-of-oldest
+Exercise 3.24
+den01-python-programming/exercise-3-24-name-of-oldest
+Exercise 3.25
+den01-python-programming/exercise-3-25-personal-details
+Exercise 4.1
+den01-python-programming/exercise-4-1-your-first-account
+Exercise 4.2
+den01-python-programming/exercise-4-2-your-first-bank-transfer
+Exercise 4.3
+den01-python-programming/exercise-4-3-dog-attributes
+Exercise 4.4
+den01-python-programming/exercise-4-4-room
+Exercise 4.5
+den01-python-programming/exercise-4-5-whistle
+Exercise 4.6
+den01-python-programming/exercise-4-6-door
+Exercise 4.7
+den01-python-programming/exercise-4-7-product
+Exercise 4.8
+den01-python-programming/exercise-4-8-decreasing-counter
+Exercise 4.9
+den01-python-programming/exercise-4-9-debt
+Exercise 4.10
+den01-python-programming/exercise-4-10-song
+Exercise 4.11
+den01-python-programming/exercise-4-11-film
+Exercise 4.12
+den01-python-programming/exercise-4-12-gauge
+Exercise 4.13
+den01-python-programming/exercise-4-13-agent
+Exercise 4.14
+den01-python-programming/exercise-4-14-mutiplier
+Exercise 4.15
+den01-python-programming/exercise-4-15-statistics
+Exercise 4.16
+den01-python-programming/exercise-4-16-payment-card
+Exercise 4.17
+den01-python-programming/exercise-4-17-items
+Exercise 4.18
+den01-python-programming/exercise-4-18-personal-information
+Exercise 4.19
+den01-python-programming/exercise-4-19-television-programs
+Exercise 4.20
+den01-python-programming/exercise-4-20-books
+Exercise 4.21
+den01-python-programming/exercise-4-21-number-of-strings
+Exercise 4.22
+den01-python-programming/exercise-4-22-cubes
+Exercise 4.23
+den01-python-programming/exercise-4-23-printing-from-a-file
+Exercise 4.24
+den01-python-programming/exercise-4-24-guest-list-from-a-file
+Exercise 4.25
+den01-python-programming/exercise-4-25-is-it-in-the-file
+Exercise 4.26
+den01-python-programming/exercise-4-26-numbers-from-a-file
+Exercise 4.27
+den01-python-programming/exercise-4-27-records-from-a-file
+Exercise 4.28
+den01-python-programming/exercise-4-28-storing-records
+Exercise 4.29
+den01-python-programming/exercise-4-29-sporting-statistics
+Exercise 5.1
+den01-python-programming/exercise-5-1-one-minute
+Exercise 5.2
+den01-python-programming/exercise-5-2-book
+Exercise 5.3
+den01-python-programming/exercise-5-3-cube
+Exercise 5.4
+den01-python-programming/exercise-5-4-FitByte
+Exercise 5.5
+den01-python-programming/exercise-5-5-constructor-overload
+Exercise 5.6
+den01-python-programming/exercise-5-6-overloaded-counter
+Exercise 5.7
+den01-python-programming/exercise-5-7-health-station
+Exercise 5.8
+den01-python-programming/exercise-5-8-card-payments
+Exercise 5.9
+den01-python-programming/exercise-5-9-biggest-pet-shop
+Exercise 5.10
+den01-python-programming/exercise-5-10-comparing-apartments
+Exercise 5.11
+den01-python-programming/exercise-5-11-song
+Exercise 5.12
+den01-python-programming/exercise-5-12-identical-twins
+Exercise 5.13
+den01-python-programming/exercise-5-13-books
+Exercise 5.14
+den01-python-programming/exercise-5-14-archive
+Exercise 5.15
+den01-python-programming/exercise-5-15-dating-app
+Exercise 5.16
+den01-python-programming/exercise-5-16-money
+Exercise 6.1
+den01-python-programming/exercise-6-1-menu
+Exercise 6.2
+den01-python-programming/exercise-6-2-stack
+Exercise 6.3
+den01-python-programming/exercise-6-3-messaging-service
+Exercise 6.4
+den01-python-programming/exercise-6-4-printing-a-collection
+Exercise 6.5
+den01-python-programming/exercise-6-5-santas-workshop
+Exercise 6.6
+den01-python-programming/exercise-6-6-longest-in-collection
+Exercise 6.7
+den01-python-programming/exercise-6-7-height-order
+Exercise 6.8
+den01-python-programming/exercise-6-8-cargo-hold
+Exercise 6.9
+den01-python-programming/exercise-6-9-simple-dictionary
+Exercise 6.10
+den01-python-programming/exercise-6-10-to-do-list
+Exercise 6.11
+den01-python-programming/exercise-6-11-averages
+Exercise 6.12
+den01-python-programming/exercise-6-12-joke-manager
+Exercise 6.13
+den01-python-programming/exercise-6-13-testing
+Exercise 7.1
+den01-python-programming/exercise-7-1-liquid-containers
+Exercise 7.2
+den01-python-programming/exercise-7-2-liquid-containers-2
+Exercise 7.3
+den01-python-programming/exercise-7-3-sorting
+Exercise 7.4
+den01-python-programming/exercise-7-4-ready-made-sorting-algorithms
+Exercise 7.5
+den01-python-programming/exercise-7-5-searching
+Exercise 7.6
+den01-python-programming/exercise-7-6-grade-statistics
+Exercise 7.7
+den01-python-programming/exercise-7-7-recipe-search
+Exercise 7.8
+den01-python-programming/exercise-7-8-big-year

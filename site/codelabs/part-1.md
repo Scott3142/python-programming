@@ -79,7 +79,7 @@ replace-with-video
 
 ### [Update] A new workflow with Github Classroom and Repl.it IDE
 
-The recommended way to download, run and submit the exercises is above, but if you are having trouble installing Python or Atom, or you are on a Chromebook or device for which you don't have administrative rights, you can use [Repl.it](https://repl.it/~) to download, run, test and submit the exercises. 
+The recommended way to download, run and submit the exercises is above, but if you are having trouble installing Python or Atom, or you are on a Chromebook or device for which you don't have administrative rights, you can use [Repl.it](https://repl.it/~) to download, run, test and submit the exercises.
 
 **Note:** This feature is currently (as of May 2020) in beta, so may not work as expected.
 
@@ -88,7 +88,7 @@ You can watch the video below to see the steps required to work on the exercises
 replace-with-replit-video
 
 Positive
-: **Exercise - Ada Lovelace** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/exercise-1-1-ada-lovelace.git) <br><br> [Accept exercise in Github Classroom (Bridgend College only)](https://sites.google.com/bridgend.ac.uk/den01-hnc-2020/home/part-1/exercise-1-1)
+: **Exercise - Ada Lovelace** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/fnBTGbks)
 
 You can run a program in Atom by the keyboard combination Ctrl+Shift+B, if you have the `script` package installed as in the first part.
 
