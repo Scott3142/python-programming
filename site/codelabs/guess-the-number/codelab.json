@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2020-05-15T10:20:24+01:00",
+  "id": "guess-the-number",
+  "duration": 90,
+  "title": "Guess the number",
+  "summary": "This codelab focusses on creating a simple guessing game in Python.",
+  "source": "guess-the-number.md",
+  "theme": "",
+  "status": [
+    "hidden"
+  ],
+  "category": [
+    "python-programming"
+  ],
+  "tags": [
+    "web"
+  ],
+  "feedback": "https://github.com/Scott3142/python-programming",
+  "ga": "UA-49751789-4",
+  "url": "guess-the-number"
+}

@@ -14,6 +14,7 @@ claat export part-5.md
 claat export part-6.md
 claat export part-7.md
 claat export project-list.md
+claat export guess-the-number.md
 
 # Options -o
 # `local` Serve only codelabs locally

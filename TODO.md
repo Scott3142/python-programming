@@ -69,7 +69,7 @@
 - [x] Update description
 - [x] Add videos
 - [x] Add forms
-- [ ] Write accompanying slide deck
+- [x] Write accompanying slide deck
 - [ ] "Pythonise"
     - [ ] Change string concatenation into f-strings
     - [ ] Remove brackets from around conditionals
