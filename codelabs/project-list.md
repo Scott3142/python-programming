@@ -9,6 +9,10 @@ analytics account: UA-49751789-4
 
 # Projects
 
+## Games
+
+- [Guess the number](https://scott3142.uk/python-programming/codelabs/guess-the-number/)
+
 ## Web Scraping
 
 - [Mining Twitter Data with Python](https://marcobonzanini.com/2015/03/02/mining-twitter-data-with-python-part-1/)
