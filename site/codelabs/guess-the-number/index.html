@@ -42,9 +42,9 @@ loop until we get it right
     computer asks us to guess
 
     if the guess is right
-      computer says yes
+        computer says yes
     otherwise
-      computer says try again
+        computer says try again
 </code></pre>
 <p>It looks like there are four key components to this program that we&#39;ll have to address in our code.</p>
 <ul>
@@ -53,7 +53,7 @@ loop until we get it right
 <li>We need to know how to <em>loop until a condition</em>.</li>
 <li>We need to know how to <em>test if a statement is true</em>.</li>
 </ul>
-<p>You can find the relevant informtion for each of these points in <a href="https://scott3142.uk/python-programming/codelabs/part-1/" target="_blank">Part 1</a> of the course material.</p>
+<p>You can find the relevant informtion for each of these points in <a href="https://scott3142.uk/python-programming/codelabs/part-1/" target="_blank">Part 1</a> and <a href="https://scott3142.uk/python-programming/codelabs/part-2/" target="_blank">Part 2</a> of the course material.</p>
 <h2 is-upgraded>Improving the program</h2>
 <p>There are two natural places where we could add improvements to this program to make life a little bit easier for the guesser. At the moment, there is no limit on the random number that the computer guesses and there is no way of knowing if we were close or not with our guess. We could end up guessing forever and not getting the answer right! This doesn&#39;t make the game much fun, so let&#39;s look at the code again and see how we can change it.</p>
 <p>We can change the first line so that a range is specified for the random number choice. You could even implement a levelling system here so that the range gets larger as users guess correctly more and more times.</p>
@@ -66,7 +66,7 @@ if the number is too high
     computer says lower
 </code></pre>
 <p>In the next exercise you will implement this program yourself in Python.</p>
-<aside class="special"><p><strong>Exercise - Guess the number<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom]()</p>
+<aside class="special"><p><strong>Exercise - Guess the number<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/_rKYt4oC" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 
 
@@ -103,7 +103,7 @@ loop until the computer gets it right
 <p><em>Hint: You may want to use a list to store the guesses.</em></p>
 <aside class="special"><p>As a human, we might work out that there are some tricks to this game that make winning much easier. For example, if our first guess is exactly halfway between the two endpoints, we have the best chance of getting it right in the least number of moves possible. Can you implement this functionality? <br><br> Can you program the functionality that tracks how many guesses the computer took to get the right answer and see if it beats a user on average?</p>
 </aside>
-<aside class="special"><p><strong>Exercise - Computer guess the number<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom]()</p>
+<aside class="special"><p><strong>Exercise - Computer guess the number<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/DBA_EnCh" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 
 
@@ -138,7 +138,7 @@ user@host:~$ pip install flask
 user@host:~$ python3 app.py
 </code></pre>
 <p>Once you have done that, clone the exercise repo below and follow the instructions in the README.</p>
-<aside class="special"><p><strong>Exercise - Guessing the number in a web app<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom]()</p>
+<aside class="special"><p><strong>Exercise - Guessing the number in a web app<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/ku4AAUEN" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 
 
@@ -149,7 +149,7 @@ user@host:~$ python3 app.py
   <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
   <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
   <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="../../elements/codelab-elements/codelab-elements.js"></script>
   <script src="//support.google.com/inapp/api.js"></script>
 
 </body>

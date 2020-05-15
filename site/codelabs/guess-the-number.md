@@ -41,7 +41,7 @@ It looks like there are four key components to this program that we'll have to a
 - We need to know how to *loop until a condition*.
 - We need to know how to *test if a statement is true*.
 
-You can find the relevant informtion for each of these points in [Part 1](https://scott3142.uk/python-programming/codelabs/part-1/) of the course material.
+You can find the relevant informtion for each of these points in [Part 1](https://scott3142.uk/python-programming/codelabs/part-1/) and [Part 2](https://scott3142.uk/python-programming/codelabs/part-2/) of the course material.
 
 ### Improving the program
 
@@ -65,7 +65,7 @@ if the number is too high
 In the next exercise you will implement this program yourself in Python.  
 
 Positive
-: **Exercise - Guess the number** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom]()
+: **Exercise - Guess the number** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/_rKYt4oC)
 
 ## Computer guesses user's answer
 Duration: 00:30:00
@@ -108,7 +108,7 @@ Positive
 : As a human, we might work out that there are some tricks to this game that make winning much easier. For example, if our first guess is exactly halfway between the two endpoints, we have the best chance of getting it right in the least number of moves possible. Can you implement this functionality? <br><br> Can you program the functionality that tracks how many guesses the computer took to get the right answer and see if it beats a user on average?
 
 Positive
-: **Exercise - Computer guess the number** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom]()
+: **Exercise - Computer guess the number** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/DBA_EnCh)
 
 ## Wrapping it all up in a web app
 Duration: 00:30:00
@@ -152,4 +152,4 @@ user@host:~$ python3 app.py
 Once you have done that, clone the exercise repo below and follow the instructions in the README.
 
 Positive
-: **Exercise - Guessing the number in a web app** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom]()
+: **Exercise - Guessing the number in a web app** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/ku4AAUEN)
