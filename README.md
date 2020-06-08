@@ -47,5 +47,6 @@ The codelabs can be deployed from the `site` directory using the commands:
 
 ## Authors
 
-Material template created by [Henrik Nygren](https://github.com/nygrenh) and [Antti Leinonen](https://github.com/Redande). 
+Primary material created for Java by [Henrik Nygren](https://github.com/nygrenh) and [Antti Leinonen](https://github.com/Redande). 
+
 Python adaptations by [Scott Morgan](https://github.com/Scott3142).
