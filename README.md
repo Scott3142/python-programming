@@ -6,7 +6,7 @@ This repository contains both the source code of the [Python Programming](https:
 
 If you spot a mistake, feel free to open an issue in this repo.
 
-If you'd help us making the correction, you can open a pull request with your proposed changes. You may find these resources helpful for doing this:
+If you'd like to help us making the correction, you can open a pull request with your proposed changes. You may find these resources helpful for doing this:
 
 * [About pull requests](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests)
 * [Markdown tutorial](https://commonmark.org/help/tutorial/)
