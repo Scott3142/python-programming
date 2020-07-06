@@ -1,6 +1,6 @@
-# Codelabs Site
+# The main course pages
 
-A site for hosting codelabs content.
+If you would like to host or adapt your own version of this course, the instructions below will walk you through the process. 
 
 ## Prerequisites
 
