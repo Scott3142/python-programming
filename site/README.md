@@ -169,7 +169,7 @@ Note this filter takes a regular expression. By default, all views are built.
 
 ## Deployment
 
-The instructions here detail the process for deployment to Github pages, but since static HTML/CSS/JS FILES are created, it can be deployed to a hosting service of your choice.
+The instructions here detail the process for deployment to Github pages, but since static HTML/CSS/JS files are created, it can be deployed to a hosting service of your choice.
 
 Prerequisites for a Github pages deployment:
 
