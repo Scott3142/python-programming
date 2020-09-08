@@ -89,7 +89,8 @@ if __name__ == &#39;__main__&#39;:
 <pre><code>virtualenv --python=/usr/bin/python3 my_env; source my_env/bin/activate; pip install pytest
 </code></pre>
 <p>in the Repl terminal first to activate the appropriate Python virtual environment and install the appropriate version of <code>pip</code>. You can read more about <code>pip</code> and virtual environments in the <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#2" target="_blank">Getting Started</a> pages of these course notes.</p>
-<p>You can run a program in Atom by the keyboard combination Ctrl+Shift+B, if you have the <code>script</code> package installed as in the first part.</p>
+<aside class="special"><p>You can run a program in Atom by the keyboard combination Ctrl+Shift+B, if you have the <code>script</code> package installed as in the first part. In order to <em>test</em> the program in Atom, you will need an understanding of the file structure and use of your computer&#39;s terminal. This process is not explicitly covered in these notes, but you can find out more information <a href="https://realpython.com/pytest-python-testing/" target="_blank">in these pages</a>.<br></p>
+</aside>
 <p>Even though running the program is straightforward, a lot is happenings behind the scenes. When a program is run, the source code is first compiled into Python bytecode. This compilation process is done by the Python compiler, which itself is a program. Following that, the program gets executed, meaning the commands are executed one-by-one by a Python interpreter that is able to read Python bytecode.</p>
 <h2 is-upgraded>Printing Multiple Lines</h2>
 <p>Programs are constructed command-by-command, where each command is placed on a new line. In the example below, the command <code>print()</code> appears twice, which means that two print commands are being executed in the program.</p>

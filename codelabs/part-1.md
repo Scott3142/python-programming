@@ -114,7 +114,8 @@ virtualenv --python=/usr/bin/python3 my_env; source my_env/bin/activate; pip ins
 
 in the Repl terminal first to activate the appropriate Python virtual environment and install the appropriate version of `pip`. You can read more about `pip` and virtual environments in the [Getting Started](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#2) pages of these course notes.
 
-You can run a program in Atom by the keyboard combination Ctrl+Shift+B, if you have the `script` package installed as in the first part.
+Positive
+: You can run a program in Atom by the keyboard combination Ctrl+Shift+B, if you have the `script` package installed as in the first part. In order to _test_ the program in Atom, you will need an understanding of the file structure and use of your computer's terminal. This process is not explicitly covered in these notes, but you can find out more information [in these pages](https://realpython.com/pytest-python-testing/).  
 
 Even though running the program is straightforward, a lot is happenings behind the scenes. When a program is run, the source code is first compiled into Python bytecode. This compilation process is done by the Python compiler, which itself is a program. Following that, the program gets executed, meaning the commands are executed one-by-one by a Python interpreter that is able to read Python bytecode.
 
