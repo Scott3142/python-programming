@@ -90,7 +90,32 @@ replace-with-replit-video
 Positive
 : **Exercise - Ada Lovelace** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/fnBTGbks)
 
-You can run a program in Atom by the keyboard combination Ctrl+Shift+B, if you have the `script` package installed as in the first part.
+#### Testing your code in Repl.it
+
+You can test your code to see if it is correct before submitting the exercises back to Github. You can invoke and run the `pytest` library with the following command, directly inside Repl.it.
+
+```
+python -m pytest
+```
+
+We will cover testing in greater detail later in the notes [(see here)](https://scott3142.uk/python-programming/codelabs/part-6/index.html?index=..%2F..index#2), but if you are interested you can view the automated tests that are run in the `tests/` directory of the exercise repos.
+
+#### Known bugs and issues with Repl.it
+
+The Repl.it integration with the exercies from this course is still in beta, so some features are not as slick or as user-friendly as one might like. The notes below describe some of the known issues and propose some workarounds.
+
+Repl's authorisation process is long winded and requires quite a bit of refreshing the page, exiting and coming back. Make sure you are signed into Repl.it with your Github account _before_ accepting the assignment.
+
+Repl defaults to Python 2.7 when running the testing library. You will have to run
+
+```
+virtualenv --python=/usr/bin/python3 my_env; source my_env/bin/activate; pip install pytest
+```
+
+in the Repl terminal first to activate the appropriate Python virtual environment and install the appropriate version of `pip`. You can read more about `pip` and virtual environments in the [Getting Started](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#2) pages of these course notes.
+
+Positive
+: You can run a program in Atom by the keyboard combination Ctrl+Shift+B, if you have the `script` package installed as in the first part. In order to _test_ the program in Atom, you will need an understanding of the file structure and use of your computer's terminal. This process is not explicitly covered in these notes, but you can find out more information [in these pages](https://realpython.com/pytest-python-testing/).  
 
 Even though running the program is straightforward, a lot is happenings behind the scenes. When a program is run, the source code is first compiled into Python bytecode. This compilation process is done by the Python compiler, which itself is a program. Following that, the program gets executed, meaning the commands are executed one-by-one by a Python interpreter that is able to read Python bytecode.
 
