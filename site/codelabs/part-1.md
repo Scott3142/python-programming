@@ -81,7 +81,7 @@ replace-with-video
 
 The recommended way to download, run and submit the exercises is above, but if you are having trouble installing Python or Atom, or you are on a Chromebook or device for which you don't have administrative rights, you can use [Repl.it](https://repl.it/~) to download, run, test and submit the exercises.
 
-**Note:** This feature is currently (as of May 2020) in beta, so may not work as expected.
+**Note:** This feature is currently (as of September 2020) in beta, so may not work as expected.
 
 You can watch the video below to see the steps required to work on the exercises in Repl.it or read more about the process in the [Github documentation](https://classroom.github.com/help/student-experience-replit).
 
