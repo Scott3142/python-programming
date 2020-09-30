@@ -29,7 +29,7 @@
     
       <google-codelab-step label="Programming paradigms" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul class="checklist">
+<ul>
 <li>You know the concept of a programming paradigm.</li>
 <li>You know what is meant by procedural and object-oriented programming.</li>
 </ul>
@@ -43,7 +43,7 @@
 <h2 is-upgraded>Procedural programming</h2>
 <p>Whereas in object-oriented programming, the structure of a program is formed by the data it processes, in procedural programming, the structure of the program is formed by functionality desired for the program: the program acts as a step-by-step guide for the functionality to be performed. The program is executed one step at a time, and subroutines (methods) are called whenever necessary.</p>
 <p>In procedural programming, the state of the program is maintained in variables and tables, and any methods handle only the values provided to them as parameters. The program tells the computer what should happen. As an example, the code below demonstrates the swapping of values for two variables a and b</p>
-<pre><code>a = 10
+<pre><code language="language-python" class="language-python">a = 10
 b = 15
 
 # let&#39;s swap the values of variables a and b
@@ -53,7 +53,7 @@ a = c
 </code></pre>
 <p>When comparing object-oriented programming with procedural programming, a few essential differences emerge. In object-oriented programming, the state of an object can, in principle, change with any object method, and that change of state can also affect the working of the methods of other objects. As a consequence, other aspects of a program&#39;s execution may also be affected since objects can be used in multiple places within the program.</p>
 <p>The difference between object-oriented programming and procedural programming are shown concretely in the clock example presented at the beginning of Part Five. The solution below depicts a procedural style where the printing of the time is transferred to a method.</p>
-<pre><code>hours = 0
+<pre><code language="language-python" class="language-python">hours = 0
 minutes = 0
 seconds = 0
 
@@ -77,13 +77,13 @@ while True:
             if (hours &gt; 23):
                 hours = 0
 </code></pre>
-<pre><code>def print_out(hours,minutes,seconds):
+<pre><code language="language-python" class="language-python">def print_out(hours,minutes,seconds):
     print(hours)
     print(minutes)
     print(seconds)
 </code></pre>
 <p>The same implemented in an object-oriented way:</p>
-<pre><code>class Hand:
+<pre><code language="language-python" class="language-python">class Hand:
     def __init__(self,upper_bound):
         self.upper_bound = upper_bound
         self.value = 0
@@ -103,7 +103,7 @@ while True:
 
         return &#34;&#34; + str(self.value)
 </code></pre>
-<pre><code>from hand import Hand
+<pre><code language="language-python" class="language-python">from hand import Hand
 
 class Clock:
 
@@ -124,16 +124,16 @@ class Clock:
     def __str__(self):
         return str(hours) + &#34;:&#34; + str(minutes) + &#34;:&#34; + str(seconds)
 </code></pre>
-<pre><code>from clock import Clock
+<pre><code language="language-python" class="language-python">from clock import Clock
 clock = Clock()
 
 while True:
     print(clock)
     clock.advance()
 </code></pre>
-<aside class="special"><p><strong>Exercise - Liquid containers<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/dJnFs2pv" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Liquid containers <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/dJnFs2pv" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Liquid containers 2.0<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/fsdme7we" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Liquid containers 2.0 <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/fsdme7we" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 
 
@@ -141,7 +141,7 @@ while True:
     
       <google-codelab-step label="Algorithms" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul class="checklist">
+<ul>
 <li>You understand the concept of algorithms and you are familiar with a few algorithms</li>
 <li>You can explain how selection sort works</li>
 <li>You can explain how the linear search and binary search algorithms work</li>
@@ -153,18 +153,18 @@ while True:
 <p>If the information (data) given to a computer, doesn&#39;t follow any rules and isn&#39;t in order, retrieving that information is taxing for the computer. We need order!</p>
 <h3 is-upgraded>Selection sort</h3>
 <p>Every programmer should be familiar with at least one sorting algorithm (i.e a way to sort an array). Let&#39;s familiarize ourselves with one &#34;classic&#34; sorting algorithm, the selection sort. We&#39;ll do so with a programing exercise.</p>
-<aside class="special"><p><strong>Exercise - Sorting<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/yP4-lTnq" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Sorting <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/yP4-lTnq" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Built-in sorting algorithms in Python</h2>
 <p>Python offers a significant amount of ready to use sorting algorithms. Arrays can be sorted (into their natural order) using the class method <code>sort</code> of the <code>List</code>-class.</p>
-<pre><code>numbers = [8, 3, 7, 9, 1, 2, 4]
+<pre><code language="language-python" class="language-python">numbers = [8, 3, 7, 9, 1, 2, 4]
 print(numbers)
 numbers.sort()
 print(numbers)
 </code></pre>
 <aside class="warning"><p>[8, 3, 7, 9, 1, 2, 4] <br> [1, 2, 3, 4, 7, 8, 9]</p>
 </aside>
-<pre><code>numbers = []
+<pre><code language="language-python" class="language-python">numbers = []
 numbers.append(8)
 numbers.append(3)
 numbers.append(7)
@@ -175,13 +175,13 @@ print(numbers)
 <aside class="warning"><p>[8, 3, 7] <br> [8, 7, 3]</p>
 </aside>
 <p>Python&#39;s build-in sorting algorithms work with value type variables and some of Python&#39;s build-in reference type variables, like String. In order for our own classes to be sorted, we need to provide Python with some tips on how to do that, because the classes themselves don&#39;t contain information on how objects created from them should be ordered. We&#39;ll get back to ordering objects created from classes we made ourselves in the advanced course in programming.</p>
-<aside class="special"><p><strong>Exercise - Ready made sorting algorithms<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/lxUMI5Va" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Ready made sorting algorithms <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/lxUMI5Va" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Information retrieval</h2>
 <p>Next let&#39;s take a look at algorithms meant for information retrieval.</p>
 <h3 is-upgraded>Linear search</h3>
 <p>Linear search is a search algorithm that searches for information in array by going through every value in the array one by one. When the value that was searched for is found, its index is immediately returned. If the requested value cannot be found, linear sort return the information that the value was not found – typically this means returning <code>-1</code> instead of a valid index.</p>
-<pre><code>def linear_search(array,search_for):
+<pre><code language="language-python" class="language-python">def linear_search(array,search_for):
         for i in range(len(array)):
             if (array[i] == search_fir):
                 return i
@@ -191,7 +191,7 @@ print(numbers)
 <p>In the worst case scenario, i.e when the value searched for isn&#39;t found, the algorithm has to do as many comparisons as there are values in the array. In an array containing, say, 10 million values, this means 10 comparisons. If we are doing more than one search, it makes sense to try and improve efficiency.</p>
 <h2 is-upgraded>Binary search (aka half-interval search or logarithmic search)</h2>
 <p>When the data searched is in order, searching can be implemented a lot more efficiently than in linear search. The idea behind Binary Search is to start looking for the searched value in the middle index of the array (or list), compare the value found there to the searched value, and if needed (i.e, when the value isn&#39;t found there) eliminate half of the search area.</p>
-<aside class="special"><p><strong>Exercise - Searching<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/hDAgdF9Q" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Searching <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/hDAgdF9Q" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 
 
@@ -199,11 +199,11 @@ print(numbers)
     
       <google-codelab-step label="Larger exercises" duration="60">
         <p>To conclude the seventh part, you&#39;ll do a few more extensive exercises. There is no predefined structure for these tasks – think about the classes and objects that will help you complete the task while you&#39;re completing it.</p>
-<aside class="special"><p><strong>Exercise - Grade statistics<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/h4yqv_kv" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Grade statistics <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/h4yqv_kv" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Recipe search<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/DqNNqN54" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Recipe search <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/DqNNqN54" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Big year<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/QyE9-r0r" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Big year <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/QyE9-r0r" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 
 

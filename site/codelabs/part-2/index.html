@@ -29,7 +29,7 @@
     
       <google-codelab-step label="Recurring problems and patterns to solve them" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul class="checklist">
+<ul>
 <li>You recognize that certain sub-problems, such as reading input or calculations, recur in programs.</li>
 <li>You&#39;re aware of solution models to certain sub-problems.</li>
 <li>You practice combining solution patterns used on sub-problems to solve broader ones.</li>
@@ -40,7 +40,7 @@
 <p>Let&#39;s look at a few sub-problems and patterns for solving them.</p>
 <h2 is-upgraded>Reading User Input</h2>
 <p>The solution pattern for programming tasks involving reading user input is straightforward. If the program needs to calculate the square root of a function, we need to import some code which has been created for the task. We will use the library <code>numpy</code> for this, which is imported at the top of the example below.  Importing the tool makes it available for the program. Importing external libraries is an important part of programming, and allows us to not ‘reinvent the wheel&#39;. We&#39;ll cover importing modules in more detail a later part of the course.</p>
-<pre><code># Making the numpy library available in the program
+<pre><code language="language-python" class="language-python"># Making the numpy library available in the program
 import numpy as np
 
 def sqrt():
@@ -56,7 +56,7 @@ def sqrt():
 <li>Once the calculation is done, do something with its result. This can mean printing the result of a computation, or, for example, using it in calculating an average by dividing a sum of the inputs by their count.</li>
 </ol>
 <p>For example, the solution pattern for the problem <em>Create a program to calculate the sum of two integers</em> is the following.</p>
-<pre><code># Identifying the input values and declaring the variables for them
+<pre><code language="language-python" class="language-python"># Identifying the input values and declaring the variables for them
 first = 1
 second = 2
 
@@ -67,7 +67,7 @@ sum = first + second
 print(&#34;The sum of &#34; + str(first) + &#34; and &#34; + str(second) + &#34; is &#34; + str(sum))
 </code></pre>
 <p>A program that both reads and calculates combines both of these patterns. One that calculates the product of two integers provided by the user looks like this:</p>
-<pre><code>def product():
+<pre><code language="language-python" class="language-python">def product():
     # Assigning the user input to the variables
     first = int(input())
     second = int(input())
@@ -79,25 +79,25 @@ print(&#34;The sum of &#34; + str(first) + &#34; and &#34; + str(second) + &#34;
     print(&#34;The product of &#34; + str(first) + &#34; and &#34; + str(second) + &#34; is &#34; + str(product))
 </code></pre>
 <p>In the example above, the program has been implemented so that the variables are declared and values are read into them.</p>
-<aside class="special"><p><strong>Exercise - Squared<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/U3Zj0V9Z" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Squared <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/L6wsdPwV" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Square Root of Sum<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/rVX86wW5" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Square Root of Sum <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/no4yTmWD" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Conditional Logic</h2>
 <p>Problems often contain some conditional logic. In these instances we use conditional statements. A conditional statement starts with an <code>if</code> command followed by an expression in parentheses. The expression evaluates to either true or false. If it evaluates true, the following block delimited by curly brackets gets executed.</p>
-<pre><code># if the value is greater than five
+<pre><code language="language-python" class="language-python"># if the value is greater than five
 if (value &gt; 5):
     # then...
 </code></pre>
 <p>A program that prints &#34;ok&#34; if the value of the variable is greater than <code>42</code>, and otherwise prints &#34;not ok&#34; looks like this:</p>
-<pre><code>value = 15
+<pre><code language="language-python" class="language-python">value = 15
 if (value &gt; 42):
     print(&#34;ok&#34;)
 else:
     print(&#34;not ok&#34;)
 </code></pre>
 <p>You can also chain together multiple conditions. In such a case, the problem takes the form &#34;if a, then b  elif c, then d  elif e, then f  otherwise g&#34;. The chain consists of an <code>if</code>-statement followed by <code>elif</code>-statements, each containing its own expression and a block.</p>
-<pre><code># if the value is greater than five
+<pre><code language="language-python" class="language-python"># if the value is greater than five
 if (value &gt; 5):
     # functionality when value is greater than five
 elif (value &lt; 0): #
@@ -107,7 +107,7 @@ else:  # otherwise
     # functionality otherwise
 </code></pre>
 <p>Conditional logic can be combined with other patterns used for problem solving. Let&#39;s look into a problem &#34;Read two integers from the user. If the product of the integers is over 100, print <code>too much</code>. If the sum is less than 10, print <code>too little</code>. Otherwise, print <code>ok</code>. The program below combines reading, calculating and conditional functionality.</p>
-<pre><code>def product():
+<pre><code language="language-python" class="language-python">def product():
     # Assigning the user input to the variables
     first = int(input())
     second = int(input())
@@ -123,9 +123,9 @@ else:  # otherwise
     else:
         print(&#39;ok&#39;)
 </code></pre>
-<aside class="special"><p><strong>Exercise - Absolute Value<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/AShLOWZe" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Absolute Value <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/M2JioLcQ" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Comparing Numbers<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/2OrNYGHz" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Comparing Numbers <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/ON9bncVN" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 
 
@@ -133,7 +133,7 @@ else:  # otherwise
     
       <google-codelab-step label="Repeating functionality" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul class="checklist">
+<ul>
 <li>You are familiar with loops and know how to create a program that contains one.</li>
 <li>You know how to use the <code>break</code> command to end a loop&#39;s execution and move onto its next statement.</li>
 <li>You know how to use <code>continue</code> command to return to the beginning of a loop.</li>
@@ -142,7 +142,7 @@ else:  # otherwise
 <p>A computer&#39;s processor, which specializes in executing commands, is capable of executing – in a modern computer – over a billion (machine code) commands in a second.</p>
 <p>In this section, we&#39;ll get used to writing often-repeated program code with the help of loops.</p>
 <p>Let&#39;s motivate ourselves to use loops. Below you&#39;ll find an example of a program that asks the user for five numbers and calculates their sum.</p>
-<pre><code>sum = 0
+<pre><code language="language-python" class="language-python">sum = 0
 
 print(&#34;Input a number: &#34;)
 sum = sum + int(input())
@@ -163,7 +163,7 @@ print(&#34;The sum of the numbers is &#34; + str(sum))
 </code></pre>
 <p>It does the job, but not elegantly. What if the program had to read a hundred, or perhaps a thousand numbers and print their sum? What if the program had to read three numbers only?</p>
 <p>The problem can be solved with a loop which keeps track of both the sum and the number of times input has been read. The program that prints the sum of five numbers now looks as follows</p>
-<pre><code>numbers_read = 0
+<pre><code language="language-python" class="language-python">numbers_read = 0
 sum = 0
 
 while True:
@@ -178,20 +178,20 @@ print(&#34;The sum of the numbers is &#34; + str(sum))
 <p>Next off we will get familiar with loops.</p>
 <h2 is-upgraded>Loops and Infinite Loops</h2>
 <p>A loop consists of a statement that determines whether or not the code within the loop should be repeated, along with a block containing the source code to be repeated. A loop takes the following form.</p>
-<pre><code>while (_statement_):
+<pre><code language="language-python" class="language-python">while (_statement_):
     # The content of the block
     # The block can have an unlimited amount of content
 </code></pre>
 <p>We&#39;ll use the value <code>True</code> as the loop&#39;s statement for now. This way, the loop&#39;s execution is always continued when the program arrives at the point that decides whether it should be repeated or not. This happens when the execution of the program first arrives at the loop statement for the first time, and also when it reaches the end of the loop&#39;s block.</p>
 <p>The loop execution proceeds line-by-line. The following program outputs <em>I can program</em> an infinite number of times.</p>
-<pre><code>while True:
+<pre><code language="language-python" class="language-python">while True:
     print(&#34;I can program!&#34;)
 </code></pre>
 <p>A program that runs infinitely does not end on its own. In Python, it can usually be shut down by the Ctrl-C command.</p>
 <h2 is-upgraded>Ending a Loop</h2>
 <p>The loop statement can be broken out of with command ‘break&#39;. When a computer executes the command ‘break&#39;, the program execution moves onto the next command following the loop block.</p>
 <p>The example below is a program that prints numbers from one to five. Note how the variable that&#39;s used within the loop is defined before the loop. This way the variable can be incremented inside the loop and the change sticks between multiple iterations of the loop.</p>
-<pre><code>number = 1
+<pre><code language="language-python" class="language-python">number = 1
 
 while True:
     print(number)
@@ -207,7 +207,7 @@ print(&#34;Ready!&#34;)
 <p>Breaking out of the loop occurs when a user enters a specified input or whenever a calculation performed in the loop ends in the desired result. These kinds of programs contain both a loop used to define a section to be repeated and also a conditional statement used to check whether or not the condition to exit the loop has been fulfilled.</p>
 <p>Users can also be asked for input within a loop. The variables that are commonly used in loops  are defined before the loop, whereas variables (such as the value read from the user) that are specific to the loop are defined within it.</p>
 <p>In the example below, the program asks the user whether to exit the loop or not. If the user inputs the string &#34;y&#34;, the execution of the program moves to the command following the loop block, after which the execution of the program ends.</p>
-<pre><code>while True:
+<pre><code language="language-python" class="language-python">while True:
     print(&#34;Exit? (y exits)&#34;)
     message = input()
     if (message == &#34;y&#34;):
@@ -218,12 +218,12 @@ print(&#34;Ready!&#34;)
 print(&#34;Ready!&#34;)
 </code></pre>
 <p>The program in the example works as follows. The user&#39;s inputs are marked with <em>User:</em>.</p>
-<aside class="warning"><p>Exit? (y exits) <br><em>User: &lt;no&gt;<br></em> Ok! Let&#39;s carry on! <br> Exit? (y exits) <br><em>User: &lt;non&gt;<br></em> Ok! Let&#39;s carry on! <br> Exit? (y exits) <br><em>User: &lt;y&gt;<br></em> Ready! <br></p>
+<aside class="warning"><p>Exit? (y exits) <br> <em>User: &lt;no&gt; <br></em> Ok! Let&#39;s carry on! <br> Exit? (y exits) <br> <em>User: &lt;non&gt; <br></em> Ok! Let&#39;s carry on! <br> Exit? (y exits) <br> <em>User: &lt;y&gt; <br></em> Ready! <br></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Carry on?<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/rcygir4c" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Carry on? <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/LJkfRhNJ" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <p>In the previous example, the program read inputs of type string from the user. The program can also be implemented with other types of variables. The program below asks numbers from the user until the user inputs a zero.</p>
-<pre><code>while True:
+<pre><code language="language-python" class="language-python">while True:
     number = int(input(&#34;Input a number, 0 to quit&#34;))
     if (number == 0):
         break
@@ -233,14 +233,14 @@ print(&#34;Ready!&#34;)
 print(&#34;Done, thank you!&#34;)
 </code></pre>
 <p>The output of the program can be as follows:</p>
-<aside class="warning"><p>Input a number, 0 to quit <br><em>User: &lt;5&gt;<br></em> You input 5 <br> Input a number, 0 to quit <br><em>User: &lt;-2&gt;<br></em> You input -2 <br> Input a number, 0 to quit <br><em>User: &lt;y&gt;<br></em> Done, thank you! <br></p>
+<aside class="warning"><p>Input a number, 0 to quit <br> <em>User: &lt;5&gt; <br></em> You input 5 <br> Input a number, 0 to quit <br> <em>User: &lt;-2&gt; <br></em> You input -2 <br> Input a number, 0 to quit <br> <em>User: &lt;y&gt; <br></em> Done, thank you! <br></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Are we there yet?<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/2iXvyptN" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Are we there yet? <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/38zwXwVq" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Returning to the Start of the Loop</h2>
 <p>When the execution reaches the end of the loop, the execution starts again from the start of the loop. This means that all the commands in the loop have been executed. You can also return to the beginning from other places besides the end with the command <code>continue</code>. When the computer executes the command <code>continue</code>, the execution of the program moves to the beginning of the loop.</p>
 <p>The example below demonstrates the use of the <code>continue</code> command. The program asks the user to input positive numbers. If the user inputs a negative number or a zero, the program prints the message &#34;Invalid number! Try again&#34;, after which the execution returns to the beginning of the loop. In the previous example, the program read inputs of type string from the user. Similar programs with different input types are also possible. In the example below, the user is asked for numbers until they input a zero.</p>
-<pre><code>while True:
+<pre><code language="language-python" class="language-python">while True:
     number = int(input(&#34;Insert positive integers&#34;))
 
     if (number &lt;= 0):
@@ -251,7 +251,7 @@ print(&#34;Done, thank you!&#34;)
 </code></pre>
 <p>The program in the example above is repeated infinitely since the <code>break</code> command used for exiting the loop is not used. To exit the loop, the <code>break</code> command must be added to it.</p>
 <p>In the example below, the program is modified in such a way that the user is asked to input positive numbers. If the user inputs a negative number, the program informs them that the number was invalid and returns to the beginning of the loop. If the number was zero, the program exits the loop.</p>
-<pre><code>while True:
+<pre><code language="language-python" class="language-python">while True:
     number = int(input(&#34;Insert positive integers&#34;))
 
     if (number == 0):
@@ -263,10 +263,10 @@ print(&#34;Done, thank you!&#34;)
 
     print(&#34;Your input was &#34; + str(number))
 </code></pre>
-<aside class="special"><p><strong>Exercise - Only positives<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/mRclSSM9" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Only positives <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/O7jMCV15" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <p>In the previous exercise, you made a program that asks the user for numbers. If the user entered a negative number, the program would inform them that the number was invalid, and if the user entered a zero, the program would exit. A possible solution to the exercise is the following.</p>
-<pre><code>while True:
+<pre><code language="language-python" class="language-python">while True:
     number = int(input(&#34;Input a number&#34;))
 
     if (number == 0):
@@ -279,7 +279,7 @@ print(&#34;Done, thank you!&#34;)
     print(number * number)
 </code></pre>
 <p>The program could be made by modifying the if-statement to another form. In the example below, the conditionals have been combined to replace separate if-statements.</p>
-<pre><code>while True:
+<pre><code language="language-python" class="language-python">while True:
     number = int(input(&#34;Input a number&#34;))
 
     if (number == 0):
@@ -292,7 +292,7 @@ print(&#34;Done, thank you!&#34;)
 </code></pre>
 <p>Which of the previous examples was more clear?</p>
 <p>Let&#39;s examine the clarity of the previous programs through an example. Below, the program asks the user for a number. If the number is negative, the user is informed that the number is invalid and the execution of the program goes to the beginning of the loop. If the number is zero, the program exits the loop. In other cases the program prints the square of the number, i.e., the number times itself.</p>
-<pre><code>while True:
+<pre><code language="language-python" class="language-python">while True:
     number = int(input(&#34;Input a number&#34;))
 
     if (number &lt; 0):
@@ -305,7 +305,7 @@ print(&#34;Done, thank you!&#34;)
     print(number * number)
 </code></pre>
 <p>This program can also be done by combining the if-statements. In that case, the implementations would be the following.</p>
-<pre><code>while True:
+<pre><code language="language-python" class="language-python">while True:
     number = int(input(&#34;Input a number&#34;))
 
     if (number &lt; 0):
@@ -316,7 +316,7 @@ print(&#34;Done, thank you!&#34;)
         print(number * number)
 </code></pre>
 <p>Let&#39;s examine the previous programs with comments. Before each command, there&#39;s a comment that aims to explain what&#39;s happening in the program. Below is a program that&#39;s written with separate if-statements.</p>
-<pre><code># The task is to repeat the block until the block is exited
+<pre><code language="language-python" class="language-python"># The task is to repeat the block until the block is exited
 while True:
     # The task is to ask the user for an input and read a number from the user
     number = int(input(&#34;Input a number&#34;))
@@ -336,7 +336,7 @@ while True:
 </code></pre>
 <p>Note that every if-statement has a single, clear task.</p>
 <p>When we comment on a program containing combined if-statements, the comments take the following form.</p>
-<pre><code># The task is to repeat the block until the block is exited
+<pre><code language="language-python" class="language-python"># The task is to repeat the block until the block is exited
 while True:
     # The task is to ask the user for an input and read a number from the user
     number = int(input(&#34;Input a number&#34;))
@@ -356,7 +356,7 @@ while True:
 <p>For the program to print out information from the loop execution after the loop, the information must be saved and modified during the loop.</p>
 <p>If the variable used to store the data is introduced within the loop, the variable is only available within that loop and nowhere else.</p>
 <p>Let&#39;s create a program to count and print out the number of ones entered by the user. Let&#39;s first create a non-working version and examine the action of the blocks.</p>
-<pre><code># The task is to read an input from the user
+<pre><code language="language-python" class="language-python"># The task is to read an input from the user
 while True:
 
     # The task is to keep count of number ones
@@ -381,7 +381,7 @@ while True:
 print(&#34;The total of ones: &#34; + str(ones))
 </code></pre>
 <p>The previous program does not work because the variable <code>ones</code> is introduced within the loop, and an attempt is made to use it after the loop at the end of the program. The variable only exists inside the loop. If the print statement <code>print(&#34;The total of ones: &#34; + ones)</code> was inside the loop, the program would work, but not in the desired way. Let&#39;s examine this next.</p>
-<pre><code># The task is to read an input from the user
+<pre><code language="language-python" class="language-python"># The task is to read an input from the user
 while True:
 
     # The task is to keep count of number ones
@@ -404,11 +404,11 @@ while True:
     print(&#34;The total of ones: &#34; + str(ones))
 </code></pre>
 <p>The example above works, but not in a way we hoped it would. Below the example output of the program</p>
-<aside class="warning"><p>Insert a number (0 exits) <br><em>User: &lt;5&gt;<br></em> The total of ones: 0 <br> Insert a number (0 exits) <br><em>User: &lt;1&gt;<br></em> The total of ones: 1 <br> Insert a number (0 exits) <br><em>User: &lt;1&gt;<br></em> The total of ones: 1 <br> Insert a number (0 exits) <br><em>User: &lt;2&gt;<br></em> The total of ones: 0 <br> Insert a number (0 exits) <br><em>User: &lt;0&gt;</em></p>
+<aside class="warning"><p>Insert a number (0 exits) <br> <em>User: &lt;5&gt; <br></em> The total of ones: 0 <br> Insert a number (0 exits) <br> <em>User: &lt;1&gt; <br></em> The total of ones: 1 <br> Insert a number (0 exits) <br> <em>User: &lt;1&gt; <br></em> The total of ones: 1 <br> Insert a number (0 exits) <br> <em>User: &lt;2&gt; <br></em> The total of ones: 0 <br> Insert a number (0 exits) <br> <em>User: &lt;0&gt;</em></p>
 </aside>
 <p>If you wish to use a variable after a loop, it needs to be introduced before the loop.</p>
 <p>In the example below, the program computes the total of number ones inputted. The inputs are read until the user inputs a zero after which the program prints the total count of number ones entered. The program uses variable <code>ones</code> to keep track of the number ones.</p>
-<pre><code># The task is to keep track of number ones
+<pre><code language="language-python" class="language-python"># The task is to keep track of number ones
 ones = 0
 
 # The task is to read an input from the user
@@ -430,17 +430,17 @@ while True:
 print(&#34;The total of ones: &#34; + str(ones))
 </code></pre>
 <p>Below is an example output of the program.</p>
-<aside class="warning"><p>Insert a number (0 exits) <br><em>User: &lt;1&gt;<br></em> Insert a number (0 exits) <br><em>User: &lt;2&gt;<br></em> Insert a number (0 exits) <br><em>User: &lt;1&gt;<br></em> Insert a number (0 exits) <br><em>User: &lt;-1&gt;<br></em> Insert a number (0 exits) <br><em>User: &lt;0&gt;<br></em> Total of ones: 2</p>
+<aside class="warning"><p>Insert a number (0 exits) <br> <em>User: &lt;1&gt; <br></em> Insert a number (0 exits) <br> <em>User: &lt;2&gt; <br></em> Insert a number (0 exits) <br> <em>User: &lt;1&gt; <br></em> Insert a number (0 exits) <br> <em>User: &lt;-1&gt; <br></em> Insert a number (0 exits) <br> <em>User: &lt;0&gt; <br></em> Total of ones: 2</p>
 </aside>
-<aside class="special"><p><strong>Exercise - Number of Numbers<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/acj2FJqY" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Number of Numbers <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/FRUZ3Ui7" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Number of Negative Numbers<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/wUcS4feE" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Number of Negative Numbers <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/dNU5yt-1" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <p>The programs written in the previous exercises have read input from the user and kept track of the count of certain types of numbers. In the next exercise, the requested sum of numbers is not much different – this time, rather than keeping track of the number of values entered, you add the number entered by the user to the sum.</p>
-<aside class="special"><p><strong>Exercise - Sum of Numbers<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/XcoyRV-O" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Sum of Numbers <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/TKjmSb8w" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <p>Sometimes you need to use multiple variables. The example below shows a program which reads numbers from the user until the user writes 0. Then the program prints the number of positive and negative numbers given, and the percentage of positive numbers from all numbers given.</p>
-<pre><code># For saving number of numbers
+<pre><code language="language-python" class="language-python"># For saving number of numbers
 number_of_positives = 0
 number_of_negatives = 0
 
@@ -482,11 +482,11 @@ if (number_of_positives + number_of_negatives &gt; 0):
     percentageOfPositives = 100.0 * number_of_positives / (number_of_positives + number_of_negatives)
     print(&#34;Percentage of positive numbers: &#34; + str(percentageOfPositives) + &#34;%&#34;)
 </code></pre>
-<aside class="special"><p><strong>Exercise - Number and sum of numbers<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/GOJs4z-w" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Number and sum of numbers <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/irg2Ht0k" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Average of numbers<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/QTEiBRvN" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Average of numbers <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/hp4ErnFu" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Average of positive numbers<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/6UQO6nLf" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Average of positive numbers <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/Z41-P3x1" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 
 
@@ -494,7 +494,7 @@ if (number_of_positives + number_of_negatives &gt; 0):
     
       <google-codelab-step label="More loops" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul class="checklist">
+<ul>
 <li>You&#39;re familiar with the condition of the while loop.</li>
 <li>You know how to use the for loop.</li>
 <li>You recognize situations where a while loop should be used and those where a for loop is more appropriate.</li>
@@ -505,7 +505,7 @@ if (number_of_positives + number_of_negatives &gt; 0):
 <p>So far we have been using a loop with the boolean <code>True</code> in its parenthesis, meaning the loop continues forever (or until the loop is ended with the <code>break</code> command ).</p>
 <p>Actually, the parenthesis of a loop can contain a conditional expression, or a condition, just like the parenthesis of an <code>if</code> statement. The  <code>True</code> value can be replaced with an expression, which is evaluated as the program is executed. The expression is defined the same way as the condition of a conditional statement.</p>
 <p>The following code prints the numbers 1,2,...,5. When the value of the variable <code>number</code> is more than 5, the <code>while</code>-condition evaluates to false and the execution of the loop ends for good.</p>
-<pre><code>number = 1
+<pre><code language="language-python" class="language-python">number = 1
 
 while (number &lt; 6):
     print(number)
@@ -516,14 +516,14 @@ while (number &lt; 6):
 <h2 is-upgraded>For Loop</h2>
 <p>Above, we learned how a <code>while</code> loop with a condition can be used to go through numbers in a certain interval.</p>
 <p>The structure of this kind of loop is the following.</p>
-<pre><code>i = 0
+<pre><code language="language-python" class="language-python">i = 0
 while (i &lt; 10):
     print(i)
     i += 1
 </code></pre>
 <p>The above loop can be split into three parts. First we introduce the variable <code>i</code>, used to count the number of times the loop has been executed so far, and set its value to 0: <code>i = 0</code>. This is followed by the definition of the loop – the loop&#39;s condition is <code>i &lt; 10</code> so the loop is executed as long as the value of the variable <code>i</code> is less than 10. The loop body contains the functionality to be executed <code>print(i)</code>, which is followed by increasing the value of the variable <code>i += 1</code>. The command <code>i += 1</code> is shorthand for <code>i = i + 1</code>.</p>
 <p>The same can be achieved with a <code>for</code> loop like so.</p>
-<pre><code>for i in range(1,10):
+<pre><code language="language-python" class="language-python">for i in range(1,10):
     print(i)
 
 </code></pre>
@@ -533,20 +533,20 @@ while (i &lt; 10):
 <li>the condition of the loop</li>
 <li>the functionality to be executed.</li>
 </ul>
-<pre><code>for target_list &#34;in&#34; expression_list:
+<pre><code language="language-python" class="language-python">for target_list &#34;in&#34; expression_list:
     # Functionality to be executed
 </code></pre>
 <p>We will continue practicing loops in the following exercises. You can use either a <code>while</code> loop with a condition, or a <code>for</code> loop.</p>
-<aside class="special"><p><strong>Exercise - Counting<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/uBJcE3cs" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Counting <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/TQJDZr5Y" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Counting to a hundred<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/ZDuV7U8U" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Counting to a hundred <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/l5S9eFrB" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - From where to where?<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/seskzJ62" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - From where to where? <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/HSRmP5DQ" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>On Stopping a Loop Execution</h2>
 <p>A loop does not stop executing immediately when its condition evaluates to true. A loop&#39;s condition is evaluated at the start of a loop, meaning when (1) the loop starts for the first time or (2) the execution of a previous iteration of the loop body has just finished.</p>
 <p>Let&#39;s look at the following loop.</p>
-<pre><code>number = 1
+<pre><code language="language-python" class="language-python">number = 1
 
 while (number != 2):
     print(number)
@@ -563,7 +563,7 @@ while (number != 2):
 <p>One common subproblem type is to &#34;do something a certain amount of times&#34;.</p>
 <p>What&#39;s common to all these programs is repetition. Some functionality is done repeatedly, and a counter variable is used to keep track of the repetitions.</p>
 <p>The following program calculates the product 4*3 somewhat clumsily, i.e., as the sum 3 + 3 + 3 + 3:</p>
-<pre><code>result = 0
+<pre><code language="language-python" class="language-python">result = 0
 
 i = 0
 while True:
@@ -576,7 +576,7 @@ while True:
 print(result)
 </code></pre>
 <p>The same functionality can be achieved with the following code.</p>
-<pre><code>result = 0
+<pre><code language="language-python" class="language-python">result = 0
 
 i = 0
 while (i &lt; 4):
@@ -586,25 +586,25 @@ while (i &lt; 4):
 print(result)
 </code></pre>
 <p>Or by using a for loop as seen in the following.</p>
-<pre><code>result = 0
+<pre><code language="language-python" class="language-python">result = 0
 
 for i in range(4):
     result += 3
 
 print(result)
 </code></pre>
-<aside class="special"><p><strong>Exercise - Sum of a sequence<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/CuYOiMGe" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Sum of a sequence <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/tJ4tsKYs" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Sum of a sequence - the sequel<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/jttlelxV" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Sum of a sequence - the sequel <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/guyUIIts" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Factorial<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/xjE5KnZi" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Factorial <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/H3o7XE9V" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>On the Structure of Programs Using Loops</h2>
 <p>In the previous examples, we have concentrated on cases where the loop is executed a predetermined number of times. The number of repetitions can be based on user input – in these cases, the for loop is quite handy.</p>
 <p>In programs where the loop body has to be executed until the user gives certain input, the for loop is not too great. In these cases, the while-true loop we practiced earlier works well.</p>
 <p>Let&#39;s take a look at a somewhat more complex program that reads integers from the user. The program handles negative numbers as invalid, and zero stops the loop. When the user enters zero, the program prints the sum of valid numbers, the number of valid numbers and the number of invalid numbers.</p>
 <p>A possible solution is detailed below. However, the style of the example is not ideal.</p>
-<pre><code>print(&#34;Write numbers, negative numbers are invalid: &#34;)
+<pre><code language="language-python" class="language-python">print(&#34;Write numbers, negative numbers are invalid: &#34;)
 sum = 0
 valid_numbers = 0
 invalid_numbers = 0
@@ -627,7 +627,7 @@ while True:
 </code></pre>
 <p>In the code above, the computation executed after the loop has ended has been implemented inside of the loop. This approach is not recommended as it can easily lead to very complex program structure. If something else – for example, reading more input – is to be done when the loop ends, it could also easily end up being placed inside of the loop. As more and more functionality is needed, the program becomes increasingly harder to read.</p>
 <p>Let&#39;s stick to the following loop structure:</p>
-<pre><code># Create variables needed for the loop
+<pre><code language="language-python" class="language-python"># Create variables needed for the loop
 
 while True:
     # read input
@@ -641,7 +641,7 @@ while True:
 # functionality to execute after the loop ends
 </code></pre>
 <p>In other words, the program structure is cleaner if the things to be done after the loop ends are placed outside of it.</p>
-<pre><code>print(&#34;Write numbers, negative numbers are invalid: &#34;)
+<pre><code language="language-python" class="language-python">print(&#34;Write numbers, negative numbers are invalid: &#34;)
 sum = 0
 valid_numbers = 0
 invalid_numbers = 0
@@ -665,9 +665,9 @@ print(&#34;Sum of valid numbers: &#34; + str(sum))
 print(&#34;Valid numbers: &#34; + str(valid_numbers))
 print(&#34;Invalid numbers: &#34; + str(invalid_numbers))
 </code></pre>
-<aside class="special"><p><strong>Exercise - Repeating, breaking and remembering<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/iS2pni54" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Repeating, breaking and remembering <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/hICLIXDA" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Implementing a program one small part at a time<br><br></strong> In the previous exercise, we used a series of exercises to practice implementing a program one piece at a time. <br><br> When you are writing a program, whether it&#39;s an exercise or a personal project, figure out the types of parts the program needs to function and proceed by implementing them one part at a time. Make sure to test the program right after implementing each part. <br><br> Never try solving the whole problem at once, because that makes running and testing the program in the middle of the problem-solving process difficult. Start with something easy that you know you can do. When one part works, you can move on to the next. <br><br> Some of the exercises are already split into parts. However, it&#39;s often the case in programming that these parts need to be split into even smaller parts. You should almost always run the program after every new line of code. This ensures that the solution is moving in the right direction. <br><br></p>
+<aside class="special"><p><strong>Implementing a program one small part at a time <br><br></strong> In the previous exercise, we used a series of exercises to practice implementing a program one piece at a time. <br><br> When you are writing a program, whether it&#39;s an exercise or a personal project, figure out the types of parts the program needs to function and proceed by implementing them one part at a time. Make sure to test the program right after implementing each part. <br><br> Never try solving the whole problem at once, because that makes running and testing the program in the middle of the problem-solving process difficult. Start with something easy that you know you can do. When one part works, you can move on to the next. <br><br> Some of the exercises are already split into parts. However, it&#39;s often the case in programming that these parts need to be split into even smaller parts. You should almost always run the program after every new line of code. This ensures that the solution is moving in the right direction. <br><br></p>
 </aside>
 
 
@@ -675,7 +675,7 @@ print(&#34;Invalid numbers: &#34; + str(invalid_numbers))
     
       <google-codelab-step label="Methods &amp; Classes" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul class="checklist">
+<ul>
 <li>You will be familiar with the concept of a class.</li>
 <li>You are familiar with the concepts of a method parameter, a method&#39;s return value, and a program&#39;s call stack.</li>
 <li>You can create parameterized and non-parameterized methods, and you can create methods that return a value.</li>
@@ -696,7 +696,7 @@ print(&#34;Invalid numbers: &#34; + str(invalid_numbers))
 </code></pre>
 <p>Some of these files should be fairly self explanatory. The automated testing is run from the <code>tests/</code> folder. The <code>README.md</code> file explains what the exercise is about, and READMEs in general explain what the code in the repository is about.</p>
 <p>The <code>src/</code> directory contains all of the source code for the project. Since we&#39;ve only had one Python file until now, there are no more folders inside <code>src</code>. The <code>__init__.py</code> file (which has been empty for us so far), is required to make Python treat the directories as containing packages which can then be <em>imported</em>. If you look at one of the testing files:</p>
-<pre><code>import pytest
+<pre><code language="language-python" class="language-python">import pytest
 from src.exercise import average # this imports the method &#39;average&#39; from the &#39;exercise.py&#39; file in the &#39;src&#39; folder
 
 def test_exercise():
@@ -705,7 +705,7 @@ def test_exercise():
 <p>you can see that our package is imported from the <code>src</code> folder and used in the program. This is common Python functionality. You have previously imported and used the <code>numpy</code> package which allowed you to use a <code>sqrt</code> function. This is exactly the same functionality, except that you haven&#39;t written the <code>numpy</code> package. Python knows where to get <code>numpy</code> from because it is a common package listed in the <a href="https://pypi.org/" target="_blank">Python Package Index (PyPI)</a> , which is a repository of software for the Python programming language. You can create your own packages and make them available on PyPi if you think they would be useful for others.</p>
 <p><strong>What is name == ‘main&#39;?</strong></p>
 <p>So far, our <code>exercise.py</code> files have looked like this:</p>
-<pre><code>def main():
+<pre><code language="language-python" class="language-python">def main():
     # some code ...
 
 if __name__ == &#39;__main__&#39;:
@@ -722,17 +722,17 @@ if __name__ == &#39;__main__&#39;:
 <pre><code>python exercise.py
 </code></pre>
 <p>the interpreter will assign the hard-coded string <code>&#34;__main__&#34;</code> to the <code>__name__</code> variable, i.e.</p>
-<pre><code># It&#39;s as if the interpreter inserts this at the top
+<pre><code language="language-python" class="language-python"># It&#39;s as if the interpreter inserts this at the top
 # of your module when run as the main program.
 __name__ = &#34;__main__&#34;
 </code></pre>
 <p><strong>When Your Module Is Imported By Another</strong></p>
 <p>On the other hand, suppose some other module is the main program and it imports your module. This means there&#39;s a statement like this in the main program, or in some other module the main program imports:</p>
-<pre><code># Suppose this is in some other main program.
+<pre><code language="language-python" class="language-python"># Suppose this is in some other main program.
 import exercise
 </code></pre>
 <p>The interpreter will search for your <code>exercise.py</code> file (along with searching for a few other variants), and prior to executing that module, it will assign the name &#34;exercise&#34; from the import statement to the <code>__name__</code> variable, i.e.</p>
-<pre><code># It&#39;s as if the interpreter inserts this at the top
+<pre><code language="language-python" class="language-python"># It&#39;s as if the interpreter inserts this at the top
 # of your module when it&#39;s imported from another module.
 __name__ = &#34;exercise&#34;
 </code></pre>
@@ -750,11 +750,11 @@ __name__ = &#34;exercise&#34;
 <p><strong>A method</strong> means a named set consisting of statements that can be called from elsewhere in the program code by its name. Programming languages offer pre-made methods, but programmers can also write their own ones. It would, in fact, be quite exceptional if a program used no methods written by the programmer, because methods help in structuring the program. From this point onward nearly every program on the course will therefore contain custom-created methods.</p>
 <p>We will also introduce the concept of a class here, which will become far clearer as we go through the course. A Class is like an object constructor, or a &#34;blueprint&#34; for creating objects.</p>
 <p>To create a class, use the keyword <code>class</code>:</p>
-<pre><code>class MyClass:
+<pre><code language="language-python" class="language-python">class MyClass:
   x = 5
 </code></pre>
 <p>Now we can use the class named MyClass to create objects. Create an object named p1, and print the value of x:</p>
-<pre><code>class MyClass:
+<pre><code language="language-python" class="language-python">class MyClass:
   x = 5
 
 p1 = MyClass()
@@ -768,24 +768,24 @@ print(p1.x)
 <p>All classes have a function called <code>__init__()</code>, which is always executed when the class is being initiated.</p>
 <p>We can use the <code>__init__()</code> function to assign values to object properties, or other operations that are necessary to do when the object is being created.</p>
 <p>In the code boilerplate, methods are written outside of the function <code>__init__()</code>, yet inside out the &#34;outermost&#34; class block. They can be located above or below the <code>__init__()</code>.</p>
-<pre><code>class Example:
+<pre><code language="language-python" class="language-python">class Example:
     def __init__(self, *args):
         # program code
 
     # your own methods here
 </code></pre>
 <p>This can be confusing at first, but the concept of a class, including what the keywords <code>self</code> and <code>*args</code> mean will be clearer later in the course. For now, let&#39;s turn our attention back to methods an observe how to create a new method. We&#39;ll create the method <code>greet</code>.</p>
-<pre><code>def greet(self):
+<pre><code language="language-python" class="language-python">def greet(self):
     print(&#34;Greetings from the method world!&#34;)
 </code></pre>
 <p>Note the subtle difference between a <em>method</em> and a <em>function</em>. Until now, we have used functions such as</p>
-<pre><code>def add():
+<pre><code language="language-python" class="language-python">def add():
   a = 2
   b = 3
   print(a+b)
 </code></pre>
 <p>This can become a method when we insert it into a suitable place in a class.</p>
-<pre><code>class Example:
+<pre><code language="language-python" class="language-python">class Example:
     def __init__(self, *args):
         # program code
 
@@ -796,7 +796,7 @@ print(p1.x)
 <p>Note also the keyword <code>self</code> here. This means that the method is associated with a class and can access variables within that class. Methods always have <code>self</code> as an input parameter. We will revisit the concept of <code>self</code> many times throughout the course.</p>
 <p>The definition of the method consists of two parts. The first line of the definition includes the name of the method, i.e. <code>greet</code>.  Beneath the line containing the name of the method is a code block, inside of which is the code of the method – the commands that are executed when the method is called. The only thing our method <code>greet</code> does is write a line of text on the screen.</p>
 <p>Calling a custom method is simple: write the name of the methods followed by a set of parentheses. In the following snippet the main function (main) calls the greet method four times in total.</p>
-<pre><code>class Example:
+<pre><code language="language-python" class="language-python">class Example:
     def __init__(self, *args):
         # program code
         print(&#34;Let&#39;s see if we can travel to the method world:&#34;)
@@ -822,34 +822,34 @@ if __name__ == &#39;__main__&#39;:
 </aside>
 <p>The order of execution is worth noticing. The execution of the program happens by executing the lines of the main function (<code>main</code>) in order from top to bottom, one at a time. When the encountered statement is a method call, the execution of the program moves inside the method in question. The statements of the method are executed one at a time from top to bottom. After this the execution returns to the place where the method call occurred, and then proceeds to the next statement in the program.</p>
 <p>When the program starts, the operating system calls <code>main</code>. The main function is the starting point for the program, since the execution begins from its first line. The execution of a program ends at the end of the main function.</p>
-<aside class="special"><p><strong>Methods vs Functions<br><br></strong> A method in python is somewhat similar to a function, except it is associated with object/classes. Methods in python are very similar to functions except for two major differences. <br><br> 1. The method is implicitly used for an object for which it is called. <br> 2. The method is accessible to data that is contained within the class. <br><br> You can read more <a href="https://www.tutorialspoint.com/difference-between-method-and-function-in-python" target="_blank">here</a>.</p>
+<aside class="special"><p><strong>Methods vs Functions <br><br></strong> A method in python is somewhat similar to a function, except it is associated with object/classes. Methods in python are very similar to functions except for two major differences. <br><br> 1. The method is implicitly used for an object for which it is called. <br> 2. The method is accessible to data that is contained within the class. <br><br> You can read more <a href="https://www.tutorialspoint.com/difference-between-method-and-function-in-python" target="_blank">here</a>.</p>
 </aside>
-<aside class="special"><p><strong>Exercise - In a hole in the ground<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/ms-h1hdp" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - In a hole in the ground <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/LjjvlVVR" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Reprint<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/xDe92Uim" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Reprint <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/wimkvJdE" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <p>From here on out, when introducing methods, we will not explicitly mention that they must be located in the correct place. Methods cannot be defined e.g. inside other methods.</p>
 <h2 is-upgraded>On Naming Methods</h2>
 <p>According to the Python <a href="https://www.python.org/dev/peps/pep-0008/" target="_blank">PEP 8 styling guidelines</a>, the names of methods use the function and variable naming rules and therefore should be entirely lowercase with words separated by underscores as necessary to improve readability.</p>
 <p>In the code example below the method is poorly named. It begins with an upper-case letter and the words are incorrectly separated. The parentheses after the method name have a space between and indentation in the code block is incorrect (2 spaces instead of 4).</p>
-<pre><code>def Thismethod_says_woof ( self):  
+<pre><code language="language-python" class="language-python">def Thismethod_says_woof ( self):  
   print(&#34;woof&#34;)
 </code></pre>
 <p>In contrast the method below is correctly named: The name is entirely lowercase with words separated by underscores as necessary to improve readability. The parentheses sit next to one another and the contents are correctly indented (the method has its own code block, so the indentation of the code is four characters).</p>
-<pre><code>def this_method_says_woof(self):
+<pre><code language="language-python" class="language-python">def this_method_says_woof(self):
     print(&#34;woof&#34;)
 </code></pre>
 <h2 is-upgraded>Method Parameters</h2>
 <p><strong>Parameters</strong> are values given to a method that can be used in its execution. The parameters of a method are defined on the uppermost line of the method within the parentheses following its name. The values of the parameters that the method can use are copied from the values given to the method when it is executed.</p>
 <p>In the following example a parameterized method <code>greet</code> is defined. It has a parameter called <code>num_of_times</code>.</p>
-<pre><code>def greet(self, num_of_times):
+<pre><code language="language-python" class="language-python">def greet(self, num_of_times):
     i = 0
     while (i &lt; num_of_times):
         print(&#34;Greetings!&#34;)
         i += 1
 </code></pre>
 <p>We will call the method <code>greet</code> with different values. The parameter <code>num_of_times</code> is assigned the value <code>1</code> on the first call, and <code>3</code> on the second.</p>
-<pre><code>def __init__(self):
+<pre><code language="language-python" class="language-python">def __init__(self):
     self.greet(1)
     print(&#34;&#34;)
     self.greet(3)
@@ -857,22 +857,22 @@ if __name__ == &#39;__main__&#39;:
 <aside class="warning"><p>Greetings! <br><br> Greetings! <br> Greetings! <br> Greetings!</p>
 </aside>
 <p>Just like when calling the predefined method <code>print</code>, you can pass an expression as a parameter.</p>
-<pre><code>def __init__(self):
+<pre><code language="language-python" class="language-python">def __init__(self):
     self.greet(1 + 2)
 </code></pre>
 <aside class="warning"><p>Greetings! <br> Greetings! <br> Greetings!</p>
 </aside>
 <p>If an expression is used as a parameter for a method, the expression is evaluated prior to the method call. Above, the expression evaluates to <code>3</code> and the final method call is of the form <code>greet(3)</code>.</p>
-<aside class="special"><p><strong>Exercise - From one to parameter<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/uQHJGxVc" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - From one to parameter <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/jpJVtL3-" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - From parameter to one<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/TDRItJcU" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - From parameter to one <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/pq-BekOT" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Multiple Parameters</h2>
 <p>A method can be defined with multiple parameters. When calling such a method, the parameters are passed in the same order.</p>
-<pre><code>def sum(self, first, second):
+<pre><code language="language-python" class="language-python">def sum(self, first, second):
     print(&#34;The sum of numbers &#34; + str(first) + &#34; and &#34; + str(second) + &#34; is &#34; + str(first + second))
 </code></pre>
-<pre><code>sum(3, 5)
+<pre><code language="language-python" class="language-python">sum(3, 5)
 
 number1 = 2
 number2 = 4
@@ -881,11 +881,11 @@ sum(number1, number2)
 </code></pre>
 <aside class="warning"><p>The sum of numbers 3 and 5 is 8 <br> The sum of numbers 2 and 4 is 6</p>
 </aside>
-<aside class="special"><p><strong>Exercise - Division<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/XEAp2BCl" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Division <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/wRY8AKLV" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Parameter Values Are Copied in a Method Call</h2>
 <p>As a method is called <strong>the values of its parameters are copied</strong>. In practice, this means that both the main method and the method to be called can use variables with the same name. However, changing the value of the variables inside the method does not affect the value of the variable in the main method that has the same name. Let&#39;s examine this behavior with the following program.</p>
-<pre><code>class Example:
+<pre><code language="language-python" class="language-python">class Example:
     def __init__(self):
         min = 5
         max = 10
@@ -910,7 +910,7 @@ def main():
 </aside>
 <p>So, method parameters are distinct from the variables (or parameters) of other methods, even if they had the same name. As a variable is passed to a method during a method call, the value of that variable gets copied to be used as the value of the parameter variable declared in the method definition. Variables in two separate methods are independent of one another.</p>
 <p>To further demonstrate this point, let&#39;s consider the following example. We define a variable called <code>number</code> in the main method. That variable is passed as a parameter to the method <code>increment_by_three</code>.</p>
-<pre><code># main program
+<pre><code language="language-python" class="language-python"># main program
 def __init__(self):
     number = 1
     print(&#34;The value of the variable &#39;number&#39; in the main program: &#34; + str(number))
@@ -929,24 +929,24 @@ def increment_by_three(self, number):
 <p>When the variable <code>number</code> is incremented inside the method, there&#39;s no issue. This, however, is not reflected in the <code>number</code> variable of the main program. The <code>number</code> variable living in the main program is different from the <code>number</code> variable of the method. The parameter <code>number</code> is copied for the method&#39;s use, i.e., a new variable called <code>number</code> is created for <code>increment_by_three</code> method, to which the value of the variable<code>number</code> in the main program is copied during the method call. The variable <code>number</code> inside the method <code>increment_by_three</code> exists only for the duration of the method&#39;s execution and has no relation to the variable of the same name in the main program.</p>
 <h2 is-upgraded>Methods &amp; Functions Can Return Values</h2>
 <p>To return a value, we use the command <code>return</code> followed by the value to be returned (or the name of the variable whose value is to be returned).</p>
-<pre><code>def always_returns_ten(self):
+<pre><code language="language-python" class="language-python">def always_returns_ten(self):
     return 10
 </code></pre>
 <p>The method defined above returns a value of <code>10</code> when called. For the return value to be used, it must be stored in a variable. This is done the same way as regular value assignment to a variable, by using an equals sign.</p>
-<pre><code>def __init__(self):
+<pre><code language="language-python" class="language-python">def __init__(self):
     number = self.always_returns_ten()
 
     print(&#34;the method returned the number &#34; + str(number))
 </code></pre>
 <p>The return value can also be used in any other expression.</p>
-<pre><code>number = 4 * self.always_returns_ten() + (self.always_returns_ten() / 2) - 8
+<pre><code language="language-python" class="language-python">number = 4 * self.always_returns_ten() + (self.always_returns_ten() / 2) - 8
 
 print(&#34;the result of the calculation &#34; + str(number))
 </code></pre>
-<aside class="special"><p><strong>Exercise - Numero uno<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/1qdmYq8s" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Numero uno <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/QdXdWe_M" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <p>When execution inside a method reaches the command <code>return</code>, the execution of that method ends and the value is returned to the calling method. Any lines of source code following the command <code>return</code> are never executed.</p>
-<pre><code>def functioning_method(self, parameter):
+<pre><code language="language-python" class="language-python">def functioning_method(self, parameter):
     if (parameter &gt; 10):
         return 10
 
@@ -957,7 +957,7 @@ print(&#34;the result of the calculation &#34; + str(number))
     print(&#34;This is never reached.&#34;)
 </code></pre>
 <p>If a method has the form <code>def name_of_method()</code> it is possible to return from it – in other words, to stop its execution in that place – with the <code>return</code> command that is not followed by a value. For instance:</p>
-<pre><code>def division(self, numerator, denominator):
+<pre><code language="language-python" class="language-python">def division(self, numerator, denominator):
     if (denominator == 0):
         print(&#34;Can not divide by 0!&#34;)
         return
@@ -966,14 +966,14 @@ print(&#34;the result of the calculation &#34; + str(number))
 </code></pre>
 <h2 is-upgraded>Defining Variables Inside Methods</h2>
 <p>Defining variables inside methods is done in the same manner as in the &#34;main program&#34;. The following method calculates the average of the numbers it receives as parameters. Variables <code>sum</code> and <code>avg</code> are used to help in the calculation.</p>
-<pre><code>def average(self, number1, number2, number3):
+<pre><code language="language-python" class="language-python">def average(self, number1, number2, number3):
     sum = number1 + number2 + number3
     avg = sum / 3.0
 
     return avg
 </code></pre>
 <p>Variables defined in a method are only visible inside that method. In the example above, this means that the variables <code>sum</code> and <code>avg</code> defined inside the method <code>average</code> are not visible in the main program. A typical mistake while learning programming is to try and use a method in the following way.</p>
-<pre><code>def __init__(self):
+<pre><code language="language-python" class="language-python">def __init__(self):
     first = 3
     second = 8
     third = 4
@@ -985,7 +985,7 @@ print(&#34;the result of the calculation &#34; + str(number))
 </code></pre>
 <p>In the above example, an attempt is made to use the variable <code>avg</code> that has been defined inside the method <code>average</code> and print its value. However, the variable <code>avg</code> only exists inside the method <code>average</code>, and it cannot be accessed outside of it.</p>
 <p>The following mistakes are also commonplace.</p>
-<pre><code>def __init__(self):
+<pre><code language="language-python" class="language-python">def __init__(self):
     first = 3
     second = 8
     third = 4
@@ -995,7 +995,7 @@ print(&#34;the result of the calculation &#34; + str(number))
 </code></pre>
 <p>Above, there is an attempt to use the name of the method <code>average</code> as if it were a variable. However, a method has to be called.</p>
 <p>As well as placing the method result into a helper variable, another way that works is to execute the method call directly inside the print statement:</p>
-<pre><code>def __init__(self):
+<pre><code language="language-python" class="language-python">def __init__(self):
     first = 3
     second = 8
     third = 4
@@ -1007,16 +1007,16 @@ print(&#34;the result of the calculation &#34; + str(number))
 <h2 is-upgraded>Calculating the Return Value Inside a Method</h2>
 <p>The return value does not need to be entirely pre-defined - it can also be calculated. The return command that returns a value from the method can also be given an expression that is evaluated before the value is returned.</p>
 <p>In the following example, we&#39;ll define a method sum that adds the values of two variables and returns their sum. The values of the variables to be summed are received as method parameters.</p>
-<pre><code>def sum(first, second):
+<pre><code language="language-python" class="language-python">def sum(first, second):
     return first + second
 </code></pre>
 <p>When the execution of the method reaches the statement <code>return first + second</code>, the expression <code>first + second</code> is evaluated, and then its value is returned.</p>
 <p>The method is called in the following way. Below, the method is used to add the numbers 2 and 7 together. The value resulting from the method call is placed into the variable <code>sum_of_numbers</code>.</p>
-<pre><code>sum_of_numbers = sum(2, 7)
+<pre><code language="language-python" class="language-python">sum_of_numbers = sum(2, 7)
 # sum_of_numbers is now 9
 </code></pre>
 <p>Let&#39;s expand the previous example so that the numbers are entered by a user.</p>
-<pre><code>def __init__(self):
+<pre><code language="language-python" class="language-python">def __init__(self):
     first = int(input(&#34;Enter the first number: &#34;))
 
     second = int(input(&#34;Enter the second number: &#34;))
@@ -1028,7 +1028,7 @@ def sum(self, first, second):
 </code></pre>
 <p>In the example above, the method&#39;s return value is not stored in a variable but is instead directly used as part of the print operation. The print command&#39;s execution is done by the computer first evaluating the string <code>&#34;The combined sum of the numbers is: &#34;+ self.sum(first, second)</code>. The computer first looks for the variables <code>first</code> and <code>second</code> and copies their values as the values ​​of the method <code>sum</code>&#39;s parameters. The method then adds the values of the parameters ​​together, after which it returns a value. This value takes the place of the <code>sum</code> method call, whereby the sum is appended to the string <code>&#34;The combined sum of the numbers is: &#34;</code>.</p>
 <p>Since the values passed to a method are copied to its parameters, the names of the parameters and the names of the variables defined on the side of the caller have, in fact, nothing to do with each other. In the previous example, both the variables of the main program and the method parameters were named the same (<code>first</code> and <code>second</code>) &#34;by accident&#34;. The code below will function in precisely the same manner even though the variables are named differently:</p>
-<pre><code>def __init__(self):
+<pre><code language="language-python" class="language-python">def __init__(self):
     number1 = int(input(&#34;Enter the first number: &#34;))
 
     number2 = int(input(&#34;Enter the second number: &#34;))
@@ -1039,19 +1039,19 @@ def sum(self,first,second):
     return first + second
 </code></pre>
 <p>Now the value of the variable <code>number1</code> is copied as the value of the method parameter <code>first</code>, and the value of the variable <code>number2</code> is copied as the value of the parameter <code>second</code>.</p>
-<aside class="special"><p><strong>Exercise - Summation<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/vu06HbDh" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Summation <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/f0P_Mf1L" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Smallest<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/VFGH_zx_" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Smallest <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/OQ1J7v96" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Greatest<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/pXjOAaHb" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Greatest <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/xQthVu6S" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Averaging<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/pTbToMpz" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Averaging <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/zTH8N_Cz" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Execution of Method Calls and the Call Stack</h2>
 <p>How does the computer remember where to return after the execution of a method?</p>
 <p>The environment that executes Python source code keeps track of the method being executed in the call stack. <strong>The call stack</strong> contains frames, each of which includes information about a specific method&#39;s internal variables and their values. When a method is called, a new frame containing its variables is created in the call stack. When the execution of a method ends, the frame relating to a method is removed from the call stack, which leads to execution resuming at the previous method of the stack.</p>
 <p>When a method is called, the execution of the calling method is left waiting for the execution of the called method to end. This can be visualized with the help of a call stack. The call stack refers to the stack formed by the method calls – the method currently being executed is always on the top of the stack, and when that method has finished executing the execution moves on to the method that is next on the stack. Let&#39;s examine the following program:</p>
-<pre><code>def __init__(self):
+<pre><code language="language-python" class="language-python">def __init__(self):
     print(&#34;Hello world!&#34;)
     self.print_number()
     print(&#34;Bye bye world!&#34;)
@@ -1070,7 +1070,7 @@ def print_number(self):
 </aside>
 <h2 is-upgraded>Call Stack and Method Parameters</h2>
 <p>Let&#39;s examine the call stack in a situation where parameters have been defined for the method.</p>
-<pre><code>def __init__(self):
+<pre><code language="language-python" class="language-python">def __init__(self):
     beginning = 1
     end = 5
 
@@ -1095,7 +1095,7 @@ def print_stars(self, beginning, end):
 </aside>
 <h2 is-upgraded>Call Stack and Returning a Value from a Method</h2>
 <p>Let&#39;s now study an example where the method returns a value. The <code>__init__</code> method of the program calls a separate <code>start</code> method, inside of which two variables are created, the <code>sum</code> method is called, and the the value returned by the <code>sum</code> method is printed.</p>
-<pre><code>def __init__(self):
+<pre><code language="language-python" class="language-python">def __init__(self):
     self.start()
 
 def start(self):
@@ -1124,7 +1124,7 @@ def sum(self,number1, number2):
 <p>After that, the print command is executed, and then we return to the <code>__init__</code> method. Once the execution reaches the end of the <code>__init__</code> method, the execution of the program ends.</p>
 <h2 is-upgraded>Method Calling Another Method</h2>
 <p>As we noticed earlier, other methods can be called from within methods. An additional example of this technique is given below. We&#39;ll create the method <code>multiplication_table</code> that prints the multiplication table of the given number. The multiplication table prints the rows with the help of the <code>print_multiplication_table_row</code> method.</p>
-<pre><code>def multiplication_table(self,max):
+<pre><code language="language-python" class="language-python">def multiplication_table(self,max):
     number = 1
 
     while (number &lt;= max):

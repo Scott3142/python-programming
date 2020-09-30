@@ -1,0 +1,649 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Getting Started</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid="UA-49751789-4"
+                  id="getting-started"
+                  title="Getting Started"
+                  environment="web"
+                  feedback-link="https://github.com/Scott3142/python-programming">
+    
+      <google-codelab-step label="Getting Started with Programming" duration="60">
+        <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>Become familiar with the Atom development environment used in this course.</li>
+<li>How to download and submit programming exercises.</li>
+</ul>
+<p>Modern programming is practically always done in an IDE (integrated development environment). An IDE contains a set of useful tools for the programmer. It does not create the program by itself, but it can give hints about common mistakes in the code, and help the programmer understand the structure of the program.</p>
+<p>There are many IDEs that can be used with Python, including <a href="https://www.jetbrains.com/pycharm" target="_blank">PyCharm</a>, <a href="https://docs.python.org/3/library/idle.html" target="_blank">Idle</a> and <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>. At the risk of sparking some heated debate (&#34;I love vim&#34;, &#34;nano 4eva&#34; etc.), the text editor we recommend and support on this course is called Atom. Atom describes itself as a &#34;hackable text editor for the 21st Century&#34; and is built and maintained by <a href="https://github.com/" target="_blank">Github</a>, which we will also use extensively throughout this course.</p>
+<p>Atom is not <a href="https://www.quora.com/Is-Atom-an-IDE-or-Text-Editor" target="_blank">technically</a> an IDE, but comes with many useful plugins that can be used to mimic the functionality of an IDE. We will use the <code>script</code> and <code>atom-python-test</code> plugins predominantly on this course.</p>
+<p>To start the course you will need:</p>
+<ol type="1">
+<li>A Github account</li>
+<li>Python installed on your computer</li>
+<li>Atom development environment</li>
+</ol>
+<p>You can sign up for Github <a href="https://github.com/" target="_blank">here</a>. Installation instructions for Python and Atom can be found below:</p>
+<ul>
+<li><a href="https://www.python.org/downloads/" target="_blank">Python installation guide (Windows)</a></li>
+<li><a href="https://flight-manual.atom.io/getting-started/sections/installing-atom/" target="_blank">Atom installation guide (Windows)</a></li>
+</ul>
+<p>Once you have created the user account and installed Python and Atom, watch the video below. The video demonstrates what happens when Atom is opened for the first time. We log into Github and do the first programming exercise.</p>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/GOYVuaEvBCA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<aside class="special"><p><strong>Exercise - Sandbox<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://github.com/den01-python-programming/sandbox.git" target="_blank">Source files on Github</a></p>
+</aside>
+<h2 is-upgraded>Programmers Write Source Code</h2>
+<p>Programming is designing and implementing software. The functionality is implemented based on the wishes and requirements of the users and the customers. Programs are typically implemented (i.e., written or &#34;coded&#34;) in a programming language meant to be written and read by humans.</p>
+<p>There are hundreds of programming languages out there, and this course focuses one of them. The language used in this course is <a href="https://www.python.org/" target="_blank">Python</a>, which is one of the most commonly-used programming languages in the world. Learning Python also makes it easy to pick up other programming languages.</p>
+<p>Programming languages, such as Python, have many commands built-in that a programmer uses when developing software. This makes programming easier as you don&#39;t need to implement everything from scratch. For example, programming languages typically have built-in options available for different menus and views used for making graphical user interfaces. Indeed, a large part of programming is making use of available functions and tools in solving problems – this, however, requires programming experience, which you only gain by programming.</p>
+<p>The &#34;code&#34; you write is called <strong>source code</strong>. Source code consists of statements and expressions, which are read line by line from top to bottom, and from left to right. For example, to print &#34;Hello world&#34;, you can use the pre-defined Python command <code>print()</code>, to which you need to provide the text inside the parentheses that you&#39;d like to be printed:</p>
+<pre><code>print(&#34;Hello World&#34;)
+</code></pre>
+<p>The above statement is pre-built into Python, and it&#39;s used for printing a string. The statement tells the computer to output the string that&#39;s been provided to it, placed between the quotation marks.</p>
+<p>A lot of the programs you&#39;ll see in this course will have a certain frame around the code; the <code>def main():</code> syntax and the <code>if __name__ == &#39;__main__&#39;:</code> block. Don&#39;t worry too much about this for now, it&#39;ll become very familiar over the course of the material. You don&#39;t technically need the framing around the <code>print</code> statement or the <code>if __name__ == &#39;__main__&#39;:</code> block for the program to be able to run in Python, but it&#39;s useful to get into the habit now to make things easier later.</p>
+<pre><code>def main():
+    print(&#34;Welcome to the course - you will learn to program!&#34;)
+
+if __name__ == &#39;__main__&#39;:
+    main()
+</code></pre>
+<aside class="warning"><p><strong>Note:</strong> It is important to realise at this stage that <em>indentation</em> is critical in Python which is slightly different to other languages. The code snippet below is not the same as the one above and would result in an error.</p>
+</aside>
+<pre><code>def main():
+print(&#34;Welcome to the course - you will learn to program!&#34;) #this indentation is wrong
+if __name__ == &#39;__main__&#39;:
+main()
+</code></pre>
+<h2 is-upgraded>Running Python commands in Atom</h2>
+<p>The Atom development environment has several packages available which allow you to run your Python programs directly inside the editor. The most popular of these at the time of writing is the <code>script</code> package. You can read more about <code>script</code> at <a href="https://atom.io/packages/script" target="_blank">this link</a>.</p>
+<p>To install the <code>script</code> package, open Atom and click on the <em>packages</em> tab in the toolbar. Go to <em>Settings View</em> and click <em>Install Packages/Themes</em>.</p>
+<p class="image-container"><img alt="atom-script-1" src="img/37fcde961809ae24.png"></p>
+<p>Search for the <code>script</code> package and click <em>Install</em>.</p>
+<p class="image-container"><img alt="atom-script-2" src="img/b13f2d12cf136c34.png"></p>
+<p>Once it has installed, go and create a <code>test.py</code> file in your sandbox and enter <code>print(&#34;Hello world!&#34;)</code>. You can alternatively use any Python <code>.py</code> file for this step.</p>
+<p class="image-container"><img alt="atom-script-3" src="img/cbdb2fb6b6490e79.png"></p>
+<p>You should see an output in the bottom left of the screen which contains the contents of your program&#39;s output. If there are any errors in your code, the stack trace will also show up here.</p>
+<p class="image-container"><img alt="atom-script-4" src="img/aefb8367cca4618d.png"></p>
+<p>It is important to be able to successfully complete these steps to be able to continue to access the material in this course.</p>
+<aside class="special"><p>For the vast majority of the exercises, it will suffice to run your Python programs in this way. However, if you require virtual environments, <code>pip</code> installs or testing frameworks, it is crucial to understand how to run commands in the terminal and make this your preferred option. We will cover this in the following section.</p>
+</aside>
+<h2 is-upgraded>[Update] A new workflow with Github Classroom and Repl.it IDE</h2>
+<p>The recommended way to download, run and submit the exercises is above, but if you are having trouble installing Python or Atom, or you are on a Chromebook or device for which you don&#39;t have administrative rights, you can use <a href="https://repl.it/~" target="_blank">Repl.it</a> to download, run, test and submit the exercises.</p>
+<p><strong>Note:</strong> This feature is currently (as of May 2020) in beta, so may not work as expected.</p>
+<p>You can watch the video below to see the steps required to work on the exercises in Repl.it or read more about the process in the <a href="https://classroom.github.com/help/student-experience-replit" target="_blank">Github documentation</a>.</p>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/47gvkrD9oxY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="The command line" duration="30">
+        <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>How to run Python commands in the terminal</li>
+<li>Some key commands to know in Linux</li>
+</ul>
+<p>If you&#39;ve never used the command line before, it can be quite daunting but once you get used to it you&#39;ll wonder how you ever worked without it.</p>
+<p>The terminal (or ‘command-line&#39;) on a computer allows a user a great deal of control over their system. Users of Windows may already have come across Command Prompt or Powershell and Mac OS users may be familiar with Terminal. All of these tools allow a user to directly manipulate their system through the use of commands. These commands can be chained together and/or combined together into complex scripts that can potentially complete tasks more efficiently than much larger traditional software packages.</p>
+<p>The following is adapted from <a href="https://www.raspberrypi.org/documentation/" target="_blank">these Raspberry Pi foundation resources</a>.</p>
+<h2 is-upgraded>The terminal in operating systems that aren&#39;t Linux</h2>
+<p>This course focuses mainly on a Linux environment, which can be utilised in Windows through the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">Windows Subsystem for Linux</a>. If you are using alternative terminals or operating systems, you can check out the guides below:</p>
+<ul>
+<li><a href="https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line" target="_blank">Mac OS</a></li>
+<li><a href="https://programminghistorian.org/en/lessons/intro-to-powershell" target="_blank">Windows Powershell</a></li>
+</ul>
+<h2 is-upgraded>Running Python commands in the terminal</h2>
+<p>If you have a directory structure containing some <code>.py</code> files, which you will have if you successfully downloaded the <a href="https://github.com/den01-python-programming/sandbox.git" target="_blank">sandbox exercise</a>, you should see something like the following directory structure. You can view this either in your usual folder structure, or through the command line itself:</p>
+<pre><code>.
++-- README.md
++-- sandbox.py
+</code></pre>
+<p>There may be multiple files in the directory, depending on the repo that you&#39;ve cloned, but if there&#39;s a Python file in there, it will always have the extension <code>.py</code>. You can compile and run the <code>sandbox.py</code> file using the following command from a terminal:</p>
+<pre><code>python3 sandbox.py
+</code></pre>
+<p>Your full command prompt will probably look something like this:</p>
+<pre><code>user@host:~$ python3 main.py
+</code></pre>
+<p>if you&#39;re on Linux, or like this:</p>
+<pre><code>PS C:\Users\User&gt; python3 main.py
+</code></pre>
+<p>if you&#39;re on Windows and using Powershell. Throughout this section, the first part of the command (either <code>user@host:~$</code> for Linux or <code>PS C:\Users\User&gt;</code> for Windows) is not to be typed into the command line. This is just to illustrate to you what the full prompt should look like in each case.</p>
+<p>If you get an error saying that <code>python3</code> is not recognised as a command, <a href="https://www.python.org/downloads/" target="_blank">make sure it&#39;s installed</a>.</p>
+<aside class="special"><p><strong>Note:<br><br></strong> If you are using Atom as a development environment, you can run your Python programs from inside the editor with the <code>script</code> package. Once you have installed the <code>script</code> package, you can run your program with <code>Ctrl-Shift-B</code>. More information on the <code>script</code> package can be found <a href="https://atom.io/packages/script" target="_blank">here</a>.</p>
+</aside>
+<h2 is-upgraded>The terminal in Linux</h2>
+<p>If you are not using Linux or the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">Windows Subsystem for Linux</a>, you can freely skip ahead to the <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#1" target="_blank">next part</a>.</p>
+<p>If you are using the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">Windows Subsystem for Linux</a>, open it according to the instructions contained on that page, otherwise search for <code>Terminal</code> in your installed software and open it. You should be greeted with a command prompt that looks something like:</p>
+<pre><code>user@host:~$
+</code></pre>
+<p>This shows your username and the hostname of the machine you are working on.</p>
+<p>Now, let&#39;s try running a command. Type <code>pwd</code> (present working directory) followed by the Enter key. This should display something like <code>/home/username</code>.</p>
+<p>One of the key aspects of using a terminal is being able to navigate your file system. Firstly, run the following command: <code>ls -la</code>. You should see a list of files and folders.</p>
+<p>The <code>ls</code> command lists the contents of the directory that you are currently in (your present working directory). The <code>-la</code> component of the command is what&#39;s known as a ‘flag&#39;. Flags modify the command that&#39;s being run. In this case the <code>l</code> displays the contents of the directory in a list, showing data such as their sizes and when they were last edited, and the a displays all files, including those beginning with a ., known as ‘dotfiles&#39;. Dotfiles usually act as configuration files for software and as they are written in text, they can be modified by simply editing them.</p>
+<p>In order to navigate to other directories the change directory command, <code>cd</code>, can be used. You can specify the directory that you want to go to by either the ‘absolute&#39; or the ‘relative&#39; path. So if you wanted to navigate to the <code>Downloads</code> directory, you could either do <code>cd /home/username/Downloads</code> or just <code>cd Downloads</code> (if you are currently in <code>/home/username</code>). There are some special cases that may be useful: <code>~</code> acts as an alias for your home directory, so <code>~/Downloads</code> is the same as <code>/home/username/Downloads</code>; <code>.</code> and <code>..</code> are aliases for the current directory and the parent directory respectively, e.g. if you were in <code>/home/username/Downloads</code>, cd .. would take you to <code>/home/username</code>.</p>
+<h2 is-upgraded>History and auto-complete</h2>
+<p>Rather than type every command, the terminal allows you to scroll through previous commands that you&#39;ve run by pressing the <code>up</code> or <code>down</code> keys on your keyboard. If you are writing the name of a file or directory as part of a command then pressing <code>tab</code> will attempt to auto-complete the name of what you are typing. For example, if you have a file in a directory called <code>aLongFileName</code> then pressing tab after typing <code>a</code> will allow you to choose from all file and directory names beginning with <code>a</code> in the current directory, allowing you to choose <code>aLongFileName</code>.</p>
+<h2 is-upgraded>Sudo</h2>
+<p>The Linux operating system is a multi-user operating system which allows multiple users to log in and use the computer. To protect the computer (and the privacy of other users), the users&#39; abilities are restricted.</p>
+<p>Most users are allowed to run most programs, and to save and edit files stored in their own home folder. Normal users are not normally allowed to edit files in other users&#39; folders or any of the system files. There&#39;s a special user in Linux known as the <strong>superuser</strong>, which is usually given the username <code>root</code>. The superuser has unrestricted access to the computer and can do almost anything.</p>
+<p>You won&#39;t normally log into the computer as <code>root</code>, but you can use the <code>sudo</code> command to provide access as the superuser. If you log into your computer as <code>username</code>, then you&#39;re logging in as a normal user. You can run commands as the <code>root</code> user by using the <code>sudo</code> command before the program you want to run.</p>
+<p>For example, if you want to install additional software then you normally use the <code>apt</code> tool. To update the list of available software, you need to prefix the <code>apt</code> command with sudo:</p>
+<p><code>sudo apt update</code></p>
+<p>You can also run a superuser shell by using <code>sudo su</code>. When running commands as a superuser there&#39;s nothing to protect against mistakes that could damage the system. It&#39;s recommended that you only run commands as the superuser when required, and to exit a superuser shell when it&#39;s no longer needed.</p>
+<h2 is-upgraded>Who can use sudo?</h2>
+<p>It would defeat the point of the security if anyone could just put <code>sudo</code> in front of their commands, so only approved users can use <code>sudo</code> to gain administrator privileges. The <code>username</code> user is included in the <code>sudoers</code> file of approved users. To allow other users to act as a superuser you can add the user to the <code>sudo</code> group with <code>usermod</code>, edit the <code>/etc/sudoers</code> file, or add them using <code>visudo</code>.</p>
+<h2 is-upgraded>Installing software using apt</h2>
+<p>You can use the <code>apt</code> command to install software. This is the ‘package manager&#39; that is included with any Debian-based Linux distributions including Ubuntu. It allows you to install and manage new software packages on your Pi. In order to install a new package, you would type <code>sudo apt install &lt;package-name&gt;</code> (where <code>&lt;package-name&gt;</code> is the package that you want to install). Running <code>sudo apt update</code> will update a list of software packages that are available on your system. If a new version of a package is available, then <code>sudo apt full-upgrade</code> will update any old packages to the new version. Finally, <code>sudo apt remove &lt;package-name&gt;</code> removes or uninstalls a package from your system.</p>
+<h2 is-upgraded>Other useful commands</h2>
+<p>There are a few other commands that you may find useful, these are listed below:</p>
+<h2 is-upgraded>ls</h2>
+<p>The <code>ls</code> command lists the content of the current directory (or one that is specified). It can be used with the <code>-l</code> flag to display additional information (permissions, owner, group, size, date and timestamp of last edit) about each file and directory in a list format. The <code>-a</code> flag allows you to view files beginning with <code>.</code> (i.e. dotfiles).</p>
+<h2 is-upgraded>cd</h2>
+<p>Using <code>cd</code> changes the current directory to the one specified. You can use relative (i.e. <code>cd directoryA</code>) or absolute (i.e. <code>cd /home/username/directoryA</code>) paths.</p>
+<h2 is-upgraded>pwd</h2>
+<p>The <code>pwd</code> command displays the name of the present working directory: on a Linux system, entering <code>pwd</code> will output something like <code>/home/username</code>.</p>
+<h2 is-upgraded>mkdir</h2>
+<p>You can use <code>mkdir</code> to create a new directory, e.g. <code>mkdir newDir</code> would create the directory <code>newDir</code> in the present working directory.</p>
+<h2 is-upgraded>rmdir</h2>
+<p>To remove empty directories, use <code>rmdir</code>. So, for example, <code>rmdir oldDir</code> will remove the directory <code>oldDir</code> only if it is empty.</p>
+<h2 is-upgraded>rm</h2>
+<p>The command <code>rm</code>removes the specified file (or recursively from a directory when used with <code>-r</code>). Be careful with this command: files deleted in this way are mostly gone for good!</p>
+<h2 is-upgraded>cp</h2>
+<p>Using <code>cp</code> makes a copy of a file and places it at the specified location (this is similar to copying and pasting). For example, <code>cp ~/fileA /home/otherUser/</code> would copy the file <code>fileA</code> from your home directory to that of the user <code>otherUser</code> (assuming you have permission to copy it there). This command can either take <code>FILE FILE</code> (<code>cp fileA fileB</code>), <code>FILE DIR</code> (<code>cp fileA /directoryB/</code>) or <code>-r DIR DIR</code> (which recursively copies the contents of directories) as arguments.</p>
+<h2 is-upgraded>mv</h2>
+<p>The <code>mv</code> command moves a file and places it at the specified location (so where <code>cp</code> performs a ‘copy-paste&#39;, <code>mv</code> performs a ‘cut-paste&#39;). The usage is similar to <code>cp</code>. So <code>mv ~/fileA /home/otherUser/</code> would move the file <code>fileA</code> from your home directory to that of the user otherUser. This command can either take <code>FILE FILE</code> (<code>mv fileA fileB</code>), <code>FILE DIR</code> (<code>mv fileA /directoryB/</code>) or <code>DIR DIR</code> (<code>mv /directoryB /directoryC</code>) as arguments. This command is also useful as a method to rename files and directories after they&#39;ve been created.</p>
+<h2 is-upgraded>touch</h2>
+<p>The command <code>touch</code> sets the last modified time-stamp of the specified file(s) or creates it if it does not already exist.</p>
+<h2 is-upgraded>cat</h2>
+<p>You can use <code>cat</code> to list the contents of file(s), e.g. <code>cat thisFile</code> will display the contents of <code>thisFile</code>. Can be used to list the contents of multiple files, i.e. <code>cat *.txt</code> will list the contents of all <code>.txt</code> files in the current directory.</p>
+<h2 is-upgraded>head</h2>
+<p>The <code>head</code> command displays the beginning of a file. Can be used with <code>-n</code> to specify the number of lines to show (by default ten), or with <code>-c</code> to specify the number of bytes.</p>
+<h2 is-upgraded>tail</h2>
+<p>The opposite of <code>head</code>, <code>tail</code> displays the end of a file. The starting point in the file can be specified either through <code>-b</code> for 512 byte blocks, <code>-c</code> for bytes, or <code>-n</code> for number of lines.</p>
+<h2 is-upgraded>chmod</h2>
+<p>You would normally use <code>chmod</code> to change the permissions for a file. The <code>chmod</code> command can use symbols <code>u</code> (user that owns the file), <code>g</code> (the files group) ,  and <code>o</code> (other users) and the permissions <code>r</code> (read), <code>w</code> (write), and <code>x</code> (execute). Using <code>chmod u+x *filename*</code> will add execute permission for the owner of the file.</p>
+<h2 is-upgraded>chown</h2>
+<p>The <code>chown</code> command changes the user and/or group that owns a file. It normally needs to be run as root using sudo e.g. <code>sudo chown username:root *filename*</code> will change the owner to username and the group to root.</p>
+<h2 is-upgraded>ssh</h2>
+<p><code>ssh</code> denotes the secure shell. Connect to another computer using an encrypted network connection.</p>
+<h2 is-upgraded>scp</h2>
+<p>The <code>scp</code> command copies a file from one computer to another using <code>ssh</code>.</p>
+<h2 is-upgraded>dd</h2>
+<p>The <code>dd</code> command copies a file converting the file as specified. It is often used to copy an entire disk to a single file or back again. So, for example, <code>dd if=/dev/sdd of=backup.img</code> will create a backup image from an SD card or USB disk drive at /dev/sdd. Make sure to use the correct drive when copying an image to the SD card as it can overwrite the entire disk.</p>
+<h2 is-upgraded>df</h2>
+<p>Use <code>df</code> to display the disk space available and used on the mounted filesystems. Use <code>df -h</code> to see the output in a human-readable format using M for MBs rather than showing number of bytes.</p>
+<h2 is-upgraded>unzip</h2>
+<p>The <code>unzip</code> command extracts the files from a compressed zip file.</p>
+<h2 is-upgraded>tar</h2>
+<p>Use <code>tar</code> to store or extract files from a tape archive file. It can also reduce the space required by compressing the file similar to a zip file.</p>
+<p>To create a compressed file, use <code>tar -cvzf *filename.tar.gz* *directory/*</code> To extract the contents of a file, use <code>tar -xvzf *filename.tar.gz*</code></p>
+<h2 is-upgraded>pipes</h2>
+<p>A pipe allows the output from one command to be used as the input for another command. The pipe symbol is a vertical line <code>|</code>. For example, to only show the first ten entries of the <code>ls</code> command it can be piped through the head command <code>ls | head</code></p>
+<h2 is-upgraded>tree</h2>
+<p>Use the <code>tree</code> command to show a directory and all subdirectories and files indented as a tree structure.</p>
+<h2 is-upgraded>&amp;</h2>
+<p>Run a command in the background with <code>&amp;</code>, freeing up the shell for future commands.</p>
+<h2 is-upgraded>curl</h2>
+<p>Use <code>curl</code> to download or upload a file to/from a server. By default, it will output the file contents of the file to the screen.</p>
+<h2 is-upgraded>man</h2>
+<p>Show the manual page for a file with <code>man</code>. To find out more, run <code>man man</code> to view the manual page of the man command.</p>
+<h2 is-upgraded>grep</h2>
+<p>Use <code>grep</code> to search inside files for certain search patterns. For example, <code>grep &#34;search&#34; *.txt</code> will look in all the files in the current directory ending with .txt for the string search.</p>
+<p>The <code>grep</code> command supports regular expressions which allows special letter combinations to be included in the search.</p>
+<h2 is-upgraded>awk</h2>
+<p><code>awk</code> is a programming language useful for searching and manipulating text files.</p>
+<h2 is-upgraded>find</h2>
+<p>The <code>find</code> command searches a directory and subdirectories for files matching certain patterns.</p>
+<h2 is-upgraded>whereis</h2>
+<p>Use <code>whereis</code> to find the location of a command. It looks through standard program locations until it finds the requested command.</p>
+<h2 is-upgraded>ping</h2>
+<p>The <code>ping</code> utility is usually used to check if communication can be made with another host. It can be used with default settings by just specifying a hostname (e.g. <code>ping google.com</code>) or an IP address (e.g. <code>ping 8.8.8.8</code>). It can specify the number of packets to send with the <code>-c</code> flag.</p>
+<h2 is-upgraded>nmap</h2>
+<p><code>nmap</code> is a network exploration and scanning tool. It can return port and OS information about a host or a range of hosts. Running just <code>nmap</code> will display the options available as well as example usage.</p>
+<h2 is-upgraded>hostname</h2>
+<p>The <code>hostname</code> command displays the current hostname of the system. A privileged (super) user can set the hostname to a new one by supplying it as an argument (e.g. <code>hostname new-host</code>).</p>
+<h2 is-upgraded>ifconfig</h2>
+<p>Use <code>ifconfig</code> to display the network configuration details for the interfaces on the current system when run without any arguments (i.e. <code>ifconfig</code>). By supplying the command with the name of an interface (e.g. <code>eth0</code> or <code>lo</code>) you can then alter the configuration: check the manual page for more details.</p>
+<h2 is-upgraded>Finding out about a command</h2>
+<p>To find out more information about a particular command then you can run the <code>man</code> followed by the command you want to know more about (e.g. <code>man ls</code>). The man-page (or manual page) for that command will be displayed, including information about the flags for that program and what effect they have. Some man-pages will give example usage.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Installing packages with pip" duration="20">
+        <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>What pip is and how to use it</li>
+<li>What the requirements file is</li>
+</ul>
+<h2 is-upgraded>What is pip?</h2>
+<p>The following is adapted from <a href="https://realpython.com/what-is-pip/" target="_blank">here</a>.</p>
+<p>Pip is the standard package manager for Python which allows you to install and manage packages which are not part of the <a href="https://docs.python.org/3/py-modindex.html" target="_blank">Python standard library</a>. Much like <code>npm</code> for JavaScript, <code>gem</code> for Ruby or even <code>apt</code> for Debian, <code>pip</code> allows you to install and manage additional libraries and dependencies for your projects. If you have installed Python on your machine, the Python installer installs pip, so it should be ready for you to use.  You can verify that pip is available by running the following command in your console:</p>
+<pre><code>user@host:~$ pip --version
+</code></pre>
+<p>A lot of commonly used packages are included as standard in the <a href="https://docs.python.org/3/py-modindex.html" target="_blank">Python standard library</a>, which includes an extensive set of packages and modules to help developers with their scripts and applications.</p>
+<p>Sometimes, however, you&#39;ll need functionality that isn&#39;t included as standard, for example <code>numpy</code> or <code>scipy</code> if you&#39;re doing scientific computing and for that you&#39;ll want to look in the <a href="https://pypi.org/" target="_blank">Python Package Index</a>, otherwise known as PyPI. To install these packages, you can use <code>pip</code>.</p>
+<p>Typing <code>pip help</code> into your command prompt should return something like the following:</p>
+<pre><code>Usage:
+  pip &lt;command&gt; [options]
+
+Commands:
+  install                     Install packages.
+  download                    Download packages.
+  uninstall                   Uninstall packages.
+  freeze                      Output installed packages in requirements format.
+  list                        List installed packages.
+  show                        Show information about installed packages.
+  check                       Verify installed packages have compatible
+                              dependencies.
+  config                      Manage local and global configuration.
+  search                      Search PyPI for packages.
+  wheel                       Build wheels from your requirements.
+  hash                        Compute hashes of package archives.
+  completion                  A helper command used for command completion.
+  help                        Show help for commands.
+
+General Options:
+  -h, --help                  Show help.
+  --isolated                  Run pip in an isolated mode, ignoring environment
+                              variables and user configuration.
+  -v, --verbose               Give more output. Option is additive, and can be
+                              used up to 3 times.
+  -V, --version               Show version and exit.
+  -q, --quiet                 Give less output. Option is additive, and can be
+                              used up to 3 times (corresponding to WARNING,
+                              ERROR, and CRITICAL logging levels).
+  --log &lt;path&gt;                Path to a verbose appending log.
+  --proxy &lt;proxy&gt;             Specify a proxy in the form
+                              [user:passwd@]proxy.server:port.
+  --retries &lt;retries&gt;         Maximum number of retries each connection should
+                              attempt (default 5 times).
+  --timeout &lt;sec&gt;             Set the socket timeout (default 15 seconds).
+  --exists-action &lt;action&gt;    Default action when a path already exists:
+                              (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort).
+  --trusted-host &lt;hostname&gt;   Mark this host as trusted, even though it does
+                              not have valid or any HTTPS.
+  --cert &lt;path&gt;               Path to alternate CA bundle.
+  --client-cert &lt;path&gt;        Path to SSL client certificate, a single file
+                              containing the private key and the certificate in
+                              PEM format.
+  --cache-dir &lt;dir&gt;           Store the cache data in &lt;dir&gt;.
+  --no-cache-dir              Disable the cache.
+  --disable-pip-version-check
+                              Don&#39;t periodically check PyPI to determine
+                              whether a new version of pip is available for
+                              download. Implied with --no-index.
+</code></pre>
+<p>As you can see, <code>pip</code> provides an install command to install packages. You can run it to install the <code>numpy</code> package. Run the following <code>pip install numpy</code> from a command prompt.</p>
+<pre><code>user@host:~$ pip install numpy
+</code></pre>
+<p>As you can see, there are plenty of other useful commands available with <code>pip</code> but we will only explore a few of them here. You can find out more comprehensive information about <code>pip</code> in the <a href="https://pip.pypa.io/en/stable/" target="_blank">docs</a>.</p>
+<h2 is-upgraded>Package versions and the requirements file</h2>
+<p>If you&#39;ve downloaded a Python project that someone else has written or you&#39;ve explored some of the Python repos on Github, you might have noticed a <code>requirements.txt</code> file in the root directory. This is used to tell anyone running the code (including the original developer) which versions of installed packages were used to develop and test the application, so there are no surprises when deploying to production.</p>
+<p>Let&#39;s use an example. Say your project is using <code>numpy</code> to calculate the standard deviation of a dataset. The latest version of <code>numpy</code> available at the time of writing is <code>v1.18.3</code> so we use that to create our project.</p>
+<p>Sometime later, <code>numpy</code> releases a new version which changes the way the standard deviation is called - the output array which used to be optional is now required in the method call. Your code would no longer work with a fresh install of <code>numpy</code>, and your project would break through no fault of your own.</p>
+<p>With a package as popular as <code>numpy</code>, this would almost never happen and developers would be given plenty of notice if there was going to be such a drastic change. But the point is that it <em>could</em>, it certainly could with a less well-known or obscure package you&#39;ve found, and you don&#39;t want to have to rely on package maintainers to make their packages backwards compatible.</p>
+<aside class="special"><p>Something like this is happening, and has been happening for years, with Python 2. Python 2 was officially sunset on January 1, 2020, which means that the developers have not been improving it since that day, even if someone has found a security vulnerability. <em>Python 3 was released in 2008.<br><br></em> This means that Python has given 12 years to developers to move away from Python 2 code but many packages still depend on it. You may have already noticed a break in compatibility if you&#39;ve tried to use a <code>print</code> statement. In Python 2, you could write <code>print &#34;Hello world!&#34;</code> which was perfectly valid syntax. In Python 3, this throws an error, and in fact you need <code>print(&#34;Hello world!&#34;)</code> instead. <br><br> This course doesn&#39;t cover Python 2 at all, but it&#39;s important to know of its existence, and the headaches it causes in assuring dependencies are compatible.</p>
+</aside>
+<p>Let&#39;s get back to our <code>requirements.txt</code> file. If you look at the output of <code>pip help</code>, you can see the line</p>
+<pre><code>freeze      Output installed packages in requirements format.
+</code></pre>
+<p>which is a very useful command to generate a <code>requirements.txt</code> file. With our <code>numpy</code> example, running the command</p>
+<pre><code>user@host:~$ pip freeze &gt; requirements.txt
+</code></pre>
+<p>should produce an output in a text file called <code>requirements.txt</code> that looks like:</p>
+<pre><code>numpy==1.18.3
+</code></pre>
+<p>When you want to replicate the environment in another system, you can run <code>pip install</code> specifying the requirements file using the <code>-r</code> switch:</p>
+<pre><code>user@host:~$ pip install -r requirements.txt
+</code></pre>
+<p>This will install the versions of each of the packages specified in the <code>requirements.txt</code> file, which should save your code from breaking on package version updates.</p>
+<aside class="special"><p><strong>A note on security<br><br></strong> When using a requirements file, more often than not you&#39;ll be fine to just use the versions specified by the developer. However, a package might have been updated because of a <em>security vulnerability</em>, in which case you want to check out what the issue is and act accordingly. <br><br> If you upload your code to Github, your code can be <a href="https://help.github.com/en/github/managing-security-vulnerabilities/about-security-alerts-for-vulnerable-dependencies" target="_blank">automatically checked</a> for security vulnerabilities in your dependencies and given a rating from <em>low</em> to <em>critical</em>. Sometimes, Github can automatically fix the vulnerability too, by updating to a newer package.<br><br> Github won&#39;t do this if it thinks the update will break your code, and it will tell you you&#39;ll have to update it manually. <br><br> It&#39;s up to you whether you do this, or whether you&#39;re happy with the vulnerability. If you do decide to update a dependency, you&#39;ll want to make sure your code is appropriately <a href="https://scott3142.uk/python-programming/codelabs/part-6/index.html?index=..%2F..index#2" target="_blank">tested</a> so that nothing unexpected happens. Github can help here too with its <a href="https://github.com/features/actions" target="_blank">Github Actions</a>, an example of which you&#39;ll see in the first video of the course. <br><br> You can read more about Github Actions and similar workflows by reading about <a href="https://www.redhat.com/en/topics/devops/what-is-ci-cd" target="_blank">CI/CD</a> which stands for Continuous Integration/Continuous Deployment. This is covered in courses on <a href="https://cloud.google.com/devops" target="_blank">DevOps</a>.</p>
+</aside>
+<h2 is-upgraded>What if I need different versions for different projects?</h2>
+<p>Cue virtual environments...</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Python virtual environments" duration="10">
+        <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>What virtual environments are</li>
+<li>How to manage virtual environments and package dependencies</li>
+</ul>
+<p>The following is adapted from <a href="https://docs.python.org/3/tutorial/venv.html" target="_blank">the Python documentation</a>.</p>
+<p>As we&#39;ve seen, Python applications will often use packages and modules that don&#39;t come as part of the standard library. These are usually installed via <code>pip</code>. Applications will also sometimes need a specific version of a library, because the application may require that a particular bug has been fixed or the application may be written using an obsolete version of the library&#39;s interface.</p>
+<p>This means it may not be possible for one Python installation to meet the requirements of every application. If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.</p>
+<p>The solution for this problem is to create a virtual environment, a self-contained directory tree that contains a Python installation for a particular version of Python, plus a number of additional packages.</p>
+<p>Different applications can then use different virtual environments. To resolve the earlier example of conflicting requirements, application A can have its own virtual environment with version 1.0 installed while application B has another virtual environment with version 2.0. If application B requires a library be upgraded to version 3.0, this will not affect application A&#39;s environment.</p>
+<p>The module used to create and manage virtual environments is called venv. venv will usually install the most recent version of Python that you have available. If you have multiple versions of Python on your system, you can select a specific Python version by running python3 or whichever version you want.</p>
+<p>To create a virtual environment, decide upon a directory where you want to place it, and run the venv module as a script with the directory path:</p>
+<pre><code>user@host:~$ python3 -m venv my-environment
+</code></pre>
+<p>Once you&#39;ve created a virtual environment, you may activate it.</p>
+<p>On Windows, run:</p>
+<pre><code>PS C:\Users\User&gt; my-environment\Scripts\activate.bat
+</code></pre>
+<p>On Linux or MacOS, run:</p>
+<pre><code>user@host:~$ source my-environment/bin/activate
+</code></pre>
+<p>Activating the virtual environment will change your shell&#39;s prompt to show what virtual environment you&#39;re using, and modify the environment so that running python will get you that particular version and installation of Python.</p>
+<p>It is important to enter a virtual environment whenever you are testing Python code. It makes sure the packages are correctly defined and eliminates a lot of errors.</p>
+<p>Any packages you install via <code>pip</code> inside your virtual environment will not persist outside of it. For example, if you have a project directory called <code>mydir</code> and a virtual environment called <code>myenv</code>, your command prompt should look like this once you have activated the environment:</p>
+<pre><code>(myenv) user@host:~/mydir$
+</code></pre>
+<p>This shows that you are in the virtual environment <code>myenv</code>. Running</p>
+<pre><code>(myenv) user@host:~/mydir$ pip install numpy
+</code></pre>
+<p>will install <code>numpy</code> inside your virtual environment. Let&#39;s make a <code>main.py</code> file, import <code>numpy</code> and print the version.</p>
+<h3 is-upgraded>main.py</h3>
+<pre><code>import numpy as np
+print(np.__version__)
+</code></pre>
+<p>Running <code>python3 main.py</code> in your command prompt should output</p>
+<pre><code>1.18.3
+</code></pre>
+<p>or whichever version is latest. Now let&#39;s make a new virtual environment and try to run the program again.</p>
+<p>You can leave a virtual environment with the</p>
+<pre><code>(myenv) user@host:~/mydir$ deactivate
+</code></pre>
+<p>command. Run</p>
+<pre><code>user@host:~/mydir$ python3 -m venv my-new-env
+user@host:~$ source my-new-env/bin/activate
+</code></pre>
+<p>so that your command prompt looks like:</p>
+<pre><code>(my-new-env) user@host:~/mydir$
+</code></pre>
+<p>and run</p>
+<pre><code>(my-new-env) user@host:~/mydir$ python3 main.py
+</code></pre>
+<p>again. This time, you should get</p>
+<pre><code>Traceback (most recent call last):
+  File &#34;main.py&#34;, line 1, in &lt;module&gt;
+    import numpy as np
+ModuleNotFoundError: No module named &#39;numpy&#39;
+</code></pre>
+<p>which shows that <code>numpy</code> is not installed in this virtual environment.</p>
+<p>You can check which packages are installed at any time using the <code>pip freeze</code> command.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Version control with git" duration="30">
+        <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>What git is</li>
+<li>How to create repositories and make commits</li>
+<li>How to work with Github, including cloning, pushing and pulling repositories</li>
+<li>How open source licenses work</li>
+</ul>
+<h2 is-upgraded>What is Git?</h2>
+<p>The following is adapted from <a href="https://projects.raspberrypi.org/en/projects/getting-started-with-git" target="_blank">these Raspberry Pi foundation resources</a>.</p>
+<p class="image-container"><img alt="git-logo" src="img/a541254233c49153.png"></p>
+<p>Git is a version control system (VCS) for tracking changes to files and coordinating changes between multiple people who are all working on the same code base.</p>
+<p>One way to think about Git is to imagine a magical school bag. You can pull books out of your bag and do some work whenever you like. Once you&#39;ve finished your homework, you can put the books back into your school bag, and the bag remembers what changes you made to all the books inside it.</p>
+<p>What&#39;s really clever is that this school bag can be synchronised with another magical school bag that lives in the clouds. Whenever you like, you can tell the bag to copy the contents of all the books to the sky-bag. If you lose your own school bag, you don&#39;t have to worry, as you can just get a new one and grab all the books and writing from the sky-bag.</p>
+<p>That&#39;s not all though. All your friends at school also have magical school bags. They also keep their bags synchronised with the sky-bag. This means that you and your friends can all work on the homework together. If a friend has a better answer to a science question than you do, you can copy their answer from the sky-bag to your book.</p>
+<p>It gets even better than that: your teacher also has a magical school bag. When she wants to check the homework, she just copies all the books from the sky-bag to her bag. She can then check through the answers from the whole class in one go. If she spots a mistake, she can write a comment in the margin of the book, and then all the magical bags from the whole class will receive the comment. Only one person in the class needs to correct the mistake though, and then everyone in the class immediately has the correct answer.</p>
+<h2 is-upgraded>Installing Git</h2>
+<p>If you&#39;re on Linux, and you don&#39;t have Git installed, then you can just use your package manager to grab the software. Something like this should work:</p>
+<pre><code>user@host:~$ sudo apt install git
+</code></pre>
+<p>If you&#39;re on other operating systems, you can check out the guides below:</p>
+<ul>
+<li><a href="https://www.atlassian.com/git/tutorials/install-git#mac-os-x" target="_blank">Installing git on Mac OS</a></li>
+<li><a href="https://www.atlassian.com/git/tutorials/install-git#windows" target="_blank">Installing git on Windows</a></li>
+</ul>
+<h2 is-upgraded>Setting up Git</h2>
+<p>You&#39;re going to be working in a terminal window for the duration of this resource, so open it up by clicking on the icon on the desktop, or by pressing <code>Ctrl + Alt + T</code> on your keyboard.</p>
+<p>The first thing to do is to tell Git who you are. This is important, as Git can be used collaboratively by lots of people, so it needs to know who made changes to which files. You can use your own username and email address, unless you are in fact <a href="https://en.wikipedia.org/wiki/Grace_Hopper" target="_blank">Grace Hopper</a>.</p>
+<pre><code>user@host:~$ git config --global user.name &#34;Grace Hopper&#34;
+user@host:~$ git config --global user.email &#34;g.hopper@harvard.edu&#34;
+</code></pre>
+<p>Next you need to tell Git which text editor you want to use. If you don&#39;t have any particularly strong feelings about text editors, then you can just type:</p>
+<pre><code>user@host:~$ git config --global core.editor nano
+</code></pre>
+<h2 is-upgraded>Creating your first repo</h2>
+<p>If you want to start a new project which uses git, you&#39;ll want a directory on your computer for all your files to sit in, so the first thing to do is create that directory.</p>
+<p>In the terminal, you can use the <code>mkdir</code> (make directory) command to create a new directory.</p>
+<pre><code>user@host:~$ mkdir my_project
+</code></pre>
+<p>Now you want to go into that directory. You can use the <code>cd</code> (change directory) command to do this.</p>
+<pre><code>user@host:~$ cd my_project
+</code></pre>
+<p>Next, you can create a file that will tell people what the project is about. You can use any text editor to do this, such as Notepad or nano. Create a file called <code>README.md</code>. The <code>.md</code> extension stands for <strong>Markdown</strong>, which is a markup language. You can learn more about Markdown <a href="https://daringfireball.net/projects/markdown/" target="_blank">here</a>.</p>
+<p>You can now give the file a title and write a short explanation of what your project is about.</p>
+<pre><code># This is my description
+I am making a really cool Python project
+</code></pre>
+<p>If you&#39;ve used nano, pressing <code>Ctrl + X</code> will cause a save prompt to appear. You can type <code>Y</code> to save and then hit <code>Enter</code> to close.</p>
+<p>Your file should have been created and will now be sitting in your directory. You can type <code>ls</code> in the terminal or <code>dir</code> if you are using Windows, to see a list of files.</p>
+<pre><code>user@host:~$ ls
+</code></pre>
+<p>At the moment, the directory is just like any other directory on your system. You now need to make the magical school bag part. This is known as a <strong>Git repository</strong>, and it takes the form of a hidden directory that keeps track of all the changes to the working directory. Type the following to create the repository, which from now on will just be called a <strong>repo</strong>:</p>
+<pre><code>user@host:~$ git init
+</code></pre>
+<p>If you type <code>ls</code> again, nothing will appear to have changed. You can use <code>ls -a</code> to see all the hidden files and directories, though. If you are using Windows then type <code>dir /A</code> instead.</p>
+<pre><code>ls -a
+</code></pre>
+<p>You should now see something like this in your terminal window:</p>
+<pre><code>.  ..  .git  README.md
+</code></pre>
+<p>That <code>.git</code> directory is the <strong>repo skeleton</strong>. You can have a look inside it by typing the following. (Remember if you are using Windows it would be <code>dir /A .git</code>.)</p>
+<pre><code>user@host:~$ ls -a .git
+</code></pre>
+<p>This should bring up something like:</p>
+<pre><code>branches  config  description  HEAD  hooks  info  objects  refs
+</code></pre>
+<p>You don&#39;t really need to worry about this directory at all now. Just know that it is there and that it is tracking all the changes to the parent directory <code>my_project</code>.</p>
+<h2 is-upgraded>Adding files</h2>
+<p>So you now have the repo initialised, but you haven&#39;t yet added anything to it. You need to tell Git that you want to add the <code>README.md</code> file to the repo. To do this you can simply type:</p>
+<pre><code>user@host:~$ git add README.md
+</code></pre>
+<p>Sometime it&#39;s easier to just add everything to the repo though, rather than adding individual files. To do this you can type:</p>
+<pre><code>user@host:~$ git add --all
+</code></pre>
+<p>Now Git knows it needs to keep track of all the changes that happen to the <code>README.md</code> file. You can have a look at the status of your repo at any time by typing the following:</p>
+<pre><code>user@host:~$ git status
+</code></pre>
+<p>You should see something like this</p>
+<pre><code>On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use &#34;git rm --cached &lt;file&gt;...&#34; to unstage)
+
+	new file:   README.md
+</code></pre>
+<p>The above response is telling you that the <code>README.md</code> file has not yet been <strong>committed</strong>. This means that although Git knows about the file, it doesn&#39;t yet have any of the file&#39;s contents stored. The simplest way to do a commit is by typing:</p>
+<pre><code>user@host:~$ git commit -m &#34;adds README.md&#34;
+</code></pre>
+<p>This commits all changes you have made in the directory to the Git repo, and adds a message saying what you did. The message can be anything really, but it&#39;s best to keep it fairly short yet descriptive of what you changed.</p>
+<h2 is-upgraded>Adding more files and travelling in time</h2>
+<p>Now that you have set up your repo, it&#39;s time to get on with the project. Here, two new files have been created: <code>person.py</code> and <code>data.csv</code>. Typing <code>ls</code> reveals those files.</p>
+<pre><code>README.md  data.csv  person.py
+</code></pre>
+<p>The new files need to be added to the Git repo and then committed.</p>
+<pre><code>user@host:~$ git add --all
+user@host:~$ git commit -am &#39;adds data csv and python program&#39;
+</code></pre>
+<p>Then you carry on working on your code for a bit. Every time you make a significant change to the file, you can perform a new commit.</p>
+<pre><code>user@host:~$ git commit -am &#39;finishes get_age method&#39;
+</code></pre>
+<p>Now imagine that you&#39;ve made a horrible mistake. You&#39;ve been working for a while and you&#39;ve deleted your <code>get_age()</code> method, and then performed a commit. With Git, it&#39;s easy to go back in time and restore an earlier version of any of your files. Let&#39;s first look at the commit history of the file.</p>
+<pre><code>user@host:~$ git log person.py
+</code></pre>
+<p>This produces something like this:</p>
+<pre><code>commit 12c4c693e95438ceadcf3f4fb39c83ce1ade712f
+Author: Grace Hopper &lt;g.hopper@harvard.edu&gt;
+Date:   Fri Mar 3 20:27:17 2017 +0000
+
+	deletes get_age method
+
+commit 5fd772a292c019a7cf3012b1156685280d4a7d2d
+Author: Grace Hopper &lt;g.hopper@harvard.edu&gt;
+Date:   Fri Mar 3 20:24:52 2017 +0000
+
+	finishes get_age method
+
+commit 127545c19794b5fe869dd22d0cf57bf8820c5794
+Author: Grace Hopper &lt;g.hopper@harvard.edu&gt;
+Date:   Fri Mar 3 20:20:18 2017 +0000
+
+	adds data csv and python program
+</code></pre>
+<p>You can see that in that last commit (the one at the top) was where the function was deleted. Luckily the commit message has made it easy to see what was done, which is why commit messages are important. However, typing <code>git log -p person.py</code> would have actually shown the changed contents of the file, if the commit message wasn&#39;t clear enough.</p>
+<p>You can now get back the version of the file from the commit before. The long string of characters after the word ‘commit&#39; is called a hash, and is used by Git to keep track of files. In this case, the commit that needs to be restored is <code>5fd772a292c019a7cf3012b1156685280d4a7d2d</code>. So typing the following will get the file back to the way it was:</p>
+<pre><code>user@host:~$ git checkout 5fd772a292c019a7cf3012b1156685280d4a7d2d person.py
+</code></pre>
+<p>The file will be restored and you can now commit this change.</p>
+<pre><code>user@host:~$ git commit -am &#39;restores get_age method&#39;
+</code></pre>
+<h2 is-upgraded>Making major changes</h2>
+<p>Imagine you&#39;re talking to your friend about your amazing project, and they have a really cool idea for some changes you could make to improve it. The changes are quite large, though, and you&#39;re worried that if you make them, you might break the project. You could make a copy of the directory and start working on this copy, but to keep using Git you&#39;d have to make an entirely new repo. This could all get quite confusing. Luckily, Git has a feature called <strong>branches</strong>; using a branch allows you to make copies without losing or altering your original work.</p>
+<p>First, you can have a look at your repo&#39;s current status.</p>
+<pre><code>user@host:~$ git status
+</code></pre>
+<p>This should show something like this:</p>
+<pre><code>On branch master
+nothing to commit, working directory clean
+</code></pre>
+<p>Now you can make a new branch in the repo, which lets you work on your amazing new adaption.</p>
+<pre><code>user@host:~$ git checkout -b new-version
+</code></pre>
+<p>Now <code>git status</code> will show you something like this:</p>
+<pre><code>On branch new-version
+nothing to commit, working directory clean
+</code></pre>
+<p>This tells you that you are on the <code>new-version</code> branch. To view all the branches in your repo, you can type <code>git branch</code> which will show something like this:</p>
+<pre><code>* new-version
+	master
+</code></pre>
+<p>You can now work on the new-version branch without altering your master branch. If you try out the new approach and find it doesn&#39;t work, you can simply delete the branch using <code>git branch -D new-version</code>. However, if it all works well, you can merge the branch back into your master branch.</p>
+<p>First, you&#39;ll need to make sure all your changes are committed and then switch back to the master branch.</p>
+<pre><code>user@host:~$ git checkout master
+</code></pre>
+<p>Then you can merge the version into the master branch</p>
+<pre><code>user@host:~$ git merge new-version
+</code></pre>
+<p><strong>Warning</strong>: you can cause problems with a merge if you&#39;re working on two branches at the same time, as Git won&#39;t know which changes are the ones you want to keep. For this reason, it&#39;s best to just work on one branch at a time.</p>
+<h2 is-upgraded>Working in the cloud</h2>
+<p>Now that you know how to do the basics in Git, it&#39;s time to learn how to use it to its full potential: use it to share your work and collaborate with others.</p>
+<p>There are lots of services that will host your Git repo for you, free of charge. <a href="https://about.gitlab.com/" target="_blank">GitLab</a> is one such service and <a href="https://bitbucket.org/" target="_blank">BitBucket</a> is another. In this resource, you are going to be using <a href="https://github.com/" target="_blank">GitHub</a>, which is one of the more popular services.</p>
+<p>The first thing to do is to register for an account on <a href="https://github.com/join?source=header-home" target="_blank">GitHub</a>, and just choose the free plan.</p>
+<p>Now that you have an account, you can create a <code>my-project</code> repo on GitHub. Find the <strong>New repository</strong> button and click it.</p>
+<p>Give the repo a name and a description and click on the <strong>Create repository</strong> button</p>
+<p>This should then bring up a page of instructions.</p>
+<p>As you already have a repo ready to push to GitHub, then all you need to do is make sure you are in your project directory and type:</p>
+<pre><code>user@host:~$ git remote add origin git@github.com:GraceHopper/my-project.git
+</code></pre>
+<p>and then</p>
+<pre><code>user@host:~$ git push -u origin master
+</code></pre>
+<p>If you look on GitHub, you should now be able to see your repo, along with the displayed <code>README.md</code> file that you wrote.</p>
+<p>Any time you make changes to your project, and you want to push them up to GitHub, you can just type:</p>
+<pre><code>user@host:~$ git push origin master
+</code></pre>
+<p>If you are working on a different branch you would type:</p>
+<pre><code>user@host:~$ git push origin &lt;branch-name&gt;
+</code></pre>
+<h2 is-upgraded>Collaborative working</h2>
+<p>The true power of services like GitHub becomes apparent when you start working with other people. GitHub lets other people make their own copies of your projects, or you to make copies of theirs. Either of you can then make improvements to the project and then push the improvements up to GitHub for everyone to share.</p>
+<p>This resource is itself a GitHub repo. You can find it at <a href="https://github.com/Scott3142/python-programming" target="_blank">https://github.com/Scott3142/python-programming</a>. That means that if you found a mistake in the resource, or if you just wanted to make some improvements, you can. There are two main ways to get involved with other people&#39;s projects: <strong>issues</strong> and <strong>pull requests</strong>.</p>
+<h2 is-upgraded>GitHub issues</h2>
+<p>You might spot a mistake in some of the code throughout this course, and that&#39;s where you can help out. Take this bit of code for example:</p>
+<pre><code>prnt(&#34;Hello World!&#34;)
+</code></pre>
+<p>Let&#39;s see how you could help fix this error:</p>
+<ul>
+<li>Head on over to <a href="https://github.com/Scott3142/python-programming" target="_blank">https://github.com/Scott3142/python-programming</a>, and make sure you are logged in.</li>
+<li>Now, you want to find the <strong>Issues</strong> tab.</li>
+<li>You can now create a new issue, and give a description. the best descriptions are really descriptive, and make life as easy as possible for the maintainer.</li>
+<li>Once that&#39;s completed, the maintainers of the repo (me) will be able to reply to you, and close the issue once it&#39;s fixed.</li>
+</ul>
+<h2 is-upgraded>Pull requests</h2>
+<p>Issues are great, but if you want to help out even more, then project maintainers are usually very happy for you to fix or improve projects yourself. To do this, you need to make your own copy of the repo so that you can work on it.</p>
+<p>On the projects main page, find the <strong>Fork</strong> button, and click it.</p>
+<p>You will now have a copy of the repo. You should see a <strong>Clone or download</strong> button. Clicking this will reveal the uniform resource identifier (URI) of the repo. Now, using the terminal, you can clone the repo to your computer with <code>git clone</code>:</p>
+<pre><code>user@host:~$ git clone https://github.com/HelpfulUser/python-programming.git
+</code></pre>
+<p>All the files and directories will now be on your computer. Go ahead and make the changes you want, then commit them and push them back up to GitHub, just like you would normally do. Here your commit message is particularly important, as it will explain the changes you have made to the resource&#39;s original owner.</p>
+<ul>
+<li>You can now head back over to GitHub. Find the button that says <strong>New pull request</strong>.</li>
+<li>Click the button and then click on the <strong>Create pull request</strong> button.</li>
+<li>Your commit message will be there, but you can change it and even add a more detailed description if you like.</li>
+<li>Once you&#39;re happy, click the <strong>Create pull request</strong> button. The maintainer of the repo will then be able to see your pull request. They can then choose to merge it into their repo, or close it.</li>
+</ul>
+<h2 is-upgraded>A note on licensing and open-source</h2>
+<p>From <a href="https://en.wikipedia.org/wiki/Open_source" target="_blank">Wikipeida</a>:</p>
+<p><em>Open source products include permission to use the source code, design documents, or content of the product. It most commonly refers to the open-source model, in which open-source software or other products are released under an open-source license as part of the open-source-software movement.</em></p>
+<p>I firmly consider myself part of the <a href="https://en.wikipedia.org/wiki/Open-source-software_movement" target="_blank">open-source-software movement</a>, which is why the material in this course is, and always will be, freely available to access, edit and share. In fact, this course wouldn&#39;t even exist without other open-source projects. It&#39;s heavily adapted from this <a href="https://java-programming.mooc.fi/" target="_blank">Java programming</a> course and the website is built from an adapted <a href="https://github.com/googlecodelabs/tools" target="_blank">open-source project</a> developed by Google.</p>
+<p>Whilst a vast number of projects are open-source, some are not and even within the open-source field there are varying <strong>licenses</strong> which define how you are allowed to share and adapt the code. Some allow commercial adaptations, some don&#39;t, and most require you to credit the original author.</p>
+<p><em>Whether it specifically says to or not, you should always do this.</em></p>
+<p>It is considered to be highly distasteful to pass something off as your own work when someone else has initially created it. The ongoing attributions for content producers is a huge part of the open-source movement so it is well worth learning about.</p>
+<p>The Linux Foundation has <a href="https://java-programming.mooc.fi/" target="_blank">this free course</a> available to explain the fundamentals of open source software and licensing.</p>
+<p>Be aware that these licenses constitute legal agreements in most cases, and most online tutorials are not a substitute for legal advice. You should always read and understand the license agreements before using any code, open source or otherwise.</p>
+<h3 is-upgraded>Licenses on Github</h3>
+<p>Github has a handy built-in feature that allows you to read licenses from the web interface, as long as your code has a <code>LICENSE.md</code> file. Let&#39;s look at an example using the <a href="https://github.com/googlecodelabs/tools" target="_blank">Google Codelabs</a> repo that this site is built from.</p>
+<p>When you open the repo, you should see the following:</p>
+<p class="image-container"><img alt="logo" src="img/c865e427e1cc54a4.png"></p>
+<p>Towards the top right hand side of that screen, you should see the words <code>Apache-2.0</code>. Click that. You&#39;ll see the license itself (usually legal jargon) following this handy description:</p>
+<p class="image-container"><img alt="logo" src="img/e7aef663f72e5b0d.png"></p>
+<p>This tells you exactly what you are allowed to do with these resources and gives a link to <a href="https://help.github.com/articles/licensing-a-repository/#disclaimer" target="_blank">learn more about repository licenses</a>.</p>
+<p>For example, with the <a href="https://github.com/googlecodelabs/tools/" target="_blank">Google codelabs</a> resource, we are allowed:</p>
+<ul>
+<li>Commercial use</li>
+<li>Modification</li>
+<li>Distribution</li>
+<li>Patent use</li>
+<li>Private use</li>
+</ul>
+<p>but not afforded:</p>
+<ul>
+<li>Trademark use</li>
+<li>Liability</li>
+<li>Warranty</li>
+</ul>
+<p>You can find out more <a href="https://help.github.com/articles/licensing-a-repository/#disclaimer" target="_blank">here</a>.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Summary" duration="0">
+        <p>In this part you learned about the setting your computer up to get ready for some Python programming, how to submit exercises on this course and how the command line works. We&#39;ve also explored version control with git and how to work with remote repositories via Github. In the next section we&#39;ll actually do some real Python coding, and start to build on the foundations to create functioning projects.</p>
+<p>Every part of this course comes with the following learning outcome summary. All answers will be anonymous and it is just for feedback so I can continue to update this material.</p>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdeOZySX5e-0odSsE2W8kNOp_b7OwbqjAcC4_aAJzWCUgVrbg/viewform?embedded=true" width="560" height="2650" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="../../elements/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

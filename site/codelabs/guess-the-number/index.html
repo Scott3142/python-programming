@@ -29,14 +29,14 @@
     
       <google-codelab-step label="Guessing the computer&#39;s answer" duration="30">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul class="checklist">
+<ul>
 <li>Create a simple guessing game in Python.</li>
 <li>Get to grips with taking user input, loops and if statements.</li>
 </ul>
 <p>In this short project, we&#39;ll be exploring how to create a <em>guess the random number</em> game. We&#39;ll start with guessing a number that the computer has chosen and then move on to having the computer guess a number that the user has chosen. This example should give you some practise working with loops and conditional statements and revise how to take and process user input.</p>
 <h2 is-upgraded>Working out the algorithm</h2>
 <p>It&#39;s always useful when starting out creating a program or an app to write down or draw the <em>flow</em> of the program, sometimes in something called <a href="https://en.wikipedia.org/wiki/Pseudocode" target="_blank">pseudocode</a>. We won&#39;t worry too much about the finer points of psuedocode here but we&#39;ll just sketch out the flow of what we want the program to do below:</p>
-<pre><code>computer chooses random number
+<pre><code language="language-plaintext" class="language-plaintext">computer chooses random number
 
 loop until we get it right
     computer asks us to guess
@@ -57,16 +57,16 @@ loop until we get it right
 <h2 is-upgraded>Improving the program</h2>
 <p>There are two natural places where we could add improvements to this program to make life a little bit easier for the guesser. At the moment, there is no limit on the random number that the computer guesses and there is no way of knowing if we were close or not with our guess. We could end up guessing forever and not getting the answer right! This doesn&#39;t make the game much fun, so let&#39;s look at the code again and see how we can change it.</p>
 <p>We can change the first line so that a range is specified for the random number choice. You could even implement a levelling system here so that the range gets larger as users guess correctly more and more times.</p>
-<pre><code>computer chooses random number between 1 and 10
+<pre><code language="language-plaintext" class="language-plaintext">computer chooses random number between 1 and 10
 </code></pre>
 <p>We can edit the conditional statements in the loop to deal with the second problem by adding print statements which tell us if our guess was too high or too low. This way, we&#39;re always getting closer to the answer on every guess.</p>
-<pre><code>if the number is too low
+<pre><code language="language-plaintext" class="language-plaintext">if the number is too low
     computer says higher
 if the number is too high
     computer says lower
 </code></pre>
 <p>In the next exercise you will implement this program yourself in Python.</p>
-<aside class="special"><p><strong>Exercise - Guess the number<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/_rKYt4oC" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Guess the number <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/_rKYt4oC" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 
 
@@ -74,13 +74,13 @@ if the number is too high
     
       <google-codelab-step label="Computer guesses user&#39;s answer" duration="30">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul class="checklist">
+<ul>
 <li>Create a simple guessing game in Python.</li>
 <li>Develop algorithmic thinking and optimisation skills.</li>
 </ul>
 <p>This time around we&#39;ll be thinking of the number as a user and asking the computer to try and guess it. We&#39;ll follow exactly the same rules as before, but there are some added complexities in this version that we&#39;ll see as we go through it.</p>
 <p>Let&#39;s look at the structure of the program, simply adapted from the previous version:</p>
-<pre><code>user thinks of random number (no coding here!)
+<pre><code language="language-plaintext" class="language-plaintext">user thinks of random number (no coding here!)
 
 loop until the computer gets it right
     computer guesses random number
@@ -103,7 +103,7 @@ loop until the computer gets it right
 <p><em>Hint: You may want to use a list to store the guesses.</em></p>
 <aside class="special"><p>As a human, we might work out that there are some tricks to this game that make winning much easier. For example, if our first guess is exactly halfway between the two endpoints, we have the best chance of getting it right in the least number of moves possible. Can you implement this functionality? <br><br> Can you program the functionality that tracks how many guesses the computer took to get the right answer and see if it beats a user on average?</p>
 </aside>
-<aside class="special"><p><strong>Exercise - Computer guess the number<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/DBA_EnCh" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Computer guess the number <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/DBA_EnCh" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 
 
@@ -111,14 +111,14 @@ loop until the computer gets it right
     
       <google-codelab-step label="Wrapping it all up in a web app" duration="30">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul class="checklist">
+<ul>
 <li>Getting started with web apps in Python.</li>
 <li>How to dynamically update a web app given user input.</li>
 </ul>
 <p>The final part of this exercise will explore how we can build the <em>guess a number</em> functionality into a web app using Python&#39;s Flask library. We won&#39;t worry about the mechanisms of creating the pages and we won&#39;t bother with any HTML, CSS or JavaScript. The exercise files will contain all the relevant files you need to get going and just implement the Python part.</p>
 <h2 is-upgraded>Getting started with Flask</h2>
 <p>The most basic task we can achieve in Flask is the age-old &#34;<em>Hello World!</em>&#34; application. Here&#39;s how it looks:</p>
-<pre><code>from flask import Flask
+<pre><code language="language-python" class="language-python">from flask import Flask
 app = Flask(__name__)
 
 @app.route(&#39;/&#39;)
@@ -129,16 +129,16 @@ if __name__ == &#39;__main__&#39;:
     app.run()
 </code></pre>
 <p>This code outputs &#34;Hello, World!&#34; in a web browser on your computer&#39;s localhost port 5000 (i.e. at <a href="http://localhost:5000" target="_blank">http://localhost:5000</a>) when run with the <code>python3 app.py</code> command and the Flask library installed.</p>
-<aside class="special"><p>In order to do this on your own machine, you&#39;ll have to: <br><br> - <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html" target="_blank">Have Python installed</a><br> - <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#3" target="_blank">Activate a virtual environment</a><br> - <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#2" target="_blank">Install Flask inside your virtual environment using pip</a></p>
+<aside class="special"><p>In order to do this on your own machine, you&#39;ll have to: <br><br> - <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html" target="_blank">Have Python installed</a> <br> - <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#3" target="_blank">Activate a virtual environment</a> <br> - <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#2" target="_blank">Install Flask inside your virtual environment using pip</a></p>
 </aside>
 <p>You can set up a virtual environment and install <code>flask</code> using the following commands in a terminal:</p>
-<pre><code>user@host:~$ virtualenv flask_env
+<pre><code language="language-plaintext" class="language-plaintext">user@host:~$ virtualenv flask_env
 user@host:~$ source flask_env/bin/activate
 user@host:~$ pip install flask
 user@host:~$ python3 app.py
 </code></pre>
 <p>Once you have done that, clone the exercise repo below and follow the instructions in the README.</p>
-<aside class="special"><p><strong>Exercise - Guessing the number in a web app<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/ku4AAUEN" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Guessing the number in a web app <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/ku4AAUEN" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 
 

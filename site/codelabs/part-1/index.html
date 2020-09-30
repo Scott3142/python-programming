@@ -29,27 +29,27 @@
     
       <google-codelab-step label="Printing" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul class="checklist">
+<ul>
 <li>Learn to write a program that prints text.</li>
 <li>Become familiar with executing programs.</li>
 <li>Know what the term &#34;parameter&#34; means.</li>
 </ul>
 <p>As you&#39;ve seen in the <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html" target="_blank">Getting Started</a> section of this course, the print command <code>print(&#34;Hello world&#34;)</code> prints the text &#34;Hello world&#34;.</p>
-<pre><code>print(&#34;Hello world!&#34;)
+<pre><code language="language-python" class="language-python">print(&#34;Hello world!&#34;)
 </code></pre>
 <aside class="warning"><p>Hello world!</p>
 </aside>
 <p>In this material, text boxes like the one above demonstrate an output produced by the example code. Accordingly, the above program would produce the print output &#34;Hello World!&#34;. You can try any of these examples in the exercise template named &#34;sandbox&#34;, which you will find in the Github repository you cloned in the <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html" target="_blank">first part</a>.</p>
-<aside class="special"><p><strong>Note:<br><br></strong> The rest of this course assumes from this point on that you can: <br><br> - <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html" target="_blank">Run Python files in the terminal...</a><br> - <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#3" target="_blank">...preferably in a virtual environment</a><br> - <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#4" target="_blank">Clone a repository from Github</a><br> - <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#4" target="_blank">Push your completed repository back to Github</a>. <br><br> If you haven&#39;t <em>at least</em> done this with the <a href="https://github.com/den01-python-programming/sandbox.git" target="_blank">sandbox exercise</a> yet, please make sure you do this <em>now</em> before continuing.</p>
+<aside class="special"><p><strong>Note: <br><br></strong> The rest of this course assumes from this point on that you can: <br><br> - <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html" target="_blank">Run Python files in the terminal...</a> <br> - <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#3" target="_blank">...preferably in a virtual environment</a> <br> - <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#4" target="_blank">Clone a repository from Github</a> <br> - <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#4" target="_blank">Push your completed repository back to Github</a>. <br><br> If you haven&#39;t <em>at least</em> done this with the <a href="https://github.com/den01-python-programming/sandbox.git" target="_blank">sandbox exercise</a> yet, please make sure you do this <em>now</em> before continuing.</p>
 </aside>
 <p>You can print any text you want with <code>print</code>, as long as you use the command <code>print(&#34;arbitrary text&#34;)</code>. The command below will print the text &#34;Hello there!&#34;.</p>
-<pre><code>print(&#34;Hello there!&#34;)
+<pre><code language="language-python" class="language-python">print(&#34;Hello there!&#34;)
 </code></pre>
 <aside class="warning"><p>Hello there!</p>
 </aside>
 <h2 is-upgraded>Program Boilerplate</h2>
 <p>In Python, our programs will include some boilerplate code to function. This boilerplate, an example of which is shown below, for example tells the computer what your function is called. Below, the name of the function is <code>main</code>.</p>
-<pre><code>def main():
+<pre><code language="language-python" class="language-python">def main():
     print(&#34;Text to be printed&#34;)
 
 if __name__ == &#39;__main__&#39;:
@@ -59,10 +59,10 @@ if __name__ == &#39;__main__&#39;:
 <aside class="warning"><p>Text to be printed</p>
 </aside>
 <p>The examples in the material will not always show the template, but you can assume that your program file has one. As such, the examples might be as short as a single line, such as the example below that illustrates the print command.</p>
-<pre><code>print(&#34;Hello world&#34;)
+<pre><code language="language-python" class="language-python">print(&#34;Hello world&#34;)
 </code></pre>
 <p>In reality, the above example, when written as a full Python program, looks like so:</p>
-<pre><code>def hello_world():
+<pre><code language="language-python" class="language-python">def hello_world():
     print(&#34;Hello world&#34;)
 
 if __name__ == &#39;__main__&#39;:
@@ -75,7 +75,7 @@ if __name__ == &#39;__main__&#39;:
 <p><strong>Note:</strong> This feature is currently (as of September 2020) in beta, so may not work as expected.</p>
 <p>You can watch the video below to see the steps required to work on the exercises in Repl.it or read more about the process in the <a href="https://classroom.github.com/help/student-experience-replit" target="_blank">Github documentation</a>.</p>
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/47gvkrD9oxY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-<aside class="special"><p><strong>Exercise - Ada Lovelace<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/fnBTGbks" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Ada Lovelace <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/MZDeCFp2" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h3 is-upgraded>Testing your code in Repl.it</h3>
 <p>You can test your code to see if it is correct before submitting the exercises back to Github. You can invoke and run the <code>pytest</code> library with the following command, directly inside Repl.it.</p>
@@ -94,7 +94,7 @@ if __name__ == &#39;__main__&#39;:
 <p>Even though running the program is straightforward, a lot is happenings behind the scenes. When a program is run, the source code is first compiled into Python bytecode. This compilation process is done by the Python compiler, which itself is a program. Following that, the program gets executed, meaning the commands are executed one-by-one by a Python interpreter that is able to read Python bytecode.</p>
 <h2 is-upgraded>Printing Multiple Lines</h2>
 <p>Programs are constructed command-by-command, where each command is placed on a new line. In the example below, the command <code>print()</code> appears twice, which means that two print commands are being executed in the program.</p>
-<pre><code>def new_main():
+<pre><code language="language-python" class="language-python">def new_main():
     print(&#34;Hello world!&#34;)
     print(&#34;... and the universe!&#34;)
 
@@ -107,16 +107,16 @@ if __name__ == &#39;__main__&#39;:
 <p>The programming exercises will be checked by Python&#39;s tester when uploaded to Github. The tester is very meticulous and the guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.</p>
 <p>This preciseness with regard to the output is relevant in programming in a more general sense. Missing a single character may cause an error. Novice programmers often enter a comma instead of a dot, or write, for instance <code>prnt</code> instead of <code>print</code>, leave out apostrophes, or forget a bracket after a command. Any one of these would cause an error and cause the program execution to fail.</p>
 <p>Learning programming is, in fact, a path full of mistakes – and every error message is a chance to learn. Keep a look out for any error messages in Atom and try to read the test errors!</p>
-<aside class="special"><p><strong>Exercise - Once Upon a Time<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/B4dP0Qar" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Once Upon a Time <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/wq1cRC-e" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Dinosaur<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/HgjnAclk" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Dinosaur  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/OEy6AU3J" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Terminology and Code Comments</h2>
 <h3 is-upgraded>Command parameters</h3>
 <p>The information to be printed by the print command, i.e. its <strong>parameters</strong>, are passed to it by placing them inside the parentheses <code>()</code> that follow the command. For example, passing <code>Hi</code> as a parameter to the <code>print</code> command is done like this: <code>print(&#34;Hi&#34;)</code>.</p>
 <h2 is-upgraded>Semicolon Separates Commands</h2>
 <p>Commands can be separated with a semicolon <code>;</code> but this is not necessary or recommended in Python. We could, if we wanted to, write almost everything on a single line. However, that would be difficult to understand.</p>
-<pre><code>print(&#34;Hello &#34;); print(&#34;world&#34;); print(&#34;!\n&#34;);
+<pre><code language="language-python" class="language-python">print(&#34;Hello &#34;); print(&#34;world&#34;); print(&#34;!\n&#34;);
 </code></pre>
 <aside class="warning"><p>Hello <br> world <br> !</p>
 </aside>
@@ -124,7 +124,7 @@ if __name__ == &#39;__main__&#39;:
 <h3 is-upgraded>Comments</h3>
 <p>Source code can be commented to clarify it or to add notes. Single-line comments are marked with a hash <code>#</code>. Everything following them on the same line is interpreted as a comment. Python does not <em>really</em> [see below] have a syntax for multi line comments, so to add a multiline comment you could insert a <code>#</code> for each line.</p>
 <p>Below is an example of a program where both are used.</p>
-<pre><code>def comments():
+<pre><code language="language-python" class="language-python">def comments():
     #Printing
     print(&#34;Text to print&#34;)
     print(&#34;More text to print!&#34;)
@@ -141,7 +141,7 @@ if __name__ == &#39;__main__&#39;:
     comments()
 </code></pre>
 <p>The last line of the example shows a particularly handy use-case for comments. Code that has been written does not need to be deleted to try out something else.</p>
-<aside class="special"><p><strong>Docstrings<br><br></strong> In Python, there is the concept of a Python <em>Docstring</em>, which you will see later in the course. A docstring is a string literal that occurs as the first statement in a module, function, class, or method definition. Such a docstring becomes the <code>__doc__</code> special attribute of that object. All modules should normally have docstrings, and all functions and classes exported by a module should also have docstrings. We will revisit these concepts later.</p>
+<aside class="special"><p><strong>Docstrings <br><br></strong> In Python, there is the concept of a Python <em>Docstring</em>, which you will see later in the course. A docstring is a string literal that occurs as the first statement in a module, function, class, or method definition. Such a docstring becomes the <code>__doc__</code> special attribute of that object. All modules should normally have docstrings, and all functions and classes exported by a module should also have docstrings. We will revisit these concepts later.</p>
 </aside>
 
 
@@ -149,14 +149,14 @@ if __name__ == &#39;__main__&#39;:
     
       <google-codelab-step label="Reading input" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul class="checklist">
+<ul>
 <li>Learn to write a program that reads text written by a user.</li>
 <li>Know what a &#34;string&#34; refers to in programming.</li>
 <li>Know how to join (i.e., &#34;concatenate&#34;) strings together.</li>
 </ul>
 <p>Input refers to text written by the user read by the program. Input is always read as a string. For reading input, we use the <code>input</code> tool that comes with Python. The tool can be used with the command <code>input_string = input(&#39;This text is printed to screen.&#39;)</code></p>
 <p>Below is an example of a program which asks for user input, reads the string entered by the user, and then prints it.</p>
-<pre><code>def user_input():
+<pre><code language="language-python" class="language-python">def user_input():
     input_string = input(&#39;Write a message:&#39;)
     print(input_string)
 
@@ -165,39 +165,39 @@ if __name__ == &#39;__main__&#39;:
 </code></pre>
 <p>More precisely, input is read and holds until the user writes something. When the user writes something and presses enter, the provided string is assigned to the string variable <code>input_string</code>. The program is then able to reference the variable message later on — in the example above, the variable message is referenced in the print command.</p>
 <p>When the program is run, its output can look like the example below. In this example, the user has written the text &#34;Hello world&#34; — user input is marked in the sample examples.</p>
-<aside class="warning"><p>Write a message: <br><em>User inputs message &lt;Hello World&gt;<br></em> Hello World</p>
+<aside class="warning"><p>Write a message: <br> <em>User inputs message &lt;Hello World&gt; <br></em> Hello World</p>
 </aside>
-<aside class="special"><p><strong>Exercise - Message<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/vytnNYGC" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Message  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/dwU2T2dW" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Fundamentals of Strings</h2>
 <p>As you might have noticed, in programming we refer to &#34;strings&#34; rather than &#34;text&#34;. The term &#34;string&#34; is shorthand for &#34;string of characters&#34; which describes how the computer sees text on a more fundamental level: as a sequence of individual characters.</p>
 <p>We&#39;ve so far used strings in two ways. When practicing the print command, we passed the string to be printed to the print command in quotation marks, and when practicing reading input, we saved the string we read to a variable.</p>
 <p>In practice, variables are named containers that contain information of some specified type and have a name. Typically, and almost always in Python, a variable is also assigned a value during its declaration. You can assign a value by following the declaration with an equals sign followed by the value.</p>
 <p>A string variable called <code>message</code> that is assigned the value &#34;Hello world!&#34; is declared like this:</p>
-<pre><code>message = &#34;Hello world!&#34;
+<pre><code language="language-python" class="language-python">message = &#34;Hello world!&#34;
 </code></pre>
 <p>When a variable is created, a specific container is made available within the program, the contents of which can later be referenced. Variables are referenced by their name. For instance, creating and printing a string variable is done as shown below:</p>
-<pre><code>message = &#34;Hello world!&#34;
+<pre><code language="language-python" class="language-python">message = &#34;Hello world!&#34;
 print(message)
 </code></pre>
 <aside class="warning"><p>Hello world!</p>
 </aside>
 <p>A string enclosed in a programming language&#39;s quotation marks is called a &#34;string literal&#34;, i.e., a string with a specified value. A common programming mistake is trying to put quotation marks around variable names. If there were quotation marks around the string variable <code>message</code>, the program would print the text &#34;message&#34; instead of the &#34;Hello world!&#34; text held by the <code>message</code> variable.</p>
-<pre><code>message = &#34;Hello world!&#34;
+<pre><code language="language-python" class="language-python">message = &#34;Hello world!&#34;
 print(&#34;message&#34;)
 </code></pre>
 <aside class="warning"><p>message</p>
 </aside>
 <h3 is-upgraded>Concatenation - Joining Strings Together</h3>
 <p>The string to be printed can be formed from multiple strings using the <code>+</code> operator. For example, the program below prints &#34;Hello world!&#34; on one line.</p>
-<pre><code>def main():
+<pre><code language="language-python" class="language-python">def main():
     print(&#34;Hello &#34; + &#34;world!&#34;)
 
 if __name__ == &#39;__main__&#39;:
     main()
 </code></pre>
 <p>The same method can be used to join a string literal and the value of a string variable.</p>
-<pre><code>def main():
+<pre><code language="language-python" class="language-python">def main():
     message = &#34;Hello world!&#34;
     print(message + &#34;... and the universe!&#34;)
 
@@ -207,7 +207,7 @@ if __name__ == &#39;__main__&#39;:
 <aside class="warning"><p>Hello world! ... and the universe!</p>
 </aside>
 <p>We can do the same with any number of strings.</p>
-<pre><code>def main():
+<pre><code language="language-python" class="language-python">def main():
     start = &#34;My name is &#34;
     end = &#34;, James Bond&#34;
     print(start + &#34;Bond&#34; + end)
@@ -217,11 +217,11 @@ if __name__ == &#39;__main__&#39;:
 </code></pre>
 <aside class="warning"><p>My name is Bond, James Bond</p>
 </aside>
-<aside class="special"><p><strong>Exercise - Hi Ada Lovelace!<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/OATMF5F5" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Hi Ada Lovelace!  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/VdXPJJa9" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Reading Strings</h2>
 <p>The <code>input</code> command reads the user&#39;s input and <em>returns</em> a string. If we then want to use the string in the program, it must be saved to a string variable. A value saved to a variable can be used repeatedly. In the example below, the user input is printed twice.</p>
-<pre><code>def main():
+<pre><code language="language-python" class="language-python">def main():
     message = input(&#39;Write a message:&#39;)
     print(message)
     print(message)
@@ -229,27 +229,27 @@ if __name__ == &#39;__main__&#39;:
 if __name__ == &#39;__main__&#39;:
     main()
 </code></pre>
-<aside class="warning"><p>Write a message: <br><em>User: &lt;This will be printed twice&gt;<br></em> This will be printed twice <br> This will be printed twice</p>
+<aside class="warning"><p>Write a message: <br> <em>User: &lt;This will be printed twice&gt; <br></em> This will be printed twice <br> This will be printed twice</p>
 </aside>
-<aside class="special"><p><strong>Exercise - Message Three Times<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/T7OvXUzx" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Message Three Times  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/hm9E9b4P" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Input String as a Part of Output</h2>
 <p>We noticed in the &#34;Hi Ava Lovelace!&#34; exercise that string literals and string variables can be joined using the <code>+</code> -operator. The example below demonstrates a program that takes user input and prints it concatenated with a string literal.</p>
-<pre><code>def main():
+<pre><code language="language-python" class="language-python">def main():
     message = input(&#39;Write a message:&#39;)
     print(&#39;You wrote: &#39; + message)
 
 if __name__ == &#39;__main__&#39;:
     main()
 </code></pre>
-<aside class="warning"><p>Write a message: <br><em>User: &lt;My message&gt;<br></em> You wrote: My message</p>
+<aside class="warning"><p>Write a message: <br> <em>User: &lt;My message&gt; <br></em> You wrote: My message</p>
 </aside>
-<aside class="special"><p><strong>Exercise - Greeting<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/vqWXFZWT" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Greeting  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/vFpAiSWE" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Program Execution Waits for Input</h2>
 <p>When the program&#39;s execution comes to a statement that attempts to read input from the user (the command <code>input()</code>), the execution stops and waits. The execution continues only after the user has written some input and pressed enter.</p>
 <p>In the example below, the program prompts the user for three strings. First, the program prints <code>Write the first string:</code>, and then waits for user input. When the user writes some text, the program prints <code>Write the second string:</code>, and then waits for user input again. This continues for a third time, after which the program prints all three strings.</p>
-<pre><code>def main():
+<pre><code language="language-python" class="language-python">def main():
     first = input(&#39;Write the first string:&#39;)
     second = input(&#39;Write the second string:&#39;)
     third = input(&#39;Write the third string:&#39;)
@@ -262,12 +262,12 @@ if __name__ == &#39;__main__&#39;:
 if __name__ == &#39;__main__&#39;:
     main()
 </code></pre>
-<aside class="warning"><p>Write the first string: <br><em>User: &lt;String number one&gt;<br></em> Write the second string: <br><em>User: &lt;String number two&gt;<br></em> Write the third string: <br><em>User: &lt;String number three&gt;<br><br></em> You wrote: <br> String number one <br> String number two <br> String number three</p>
+<aside class="warning"><p>Write the first string: <br> <em>User: &lt;String number one&gt; <br></em> Write the second string: <br> <em>User: &lt;String number two&gt; <br></em> Write the third string: <br> <em>User: &lt;String number three&gt; <br><br></em> You wrote: <br> String number one <br> String number two <br> String number three</p>
 </aside>
-<aside class="special"><p><strong>Exercise - Conversation<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/b5b0XPj3" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Conversation  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/6x_0gmuC" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <p>In the previous example, we saved the user input to three different string variables. This can be done as long as the variables all have different names (in the example, the names are <code>first</code>, <code>second</code> and <code>third</code>).</p>
-<pre><code>def main():
+<pre><code language="language-python" class="language-python">def main():
     first = input(&#39;Write the first string:&#39;)
     second = input(&#39;Write the second string:&#39;)
     third = input(&#39;Write the third string:&#39;)
@@ -281,7 +281,7 @@ if __name__ == &#39;__main__&#39;:
     main()
 </code></pre>
 <p>We can form more complicated texts whose content changes depending on the user&#39;s input by using more strings. In the example below, the user is told a bit more about the texts they wrote – notice that the order in which the strings are printed can be changed. In the example below, the third input string is printed first.</p>
-<pre><code>def main():
+<pre><code language="language-python" class="language-python">def main():
     first = input(&#39;Write the first string:&#39;)
     second = input(&#39;Write the second string:&#39;)
     third = input(&#39;Write the third string:&#39;)
@@ -295,9 +295,9 @@ if __name__ == &#39;__main__&#39;:
 if __name__ == &#39;__main__&#39;:
     main()
 </code></pre>
-<aside class="warning"><p>Write the first string: <br><em>User: &lt;one&gt;<br></em> Write the second string: <br><em>User: &lt;two&gt;<br></em> Write the third string: <br><em>User: &lt;three&gt;<br><br></em> Last string you wrote was three, which <br> was preceded by two. <br> The first string was one. <br> All together: onetwothree</p>
+<aside class="warning"><p>Write the first string: <br> <em>User: &lt;one&gt; <br></em> Write the second string: <br> <em>User: &lt;two&gt; <br></em> Write the third string: <br> <em>User: &lt;three&gt; <br><br></em> Last string you wrote was three, which <br> was preceded by two. <br> The first string was one. <br> All together: onetwothree</p>
 </aside>
-<aside class="special"><p><strong>Exercise - Story<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/w1xF2uv1" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Story  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/NBqgc5l_" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 
 
@@ -305,17 +305,17 @@ if __name__ == &#39;__main__&#39;:
     
       <google-codelab-step label="Variables" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul class="checklist">
+<ul>
 <li>Understand the concept of a variable. You know what variable types, names, and values are.</li>
 <li>Know how to create and use string, integer, floating-point, and boolean variables.</li>
 </ul>
 <p>We&#39;ve already familiarized ourselves with strings to a degree while dealing with user inputs. Let&#39;s turn our attention to learning about other variable <em>types</em> commonly used in Python.</p>
 <p>A variable can be thought of as a container in which information of a given type can be stored. Examples of these different types include text (<code>string</code>), whole numbers (<code>int</code>), floating-point numbers (<code>float</code>), and whether something is true or false (<code>boolean</code>). A value is assigned to a variable using the equals sign (<code>=</code>).</p>
-<pre><code>months = 12
+<pre><code language="language-python" class="language-python">months = 12
 </code></pre>
 <p>In the statement above, the value of 12 is assigned to a variable called months. The statement could be read as: &#34;the variable months is assigned the value 12&#34;. Note that type declaration is implicit in Python, and you don&#39;t necessarily have to declare the type in the assignment.</p>
 <p>A variable&#39;s value can be joined to a string using the + sign, as seen in the following example.</p>
-<pre><code>text = &#34;contains text&#34;
+<pre><code language="language-python" class="language-python">text = &#34;contains text&#34;
 whole_number = 123
 floating_point = 3.141592653
 true_or_false = True
@@ -328,11 +328,11 @@ print(&#34;Boolean: &#34; + str(true_or_false))
 <aside class="warning"><p>Text variable: contains text <br> Integer variable: 123 <br> Floating-point variable: 3.141592653 <br> Booolean: true</p>
 </aside>
 <p>Note that any variable types that aren&#39;t originally declared as strings, must be converted into a string with the <code>str()</code> command either before or during printing.</p>
-<aside class="special"><p><strong>Exercise - Various Variables<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/xhPgBmdg" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Various Variables  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/_hk_r5kU" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Changing a Value Assigned to a Variable</h2>
 <p>A variable exists from the moment of its declaration, and its initial value is preserved until another value is assigned to it. You can change a variable&#39;s value using a statement that comprises the variable name, an equals sign, and the new value to be assigned.</p>
-<pre><code>number = 123
+<pre><code language="language-python" class="language-python">number = 123
 print(&#34;The value of the variable is &#34; + str(number))
 
 number = 42
@@ -345,7 +345,7 @@ print(&#34;The value of the variable is &#34; + str(number))
 <p>The variable is then referenced again by its name in the program – we again want to print the string &#34;The value of the variable is &#34; followed by the value of the <code>number</code> variable. We proceed as normal, retrieving the value of <code>number</code> from a container having its name.</p>
 <p>At the end of the program, you&#39;ll notice that the original value of the variable has vanished. A variable can hold only one value at a time.</p>
 <p>Unlike some other programming languages, you can also redefine a variable to have a different implicit type:</p>
-<pre><code>number = 123
+<pre><code language="language-python" class="language-python">number = 123
 print(&#34;The value of the variable is &#34; + str(number))
 
 number = 42.6
@@ -356,12 +356,12 @@ print(&#34;The value of the variable is &#34; + str(number))
 <p>In the first example, the variable <code>number</code> had the type <code>int</code> in line 1 and was reassigned to another <code>int</code> type in line 4. In the second example, the variable <code>number</code> had the type <code>int</code> in line 1 and was reassigned to <code>float</code> type in line 4. This is prefectly fine in Python but may be strange if coming from other languages like Java.</p>
 <h2 is-upgraded>Variable Types</h2>
 <p>If you are used to certain other programming languages such as Java, you may have seen explicit declaration of type, such as:</p>
-<pre><code>boolean myBool = false;
+<pre><code language="language-java" class="language-java">boolean myBool = false;
 int value = 10;
 </code></pre>
 <p>This is not necessary in Python and Python variables do not need explicit declaration to reserve memory space. The declaration happens automatically when you assign a value to a variable.</p>
 <p>Python is smart enough to understand the operations you are trying to achieve and will operate accordingly. For example, the program below:</p>
-<pre><code>number1 = 1
+<pre><code language="language-python" class="language-python">number1 = 1
 number2 = 2
 print(number1/number2)
 </code></pre>
@@ -369,7 +369,7 @@ print(number1/number2)
 <aside class="warning"><p>0.5</p>
 </aside>
 <p>whereas the similar Java code</p>
-<pre><code>int number1 = 1;
+<pre><code language="language-java" class="language-java">int number1 = 1;
 int number2 = 2;
 System.out.println(number1/number2);
 </code></pre>
@@ -379,7 +379,7 @@ System.out.println(number1/number2);
 <p>since both types are integers. We will not go too much further into the mechanisms of type declaration in Python here, but you can read more about it <a href="https://www.tutorialspoint.com/python/python_variable_types.htm" target="_blank">here</a>.</p>
 <h2 is-upgraded>Naming Variables</h2>
 <p>Naming variables is a fundamental aspect of describing a program. Let&#39;s look at two examples.</p>
-<pre><code>a = 3.14
+<pre><code language="language-python" class="language-python">a = 3.14
 b = 22.0
 c = a * b * b
 
@@ -387,7 +387,7 @@ print(c)
 </code></pre>
 <aside class="warning"><p>1519.76</p>
 </aside>
-<pre><code>pi = 3.14
+<pre><code language="language-python" class="language-python">pi = 3.14
 radius = 22
 surface_area = pi * radius * radius
 
@@ -396,24 +396,24 @@ print(surface_area)
 <aside class="warning"><p>1519.76</p>
 </aside>
 <p>Both of the preceding examples function the same way and output the same result. One of them is, however, much more understandable. The objective here is to compute the surface area of a circle. The value of pi is defined in the first row, the circle&#39;s radius in the second, and the surface area calculated in the third.</p>
-<aside class="special"><p><strong>Variables Express the Program and the Problem to Be Solved<br><br></strong> Programming is a problem-solving tool. The aim is to create solutions for any given problem, such as the automation of control in cars. As a problem is approached, the developer decides on the terms used to describe the problem domain. The terminology that is chosen, such as variable names, will serve to describe the problem for anyone who is to work with it in the future. <br><br> As you&#39;re wording the problem that you&#39;re solving, think about the concepts related to that problem and appropriate terms that could be used to describe them. If you find it hard to come up with relevant names, think of the ones that definitely do not describe it. After this, settle on some terminology that you&#39;re going to use – the good thing is that you can usually improve on it later on.</p>
+<aside class="special"><p><strong>Variables Express the Program and the Problem to Be Solved <br><br></strong> Programming is a problem-solving tool. The aim is to create solutions for any given problem, such as the automation of control in cars. As a problem is approached, the developer decides on the terms used to describe the problem domain. The terminology that is chosen, such as variable names, will serve to describe the problem for anyone who is to work with it in the future. <br><br> As you&#39;re wording the problem that you&#39;re solving, think about the concepts related to that problem and appropriate terms that could be used to describe them. If you find it hard to come up with relevant names, think of the ones that definitely do not describe it. After this, settle on some terminology that you&#39;re going to use – the good thing is that you can usually improve on it later on.</p>
 </aside>
 <p>Variable naming is limited by certain constraints.</p>
 <p>Variable names cannot contain certain special symbols, such as exclamation marks (!). Spaces are also not allowed, since they&#39;re used to separate parts of commands. Instead of spaces, the convention in many programming languages is to either use a style known as <a href="https://en.wikipedia.org/wiki/Snake_case" target="_blank">snake_case</a> or <a href="https://en.wikipedia.org/wiki/Camel_case" target="_blank">camelCase</a> to delimit words. Python variable names are always written in snake_case.</p>
-<pre><code>camelCaseVariable = 7 # will work, but not convention in Python
+<pre><code language="language-python" class="language-python">camelCaseVariable = 7 # will work, but not convention in Python
 snake_case_variable = 7 # this is the format recommended by Python
 </code></pre>
 <p>Python has community guidelines on how code should be formatted. You can <a href="https://www.python.org/dev/peps/pep-0008/" target="_blank">view the guide here</a>. We will follow these guidelines as much as practicable in this course.</p>
 <p>Numbers can be used within a variable name as long as the name does not begin with a number. Also, a name cannot consists of numbers only.</p>
-<pre><code>7variable = 4 # Not allowed!
+<pre><code language="language-python" class="language-python">7variable = 4 # Not allowed!
 variable7 = 4 # Allowed, but is not a descriptive variable name
 </code></pre>
 <h2 is-upgraded>Reading Different Variable Types from User</h2>
 <p>In the text-based user interfaces that we&#39;ve used in our programs, the user&#39;s input is always read as a string, since the user writes their input as text. Reading strings from the user has become familiar by this point - we do it using the <code>input</code> command.</p>
-<pre><code>text = input(&#34;Write text and press enter &#34;)
+<pre><code language="language-python" class="language-python">text = input(&#34;Write text and press enter &#34;)
 print(&#34;You wrote &#34; + text)
 </code></pre>
-<aside class="warning"><p>Write text and press enter <br><em>User &lt;text&gt;<br></em> You wrote text</p>
+<aside class="warning"><p>Write text and press enter <br> <em>User &lt;text&gt; <br></em> You wrote text</p>
 </aside>
 <p>Other input types, such as integers, floats, and booleans must be converted to the target variable&#39;s type with the help of the <code>int</code>, <code>float</code> or <code>bool</code> methods provided by Python.</p>
 <h2 is-upgraded>The Type of the Variable Informs of Possible Values</h2>
@@ -421,7 +421,10 @@ print(&#34;You wrote &#34; + text)
 <p>A variable&#39;s type determines the types of values that can be assigned to it. String types hold text, int types whole numbers, float floating-point numbers, and boolean types are either true or false.</p>
 <p>As such, the possible values of a given variable type are limited. For example, a string cannot contain an integer, nor can a float contain a boolean value.</p>
 <table>
-<tr></tr>
+<tr><td colspan="1" rowspan="1"><p>Type</p>
+</td><td colspan="1" rowspan="1"><p>Example</p>
+</td><td colspan="1" rowspan="1"><p>Accepted values</p>
+</td></tr>
 <tr><td colspan="1" rowspan="1"><p>Whole number, i.e., <code>int</code></p>
 </td><td colspan="1" rowspan="1"><p><code>value = 4</code></p>
 </td><td colspan="1" rowspan="1"><p>An integer can contain any whole number. Some programming languages have bounds for integer values to do with 32 or 64-bit representations but since Python 3, the values of <code>int</code> have been allowed to be unbounded.</p>
@@ -441,7 +444,7 @@ print(&#34;You wrote &#34; + text)
 </table>
 <h2 is-upgraded>Reading Integers</h2>
 <p>The <code>int</code> command converts a string to an integer. It takes the string containing the value to be converted as a parameter.</p>
-<pre><code>value_as_string = &#34;42&#34;
+<pre><code language="language-python" class="language-python">value_as_string = &#34;42&#34;
 value = int(value_as_string)
 
 print(value)
@@ -449,23 +452,23 @@ print(value)
 <aside class="warning"><p>42</p>
 </aside>
 <p>When using a the <code>input</code> call, the reading of the value is usually inserted directly into the type conversion. This happens like so:</p>
-<pre><code>def main():
+<pre><code language="language-python" class="language-python">def main():
     value = int(input(&#34;Write a value &#34;))
     print(&#34;You wrote &#34; + str(value))
 </code></pre>
-<aside class="warning"><p>Write a value <br><em>User &lt;42&gt;<br></em> You wrote 42</p>
+<aside class="warning"><p>Write a value <br> <em>User &lt;42&gt; <br></em> You wrote 42</p>
 </aside>
 <p>Note that we had to convert our variable back to a string in the <code>print</code> statement in order to be able to concatenate it with the string &#34;You wrote &#34;. An error would have been thrown if we had ommited the <code>str()</code>.</p>
 <h2 is-upgraded>Reading floats and booleans</h2>
 <p>The <code>float</code> and <code>bool</code> commands convert strings to floats and booleans. Similarly to <code>int</code>, they take the string containing the value to be converted as a parameter.</p>
-<pre><code>value_as_string = &#34;42.6&#34;
+<pre><code language="language-python" class="language-python">value_as_string = &#34;42.6&#34;
 value = float(value_as_string)
 
 print(value)
 </code></pre>
 <aside class="warning"><p>42.6</p>
 </aside>
-<pre><code>value_as_string = &#34;True&#34;
+<pre><code language="language-python" class="language-python">value_as_string = &#34;True&#34;
 value = bool(value_as_string)
 
 print(value)
@@ -473,11 +476,11 @@ print(value)
 <aside class="warning"><p>True</p>
 </aside>
 <p>If you try to convert a value such as <code>value_as_string = &#34;42.6&#34;</code> to an <code>int</code>, an error will be thrown:</p>
-<pre><code>Traceback (most recent call last):
+<pre><code language="language-plaintext" class="language-plaintext">Traceback (most recent call last):
   File &#34;sandbox.py&#34;&#34;, line 1, in &lt;module&gt;
 ValueError: invalid literal for int() with base 10: &#39;42.6&#39;
 </code></pre>
-<aside class="special"><p><strong>Exercise - Different types of input<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/KOYJLRF3" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Different types of input  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/Y_xRaioX" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 
 
@@ -485,12 +488,12 @@ ValueError: invalid literal for int() with base 10: &#39;42.6&#39;
     
       <google-codelab-step label="Calculating with numbers" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul class="checklist">
+<ul>
 <li>Learn to perform calculations with the help of variables.</li>
 <li>Know how to form printable statements including both calculations (expressions) and strings.<br></li>
 </ul>
 <p>The basic mathematical operations are both familiar and straightforward: addition <code>+</code>, subtraction <code>-</code>, multiplication <code>*</code>, and division <code>/</code>. The precedence is also familiar: operations are performed from left to right with the parentheses taken into account. Expressions involving <code>*</code> and <code>/</code> are calculated before those involving <code>+</code> and <code>-</code>, as is customary in elementary school mathematics.</p>
-<pre><code>first = 2
+<pre><code language="language-python" class="language-python">first = 2
 print(first) # prints 2
 second = 4
 print(second) # prints 4
@@ -500,7 +503,7 @@ print(sum) # prints 6
 </code></pre>
 <h2 is-upgraded>Precedence and Parentheses</h2>
 <p>You can affect the order of operations by using parentheses. Operations within parentheses are performed before those outside them.</p>
-<pre><code>calculation_with_parentheses = (1 + 1) + 3 * (2 + 5)
+<pre><code language="language-python" class="language-python">calculation_with_parentheses = (1 + 1) + 3 * (2 + 5)
 print(calculation_with_parentheses) # prints 23
 
 calculation_without_parentheses = 1 + 1 + 3 * 2 + 5
@@ -508,7 +511,7 @@ print(calculation_without_parentheses) # prints 13
 
 </code></pre>
 <p>The example above can also be divided into steps.</p>
-<pre><code>calculation_with_parentheses = (1 + 1)
+<pre><code language="language-python" class="language-python">calculation_with_parentheses = (1 + 1)
 print(calculation_with_parentheses) # prints 2
 calculation_with_parentheses = calculation_with_parentheses + 3 * (2 + 5)
 print(calculation_with_parentheses) # prints 23
@@ -518,19 +521,19 @@ calculation_without_parentheses = calculation_without_parentheses + 3 * 2
 calculation_without_parentheses = calculation_without_parentheses + 5
 print(calculation_without_parentheses) # prints 13
 </code></pre>
-<aside class="special"><p><strong>Exercise - Seconds in a day<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/q0QfLkvk" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Seconds in a day  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/Azqll4a6" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Expression and Statement<br><br></strong> An <em>expression</em> is a combination of values that is turned into another value through a calculation or evaluation. <br><br> The evaluation of an expression is always performed before its value is assigned to a variable. As such, the calculation &#34;1 + 1 + 3 * 2 + 5&#34; in the example <code>value = 1 + 1 + 3 * 2 + 5</code> above is performed before the result is assigned to the variable.</p>
+<aside class="special"><p><strong>Expression and Statement <br><br></strong> An <em>expression</em> is a combination of values that is turned into another value through a calculation or evaluation. <br><br> The evaluation of an expression is always performed before its value is assigned to a variable. As such, the calculation &#34;1 + 1 + 3 * 2 + 5&#34; in the example <code>value = 1 + 1 + 3 * 2 + 5</code> above is performed before the result is assigned to the variable.</p>
 </aside>
 <p>An expression is evaluated where it occurs in the program&#39;s source code. As such, the evaluation can occur within a print statement, if the expression is used in calculating the value of the print statement&#39;s parameter.</p>
-<pre><code>first = 2
+<pre><code language="language-python" class="language-python">first = 2
 second = 4
 
 print(first + second)  # prints 6
 print(2 + second - first - second)  # prints 0
 </code></pre>
 <p>An expression does not change the value stored in a variable unless the expression&#39;s result is assigned to a variable or used as a parameter, for instance, in printing.</p>
-<pre><code>first = 2
+<pre><code language="language-python" class="language-python">first = 2
 second = 4
 
 first + second
@@ -541,29 +544,29 @@ first + second
 <p>Note that when working with numbers, the <code>print</code> statement is implicit. It is not recommended to omit the <code>print</code> statement intentionally, unless working with very simple programs as it can often lead to confusion.</p>
 <h2 is-upgraded>Calculating and Printing</h2>
 <p>The command <code>print</code> prints the value of a variable. The string literal to be printed, which is marked by quotation marks, can be appended with other content by using the operation <code>+</code>.</p>
-<pre><code>length = 42
+<pre><code language="language-python" class="language-python">length = 42
 print(&#34;Length &#34; + str(length))
 </code></pre>
 <aside class="warning"><p>Length 42</p>
 </aside>
-<pre><code>print(&#34;here is an integer --&gt; &#34; + str(2))
+<pre><code language="language-python" class="language-python">print(&#34;here is an integer --&gt; &#34; + str(2))
 print(str(2) + &#34; &lt;-- here is an integer&#34;)
 </code></pre>
 <aside class="warning"><p>here is an integer –&gt; 2 <br> 2 &lt;– here is an integer</p>
 </aside>
 <p>If one of the operands of the operation <code>+</code> is a string, the other operand must be changed into a string too during program execution. In the example below, the integer <code>2</code> is turned into the string &#34;2&#34;, and a string has been appended to it.</p>
 <p>The precedence introduced earlier also apply here:</p>
-<pre><code>print(&#34;Four: &#34; + str(2 + 2))
+<pre><code language="language-python" class="language-python">print(&#34;Four: &#34; + str(2 + 2))
 print(&#34;But! Twenty-two: &#34; + str(2) + str(2))
 </code></pre>
 <aside class="warning"><p>Four: 4 <br> But! Twenty-two: 22</p>
 </aside>
-<aside class="special"><p><strong>Exercise - Sum of two numbers<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/770ZC_sZ" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Sum of two numbers  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/lCkUs_Qw" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Sum of three numbers<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/cJkhBtxg" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Sum of three numbers  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/PvFR4-_x" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <p>Applying this knowledge, we can create an expression consisting of some text and a variable, which is evaluated in connection with the printing:</p>
-<pre><code>x = 10
+<pre><code language="language-python" class="language-python">x = 10
 
 print(&#34;The value of the variable x is: &#34; + str(x))
 
@@ -574,26 +577,26 @@ print(&#34;y is &#34; + str(y) + &#34; and z is &#34; + str(z))
 </code></pre>
 <aside class="warning"><p>The value of the variable x is: 10 <br> y is 5 and z is 6</p>
 </aside>
-<aside class="special"><p><strong>Exercise - Addition formula<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/XJeG-UPv" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Addition formula  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/dpxegnMj" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Multiplication formula<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/HiMPPFTe" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Multiplication formula  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/ay1rHBBN" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <aside class="special"><p>Once you have completed the previous exercise, try finding out the greatest possible multiplication of two floats that you can calculate. The reason behind the phenomenon you&#39;ll observe is that the value of a float is capped at the maximum of 1.7976931348623157e+308. This is because of limitations to the computer&#39;s memory. <br><br> To put it into some perspective, this value is <strong>vastly</strong> greater than the total number of atoms in the observable universe (10e+80) and is not even comprehensible to humans. There is very little to zero chance that any scientific or engineering application will ever require working with numbers so large.</p>
 </aside>
 <h2 is-upgraded>Division</h2>
 <p>Division is accomplished in a similar way to addition and multiplication, but we have to be careful dividing by zero or something close to zero.</p>
-<pre><code>result = 3 / 2
+<pre><code language="language-python" class="language-python">result = 3 / 2
 print(result)
 </code></pre>
 <aside class="warning"><p>1.5</p>
 </aside>
-<aside class="special"><p><strong>Average<br><br></strong> The next exercises task you with calculating the average of the entered numbers. Let&#39;s briefly review the concept of <em>average</em>. <br><br> An average refers to the sum of numbers divided by their count. For instance, the average of the numbers 5 and 3 can be calculated with the formula (5+3)/2. Similarly, the average of the numbers 1, 2, and 4 is produced by the formula (1+2+4)/3. <br><br> In the context of programming, there are a few things to keep in mind. Firstly, dividing by zero is typically not permitted. This implies that calculating the average of zero numbers is impossible.</p>
+<aside class="special"><p><strong>Average <br><br></strong> The next exercises task you with calculating the average of the entered numbers. Let&#39;s briefly review the concept of <em>average</em>. <br><br> An average refers to the sum of numbers divided by their count. For instance, the average of the numbers 5 and 3 can be calculated with the formula (5+3)/2. Similarly, the average of the numbers 1, 2, and 4 is produced by the formula (1+2+4)/3. <br><br> In the context of programming, there are a few things to keep in mind. Firstly, dividing by zero is typically not permitted. This implies that calculating the average of zero numbers is impossible.</p>
 </aside>
-<aside class="special"><p><strong>Exercise - Average of two numbers<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/WPICwe4H" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Average of two numbers  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/q44s4Eku" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Average of three numbers<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/WBS_GnXl" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Average of three numbers  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/rzh-hD4e" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Simple calculator<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/mb0gTH9q" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Simple calculator  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/9RsoyOIT" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Misunderstandings Related to the Value of a Variable</h2>
 <p>When a computer executes program code, it does it one command at a time, always advancing exactly as specified by the code. When a value is assigned to a variable, the same chain of events always occurs: the value on the right-hand side of the equality sign is copied and assigned to the variable on the left-hand side (i.e., copied to the location specified by that variable).</p>
@@ -605,7 +608,7 @@ print(result)
 <li>The third misunderstanding concerns the direction of copying: it&#39;s often thought that in executing <code>first = second</code> the value of the variable <code>first</code> is set as the value of the variable <code>second</code>. The confusion also manifests itself in situations where the programmer accidentally writes e.g. <code>42 = value</code> – fortunately, IDEs provide support on this issue too.</li>
 </ul>
 <p>Perhaps the best way to understand a program&#39;s execution flow is through the use of pen and paper. As you&#39;re reading the program, write down the names of any new variables, while making a note of how the values of the variables in the code change line by line. Let&#39;s demonstrate the execution with the following program code:</p>
-<pre><code>line 1: first = (1 + 1)
+<pre><code language="language-python" class="language-python">line 1: first = (1 + 1)
 line 2: second = first + 3 * (2 + 5)
 line 3:
 line 4: first = 5
@@ -624,7 +627,7 @@ line 9: print(third)
     
       <google-codelab-step label="Conditional statements and conditional operation" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul class="checklist">
+<ul>
 <li>Become familiar with the idea of a conditional statement and know how to create a program containing optional operations through the use of conditional statements.</li>
 <li>Become familiar with comparison and logical operators commonly used in conditional statements.</li>
 <li>Know how to compare both numbers and strings, remembering the equals-command for strings.</li>
@@ -632,7 +635,7 @@ line 9: print(third)
 </ul>
 <p>Our programs have so far been linear. In other words, the programs have executed from top to bottom without major surprises or conditional behaviour. However, we usually want to add conditional logic to our programs. By this we mean functionality that&#39;s in one way or another dependent on the state of the program&#39;s variables.</p>
 <p>To branch the execution of a program based on user input, for example, we need to use something known as a <strong>conditional statement</strong>. The simplest conditional statement looks something like this.</p>
-<pre><code>print(&#34;Hello, world!&#34;)
+<pre><code language="language-python" class="language-python">print(&#34;Hello, world!&#34;)
 if True:
     print(&#34;This code is unavoidable!&#34;)
 </code></pre>
@@ -641,18 +644,18 @@ if True:
 <p>A conditional statement begins with the keyword <code>if</code> followed by a condition, which is evaluated when the conditional statement is reached. The result of the evaluation is a boolean value. No evaluation occurred above. Instead, a boolean value (<code>True</code>) was explicitly used in the conditional statement.</p>
 <p>The condition is followed by a block, which is indented beneath. The source code inside the block is executed if the expression inside the parentheses evaluates to <code>True</code>.</p>
 <p>Let&#39;s look at an example where we compare numbers in the conditional statement.</p>
-<pre><code>number = 11
+<pre><code language="language-python" class="language-python">number = 11
 if (number &gt; 10):
     print(&#34;The number was greater than 10&#34;)
 </code></pre>
 <p>If the expression in the conditional statement evaluates to true, the execution of the program progresses to the block defined by the conditional statement. In the example above, the conditional is &#34;if the number in the variable is greater than 10&#34;. On the other hand, if the expression evaluates to false, the execution moves on to the statement after the closing curly bracket of the current conditional statement.</p>
-<aside class="special"><p><strong>Exercise - Speeding ticket<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/_WreeRVJ" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Speeding ticket  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/LrsY0JXO" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Code Indentation and Block Statements</h2>
 <p>A code block refers to a section with a particular indentation level from the left hand-side.</p>
 <p>Most of our programs have included a recurring snippet <code>def main():</code>, which begins a block, with the code inside the function indented below.</p>
 <p>Blocks define a program&#39;s structure and its bounds. A conditional statement also marks the start of a new code block.</p>
-<pre><code># Look at the indentation below, which marks the blocks
+<pre><code language="language-python" class="language-python"># Look at the indentation below, which marks the blocks
 def main(): #start block 1
     number = 10 #inside block 1
     if (number &gt; 5): #start block 2
@@ -667,11 +670,11 @@ if __name__ == &#39;__main__&#39;:
 <li>Use spaces instead of tabs.</li>
 </ul>
 <p>The example below is incorrectly indented and will result in an error.</p>
-<pre><code>if (number &gt; 10):
+<pre><code language="language-python" class="language-python">if (number &gt; 10):
 number = 9
 </code></pre>
 <p>The example below is correctly indented.</p>
-<pre><code>if (number &gt; 10):
+<pre><code language="language-python" class="language-python">if (number &gt; 10):
     number = 9
 </code></pre>
 <aside class="special"><p>Code in Python is indented by four spaces for each block. Use spaces for indentation, not tabs. The indentation might break in some cases if you use both spaces and tabs at the same time.</p>
@@ -686,7 +689,7 @@ number = 9
 <li><code>==</code> equal to</li>
 <li><code>!=</code> not equal to</li>
 </ul>
-<pre><code>number = 55
+<pre><code language="language-python" class="language-python">number = 55
 
 if (number != 0):
     print(&#34;The number is not equal to 0&#34;)
@@ -696,14 +699,14 @@ if (number &gt;= 1000):
 </code></pre>
 <aside class="warning"><p>The number is not equal to 0</p>
 </aside>
-<aside class="special"><p><strong>Exercise - Orwell<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/2rawyX0B" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Orwell  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/x7GVw0WH" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Ancient<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/t5rr8kWM" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Ancient  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/hEDnO7ZY" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Else</h2>
 <p>If the expression inside the parentheses of the conditional statement evaluates to false, then the execution of the code moves to the statement following the indentation block. This is not always desired, and usually we want to create an alternative option for when the conditional expression evaluates to false.</p>
 <p>This can be done with the help of the <code>else</code> command, which is used together with the <code>if</code> command.</p>
-<pre><code>number = 4
+<pre><code language="language-python" class="language-python">number = 4
 
 if (number &gt; 5):
     print(&#34;Your number is greater than five!&#34;)
@@ -713,13 +716,13 @@ else:
 <aside class="warning"><p>Your number is five or less!</p>
 </aside>
 <p>If an <code>else</code> branch has been specified for a conditional statement, the block defined by the else branch is run in the case that the condition of the conditional statement is false. The <code>else</code>-command is placed on the same line as the block defined by the <code>if</code>-command.</p>
-<aside class="special"><p><strong>Exercise - Positivity<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/VdeutQQZ" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Positivity  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/JSEjy7oa" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Adulthood<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/bbxRPBg5" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Adulthood  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/pCXRwSZy" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>More Conditionals: elif</h2>
 <p>In the case of multiple conditionals, we use the <code>elif</code>-command. The command <code>elif</code>, short for <code>else if</code>, is like <code>else</code>, but with an additional condition. <code>elif</code> follows the <code>if</code>-condition, and they may be multiple.</p>
-<pre><code>number = 3
+<pre><code language="language-python" class="language-python">number = 3
 
 if (number == 1):
     print(&#34;The number is one&#34;)
@@ -733,11 +736,11 @@ else:
 <aside class="warning"><p>The number must be three!</p>
 </aside>
 <p>Let&#39;s read out the example above: ‘If the number is one, then print &#34;The number is one&#34;, else if the number is two, then print &#34;The given number is two&#34;, else if the number is three, then print &#34;The number must be three!&#34;. Otherwise, print &#34;Something else!&#34;&#39;</p>
-<aside class="special"><p><strong>Exercise - Larger Than or Equal To<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/Y18j1xcj" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Larger Than or Equal To  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/fAvrleZo" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Order of Execution for Comparisons</h2>
 <p>The comparisons are executed top down. When execution reaches a conditional statement whose condition is true, its block is executed and the comparison stops.</p>
-<pre><code>number = 5
+<pre><code language="language-python" class="language-python">number = 5
 
 if (number == 0):
     print(&#34;The number is zero.&#34;)
@@ -752,29 +755,29 @@ else:
 <aside class="warning"><p>The number is greater than zero.</p>
 </aside>
 <p>The example above prints the string &#34;The number is greater than zero.&#34; even if the condition <code>number &gt; 2</code> is true. The comparison stops at the first condition that evaluates to true.</p>
-<aside class="special"><p><strong>Exercise - Grades and Points<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/XTtZIJuw" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Grades and Points  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/cDsM8V8h" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Conditional Statement Expression and the Boolean Variable</h2>
 <p>The value that goes between the parentheses of the conditional statement should be of type boolean after the evaluation. <code>boolean</code> type variables are either <code>True</code> or <code>False</code>.</p>
-<pre><code>is_it_true = True
+<pre><code language="language-python" class="language-python">is_it_true = True
 print(&#34;The value of the boolean variable is &#34; + str(is_it_true))
 </code></pre>
 <aside class="warning"><p>The value of the boolean variable is True</p>
 </aside>
 <p>The conditional statement can also be done as follows:</p>
-<pre><code>is_it_true = True
+<pre><code language="language-python" class="language-python">is_it_true = True
 if (is_it_true):
     print(&#34;Pretty wild!&#34;)
 </code></pre>
 <aside class="warning"><p>Pretty wild!</p>
 </aside>
 <p>Comparison operators can also be used outside of conditionals. In those cases, the boolean value resulting from the comparison is stored in a boolean variable for later use.</p>
-<pre><code>first = 1
+<pre><code language="language-python" class="language-python">first = 1
 second = 3
 is_greater = first &gt; second
 </code></pre>
 <p>In the example above, the boolean variable <code>is_greater</code> now contains the boolean value <code>False</code>. We can extend the previous example by adding a conditional statement to it.</p>
-<pre><code>first = 1
+<pre><code language="language-python" class="language-python">first = 1
 second = 3
 is_less_than = first &lt; second
 
@@ -786,7 +789,7 @@ if (is_less_than):
 <p>The code above has been executed to the point where the program&#39;s variables have been created and assigned values. The variable <code>is_less_than</code> has <code>True</code> as its value. Next in the execution is the comparison <code>if (is_less_than)</code> – the value for the variable <code>is_less_than</code> is found in its container, and the program finally prints:</p>
 <aside class="special"><p><strong>Remainder</strong>: <br><br> The modulo operator is a slightly less-used operator, which is, however, very handy when we want to check the divisibility of a number, for example. The symbol for the modulo operator is <code>%</code>.</p>
 </aside>
-<pre><code>remainder = 7 % 2
+<pre><code language="language-python" class="language-python">remainder = 7 % 2
 print(remainder)  # prints 1
 print(5 % 3)  # prints 2
 print(7 % 4)  # prints 3
@@ -794,7 +797,7 @@ print(8 % 4)  # prints 0
 print(1 % 2)  # prints 1
 </code></pre>
 <p>If we want to know whether the number given by the user is divisible by four hundred, we check if the remainder is zero after taking the modulo of the number and four hundred.</p>
-<pre><code>number = int(input())
+<pre><code language="language-python" class="language-python">number = int(input())
 remainder = number % 400
 
 if (remainder == 0):
@@ -803,19 +806,19 @@ else:
     print(&#34;The number &#34; + str(number) + &#34; is not divisible by four hundred.&#34;)
 </code></pre>
 <p>Since the modulo is an operation just like other calculations, it can be a part of an expression in a conditional statement.</p>
-<pre><code>number = int(input())
+<pre><code language="language-python" class="language-python">number = int(input())
 
 if (number % 400 == 0):
     print(&#34;The number &#34; + str(number) + &#34; is divisible by four hundred.&#34;)
 else:
     print(&#34;The number &#34; + str(number) + &#34; is not divisible by four hundred.&#34;)
 </code></pre>
-<aside class="special"><p><strong>Exercise - Odd or Even<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/yl0Nz9Bh" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Odd or Even  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/Iujo1bzH" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Conditional Statements and Comparing Strings</h2>
 <p>We can compare integers, floating point numbers, and boolean values using two equals signs (<code>variable1 == variable2</code>). The same operator can be used to compare strings.</p>
 <p>You can try this with the following program:</p>
-<pre><code>first = input(&#34;Enter the first string&#34;)
+<pre><code language="language-python" class="language-python">first = input(&#34;Enter the first string&#34;)
 second = input(&#34;Enter the second string&#34;)
 
 if (first == second):
@@ -823,13 +826,13 @@ if (first == second):
 else:
     print(&#34;The strings were different!&#34;)
 </code></pre>
-<aside class="warning"><p>Enter the first string <br><em>User: &lt;same&gt;<br></em> Enter the second string <br><em>User: &lt;same&gt;<br></em> The strings were the same!</p>
+<aside class="warning"><p>Enter the first string <br> <em>User: &lt;same&gt; <br></em> Enter the second string <br> <em>User: &lt;same&gt; <br></em> The strings were the same!</p>
 </aside>
-<aside class="warning"><p>Enter the first string <br><em>User: &lt;same&gt;<br></em> Enter the second string <br><em>User: &lt;different&gt;<br></em> The strings were different!</p>
+<aside class="warning"><p>Enter the first string <br> <em>User: &lt;same&gt; <br></em> Enter the second string <br> <em>User: &lt;different&gt; <br></em> The strings were different!</p>
 </aside>
-<aside class="special"><p><strong>Exercise - Password<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/MFGflbtD" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Password  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/NoFzMJtC" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Same<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/djWb1q5V" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Same  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/PR6OEJGj" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Logical Operators</h2>
 <p>The expression of a conditional statement may consist of multiple parts, in which the logical operators <code>and</code>, <code>or</code>, and <code>not</code> are used.</p>
@@ -839,7 +842,7 @@ else:
 <li>Logical operators are not used for changing the boolean value from true to false, or false to true.</li>
 </ul>
 <p>In the next example we combine two individual conditions using <code>and</code>. The code is used to check if the number in the variable is greater than or equal to 5 and less than or equal to 10. In other words, whether it&#39;s within the range of 5-10:</p>
-<pre><code>print(&#34;Is the number within the range 5-10: &#34;)
+<pre><code language="language-python" class="language-python">print(&#34;Is the number within the range 5-10: &#34;)
 number = 7
 
 if (number &gt;= 4 and number &lt;= 10):
@@ -850,7 +853,7 @@ else:
 <aside class="warning"><p>Is the number within the range 5-10: <br> It is! :)</p>
 </aside>
 <p>In the next one we provide two conditions using <code>or</code>, i.e., the or-operator: is the number less than zero or greater than 100. The condition is fulfilled if the number fulfills either one of the two conditions:</p>
-<pre><code>print(&#34;Is the number less than 0 or greater than 100&#34;)
+<pre><code language="language-python" class="language-python">print(&#34;Is the number less than 0 or greater than 100&#34;)
 number = 145
 
 if (number &lt; 0 or number &gt; 100):
@@ -861,7 +864,7 @@ else:
 <aside class="warning"><p>Is the number less than 0 or greater than 100 <br> It is! :)</p>
 </aside>
 <p>In this example we flip the result of the expression <code>number &gt; 4</code> using <code>not</code>, i.e., the not-operator. The not-operator is written in such a way that the expression to be flipped is wrapped in parentheses, and the not-operator is placed before the parentheses.</p>
-<pre><code>number = 7
+<pre><code language="language-python" class="language-python">number = 7
 
 if (not (number &gt; 4)):
     print(&#34;The number is not greater than 4.&#34;)
@@ -870,7 +873,7 @@ else:
 </code></pre>
 <aside class="warning"><p>The number is greater than or equal to 4.</p>
 </aside>
-<aside class="special"><p><strong>Exercise - Checking the age<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/I8tp4cwF" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Checking the age  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/MBJPrDxD" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 <h2 is-upgraded>Execution Order of Conditional Statements</h2>
 <p>Let&#39;s familiarize ourselves with the execution order of conditional statements through a classic programming exercise.</p>
@@ -883,7 +886,7 @@ else:
 <li>If the number is divisible by both three and five, then print &#34;FizzBuzz&#34; instead of the number.</li>
 </ul>
 <p>If-type conditions are easy to implement using <code>if - elif - else</code> -conditional statements. The code below was written based on the steps above, but it does not work correctly, which we can see from the example.</p>
-<pre><code>number = int(input())
+<pre><code language="language-python" class="language-python">number = int(input())
 
 if (number % 3 == 0):
     print(&#34;Fizz&#34;)
@@ -894,13 +897,13 @@ elif (number % 3 == 0 and number % 5 == 0):
 else:
     print(number)
 </code></pre>
-<aside class="warning"><p><em>User: &lt;3&gt;<br></em> Fizz</p>
+<aside class="warning"><p><em>User: &lt;3&gt; <br></em> Fizz</p>
 </aside>
-<aside class="warning"><p><em>User: &lt;4&gt;<br></em> 4</p>
+<aside class="warning"><p><em>User: &lt;4&gt; <br></em> 4</p>
 </aside>
-<aside class="warning"><p><em>User: &lt;5&gt;<br></em> Buzz</p>
+<aside class="warning"><p><em>User: &lt;5&gt; <br></em> Buzz</p>
 </aside>
-<aside class="warning"><p><em>User: &lt;15&gt;<br></em> Fizz</p>
+<aside class="warning"><p><em>User: &lt;15&gt; <br></em> Fizz</p>
 </aside>
 <p>The problem with the previous approach is that <strong>the parsing of conditional statements stops at the first condition that is true</strong>. E.g., with the value 15 the string &#34;Fizz&#34; is printed, since the number is divisible by three (15 % 3 == 0).</p>
 <p>One approach for developing this train of thought would be to first find the <strong>most demanding condition</strong>, and implement it. After that, we would implement the other conditions. In the example above, the condition &#34;if the number is divisible by both three <strong>and</strong> five&#34; requires two things to happen. Now the train of thought would be:</p>
@@ -912,7 +915,7 @@ else:
 <li>Otherwise the program prints the number given by the user.</li>
 </ol>
 <p>Now the problem seems to get solved.</p>
-<pre><code>number = int(input())
+<pre><code language="language-python" class="language-python">number = int(input())
 
 if (number % 3 == 0 and number % 5 == 0):
     print(&#34;FizzBuzz&#34;)
@@ -923,17 +926,17 @@ elif (number % 5 == 0):
 else:
     print(number)
 </code></pre>
-<aside class="warning"><p><em>User: &lt;3&gt;<br></em> Fizz</p>
+<aside class="warning"><p><em>User: &lt;3&gt; <br></em> Fizz</p>
 </aside>
-<aside class="warning"><p><em>User: &lt;4&gt;<br></em> 4</p>
+<aside class="warning"><p><em>User: &lt;4&gt; <br></em> 4</p>
 </aside>
-<aside class="warning"><p><em>User: &lt;5&gt;<br></em> Buzz</p>
+<aside class="warning"><p><em>User: &lt;5&gt; <br></em> Buzz</p>
 </aside>
-<aside class="warning"><p><em>User: &lt;15&gt;<br></em> FizzBuzz</p>
+<aside class="warning"><p><em>User: &lt;15&gt; <br></em> FizzBuzz</p>
 </aside>
-<aside class="special"><p><strong>Exercise - Leap year<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/mbRjp2Ed" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Leap year  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/MuBBRVPz" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
-<aside class="special"><p><strong>Exercise - Inheritance tax<br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br><a href="https://classroom.github.com/a/B3OIziys" target="_blank">Accept exercise on Github Classroom</a></p>
+<aside class="special"><p><strong>Exercise - Inheritance tax  <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/Z2B3jvHI" target="_blank">Accept exercise on Github Classroom</a></p>
 </aside>
 
 
