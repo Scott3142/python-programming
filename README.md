@@ -27,7 +27,19 @@ curl -o-
 https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ```
 
-and updating the PATH. Once you have `node` (and hence `npm`) installed, you can run the following commands to install `gulp`:
+and updating the PATH. Then use
+
+```bash
+nvm install node
+``
+
+and (probably)
+
+```bash
+sudo apt-get install curl wget git build-essential libssl-dev
+```
+
+Once you have `node` (and hence `npm`) installed, you can run the following commands to install `gulp`:
 
 ```bash
 npm install
