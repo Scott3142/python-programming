@@ -31,7 +31,7 @@ and updating the PATH. Then use
 
 ```bash
 nvm install node
-``
+```
 
 and (probably)
 
