@@ -212,9 +212,9 @@ A better workaround is in the TODOs. If you think you have a fix for this, pleas
 The codelabs can be deployed using the commands:
 
 ```bash
-./claat_export.sh -o local # deploys codelabs only locally on http://localhost:9090
-./claat_export.sh -o landing # deploys codelabs and landing page locally on http://localhost:8000
-./claat_export.sh -o deploy # deploys to Github pages
+./claat-export.sh -o local # deploys codelabs only locally on http://localhost:9090
+./claat-export.sh -o landing # deploys codelabs and landing page locally on http://localhost:8000
+./claat-export.sh -o deploy # deploys to Github pages
 ```
 
 **NB: Be sure to check out these files and understand what they do before running these commands.**
