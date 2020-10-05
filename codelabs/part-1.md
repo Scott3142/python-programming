@@ -100,19 +100,13 @@ python -m pytest
 
 We will cover testing in greater detail later in the notes [(see here)](https://scott3142.uk/python-programming/codelabs/part-6/index.html?index=..%2F..index#2), but if you are interested you can view the automated tests that are run in the `tests/` directory of the exercise repos.
 
-#### Known bugs and issues with Repl.it
+#### Known bugs and issues with Repl.it and Github integration
 
 The Repl.it integration with the exercies from this course is still in beta, so some features are not as slick or as user-friendly as one might like. The notes below describe some of the known issues and propose some workarounds.
 
 Repl's authorisation process is long winded and requires quite a bit of refreshing the page, exiting and coming back. Make sure you are signed into Repl.it with your Github account _before_ accepting the assignment.
 
-Repl defaults to Python 2.7 when running the testing library. You will have to run
-
-```
-virtualenv --python=/usr/bin/python3 my_env; source my_env/bin/activate; pip install pytest
-```
-
-in the Repl terminal first to activate the appropriate Python virtual environment and install the appropriate version of `pip`. You can read more about `pip` and virtual environments in the [Getting Started](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#2) pages of these course notes.
+Sometimes the 'Work in Repl.it' button doesn't show up in the Github repository after it is created. You can manually force the link to show by clicking _update_ in the page that appears after you 'Accept this exercise on Google Classroom'. If this doesn't work, you can 'Import' your repository into Repl.it directly from Github following the instructions [here](https://blog.repl.it/github#:~:text=Now%20you%20can%20instantly%20run,to%20README%20files%20near%20you.).  
 
 Positive
 : You can run a program in Atom by the keyboard combination Ctrl+Shift+B, if you have the `script` package installed as in the first part. In order to _test_ the program in Atom, you will need an understanding of the file structure and use of your computer's terminal. This process is not explicitly covered in these notes, but you can find out more information [in these pages](https://realpython.com/pytest-python-testing/).  
