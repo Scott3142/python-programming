@@ -265,10 +265,10 @@ Negative
 : Third
 
 Positive
-: **Exercise - Third Element** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/6Plo2fY1)
+: **Exercise - Third Element** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/822599yi)
 
 Positive
-: **Exercise - Second Plus Third** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/x8b_M4N-)
+: **Exercise - Second Plus Third** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/5Uvq53bw)
 
 ### Retrieving Information from a "Non-Existent" Place
 
@@ -348,7 +348,7 @@ Negative
 : Number of values on the list: 0 <br> Number of values on the list: 1 <br> Number of values on the list: 1
 
 Positive
-: **Exercise - List size** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/PIpoC_5P)
+: **Exercise - List size** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/zuMDawM6)
 
 ### Iterating Over a List Continued
 
@@ -469,31 +469,31 @@ Positive
 : **Notice about the following exercises** <br><br> The next exercises are meant for learning to use lists and indices. Even if you could complete the exercises without a list, concentrate on training to use it. The functionality in the exercises is to be implemented after reading the input numbers.
 
 Positive
-: **Exercise - Last in list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/aqmMfzZk)
+: **Exercise - Last in list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/Bt2g8fgv)
 
 Positive
-: **Exercise - First and last** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/XeILN-hd)
+: **Exercise - First and last** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/GOsWtPFX)
 
 Positive
-: **Exercise - Remember these numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/nrzTN2LH)
+: **Exercise - Remember these numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/r5yS8qh-)
 
 Positive
-: **Exercise - Only these numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/AoBtor0o)
+: **Exercise - Only these numbers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/QrXHLqMl)
 
 Positive
-: **Exercise - Greatest in list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/gwuRIE37)
+: **Exercise - Greatest in list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/IoMLBWdk)
 
 Positive
-: **Exercise - Index of** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/CYcMZFBI)
+: **Exercise - Index of** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/C5OBv87i)
 
 Positive
-: **Exercise - Index of smallest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/LgriToQK)
+: **Exercise - Index of smallest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/N8DwuClK)
 
 Positive
-: **Exercise - Sum of a list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/NDOM0wVS)
+: **Exercise - Sum of a list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/VRYIjE8P)
 
 Positive
-: **Exercise - Average of a list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/J2sjJIph)
+: **Exercise - Average of a list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/wZGN9jiq)
 
 ### Removing from a List and Checking the Existence of a Value
 
@@ -557,7 +557,7 @@ Negative
 : Is the first found? true <br> Second was found <br> Second can still be found
 
 Positive
-: **Exercise - On the list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/six6yDxD)
+: **Exercise - On the list** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/gEhsIpt1)
 
 ### List as a Method Parameter
 
@@ -592,7 +592,7 @@ Negative
 : 1 <br> 2 <br> 2 <br> 1
 
 Positive
-: **Exercise - Print in range** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/2ost0sZn)
+: **Exercise - Print in range** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/W-AYvwE9)
 
 As before, a method can also return a value. The methods that return values have the `return` command. The method below returns the length of the list, although is a completely redundant method.
 
@@ -616,7 +616,7 @@ def average(numbers):
 ```
 
 Positive
-: **Exercise - Sum** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/NLkHN2cv)
+: **Exercise - Sum** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/GwWQ-iVI)
 
 ### On Copying the List to a Method Parameter
 
@@ -652,7 +652,7 @@ Negative
 : [3, 2, 6, -1] <br> [2, 6, -1] <br> []
 
 Positive
-: **Exercise - Remove last** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/bTtlpkFl)
+: **Exercise - Remove last** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/Adro0na3)
 
 Positive
 : **NumPy Arrays** <br><br> We've gotten familiar with the list, which has a lot of functionality to make the life of a programmer easier. Perhaps the most important is about adding elements. From the point of view of the programmer, the size of the list is unlimited. In reality there are no magic tricks in the list -- they have been programmed like any other programs or tools offered by the programming language. When you create a list, a limited space is reserved in the memory of the computer. When the list runs out of space, a larger space is reserved and the data from the previous space is copied to the new one. <br><br> Even though the list is simple to use, sometimes we need an alternative way of storing data, the NumPy array. The main benefits of using NumPy arrays is, in general, smaller memory consumption and better runtime behaviour. We will not dive any deeper into NumPy arrays in this course, but you should be aware of their existence and, in particular their applicability to data science and scientific computing. <br><br> You can read more [here](https://numpy.org/doc/stable/reference/generated/numpy.array.html?highlight=array#numpy.array).
@@ -709,13 +709,13 @@ Negative
 : Hi Lily and see you later!
 
 Positive
-: **Exercise - Print thrice** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/T5mfFfMC)
+: **Exercise - Print thrice** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/0xc3aZui)
 
 Positive
-: **Exercise - Is it true?** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/z-ni-obV)
+: **Exercise - Is it true?** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/nhBb8aas)
 
 Positive
-: **Exercise - Login** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/4_tpAEmL)
+: **Exercise - Login** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/pT-2jHsZ)
 
 ### Splitting a string
 
@@ -739,10 +739,10 @@ Negative
 : first <br> second <br> third <br> fourth <br><br> first <br> second <br> third <br> fourth <br>
 
 Positive
-: **Exercise - Line by line** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/m73yenFI)
+: **Exercise - Line by line** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/SH8YV-fL)
 
 Positive
-: **Exercise - AV Club** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/C8BrWSM-)
+: **Exercise - AV Club** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/36F7NqUB)
 
 ### Data of Fixed Format
 
@@ -769,7 +769,7 @@ Negative
 : *User: \<sebastian,2\>* <br> Name: sebastian, age: 2 <br> *User: \<lucas,2\>* <br> Name: lucas, age: 2 <br> *User: \<lily,1\>* <br>  Name: lily, age: 1
 
 Positive
-: **Exercise - First Words** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/VO6uk4tw)
+: **Exercise - First Words** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/agjxhRoa)
 
 In the exercises above, we actually implemented a very simple decrypting method for secret messages. One variant of these hidden messages consists of the first character of each line. Let's continue along the same theme! You can get a character at a specified index of a string very similarly to how you access the index of a list, with the `[]` notation.
 
@@ -835,10 +835,10 @@ Negative
 : *User: \<sebastian,2\>* <br> *User: \<lucas,2\>* <br> *User: \<lily,1\>* <br> Age average: 1.66...
 
 Positive
-: **Exercise - Age of the Oldest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/QV39qKX2)
+: **Exercise - Age of the Oldest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/ptgfsU6e)
 
 Positive
-: **Exercise - Name of the Oldest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/3V6-GmrV)
+: **Exercise - Name of the Oldest** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/xRiRIc4Y)
 
 In the next exercise you'll be asked for the length of the names. You can find out the length of a string exactly as for a list, with the `len()`-method:
 
@@ -852,7 +852,7 @@ Negative
 : The length of the word equisterian is 11
 
 Positive
-: **Exercise - Personal details** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/fX9pm26B)
+: **Exercise - Personal details** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/Muoh7UPw)
 
 ## Summary
 Duration: 00:10:00
