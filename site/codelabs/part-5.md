@@ -168,7 +168,7 @@ while True:
 The clock we implemented above is an object whose functionality is based on "simpler" objects, i.e., its hands. This is precisely the **great idea behind ​​object-oriented programming: a program is built from small and distinct objects that work together**
 
 Positive
-: **Exercise - One Minute** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/sdoWxUZx)
+: **Exercise - One Minute** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/1uJ1Pf4o)
 
 Next, let's review topic terminology.
 
@@ -270,13 +270,13 @@ Negative
 : (40, 80) <br> (10, 10) <br> (39, 80) <br> 3920
 
 Positive
-: **Exercise - Book** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/VuT8NR2v)
+: **Exercise - Book** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/KtGbN1QZ)
 
 Positive
-: **Exercise - Cube** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/eDYARrVm)
+: **Exercise - Cube** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/uyl8yc1o)
 
 Positive
-: **Exercise - FitByte** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/jpUmJj-7)
+: **Exercise - FitByte** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/7yyiqCK9)
 
 ## Removing repetitive code (overloading methods and constructors)
 Duration: 01:00:00
@@ -379,7 +379,7 @@ Negative
 The technique of having two (or more) constructors in a class is known as *constructor overloading*.
 
 Positive
-: **Exercise - Constructor Overload** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/HWKJDx9f)
+: **Exercise - Constructor Overload** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/Y4LlUAEV)
 
 ### Method Overloading
 
@@ -416,7 +416,7 @@ Negative
 : Paul is 24 years old. <br> Paul is 25 years old. <br> Paul is 35 years old.
 
 Positive
-: **Exercise - Overloaded Counter** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/6vfAenGT)
+: **Exercise - Overloaded Counter** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/mNjkMgLv)
 
 ## Objects and references
 Duration: 01:00:00
@@ -731,10 +731,10 @@ Negative
 : Matt may enter the ride <br> Jasper may not enter the ride <br> Water track, minimum height: 140, visitors: 1
 
 Positive
-: **Exercise - Health station** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/MwLqItue)
+: **Exercise - Health station** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/0W8RcHVG)
 
 Positive
-: **Exercise - Card payments** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/r5KRl29d)
+: **Exercise - Card payments** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/eFZZqCpZ)
 
 ### Object as object variable
 
@@ -819,7 +819,7 @@ Positive
 : **Dates in Python** <br><br> Python has special methods which can handle datetimes. You can read more [here](https://www.w3schools.com/python/python_datetime.asp).
 
 Positive
-: **Exercise - Biggest pet shop** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/9PM6XHST)
+: **Exercise - Biggest pet shop** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/nLVG4VOS)
 
 ### Object of same type as method parameter
 
@@ -992,7 +992,7 @@ class Person:
 Now the concrete comparison of dates is implemented in the class that it logically (based on the class names) belongs to.
 
 Positive
-: **Exercise - Comparing apartments** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/ERFif86E)
+: **Exercise - Comparing apartments** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/BReKA1Ri)
 
 ### Comparing the equality of objects (__eq__)
 
@@ -1092,10 +1092,10 @@ class Person:
 ```
 
 Positive
-: **Exercise - Song** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/0cf0tL34)
+: **Exercise - Song** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/nqwP9KF6)
 
 Positive
-: **Exercise - Identical Twins** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/rRCWdK7T)
+: **Exercise - Identical Twins** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/s2wr3Sgv)
 
 ### Object equality and lists
 
@@ -1218,10 +1218,10 @@ Negative
 : Red is not on the list. <br> Red is on the list. <br> However! <br> Red is on the list.
 
 Positive
-: **Exercise - Books** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/E-FQAHCl)
+: **Exercise - Books** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/hCtt-qzC)
 
 Positive
-: **Exercise - Archive** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/ycnoAiKq)
+: **Exercise - Archive** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/T3oDwUlU)
 
 ### Object as a method's return value
 
@@ -1293,10 +1293,10 @@ class Factory:
 ```
 
 Positive
-: **Exercise - Dating app** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/z2E4l-0f)
+: **Exercise - Dating app** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/FKS-Tqf4)
 
 Positive
-: **Exercise - Money** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/1ejiDtnz)
+: **Exercise - Money** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/jTuQ2uoU)
 
 ## Summary
 Duration: 00:10:00
