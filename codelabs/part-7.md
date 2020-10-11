@@ -141,10 +141,10 @@ while True:
 ```
 
 Positive
-: **Exercise - Liquid containers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/dJnFs2pv)
+: **Exercise - Liquid containers** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/cZlvD3xo)
 
 Positive
-: **Exercise - Liquid containers 2.0** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/fsdme7we)
+: **Exercise - Liquid containers 2.0** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/Gw9pLiUg)
 
 ## Algorithms
 Duration: 01:00:00
@@ -169,7 +169,7 @@ If the information (data) given to a computer, doesn't follow any rules and isn'
 Every programmer should be familiar with at least one sorting algorithm (i.e a way to sort an array). Let's familiarize ourselves with one "classic" sorting algorithm, the selection sort. We'll do so with a programing exercise.
 
 Positive
-: **Exercise - Sorting** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/yP4-lTnq)
+: **Exercise - Sorting** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/GWk2cE4F)
 
 ###  Built-in sorting algorithms in Python
 
@@ -201,7 +201,7 @@ Negative
 Python's build-in sorting algorithms work with value type variables and some of Python's build-in reference type variables, like String. In order for our own classes to be sorted, we need to provide Python with some tips on how to do that, because the classes themselves don't contain information on how objects created from them should be ordered. We'll get back to ordering objects created from classes we made ourselves in the advanced course in programming.
 
 Positive
-: **Exercise - Ready made sorting algorithms** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/lxUMI5Va)
+: **Exercise - Ready made sorting algorithms** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/VrUVPArI)
 
 ### Information retrieval
 
@@ -228,7 +228,7 @@ When the data searched is in order, searching can be implemented a lot more effi
 The idea behind Binary Search is to start looking for the searched value in the middle index of the array (or list), compare the value found there to the searched value, and if needed (i.e, when the value isn't found there) eliminate half of the search area.
 
 Positive
-: **Exercise - Searching** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/hDAgdF9Q)
+: **Exercise - Searching** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/TFg0Jly7)
 
 ## Larger exercises
 Duration: 01:00:00
@@ -236,13 +236,13 @@ Duration: 01:00:00
 To conclude the seventh part, you'll do a few more extensive exercises. There is no predefined structure for these tasks -- think about the classes and objects that will help you complete the task while you're completing it.
 
 Positive
-: **Exercise - Grade statistics** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/h4yqv_kv)
+: **Exercise - Grade statistics** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/R5kii8LH)
 
 Positive
-: **Exercise - Recipe search** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/DqNNqN54)
+: **Exercise - Recipe search** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/uUJNdrjL)
 
 Positive
-: **Exercise - Big year** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/QyE9-r0r)
+: **Exercise - Big year** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/o5Sug2OL)
 
 ## Conclusion
 Duration: 00:10:00
