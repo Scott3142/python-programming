@@ -49,11 +49,6 @@ Repl's authorisation process is long winded and requires quite a bit of refreshi
 
 Sometimes the 'Work in Repl.it' button doesn't show up in the Github repository after it is created. You can manually force the link to show by clicking _update_ in the page that appears after you 'Accept this exercise on Google Classroom'. If this doesn't work, you can 'Import' your repository into Repl.it directly from Github following the instructions [here](https://blog.repl.it/github#:~:text=Now%20you%20can%20instantly%20run,to%20README%20files%20near%20you.).
 
-Positive
-: You can run a program in Atom by the keyboard combination Ctrl+Shift+B, if you have the `script` package installed as in the first part. In order to _test_ the program in Atom, you will need an understanding of the file structure and use of your computer's terminal. This process is not explicitly covered in these notes, but you can find out more information [in these pages](https://realpython.com/pytest-python-testing/).
-
-Even though running the program is straightforward, a lot is happenings behind the scenes. When a program is run, the source code is first compiled into Python bytecode. This compilation process is done by the Python compiler, which itself is a program. Following that, the program gets executed, meaning the commands are executed one-by-one by a Python interpreter that is able to read Python bytecode.
-
 ### Programmers Write Source Code
 
 Programming is designing and implementing software. The functionality is implemented based on the wishes and requirements of the users and the customers. Programs are typically implemented (i.e., written or "coded") in a programming language meant to be written and read by humans.
