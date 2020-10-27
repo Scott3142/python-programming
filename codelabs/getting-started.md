@@ -19,7 +19,7 @@ Modern programming is practically always done in an IDE (integrated development 
 
 There are many IDEs that can be used with Python, including [PyCharm](https://www.jetbrains.com/pycharm), [Idle](https://docs.python.org/3/library/idle.html) and [VS Code](https://code.visualstudio.com/). At the risk of sparking some heated debate ("I love vim", "nano 4eva" etc.), the text editor we recommend and support on this course is called Atom. Atom describes itself as a "hackable text editor for the 21st Century" and is built and maintained by [Github](https://github.com/), which we will also use extensively throughout this course.
 
-If you would like to work inside a local development environment on your machine, you can [skip ahead](https://scott3142.uk/python-programming/codelabs/local-development-environment/index.html?index=..%2F..index#1) to the next section, but if you are having trouble installing Python or Atom, or you are on a Chromebook or device for which you don't have administrative rights then read on for a browser-based solution using the software [Repl.it](https://repl.it/~).
+If you would like to work inside a local development environment on your machine, you can [skip ahead](https://scott3142.uk/python-programming/codelabs/local-development-environment/index.html?index=..%2F..index#0) to the next section, but if you are having trouble installing Python or Atom, or you are on a Chromebook or device for which you don't have administrative rights then read on for a browser-based solution using the software [Repl.it](https://repl.it/~).
 
 ### The browser-based software Repl.it
 
