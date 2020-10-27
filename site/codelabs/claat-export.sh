@@ -23,7 +23,7 @@ claat export guess-the-number.md
 # `deploy` Deploy full landing page and codelabs
 
 replaceVideo="<center><iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/GOYVuaEvBCA\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen><\/iframe><\/center>"
-replaceReplitVideo="<center><iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/47gvkrD9oxY\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen><\/iframe><\/center>"
+replaceReplitVideo="<center><iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/BjcF3uCQID8\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen><\/iframe><\/center>"
 replacePerception="<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/vJG698U2Mvo\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen><\/iframe>"
 replaceSummaryZero="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSdeOZySX5e-0odSsE2W8kNOp_b7OwbqjAcC4_aAJzWCUgVrbg\/viewform?embedded=true\" width=\"560\" height=\"2650\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
 replaceSummaryOne="<iframe src=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSe_xp2JKUSJg1bePtHrADnuREN7n-mLK867P3LiPkoQCa1lGQ\/viewform?embedded=true\" width=\"560\" height=\"1216\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…<\/iframe>"
