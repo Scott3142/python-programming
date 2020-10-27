@@ -3,12 +3,12 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2020-10-27T15:01:29Z",
-  "id": "part-1",
-  "duration": 310,
-  "title": "Part 1",
-  "summary": "Welcome to learning programming! Take the plunge and getting familiar with all the required tools.",
-  "source": "part-1.md",
+  "updated": "2020-10-27T15:03:37Z",
+  "id": "local-development-environment",
+  "duration": 120,
+  "title": "Local Development Environments",
+  "summary": "Setting up git and virtual environments",
+  "source": "local-dev.md",
   "theme": "",
   "status": [
     "published"
@@ -21,5 +21,5 @@
   ],
   "feedback": "https://github.com/Scott3142/python-programming",
   "ga": "UA-49751789-4",
-  "url": "part-1"
+  "url": "local-development-environment"
 }

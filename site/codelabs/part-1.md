@@ -26,10 +26,10 @@ print("Hello world!")
 Negative
 : Hello world!
 
-In this material, text boxes like the one above demonstrate an output produced by the example code. Accordingly, the above program would produce the print output "Hello World!". You can try any of these examples in the exercise template named "sandbox", which you will find in the Github repository you cloned in the [first part](https://scott3142.uk/python-programming/codelabs/getting-started/index.html).
+In this material, text boxes like the one above demonstrate an output produced by the example code. Accordingly, the above program would produce the print output "Hello World!". You can try any of these examples in the exercise template named "sandbox", which you will find in the Github repository you cloned in the [first part](https://scott3142.uk/python-programming/codelabs/local-development-environment/index.html?index=..%2F..index#0).
 
 Positive
-: **Note:** <br><br> The rest of this course assumes from this point on that you can: <br><br> - [Run Python files in the terminal...](https://scott3142.uk/python-programming/codelabs/getting-started/index.html) <br> - [...preferably in a virtual environment](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#3) <br> - [Clone a repository from Github](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#4) <br> - [Push your completed repository back to Github](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#4). <br><br> If you haven't _at least_ done this with the [sandbox exercise](https://github.com/den01-python-programming/sandbox.git) yet, please make sure you do this _now_ before continuing.
+: **Note:** <br><br> The rest of this course assumes from this point on that either: <br><br> - You are comfortable with the [Repl.it integration](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#0). <br><br> Or you can: <br><br> - [Run Python files in the terminal...](https://scott3142.uk/python-programming/codelabs/getting-started/index.html) <br> - [...preferably in a virtual environment](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#3) <br> - [Clone a repository from Github](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#4) <br> - [Push your completed repository back to Github](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#4). <br><br> If you haven't _at least_ done this with the [sandbox exercise](https://github.com/den01-python-programming/sandbox.git) yet, please make sure you do this _now_ before continuing.
 
 You can print any text you want with `print`, as long as you use the command `print("arbitrary text")`. The command below will print the text "Hello there!".
 
@@ -73,45 +73,20 @@ if __name__ == '__main__':
     hello_world()
 ```
 
-Here's the second programming exercise of this course. If you'd like, you can watch this video on how to solve the exercise first:
+Here's the second programming exercise of this course. If you'd like, you can watch the video below which covers how to solve the exercise first:
+
+### Using a local development environment
 
 replace-with-video
 
-### [Update] A new workflow with Github Classroom and Repl.it IDE
+### Using the Repl.it browser-based software
 
-The recommended way to download, run and submit the exercises is above, but if you are having trouble installing Python or Atom, or you are on a Chromebook or device for which you don't have administrative rights, you can use [Repl.it](https://repl.it/~) to download, run, test and submit the exercises.
-
-**Note:** This feature is currently (as of September 2020) in beta, so may not work as expected.
-
-You can watch the video below to see the steps required to work on the exercises in Repl.it or read more about the process in the [Github documentation](https://classroom.github.com/help/student-experience-replit).
+See [here](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#0) for an overview of how to set up and access Repl.it, including how to test the code before submitting it to Github. The video below talks you through this process.
 
 replace-with-replit-video
 
 Positive
 : **Exercise - Ada Lovelace** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Accept exercise on Github Classroom](https://classroom.github.com/a/MZDeCFp2)
-
-#### Testing your code in Repl.it
-
-You can test your code to see if it is correct before submitting the exercises back to Github. You can invoke and run the `pytest` library with the following command, directly inside Repl.it.
-
-```
-python -m pytest
-```
-
-We will cover testing in greater detail later in the notes [(see here)](https://scott3142.uk/python-programming/codelabs/part-6/index.html?index=..%2F..index#2), but if you are interested you can view the automated tests that are run in the `tests/` directory of the exercise repos.
-
-#### Known bugs and issues with Repl.it and Github integration
-
-The Repl.it integration with the exercies from this course is still in beta, so some features are not as slick or as user-friendly as one might like. The notes below describe some of the known issues and propose some workarounds.
-
-Repl's authorisation process is long winded and requires quite a bit of refreshing the page, exiting and coming back. Make sure you are signed into Repl.it with your Github account _before_ accepting the assignment.
-
-Sometimes the 'Work in Repl.it' button doesn't show up in the Github repository after it is created. You can manually force the link to show by clicking _update_ in the page that appears after you 'Accept this exercise on Google Classroom'. If this doesn't work, you can 'Import' your repository into Repl.it directly from Github following the instructions [here](https://blog.repl.it/github#:~:text=Now%20you%20can%20instantly%20run,to%20README%20files%20near%20you.).  
-
-Positive
-: You can run a program in Atom by the keyboard combination Ctrl+Shift+B, if you have the `script` package installed as in the first part. In order to _test_ the program in Atom, you will need an understanding of the file structure and use of your computer's terminal. This process is not explicitly covered in these notes, but you can find out more information [in these pages](https://realpython.com/pytest-python-testing/).  
-
-Even though running the program is straightforward, a lot is happenings behind the scenes. When a program is run, the source code is first compiled into Python bytecode. This compilation process is done by the Python compiler, which itself is a program. Following that, the program gets executed, meaning the commands are executed one-by-one by a Python interpreter that is able to read Python bytecode.
 
 ### Printing Multiple Lines
 

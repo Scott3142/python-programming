@@ -5,6 +5,7 @@
 # This fixes the path executed when user presses 'Done' at the end of the codelab.
 
 claat export faqs.md
+claat export local-dev.md
 claat export getting-started.md
 claat export part-1.md
 claat export part-2.md
