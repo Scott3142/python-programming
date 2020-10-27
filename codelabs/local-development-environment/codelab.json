@@ -3,12 +3,12 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2020-09-30T14:00:49+01:00",
-  "id": "getting-started",
-  "duration": 150,
-  "title": "Getting Started",
+  "updated": "2020-10-27T14:39:53Z",
+  "id": "local-development-environment",
+  "duration": 210,
+  "title": "Local Development Environment",
   "summary": "Setting up git and virtual environments",
-  "source": "getting-started.md",
+  "source": "local-dev.md",
   "theme": "",
   "status": [
     "published"
@@ -21,5 +21,5 @@
   ],
   "feedback": "https://github.com/Scott3142/python-programming",
   "ga": "UA-49751789-4",
-  "url": "getting-started"
+  "url": "local-development-environment"
 }

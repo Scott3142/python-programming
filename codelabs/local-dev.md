@@ -1,44 +1,58 @@
 author: Scott Morgan
 summary: Setting up git and virtual environments
-id: getting-started
+id: local-development-environment
 categories: python-programming
 environments: Web
 status: Published
 feedback link: https://github.com/Scott3142/python-programming
 analytics account: UA-49751789-4
 
-# Getting Started
+# Local Development Environment
 
-## Getting Started with Programming
+## Getting Started
 Duration: 01:00:00
 
 ### What you'll learn
-* Become familiar with the Atom development environment used in this course.
-* How to download and submit programming exercises.
+* An introduction to Python, and how to get started with this course.
 
 Modern programming is practically always done in an IDE (integrated development environment). An IDE contains a set of useful tools for the programmer. It does not create the program by itself, but it can give hints about common mistakes in the code, and help the programmer understand the structure of the program.
 
 There are many IDEs that can be used with Python, including [PyCharm](https://www.jetbrains.com/pycharm), [Idle](https://docs.python.org/3/library/idle.html) and [VS Code](https://code.visualstudio.com/). At the risk of sparking some heated debate ("I love vim", "nano 4eva" etc.), the text editor we recommend and support on this course is called Atom. Atom describes itself as a "hackable text editor for the 21st Century" and is built and maintained by [Github](https://github.com/), which we will also use extensively throughout this course.
 
-Atom is not [technically](https://www.quora.com/Is-Atom-an-IDE-or-Text-Editor) an IDE, but comes with many useful plugins that can be used to mimic the functionality of an IDE. We will use the `script` and `atom-python-test` plugins predominantly on this course.
+If you would like to work inside a local development environment on your machine, you can [skip ahead](https://google.com) to the next section, but if you are having trouble installing Python or Atom, or you are on a Chromebook or device for which you don't have administrative rights then read on for a browser-based solution using the software [Repl.it](https://repl.it/~).
 
-To start the course you will need:
+### Using the browser-based software Repl.it
 
-1. A Github account
-2. Python installed on your computer
-3. Atom development environment
+There is an alternative method available for accessing the materials in this course, based around browser-based software [Repl.it](https://repl.it/~). This method will be useful if you don't particularly want or need to set up a local development environment, if you are having trouble installing Python or Atom, or you are on a Chromebook or device for which you don't have administrative rights. To begin this course, you will need to sign up for a [Github](https://github.com) account.
 
-You can sign up for Github [here](https://github.com/). Installation instructions for Python and Atom can be found below:
+**Note:** This feature is currently (as of October 2020) in beta, so may not work as expected.
 
-- [Python installation guide (Windows)](https://www.python.org/downloads/)
-- [Atom installation guide (Windows)](https://flight-manual.atom.io/getting-started/sections/installing-atom/)
+You can watch the video below to see the steps required to work on the exercises in Repl.it or read more about the process in the [Github documentation](https://classroom.github.com/help/student-experience-replit).
 
-Once you have created the user account and installed Python and Atom, watch the video below. The video demonstrates what happens when Atom is opened for the first time. We log into Github and do the first programming exercise.
+replace-with-replit-video
 
-replace-with-video
+#### Testing your code in Repl.it
+
+You can test your code to see if it is correct before submitting the exercises back to Github. You can invoke and run the `pytest` library with the following command, directly inside Repl.it.
+
+```
+python -m pytest
+```
+
+We will cover testing in greater detail later in the notes [(see here)](https://scott3142.uk/python-programming/codelabs/part-6/index.html?index=..%2F..index#2), but if you are interested you can view the automated tests that are run in the `tests/` directory of the exercise repos.
+
+#### Known bugs and issues with Repl.it and Github integration
+
+The Repl.it integration with the exercises from this course is still in beta, so some features are not as slick or as user-friendly as one might like. The notes below describe some of the known issues and propose some workarounds.
+
+Repl's authorisation process is long winded and requires quite a bit of refreshing the page, exiting and coming back. Make sure you are signed into Repl.it with your Github account _before_ accepting the assignment.
+
+Sometimes the 'Work in Repl.it' button doesn't show up in the Github repository after it is created. You can manually force the link to show by clicking _update_ in the page that appears after you 'Accept this exercise on Google Classroom'. If this doesn't work, you can 'Import' your repository into Repl.it directly from Github following the instructions [here](https://blog.repl.it/github#:~:text=Now%20you%20can%20instantly%20run,to%20README%20files%20near%20you.).  
 
 Positive
-: **Exercise - Sandbox** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/sandbox.git)
+: You can run a program in Atom by the keyboard combination Ctrl+Shift+B, if you have the `script` package installed as in the first part. In order to _test_ the program in Atom, you will need an understanding of the file structure and use of your computer's terminal. This process is not explicitly covered in these notes, but you can find out more information [in these pages](https://realpython.com/pytest-python-testing/).  
+
+Even though running the program is straightforward, a lot is happenings behind the scenes. When a program is run, the source code is first compiled into Python bytecode. This compilation process is done by the Python compiler, which itself is a program. Following that, the program gets executed, meaning the commands are executed one-by-one by a Python interpreter that is able to read Python bytecode.
 
 ### Programmers Write Source Code
 
@@ -76,6 +90,32 @@ if __name__ == '__main__':
 main()
 ```
 
+## Using a local development environment
+Duration: 01:00:00
+
+### What you'll learn
+* Become familiar with the Atom development environment used in this course.
+* How to download and submit programming exercises.
+
+As discussed in the first section, the text editor we recommend and support on this course is called Atom. Atom is not [technically](https://www.quora.com/Is-Atom-an-IDE-or-Text-Editor) an IDE, but comes with many useful plugins that can be used to mimic the functionality of an IDE. We will use the `script` and `atom-python-test` plugins predominantly on this course.
+
+To start setting up a local development environment, you will need:
+
+1. Python installed on your computer
+2. Atom development environment
+
+Installation instructions for Python and Atom can be found below:
+
+- [Python installation guide (Windows)](https://www.python.org/downloads/)
+- [Atom installation guide (Windows)](https://flight-manual.atom.io/getting-started/sections/installing-atom/)
+
+Once you have created the user account and installed Python and Atom, watch the video below. The video demonstrates what happens when Atom is opened for the first time. We log into Github and do the first programming exercise.
+
+replace-with-video
+
+Positive
+: **Exercise - Sandbox** <br><br> Read the instructions for the exercise and commit the solution via Github. <br><br> [Source files on Github](https://github.com/den01-python-programming/sandbox.git)
+
 ### Running Python commands in Atom
 
 The Atom development environment has several packages available which allow you to run your Python programs directly inside the editor. The most popular of these at the time of writing is the `script` package. You can read more about `script` at [this link](https://atom.io/packages/script).
@@ -100,16 +140,6 @@ It is important to be able to successfully complete these steps to be able to co
 
 Positive
 : For the vast majority of the exercises, it will suffice to run your Python programs in this way. However, if you require virtual environments, `pip` installs or testing frameworks, it is crucial to understand how to run commands in the terminal and make this your preferred option. We will cover this in the following section.
-
-### [Update] A new workflow with Github Classroom and Repl.it IDE
-
-The recommended way to download, run and submit the exercises is above, but if you are having trouble installing Python or Atom, or you are on a Chromebook or device for which you don't have administrative rights, you can use [Repl.it](https://repl.it/~) to download, run, test and submit the exercises. 
-
-**Note:** This feature is currently (as of May 2020) in beta, so may not work as expected.
-
-You can watch the video below to see the steps required to work on the exercises in Repl.it or read more about the process in the [Github documentation](https://classroom.github.com/help/student-experience-replit).
-
-replace-with-replit-video
 
 ## The command line
 Duration: 00:30:00
