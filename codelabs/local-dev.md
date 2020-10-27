@@ -16,6 +16,9 @@ Duration: 00:30:00
 * Become familiar with the Atom development environment used in this course.
 * How to download and submit programming exercises.
 
+Positive
+: **Note:** If you don't want or need to set up a local development environment at this stage, and you are happy working in Repl.it, you can safely [skip ahead](https://scott3142.uk/python-programming/codelabs/part-1/index.html?index=..%2F..index#0) to Part 1 of the notes. <br><br> If you are just starting out with Python and you're not planning to do any serious software development yet, this is probably the recommended course of action. <br><br> If you'd like to set up Python on your computer, read on below.
+
 As discussed in the Getting Started section, the text editor we recommend and support on this course is called Atom. Atom is not [technically](https://www.quora.com/Is-Atom-an-IDE-or-Text-Editor) an IDE, but comes with many useful plugins that can be used to mimic the functionality of an IDE. We will use the `script` and `atom-python-test` plugins predominantly on this course.
 
 To start setting up a local development environment, you will need:
