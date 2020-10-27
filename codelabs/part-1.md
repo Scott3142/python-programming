@@ -29,7 +29,7 @@ Negative
 In this material, text boxes like the one above demonstrate an output produced by the example code. Accordingly, the above program would produce the print output "Hello World!". You can try any of these examples in the exercise template named "sandbox", which you will find in the Github repository you cloned in the [first part](https://scott3142.uk/python-programming/codelabs/getting-started/index.html).
 
 Positive
-: **Note:** <br><br> The rest of this course assumes from this point on that you can: <br><br> - [Run Python files in the terminal...](https://scott3142.uk/python-programming/codelabs/getting-started/index.html) <br> - [...preferably in a virtual environment](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#3) <br> - [Clone a repository from Github](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#4) <br> - [Push your completed repository back to Github](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#4). <br><br> If you haven't _at least_ done this with the [sandbox exercise](https://github.com/den01-python-programming/sandbox.git) yet, please make sure you do this _now_ before continuing.
+: **Note:** <br><br> The rest of this course assumes from this point on that either: <br><br> - You are comfortable with the [Repl.it integration](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#0). <br><br> Or you can: <br><br> - [Run Python files in the terminal...](https://scott3142.uk/python-programming/codelabs/getting-started/index.html) <br> - [...preferably in a virtual environment](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#3) <br> - [Clone a repository from Github](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#4) <br> - [Push your completed repository back to Github](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#4). <br><br> If you haven't _at least_ done this with the [sandbox exercise](https://github.com/den01-python-programming/sandbox.git) yet, please make sure you do this _now_ before continuing.
 
 You can print any text you want with `print`, as long as you use the command `print("arbitrary text")`. The command below will print the text "Hello there!".
 
@@ -81,7 +81,7 @@ replace-with-video
 
 ### Using the Repl.it browser-based software
 
-See [here](https://scott3142.uk/python-programming/codelabs/local-development-environment/index.html?index=..%2F..index#0) for an overview of how to set up and access Repl.it, including how to test the code before submitting it to Github. The video below talks you through this process.
+See [here](https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#0) for an overview of how to set up and access Repl.it, including how to test the code before submitting it to Github. The video below talks you through this process.
 
 replace-with-replit-video
 

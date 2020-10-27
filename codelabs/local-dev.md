@@ -10,7 +10,7 @@ analytics account: UA-49751789-4
 # Local Development Environments
 
 ## Using a local development environment
-Duration: 01:00:00
+Duration: 00:30:00
 
 ### What you'll learn
 * Become familiar with the Atom development environment used in this course.

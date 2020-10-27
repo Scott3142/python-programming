@@ -9,8 +9,8 @@ analytics account: UA-49751789-4
 
 # Getting Started
 
-## USing these notes
-Duration: 01:00:00
+## Using these notes
+Duration: 00:20:00
 
 ### What you'll learn
 * An introduction to Python, and how to get started with this course.
@@ -21,7 +21,7 @@ There are many IDEs that can be used with Python, including [PyCharm](https://ww
 
 If you would like to work inside a local development environment on your machine, you can [skip ahead](https://scott3142.uk/python-programming/codelabs/local-development-environment/index.html?index=..%2F..index#1) to the next section, but if you are having trouble installing Python or Atom, or you are on a Chromebook or device for which you don't have administrative rights then read on for a browser-based solution using the software [Repl.it](https://repl.it/~).
 
-### Tthe browser-based software Repl.it
+### The browser-based software Repl.it
 
 There is an alternative method available for accessing the materials in this course, based around browser-based software [Repl.it](https://repl.it/~). This method will be useful if you don't particularly want or need to set up a local development environment, if you are having trouble installing Python or Atom, or you are on a Chromebook or device for which you don't have administrative rights. To begin this course, you will need to sign up for a [Github](https://github.com) account.
 
@@ -39,7 +39,7 @@ You can test your code to see if it is correct before submitting the exercises b
 python -m pytest
 ```
 
-We will cover testing in greater detail later in the notes [(see here)](https://scott3142.uk/python-programming/codelabs/part-6/index.html?index=..%2F..index#2), but if you are interested you can view the automated tests that are run in the `tests/` directory of the exercise repos.
+We will cover testing in greater detail later in the notes ([see here](https://scott3142.uk/python-programming/codelabs/part-6/index.html?index=..%2F..index#2)), but if you are interested you can view the automated tests that are run in the `tests/` directory of the exercise repos.
 
 #### Known bugs and issues with Repl.it and Github integration
 
@@ -91,4 +91,4 @@ main()
 ```
 
 Positive
-: **Note:** If you don't want or need to set up a local development environment at this stage, and you are happy working in Repl.it, you can safely [skip ahead]() to Part 1 of the notes. If you are just starting out with Python and you're not planning to do any serious software development yet, this is probably the recommended course of action. If you'd like to set up Python on your computer, gain an understanding of the command line and Git, carry on to the [next section](). 
+: **Note:** If you don't want or need to set up a local development environment at this stage, and you are happy working in Repl.it, you can safely [skip ahead](https://scott3142.uk/python-programming/codelabs/part-1/index.html?index=..%2F..index#0) to Part 1 of the notes. If you are just starting out with Python and you're not planning to do any serious software development yet, this is probably the recommended course of action. If you'd like to set up Python on your computer, gain an understanding of the command line and Git, carry on to the [next section](https://scott3142.uk/python-programming/codelabs/local-development-environment/index.html?index=..%2F..index#0).
