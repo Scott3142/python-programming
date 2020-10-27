@@ -81,7 +81,7 @@ replace-with-video
 
 ### Using the Repl.it browser-based software
 
-See [here](https://google.com) for an overview of how to set up and access Repl.it, including how to test the code before submitting it to Github. The video below talks you through this process.
+See [here](https://scott3142.uk/python-programming/codelabs/local-development-environment/index.html?index=..%2F..index#0) for an overview of how to set up and access Repl.it, including how to test the code before submitting it to Github. The video below talks you through this process.
 
 replace-with-replit-video
 

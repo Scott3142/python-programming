@@ -6,6 +6,7 @@
 
 claat export faqs.md
 claat export local-dev.md
+claat export getting-started.md
 claat export part-1.md
 claat export part-2.md
 claat export part-3.md
