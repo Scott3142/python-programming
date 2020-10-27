@@ -77,6 +77,8 @@ Here's the second programming exercise of this course. If you'd like, you can wa
 
 ### Using a local development environment
 
+See [here](https://scott3142.uk/python-programming/codelabs/local-development-environment/index.html?index=..%2F..index#0) for an overview of how to set up a local development environment, including how to test the code before submitting it to Github. The video below talks you through this process.
+
 replace-with-video
 
 ### Using the Repl.it browser-based software
