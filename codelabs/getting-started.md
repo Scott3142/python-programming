@@ -25,29 +25,11 @@ If you would like to work inside a local development environment on your machine
 
 There is an alternative method available for accessing the materials in this course, based around browser-based software [Repl.it](https://repl.it/~). This method will be useful if you don't particularly want or need to set up a local development environment, if you are having trouble installing Python or Atom, or you are on a Chromebook or device for which you don't have administrative rights. To begin this course, you will need to sign up for a [Github](https://github.com) account.
 
-**Note:** This feature is currently (as of October 2020) in beta, so may not work as expected.
-
-You can watch the video below to see the steps required to work on the exercises in Repl.it or read more about the process in the [Github documentation](https://classroom.github.com/help/student-experience-replit).
-
-replace-with-replit-video
-
-#### Testing your code in Repl.it
-
 You can test your code to see if it is correct before submitting the exercises back to Github. You can invoke and run the `pytest` library with the following command, directly inside Repl.it.
 
 ```
 python -m pytest
 ```
-
-We will cover testing in greater detail later in the notes ([see here](https://scott3142.uk/python-programming/codelabs/part-6/index.html?index=..%2F..index#2)), but if you are interested you can view the automated tests that are run in the `tests/` directory of the exercise repos.
-
-#### Known bugs and issues with Repl.it and Github integration
-
-The Repl.it integration with the exercises from this course is still in beta, so some features are not as slick or as user-friendly as one might like. The notes below describe some of the known issues and propose some workarounds.
-
-Repl's authorisation process is long winded and requires quite a bit of refreshing the page, exiting and coming back. Make sure you are signed into Repl.it with your Github account _before_ accepting the assignment.
-
-Sometimes the 'Work in Repl.it' button doesn't show up in the Github repository after it is created. You can manually force the link to show by clicking _update_ in the page that appears after you 'Accept this exercise on Google Classroom'. If this doesn't work, you can 'Import' your repository into Repl.it directly from Github following the instructions [here](https://blog.repl.it/github#:~:text=Now%20you%20can%20instantly%20run,to%20README%20files%20near%20you.).
 
 ### Programmers Write Source Code
 

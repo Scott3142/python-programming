@@ -39,8 +39,7 @@ while getopts ":o:" opt; do
     o)
       if [ "$OPTARG" = "local" ]; then
         echo "Serving codelabs locally." >&2
-        find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-video<\/p>/$replaceVideo/g" {} \;
-     	find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-replit-video<\/p>/$replaceReplitVideo/g" {} \;
+        find . -type f -name 'index.html' -exec sed -i 's/https:\/\/storage\.googleapis\.com\/codelab-elements\/codelab-elements\.js/\.\.\/\.\.\/elements\/codelab-elements\/codelab-elements\.js/g' {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-perception-video<\/p>/$replacePerception/g" {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-0<\/p>/$replaceSummaryZero/g" {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-1<\/p>/$replaceSummaryOne/g" {} \;
@@ -56,7 +55,6 @@ while getopts ":o:" opt; do
         echo "Be aware - this is okay, but it loads the codelabs from scott3142.uk" >&2
         find . -type f -name 'index.html' -exec sed -i 's/https:\/\/storage\.googleapis\.com\/codelab-elements\/codelab-elements\.js/\.\.\/\.\.\/elements\/codelab-elements\/codelab-elements\.js/g' {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-video<\/p>/$replaceVideo/g" {} \;
-    	find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-replit-video<\/p>/$replaceReplitVideo/g" {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-perception-video<\/p>/$replacePerception/g" {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-0<\/p>/$replaceSummaryZero/g" {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-1<\/p>/$replaceSummaryOne/g" {} \;
@@ -72,7 +70,6 @@ while getopts ":o:" opt; do
         echo "Deploying landing page and codelabs." >&2
         find . -type f -name 'index.html' -exec sed -i 's/https:\/\/storage\.googleapis\.com\/codelab-elements\/codelab-elements\.js/\.\.\/\.\.\/elements\/codelab-elements\/codelab-elements\.js/g' {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-video<\/p>/$replaceVideo/g" {} \;
-	find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-replit-video<\/p>/$replaceReplitVideo/g" {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-perception-video<\/p>/$replacePerception/g" {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-0<\/p>/$replaceSummaryZero/g" {} \;
         find . -type f -name 'index.html' -exec sed -i "s/<p>replace-with-summary-form-1<\/p>/$replaceSummaryOne/g" {} \;
