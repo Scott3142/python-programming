@@ -9,7 +9,7 @@
   <title>Part 7</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
   <style>
     .success {
       color: #1e8e3e;
@@ -29,7 +29,7 @@
     
       <google-codelab-step label="Programming paradigms" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul>
+<ul class="checklist">
 <li>You know the concept of a programming paradigm.</li>
 <li>You know what is meant by procedural and object-oriented programming.</li>
 </ul>
@@ -38,8 +38,8 @@
 <p>The most common programming paradigms today are object-oriented programming, procedural programming, and functional programming. The first two of these are briefly discussed in what follows.</p>
 <h2 is-upgraded>Object-Oriented Programming</h2>
 <p>In object-oriented programming, information is represented as classes that describe the concepts of the problem domain and the logic of the application. Classes define the methods that determine how information is handled. During program execution, classes are instantiated from objects that contain runtime information and that also have an effect on program execution: program execution typically proceeds through a series of method calls related to the objects. As mentioned a few weeks ago, &#34;the program is built from small, clear, and cooperative entities.&#34;</p>
-<p>The basic ideas of object-oriented programming, i.e., the representation of information and its processing methods with he help of classes and objects, first appeared in <a href="https://en.wikipedia.org/wiki/Simula" target="_blank">Simula 67</a>, which was designed for developing simulations and the <a href="https://en.wikipedia.org/wiki/Smalltalk" target="_blank">Smalltalk</a> programming language. Its breakthrough came in the 1980s through the <a href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank">C++</a> programming language and <a href="https://en.wikipedia.org/wiki/Java_(programming_language" target="_blank">Java</a> has made it one of the most widely used programming paradigms in the world.</p>
-<p>One of the major benefits of object-oriented programming is how problem-domain concepts are modelled through classes and objects, which makes programs easier to understand. In addition, structuring the problem domain into classes facilitates the construction and maintenance of programs. However, object-oriented programming is not inherently suited to all problems: for example, scientific computing and statistics applications typically make use of languages, such as <a href="https://en.wikipedia.org/wiki/R_(programming_language" target="_blank">R</a>, <a href="https://en.wikipedia.org/wiki/MATLAB" target="_blank">Matlab</a> or <a href="https://en.wikipedia.org/wiki/fortran" target="_blank">Fortran</a>.</p>
+<p>The basic ideas of object-oriented programming, i.e., the representation of information and its processing methods with he help of classes and objects, first appeared in <a href="https://en.wikipedia.org/wiki/Simula" target="_blank">Simula 67</a>, which was designed for developing simulations and the <a href="https://en.wikipedia.org/wiki/Smalltalk" target="_blank">Smalltalk</a> programming language. Its breakthrough came in the 1980s through the <a href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank">C++</a> programming language and [Java](https://en.wikipedia.org/wiki/Java_(programming_language) has made it one of the most widely used programming paradigms in the world.</p>
+<p>One of the major benefits of object-oriented programming is how problem-domain concepts are modelled through classes and objects, which makes programs easier to understand. In addition, structuring the problem domain into classes facilitates the construction and maintenance of programs. However, object-oriented programming is not inherently suited to all problems: for example, scientific computing and statistics applications typically make use of languages, such as [R](https://en.wikipedia.org/wiki/R_(programming_language), <a href="https://en.wikipedia.org/wiki/MATLAB" target="_blank">Matlab</a> or <a href="https://en.wikipedia.org/wiki/fortran" target="_blank">Fortran</a>.</p>
 <h2 is-upgraded>Procedural programming</h2>
 <p>Whereas in object-oriented programming, the structure of a program is formed by the data it processes, in procedural programming, the structure of the program is formed by functionality desired for the program: the program acts as a step-by-step guide for the functionality to be performed. The program is executed one step at a time, and subroutines (methods) are called whenever necessary.</p>
 <p>In procedural programming, the state of the program is maintained in variables and tables, and any methods handle only the values provided to them as parameters. The program tells the computer what should happen. As an example, the code below demonstrates the swapping of values for two variables a and b</p>
@@ -131,17 +131,15 @@ while True:
     print(clock)
     clock.advance()
 </code></pre>
-<aside class="special"><p><strong>Exercise - Liquid containers <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/cZlvD3xo" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Liquid containers 2.0 <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/Gw9pLiUg" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>Exercise - Liquid containers <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/cZlvD3xo" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Liquid containers 2.0 <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/Gw9pLiUg" target="_blank">Accept exercise on Github Classroom</a></p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Algorithms" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul>
+<ul class="checklist">
 <li>You understand the concept of algorithms and you are familiar with a few algorithms</li>
 <li>You can explain how selection sort works</li>
 <li>You can explain how the linear search and binary search algorithms work</li>
@@ -153,8 +151,7 @@ while True:
 <p>If the information (data) given to a computer, doesn&#39;t follow any rules and isn&#39;t in order, retrieving that information is taxing for the computer. We need order!</p>
 <h3 is-upgraded>Selection sort</h3>
 <p>Every programmer should be familiar with at least one sorting algorithm (i.e a way to sort an array). Let&#39;s familiarize ourselves with one &#34;classic&#34; sorting algorithm, the selection sort. We&#39;ll do so with a programing exercise.</p>
-<aside class="special"><p><strong>Exercise - Sorting <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/GWk2cE4F" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>Exercise - Sorting <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/GWk2cE4F" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Built-in sorting algorithms in Python</h2>
 <p>Python offers a significant amount of ready to use sorting algorithms. Arrays can be sorted (into their natural order) using the class method <code>sort</code> of the <code>List</code>-class.</p>
 <pre><code language="language-python" class="language-python">numbers = [8, 3, 7, 9, 1, 2, 4]
@@ -162,8 +159,7 @@ print(numbers)
 numbers.sort()
 print(numbers)
 </code></pre>
-<aside class="warning"><p>[8, 3, 7, 9, 1, 2, 4] <br> [1, 2, 3, 4, 7, 8, 9]</p>
-</aside>
+<p>Negative : [8, 3, 7, 9, 1, 2, 4] <br> [1, 2, 3, 4, 7, 8, 9]</p>
 <pre><code language="language-python" class="language-python">numbers = []
 numbers.append(8)
 numbers.append(3)
@@ -172,11 +168,9 @@ print(numbers)
 numbers.sort(reverse=True) # descending order
 print(numbers)
 </code></pre>
-<aside class="warning"><p>[8, 3, 7] <br> [8, 7, 3]</p>
-</aside>
+<p>Negative : [8, 3, 7] <br> [8, 7, 3]</p>
 <p>Python&#39;s build-in sorting algorithms work with value type variables and some of Python&#39;s build-in reference type variables, like String. In order for our own classes to be sorted, we need to provide Python with some tips on how to do that, because the classes themselves don&#39;t contain information on how objects created from them should be ordered. We&#39;ll get back to ordering objects created from classes we made ourselves in the advanced course in programming.</p>
-<aside class="special"><p><strong>Exercise - Ready made sorting algorithms <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/VrUVPArI" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>Exercise - Ready made sorting algorithms <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/VrUVPArI" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Information retrieval</h2>
 <p>Next let&#39;s take a look at algorithms meant for information retrieval.</p>
 <h3 is-upgraded>Linear search</h3>
@@ -191,20 +185,16 @@ print(numbers)
 <p>In the worst case scenario, i.e when the value searched for isn&#39;t found, the algorithm has to do as many comparisons as there are values in the array. In an array containing, say, 10 million values, this means 10 comparisons. If we are doing more than one search, it makes sense to try and improve efficiency.</p>
 <h2 is-upgraded>Binary search (aka half-interval search or logarithmic search)</h2>
 <p>When the data searched is in order, searching can be implemented a lot more efficiently than in linear search. The idea behind Binary Search is to start looking for the searched value in the middle index of the array (or list), compare the value found there to the searched value, and if needed (i.e, when the value isn&#39;t found there) eliminate half of the search area.</p>
-<aside class="special"><p><strong>Exercise - Searching <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/TFg0Jly7" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>Exercise - Searching <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/TFg0Jly7" target="_blank">Accept exercise on Github Classroom</a></p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Larger exercises" duration="60">
         <p>To conclude the seventh part, you&#39;ll do a few more extensive exercises. There is no predefined structure for these tasks – think about the classes and objects that will help you complete the task while you&#39;re completing it.</p>
-<aside class="special"><p><strong>Exercise - Grade statistics <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/R5kii8LH" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Recipe search <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/uUJNdrjL" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Big year <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/o5Sug2OL" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>Exercise - Grade statistics <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/R5kii8LH" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Recipe search <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/uUJNdrjL" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Big year <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/o5Sug2OL" target="_blank">Accept exercise on Github Classroom</a></p>
 
 
       </google-codelab-step>
@@ -222,10 +212,10 @@ print(numbers)
     
   </google-codelab>
 
-  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
-  <script src="../../elements/codelab-elements/codelab-elements.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
   <script src="//support.google.com/inapp/api.js"></script>
 
 </body>

@@ -49,6 +49,7 @@
     "gulp-gh-pages-gift": "^0.5.5",
     "lodash.template": "^4.5.0",
     "ncp": "^2.0.0",
-    "open": "^6.0.0"
+    "open": "^6.0.0",
+    "sass": "^1.57.1"
   }
 }

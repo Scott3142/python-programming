@@ -9,7 +9,7 @@
   <title>Part 6</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
   <style>
     .success {
       color: #1e8e3e;
@@ -29,7 +29,7 @@
     
       <google-codelab-step label="Objects on a list and a list as part of an object" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul>
+<ul class="checklist">
 <li>You review the use of lists.</li>
 <li>You know how to use a list as an instance variable.</li>
 </ul>
@@ -58,12 +58,9 @@ list.add_song(&#34;22&#34;)
 list.add_song(&#34;Blank Space&#34;)
 list.print_songs()
 </code></pre>
-<aside class="warning"><p>22 <br> Blank Space</p>
-</aside>
-<aside class="special"><p><strong>Exercise - Menu <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/ukuWAqev" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Stack <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/72V9oFWp" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Negative : 22 <br> Blank Space</p>
+<p>Positive : <strong>Exercise - Menu <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/ukuWAqev" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Stack <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/72V9oFWp" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Objects in an Instance Variable List</h2>
 <p>A list that is an object&#39;s instance variable can contain objects other than strings as long as the type of objects in the list is specified when defining the list.</p>
 <p>In the previous section, we created a class called <code>AmusementParkRide</code>, which was used to check whether or not a person was eligible to get on a particular ride. The <code>Amusement park</code> class looks like the following.</p>
@@ -113,8 +110,7 @@ list.print_songs()
         return self.name + &#34;, minimum height requirement: &#34; + str(self.minimum_height) +
             &#34;, visitors: &#34; + str(self.visitors)
 </code></pre>
-<aside class="special"><p><strong>Exercise - Messaging Service <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/AjCY-2PX" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>Exercise - Messaging Service <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/AjCY-2PX" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Printing an Object from a List</h2>
 <p>Let&#39;s now modify the <code>__str__</code> method so that the string returned by the method contains the name of each and every person on the ride.</p>
 <pre><code language="language-python" class="language-python">class AmusementParkRide:
@@ -173,8 +169,7 @@ else:
 print(megafobia)
 </code></pre>
 <p>The program&#39;s output is:</p>
-<aside class="warning"><p>Megafobia, minimum height requirement: 140, visitors: 0 <br> riding: <br><br> Matt is allowed on the ride <br> Ada is not allowed on the ride <br> Megafobia, minimum height requirement: 140, visitors: 1 <br> riding: <br> Matt</p>
-</aside>
+<p>Negative : Megafobia, minimum height requirement: 140, visitors: 0 <br> riding: <br><br> Matt is allowed on the ride <br> Ada is not allowed on the ride <br> Megafobia, minimum height requirement: 140, visitors: 1 <br> riding: <br> Matt</p>
 <p>Even though there is no one on the ride, the string <code>riding:</code> is on the print output. Let&#39;s modify the <code>__str__</code> method so that if there is no one on the ride, the string returned by the method informs of it.</p>
 <pre><code language="language-python" class="language-python">class AmusementParkRide:
       def __init__(self,name,minimum_height):
@@ -201,10 +196,8 @@ print(megafobia)
         return printOutput + &#34;\n&#34; + &#34;on the ride:\n&#34; + peopleOnRide
 </code></pre>
 <p>The print output has now been improved.</p>
-<aside class="warning"><p>Megafobia, minimum height requirement: 140, visitors: 0 <br> no one is on the ride. <br><br> Matt is allowed on the ride <br> Ada is not allowed on the ride <br> Megafobia, minimum height requirement: 140, visitors: 1 <br><br> on the ride: <br> Matt</p>
-</aside>
-<aside class="special"><p><strong>Exercise - Printing a Collection <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/g9JjRSOt" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Negative : Megafobia, minimum height requirement: 140, visitors: 0 <br> no one is on the ride. <br><br> Matt is allowed on the ride <br> Ada is not allowed on the ride <br> Megafobia, minimum height requirement: 140, visitors: 1 <br><br> on the ride: <br> Matt</p>
+<p>Positive : <strong>Exercise - Printing a Collection <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/g9JjRSOt" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Clearing an Object&#39;s List</h2>
 <p>We&#39;ll next add a <code>remove_everyone_on_ride</code> method to the amusement park ride, which removes each and every person currently on the ride. The list method <code>clear</code> is very handy here.</p>
 <pre><code language="language-python" class="language-python">class AmusementParkRide:
@@ -250,8 +243,7 @@ print()
 print(megafobia)
 </code></pre>
 <p>The program&#39;s output is:</p>
-<aside class="warning"><p>Megafobia, minimum height requirement: 140, visitors: 0 <br> no one is on the ride. <br><br> Matt is allowed on the ride <br> Ada is not allowed on the ride <br> Megafobia, minimum height requirement: 140, visitors: 1 <br><br> on the ride: <br> Matt <br><br> Megafobia, minimum height requirement: 140, visitors: 1 <br> no one is on the ride.</p>
-</aside>
+<p>Negative : Megafobia, minimum height requirement: 140, visitors: 0 <br> no one is on the ride. <br><br> Matt is allowed on the ride <br> Ada is not allowed on the ride <br> Megafobia, minimum height requirement: 140, visitors: 1 <br><br> on the ride: <br> Matt <br><br> Megafobia, minimum height requirement: 140, visitors: 1 <br> no one is on the ride.</p>
 <h2 is-upgraded>Calculating a Sum from Objects on a List</h2>
 <p>Let&#39;s now create a method for the amusement park ride that calculates the average height of the people currently on it. Average height can obtained by calculating the average from the persons on the ride – the average is calculated by adding up the individual values and dividing that sum by the number of values.</p>
 <p>The implementation underneath returns <code>-1</code> if not a single person is on the ride. The result of <code>-1</code> is impossible in a program that calculates averages. Based on that, we can determine that the average could not have been calculated.</p>
@@ -291,10 +283,8 @@ print(megafobia)
 print(megafobia.average_height_of_people_on_ride())
 </code></pre>
 <p>The program&#39;s output is:</p>
-<aside class="warning"><p>Megafobia, minimum height requirement: 140, visitors: 2 <br><br> on the ride: <br> Matt <br> Grace <br><br> 187.0</p>
-</aside>
-<aside class="special"><p><strong>Exercise - Santa&#39;s Workshop <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/FPW0BHn3" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Negative : Megafobia, minimum height requirement: 140, visitors: 2 <br><br> on the ride: <br> Matt <br> Grace <br><br> 187.0</p>
+<p>Positive : <strong>Exercise - Santa&#39;s Workshop <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/FPW0BHn3" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Retrieving a Specific Object from a List</h2>
 <p>We&#39;ll now create a method for the amusement park ride that returns the tallest person on the ride. As such, the method should both retrieve the tallest person from the list and return it.</p>
 <p>Methods that retrieve objects from a list should be implemented in the following way. First off, we&#39;ll check whether or not the list is empty - if it is, we return a <code>None</code> reference or some other value indicating that the list had no values. After that, we create an object reference variable that describes the object to be returned. We set the first object on the list as its value. We then go through the values on the list by comparing each list object with the object variable representing the object to be returned. If the comparison finds a better matching object, its assigned to the object reference variable to be returned. Finally, we return the object variable describing the object that we want to return.</p>
@@ -349,27 +339,22 @@ print(megafobia.get_tallest().get_name())
 tallest = megafobia.get_tallest()
 print(tallest.get_name())
 </code></pre>
-<aside class="warning"><p>Megafobia, minimum height requirement: 140, visitors: 2 <br> on the ride: <br> Matt <br> Grace <br><br> 187.0 <br><br> Grace <br> Grace</p>
-</aside>
-<aside class="special"><p><strong>Exercise - Longest in collection <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/3J7VJgU_" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Height order <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/4XssivL_" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Cargo hold <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/vra_XcbC" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Negative : Megafobia, minimum height requirement: 140, visitors: 2 <br> on the ride: <br> Matt <br> Grace <br><br> 187.0 <br><br> Grace <br> Grace</p>
+<p>Positive : <strong>Exercise - Longest in collection <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/3J7VJgU_" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Height order <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/4XssivL_" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Cargo hold <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/vra_XcbC" target="_blank">Accept exercise on Github Classroom</a></p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Separating the user interface from program logic" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul>
+<ul class="checklist">
 <li>You understand creating programs so that the user interface and the application logic are separated</li>
 <li>You can create a textual user interface, which takes program specific application logic as a parameter</li>
 </ul>
 <p>Let&#39;s examine the process of implementing a program and separating different areas of responsibility from each other. The program asks the user to write words until they write the same word twice.</p>
-<aside class="warning"><p>Write a word: <em>User: &lt;carrot&gt; <br></em> Write a word: <em>User: &lt;turnip&gt;</em> Write a word:<em>User: &lt;potato&gt; <br></em> Write a word: <em>User: &lt;celery&gt; <br></em> Write a word: <em>User: &lt;potato&gt; <br></em> You wrote the same word twice!</p>
-</aside>
+<p>Negative : Write a word: <em>User: &lt;carrot&gt; <br></em> Write a word: <em>User: &lt;turnip&gt;</em> Write a word:<em>User: &lt;potato&gt; <br></em> Write a word: <em>User: &lt;celery&gt; <br></em> Write a word: <em>User: &lt;potato&gt; <br></em> You wrote the same word twice!</p>
 <p>Let&#39;s build this program piece by piece. One of the challenges is that it is difficult to decide how to approach the problem, or how to split the problem into smaller subproblems, and from which subproblem to start.</p>
 <p>There is no one clear answer – sometimes it is good to start from the problem domain and its concepts and their connections, sometimes it is better to start from the user interface.</p>
 <p>We could start implementing the user interface by creating a class UserInterface:</p>
@@ -425,8 +410,7 @@ print(tallest.get_name())
     return False
 </code></pre>
 <p>Now the loop continues until the input equals the word &#34;end&#34;:</p>
-<aside class="warning"><p>Write a word: <em>User: &lt;carrot&gt; <br></em> Write a word: <em>User: &lt;turnip&gt;</em> Write a word:<em>User: &lt;potato&gt; <br></em> Write a word: <em>User: &lt;celery&gt; <br></em> Write a word: <em>User: &lt;end&gt; <br></em> You wrote the same word twice!</p>
-</aside>
+<p>Negative : Write a word: <em>User: &lt;carrot&gt; <br></em> Write a word: <em>User: &lt;turnip&gt;</em> Write a word:<em>User: &lt;potato&gt; <br></em> Write a word: <em>User: &lt;celery&gt; <br></em> Write a word: <em>User: &lt;end&gt; <br></em> You wrote the same word twice!</p>
 <p>The program doesn&#39;t completely work yet, but the first sub-problem - quitting the loop when a certain condition has been reached - has now been implemented.</p>
 <h2 is-upgraded>Storing relevant information</h2>
 <p>Another sub-problem is remembering the words that have already been entered. A list is a good structure for this purpose.</p>
@@ -483,8 +467,7 @@ for word in self.words:
 <p>Now the application works as intended.</p>
 <h2 is-upgraded>Objects as a natural part of problem solving</h2>
 <p>We just built a solution to a problem where the program reads words from a user until the user enters a word that has already been entered before. Our example input was as follows:</p>
-<aside class="warning"><p>Write a word: <em>User: &lt;carrot&gt; <br></em> Write a word: <em>User: &lt;turnip&gt;</em> Write a word:<em>User: &lt;potato&gt; <br></em> Write a word: <em>User: &lt;celery&gt; <br></em> Write a word: <em>User: &lt;potato&gt; <br></em> You wrote the same word twice!</p>
-</aside>
+<p>Negative : Write a word: <em>User: &lt;carrot&gt; <br></em> Write a word: <em>User: &lt;turnip&gt;</em> Write a word:<em>User: &lt;potato&gt; <br></em> Write a word: <em>User: &lt;celery&gt; <br></em> Write a word: <em>User: &lt;potato&gt; <br></em> You wrote the same word twice!</p>
 <p>We came up with the following solution:</p>
 <pre><code language="language-python" class="language-python">class UserInterface:
 
@@ -632,18 +615,17 @@ def main():
         return True
 </code></pre>
 <p>The method ‘palindromes&#39; uses the helper method ‘is_palindrome&#39; to check whether the word that&#39;s given to it as a parameter is, in fact, a palindrome.</p>
-<aside class="special"><p><strong>Recycling <br><br></strong> When concepts have been separated into different classes in the code, recycling them and reusing them in other projects becomes easy. For example, the class ‘WordSet&#39; could be well be used in a graphical user interface, and it could also part of a mobile phone application. In addition, testing the program is much easier when it has been divided into several concepts, each of which has its own separate logic and can function alone as a unit.</p>
-</aside>
+<p>Positive : <strong>Recycling <br><br></strong> When concepts have been separated into different classes in the code, recycling them and reusing them in other projects becomes easy. For example, the class ‘WordSet&#39; could be well be used in a graphical user interface, and it could also part of a mobile phone application. In addition, testing the program is much easier when it has been divided into several concepts, each of which has its own separate logic and can function alone as a unit.</p>
 <h2 is-upgraded>Programming tips</h2>
 <p>In the larger example above, we were following the advice given here.</p>
 <ul>
-<li>Proceed with small steps  <ul>
+<li>Proceed with small steps<ul>
 <li>Try to separate the program into several sub-problems and <strong>work on only one sub-problem at a time</strong></li>
 <li>Always test that the program code is advancing in the right direction, in other words: test that the solution to the sub-problem is correct</li>
 <li>Recognize the conditions that require the program to work differently. In the example above, we needed a different functionality to test whether a word had been already entered before.</li>
 </ul>
 </li>
-<li>Write as &#34;clean&#34; code as possible  <ul>
+<li>Write as &#34;clean&#34; code as possible<ul>
 <li>Indent your code</li>
 <li>Use descriptive method and variable names</li>
 <li>Don&#39;t make your methods too long, not even the main method</li>
@@ -655,14 +637,11 @@ def main():
 <li>If needed, take a step back and assess the program as a whole. If it doesn&#39;t work, it might be a good idea to return into a previous state where the code still worked. As a corollary, we might say that a program that&#39;s broken is rarely fixed by adding more code to it.</li>
 </ul>
 <p>Programmers follow these conventions so that programming can be made easier. Following them also makes it easier to read programs, to keep them up, and to edit them in teams.</p>
-<aside class="special"><p><strong>Exercise - Simple Dictionary <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/HlZjmg0c" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - To do list <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/7zELLDwA" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>Exercise - Simple Dictionary <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/HlZjmg0c" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - To do list <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/7zELLDwA" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>From one entity to many parts</h2>
 <p>Let&#39;s examine a program that asks the user to enter exam points and turns them into grades. Finally, the program prints the distribution of the grades as stars. The program stops reading inputs when the user inputs an empty string. An example program looks as follows:</p>
-<aside class="special"><p>Points: <br> <em>User: &lt;91&gt; <br></em> Points: <br> <em>User: &lt;98&gt; <br></em> Points: <br> <em>User: &lt;103&gt; <br></em> Impossible number. <br> Points: <br> <em>User: &lt;90&gt; <br></em> Points: <br> <em>User: &lt;89&gt; <br></em> Points: <br> <em>User: &lt;89&gt; <br></em> Points: <br> <em>User: &lt;88&gt; <br></em> Points: <br> <em>User: &lt;72&gt; <br></em> Points: <br> <em>User: &lt;54&gt; <br></em> Points: <br> <em>User: &lt;55&gt; <br></em> Points: <br> <em>User: &lt;59&gt; <br></em> Points: <br> <em>User: &lt;41&gt; <br></em> Points: <br> <em>User: &lt;48&gt; <br></em> Points: <br><br> 5: *** <br> 4: *** <br> 3: * <br> 2: <br> 1: *** <br> 0: **</p>
-</aside>
+<p>Positive : Points: <br> <em>User: &lt;91&gt; <br></em> Points: <br> <em>User: &lt;98&gt; <br></em> Points: <br> <em>User: &lt;103&gt; <br></em> Impossible number. <br> Points: <br> <em>User: &lt;90&gt; <br></em> Points: <br> <em>User: &lt;89&gt; <br></em> Points: <br> <em>User: &lt;89&gt; <br></em> Points: <br> <em>User: &lt;88&gt; <br></em> Points: <br> <em>User: &lt;72&gt; <br></em> Points: <br> <em>User: &lt;54&gt; <br></em> Points: <br> <em>User: &lt;55&gt; <br></em> Points: <br> <em>User: &lt;59&gt; <br></em> Points: <br> <em>User: &lt;41&gt; <br></em> Points: <br> <em>User: &lt;48&gt; <br></em> Points: <br><br> 5: *** <br> 4: *** <br> 3: * <br> 2: <br> 1: *** <br> 0: **</p>
 <p>As with almost all programs, this program can be written into main as one entity. Here is one possibility.</p>
 <pre><code language="language-python" class="language-python">def main():
     grades = []
@@ -858,17 +837,15 @@ def main():
             print(&#34;*&#34;)
             stars-= 1
 </code></pre>
-<aside class="special"><p><strong>Exercise - Averages <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/7yQtWaAo" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Joke manager <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/I4B1ArDv" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>Exercise - Averages <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/7yQtWaAo" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Joke manager <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/I4B1ArDv" target="_blank">Accept exercise on Github Classroom</a></p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Introduction to testing" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul>
+<ul class="checklist">
 <li>You can explain about some issues caused by software bugs.</li>
 <li>You know what a stack trace is, the steps taken in troubleshooting, and can give textual test inputs to code.</li>
 <li>You know what unit testing is all about and you can write unit tests.</li>
@@ -878,8 +855,7 @@ def main():
 <h2 is-upgraded>Error Situations and Step-By-Step Problem Resolving</h2>
 <p>Errors end up in the programs that we write. Sometimes the errors are not serious and cause headache mostly to users of the program. Occasionally, however, mistakes can lead to very serious consequences. In any case, it&#39;s certain that a person learning to program makes many mistakes.</p>
 <p>You should never be afraid of or avoid making mistakes since that is the best way to learn. For this reason, try to break the program that you&#39;re working on from time to time to investigate error messages, and to see if those messages tell you something about the error(s) you&#39;ve made.</p>
-<aside class="special"><p><strong>Software Error <br><br></strong> The report in the address <a href="http://sunnyday.mit.edu/accidents/MCO_report.pdf" target="_blank">http://sunnyday.mit.edu/accidents/MCO_report.pdf</a> describes an incident resulting from a more serious software error and also the error itself. <br><br> The bug in the software was caused by the fact that the program in question expected the programmer to use the <a href="https://en.wikipedia.org/wiki/International_System_of_Units" target="_blank">International System of Units</a> (meters, kilograms, ...) in the calculations. However, the programmer had used the <a href="https://en.wikipedia.org/wiki/English_Engineering_units" target="_blank">American Measurement System</a> for some of the system&#39;s calculations, which prevented the satellite navigation auto-correction system from working as inteded. <br><br> The satellite was destroyed, costing millions of dollars of damage.</p>
-</aside>
+<p>Positive : <strong>Software Error <br><br></strong> The report in the address <a href="http://sunnyday.mit.edu/accidents/MCO_report.pdf" target="_blank">http://sunnyday.mit.edu/accidents/MCO_report.pdf</a> describes an incident resulting from a more serious software error and also the error itself. <br><br> The bug in the software was caused by the fact that the program in question expected the programmer to use the <a href="https://en.wikipedia.org/wiki/International_System_of_Units" target="_blank">International System of Units</a> (meters, kilograms, ...) in the calculations. However, the programmer had used the <a href="https://en.wikipedia.org/wiki/English_Engineering_units" target="_blank">American Measurement System</a> for some of the system&#39;s calculations, which prevented the satellite navigation auto-correction system from working as inteded. <br><br> The satellite was destroyed, costing millions of dollars of damage.</p>
 <p>As programs grow in their complexity, finding errors becomes even more challenging.</p>
 <h2 is-upgraded>Stack Trace (Traceback)</h2>
 <p>When an error occurs in a program, the program typically prints something called a stack trace, i.e., the list of method calls that resulted in the error. For example, for a file that contains:</p>
@@ -923,8 +899,7 @@ def test_ada():
 <p>The automated testing method laid out above where the input to a program is modified is quite convenient, but limited nonetheless. Testing larger programs in this way is challenging. One solution to this is unit testing, where small parts of the program are tested in isolation.</p>
 <p>Unit testing refers to the testing of individual components in the source code, such as classes and their provided methods. The writing of tests reveals whether each class and method observes or deviates from the guideline of each method and class having a single, clear responsibility. The more responsibility the method has, the more complex the test. If a large application is written in a single method, writing tests for it becomes very challenging, if not impossible. Similarly, if the application is broken into clear classes and methods, then writing tests is straightforward.</p>
 <p>Ready-made unit test libraries are commonly used in writing tests, which provide methods and help classes for writing tests. The most common unit testing library in Python is <code>unittest</code> but we will advocate the usage of <code>pytest</code> in this course. The code you have been submitting to Github throughout this course has been unit tested along the way. Go back and look through the folders you&#39;ve been submitting. You should see test files in there which are used to verify your code is correct. Explore them!</p>
-<aside class="special"><p><strong>Unit Testing and the Parts of an Application <br><br></strong> Unit testing tends to be extremely complicated if the whole application has been written in one function. To make testing easier, the app should split into small parts, each having a clear responsibility. In the previous section, we practiced this when we separated the user interface from the application logic. Writing tests for parts of an application, such as the ‘JokeManager&#39; class from the exercise in the previous section is significantly easier than writing them for program contained in &#34;main&#34; in its entirety.</p>
-</aside>
+<p>Positive : <strong>Unit Testing and the Parts of an Application <br><br></strong> Unit testing tends to be extremely complicated if the whole application has been written in one function. To make testing easier, the app should split into small parts, each having a clear responsibility. In the previous section, we practiced this when we separated the user interface from the application logic. Writing tests for parts of an application, such as the ‘JokeManager&#39; class from the exercise in the previous section is significantly easier than writing them for program contained in &#34;main&#34; in its entirety.</p>
 <h2 is-upgraded>Test-Driven Development</h2>
 <p><a href="https://en.wikipedia.org/wiki/Test-driven_development" target="_blank">Test-driven development</a> is a software development process that&#39;s based on constructing a piece of software in small iterations. In test-driven software development, the first thing a programmer always does is write an automatically-executable test, which tests a single piece of the computer program.</p>
 <p>The test will not pass because the functionality that satisfies the test, i.e., the part of the computer program to be examined, is missing. Once the test has been written, functionality that meets the test requirements is added to the program. The tests are run again. If all tests pass, a new test is added, or alternatively, if the tests fail, the already-written program is corrected. If necessary, the internal structure of the program will be corrected or refactored, so that the functionality of the program remains the same, but the structure becomes clearer.</p>
@@ -936,10 +911,8 @@ def test_ada():
 <li>Perform the tests. If the tests fail, there is likely to be an error in the functionality written. Correct the functionality - or, if there is no error in the functionality, fix the latest test that was performed.</li>
 <li>Repair the internal structure of the program. As the size of the program increases, its internal structure is adjusted as needed. Methods that are too long are broken down into multiple parts and classes representing concepts are isolated. The tests are not modified, but are instead used to verify the correctness of the changes made to the program&#39;s internal structure - if a change in the program structure changes the functionality of the program, the tests will produce a warning and the programmer can remedy the situation.</li>
 </ol>
-<aside class="special"><p><strong>Exercise - Testing <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/A65FjUdW" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Unit testing <br><br></strong> Unit testing is only a part of software testing. On top of unit testing, a developer also performs integration tests that examine the interoperability of components, such as classes, and interface tests that test the application&#39;s interface through elements provided by the interface, such as buttons. <br><br> These testing methods are covered in more detail in more advanced courses. <br><br> You can check out <a href="https://realpython.com/python-testing/" target="_blank">this excellent resource</a> if you are interested in learning more about testing in Python.</p>
-</aside>
+<p>Positive : <strong>Exercise - Testing <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/A65FjUdW" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Unit testing <br><br></strong> Unit testing is only a part of software testing. On top of unit testing, a developer also performs integration tests that examine the interoperability of components, such as classes, and interface tests that test the application&#39;s interface through elements provided by the interface, such as buttons. <br><br> These testing methods are covered in more detail in more advanced courses. <br><br> You can check out <a href="https://realpython.com/python-testing/" target="_blank">this excellent resource</a> if you are interested in learning more about testing in Python.</p>
 
 
       </google-codelab-step>
@@ -947,7 +920,9 @@ def test_ada():
       <google-codelab-step label="Complex programs" duration="10">
         <p>When you learn programming, you also develop a better eye for reading code (yours and others). In this part we understood the use of lists and practiced separating the UI from the program logic.</p>
 <p>The following is from <a href="https://www.cs.utexas.edu/users/EWD/ewd04xx/EWD447.PDF" target="_blank">On the role of scientific thought</a> by <a href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra" target="_blank">Edsger W. Dijkstra</a> .</p>
-<p><em>Let me try to explain to you, what to my taste is characteristic for all intelligent thinking. It is, that one is willing to study in depth an aspect of one&#39;s subject matter in isolation for the sake of its own consistency, all the time knowing that one is occupying oneself only with one of the aspects. We know that a program must be correct and we can study it from that viewpoint only; we also know that it should be efficient and we can study its efficiency on another day, so to speak. In another mood we may ask ourselves whether, and if so: why, the program is desirable. But nothing is gained - on the contrary! - by tackling these various aspects simultaneously. It is what I sometimes have called &#34;</em><strong><em>the separation of concerns</em></strong><em>&#34;, which, even if not perfectly possible, is yet the only available technique for effective ordering of one&#39;s thoughts, that I know of. This is what I mean by &#34;focusing one&#39;s attention upon some aspect&#34;: it does not mean ignoring the other aspects, it is just doing justice to the fact that from this aspect&#39;s point of view, the other is irrelevant. It is being one- and multiple-track minded simultaneously.</em></p>
+<p><em>Let me try to explain to you, what to my taste is characteristic for all intelligent thinking. It is, that one is willing to study in depth an aspect of one&#39;s subject matter in isolation for the sake of its own consistency, all the time knowing that one is occupying oneself only with one of the aspects. We know that a program must be correct and we can study it from that viewpoint only; we also know that it should be efficient and we can study its efficiency on another day, so to speak. In another mood we may ask ourselves whether, and if so: why, the program is desirable. But nothing is gained - on the contrary! - by tackling these various aspects simultaneously. It is what I sometimes have called &#34;</em></p>
+<p><strong><em>the separation of concerns</em></strong></p>
+<p><em>&#34;, which, even if not perfectly possible, is yet the only available technique for effective ordering of one&#39;s thoughts, that I know of. This is what I mean by &#34;focusing one&#39;s attention upon some aspect&#34;: it does not mean ignoring the other aspects, it is just doing justice to the fact that from this aspect&#39;s point of view, the other is irrelevant. It is being one- and multiple-track minded simultaneously.</em></p>
 <p>The core of Dijkstra&#39;s message is, that the problem areas of a program must be separated from each other – this is exactly what we have been doing with object-oriented programming and by separating the UI from the program logic. Each problem area has been separated into its own part. This can also be viewed through the lens of program responsibilities. In <a href="https://8thlight.com/blog/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html" target="_blank">his blog</a> Robert &#34;Unvle Bob&#34; C. Martin describes the term &#34;<strong>single responsibility principle</strong>&#34;:</p>
 <p><em>When you write a software module, you want to make sure that when changes are requested, those changes can only originate from a single person, or rather, a single tightly coupled group of people representing a single narrowly defined business function. You want to isolate your modules from the complexities of the organization as a whole, and design your systems such that each module is responsible (responds to) the needs of just that one business function.</em></p>
 <p><em>[..in other words..] Gather together the things that change for the same reasons. Separate those things that change for different reasons.</em></p>
@@ -959,10 +934,10 @@ def test_ada():
     
   </google-codelab>
 
-  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
-  <script src="../../elements/codelab-elements/codelab-elements.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
   <script src="//support.google.com/inapp/api.js"></script>
 
 </body>

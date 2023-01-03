@@ -9,7 +9,7 @@
   <title>Part 3</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
   <style>
     .success {
       color: #1e8e3e;
@@ -29,7 +29,7 @@
     
       <google-codelab-step label="Discovering errors" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul>
+<ul class="checklist">
 <li>Know the term perceptual blindness, and can learn to recognize essential (and non-essential) information with practice.</li>
 <li>Know ways to comment code, and understand the importance of variable names on readability of your code.</li>
 <li>Know the concept print-debugging, and know how to search for errors in the source code by printing.</li>
@@ -46,18 +46,18 @@
 sum = 0
 
 while True:
-    value = int(input(&#34;Provide a value, a negative value ends the program&#34;))
+   value = int(input(&#34;Provide a value, a negative value ends the program&#34;))
 
-    if (value &lt; 0):
-        break
+   if (value &lt; 0):
+       break
 
-    values = values + 1
-    sum = sum + value        
+   values = values + 1
+   sum = sum + value        
 
 if (sum == 0):
-    print(&#34;The average of the values could not be calculated.&#34;)
+   print(&#34;The average of the values could not be calculated.&#34;)
 else:
-    print(&#34;Average of values: &#34; + str(sum / values))
+   print(&#34;Average of values: &#34; + str(sum / values))
 </code></pre>
 <p>Perceptual blindness is something that one cannot be eliminated completely. However, there are ways by which a programmer can lessen its effect - the first one being taking breaks, which requires that work is begun early. Code comments, proper naming of things, and &#34;debugging&#34; prints are additional examples of things that are also helpful.</p>
 <h2 is-upgraded>Commenting the Source Code</h2>
@@ -78,24 +78,24 @@ value = 10
 # loop is evaluated the following time.
 # This always happens after the loop has executed
 while (value &gt; 0):
-    # we print out the value in the variable and a new line
-    print(value)
-    # we decrement the value by one
-    value = value - 1
+   # we print out the value in the variable and a new line
+   print(value)
+   # we decrement the value by one
+   value = value - 1
 </code></pre>
 <p>Comments have no impact on the execution of the program, i.e., the program works in the same way with the comments as it does without them.</p>
 <p>The comment style displayed above that is intended for learning purposes is, however, too elaborate for real development, where the goal is for the source code to be <strong>self documenting</strong>. This means that the functionality of the program should be evident from the way classes, methods, and variables are named.</p>
 <p>The example can be &#34;commented out&#34; by encapsulating the code into an appropriately named method. Below are two examples of methods that do this - one of the methods is more general in its purpose compared to the other. The more general method assumes, however, that the user knows which of the two parameters is assigned the higher value and which the lower.</p>
 <pre><code language="language-python" class="language-python">def print_values_from_ten_to_one():
-    value = 10
-    while (value &gt; 0):
-        print(value)
-        value = value - 1
+   value = 10
+   while (value &gt; 0):
+       print(value)
+       value = value - 1
 </code></pre>
 <pre><code language="language-python" class="language-python">def print_values_from_largest_to_smallest(start, end):
-    while (start &gt;= end):
-        print(start)
-        start = start - 1
+   while (start &gt;= end):
+       print(start)
+       start = start - 1
 </code></pre>
 <h2 is-upgraded>Searching for Errors with Print Debugging</h2>
 <p>One required skill in programming is the ability to test and debug when searching for errors. The simplest way to search for errors is to use so-called print debugging, which in practice involves adding messages to certain lines of code. These messages are used to follow the flow of the program&#39;s execution, and can also contain values of variables that live in the program.</p>
@@ -104,40 +104,40 @@ while (value &gt; 0):
 sum = 0
 
 while True:
-    value = int(input(&#34;Provide a value, a negative value ends the program&#34;))
-    if (value &lt; 0):
-        break
+   value = int(input(&#34;Provide a value, a negative value ends the program&#34;))
+   if (value &lt; 0):
+       break
 
-    values = values + 1
-    sum = sum + value
+   values = values + 1
+   sum = sum + value
 
 if (sum == 0):
-    print(&#34;The average of the values could not be calculated.&#34;)
+   print(&#34;The average of the values could not be calculated.&#34;)
 else:
-    print(&#34;Average of values: &#34; + str(sum / values))
+   print(&#34;Average of values: &#34; + str(sum / values))
 </code></pre>
 <p>Had the program contained an error, print debugging could have been used to unravel its functionality by adding print statements in the appropriate places. The example below contains one possible example of a program containing print-debug statements.</p>
 <pre><code language="language-python" class="language-python">values = 0
 sum = 0
 
 while True:
-    print(&#34;-- values: &#34; + str(values) + &#34;, sum: &#34; + str(sum))
+   print(&#34;-- values: &#34; + str(values) + &#34;, sum: &#34; + str(sum))
 
-    value = int(input(&#34;Provide a value, a negative value ends the program&#34;))
-    if (value &lt; 0):
-        print(&#34;-- value is negative, exiting loop&#34;)
-        break
+   value = int(input(&#34;Provide a value, a negative value ends the program&#34;))
+   if (value &lt; 0):
+       print(&#34;-- value is negative, exiting loop&#34;)
+       break
 
-    values = values + 1
-    sum = sum + value
+   values = values + 1
+   sum = sum + value
 
 print(&#34;-- loop exited&#34;)
 print(&#34;-- values: &#34; + str(values) + &#34;, sum: &#34; + str(sum))
 
 if (sum == 0):
-    print(&#34;The average of the values could not be calculated.&#34;)
+   print(&#34;The average of the values could not be calculated.&#34;)
 else:
-    print(&#34;Average of values: &#34; + str(sum / values))
+   print(&#34;Average of values: &#34; + str(sum / values))
 </code></pre>
 <p>When a program is executed multiple times with appropriate inputs the hidden error is often found. Coming up with relevant inputs is a skill in its own right. It&#39;s essential to test the so-called corner cases, i.e., circumstances where the program execution could be exceptional. An example scenario would be one where the user does not enter a single acceptable value or enters zeros or very large values.</p>
 
@@ -146,7 +146,7 @@ else:
     
       <google-codelab-step label="Lists" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul>
+<ul class="checklist">
 <li>You are familiar with the list structure and know how to use a list in a program.</li>
 <li>You are familiar with the concept of an index, you can add values to a list, and you know how to retrieve information from a list&#39;s indices.</li>
 <li>You know how to iterate over a list with multiple different loop types.</li>
@@ -190,8 +190,7 @@ word6 = &#34;today?&#34;
 if __name__ == &#39;__main__&#39;:
     word_list_example()
 </code></pre>
-<aside class="warning"><p>First</p>
-</aside>
+<p>Negative : First</p>
 <p>As can be seen, this method retrieves the first value from the list when it is given the parameter <code>0</code>. This is because <strong>list positions are counted starting from zero</strong>. The first value is found by <code>word_list[0]</code>, the second by <code>word_list[0]</code>, and so on.</p>
 <pre><code language="language-python" class="language-python">def word_list_example():
     # create the word list
@@ -207,8 +206,7 @@ if __name__ == &#39;__main__&#39;:
 if __name__ == &#39;__main__&#39;:
     word_list_example()
 </code></pre>
-<aside class="warning"><p>Second</p>
-</aside>
+<p>Negative : Second</p>
 <p>You can also use negative indexing, which means beginning from the end. For example, -1 refers to the last item, -2 refers to the second last item and so on, as seen below:</p>
 <pre><code language="language-python" class="language-python">def word_list_example():
     # create the word list
@@ -225,12 +223,9 @@ if __name__ == &#39;__main__&#39;:
 if __name__ == &#39;__main__&#39;:
     word_list_example()
 </code></pre>
-<aside class="warning"><p>Third</p>
-</aside>
-<aside class="special"><p><strong>Exercise - Third Element <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/822599yi" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Second Plus Third <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/5Uvq53bw" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Negative : Third</p>
+<p>Positive : <strong>Exercise - Third Element <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/822599yi" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Second Plus Third <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/5Uvq53bw" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Retrieving Information from a &#34;Non-Existent&#34; Place</h2>
 <p>If you try to retrieve information from a place that does not exist on the list, the program will print an <code>IndexError</code>. In the example below, two values are added to a list, after which there is an attempt to print the value at place two on the list.</p>
 <pre><code language="language-python" class="language-python">def word_list_example():
@@ -256,8 +251,7 @@ if __name__ == &#39;__main__&#39;:
     print(word_list[2])
 IndexError: list index out of range
 </code></pre>
-<aside class="special"><p><strong>A Place in a List Is Called an Index <br><br></strong> Numbering places, i.e., indexing, always begins with zero. The list&#39;s first value is located at index 0, the second value at index 1, the third value at index 2, and so on. In programs, an index is often denoted with a variable called <code>i</code>.</p>
-</aside>
+<p>Positive : <strong>A Place in a List Is Called an Index <br><br></strong> Numbering places, i.e., indexing, always begins with zero. The list&#39;s first value is located at index 0, the second value at index 1, the third value at index 2, and so on. In programs, an index is often denoted with a variable called <code>i</code>.</p>
 <h2 is-upgraded>Iterating Over a List</h2>
 <p>We&#39;ll next be examining methods that can be used to go through the values on a list. Let&#39;s start with a simple example where we print a list containing four values.</p>
 <pre><code language="language-python" class="language-python">teachers = []
@@ -272,8 +266,7 @@ print(teachers[1])
 print(teachers[2])
 print(teachers[3])
 </code></pre>
-<aside class="warning"><p>Simon <br> Samuel <br> Ann <br> Anna</p>
-</aside>
+<p>Negative : Simon <br> Samuel <br> Ann <br> Anna</p>
 <p>The example is obviously clumsy. What if there were more values on the list? Or fewer? What if we didn&#39;t know the number of values on the list?</p>
 <p>The number of values on a list is provided by the list&#39;s <strong>len</strong> method which returns the number of elements the list contains. The number is an integer, and it can be used as a part of an expression or stored in a variable for later use.</p>
 <pre><code language="language-python" class="language-python">list = []
@@ -287,10 +280,8 @@ values = len(list)
 list.append(&#34;Second&#34;)
 print(&#34;Number of values on the list: &#34; + str(values))
 </code></pre>
-<aside class="warning"><p>Number of values on the list: 0 <br> Number of values on the list: 1 <br> Number of values on the list: 1</p>
-</aside>
-<aside class="special"><p><strong>Exercise - List size <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/zuMDawM6" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Negative : Number of values on the list: 0 <br> Number of values on the list: 1 <br> Number of values on the list: 1</p>
+<p>Positive : <strong>Exercise - List size <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/zuMDawM6" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Iterating Over a List Continued</h2>
 <p>Let&#39;s make a new version of the program that prints each index manually. In this intermediate version we use the <code>index</code> variable to keep track of the place that is to be outputted.</p>
 <pre><code language="language-python" class="language-python">teachers = []
@@ -324,7 +315,7 @@ if index &lt; len(teachers):
     index = index + 1
 </code></pre>
 <p>We can see that there&#39;s repetition in the program above.</p>
-<p>We can convert the <code>if</code> statements into a <code>while</code> loop that is repeated until the condition <code>index &lt; len(teachers)</code> no longer holds (i.e., the value of the variable <code>index</code> grows too great).</p>
+<p>We can convert the <code>if</code> statements into a <code>while</code> loop that is repeated until the condition <code>index < len(teachers)</code> no longer holds (i.e., the value of the variable <code>index</code> grows too great).</p>
 <pre><code language="language-python" class="language-python">teachers = []
 
 teachers.append(&#34;Simon&#34;)
@@ -351,8 +342,7 @@ teachers.append(&#34;Anna&#34;)
 for index in range(len(teachers)):
      print(teachers[index])
 </code></pre>
-<aside class="warning"><p>Simon <br> Samuel <br> Ann <br> Anna</p>
-</aside>
+<p>Negative : Simon <br> Samuel <br> Ann <br> Anna</p>
 <p>Python actually has a &#34;better&#34; way of accessing list items in a for loop which is different to certain other languages. You can use the syntax <code>for item in list</code> to access each item like so:</p>
 <pre><code language="language-python" class="language-python">teachers = [&#34;Simon&#34;,&#34;Samuel&#34;,&#34;Ann&#34;,&#34;Anna&#34;] # an alternative way of creating a list
 
@@ -366,8 +356,7 @@ for teacher in teachers:
 for number in numbers:
     print(number)
 </code></pre>
-<aside class="warning"><p>1 <br> 2 <br> 3 <br> 4</p>
-</aside>
+<p>Negative : 1 <br> 2 <br> 3 <br> 4</p>
 <p>Printing the numbers in the list in reverse order would also be straightforward.</p>
 <pre><code language="language-python" class="language-python">numbers = [1,2,3,4]
 
@@ -377,29 +366,18 @@ while index &gt;= 0:
     print(number)
     index = index - 1
 </code></pre>
-<aside class="warning"><p>4 <br> 3 <br> 2 <br> 1</p>
-</aside>
+<p>Negative : 4 <br> 3 <br> 2 <br> 1</p>
 <p>Try and recreate the previous example with the for loop!</p>
-<aside class="special"><p><strong>Notice about the following exercises <br><br></strong> The next exercises are meant for learning to use lists and indices. Even if you could complete the exercises without a list, concentrate on training to use it. The functionality in the exercises is to be implemented after reading the input numbers.</p>
-</aside>
-<aside class="special"><p><strong>Exercise - Last in list <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/Bt2g8fgv" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - First and last <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/GOsWtPFX" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Remember these numbers <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/r5yS8qh-" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Only these numbers <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/QrXHLqMl" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Greatest in list <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/IoMLBWdk" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Index of <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/C5OBv87i" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Index of smallest <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/N8DwuClK" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Sum of a list <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/VRYIjE8P" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Average of a list <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/wZGN9jiq" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>Notice about the following exercises <br><br></strong> The next exercises are meant for learning to use lists and indices. Even if you could complete the exercises without a list, concentrate on training to use it. The functionality in the exercises is to be implemented after reading the input numbers.</p>
+<p>Positive : <strong>Exercise - Last in list <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/Bt2g8fgv" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - First and last <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/GOsWtPFX" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Remember these numbers <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/r5yS8qh-" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Only these numbers <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/QrXHLqMl" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Greatest in list <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/IoMLBWdk" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Index of <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/C5OBv87i" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Index of smallest <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/N8DwuClK" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Sum of a list <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/VRYIjE8P" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Average of a list <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/wZGN9jiq" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Removing from a List and Checking the Existence of a Value</h2>
 <p>In Python, list&#39;s methods <code>clear()</code>, <code>pop()</code>, and <code>remove()</code> are used to remove items (elements) from a list.</p>
 <ul>
@@ -416,8 +394,7 @@ print(my_list)
 my_list.pop(3)
 print(my_list)
 </code></pre>
-<aside class="warning"><p>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] <br> [1, 2, 3, 4, 5, 6, 7, 8, 9] <br> [1, 2, 3, 5, 6, 7, 8, 9]</p>
-</aside>
+<p>Negative : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] <br> [1, 2, 3, 4, 5, 6, 7, 8, 9] <br> [1, 2, 3, 5, 6, 7, 8, 9]</p>
 <p>Note that the list is edited <em>in place</em>, meaning that the value of <code>my_list</code> is overwritten by <code>pop()</code>.</p>
 <p>You can remove the first item from the list where its value is equal to the specified value with <code>remove()</code>.</p>
 <pre><code language="language-python" class="language-python">my_list = [&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;, &#39;Bob&#39;, &#39;Dave&#39;]
@@ -429,8 +406,7 @@ print(my_list)
 my_list.remove(&#39;Bob&#39;)
 print(my_list)
 </code></pre>
-<aside class="warning"><p>[‘Alice&#39;, ‘Bob&#39;, ‘Charlie&#39;, ‘Bob&#39;, ‘Dave&#39;] <br> [‘Bob&#39;, ‘Charlie&#39;, ‘Bob&#39;, ‘Dave&#39;] <br> [‘Charlie&#39;, ‘Bob&#39;, ‘Dave&#39;]</p>
-</aside>
+<p>Negative : [‘Alice&#39;, ‘Bob&#39;, ‘Charlie&#39;, ‘Bob&#39;, ‘Dave&#39;] <br> [‘Bob&#39;, ‘Charlie&#39;, ‘Bob&#39;, ‘Dave&#39;] <br> [‘Charlie&#39;, ‘Bob&#39;, ‘Dave&#39;]</p>
 <p>Note that if the list contains more than one matching the specified value, only the first one is deleted.</p>
 <p>The list method <strong>in</strong> can be used to check the existence of a value in the list. The method receives the value to be searched as its parameter, and it returns a boolean type value (<code>True</code> or <code>False</code>) that indicates whether or not that value is stored in the list.</p>
 <pre><code language="language-python" class="language-python">list = [&#34;First&#34;,&#34;Second&#34;,&#34;Third&#34;]
@@ -445,10 +421,8 @@ if found:
 if &#34;Second&#34; in list:
     print(&#34;Second can still be found&#34;)
 </code></pre>
-<aside class="warning"><p>Is the first found? true <br> Second was found <br> Second can still be found</p>
-</aside>
-<aside class="special"><p><strong>Exercise - On the list <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/gEhsIpt1" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Negative : Is the first found? true <br> Second was found <br> Second can still be found</p>
+<p>Positive : <strong>Exercise - On the list <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/gEhsIpt1" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>List as a Method Parameter</h2>
 <p>Like other variables, a list can be used as a parameter to a method too. When the method is defined to take a list as a parameter, the type of the parameter is defined as the type of the list and the type of the values contained in that list. Below, the method <code>print</code> prints the values in the list one by one.</p>
 <pre><code language="language-python" class="language-python">def printout(list):
@@ -458,8 +432,7 @@ if &#34;Second&#34; in list:
 my_list = [&#34;One&#34;,&#34;Two&#34;]
 printout(my_list)
 </code></pre>
-<aside class="warning"><p>One <br> Two</p>
-</aside>
+<p>Negative : One <br> Two</p>
 <p>The chosen parameter in the method definition is not dependent on the list that is passed as parameter in the method call. In the program that calls <code>printout</code>, the name of the list variable is <code>list</code>, but inside the method <code>printout</code> the variable is called <code>my_list</code> – the name of the variable that stores the list could also be <code>printables</code>, for instance.</p>
 <p>It&#39;s also possible to define multiple variables for a method. In the example the method receives two parameters: a list of numbers and a threshold value. It then prints all the numbers in the list that are smaller than the second parameter.</p>
 <pre><code language="language-python" class="language-python">def print_smaller_than(numbers, threshold):
@@ -470,10 +443,8 @@ printout(my_list)
 list = [1,2,3,2,1]
 print_smaller_than(list, 3)
 </code></pre>
-<aside class="warning"><p>1 <br> 2 <br> 2 <br> 1</p>
-</aside>
-<aside class="special"><p><strong>Exercise - Print in range <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/W-AYvwE9" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Negative : 1 <br> 2 <br> 2 <br> 1</p>
+<p>Positive : <strong>Exercise - Print in range <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/W-AYvwE9" target="_blank">Accept exercise on Github Classroom</a></p>
 <p>As before, a method can also return a value. The methods that return values have the <code>return</code> command. The method below returns the length of the list, although is a completely redundant method.</p>
 <pre><code language="language-python" class="language-python">def length(list):
     return len(list)
@@ -489,8 +460,7 @@ print_smaller_than(list, 3)
 
     return sum / len(numbers)
 </code></pre>
-<aside class="special"><p><strong>Exercise - Sum <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/GwWQ-iVI" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>Exercise - Sum <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/GwWQ-iVI" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>On Copying the List to a Method Parameter</h2>
 <p>Earlier we have used integers, floating point numbers, etc. as method parameters. When variables such as <code>int</code> are used as method parameters, the value of the variable is copied for the method&#39;s use. The same occurs in the case that the parameter is a list.</p>
 <p>Lists, among practically all the variables that can store large amounts of information, are <em>reference-type variables</em>. This means that the value of the variable is a reference that points to the location that contains the information.</p>
@@ -513,31 +483,27 @@ remove_first(numbers)
 remove_first(numbers)
 print(numbers)
 </code></pre>
-<aside class="warning"><p>[3, 2, 6, -1] <br> [2, 6, -1] <br> []</p>
-</aside>
-<aside class="special"><p><strong>Exercise - Remove last <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/Adro0na3" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>NumPy Arrays <br><br></strong> We&#39;ve gotten familiar with the list, which has a lot of functionality to make the life of a programmer easier. Perhaps the most important is about adding elements. From the point of view of the programmer, the size of the list is unlimited. In reality there are no magic tricks in the list – they have been programmed like any other programs or tools offered by the programming language. When you create a list, a limited space is reserved in the memory of the computer. When the list runs out of space, a larger space is reserved and the data from the previous space is copied to the new one. <br><br> Even though the list is simple to use, sometimes we need an alternative way of storing data, the NumPy array. The main benefits of using NumPy arrays is, in general, smaller memory consumption and better runtime behaviour. We will not dive any deeper into NumPy arrays in this course, but you should be aware of their existence and, in particular their applicability to data science and scientific computing. <br><br> You can read more <a href="https://numpy.org/doc/stable/reference/generated/numpy.array.html?highlight=array#numpy.array" target="_blank">here</a>.</p>
-</aside>
+<p>Negative : [3, 2, 6, -1] <br> [2, 6, -1] <br> []</p>
+<p>Positive : <strong>Exercise - Remove last <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/Adro0na3" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>NumPy Arrays <br><br></strong> We&#39;ve gotten familiar with the list, which has a lot of functionality to make the life of a programmer easier. Perhaps the most important is about adding elements. From the point of view of the programmer, the size of the list is unlimited. In reality there are no magic tricks in the list – they have been programmed like any other programs or tools offered by the programming language. When you create a list, a limited space is reserved in the memory of the computer. When the list runs out of space, a larger space is reserved and the data from the previous space is copied to the new one. <br><br> Even though the list is simple to use, sometimes we need an alternative way of storing data, the NumPy array. The main benefits of using NumPy arrays is, in general, smaller memory consumption and better runtime behaviour. We will not dive any deeper into NumPy arrays in this course, but you should be aware of their existence and, in particular their applicability to data science and scientific computing. <br><br> You can read more <a href="https://numpy.org/doc/stable/reference/generated/numpy.array.html?highlight=array#numpy.array" target="_blank">here</a>.</p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Working with strings" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul>
+<ul class="checklist">
 <li>Revising reading, printing and comparing strings</li>
 <li>Knowing how to split a string into several pieces</li>
 </ul>
-<p>Let&#39;s first revise what we already know about strings and see how to split them. Below we create a string variable <code>magic_word</code>, that contains value <code>&#34;abracadabra&#34;</code>.</p>
+<p>Let&#39;s first revise what we already know about strings and see how to split them. Below we create a string variable <code>magic_word</code>, that contains value <code>"abracadabra"</code>.</p>
 <pre><code language="language-python" class="language-python">magic_word = &#34;abracadabra&#34;
 </code></pre>
 <p>Passing a string as a parameter to a print command (or, for that matter, any method that takes a string parameter) happens in the familiar way:</p>
 <pre><code language="language-python" class="language-python">magic_word = &#34;abracadabra&#34;
 print(magic_word)
 </code></pre>
-<aside class="warning"><p>abracadabra</p>
-</aside>
+<p>Negative : abracadabra</p>
 <h2 is-upgraded>Reading and Printing strings</h2>
 <p>You can read a string using the input-method offered by Python. The program below reads the name of the user and prints it:</p>
 <pre><code language="language-python" class="language-python"># reading a line from the user and assigning it to the name variable
@@ -545,8 +511,7 @@ name = input(&#34;What&#39;s your name?&#34;)
 
 print(name)
 </code></pre>
-<aside class="warning"><p>What&#39;s your name? <br> <em>User: &lt;Vicky&gt; <br></em> Vicky</p>
-</aside>
+<p>Negative : What&#39;s your name? <br> <em>User: &lt;Vicky&gt; <br></em> Vicky</p>
 <p>Strings can also be concatenated. If you place a <code>+</code>-operator between two strings, you get a new string that&#39;s a combination of those two strings. Be mindful of any white spaces in your variables!</p>
 <pre><code language="language-python" class="language-python">greeting = &#34;Hi &#34;
 name = &#34;Lily&#34;
@@ -556,14 +521,10 @@ phrase = greeting + name + goodbye
 
 print(phrase)
 </code></pre>
-<aside class="warning"><p>Hi Lily and see you later!</p>
-</aside>
-<aside class="special"><p><strong>Exercise - Print thrice <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/0xc3aZui" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Is it true? <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/nhBb8aas" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Login <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/pT-2jHsZ" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Negative : Hi Lily and see you later!</p>
+<p>Positive : <strong>Exercise - Print thrice <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/0xc3aZui" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Is it true? <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/nhBb8aas" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Login <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/pT-2jHsZ" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Splitting a string</h2>
 <p>You can split a string to multiple pieces with the <code>split</code>-method of the string class. The method takes as a parameter a string denoting the place around which the string should be split. The <code>split</code> method returns al ist of the resulting sub-parts. In the example below, the string has been split around a space.</p>
 <pre><code language="language-python" class="language-python">text = &#34;first second third fourth&#34;
@@ -578,16 +539,12 @@ print()
 for piece in pieces:
     print(piece)
 </code></pre>
-<aside class="warning"><p>first <br> second <br> third <br> fourth <br><br> first <br> second <br> third <br> fourth <br></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Line by line <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/SH8YV-fL" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - AV Club <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/36F7NqUB" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Negative : first <br> second <br> third <br> fourth <br><br> first <br> second <br> third <br> fourth <br></p>
+<p>Positive : <strong>Exercise - Line by line <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/SH8YV-fL" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - AV Club <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/36F7NqUB" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Data of Fixed Format</h2>
 <p>Splitting strings is used particularly when the data is of a fixed format. This refers to data that adheres to some predefined format. An example of this of this is the comma-separated values (<code>csv</code>) format, where commas are used to separate values. Below you&#39;ll find an example of data in csv form containing names and ages. The first column contains names and the second one ages. The columns are separated by a comma.</p>
-<aside class="warning"><p>sebastian,2 <br> lucas,2 <br> lily,1</p>
-</aside>
+<p>Negative : sebastian,2 <br> lucas,2 <br> lily,1</p>
 <p>Let&#39;s assume the user enters the data above row by row, ending with an empty line.</p>
 <p>A program to print the names and ages looks like the following:</p>
 <pre><code language="language-python" class="language-python">while True:
@@ -598,21 +555,17 @@ for piece in pieces:
     pieces = textinput.split(&#34;,&#34;)
     print(&#34;Name: &#34; + pieces[0] + &#34;, age: &#34; + pieces[1])
 </code></pre>
-<aside class="warning"><p><em>User: &lt;sebastian,2&gt; <br></em> Name: sebastian, age: 2 <br> <em>User: &lt;lucas,2&gt; <br></em> Name: lucas, age: 2 <br> <em>User: &lt;lily,1&gt; <br></em>  Name: lily, age: 1</p>
-</aside>
-<aside class="special"><p><strong>Exercise - First Words <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/agjxhRoa" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Negative : <em>User: &lt;sebastian,2&gt; <br></em> Name: sebastian, age: 2 <br> <em>User: &lt;lucas,2&gt; <br></em> Name: lucas, age: 2 <br> <em>User: &lt;lily,1&gt; <br></em>  Name: lily, age: 1</p>
+<p>Positive : <strong>Exercise - First Words <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/agjxhRoa" target="_blank">Accept exercise on Github Classroom</a></p>
 <p>In the exercises above, we actually implemented a very simple decrypting method for secret messages. One variant of these hidden messages consists of the first character of each line. Let&#39;s continue along the same theme! You can get a character at a specified index of a string very similarly to how you access the index of a list, with the <code>[]</code> notation.</p>
 <pre><code language="language-python" class="language-python">text = &#34;Hello world!&#34;
 character = text[0]
 print(character)
 </code></pre>
-<aside class="warning"><p>H</p>
-</aside>
+<p>Negative : H</p>
 <h2 is-upgraded>Using Diverse Text</h2>
 <p>We&#39;ve printed strings in the examples above. Some of the data contained in a fixed-format string can be numerical. In the previous data we used that contained names and ages, the ages were integers.</p>
-<aside class="warning"><p>sebastian,2 <br> lucas,2 <br> lily,1</p>
-</aside>
+<p>Negative : sebastian,2 <br> lucas,2 <br> lily,1</p>
 <p>Splitting a string always produces a list of strings. If the text is of fixed format, we can assume the data in a specific index to always be of the a specific type – e.g., in the example above, age at index 1 is an integer.</p>
 <p>The program below computes the sum of ages in this fixed format data. In order to compute the sum, the age must first be converted to a number (the familiar command <code>int()</code>.</p>
 <pre><code language="language-python" class="language-python">sum = 0
@@ -627,8 +580,7 @@ while True:
 
 print(&#34;Sum of the ages is &#34; + str(sum))
 </code></pre>
-<aside class="warning"><p><em>User: &lt;sebastian,2&gt; <br> User: &lt;lucas,2&gt; <br> User: &lt;lily,2&gt; <br></em> Sum of the ages is 5</p>
-</aside>
+<p>Negative : <em>User: &lt;sebastian,2&gt; <br> User: &lt;lucas,2&gt; <br> User: &lt;lily,2&gt; <br></em> Sum of the ages is 5</p>
 <p>We can write a program to compute the average of the ages in the same way:</p>
 <pre><code language="language-python" class="language-python">sum = 0
 count = 0
@@ -647,21 +599,16 @@ if (count &gt; 0):
 else:
     print(&#34;No input.&#34;)
 </code></pre>
-<aside class="warning"><p><em>User: &lt;sebastian,2&gt; <br> User: &lt;lucas,2&gt; <br> User: &lt;lily,1&gt; <br></em> Age average: 1.66...</p>
-</aside>
-<aside class="special"><p><strong>Exercise - Age of the Oldest <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/ptgfsU6e" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Name of the Oldest <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/xRiRIc4Y" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Negative : <em>User: &lt;sebastian,2&gt; <br> User: &lt;lucas,2&gt; <br> User: &lt;lily,1&gt; <br></em> Age average: 1.66...</p>
+<p>Positive : <strong>Exercise - Age of the Oldest <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/ptgfsU6e" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Name of the Oldest <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/xRiRIc4Y" target="_blank">Accept exercise on Github Classroom</a></p>
 <p>In the next exercise you&#39;ll be asked for the length of the names. You can find out the length of a string exactly as for a list, with the <code>len()</code>-method:</p>
 <pre><code language="language-python" class="language-python">word = &#34;nonagenarian&#34;
 length = len(word)
 print(&#34;The length of the word &#34; + word + &#34; is &#34; + str(length))
 </code></pre>
-<aside class="warning"><p>The length of the word equisterian is 11</p>
-</aside>
-<aside class="special"><p><strong>Exercise - Personal details <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/Muoh7UPw" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Negative : The length of the word equisterian is 11</p>
+<p>Positive : <strong>Exercise - Personal details <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/Muoh7UPw" target="_blank">Accept exercise on Github Classroom</a></p>
 
 
       </google-codelab-step>
@@ -675,10 +622,10 @@ print(&#34;The length of the word &#34; + word + &#34; is &#34; + str(length))
     
   </google-codelab>
 
-  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
-  <script src="../../elements/codelab-elements/codelab-elements.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
   <script src="//support.google.com/inapp/api.js"></script>
 
 </body>
