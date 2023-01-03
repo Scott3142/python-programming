@@ -9,7 +9,7 @@
   <title>Local Development Environments</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
   <style>
     .success {
       color: #1e8e3e;
@@ -29,12 +29,11 @@
     
       <google-codelab-step label="Using a local development environment" duration="30">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul>
+<ul class="checklist">
 <li>Become familiar with the Atom development environment used in this course.</li>
 <li>How to download and submit programming exercises.</li>
 </ul>
-<aside class="special"><p><strong>Note:</strong> If you don&#39;t want or need to set up a local development environment at this stage, and you are happy working in Repl.it, you can safely <a href="https://scott3142.uk/python-programming/codelabs/part-1/index.html?index=..%2F..index#0" target="_blank">skip ahead</a> to Part 1 of the notes. <br><br> If you are just starting out with Python and you&#39;re not planning to do any serious software development yet, this is probably the recommended course of action. <br><br> If you&#39;d like to set up Python on your computer, read on below.</p>
-</aside>
+<p>Positive : <strong>Note:</strong> If you don&#39;t want or need to set up a local development environment at this stage, and you are happy working in Repl.it, you can safely <a href="https://scott3142.uk/python-programming/codelabs/part-1/index.html?index=..%2F..index#0" target="_blank">skip ahead</a> to Part 1 of the notes. <br><br> If you are just starting out with Python and you&#39;re not planning to do any serious software development yet, this is probably the recommended course of action. <br><br> If you&#39;d like to set up Python on your computer, read on below.</p>
 <p>As discussed in the Getting Started section, the text editor we recommend and support on this course is called Atom. Atom is not <a href="https://www.quora.com/Is-Atom-an-IDE-or-Text-Editor" target="_blank">technically</a> an IDE, but comes with many useful plugins that can be used to mimic the functionality of an IDE. We will use the <code>script</code> and <code>atom-python-test</code> plugins predominantly on this course.</p>
 <p>To start setting up a local development environment, you will need:</p>
 <ol type="1">
@@ -48,31 +47,28 @@
 </ul>
 <p>Once you have created the user account and installed Python and Atom, watch the video below. The video demonstrates what happens when Atom is opened for the first time. We log into Github and do the first programming exercise.</p>
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/GOYVuaEvBCA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-<aside class="special"><p><strong>Exercise - Sandbox <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://github.com/den01-python-programming/sandbox.git" target="_blank">Source files on Github</a></p>
-</aside>
+<p>Positive : <strong>Exercise - Sandbox <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://github.com/den01-python-programming/sandbox.git" target="_blank">Source files on Github</a></p>
 <h2 is-upgraded>Running Python commands in Atom</h2>
 <p>The Atom development environment has several packages available which allow you to run your Python programs directly inside the editor. The most popular of these at the time of writing is the <code>script</code> package. You can read more about <code>script</code> at <a href="https://atom.io/packages/script" target="_blank">this link</a>.</p>
 <p>To install the <code>script</code> package, open Atom and click on the <em>packages</em> tab in the toolbar. Go to <em>Settings View</em> and click <em>Install Packages/Themes</em>.</p>
 <p class="image-container"><img alt="atom-script-1" src="img/37fcde961809ae24.png"></p>
 <p>Search for the <code>script</code> package and click <em>Install</em>.</p>
 <p class="image-container"><img alt="atom-script-2" src="img/b13f2d12cf136c34.png"></p>
-<p>Once it has installed, go and create a <code>test.py</code> file in your sandbox and enter <code>print(&#34;Hello world!&#34;)</code>. You can alternatively use any Python <code>.py</code> file for this step.</p>
+<p>Once it has installed, go and create a <code>test.py</code> file in your sandbox and enter <code>print("Hello world!")</code>. You can alternatively use any Python <code>.py</code> file for this step.</p>
 <p class="image-container"><img alt="atom-script-3" src="img/cbdb2fb6b6490e79.png"></p>
 <p>You should see an output in the bottom left of the screen which contains the contents of your program&#39;s output. If there are any errors in your code, the stack trace will also show up here.</p>
 <p class="image-container"><img alt="atom-script-4" src="img/aefb8367cca4618d.png"></p>
 <p>It is important to be able to successfully complete these steps to be able to continue to access the material in this course.</p>
-<aside class="special"><p>You can run a program in Atom by the keyboard combination Ctrl+Shift+B, if you have the <code>script</code> package installed as in the first part. In order to <em>test</em> the program in Atom, you will need an understanding of the file structure and use of your computer&#39;s terminal. This process is not explicitly covered in these notes, but you can find out more information <a href="https://realpython.com/pytest-python-testing/" target="_blank">in these pages</a>.</p>
-</aside>
+<p>Positive : You can run a program in Atom by the keyboard combination Ctrl+Shift+B, if you have the <code>script</code> package installed as in the first part. In order to <em>test</em> the program in Atom, you will need an understanding of the file structure and use of your computer&#39;s terminal. This process is not explicitly covered in these notes, but you can find out more information <a href="https://realpython.com/pytest-python-testing/" target="_blank">in these pages</a>.</p>
 <p>Even though running the program is straightforward, a lot is happenings behind the scenes. When a program is run, the source code is first compiled into Python bytecode. This compilation process is done by the Python compiler, which itself is a program. Following that, the program gets executed, meaning the commands are executed one-by-one by a Python interpreter that is able to read Python bytecode.</p>
-<aside class="special"><p>For the vast majority of the exercises, it will suffice to run your Python programs in this way. However, if you require virtual environments, <code>pip</code> installs or testing frameworks, it is crucial to understand how to run commands in the terminal and make this your preferred option. We will cover this in the following section.</p>
-</aside>
+<p>Positive : For the vast majority of the exercises, it will suffice to run your Python programs in this way. However, if you require virtual environments, <code>pip</code> installs or testing frameworks, it is crucial to understand how to run commands in the terminal and make this your preferred option. We will cover this in the following section.</p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="The command line" duration="30">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul>
+<ul class="checklist">
 <li>How to run Python commands in the terminal</li>
 <li>Some key commands to know in Linux</li>
 </ul>
@@ -100,10 +96,9 @@
 <p>if you&#39;re on Linux, or like this:</p>
 <pre><code language="language-bash" class="language-bash">PS C:\Users\User&gt; python3 main.py
 </code></pre>
-<p>if you&#39;re on Windows and using Powershell. Throughout this section, the first part of the command (either <code>user@host:~$</code> for Linux or <code>PS C:\Users\User&gt;</code> for Windows) is not to be typed into the command line. This is just to illustrate to you what the full prompt should look like in each case.</p>
+<p>if you&#39;re on Windows and using Powershell. Throughout this section, the first part of the command (either <code>user@host:~$</code> for Linux or <code>PS C:\Users\User></code> for Windows) is not to be typed into the command line. This is just to illustrate to you what the full prompt should look like in each case.</p>
 <p>If you get an error saying that <code>python3</code> is not recognised as a command, <a href="https://www.python.org/downloads/" target="_blank">make sure it&#39;s installed</a>.</p>
-<aside class="special"><p><strong>Note: <br><br></strong> If you are using Atom as a development environment, you can run your Python programs from inside the editor with the <code>script</code> package. Once you have installed the <code>script</code> package, you can run your program with <code>Ctrl-Shift-B</code>. More information on the <code>script</code> package can be found <a href="https://atom.io/packages/script" target="_blank">here</a>.</p>
-</aside>
+<p>Positive : <strong>Note: <br><br></strong> If you are using Atom as a development environment, you can run your Python programs from inside the editor with the <code>script</code> package. Once you have installed the <code>script</code> package, you can run your program with <code>Ctrl-Shift-B</code>. More information on the <code>script</code> package can be found <a href="https://atom.io/packages/script" target="_blank">here</a>.</p>
 <h2 is-upgraded>The terminal in Linux</h2>
 <p>If you are not using Linux or the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">Windows Subsystem for Linux</a>, you can freely skip ahead to the <a href="https://scott3142.uk/python-programming/codelabs/getting-started/index.html?index=..%2F..index#1" target="_blank">next part</a>.</p>
 <p>If you are using the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">Windows Subsystem for Linux</a>, open it according to the instructions contained on that page, otherwise search for <code>Terminal</code> in your installed software and open it. You should be greeted with a command prompt that looks something like:</p>
@@ -126,7 +121,7 @@
 <h2 is-upgraded>Who can use sudo?</h2>
 <p>It would defeat the point of the security if anyone could just put <code>sudo</code> in front of their commands, so only approved users can use <code>sudo</code> to gain administrator privileges. The <code>username</code> user is included in the <code>sudoers</code> file of approved users. To allow other users to act as a superuser you can add the user to the <code>sudo</code> group with <code>usermod</code>, edit the <code>/etc/sudoers</code> file, or add them using <code>visudo</code>.</p>
 <h2 is-upgraded>Installing software using apt</h2>
-<p>You can use the <code>apt</code> command to install software. This is the ‘package manager&#39; that is included with any Debian-based Linux distributions including Ubuntu. It allows you to install and manage new software packages on your Pi. In order to install a new package, you would type <code>sudo apt install &lt;package-name&gt;</code> (where <code>&lt;package-name&gt;</code> is the package that you want to install). Running <code>sudo apt update</code> will update a list of software packages that are available on your system. If a new version of a package is available, then <code>sudo apt full-upgrade</code> will update any old packages to the new version. Finally, <code>sudo apt remove &lt;package-name&gt;</code> removes or uninstalls a package from your system.</p>
+<p>You can use the <code>apt</code> command to install software. This is the ‘package manager&#39; that is included with any Debian-based Linux distributions including Ubuntu. It allows you to install and manage new software packages on your Pi. In order to install a new package, you would type <code>sudo apt install <package-name></code> (where <code><package-name></code> is the package that you want to install). Running <code>sudo apt update</code> will update a list of software packages that are available on your system. If a new version of a package is available, then <code>sudo apt full-upgrade</code> will update any old packages to the new version. Finally, <code>sudo apt remove <package-name></code> removes or uninstalls a package from your system.</p>
 <h2 is-upgraded>Other useful commands</h2>
 <p>There are a few other commands that you may find useful, these are listed below:</p>
 <h2 is-upgraded>ls</h2>
@@ -175,13 +170,13 @@
 <h2 is-upgraded>tree</h2>
 <p>Use the <code>tree</code> command to show a directory and all subdirectories and files indented as a tree structure.</p>
 <h2 is-upgraded>&amp;</h2>
-<p>Run a command in the background with <code>&amp;</code>, freeing up the shell for future commands.</p>
+<p>Run a command in the background with <code>&</code>, freeing up the shell for future commands.</p>
 <h2 is-upgraded>curl</h2>
 <p>Use <code>curl</code> to download or upload a file to/from a server. By default, it will output the file contents of the file to the screen.</p>
 <h2 is-upgraded>man</h2>
 <p>Show the manual page for a file with <code>man</code>. To find out more, run <code>man man</code> to view the manual page of the man command.</p>
 <h2 is-upgraded>grep</h2>
-<p>Use <code>grep</code> to search inside files for certain search patterns. For example, <code>grep &#34;search&#34; *.txt</code> will look in all the files in the current directory ending with .txt for the string search.</p>
+<p>Use <code>grep</code> to search inside files for certain search patterns. For example, <code>grep "search" *.txt</code> will look in all the files in the current directory ending with .txt for the string search.</p>
 <p>The <code>grep</code> command supports regular expressions which allows special letter combinations to be included in the search.</p>
 <h2 is-upgraded>awk</h2>
 <p><code>awk</code> is a programming language useful for searching and manipulating text files.</p>
@@ -205,7 +200,7 @@
     
       <google-codelab-step label="Installing packages with pip" duration="20">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul>
+<ul class="checklist">
 <li>What pip is and how to use it</li>
 <li>What the requirements file is</li>
 </ul>
@@ -276,8 +271,7 @@ General Options:
 <p>Let&#39;s use an example. Say your project is using <code>numpy</code> to calculate the standard deviation of a dataset. The latest version of <code>numpy</code> available at the time of writing is <code>v1.18.3</code> so we use that to create our project.</p>
 <p>Sometime later, <code>numpy</code> releases a new version which changes the way the standard deviation is called - the output array which used to be optional is now required in the method call. Your code would no longer work with a fresh install of <code>numpy</code>, and your project would break through no fault of your own.</p>
 <p>With a package as popular as <code>numpy</code>, this would almost never happen and developers would be given plenty of notice if there was going to be such a drastic change. But the point is that it <em>could</em>, it certainly could with a less well-known or obscure package you&#39;ve found, and you don&#39;t want to have to rely on package maintainers to make their packages backwards compatible.</p>
-<aside class="special"><p>Something like this is happening, and has been happening for years, with Python 2. Python 2 was officially sunset on January 1, 2020, which means that the developers have not been improving it since that day, even if someone has found a security vulnerability. <em>Python 3 was released in 2008. <br><br></em> This means that Python has given 12 years to developers to move away from Python 2 code but many packages still depend on it. You may have already noticed a break in compatibility if you&#39;ve tried to use a <code>print</code> statement. In Python 2, you could write <code>print &#34;Hello world!&#34;</code> which was perfectly valid syntax. In Python 3, this throws an error, and in fact you need <code>print(&#34;Hello world!&#34;)</code> instead. <br><br> This course doesn&#39;t cover Python 2 at all, but it&#39;s important to know of its existence, and the headaches it causes in assuring dependencies are compatible.</p>
-</aside>
+<p>Positive : Something like this is happening, and has been happening for years, with Python 2. Python 2 was officially sunset on January 1, 2020, which means that the developers have not been improving it since that day, even if someone has found a security vulnerability. <em>Python 3 was released in 2008. <br><br></em> This means that Python has given 12 years to developers to move away from Python 2 code but many packages still depend on it. You may have already noticed a break in compatibility if you&#39;ve tried to use a <code>print</code> statement. In Python 2, you could write <code>print "Hello world!"</code> which was perfectly valid syntax. In Python 3, this throws an error, and in fact you need <code>print("Hello world!")</code> instead. <br><br> This course doesn&#39;t cover Python 2 at all, but it&#39;s important to know of its existence, and the headaches it causes in assuring dependencies are compatible.</p>
 <p>Let&#39;s get back to our <code>requirements.txt</code> file. If you look at the output of <code>pip help</code>, you can see the line</p>
 <pre><code language="language-plaintext" class="language-plaintext">freeze      Output installed packages in requirements format.
 </code></pre>
@@ -291,8 +285,7 @@ General Options:
 <pre><code language="language-bash" class="language-bash">user@host:~$ pip install -r requirements.txt
 </code></pre>
 <p>This will install the versions of each of the packages specified in the <code>requirements.txt</code> file, which should save your code from breaking on package version updates.</p>
-<aside class="special"><p><strong>A note on security <br><br></strong> When using a requirements file, more often than not you&#39;ll be fine to just use the versions specified by the developer. However, a package might have been updated because of a <em>security vulnerability</em>, in which case you want to check out what the issue is and act accordingly. <br><br> If you upload your code to Github, your code can be <a href="https://help.github.com/en/github/managing-security-vulnerabilities/about-security-alerts-for-vulnerable-dependencies" target="_blank">automatically checked</a> for security vulnerabilities in your dependencies and given a rating from <em>low</em> to <em>critical</em>. Sometimes, Github can automatically fix the vulnerability too, by updating to a newer package.<br><br> Github won&#39;t do this if it thinks the update will break your code, and it will tell you you&#39;ll have to update it manually. <br><br> It&#39;s up to you whether you do this, or whether you&#39;re happy with the vulnerability. If you do decide to update a dependency, you&#39;ll want to make sure your code is appropriately <a href="https://scott3142.uk/python-programming/codelabs/part-6/index.html?index=..%2F..index#2" target="_blank">tested</a> so that nothing unexpected happens. Github can help here too with its <a href="https://github.com/features/actions" target="_blank">Github Actions</a>, an example of which you&#39;ll see in the first video of the course. <br><br> You can read more about Github Actions and similar workflows by reading about <a href="https://www.redhat.com/en/topics/devops/what-is-ci-cd" target="_blank">CI/CD</a> which stands for Continuous Integration/Continuous Deployment. This is covered in courses on <a href="https://cloud.google.com/devops" target="_blank">DevOps</a>.</p>
-</aside>
+<p>Positive : <strong>A note on security <br><br></strong> When using a requirements file, more often than not you&#39;ll be fine to just use the versions specified by the developer. However, a package might have been updated because of a <em>security vulnerability</em>, in which case you want to check out what the issue is and act accordingly. <br><br> If you upload your code to Github, your code can be <a href="https://help.github.com/en/github/managing-security-vulnerabilities/about-security-alerts-for-vulnerable-dependencies" target="_blank">automatically checked</a> for security vulnerabilities in your dependencies and given a rating from <em>low</em> to <em>critical</em>. Sometimes, Github can automatically fix the vulnerability too, by updating to a newer package.<br><br> Github won&#39;t do this if it thinks the update will break your code, and it will tell you you&#39;ll have to update it manually. <br><br> It&#39;s up to you whether you do this, or whether you&#39;re happy with the vulnerability. If you do decide to update a dependency, you&#39;ll want to make sure your code is appropriately <a href="https://scott3142.uk/python-programming/codelabs/part-6/index.html?index=..%2F..index#2" target="_blank">tested</a> so that nothing unexpected happens. Github can help here too with its <a href="https://github.com/features/actions" target="_blank">Github Actions</a>, an example of which you&#39;ll see in the first video of the course. <br><br> You can read more about Github Actions and similar workflows by reading about <a href="https://www.redhat.com/en/topics/devops/what-is-ci-cd" target="_blank">CI/CD</a> which stands for Continuous Integration/Continuous Deployment. This is covered in courses on <a href="https://cloud.google.com/devops" target="_blank">DevOps</a>.</p>
 <h2 is-upgraded>What if I need different versions for different projects?</h2>
 <p>Cue virtual environments...</p>
 
@@ -301,7 +294,7 @@ General Options:
     
       <google-codelab-step label="Python virtual environments" duration="10">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul>
+<ul class="checklist">
 <li>What virtual environments are</li>
 <li>How to manage virtual environments and package dependencies</li>
 </ul>
@@ -365,7 +358,7 @@ ModuleNotFoundError: No module named &#39;numpy&#39;
     
       <google-codelab-step label="Version control with git" duration="30">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul>
+<ul class="checklist">
 <li>What git is</li>
 <li>How to create repositories and make commits</li>
 <li>How to work with Github, including cloning, pushing and pulling repositories</li>
@@ -614,10 +607,10 @@ nothing to commit, working directory clean
     
   </google-codelab>
 
-  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
-  <script src="../../elements/codelab-elements/codelab-elements.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
   <script src="//support.google.com/inapp/api.js"></script>
 
 </body>

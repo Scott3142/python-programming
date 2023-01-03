@@ -9,7 +9,7 @@
   <title>Part 4</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
   <style>
     .success {
       color: #1e8e3e;
@@ -29,7 +29,7 @@
     
       <google-codelab-step label="Introduction to object-oriented programming" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul>
+<ul class="checklist">
 <li>You&#39;re familiar with the concepts of class, object, constructor, object methods, and object variables.</li>
 <li>You understand that a class defines an object&#39;s methods and that the values of instance (object) variables are object-specific.</li>
 <li>You know how to create classes and objects, and know how to use objects in your programs.</li>
@@ -41,12 +41,9 @@
 <p>We&#39;ve already used some of the classes and objects provided by Python. A <strong>class</strong> defines the attributes of objects, i.e., the information related to them (instance variables), and their commands, i.e., their methods. The values of instance (i.e., object) variables define the internal state of an individual object, whereas methods define the functionality it offers.</p>
 <p>A <strong>method</strong> is a piece of source code written inside a class that&#39;s been named and has the ability to be called. A method is always part of some class and is often used to modify the internal state of an object instantiated from a class.</p>
 <p>An object is always instantiated by calling a method that created an object.</p>
-<aside class="special"><p><strong>The Relationship Between a Class and an Object <br><br></strong> A class lays out a blueprint for any objects that are instantiated from it. Let&#39;s draw from an analogy from outside the world of computers. Detached houses are most likely familiar to most, and we can safely assume the existence of drawings somewhere that determine what exactly a detached house is to be like. A class is a blueprint. In other words, it specifies what kinds of objects can be instantiated from it. <br><br> Individual objects, detached houses in this case, are all created based on the same blueprints - they&#39;re instances of the same class. The states of individual objects, i.e., their attributes (such as the wall color, the building material of the roof, the color of its foundations, the doors&#39; materials and color, ...) may all vary, however.</p>
-</aside>
-<aside class="special"><p><strong>Exercise - Your first account <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/G6OI1yoX" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Your first bank transfer <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/VGi33JXC" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>The Relationship Between a Class and an Object <br><br></strong> A class lays out a blueprint for any objects that are instantiated from it. Let&#39;s draw from an analogy from outside the world of computers. Detached houses are most likely familiar to most, and we can safely assume the existence of drawings somewhere that determine what exactly a detached house is to be like. A class is a blueprint. In other words, it specifies what kinds of objects can be instantiated from it. <br><br> Individual objects, detached houses in this case, are all created based on the same blueprints - they&#39;re instances of the same class. The states of individual objects, i.e., their attributes (such as the wall color, the building material of the roof, the color of its foundations, the doors&#39; materials and color, ...) may all vary, however.</p>
+<p>Positive : <strong>Exercise - Your first account <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/G6OI1yoX" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Your first bank transfer <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/VGi33JXC" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Creating Classes</h2>
 <p>A class specifies what the objects instantiated from it are like.</p>
 <ul>
@@ -90,10 +87,8 @@ def main():
     # some code here
 </code></pre>
 <p>The import statement at the top of the <code>main.py</code> file functions like so: <code>from module import method</code>. While these statements may be missing from subsequent code snippets throughout this course, you must always assume that the folder structures are appropriate for the import statements</p>
-<aside class="special"><p><strong>Naming modules <br><br></strong> The filenames are important in Python and you shouldn&#39;t use a filename that is the same as a common Python command like <code>print</code>. If you call a module <code>print.py</code> and import it, you will override the built-in <code>print()</code> method and your program will not function as expected.</p>
-</aside>
-<aside class="special"><p><strong>Exercise - Dog attributes <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/oYaBpxXM" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>Naming modules <br><br></strong> The filenames are important in Python and you shouldn&#39;t use a filename that is the same as a common Python command like <code>print</code>. If you call a module <code>print.py</code> and import it, you will override the built-in <code>print()</code> method and your program will not function as expected.</p>
+<p>Positive : <strong>Exercise - Dog attributes <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/oYaBpxXM" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Defining a Constructor</h2>
 <p>We want to set an initial state for an object that&#39;s created. It&#39;d be convenient to pass values ​​to the variables of that object as it&#39;s being created. For example, when creating a new person object, it&#39;s useful to be able to provide it with a name:</p>
 <pre><code language="language-python" class="language-python">def main():
@@ -106,13 +101,11 @@ def main():
         self.age = 0
         self.name = initial_name
 </code></pre>
-<p>The constructor is provided, as a parameter, to the name of the person object to be created. The parameter is enclosed in parentheses and follows the constructor&#39;s name. The parentheses that contain optional parameters are followed by curly brackets. In between these brackets is the source code that the program executes when the constructor is called (e.g., <code>Person (&#34;Ada&#34;)</code>).</p>
+<p>The constructor is provided, as a parameter, to the name of the person object to be created. The parameter is enclosed in parentheses and follows the constructor&#39;s name. The parentheses that contain optional parameters are followed by curly brackets. In between these brackets is the source code that the program executes when the constructor is called (e.g., <code>Person ("Ada")</code>).</p>
 <p>Objects are always created using a constructor.</p>
 <p>A few things to note: the constructor contains the expression <code>self.age = 0</code>. This expression sets the instance variable <code>age</code> of the newly created object (i.e., &#34;self&#34; object&#39;s age) to 0. The second expression <code>self.name = initial_name</code> likewise assigns the string passed as a parameter to the instance variable <code>name</code> of the object created.</p>
-<aside class="special"><p><strong>Exercise - Room <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/QEQAU25a" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Default Constructor <br><br></strong> If the programmer does not define a constructor for a class, Python automatically creates a default one for it. <br><br> A default constructor is a constructor that doesn&#39;t do anything apart from creating the object. <br><br> The object&#39;s variables remain uninitialized (generally, the value of any object references will be <code>None</code>, meaning that they do not point to anything).</p>
-</aside>
+<p>Positive : <strong>Exercise - Room <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/QEQAU25a" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Default Constructor <br><br></strong> If the programmer does not define a constructor for a class, Python automatically creates a default one for it. <br><br> A default constructor is a constructor that doesn&#39;t do anything apart from creating the object. <br><br> The object&#39;s variables remain uninitialized (generally, the value of any object references will be <code>None</code>, meaning that they do not point to anything).</p>
 <h2 is-upgraded>Defining Methods For an Object</h2>
 <p>We know how to create an object and initialize its variables. However, an object also needs methods to be able to do anything. As we&#39;ve learned, a <strong>method</strong> is a named section of source code inside a class which can be invoked.</p>
 <pre><code language="language-python" class="language-python">class Person:
@@ -141,14 +134,10 @@ if __name__ == &#39;__main__&#39;:
     main()
 </code></pre>
 <p>Prints:</p>
-<aside class="warning"><p>Ada, age 0 years <br> Alan, age 0 years <br> Grace, age 0 years</p>
-</aside>
-<aside class="special"><p><strong>Exercise - Whistle <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/Kalh0Q3g" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Door <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/yoGweNH7" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Product <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/hLb5PNQ0" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Negative : Ada, age 0 years <br> Alan, age 0 years <br> Grace, age 0 years</p>
+<p>Positive : <strong>Exercise - Whistle <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/Kalh0Q3g" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Door <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/yoGweNH7" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Product <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/hLb5PNQ0" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Changing an Instance Variable&#39;s Value in a Method</h2>
 <p>Let&#39;s add a method to the previously created person class that increments the age of the person by a year.</p>
 <pre><code language="language-python" class="language-python">class Person:
@@ -185,9 +174,8 @@ if __name__ == &#39;__main__&#39;:
     main()
 </code></pre>
 <p>Prints:</p>
-<aside class="warning"><p>Ada, age 0 years <br> Alan, age 0 years <br> Grace, age 0 years <br> Ada, age 1 years <br> Alan, age 1 years <br></p>
-</aside>
-<p>That is to say that when the two objects are &#34;born&#34; they&#39;re both zero-years old (<code>self.age = 0</code> is executed in the constructor). The <code>ada</code> object&#39;s <code>grow_older</code> method is called twice. As the print output demonstrates, the age of Ada is 2 years after growing older. Calling the method on an object corresponding to Ada has no impact on the age of the other person object since each object instantiated form a class has its own instance variables.</p>
+<p>Negative :  Ada, age 0 years <br> Alan, age 0 years <br> Grace, age 0 years <br> Ada, age 1 years <br> Alan, age 1 years <br></p>
+<p>That is to say that when the two objects are &#34;born&#34; they&#39;re both zero-years old (<code>self.age = 0</code>  is executed in the constructor). The <code>ada</code> object&#39;s <code>grow_older</code> method is called twice. As the print output demonstrates, the age of Ada is 2 years after growing older. Calling the method on an object corresponding to Ada has no impact on the age of the other person object since each object instantiated form a class has its own instance variables.</p>
 <p>The method can also contain conditional statements and loops. The grow_older method below limits aging to 30 years.</p>
 <pre><code language="language-python" class="language-python">class Person:
     def __init__(self,initial_name):
@@ -201,10 +189,8 @@ if __name__ == &#39;__main__&#39;:
         if (self.age &lt; 30):
             self.age = self.age + 1
 </code></pre>
-<aside class="special"><p><strong>Exercise - Decreasing Counter <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/kvnxMeaO" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Debt <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/l_7P_B4l" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>Exercise - Decreasing Counter <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/kvnxMeaO" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Debt <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/l_7P_B4l" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Returning a Value From a Method</h2>
 <p>A method can return a value. The methods we&#39;ve created in our objects haven&#39;t so far returned anything. This has been marked by the lac of a <code>return</code> statement in the method body.</p>
 <pre><code language="language-python" class="language-python">class Door:
@@ -227,8 +213,7 @@ def main():
 
     print(&#34;The grade received is &#34; + str(grading))
 </code></pre>
-<aside class="warning"><p>The grade received is 10</p>
-</aside>
+<p>Negative : The grade received is 10</p>
 <p>The return value could also be used to form part of an expression.</p>
 <pre><code language="language-python" class="language-python">from teacher import Teacher
 
@@ -241,8 +226,7 @@ def main():
 
     print(&#34;Grading average &#34; + str(average))
 </code></pre>
-<aside class="warning"><p>Grading average 10.0</p>
-</aside>
+<p>Negative : Grading average 10.0</p>
 <p>Let&#39;s continue with the Person class and add a <code>return_age</code> method that returns the person&#39;s age.</p>
 <pre><code language="language-python" class="language-python">class Person:
     def __init__(self,initial_name):
@@ -277,12 +261,9 @@ def main():
 
     print(&#34;Grace&#39;s and Alan&#39;s combined age: &#34; + str(combined) + &#34; years&#34;)
 </code></pre>
-<aside class="warning"><p>Grace&#39;s age: 2 <br> Alan&#39;s age: 1 <br><br> Grace&#39;s and Alan&#39;s combined age: 3 years</p>
-</aside>
-<aside class="special"><p><strong>Exercise - Song <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/YLjCVy9i" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Film <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/qrLWMXiK" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Negative : Grace&#39;s age: 2 <br> Alan&#39;s age: 1 <br><br> Grace&#39;s and Alan&#39;s combined age: 3 years</p>
+<p>Positive : <strong>Exercise - Song <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/YLjCVy9i" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Film <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/qrLWMXiK" target="_blank">Accept exercise on Github Classroom</a></p>
 <p>As we came to notice, methods can contain source code in the same way as other parts of our program. Methods can have conditionals or loops, and other methods can also be called from them.</p>
 <p>Let&#39;s now write a method for the person that determines if the person is of legal age. The method returns a boolean - either <code>True</code> or <code>False</code>:</p>
 <pre><code language="language-python" class="language-python">class Person:
@@ -326,8 +307,7 @@ def main():
         print(&#34;underage: &#34;)
         grace.print_person()
 </code></pre>
-<aside class="warning"><p>underage: <br> Alan, age 1 years <br> of legal age: <br> Grace, age 30 years</p>
-</aside>
+<p>Negative : underage: <br> Alan, age 1 years <br> of legal age: <br> Grace, age 30 years</p>
 <p>Let&#39;s fine-tune the solution a bit more. In its current form, a person can only be &#34;printed&#34; in a way that includes both the name and the age. Situations exist, however, where we may only want to know the name of an object. Let&#39;s write a separate method for this use case:</p>
 <pre><code language="language-python" class="language-python">class Person:
     # ...
@@ -361,10 +341,8 @@ def main():
          print(grace.get_name() + &#34; is underage &#34;)
 </code></pre>
 <p>The print output is starting to turn out quit neat:</p>
-<aside class="warning"><p>Alan is underage <br> Grace is of legal age</p>
-</aside>
-<aside class="special"><p><strong>Exercise - Gauge <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/ttVkio_3" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Negative : Alan is underage <br> Grace is of legal age</p>
+<p>Positive : <strong>Exercise - Gauge <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/ttVkio_3" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>A string representation of an object and the <strong>str</strong>-method</h2>
 <p>We are guilty of programming in a somewhat poor style by creating a method for printing the object, i.e., the <code>print_person</code> method. A preferred way is to define a method for the object that returns a &#34;string representation&#34; of the object. We can call the method returning the string representation <code>__str__</code>. Let&#39;s define this method for the person in the following example:</p>
 <p>The <code>__str__</code> functions as <code>print_person</code> does. However, it doesn&#39;t itself print anything but instead returns a string representation, which the calling method can execute for printing as needed.</p>
@@ -390,8 +368,7 @@ def main():
     print(alan)
 </code></pre>
 <p>In principle, the <code>print</code> method requests the object&#39;s string representation and prints it. The call to the <code>__str__</code> method returning the string representation does not have to be written explicitly, as Python adds it automatically.</p>
-<aside class="special"><p><strong>Exercise - Agent <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/BujzNzeH" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>Exercise - Agent <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/BujzNzeH" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Method parameters</h2>
 <p>Let&#39;s continue with the <code>Person</code> class once more. We&#39;ve decided that we want to calculate people&#39;s body mass indexes. To do this, we write methods for the person to set both the height and the weight, and also a method to calculate the body mass index. The new and changed parts of the Person object are as follows:</p>
 <pre><code language="language-python" class="language-python">class Person:
@@ -431,8 +408,7 @@ def main():
     print(ada.get_name() + &#34;, body mass index is &#34; + str(ada.body_mass_index()))
 </code></pre>
 <p>Prints:</p>
-<aside class="warning"><p>Grace, body mass index is 26.54320987654321 <br> Ada, body mass index is 20.897959183673468</p>
-</aside>
+<p>Negative : Grace, body mass index is 26.54320987654321 <br> Ada, body mass index is 20.897959183673468</p>
 <h2 is-upgraded>A parameter and instance variable having the same name</h2>
 <p>In the preceding example, the <code>set_height</code> method sets the value of the parameter <code>new_height</code> to the instance variable <code>height</code>:</p>
 <pre><code language="language-python" class="language-python">def set_height(self,new_height):
@@ -451,27 +427,23 @@ def main():
     # DO THIS INSTEAD!!!
     self.height = height
 </code></pre>
-<aside class="special"><p><strong>Exercise - Multiplier <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/elUfIjww" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>Exercise - Multiplier <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/elUfIjww" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Calling an internal method</h2>
 <p>The object may also call its methods. For example, if we wanted the string representation returned by <strong>str</strong> to also tell of a person&#39;s body mass index, the object&#39;s own <code>body_mass_index</code> method should be called in the <code>__str__</code> method:</p>
 <pre><code language="language-python" class="language-python">def __str__(self):
     return self.name + &#34;, age &#34; + str(self.age) + &#34; years, my body mass index is &#34; + str(self.body_mass_index())
 </code></pre>
 <p>So, when an object calls an internal method, the name of the method and this prefix suffice.</p>
-<aside class="special"><p><strong>Exercise - Statistics <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/L_J49J1G" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Payment Card <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/RkGNSRYU" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Rounding errors <br><br></strong> You probably noticed that some of the figures have rounding errors. In the previous exercise, for example, Grace&#39;s balance of 30.7 may be printed as <code>30.700000000000003</code>. This is because floating-point numbers, such as <code>float</code>, are actually stored in binary form. That is, in zeros and ones using only a limited number of numbers. <br><br> As the number of floating-point numbers is infinite – (in case you&#39;re wondering &#34;how infinite?&#34;, think how many floating-point or decimal values fit between the numbers 5 and 6 for instance). All of the floating-point numbers simply cannot be represented by a finite number of zeros and ones. Thus, the computer must place a limit on the accuracy of stored numbers. <br><br> Normally, account balances, for instance, are saved as integers such that, say, the value 1 represents one penny.</p>
-</aside>
+<p>Positive : <strong>Exercise - Statistics <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/L_J49J1G" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Payment Card <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/RkGNSRYU" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Rounding errors <br><br></strong> You probably noticed that some of the figures have rounding errors. In the previous exercise, for example, Grace&#39;s balance of 30.7 may be printed as <code>30.700000000000003</code>. This is because floating-point numbers, such as <code>float</code>, are actually stored in binary form. That is, in zeros and ones using only a limited number of numbers. <br><br> As the number of floating-point numbers is infinite – (in case you&#39;re wondering &#34;how infinite?&#34;, think how many floating-point or decimal values fit between the numbers 5 and 6 for instance). All of the floating-point numbers simply cannot be represented by a finite number of zeros and ones. Thus, the computer must place a limit on the accuracy of stored numbers. <br><br> Normally, account balances, for instance, are saved as integers such that, say, the value 1 represents one penny.</p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Objects in a list" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul>
+<ul class="checklist">
 <li>You can add objects to a list</li>
 <li>You can go through objects in a list</li>
 </ul>
@@ -512,8 +484,7 @@ print()
 for name in names:
     print(name)
 </code></pre>
-<aside class="warning"><p>Betty Jennings <br> Betty Snyder <br> Frances Spence <br> Kay McNulty <br> Marlyn Wescoff <br> Ruth Lichterman <br><br> Betty Jennings <br> Betty Snyder <br> Frances Spence <br> Kay McNulty <br> Marlyn Wescoff <br> Ruth Lichterman <br><br> Betty Jennings <br> Betty Snyder <br> Frances Spence <br> Kay McNulty <br> Marlyn Wescoff <br> Ruth Lichterman</p>
-</aside>
+<p>Negative : Betty Jennings <br> Betty Snyder <br> Frances Spence <br> Kay McNulty <br> Marlyn Wescoff <br> Ruth Lichterman <br><br> Betty Jennings <br> Betty Snyder <br> Frances Spence <br> Kay McNulty <br> Marlyn Wescoff <br> Ruth Lichterman <br><br> Betty Jennings <br> Betty Snyder <br> Frances Spence <br> Kay McNulty <br> Marlyn Wescoff <br> Ruth Lichterman</p>
 <h2 is-upgraded>Adding object to a list</h2>
 <p>Strings are objects, so it should come as no surprise that other kinds of objects can also be found in lists. Next, let&#39;s examine the cooperation of lists and objects in more detail.</p>
 <p>Let&#39;s assume we have access to the class defined below, describing a person.</p>
@@ -572,8 +543,7 @@ persons.append(Person(&#34;Martin&#34;))
 for person in persons:
     print(person)
 </code></pre>
-<aside class="warning"><p>John, age 0 years <br> Matthew, age 0 years <br> Martin, age 0 years</p>
-</aside>
+<p>Negative : John, age 0 years <br> Matthew, age 0 years <br> Martin, age 0 years</p>
 <h2 is-upgraded>Adding user-inputted objects to a list</h2>
 <p>The structure we used earlier for reading inputs is still very useful.</p>
 <pre><code language="language-python" class="language-python"># ... imports and function definitions
@@ -598,10 +568,8 @@ print(&#34;Persons: &#34;)
 for person in persons:
     print(person)
 </code></pre>
-<aside class="warning"><p>Enter a name, empty will stop: <br> <em>User: &lt;Ada&gt; <br></em> Enter a name, empty will stop: <em>User: &lt;Grace&gt; <br></em> Enter a name, empty will stop: <em>User: &lt;Katherine&gt; <br><br></em> Persons in total: 3 <br> Persons: <br> Ada, age 0 years <br> Grace, age 0 years <br> Katherine, age 0 years</p>
-</aside>
-<aside class="special"><p><strong>Exercise - Items <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/2SlDoTBD" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Negative : Enter a name, empty will stop: <br> <em>User: &lt;Ada&gt; <br></em> Enter a name, empty will stop: <em>User: &lt;Grace&gt; <br></em> Enter a name, empty will stop: <em>User: &lt;Katherine&gt; <br><br></em> Persons in total: 3 <br> Persons: <br> Ada, age 0 years <br> Grace, age 0 years <br> Katherine, age 0 years</p>
+<p>Positive : <strong>Exercise - Items <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/2SlDoTBD" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Multiple constructor parameters</h2>
 <p>If the constructor demands more than one parameter, you can query the user for more information. Let&#39;s assume we have the following constructor for the class <code>Person</code>.</p>
 <pre><code language="language-python" class="language-python">class Person:
@@ -642,10 +610,8 @@ print(&#34;Persons: &#34;)
 for person in persons:
     print(person)
 </code></pre>
-<aside class="warning"><p>Enter name, empty will end: <br> <em>User: &lt;Grace Hopper&gt; <br></em> Enter the age of the person Grace Hopper: <br> <em>User: &lt;85&gt; <br></em> Enter name, empty will end: <br><br> Total number of persons: 1 <br> Persons: <br> Grace Hopper, age 85 years</p>
-</aside>
-<aside class="special"><p><strong>Exercise - Personal Information <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/QQfq7eYA" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Negative : Enter name, empty will end: <br> <em>User: &lt;Grace Hopper&gt; <br></em> Enter the age of the person Grace Hopper: <br> <em>User: &lt;85&gt; <br></em> Enter name, empty will end: <br><br> Total number of persons: 1 <br> Persons: <br> Grace Hopper, age 85 years</p>
+<p>Positive : <strong>Exercise - Personal Information <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/QQfq7eYA" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Reading input in a specific format</h2>
 <p>In the example and exercise below, the required information was entered line by line. By no means is it impossible to ask for input in a specific format, e.g. separated by a comma.</p>
 <p>If the name and age were separated by a comma, the program could work in the following manner.</p>
@@ -684,17 +650,15 @@ for person in persons:
     if (person.get_age() &gt;= age_limit):
         print(person)
 </code></pre>
-<aside class="special"><p><strong>Exercise - Television Programs <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/rEC7DhSR" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Books <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/lB2s6zh6" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>Exercise - Television Programs <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/rEC7DhSR" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Books <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/lB2s6zh6" target="_blank">Accept exercise on Github Classroom</a></p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Files and reading data" duration="60">
         <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
-<ul>
+<ul class="checklist">
 <li>You&#39;ll review reading keyboard input.</li>
 <li>You know what a file and a filesystem are, and are able to add an empty text file into the filesystem.</li>
 <li>You know how to create a write a program that reads data from a file.</li>
@@ -712,8 +676,7 @@ for person in persons:
     # handling or handle the line immediately
 </code></pre>
 <p>In text-based user interfaces, the input of the user is directed into the input stream one line at a time, which means that the information is sent to be handled every time the user enters a new line.</p>
-<aside class="special"><p><strong>Exercise - Number of strings <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/AKCq2fM0" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>Exercise - Number of strings <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/AKCq2fM0" target="_blank">Accept exercise on Github Classroom</a></p>
 <p>The user input is read in string form. If we wanted to handle the input as integers, for instance, we&#39;d have to convert it to another form. An example program has been provided below - it reads input from the user until the user inputs &#34;end&#34;. As long as the user input is not &#34;end&#34; the inputs are handled as integers – in this case, the number is simply printed.</p>
 <pre><code language="language-python" class="language-python">while True:
     row = input()
@@ -724,13 +687,11 @@ for person in persons:
     number = int(row)
     print(row)
 </code></pre>
-<aside class="special"><p><strong>Exercise - Cubes <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/FuI2WxSa" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>Exercise - Cubes <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/FuI2WxSa" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Files and the Filesystem</h2>
 <p><strong>Files</strong> are collections of data that live in computers. These files can contain, among other things, text, images, music, or any combination of these. The file format determines the content of the file as well as the program required to read the file. For example, PDF files are read with a program suited for reading PDF files, and music files are read with a program suited for reading music files. Each of these programs is made by humans, and the creators of these programs – i.e., programmers – also specify the file format as part of the work.</p>
 <p>Computers have several different programs for browsing files. These programs are specific to the operating system. All programs used for browsing files make use of the filesystem of the computer in one way or another.</p>
-<aside class="special"><p><strong>The Concrete File Storage Format <br><br></strong> Files exist on the hard drive of a computer, which is, in reality, a large set of ones and zeros, i.e., bits. Information is made up of these bits, e.g., one variable of type int takes up 32 bits (i.e., 32 ones or zeros). Modern terabyte-sized hard drives hold about 8 trillion bits (written out the number is 8,000,000,000,000). On this scale, a single integer is very small. <br><br> Files can exist practically anywhere on a hard drive, even separated into multiple pieces. The computer&#39;s <strong>filesystem</strong> has the responsibility of keeping track of the locations of files on the hard drive as well as providing the ability to create new files and modify them. The filesystem&#39;s main responsibility is abstracting the true structure of the hard drive  a user or a program using a file doesn&#39;t need to care about the about how, or where, the file is actually stored.</p>
-</aside>
+<p>Positive : <strong>The Concrete File Storage Format <br><br></strong> Files exist on the hard drive of a computer, which is, in reality, a large set of ones and zeros, i.e., bits. Information is made up of these bits, e.g., one variable of type int takes up 32 bits (i.e., 32 ones or zeros). Modern terabyte-sized hard drives hold about 8 trillion bits (written out the number is 8,000,000,000,000). On this scale, a single integer is very small. <br><br> Files can exist practically anywhere on a hard drive, even separated into multiple pieces. The computer&#39;s <strong>filesystem</strong> has the responsibility of keeping track of the locations of files on the hard drive as well as providing the ability to create new files and modify them. The filesystem&#39;s main responsibility is abstracting the true structure of the hard drive  a user or a program using a file doesn&#39;t need to care about the about how, or where, the file is actually stored.</p>
 <h2 is-upgraded>Reading From a File</h2>
 <p><strong>Reading a file</strong> is done using the <code>open()</code> method. When we want to read a file, we give the path for the file we want to read as a parameter to the method call. The path to the file is a concept that will become clearer as the course progresses.</p>
 <p>Once we have invoked <code>open()</code>, the file can be read using a <code>read()</code> method. The reading proceeds until all the lines of the file have been read, i.e., until the read command find no more lines to read. Reading a file may result in an error, and for this reason, many programming languages require separate blocks - one for the <code>try</code>, and another, called <code>except</code> in Python, to catch potential errors.</p>
@@ -755,10 +716,8 @@ finally:
 </code></pre>
 <p>This takes care of closing the file too, so there&#39;s no need to use a <code>close()</code> statement together with a <code>with</code> statement. The <code>splitlines()</code> method splits the file by <strong>new lines</strong> by default.</p>
 <p>A file is read from the project root by default, i.e., the folder that contains the python file you are working from.</p>
-<aside class="special"><p><strong>Read and write <br><br></strong> Note that we have a second parameter <code>r</code> passed to the <code>open()</code> method, which tells Python that we want to <strong>read</strong> the file. <br><br> If we wanted to write data to the file, we can pass <code>w</code> instead. It is important to make this distinction, to avoid accidentally overwriting files that you want to keep. If you overwrite something in Python in this way, there&#39;s no getting it back!</p>
-</aside>
-<aside class="special"><p><strong>Exercise - Printing from a file <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/V_hOWSlh" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>Read and write <br><br></strong> Note that we have a second parameter <code>r</code> passed to the <code>open()</code> method, which tells Python that we want to <strong>read</strong> the file. <br><br> If we wanted to write data to the file, we can pass <code>w</code> instead. It is important to make this distinction, to avoid accidentally overwriting files that you want to keep. If you overwrite something in Python in this way, there&#39;s no getting it back!</p>
+<p>Positive : <strong>Exercise - Printing from a file <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/V_hOWSlh" target="_blank">Accept exercise on Github Classroom</a></p>
 <p>In the example below, we read all the lines of the file &#34;file.txt&#34;, which are then added to a list. This implementation uses the Python <code>with</code> keyword.</p>
 <pre><code language="language-python" class="language-python">with open(&#39;demofile.txt&#39;,&#39;r&#39;) as f:
       lines = f.read().splitlines()
@@ -766,12 +725,9 @@ finally:
 # we print the total number of lines
 print(&#34;Total lines: &#34; + str(len(lines)))
 </code></pre>
-<aside class="special"><p><strong>Exercise - Guest list from a file <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/EHkYtawH" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Is it in the file? <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/MQJaWSPw" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Numbers from a file? <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/-K0CulcH" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>Exercise - Guest list from a file <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/EHkYtawH" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Is it in the file? <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/MQJaWSPw" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Numbers from a file? <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/-K0CulcH" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Reading Data of a Specific Format From a File</h2>
 <p>The world is full of data that are related to other data – these form collections. For example, personal information can include a name, date of birth and a phone number. Address information, on the other hand, can include a country, city, street address, postal number and so on.</p>
 <p>Data is often stored in files using a specific format. One such format that&#39;s already familiar to us is comma-separated values (CSV) format, i.e., data separated by commas. Python has a special library for reading csv files, which can be <em>imported</em> using the <code>import</code> statement as follows.</p>
@@ -784,8 +740,7 @@ with open(&#34;data.csv&#34;) as f:
         print(row)
 </code></pre>
 <p>In the example above, each row becomes a Python list in its own right, and can be operated on accordingly. For example, with example data</p>
-<aside class="warning"><p>Marie Curie, 26 <br> Rosalind Franklin, 32 <br> Mary Anning, 45</p>
-</aside>
+<p>Negative : Marie Curie, 26 <br> Rosalind Franklin, 32 <br> Mary Anning, 45</p>
 <p>we could read the names only like so:</p>
 <pre><code language="language-python" class="language-python">import csv
 
@@ -796,10 +751,8 @@ with open(&#34;data.csv&#34;) as f:
         print(row[0])
 </code></pre>
 <p>which prints</p>
-<aside class="warning"><p>Marie Curie <br> Rosalind Franklin <br> Mary Anning</p>
-</aside>
-<aside class="special"><p><strong>Exercise - Records from a File <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/pODdUpmx" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Negative : Marie Curie <br> Rosalind Franklin <br> Mary Anning</p>
+<p>Positive : <strong>Exercise - Records from a File <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/pODdUpmx" target="_blank">Accept exercise on Github Classroom</a></p>
 <h2 is-upgraded>Reading Objects From a File</h2>
 <p>Creating objects from data that is read from a file is straightforward. Let&#39;s assume that we have a class called <code>Person</code> which looks like</p>
 <pre><code language="language-python" class="language-python">class Person:
@@ -824,13 +777,10 @@ with open(&#34;records.csv&#34;) as f:
 print(&#34;Total amount of people read: &#34; + str(len(people)))
 </code></pre>
 <p>and the output would be:</p>
-<aside class="warning"><p>Total amount of people read: 3</p>
-</aside>
+<p>Negative : Total amount of people read: 3</p>
 <p>Reading objects from a file is a clear responsibility in and of itself, and should for that reason be isolated into a method. This is what we&#39;ll be doing in the next exercise.</p>
-<aside class="special"><p><strong>Exercise - Storing Records <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/KbkT4jOf" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
-<aside class="special"><p><strong>Exercise - Sport Statistics <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/9XOoGbyt" target="_blank">Accept exercise on Github Classroom</a></p>
-</aside>
+<p>Positive : <strong>Exercise - Storing Records <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/KbkT4jOf" target="_blank">Accept exercise on Github Classroom</a></p>
+<p>Positive : <strong>Exercise - Sport Statistics <br><br></strong> Read the instructions for the exercise and commit the solution via Github. <br><br> <a href="https://classroom.github.com/a/9XOoGbyt" target="_blank">Accept exercise on Github Classroom</a></p>
 
 
       </google-codelab-step>
@@ -844,10 +794,10 @@ print(&#34;Total amount of people read: &#34; + str(len(people)))
     
   </google-codelab>
 
-  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
-  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
-  <script src="../../elements/codelab-elements/codelab-elements.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
   <script src="//support.google.com/inapp/api.js"></script>
 
 </body>
